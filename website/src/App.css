@@ -1,7 +1,8 @@
 .atlas-shell {
   background:
-    radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.12), transparent 28%),
-    linear-gradient(135deg, rgba(245, 158, 11, 0.06), transparent 32%),
+    radial-gradient(circle at 50% 0%, rgba(34, 211, 238, 0.18), transparent 30%),
+    radial-gradient(circle at 12% 80%, rgba(124, 58, 237, 0.13), transparent 26%),
+    linear-gradient(135deg, rgba(20, 184, 166, 0.08), transparent 34%),
     var(--bg);
   color: var(--ink);
   display: grid;
@@ -198,10 +199,11 @@
 
 .atlas-map {
   background:
-    radial-gradient(circle at 43% 41%, rgba(6, 182, 212, 0.08), transparent 30%),
-    radial-gradient(circle at 70% 73%, rgba(16, 185, 129, 0.08), transparent 24%),
-    #090d16;
-  border: 1px solid var(--border);
+    radial-gradient(circle at 30% 24%, rgba(56, 189, 248, 0.16), transparent 22%),
+    radial-gradient(circle at 82% 70%, rgba(192, 132, 252, 0.12), transparent 24%),
+    radial-gradient(circle at 48% 92%, rgba(45, 212, 191, 0.14), transparent 18%),
+    linear-gradient(180deg, #071527, #040914 58%, #030711);
+  border: 1px solid rgba(125, 211, 252, 0.22);
   border-radius: 8px;
   display: block;
   height: calc(100vh - 104px);
@@ -211,78 +213,103 @@
 
 .grid-lines path {
   fill: none;
-  opacity: 0.22;
-  stroke: #273348;
+  opacity: 0.18;
+  stroke: #2e5f75;
   stroke-width: 0.7;
 }
 
 .magnetic-line {
   fill: none;
-  opacity: 0.18;
-  stroke: #5b6f91;
-  stroke-dasharray: 2 8;
+  opacity: 0.24;
+  stroke: #67e8f9;
+  stroke-dasharray: 4 10;
   stroke-linecap: round;
-  stroke-width: 1;
+  stroke-width: 1.15;
 }
 
 .magnetic-line.active {
-  opacity: 0.46;
-  stroke: var(--accent-cyan);
+  opacity: 0.68;
+  stroke: #a7f3d0;
 }
 
 .island-contour {
   cursor: pointer;
 }
 
-.island-contour .ring {
-  fill: rgba(15, 23, 42, 0.22);
-  stroke: #52627d;
-  stroke-width: 1;
-}
-
-.island-contour .ring-1 {
-  opacity: 0.78;
-}
-
-.island-contour .ring-2 {
+.island-aura {
+  fill: rgba(34, 211, 238, 0.12);
+  filter: url(#island-glow);
   opacity: 0.58;
+  stroke: rgba(125, 211, 252, 0.26);
+  stroke-width: 1.4;
 }
 
-.island-contour .ring-3 {
-  opacity: 0.4;
+.island-shape {
+  filter: url(#island-glow);
+  opacity: 0.94;
+  stroke: rgba(255, 255, 255, 0.78);
+  stroke-linejoin: round;
+  stroke-width: 2.6;
 }
 
-.island-contour.selected .ring {
-  filter: url(#soft-glow);
-  stroke: var(--accent-gold);
+.island-shelf {
+  fill: none;
+  opacity: 0.44;
+  stroke: rgba(255, 255, 255, 0.72);
+  stroke-dasharray: 3 7;
+  stroke-linejoin: round;
+  stroke-width: 1.2;
+}
+
+.shelf-2 {
+  opacity: 0.3;
+}
+
+.island-contour.selected .island-shape {
+  stroke: #fef3c7;
+  stroke-width: 4;
+}
+
+.island-contour.selected .island-aura {
+  fill: rgba(245, 158, 11, 0.18);
+  opacity: 0.92;
 }
 
 .domain-code {
-  fill: var(--accent-cyan);
+  fill: rgba(255, 255, 255, 0.86);
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 0;
+  paint-order: stroke;
+  stroke: rgba(2, 6, 23, 0.72);
+  stroke-width: 3px;
 }
 
 .domain-name {
-  fill: var(--ink);
-  font-size: 18px;
-  font-weight: 800;
+  fill: white;
+  font-size: 20px;
+  font-weight: 860;
   letter-spacing: 0;
+  paint-order: stroke;
+  stroke: rgba(2, 6, 23, 0.74);
+  stroke-width: 5px;
 }
 
 .domain-zh {
-  fill: var(--muted-strong);
-  font-size: 13px;
+  fill: rgba(255, 255, 255, 0.86);
+  font-size: 14px;
+  paint-order: stroke;
+  stroke: rgba(2, 6, 23, 0.74);
+  stroke-width: 4px;
 }
 
 .selected-link {
   fill: none;
   filter: url(#soft-glow);
-  opacity: 0.92;
-  stroke: var(--accent-gold);
+  opacity: 0.98;
+  stroke: #fbbf24;
   stroke-linecap: round;
-  stroke-width: 2;
+  stroke-width: 3;
 }
 
 .knowledge-node {
@@ -290,7 +317,7 @@
 }
 
 .node-halo {
-  fill: rgba(245, 158, 11, 0.08);
+  fill: rgba(251, 191, 36, 0.16);
   opacity: 0;
 }
 
@@ -299,14 +326,15 @@
 }
 
 .node-dot {
-  fill: var(--accent-gold);
-  stroke: #fff8d6;
-  stroke-width: 1.4;
+  fill: #fef3c7;
+  filter: url(#soft-glow);
+  stroke: #f59e0b;
+  stroke-width: 2;
 }
 
 .knowledge-node.seed .node-dot {
-  fill: #0b1220;
-  stroke: var(--accent-cyan);
+  fill: #061223;
+  stroke: #67e8f9;
   stroke-dasharray: 3 3;
 }
 
@@ -316,21 +344,21 @@
 }
 
 .node-label {
-  fill: var(--ink);
-  font-size: 13px;
-  font-weight: 740;
+  fill: #f8fafc;
+  font-size: 14px;
+  font-weight: 780;
   paint-order: stroke;
-  stroke: #090d16;
-  stroke-width: 4px;
+  stroke: rgba(2, 6, 23, 0.9);
+  stroke-width: 5px;
 }
 
 .node-id {
-  fill: var(--muted);
+  fill: #bae6fd;
   font-family: var(--mono);
   font-size: 10px;
   paint-order: stroke;
-  stroke: #090d16;
-  stroke-width: 3px;
+  stroke: rgba(2, 6, 23, 0.9);
+  stroke-width: 4px;
 }
 
 .inspector {

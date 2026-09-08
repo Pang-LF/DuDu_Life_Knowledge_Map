@@ -11,6 +11,8 @@ type DomainPoint = {
   ry: number
   rotate: number
   code: string
+  colorA: string
+  colorB: string
 }
 
 type NodePoint = {
@@ -21,15 +23,15 @@ type NodePoint = {
 }
 
 const domainPoints: DomainPoint[] = [
-  { id: 'META', x: 578, y: 318, rx: 150, ry: 104, rotate: -7, code: 'DM-00' },
-  { id: 'SELF', x: 308, y: 186, rx: 104, ry: 76, rotate: 12, code: 'DM-01' },
-  { id: 'HUMAN', x: 845, y: 170, rx: 118, ry: 78, rotate: -11, code: 'DM-02' },
-  { id: 'CIVILIZATION', x: 966, y: 385, rx: 138, ry: 92, rotate: 9, code: 'DM-03' },
-  { id: 'SYSTEM', x: 826, y: 596, rx: 132, ry: 88, rotate: -8, code: 'DM-04' },
-  { id: 'BUSINESS', x: 384, y: 585, rx: 144, ry: 94, rotate: 8, code: 'DM-05' },
-  { id: 'SCIENCE', x: 154, y: 392, rx: 114, ry: 82, rotate: -14, code: 'DM-06' },
-  { id: 'FRONTIER', x: 580, y: 704, rx: 118, ry: 76, rotate: 5, code: 'DM-07' },
-  { id: 'WISDOM', x: 1090, y: 636, rx: 98, ry: 70, rotate: 15, code: 'DM-08' },
+  { id: 'META', x: 578, y: 318, rx: 168, ry: 116, rotate: -7, code: 'DM-00', colorA: '#ffd166', colorB: '#ef476f' },
+  { id: 'SELF', x: 300, y: 190, rx: 118, ry: 84, rotate: 12, code: 'DM-01', colorA: '#ff8fab', colorB: '#b5179e' },
+  { id: 'HUMAN', x: 858, y: 170, rx: 132, ry: 88, rotate: -11, code: 'DM-02', colorA: '#fb7185', colorB: '#7f1d1d' },
+  { id: 'CIVILIZATION', x: 972, y: 392, rx: 152, ry: 102, rotate: 9, code: 'DM-03', colorA: '#f59e0b', colorB: '#b45309' },
+  { id: 'SYSTEM', x: 820, y: 588, rx: 150, ry: 100, rotate: -8, code: 'DM-04', colorA: '#22c55e', colorB: '#0f766e' },
+  { id: 'BUSINESS', x: 380, y: 584, rx: 158, ry: 106, rotate: 8, code: 'DM-05', colorA: '#34d399', colorB: '#047857' },
+  { id: 'SCIENCE', x: 154, y: 392, rx: 128, ry: 92, rotate: -14, code: 'DM-06', colorA: '#38bdf8', colorB: '#2563eb' },
+  { id: 'FRONTIER', x: 584, y: 698, rx: 132, ry: 86, rotate: 5, code: 'DM-07', colorA: '#22d3ee', colorB: '#7c3aed' },
+  { id: 'WISDOM', x: 1080, y: 638, rx: 116, ry: 78, rotate: 15, code: 'DM-08', colorA: '#c084fc', colorB: '#4338ca' },
 ]
 
 const nodePoints: NodePoint[] = [
@@ -60,6 +62,18 @@ const virtualNodes: GraphNode[] = [
 ]
 
 const atlasNodes = [...nodes, ...virtualNodes]
+
+const polygonRadii = [1, 0.82, 1.08, 0.9, 1.03, 0.76, 1.12, 0.86, 0.98, 0.8, 1.06]
+
+const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
+  polygonRadii
+    .map((radius, index) => {
+      const angle = (Math.PI * 2 * index) / polygonRadii.length - Math.PI / 2
+      const x = point.x + Math.cos(angle) * point.rx * radius * scale
+      const y = point.y + Math.sin(angle) * point.ry * radius * scale
+      return `${x.toFixed(1)},${y.toFixed(1)}`
+    })
+    .join(' ')
 
 function App() {
   const [selectedNodeId, setSelectedNodeId] = useState(nodes[0].id)
@@ -150,6 +164,25 @@ function App() {
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
+            <filter id="island-glow" x="-35%" y="-35%" width="170%" height="170%">
+              <feGaussianBlur stdDeviation="9" result="blur" />
+              <feColorMatrix
+                in="blur"
+                result="coloredBlur"
+                type="matrix"
+                values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.72 0"
+              />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            {domainPoints.map((point) => (
+              <linearGradient gradientUnits="userSpaceOnUse" id={`grad-${point.id}`} key={point.id} x1={point.x - point.rx} x2={point.x + point.rx} y1={point.y - point.ry} y2={point.y + point.ry}>
+                <stop offset="0%" stopColor={point.colorA} />
+                <stop offset="100%" stopColor={point.colorB} />
+              </linearGradient>
+            ))}
           </defs>
 
           <g className="grid-lines">
@@ -186,16 +219,10 @@ function App() {
                   onClick={() => selectDomain(point.id)}
                   transform={`rotate(${point.rotate} ${point.x} ${point.y})`}
                 >
-                  {[1, 0.82, 0.64, 0.46].map((scale, index) => (
-                    <ellipse
-                      cx={point.x}
-                      cy={point.y}
-                      key={scale}
-                      rx={point.rx * scale}
-                      ry={point.ry * scale}
-                      className={`ring ring-${index}`}
-                    />
-                  ))}
+                  <polygon className="island-aura" points={makeIslandPolygon(point, 1.12)} />
+                  <polygon className="island-shape" fill={`url(#grad-${point.id})`} points={makeIslandPolygon(point)} />
+                  <polygon className="island-shelf shelf-1" points={makeIslandPolygon(point, 0.78)} />
+                  <polygon className="island-shelf shelf-2" points={makeIslandPolygon(point, 0.52)} />
                   <text className="domain-code" x={point.x - point.rx * 0.52} y={point.y - 8}>{point.code}</text>
                   <text className="domain-name" x={point.x - point.rx * 0.52} y={point.y + 18}>
                     {domain?.nameEn}
