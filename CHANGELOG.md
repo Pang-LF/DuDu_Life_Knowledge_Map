@@ -23,3 +23,6 @@
 - 将网站视觉升级为 Island Map（岛屿地图）：Domain（领域）作为岛屿，Node（节点）作为岛上分支，Connection（连接）作为跨岛桥线
 - 重做网站为 Tactical Knowledge Atlas（认知航海图）：连续 SVG 地图、等高线岛屿、节点地标、跨岛连接和右侧 Inspector（详情面板）
 - 提升岛屿可读性：改为深海水族馆风格的彩色多边形岛屿、发光节点和更清晰的跨岛航线
+- 根据用户反馈废弃“五轨并列 newsletter”邮件结构，改为一条主线的 Daily Knowledge Lesson（每日知识课）
+- 新增 `DAILY_TEACHING_PROTOCOL.md`，规定连续教学、行业学徒制顺序推进、World Signals（世界信号）可选、Serendipity（偶遇）周末化、Gmail HTML 排版
+- 新增 `schemas/email_lesson_template.html`，要求 Gmail 使用 HTML 排版，不再原样发送 Markdown

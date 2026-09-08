@@ -22,20 +22,32 @@ Daily Brief（每日简报）应控制长度，优先提供：
 - 一个清晰 Today's Question（今日问题）
 - 1-2 个 Core Nodes（核心节点）
 - 可在 30-40 分钟内读完和思考的解释
-- 2-4 个 World Signals（世界信号）
-- 1 个 Industry Window（行业窗口）小切口
-- 1 个 Serendipity Node（偶遇节点）
-- 3-5 个可追问的问题
+- 一个连续、深入、从直觉到机制的主线课程
+- 一个顺序推进的 Industry Apprenticeship（行业学徒制）小章节
+- 最多 1 个强相关 Current Application（现实应用）
+- 1-2 个 Teach-back（反向讲解）诊断问题
 
 ## Daily Brief Structure（每日简报结构）
 
-固定五轨：
+Daily Brief（每日简报）不再采用五轨并列结构。五轨只作为素材来源和长期覆盖目标，不作为每天邮件的章节顺序。
+
+旧五轨：
 
 1. Core Quest（核心任务）
 2. World Signals（世界信号）
 3. Industry Window（行业窗口）
 4. Serendipity Node（偶遇节点）
 5. Judgment & Belief（判断与信念）
+
+新原则：
+
+- Core Quest（核心任务）是唯一主线。
+- Industry Window（行业窗口）作为连续课程，占当天 20-30%。
+- World Signals（世界信号）是可选应用，最多 1 条。
+- Serendipity Node（偶遇节点）改为周末一次。
+- Judgment & Belief（判断与信念）融入 Teach-back（反向讲解）和 Map Update（地图更新）。
+
+默认课程结构见 `DAILY_TEACHING_PROTOCOL.md`。
 
 2026 年 9 月主线：
 
@@ -52,6 +64,7 @@ Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒�
 - `CURRENT_STATE.md`
 - `README.md`
 - `CHATGPT_SYNC.md`
+- `DAILY_TEACHING_PROTOCOL.md`
 - 当前月份计划，如 `september_2026.md`
 - 最近 7 天 `daily/` 日志
 - 当前主题相关的 `nodes/`、`industries/`、`beliefs/`、`questions/`
@@ -103,6 +116,20 @@ Codex 可以记录 `mastery_candidate`，但未经用户确认不要把 `mastery
 - ChatGPT / Codex thread：如果邮件不可用，则在当前任务中推送 Daily Knowledge Brief（每日知识简报）。
 
 无论使用哪个渠道，Repository（仓库）仍然是唯一事实源。
+
+## Email Formatting Rule（邮件排版规则）
+
+Gmail 邮件必须发送 HTML 格式，不能直接粘贴 Markdown 原文。
+
+邮件应使用：
+
+- 一个清晰大标题
+- 小标题分区
+- 加粗关键概念
+- 短段落
+- 因果链条用独立框展示
+- Teach-back（反向讲解）问题用醒目问题框
+- Map Update（地图更新）放在末尾，简洁呈现
 
 ## Website Vision（个人网站愿景）
 

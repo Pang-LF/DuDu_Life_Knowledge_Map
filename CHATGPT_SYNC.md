@@ -8,7 +8,7 @@
 
 Repository（仓库）是最终事实源。
 
-ChatGPT：学习、解释、讨论、挑战观点、生成 Daily Brief（每日日报）。
+ChatGPT：学习、解释、讨论、挑战观点、生成 Daily Knowledge Lesson（每日知识课）。
 
 Codex：整理、合并、维护结构、更新状态、记录版本。
 
@@ -18,6 +18,19 @@ Codex：整理、合并、维护结构、更新状态、记录版本。
 2. 最近 7 天 `daily/` 日志（如存在）
 3. 当前月 `monthly/` 或本月计划
 4. 如涉及具体主题，再读取对应 `nodes/` / `industries/` / `beliefs/`
+5. `DAILY_TEACHING_PROTOCOL.md`
+
+## Daily Teaching Rule（每日教学规则）
+
+每日内容必须遵守 `DAILY_TEACHING_PROTOCOL.md`：
+
+- 一天一个主问题
+- 从直觉到概念再到机制
+- Industry Apprenticeship（行业学徒制）必须连续推进
+- World Signals（世界信号）只作为可选应用，最多一条
+- Serendipity（偶遇）只在周末
+- 结尾只问 1-2 个 Teach-back（反向讲解）诊断问题
+- Gmail 输出必须是 HTML 排版后的邮件，不要直接发送 Markdown 原文
 
 ## ChatGPT 每日结束时建议输出 Daily Sync Packet（每日同步包）
 

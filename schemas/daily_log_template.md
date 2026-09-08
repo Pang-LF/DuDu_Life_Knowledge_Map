@@ -1,51 +1,58 @@
-# Daily Knowledge Brief — YYYY-MM-DD
+# Daily Knowledge Lesson — YYYY-MM-DD
 
-## 1. Core Quest（核心任务）
+## 1. Yesterday → Today（承上启下）
 
-**Today's Question（今日问题）：**
+昨天：
+
+今天自然接上的问题：
+
+## 2. Today's Question（今日问题）
+
+## 3. Intuition First（先建立直觉）
+
+## 4. Core Concept（核心概念）
 
 ### Core Nodes（核心节点）
+
 - `NODE.ID` — English（中文） — Target: L?
 
-### Mechanism（机制）
+## 5. Mechanism（机制）
 
+```text
+A
+→ B
+→ C
+```
 
-## 2. World Signals（世界信号）
+每个箭头为什么成立：
 
-### Signal 1
-- What happened（发生了什么）：
-- Why it matters（为什么重要）：
-- Map connections（地图连接）：
+## 6. What It Is Not（它不是什么）
 
-## 3. Industry Window（行业窗口）
+## 7. Worked Example（完整案例）
 
-**Current Industry（当前行业）：**
+## 8. Connection to the World Model（连接世界模型）
 
-- Concept（概念）：
-- Hidden Rule（隐性规则）：
-- Operational Reality（运营现实）：
-- Related Nodes（相关节点）：
+## 9. Industry Apprenticeship（行业学徒制）
 
-## 4. Serendipity Node（偶遇节点）
+当前行业：Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）
 
-- Topic（主题）：
-- Why interesting（为什么值得知道）：
-- Unexpected connection（意外连接）：
+今日章节：
 
-## 5. Judgment & Belief（判断与信念）
+## 10. Current Application（现实应用，可选）
 
-**Question（问题）：**
+仅当当天有强相关现实事件时填写。否则写：Skipped（跳过）。
 
-**My answer（我的回答）：**
+## 11. Teach-back（反向讲解）
 
-**Belief update（信念更新）：**
+1.
+2.
 
-## Map Update（地图更新）
+## 12. Map Update（地图更新）
 
 - Nodes studied（学习节点）：
-- New connections（新连接）：
 - Mastery candidates（掌握候选）：
-- Open questions（未解决问题）：
+- New connections（新连接）：
+- Tomorrow（明天承接）：
 
 ## Daily Sync Packet（每日同步包）
 

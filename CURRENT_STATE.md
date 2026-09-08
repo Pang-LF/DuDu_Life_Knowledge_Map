@@ -23,11 +23,14 @@ Last updated: 2026-09-08
 
 ## Daily Brief（每日日报）固定五轨
 
-1. Core Quest（核心任务）
-2. World Signals（世界信号）
-3. Industry Window（行业窗口）
-4. Serendipity Node（偶遇节点）
-5. Judgment & Belief（判断与信念）
+已废弃“五轨并列 newsletter”形式。新的 Daily Knowledge Lesson（每日知识课）遵守 `DAILY_TEACHING_PROTOCOL.md`：
+
+- 每天一个主问题
+- 从直觉到机制讲透一个核心节点
+- Industry Apprenticeship（行业学徒制）连续推进
+- World Signals（世界信号）最多 1 条，且必须服务当天概念
+- Serendipity（偶遇）改为周末
+- 结尾只保留 1-2 个 Teach-back（反向讲解）诊断问题
 
 ## September Industry Window（9月行业窗口）
 
