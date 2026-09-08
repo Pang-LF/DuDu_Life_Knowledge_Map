@@ -1,218 +1,308 @@
 import { useMemo, useState } from 'react'
-import { BookOpen, Compass, GitBranch, Mail, Map, Search, Sparkles, TimerReset } from 'lucide-react'
+import { BookOpen, Compass, GitBranch, Mail, Search, TimerReset } from 'lucide-react'
 import './App.css'
-import { domains, monthlyTrack, nodes, todayBrief } from './knowledgeData'
+import { domains, monthlyTrack, nodes, todayBrief, type GraphNode } from './knowledgeData'
 
-const islandLayout: Record<string, { x: number; y: number; size: 'large' | 'medium' | 'small' }> = {
-  META: { x: 42, y: 30, size: 'large' },
-  SELF: { x: 16, y: 18, size: 'small' },
-  HUMAN: { x: 71, y: 18, size: 'small' },
-  CIVILIZATION: { x: 82, y: 48, size: 'medium' },
-  SYSTEM: { x: 65, y: 74, size: 'medium' },
-  BUSINESS: { x: 28, y: 68, size: 'medium' },
-  SCIENCE: { x: 13, y: 50, size: 'small' },
-  FRONTIER: { x: 49, y: 88, size: 'small' },
-  WISDOM: { x: 88, y: 78, size: 'small' },
+type DomainPoint = {
+  id: string
+  x: number
+  y: number
+  rx: number
+  ry: number
+  rotate: number
+  code: string
 }
 
-const bridgePairs = [
-  ['META', 'BUSINESS'],
-  ['META', 'SYSTEM'],
-  ['META', 'FRONTIER'],
-  ['BUSINESS', 'SYSTEM'],
-  ['BUSINESS', 'FRONTIER'],
+type NodePoint = {
+  id: string
+  x: number
+  y: number
+  virtual?: boolean
+}
+
+const domainPoints: DomainPoint[] = [
+  { id: 'META', x: 578, y: 318, rx: 150, ry: 104, rotate: -7, code: 'DM-00' },
+  { id: 'SELF', x: 308, y: 186, rx: 104, ry: 76, rotate: 12, code: 'DM-01' },
+  { id: 'HUMAN', x: 845, y: 170, rx: 118, ry: 78, rotate: -11, code: 'DM-02' },
+  { id: 'CIVILIZATION', x: 966, y: 385, rx: 138, ry: 92, rotate: 9, code: 'DM-03' },
+  { id: 'SYSTEM', x: 826, y: 596, rx: 132, ry: 88, rotate: -8, code: 'DM-04' },
+  { id: 'BUSINESS', x: 384, y: 585, rx: 144, ry: 94, rotate: 8, code: 'DM-05' },
+  { id: 'SCIENCE', x: 154, y: 392, rx: 114, ry: 82, rotate: -14, code: 'DM-06' },
+  { id: 'FRONTIER', x: 580, y: 704, rx: 118, ry: 76, rotate: 5, code: 'DM-07' },
+  { id: 'WISDOM', x: 1090, y: 636, rx: 98, ry: 70, rotate: 15, code: 'DM-08' },
 ]
 
+const nodePoints: NodePoint[] = [
+  { id: 'META.SYSTEMS.SYSTEM', x: 558, y: 306 },
+  { id: 'BUS.MEDIA.AGGREGATOR', x: 354, y: 566 },
+  { id: 'BUS.SUBSCRIPTION.BUNDLE', x: 430, y: 622 },
+  { id: 'SYSTEM.ECON.INFLATION', x: 800, y: 565, virtual: true },
+  { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
+]
+
+const virtualNodes: GraphNode[] = [
+  {
+    id: 'SYSTEM.ECON.INFLATION',
+    label: 'Inflation（通胀）',
+    domain: 'SYSTEM',
+    mastery: 'L0 seed',
+    summary: 'A future macroeconomics node connected through oil prices, expectations, interest rates, and asset prices.',
+    connections: ['META.SYSTEMS.SYSTEM'],
+  },
+  {
+    id: 'FRONTIER.AI.INFRASTRUCTURE',
+    label: 'AI Infrastructure（人工智能基础设施）',
+    domain: 'FRONTIER',
+    mastery: 'L0 seed',
+    summary: 'A future AI systems node connected through compute, electricity, chips, data centers, and capital expenditure.',
+    connections: ['META.SYSTEMS.SYSTEM'],
+  },
+]
+
+const atlasNodes = [...nodes, ...virtualNodes]
+
 function App() {
-  const [selectedDomain, setSelectedDomain] = useState('META')
-  const [selectedNode, setSelectedNode] = useState(nodes[0].id)
+  const [selectedNodeId, setSelectedNodeId] = useState(nodes[0].id)
+  const [selectedDomainId, setSelectedDomainId] = useState('META')
 
-  const selectedNodeData = useMemo(
-    () => nodes.find((item) => item.id === selectedNode) ?? nodes[0],
-    [selectedNode],
+  const selectedNode = useMemo(
+    () => atlasNodes.find((node) => node.id === selectedNodeId) ?? atlasNodes[0],
+    [selectedNodeId],
   )
 
-  const selectedDomainData = useMemo(
-    () => domains.find((item) => item.id === selectedDomain) ?? domains[0],
-    [selectedDomain],
+  const selectedDomain = useMemo(
+    () => domains.find((domain) => domain.id === selectedDomainId) ?? domains[0],
+    [selectedDomainId],
   )
 
-  const connectedIds = new Set([selectedNodeData.id, ...selectedNodeData.connections])
+  const relatedIds = new Set([selectedNode.id, ...selectedNode.connections])
+  const selectedNodePoint = nodePoints.find((point) => point.id === selectedNode.id)
 
   const selectDomain = (domainId: string) => {
-    setSelectedDomain(domainId)
-    const firstDomainNode = nodes.find((node) => node.domain === domainId)
-    if (firstDomainNode) {
-      setSelectedNode(firstDomainNode.id)
+    setSelectedDomainId(domainId)
+    const firstNode = atlasNodes.find((node) => node.domain === domainId)
+    if (firstNode) {
+      setSelectedNodeId(firstNode.id)
     }
   }
 
   return (
-    <main className="app-shell">
-      <header className="topbar">
-        <div>
-          <p className="eyebrow">Personal Knowledge Archipelago（个人知识群岛）</p>
+    <main className="atlas-shell">
+      <aside className="left-dock">
+        <div className="brand-block">
+          <p className="eyebrow">Tactical Knowledge Atlas（认知航海图）</p>
           <h1>嘟嘟人生知识图谱</h1>
         </div>
-        <div className="status-pill">
-          <Mail size={16} />
-          Daily Brief Ready
+
+        <div className="dock-section">
+          <div className="dock-title">
+            <TimerReset size={17} />
+            <span>今日学习</span>
+          </div>
+          <p className="today-title">{todayBrief.title}</p>
+          <p className="today-question">{todayBrief.question}</p>
+          <div className="study-steps">
+            <span><BookOpen size={15} />30-40m 阅读思考</span>
+            <span><Search size={15} />20-30m 追问讨论</span>
+          </div>
         </div>
-      </header>
 
-      <section className="hero-grid">
-        <section className="archipelago-panel" aria-label="Knowledge island map">
-          <div className="map-header">
-            <div>
-              <p className="eyebrow">Island Map（岛屿地图）</p>
-              <h2>点击岛屿或节点，查看跨领域连接</h2>
-            </div>
-            <Map size={22} />
+        <div className="dock-section">
+          <div className="dock-title">
+            <GitBranch size={17} />
+            <span>9 月主线</span>
           </div>
-
-          <div className="archipelago">
-            <svg className="bridges" viewBox="0 0 100 100" aria-hidden="true" preserveAspectRatio="none">
-              {bridgePairs.map(([from, to]) => {
-                const a = islandLayout[from]
-                const b = islandLayout[to]
-                const isHot = selectedDomain === from || selectedDomain === to || selectedNodeData.connections.some((id) => id.includes(from) || id.includes(to))
-                return (
-                  <path
-                    className={isHot ? 'bridge hot' : 'bridge'}
-                    d={`M ${a.x} ${a.y} C ${(a.x + b.x) / 2} ${a.y - 12}, ${(a.x + b.x) / 2} ${b.y + 12}, ${b.x} ${b.y}`}
-                    key={`${from}-${to}`}
-                  />
-                )
-              })}
-            </svg>
-
-            {domains.map((domain) => {
-              const position = islandLayout[domain.id]
-              const domainNodes = nodes.filter((node) => node.domain === domain.id)
-              return (
-                <button
-                  className={`island ${position.size} ${selectedDomain === domain.id ? 'selected' : ''} ${domain.active ? 'active' : ''}`}
-                  key={domain.id}
-                  onClick={() => selectDomain(domain.id)}
-                  style={{ left: `${position.x}%`, top: `${position.y}%` }}
-                  type="button"
-                >
-                  <span className="island-title">{domain.nameEn}</span>
-                  <span className="island-subtitle">{domain.nameZh}</span>
-                  <span className="island-progress">{domain.progress}%</span>
-                  <span className="node-reef">
-                    {domainNodes.length === 0 ? (
-                      <span className="empty-reef">seed</span>
-                    ) : (
-                      domainNodes.map((node) => (
-                        <span
-                          className={`reef-node ${connectedIds.has(node.id) ? 'linked' : ''} ${selectedNode === node.id ? 'picked' : ''}`}
-                          key={node.id}
-                          onClick={(event) => {
-                            event.stopPropagation()
-                            setSelectedDomain(domain.id)
-                            setSelectedNode(node.id)
-                          }}
-                        >
-                          {node.label}
-                        </span>
-                      ))
-                    )}
-                  </span>
-                </button>
-              )
-            })}
-          </div>
-        </section>
-
-        <aside className="daily-card">
-          <div className="panel-heading">
-            <div>
-              <p className="eyebrow">Today（今日）</p>
-              <h2>{todayBrief.title}</h2>
-            </div>
-            <TimerReset size={22} />
-          </div>
-          <p className="question">{todayBrief.question}</p>
-          <div className="time-blocks">
-            <div>
-              <BookOpen size={18} />
-              <span>{todayBrief.reading}</span>
-            </div>
-            <div>
-              <Search size={18} />
-              <span>{todayBrief.discussion}</span>
-            </div>
-          </div>
-          <p className="next-focus">{todayBrief.next}</p>
-        </aside>
-      </section>
-
-      <section className="detail-grid">
-        <section className="panel node-detail">
-          <div className="panel-heading">
-            <div>
-              <p className="eyebrow">Selected Node（当前节点）</p>
-              <h2>{selectedNodeData.label}</h2>
-            </div>
-            <span className="mastery">{selectedNodeData.mastery}</span>
-          </div>
-          <p>{selectedNodeData.summary}</p>
-          <div className="connection-list">
-            {selectedNodeData.connections.map((connection) => (
-              <span key={connection}>{connection}</span>
-            ))}
-          </div>
-        </section>
-
-        <section className="panel domain-detail">
-          <div className="panel-heading">
-            <div>
-              <p className="eyebrow">Island Branches（岛屿分支）</p>
-              <h2>{selectedDomainData.nameEn}（{selectedDomainData.nameZh}）</h2>
-            </div>
-            <Compass size={22} />
-          </div>
-          <div className="module-list">
-            {selectedDomainData.modules.map((module) => (
-              <button type="button" key={module}>{module}</button>
-            ))}
-          </div>
-        </section>
-      </section>
-
-      <section className="detail-grid">
-        <section className="panel">
-          <div className="panel-heading">
-            <div>
-              <p className="eyebrow">September Route（9月航线）</p>
-              <h2>Build the Brain（建立认知系统）</h2>
-            </div>
-            <GitBranch size={22} />
-          </div>
-          <ol className="track-list">
+          <ol className="route-list">
             {monthlyTrack.map((item, index) => (
               <li className={index === 0 ? 'current' : ''} key={item}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
+                <span>{index + 1}</span>
                 {item}
               </li>
             ))}
           </ol>
+        </div>
+
+        <div className="mail-chip">
+          <Mail size={15} />
+          Gmail delivery active
+        </div>
+      </aside>
+
+      <section className="map-stage">
+        <div className="map-toolbar">
+          <div>
+            <p className="eyebrow">Spatial Atlas（空间图谱）</p>
+            <h2>领域是岛，节点是地标，连接是航线</h2>
+          </div>
+          <div className="legend">
+            <span><i className="dot core" />已学习</span>
+            <span><i className="dot seed" />待生长</span>
+            <span><i className="line" />当前连接</span>
+          </div>
+        </div>
+
+        <svg className="atlas-map" viewBox="0 0 1200 760" role="img" aria-label="Personal knowledge atlas">
+          <defs>
+            <filter id="soft-glow" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="5" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <g className="grid-lines">
+            {Array.from({ length: 13 }).map((_, index) => (
+              <path d={`M ${index * 100} 0 L ${index * 100 - 90} 760`} key={`v-${index}`} />
+            ))}
+            {Array.from({ length: 9 }).map((_, index) => (
+              <path d={`M 0 ${index * 95} L 1200 ${index * 95 - 48}`} key={`h-${index}`} />
+            ))}
+          </g>
+
+          <g className="domain-links">
+            {domainPoints.filter((domain) => domain.id !== 'META').map((domain) => {
+              const meta = domainPoints[0]
+              const hot = selectedDomainId === domain.id || selectedDomainId === 'META'
+              return (
+                <path
+                  className={hot ? 'magnetic-line active' : 'magnetic-line'}
+                  d={`M ${meta.x} ${meta.y} C ${(meta.x + domain.x) / 2} ${meta.y + 24}, ${(meta.x + domain.x) / 2} ${domain.y - 24}, ${domain.x} ${domain.y}`}
+                  key={domain.id}
+                />
+              )
+            })}
+          </g>
+
+          <g className="contours">
+            {domainPoints.map((point) => {
+              const domain = domains.find((item) => item.id === point.id)
+              const selected = selectedDomainId === point.id
+              return (
+                <g
+                  className={selected ? 'island-contour selected' : 'island-contour'}
+                  key={point.id}
+                  onClick={() => selectDomain(point.id)}
+                  transform={`rotate(${point.rotate} ${point.x} ${point.y})`}
+                >
+                  {[1, 0.82, 0.64, 0.46].map((scale, index) => (
+                    <ellipse
+                      cx={point.x}
+                      cy={point.y}
+                      key={scale}
+                      rx={point.rx * scale}
+                      ry={point.ry * scale}
+                      className={`ring ring-${index}`}
+                    />
+                  ))}
+                  <text className="domain-code" x={point.x - point.rx * 0.52} y={point.y - 8}>{point.code}</text>
+                  <text className="domain-name" x={point.x - point.rx * 0.52} y={point.y + 18}>
+                    {domain?.nameEn}
+                  </text>
+                  <text className="domain-zh" x={point.x - point.rx * 0.52} y={point.y + 40}>
+                    {domain?.nameZh}
+                  </text>
+                </g>
+              )
+            })}
+          </g>
+
+          <g className="node-links">
+            {selectedNodePoint && selectedNode.connections.map((targetId) => {
+              const target = nodePoints.find((point) => point.id === targetId)
+              if (!target) return null
+              return (
+                <path
+                  className="selected-link"
+                  d={`M ${selectedNodePoint.x} ${selectedNodePoint.y} C ${(selectedNodePoint.x + target.x) / 2} ${selectedNodePoint.y - 90}, ${(selectedNodePoint.x + target.x) / 2} ${target.y + 90}, ${target.x} ${target.y}`}
+                  key={`${selectedNode.id}-${targetId}`}
+                />
+              )
+            })}
+          </g>
+
+          <g className="knowledge-nodes">
+            {nodePoints.map((point) => {
+              const node = atlasNodes.find((item) => item.id === point.id)
+              if (!node) return null
+              const selected = selectedNodeId === node.id
+              const related = relatedIds.has(node.id)
+              return (
+                <g
+                  className={`knowledge-node ${point.virtual ? 'seed' : 'core'} ${selected ? 'selected' : ''} ${related ? 'related' : ''}`}
+                  key={node.id}
+                  onClick={() => {
+                    setSelectedNodeId(node.id)
+                    setSelectedDomainId(node.domain)
+                  }}
+                  tabIndex={0}
+                >
+                  <circle className="node-halo" cx={point.x} cy={point.y} r={selected ? 28 : 20} />
+                  <circle className="node-dot" cx={point.x} cy={point.y} r={point.virtual ? 7 : 10} />
+                  <text className="node-label" x={point.x + 16} y={point.y - 12}>{node.label}</text>
+                  <text className="node-id" x={point.x + 16} y={point.y + 8}>{node.id}</text>
+                </g>
+              )
+            })}
+          </g>
+        </svg>
+      </section>
+
+      <aside className="inspector">
+        <div className="inspector-head">
+          <p className="eyebrow">Inspector（节点详情）</p>
+          <h2>{selectedNode.label}</h2>
+          <span>{selectedNode.id}</span>
+        </div>
+
+        <div className="mastery-meter">
+          <span>{selectedNode.mastery}</span>
+          <div><i /></div>
+        </div>
+
+        <section className="inspector-section">
+          <h3>Core Definition（核心解释）</h3>
+          <p>{selectedNode.summary}</p>
         </section>
 
-        <section className="panel">
-          <div className="panel-heading">
-            <div>
-              <p className="eyebrow">Serendipity（偶遇）</p>
-              <h2>Boundary Object（边界对象）</h2>
-            </div>
-            <Sparkles size={22} />
-          </div>
-          <p className="soft-copy">
-            这个图谱本身就是一个 Boundary Object（边界对象）：ChatGPT 用它生成学习内容，Codex 用它维护结构，你用它形成判断。
-          </p>
+        <section className="inspector-section">
+          <h3>Island（所属岛屿）</h3>
+          <button type="button" onClick={() => selectDomain(selectedNode.domain)}>
+            <Compass size={16} />
+            {selectedDomain.nameEn}（{selectedDomain.nameZh}）
+          </button>
         </section>
-      </section>
+
+        <section className="inspector-section">
+          <h3>Connections（连接）</h3>
+          <div className="connection-stack">
+            {selectedNode.connections.map((id) => (
+              <button
+                key={id}
+                onClick={() => {
+                  if (atlasNodes.some((node) => node.id === id)) {
+                    setSelectedNodeId(id)
+                    setSelectedDomainId(atlasNodes.find((node) => node.id === id)?.domain ?? selectedDomainId)
+                  }
+                }}
+                type="button"
+              >
+                {id}
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section className="inspector-section">
+          <h3>Branches（岛屿分支）</h3>
+          <div className="module-list">
+            {selectedDomain.modules.map((module) => (
+              <span key={module}>{module}</span>
+            ))}
+          </div>
+        </section>
+      </aside>
     </main>
   )
 }
