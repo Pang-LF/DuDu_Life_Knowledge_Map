@@ -20,3 +20,4 @@
 - 补发 2026-09-08 Daily Knowledge Brief（每日知识简报）
 - 新增 `META.SYSTEMS.SYSTEM` — System（系统）节点
 - 新增 Question Bank（问题库）、System revealed purpose（系统实际目的）候选信念与 Streaming Bundle（流媒体捆绑）案例
+- 将网站视觉升级为 Island Map（岛屿地图）：Domain（领域）作为岛屿，Node（节点）作为岛上分支，Connection（连接）作为跨岛桥线

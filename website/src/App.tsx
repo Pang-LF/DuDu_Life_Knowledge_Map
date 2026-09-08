@@ -1,63 +1,131 @@
 import { useMemo, useState } from 'react'
-import { ArrowUpRight, BookOpen, GitBranch, Mail, Network, Search, TimerReset } from 'lucide-react'
+import { BookOpen, Compass, GitBranch, Mail, Map, Search, Sparkles, TimerReset } from 'lucide-react'
 import './App.css'
 import { domains, monthlyTrack, nodes, todayBrief } from './knowledgeData'
+
+const islandLayout: Record<string, { x: number; y: number; size: 'large' | 'medium' | 'small' }> = {
+  META: { x: 42, y: 30, size: 'large' },
+  SELF: { x: 16, y: 18, size: 'small' },
+  HUMAN: { x: 71, y: 18, size: 'small' },
+  CIVILIZATION: { x: 82, y: 48, size: 'medium' },
+  SYSTEM: { x: 65, y: 74, size: 'medium' },
+  BUSINESS: { x: 28, y: 68, size: 'medium' },
+  SCIENCE: { x: 13, y: 50, size: 'small' },
+  FRONTIER: { x: 49, y: 88, size: 'small' },
+  WISDOM: { x: 88, y: 78, size: 'small' },
+}
+
+const bridgePairs = [
+  ['META', 'BUSINESS'],
+  ['META', 'SYSTEM'],
+  ['META', 'FRONTIER'],
+  ['BUSINESS', 'SYSTEM'],
+  ['BUSINESS', 'FRONTIER'],
+]
 
 function App() {
   const [selectedDomain, setSelectedDomain] = useState('META')
   const [selectedNode, setSelectedNode] = useState(nodes[0].id)
 
-  const domain = useMemo(
-    () => domains.find((item) => item.id === selectedDomain) ?? domains[0],
-    [selectedDomain],
-  )
-
-  const node = useMemo(
+  const selectedNodeData = useMemo(
     () => nodes.find((item) => item.id === selectedNode) ?? nodes[0],
     [selectedNode],
   )
 
-  const visibleNodes = nodes.filter((item) => item.domain === selectedDomain || selectedDomain === 'META')
+  const selectedDomainData = useMemo(
+    () => domains.find((item) => item.id === selectedDomain) ?? domains[0],
+    [selectedDomain],
+  )
+
+  const connectedIds = new Set([selectedNodeData.id, ...selectedNodeData.connections])
+
+  const selectDomain = (domainId: string) => {
+    setSelectedDomain(domainId)
+    const firstDomainNode = nodes.find((node) => node.domain === domainId)
+    if (firstDomainNode) {
+      setSelectedNode(firstDomainNode.id)
+    }
+  }
 
   return (
     <main className="app-shell">
       <header className="topbar">
         <div>
-          <p className="eyebrow">Personal Knowledge Operating System（个人知识操作系统）</p>
+          <p className="eyebrow">Personal Knowledge Archipelago（个人知识群岛）</p>
           <h1>嘟嘟人生知识图谱</h1>
         </div>
         <div className="status-pill">
           <Mail size={16} />
-          Gmail Ready
+          Daily Brief Ready
         </div>
       </header>
 
-      <section className="dashboard-grid">
-        <section className="panel map-panel" aria-label="Knowledge graph overview">
-          <div className="panel-heading">
+      <section className="hero-grid">
+        <section className="archipelago-panel" aria-label="Knowledge island map">
+          <div className="map-header">
             <div>
-              <p className="eyebrow">Graph Overview（图谱总览）</p>
-              <h2>八大领域 + META</h2>
+              <p className="eyebrow">Island Map（岛屿地图）</p>
+              <h2>点击岛屿或节点，查看跨领域连接</h2>
             </div>
-            <Network size={22} />
+            <Map size={22} />
           </div>
 
-          <div className="domain-orbit">
-            {domains.map((item) => (
-              <button
-                className={`domain-node ${item.id === selectedDomain ? 'selected' : ''} ${item.active ? 'active' : ''}`}
-                key={item.id}
-                onClick={() => setSelectedDomain(item.id)}
-                type="button"
-              >
-                <span>{item.nameEn}</span>
-                <small>{item.nameZh}</small>
-              </button>
-            ))}
+          <div className="archipelago">
+            <svg className="bridges" viewBox="0 0 100 100" aria-hidden="true" preserveAspectRatio="none">
+              {bridgePairs.map(([from, to]) => {
+                const a = islandLayout[from]
+                const b = islandLayout[to]
+                const isHot = selectedDomain === from || selectedDomain === to || selectedNodeData.connections.some((id) => id.includes(from) || id.includes(to))
+                return (
+                  <path
+                    className={isHot ? 'bridge hot' : 'bridge'}
+                    d={`M ${a.x} ${a.y} C ${(a.x + b.x) / 2} ${a.y - 12}, ${(a.x + b.x) / 2} ${b.y + 12}, ${b.x} ${b.y}`}
+                    key={`${from}-${to}`}
+                  />
+                )
+              })}
+            </svg>
+
+            {domains.map((domain) => {
+              const position = islandLayout[domain.id]
+              const domainNodes = nodes.filter((node) => node.domain === domain.id)
+              return (
+                <button
+                  className={`island ${position.size} ${selectedDomain === domain.id ? 'selected' : ''} ${domain.active ? 'active' : ''}`}
+                  key={domain.id}
+                  onClick={() => selectDomain(domain.id)}
+                  style={{ left: `${position.x}%`, top: `${position.y}%` }}
+                  type="button"
+                >
+                  <span className="island-title">{domain.nameEn}</span>
+                  <span className="island-subtitle">{domain.nameZh}</span>
+                  <span className="island-progress">{domain.progress}%</span>
+                  <span className="node-reef">
+                    {domainNodes.length === 0 ? (
+                      <span className="empty-reef">seed</span>
+                    ) : (
+                      domainNodes.map((node) => (
+                        <span
+                          className={`reef-node ${connectedIds.has(node.id) ? 'linked' : ''} ${selectedNode === node.id ? 'picked' : ''}`}
+                          key={node.id}
+                          onClick={(event) => {
+                            event.stopPropagation()
+                            setSelectedDomain(domain.id)
+                            setSelectedNode(node.id)
+                          }}
+                        >
+                          {node.label}
+                        </span>
+                      ))
+                    )}
+                  </span>
+                </button>
+              )
+            })}
           </div>
         </section>
 
-        <section className="panel today-panel">
+        <aside className="daily-card">
           <div className="panel-heading">
             <div>
               <p className="eyebrow">Today（今日）</p>
@@ -77,53 +145,47 @@ function App() {
             </div>
           </div>
           <p className="next-focus">{todayBrief.next}</p>
-        </section>
+        </aside>
+      </section>
 
-        <section className="panel domain-panel">
+      <section className="detail-grid">
+        <section className="panel node-detail">
           <div className="panel-heading">
             <div>
-              <p className="eyebrow">Selected Domain（当前领域）</p>
-              <h2>{domain.nameEn}（{domain.nameZh}）</h2>
+              <p className="eyebrow">Selected Node（当前节点）</p>
+              <h2>{selectedNodeData.label}</h2>
             </div>
-            <span className="progress">{domain.progress}%</span>
+            <span className="mastery">{selectedNodeData.mastery}</span>
           </div>
-          <div className="module-list">
-            {domain.modules.map((module) => (
-              <button type="button" key={module}>{module}</button>
+          <p>{selectedNodeData.summary}</p>
+          <div className="connection-list">
+            {selectedNodeData.connections.map((connection) => (
+              <span key={connection}>{connection}</span>
             ))}
           </div>
         </section>
 
-        <section className="panel node-panel">
+        <section className="panel domain-detail">
           <div className="panel-heading">
             <div>
-              <p className="eyebrow">Node Detail（节点详情）</p>
-              <h2>{node.label}</h2>
+              <p className="eyebrow">Island Branches（岛屿分支）</p>
+              <h2>{selectedDomainData.nameEn}（{selectedDomainData.nameZh}）</h2>
             </div>
-            <span className="mastery">{node.mastery}</span>
+            <Compass size={22} />
           </div>
-          <p>{node.summary}</p>
-          <div className="node-list">
-            {visibleNodes.map((item) => (
-              <button
-                className={item.id === selectedNode ? 'selected' : ''}
-                key={item.id}
-                onClick={() => setSelectedNode(item.id)}
-                type="button"
-              >
-                <span>{item.label}</span>
-                <small>{item.id}</small>
-              </button>
+          <div className="module-list">
+            {selectedDomainData.modules.map((module) => (
+              <button type="button" key={module}>{module}</button>
             ))}
           </div>
         </section>
       </section>
 
-      <section className="lower-grid">
+      <section className="detail-grid">
         <section className="panel">
           <div className="panel-heading">
             <div>
-              <p className="eyebrow">September Track（9月主线）</p>
+              <p className="eyebrow">September Route（9月航线）</p>
               <h2>Build the Brain（建立认知系统）</h2>
             </div>
             <GitBranch size={22} />
@@ -141,16 +203,14 @@ function App() {
         <section className="panel">
           <div className="panel-heading">
             <div>
-              <p className="eyebrow">Connections（连接）</p>
-              <h2>{node.id}</h2>
+              <p className="eyebrow">Serendipity（偶遇）</p>
+              <h2>Boundary Object（边界对象）</h2>
             </div>
-            <ArrowUpRight size={22} />
+            <Sparkles size={22} />
           </div>
-          <div className="connection-list">
-            {node.connections.map((connection) => (
-              <span key={connection}>{connection}</span>
-            ))}
-          </div>
+          <p className="soft-copy">
+            这个图谱本身就是一个 Boundary Object（边界对象）：ChatGPT 用它生成学习内容，Codex 用它维护结构，你用它形成判断。
+          </p>
         </section>
       </section>
     </main>

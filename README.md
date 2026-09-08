@@ -134,9 +134,9 @@ Core Node（核心节点）长期目标一般为 L3–L4；个人 Deep Domain（
 
 网站第一版是 Personal Knowledge Graph Workbench（个人知识图谱工作台）：
 
-- 首页展示八大 Domain（领域）和 META（元能力）
-- 点击领域查看模块
-- 点击节点查看 Mastery（掌握等级）、摘要和连接
+- 首页展示 Island Map（岛屿地图）：八大 Domain（领域）和 META（元能力）是岛屿
+- 岛上显示 Node（节点）分支
+- 点击节点查看 Mastery（掌握等级）、摘要和跨岛连接
 - 显示当天 Daily Brief（每日知识简报）和 9 月主线进度
 
 ## 最重要的一句话
