@@ -26,3 +26,4 @@
 - 根据用户反馈废弃“五轨并列 newsletter”邮件结构，改为一条主线的 Daily Knowledge Lesson（每日知识课）
 - 新增 `DAILY_TEACHING_PROTOCOL.md`，规定连续教学、行业学徒制顺序推进、World Signals（世界信号）可选、Serendipity（偶遇）周末化、Gmail HTML 排版
 - 新增 `schemas/email_lesson_template.html`，要求 Gmail 使用 HTML 排版，不再原样发送 Markdown
+- 重写并重发 2026-09-08 Daily Knowledge Lesson（每日知识课）HTML 邮件，废弃原五轨并列版本

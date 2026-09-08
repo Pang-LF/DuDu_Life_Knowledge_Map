@@ -73,7 +73,7 @@ Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进�
 
 ## Latest Daily Brief（最新每日简报）
 
-2026-09-08：已补发 Day 0（启动日），核心节点为 `META.SYSTEMS.SYSTEM` — System（系统）。
+2026-09-08：已按 `DAILY_TEACHING_PROTOCOL.md` 重发 Day 0（启动日）新版 HTML 邮件，核心节点为 `META.SYSTEMS.SYSTEM` — System（系统）。
 
 ## Repository Rule（仓库规则）
 
