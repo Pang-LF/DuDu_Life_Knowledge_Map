@@ -136,6 +136,7 @@ Codex 可以记录 `mastery_candidate`，但未经用户确认不要把 `mastery
 
 - 推到 GitHub，形成版本历史
 - 使用静态网站生成器或轻量前端读取 Markdown / YAML
+- GitHub Pages URL：`https://pang-lf.github.io/DuDu_Life_Knowledge_Map/`
 
 长期：
 
