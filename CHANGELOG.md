@@ -17,3 +17,6 @@
 - 记录个人网站 / GitHub 知识图谱可视化路线
 - 测试 Gmail 发送通道成功
 - 调整每日 1 小时规则为：30-40 分钟阅读与思考，20-30 分钟追问与讨论
+- 补发 2026-09-08 Daily Knowledge Brief（每日知识简报）
+- 新增 `META.SYSTEMS.SYSTEM` — System（系统）节点
+- 新增 Question Bank（问题库）、System revealed purpose（系统实际目的）候选信念与 Streaming Bundle（流媒体捆绑）案例

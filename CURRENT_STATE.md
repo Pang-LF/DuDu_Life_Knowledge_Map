@@ -58,7 +58,7 @@ Last updated: 2026-09-08
 
 ## Next Immediate Focus（下一步）
 
-2026-09-09：System（系统）与 Systems Thinking（系统思维）基础；开始第一个 Daily Brief。
+2026-09-09：继续 System（系统），用一个陌生案例确认 L2；然后进入 Feedback Loop（反馈回路）。
 
 ## Operating Model（运行模型）
 
@@ -67,6 +67,10 @@ Last updated: 2026-09-08
 ## Delivery Test（推送测试）
 
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
+
+## Latest Daily Brief（最新每日简报）
+
+2026-09-08：已补发 Day 0（启动日），核心节点为 `META.SYSTEMS.SYSTEM` — System（系统）。
 
 ## Repository Rule（仓库规则）
 

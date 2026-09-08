@@ -1,0 +1,21 @@
+id: "BELIEF.SYSTEM.REVEALED_PURPOSE"
+statement: "To understand a complex organization or industry, I should identify what the system actually rewards before accepting what it says it values."
+confidence: 0.60
+status: "active"
+
+supporting_evidence:
+  - "Organizations and industries often reveal priorities through resource allocation, incentives, and repeated behavior."
+contradicting_evidence: []
+key_assumptions:
+  - "Observed incentives are more predictive than stated values when the two diverge."
+what_would_change_my_mind:
+  - "Evidence that stated goals consistently predict behavior better than incentives in a specific system."
+related_nodes:
+  - "META.SYSTEMS.SYSTEM"
+
+history:
+  - date: "2026-09-08"
+    confidence_before: null
+    confidence_after: 0.60
+    reason: "Created during the System（系统）kickoff brief."
+

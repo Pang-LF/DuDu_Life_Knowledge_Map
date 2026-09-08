@@ -1,0 +1,34 @@
+id: "META.SYSTEMS.SYSTEM"
+name_en: "System"
+name_zh: "系统"
+domain: "META"
+module: "Systems Thinking（系统思维）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "A system is a set of elements, relationships, flows, and a purpose or function that produces behavior over time."
+why: "Many important problems cannot be understood by listing parts alone; the relationships and flows between parts often explain outcomes."
+mechanism: "Elements interact through relationships. Flows of information, money, energy, attention, people, or materials move through those relationships. The system's actual incentives reveal what it tends to optimize."
+example: "A streaming business is not only an app plus content library; it is a system of subscribers, content rights, pricing, device platforms, advertising, churn, retention, and bargaining power."
+my_take: "When a system's stated purpose and actual rewards diverge, actual rewards usually explain behavior better."
+
+prerequisites: []
+connections:
+  - "BUS.MEDIA.AGGREGATOR"
+  - "BUS.SUBSCRIPTION.BUNDLE"
+  - "SYSTEM.ECON.INFLATION"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+questions:
+  - "How can revealed purpose（实际目的）be identified with evidence?"
+cases:
+  - "Streaming bundle returns as aggregation function reappears"
+
+first_seen: "2026-09-08"
+last_reviewed: "2026-09-08"
+next_review: "2026-09-09"
+sources:
+  - "https://apnews.com/article/stocks-markets-trump-oil-ai-rates-d3d6157a534584985987f828a940cffa"
+  - "https://apnews.com/article/bf08bb7e2164d9293f022f5da04790e8"
+notes: "Created from the 2026-09-08 make-up Daily Brief（补发每日简报）."
+
