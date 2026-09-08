@@ -1,0 +1,25 @@
+id: "META.SYSTEMS.FEEDBACK"
+name_en: "Feedback Loop"
+name_zh: "反馈回路"
+domain: "META"
+module: "Systems Thinking（系统思维）"
+importance: "Core"  # Core / Advanced / Optional / Frontier
+mastery_current: "L0"
+mastery_candidate: null
+
+what: ""
+why: ""
+mechanism: ""
+example: ""
+my_take: ""
+
+prerequisites: []
+connections: []
+questions: []
+cases: []
+
+first_seen: null
+last_reviewed: null
+next_review: null
+sources: []
+notes: ""

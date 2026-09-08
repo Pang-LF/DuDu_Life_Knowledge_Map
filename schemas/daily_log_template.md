@@ -1,0 +1,60 @@
+# Daily Knowledge Brief — YYYY-MM-DD
+
+## 1. Core Quest（核心任务）
+
+**Today's Question（今日问题）：**
+
+### Core Nodes（核心节点）
+- `NODE.ID` — English（中文） — Target: L?
+
+### Mechanism（机制）
+
+
+## 2. World Signals（世界信号）
+
+### Signal 1
+- What happened（发生了什么）：
+- Why it matters（为什么重要）：
+- Map connections（地图连接）：
+
+## 3. Industry Window（行业窗口）
+
+**Current Industry（当前行业）：**
+
+- Concept（概念）：
+- Hidden Rule（隐性规则）：
+- Operational Reality（运营现实）：
+- Related Nodes（相关节点）：
+
+## 4. Serendipity Node（偶遇节点）
+
+- Topic（主题）：
+- Why interesting（为什么值得知道）：
+- Unexpected connection（意外连接）：
+
+## 5. Judgment & Belief（判断与信念）
+
+**Question（问题）：**
+
+**My answer（我的回答）：**
+
+**Belief update（信念更新）：**
+
+## Map Update（地图更新）
+
+- Nodes studied（学习节点）：
+- New connections（新连接）：
+- Mastery candidates（掌握候选）：
+- Open questions（未解决问题）：
+
+## Daily Sync Packet（每日同步包）
+
+```yaml
+date: YYYY-MM-DD
+nodes_updated: []
+new_connections: []
+belief_updates: []
+new_questions: []
+cases: []
+next_focus: []
+```

@@ -1,0 +1,102 @@
+version: 0.1
+updated: 2026-09-08
+purpose: "Personal Knowledge Operating System（个人知识操作系统）"
+
+meta:
+  name_en: META
+  name_zh: 元能力
+  modules:
+    - Critical Thinking（批判性思维）
+    - Systems Thinking（系统思维）
+    - Causal Reasoning（因果推理）
+    - Probabilistic Thinking（概率思维）
+    - Bayesian Thinking（贝叶斯思维）
+    - First-principles Thinking（第一性原理思维）
+    - Second-order Thinking（二阶思维）
+    - Counterfactual Thinking（反事实思维）
+    - Forecasting（预测）
+    - Scenario Planning（情景规划）
+    - Information Literacy（信息素养）
+    - Source Evaluation（信息源评估）
+
+domains:
+  - id: SELF
+    name_en: SELF
+    name_zh: 自我
+    modules:
+      - Cognition（认知）
+      - Learning（学习）
+      - Decision Making（决策）
+      - Life Systems（人生系统）
+  - id: HUMAN
+    name_en: HUMAN
+    name_zh: 人
+    modules:
+      - Psychology（心理学）
+      - Behavioral Economics（行为经济学）
+      - Social Dynamics（社会动力学）
+      - Power & Organizations（权力与组织）
+  - id: CIVILIZATION
+    name_en: CIVILIZATION
+    name_zh: 文明
+    modules:
+      - Human Civilization（人类文明）
+      - China（中国）
+      - United States（美国）
+      - World Order（世界秩序）
+  - id: SYSTEM
+    name_en: SYSTEM
+    name_zh: 现代社会系统
+    modules:
+      - Economics（经济学）
+      - Finance（金融）
+      - Politics（政治）
+      - Geopolitics（地缘政治）
+      - Law & Institutions（法律与制度）
+  - id: BUSINESS
+    name_en: BUSINESS
+    name_zh: 商业
+    modules:
+      - Business Fundamentals（商业基础）
+      - Industry Atlas（产业图谱）
+  - id: SCIENCE
+    name_en: SCIENCE
+    name_zh: 科学
+    modules:
+      - Mathematics & Statistics（数学与统计）
+      - Physics（物理）
+      - Biology（生物学）
+      - Earth & Environment（地球与环境）
+  - id: FRONTIER
+    name_en: FRONTIER
+    name_zh: 科技前沿
+    modules:
+      - Artificial Intelligence（人工智能）
+      - AI Infrastructure（人工智能基础设施）
+      - Robotics（机器人）
+      - Biotechnology（生物科技）
+      - Future Energy（未来能源）
+      - Space Economy（太空经济）
+  - id: WISDOM
+    name_en: WISDOM
+    name_zh: 智慧
+    modules:
+      - Philosophy（哲学）
+      - Intellectual Traditions（思想传统）
+      - Art & Humanity（艺术与人文）
+
+mastery_levels:
+  L0: Unknown（未知）
+  L1: Recognize（识别）
+  L2: Explain（解释）
+  L3: Apply（应用）
+  L4: Connect（连接）
+  L5: Judge（判断）
+
+object_types:
+  - Node（知识节点）
+  - Connection（连接）
+  - Question（问题）
+  - Belief（信念）
+  - Evidence（证据）
+  - Case（案例）

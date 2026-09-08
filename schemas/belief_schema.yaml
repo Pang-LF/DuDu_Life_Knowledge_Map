@@ -1,0 +1,16 @@
+id: "BELIEF.EXAMPLE"
+statement: ""
+confidence: 0.50
+status: "active"  # active / revised / retired
+
+supporting_evidence: []
+contradicting_evidence: []
+key_assumptions: []
+what_would_change_my_mind: []
+related_nodes: []
+
+history:
+  - date: null
+    confidence_before: null
+    confidence_after: null
+    reason: ""
