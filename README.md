@@ -117,6 +117,7 @@ Core Node（核心节点）长期目标一般为 L3–L4；个人 Deep Domain（
 - `CHATGPT_SYNC.md`：ChatGPT ↔ Repository 同步协议
 - `OPERATING_MODEL.md`：每日 1 小时运行模型、连续性规则、推送与网站路线
 - `DAILY_TEACHING_PROTOCOL.md`：每日知识课教学协议，规定一条主线、连续课程和 HTML 邮件排版
+- `DEEP_TEACHING_STANDARD.md`：深度教学标准，规定真实案例、行业机制、数字、权衡和质量测试
 - `schemas/`：Node / Belief / Daily Log 等结构规范
 - `daily/`：每日学习记录
 - `weekly/`：每周状态

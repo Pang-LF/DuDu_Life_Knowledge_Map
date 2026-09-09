@@ -45,3 +45,14 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Bundle（捆绑）为什么曾经强大、后来瓦解、现在又重新出现？
 - Aggregator（聚合平台）会不会重新成为行业价值中心？
 - 在产品越来越相似时，真正的 competitive advantage（竞争优势）来自哪里？
+
+## Apprenticeship Log（学徒记录）
+
+### 2026-09-08 — ESPN and Pay-TV Bundle Power
+
+- Question: Why could ESPN command strong carriage economics inside the traditional bundle?
+- Money flow: Household subscription bill → distributor → affiliate fee → ESPN → sports rights and production.
+- Power source: Scarce live sports reduced substitution and increased distributor churn risk during a blackout.
+- 2025 anchors: $10.837B domestic affiliate/subscription fees; $4.273B domestic advertising; $11.240B domestic programming and production costs.
+- Structural change: 7% effective-rate growth offset 7% subscriber decline, showing rate escalation temporarily countering linear erosion.
+- Case: `BUS.MEDIA.ESPN.BUNDLE_POWER`

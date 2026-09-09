@@ -19,6 +19,7 @@ Codex：整理、合并、维护结构、更新状态、记录版本。
 3. 当前月 `monthly/` 或本月计划
 4. 如涉及具体主题，再读取对应 `nodes/` / `industries/` / `beliefs/`
 5. `DAILY_TEACHING_PROTOCOL.md`
+6. `DEEP_TEACHING_STANDARD.md`
 
 ## Daily Teaching Rule（每日教学规则）
 
@@ -31,6 +32,13 @@ Codex：整理、合并、维护结构、更新状态、记录版本。
 - Serendipity（偶遇）只在周末
 - 结尾只问 1-2 个 Teach-back（反向讲解）诊断问题
 - Gmail 输出必须是 HTML 排版后的邮件，不要直接发送 Markdown 原文
+
+每日内容还必须遵守 `DEEP_TEACHING_STANDARD.md`：
+
+- 重要课程需要真实具名 Deep Case（深度案例）
+- 案例必须包含背景、触发、参与者、激励、时间线、机制、数字、结果、反事实和迁移
+- Industry Apprenticeship（行业学徒制）必须讲真实行业机制，追踪 money（钱）和 power（权力）
+- 普通工作日目标是 30-45 分钟有效阅读与思考
 
 ## ChatGPT 每日结束时建议输出 Daily Sync Packet（每日同步包）
 

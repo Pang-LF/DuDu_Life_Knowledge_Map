@@ -65,6 +65,7 @@ Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒�
 - `README.md`
 - `CHATGPT_SYNC.md`
 - `DAILY_TEACHING_PROTOCOL.md`
+- `DEEP_TEACHING_STANDARD.md`
 - 当前月份计划，如 `september_2026.md`
 - 最近 7 天 `daily/` 日志
 - 当前主题相关的 `nodes/`、`industries/`、`beliefs/`、`questions/`
@@ -130,6 +131,19 @@ Gmail 邮件必须发送 HTML 格式，不能直接粘贴 Markdown 原文。
 - 因果链条用独立框展示
 - Teach-back（反向讲解）问题用醒目问题框
 - Map Update（地图更新）放在末尾，简洁呈现
+
+## Depth Budget（深度预算）
+
+普通工作日课程目标是 30-45 分钟有效阅读与思考。
+
+每天通常包含：
+
+- Core Lesson（核心课程）：15-20 分钟
+- Deep Case（深度案例）：10-15 分钟
+- Industry Apprenticeship（行业学徒制）：10-15 分钟
+- Teach-back（反向讲解）：5-10 分钟
+
+Depth Budget（深度预算）由教学任务决定，而不是字数决定。每增加一段文字，都必须增加机制理解、现实知识、数量级、历史背景、权衡、反例或跨领域连接。
 
 ## Website Vision（个人网站愿景）
 

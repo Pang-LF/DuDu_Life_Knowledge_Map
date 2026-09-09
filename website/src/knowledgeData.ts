@@ -97,8 +97,24 @@ export const nodes: GraphNode[] = [
     label: 'System（系统）',
     domain: 'META',
     mastery: 'L2 candidate',
-    summary: 'A system is elements, relationships, flows, and purpose producing behavior over time.',
-    connections: ['BUS.MEDIA.AGGREGATOR', 'BUS.SUBSCRIPTION.BUNDLE', 'SYSTEM.ECON.INFLATION', 'FRONTIER.AI.INFRASTRUCTURE'],
+    summary: 'Elements, relationships, flows, constraints and feedback produce behavior over time; Southwest 2022 shows how coupled networks can cross a recovery-capacity threshold.',
+    connections: ['CASE.SOUTHWEST.2022_MELTDOWN', 'BUS.MEDIA.ESPN.BUNDLE_POWER', 'BUS.MEDIA.AGGREGATOR', 'BUS.SUBSCRIPTION.BUNDLE'],
+  },
+  {
+    id: 'CASE.SOUTHWEST.2022_MELTDOWN',
+    label: 'Southwest 2022（西南航空运营崩溃）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'Weather triggered cascading cancellations; crew and aircraft state fell out of sync, processing capacity was overwhelmed, and a reinforcing loop prolonged recovery.',
+    connections: ['META.SYSTEMS.SYSTEM'],
+  },
+  {
+    id: 'BUS.MEDIA.ESPN.BUNDLE_POWER',
+    label: 'ESPN Bundle Power（ESPN 捆绑议价权）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Scarce live sports create blackout-driven churn risk, supporting affiliate fees and broad distribution while rising rights costs pressure the system.',
+    connections: ['META.SYSTEMS.SYSTEM', 'BUS.SUBSCRIPTION.BUNDLE'],
   },
   {
     id: 'BUS.MEDIA.AGGREGATOR',
@@ -120,11 +136,11 @@ export const nodes: GraphNode[] = [
 
 export const todayBrief = {
   date: '2026-09-08',
-  title: 'Day 0 — System（系统）',
-  question: '为什么“把一个东西拆成零件”不一定能理解它真正如何运转？',
-  reading: '30-40 min：阅读 System（系统）框架，写出 5 句话自我解释。',
-  discussion: '20-30 min：用追问检查理解，重点区分 stated purpose（口头目的）和 revealed purpose（实际目的）。',
-  next: '2026-09-09：继续 System（系统），用陌生案例确认 L2；然后进入 Feedback Loop（反馈回路）。',
+  title: 'Day 1 — System Under Stress（压力下的系统）',
+  question: '为什么同一场风暴让 Southwest 在天气改善后仍持续大规模取消航班？',
+  reading: '30-45 min：用 Southwest 2022 深度案例理解耦合、容量阈值、信息延迟与强化回路。',
+  discussion: '20-30 min：完成一个 Teach-back，并把机制迁移到工作或个人生活中的系统。',
+  next: '2026-09-09：继续 System（系统），进入 Feedback Loop（反馈回路）与平衡式干预。',
 }
 
 export const monthlyTrack = [
@@ -135,4 +151,3 @@ export const monthlyTrack = [
   'Source Evaluation（信息源评估）',
   'Forecasting（预测）',
 ]
-

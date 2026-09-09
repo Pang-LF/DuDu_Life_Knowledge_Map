@@ -176,3 +176,9 @@ Gmail 邮件必须发送 HTML 格式，不要把 Markdown 原文直接贴给用�
 Repository（仓库）可以保存 Markdown，但邮件必须是易读排版后的学习材料。
 
 可参考 `schemas/email_lesson_template.html`。实际发送时应填入当天内容，并用 `mime_type: text/html`。
+
+## 12. Depth Standard（深度标准）
+
+本文件负责课程连续性和教学顺序。深度、案例质量、行业机制质量必须同时遵守 `DEEP_TEACHING_STANDARD.md`。
+
+生成任何 Daily Knowledge Lesson（每日知识课）前必须同时读取两个文件。

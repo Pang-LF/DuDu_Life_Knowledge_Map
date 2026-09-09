@@ -23,12 +23,12 @@ questions:
   - "How can revealed purpose（实际目的）be identified with evidence?"
 cases:
   - "Streaming bundle returns as aggregation function reappears"
+  - "Southwest Airlines 2022 holiday operational meltdown"
 
 first_seen: "2026-09-08"
 last_reviewed: "2026-09-08"
 next_review: "2026-09-09"
 sources:
-  - "https://apnews.com/article/stocks-markets-trump-oil-ai-rates-d3d6157a534584985987f828a940cffa"
-  - "https://apnews.com/article/bf08bb7e2164d9293f022f5da04790e8"
-notes: "Created from the 2026-09-08 make-up Daily Brief（补发每日简报）."
-
+  - "https://www.transportation.gov/briefing-room/dot-penalizes-southwest-airlines-140-million-2022-holiday-meltdown"
+  - "https://investors.southwest.com/sec-filings/all-sec-filings/content/0000092380-23-000010/luv-20221231.htm"
+notes: "Deepened on 2026-09-08 with coupling, capacity threshold, information delay, reinforcing feedback, and operational resilience."

@@ -23,7 +23,7 @@ Last updated: 2026-09-08
 
 ## Daily Brief（每日日报）固定五轨
 
-已废弃“五轨并列 newsletter”形式。新的 Daily Knowledge Lesson（每日知识课）遵守 `DAILY_TEACHING_PROTOCOL.md`：
+已废弃“五轨并列 newsletter”形式。新的 Daily Knowledge Lesson（每日知识课）遵守 `DAILY_TEACHING_PROTOCOL.md` 和 `DEEP_TEACHING_STANDARD.md`：
 
 - 每天一个主问题
 - 从直觉到机制讲透一个核心节点
@@ -31,6 +31,8 @@ Last updated: 2026-09-08
 - World Signals（世界信号）最多 1 条，且必须服务当天概念
 - Serendipity（偶遇）改为周末
 - 结尾只保留 1-2 个 Teach-back（反向讲解）诊断问题
+- 重要课程必须包含真实具名 Deep Case（深度案例）
+- 普通工作日目标是 30-45 分钟有效阅读与思考
 
 ## September Industry Window（9月行业窗口）
 
@@ -73,7 +75,7 @@ Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进�
 
 ## Latest Daily Brief（最新每日简报）
 
-2026-09-08：已按 `DAILY_TEACHING_PROTOCOL.md` 重发 Day 0（启动日）新版 HTML 邮件，核心节点为 `META.SYSTEMS.SYSTEM` — System（系统）。
+2026-09-08：第三版已按 `DEEP_TEACHING_STANDARD.md` 完成。核心案例为 Southwest Airlines 2022 Holiday Meltdown，行业案例为 ESPN Pay-TV Bundle Power；`META.SYSTEMS.SYSTEM` 保持 L2 candidate，等待用户 Teach-back 验证。
 
 ## Repository Rule（仓库规则）
 

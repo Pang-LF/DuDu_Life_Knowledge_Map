@@ -55,14 +55,23 @@ Codex 可以写 `mastery_candidate`，但未经明确证据不要直接改 `mast
 ## 每次 Daily Sync（每日同步）应执行
 
 1. 读取 `CURRENT_STATE.md`。
-2. 合并当天新增的 Nodes（节点）。
-3. 合并候选 Connections（连接）。
-4. 更新 Beliefs（信念）和 Questions（问题）。
-5. 把现实案例存入 `cases/`。
-6. 记录 source date（来源日期）。
-7. 更新 `CHANGELOG.md`。
-8. 更新 `CURRENT_STATE.md`。
-9. 如分类不确定，写入 `INBOX.md`。
+2. 读取 `DAILY_TEACHING_PROTOCOL.md` 和 `DEEP_TEACHING_STANDARD.md`。
+3. 合并当天新增的 Nodes（节点）。
+4. 合并候选 Connections（连接）。
+5. 更新 Beliefs（信念）和 Questions（问题）。
+6. 把现实案例存入 `cases/`。
+7. 记录 source date（来源日期）。
+8. 更新 `CHANGELOG.md`。
+9. 更新 `CURRENT_STATE.md`。
+10. 如分类不确定，写入 `INBOX.md`。
+
+## Daily Lesson（每日知识课）质量规则
+
+`DAILY_TEACHING_PROTOCOL.md` 负责课程连续性和教学顺序；`DEEP_TEACHING_STANDARD.md` 负责深度、案例质量和行业知识质量。生成任何 Daily Knowledge Lesson（每日知识课）前必须同时读取两者。
+
+普通工作日目标是 30-45 分钟有效阅读与思考。不要为了长度灌水；每一段都应增加机制理解、现实知识、数量级、历史背景、权衡、反例或跨领域连接。
+
+重要课程必须包含真实具名 Deep Case（深度案例）。Toy Example（简化例子）可以用于建立直觉，但不能承担主案例。
 
 ## Weekly Review（周度复盘）应检查
 

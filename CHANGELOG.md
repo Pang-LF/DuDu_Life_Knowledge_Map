@@ -27,3 +27,8 @@
 - 新增 `DAILY_TEACHING_PROTOCOL.md`，规定连续教学、行业学徒制顺序推进、World Signals（世界信号）可选、Serendipity（偶遇）周末化、Gmail HTML 排版
 - 新增 `schemas/email_lesson_template.html`，要求 Gmail 使用 HTML 排版，不再原样发送 Markdown
 - 重写并重发 2026-09-08 Daily Knowledge Lesson（每日知识课）HTML 邮件，废弃原五轨并列版本
+- 新增 `DEEP_TEACHING_STANDARD.md`，要求 Daily Knowledge Lesson（每日知识课）包含真实具名 Deep Case（深度案例）、行业真实机制、数字、权衡和反事实
+- 标记 2026-09-08 第二版课程仍不视为最终完成，需要第三版深度重写
+- 完成 2026-09-08 第三版课程：以 Southwest 2022 假日运营崩溃拆解系统耦合、容量阈值和反馈，以 ESPN 拆解付费电视捆绑中的钱流、议价权和成本权衡
+- 新增 `CASE.SOUTHWEST.2022_MELTDOWN` 与 `BUS.MEDIA.ESPN.BUNDLE_POWER` 两个案例节点，并同步网站知识数据
+- 每日 09:00 自动任务已更新为同时读取 `DAILY_TEACHING_PROTOCOL.md` 与 `DEEP_TEACHING_STANDARD.md`
