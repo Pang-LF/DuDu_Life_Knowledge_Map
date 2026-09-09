@@ -69,9 +69,17 @@ Codex 可以写 `mastery_candidate`，但未经明确证据不要直接改 `mast
 
 `DAILY_TEACHING_PROTOCOL.md` 负责连续性；`DEEP_TEACHING_STANDARD.md` 负责案例与证据深度；`NARRATIVE_TEACHING_STANDARD.md` 负责理解重建；`KNOWLEDGE_MAP_ORIENTATION_PROTOCOL.md` 负责解释这块知识在五年地图中的位置与课程顺序。生成任何课程前必须同时读取四者。
 
-普通工作日目标是 30-45 分钟有效阅读与思考。不要为了长度灌水；每一段都应增加机制理解、现实知识、数量级、历史背景、权衡、反例或跨领域连接。
+普通工作日允许 45-60 分钟有效阅读与思考。不要为了长度灌水；每一段都应增加机制理解、现实知识、数量级、历史背景、权衡、反例或跨领域连接。
 
 重要课程必须包含真实具名 Deep Case（深度案例）。Toy Example（简化例子）可以用于建立直觉，但不能承担主案例。
+
+每天采用 Three-Ring Structure（三圈结构）：
+
+1. Mastery Core（掌握核心）：当天唯一 Anchor Concept（锚点概念），保持完整深度。
+2. Knowledge Expansion（知识拓展）：随主案例自然深入真实领域，不作为平级 Core Node 自动计入 mastery。
+3. Connection Preview（连接预览）：2–4 个未来跨域连接，只记录 preview，不正式点亮节点。
+
+普通核心概念原则上只占一堂 Daily Lesson。2026 年 9 月必须按 `september_2026.md` 在 9 月 30 日前完成第一轮 Thinking Toolkit 骨架；不得以加速为由降低叙事、案例和证据深度，也不得以深度为由让单个普通节点无限延长。
 
 ## Weekly Review（周度复盘）应检查
 

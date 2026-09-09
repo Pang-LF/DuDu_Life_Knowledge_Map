@@ -1,6 +1,6 @@
 # Operating Model（运行模型）
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 ## Goal（目标）
 
@@ -8,22 +8,27 @@ Last updated: 2026-09-08
 
 每天不是为了多看内容，而是为了让 Repository（仓库）新增少量高质量、可复习、可连接、可更新的结构化知识。
 
-## Daily Time Budget（每日 1 小时）
+## Daily Time Budget（每日学习预算）
 
-每日 Brief（每日简报）服务于用户自己的消化与讨论，而不是替用户完成学习。
+Daily Lesson（每日课程）服务于用户自己的消化与讨论，而不是替用户完成学习。普通课程允许 45–60 分钟的认真阅读与思考，之后另留 20–30 分钟讨论；忙碌日可以先完成 Mastery Core 与一个 Teach-back，再在讨论中补足。
 
 | Segment（环节） | Time（时间） | Purpose（目的） |
 |---|---:|---|
-| Reading & Thinking（阅读与思考） | 30-40 min | 阅读当天材料、理解机制、写下自己的解释 |
+| Mastery Core + Deep Case（掌握核心与深度案例） | 25-35 min | 从情境、直觉和最小单位重建当天唯一核心概念 |
+| Knowledge Expansion（知识拓展） | 5-10 min | 随主案例自然理解一个真实领域，不增加平级核心主题 |
+| Industry Apprenticeship（行业学徒制） | 10-15 min | 连续推进当天唯一行业问题 |
+| Connection Preview（连接预览） | 3-5 min | 预览 2–4 个未来连接，不正式点亮节点 |
 | Follow-up Discussion（追问与讨论） | 20-30 min | 和 ChatGPT 追问、测试理解、形成判断 |
 
 Daily Brief（每日简报）应控制长度，优先提供：
 
 - 一个清晰 Today's Question（今日问题）
 - 1-2 个 Core Nodes（核心节点）
-- 可在 30-40 分钟内读完和思考的解释
+- 通常可在 45-60 分钟内读完和思考的解释
 - 一个连续、深入、从直觉到机制的主线课程
 - 一个顺序推进的 Industry Apprenticeship（行业学徒制）小章节
+- 一个随主案例自然产生的 Knowledge Expansion（知识拓展）
+- 2-4 个简短 Connection Preview（连接预览），不计为正式学习节点
 - 最多 1 个强相关 Current Application（现实应用）
 - 1-2 个 Teach-back（反向讲解）诊断问题
 
@@ -42,6 +47,9 @@ Daily Brief（每日简报）不再采用五轨并列结构。五轨只作为素
 新原则：
 
 - Core Quest（核心任务）是唯一主线。
+- Mastery Core 是当天唯一正式掌握目标；普通概念原则上只占一天。
+- Knowledge Expansion 只增加理解主案例所需的现实知识。
+- Connection Preview 只显示未来路径，不虚假点亮节点或升级 mastery。
 - Industry Window（行业窗口）作为连续课程，占当天 20-30%。
 - World Signals（世界信号）是可选应用，最多 1 条。
 - Serendipity Node（偶遇节点）改为周末一次。
@@ -136,16 +144,19 @@ Gmail 邮件必须发送 HTML 格式，不能直接粘贴 Markdown 原文。
 
 ## Depth Budget（深度预算）
 
-普通工作日课程目标是 30-45 分钟有效阅读与思考。
+普通工作日课程允许 45-60 分钟有效阅读与思考。
 
 每天通常包含：
 
-- Core Lesson（核心课程）：15-20 分钟
-- Deep Case（深度案例）：10-15 分钟
+- Mastery Core + Deep Case（掌握核心与深度案例）：25-35 分钟
+- Knowledge Expansion（知识拓展）：5-10 分钟，优先织入主案例
 - Industry Apprenticeship（行业学徒制）：10-15 分钟
-- Teach-back（反向讲解）：5-10 分钟
+- Connection Preview（连接预览）：3-5 分钟
+- Teach-back（反向讲解）：在 20-30 分钟 Follow-up Discussion 中完成
 
 Depth Budget（深度预算）由教学任务决定，而不是字数决定。每增加一段文字，都必须增加机制理解、现实知识、数量级、历史背景、权衡、反例或跨领域连接。
+
+Depth（深度）不能通过延长占用天数获得。普通 Core Concept 原则上在一堂课内完成第一轮 L2–L3 骨架，之后在经济、能源、AI、商业等新领域中通过迁移继续加深。
 
 ## Website Vision（个人网站愿景）
 

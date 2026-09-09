@@ -34,13 +34,15 @@ Codex：整理、合并、维护结构、更新状态、记录版本。
 - Serendipity（偶遇）只在周末
 - 结尾只问 1-2 个 Teach-back（反向讲解）诊断问题
 - Gmail 输出必须是 HTML 排版后的邮件，不要直接发送 Markdown 原文
+- 使用 Three-Ring Structure（三圈结构）：Mastery Core（唯一掌握核心）、随主案例自然展开的 Knowledge Expansion（知识拓展）、2–4 个不正式点亮节点的 Connection Preview（连接预览）
+- 普通 Core Concept 原则上只占一天；保持现有深度，同时按 `september_2026.md` 在 2026-09-30 前完成第一轮 Thinking Toolkit
 
 每日内容还必须遵守 `DEEP_TEACHING_STANDARD.md`：
 
 - 重要课程需要真实具名 Deep Case（深度案例）
 - 案例必须包含背景、触发、参与者、激励、时间线、机制、数字、结果、反事实和迁移
 - Industry Apprenticeship（行业学徒制）必须讲真实行业机制，追踪 money（钱）和 power（权力）
-- 普通工作日目标是 30-45 分钟有效阅读与思考
+- 普通工作日允许 45-60 分钟有效阅读与思考
 
 教学表达最高优先遵守 `NARRATIVE_TEACHING_STANDARD.md`：
 

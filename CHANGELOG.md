@@ -9,6 +9,11 @@
 - 更新 Question Bank、节点复习日期、CURRENT_STATE 与网站地图数据
 - HTML 邮件渲染器新增易读表格支持，避免 Markdown 表格在 Gmail 中退化为纯文本
 - 已将正式 HTML 课程发送至当前账户 Gmail
+- 将 Daily Lesson 调整为 Three-Ring Structure：Mastery Core、Knowledge Expansion、Connection Preview
+- 新增 September Completion Constraint 与 Depth Preservation Constraint：普通核心概念原则上一天，深度不得下降
+- 锁定 9/10–9/30 Thinking Toolkit 日程，并按真实问题与 Concept Family 而非术语清单组织后半月
+- 将普通课程阅读与思考量调整为允许 45–60 分钟，Industry Apprenticeship 保持每日完整一章
+- 同步修正 Daily heartbeat 时间记录为每天 11:00 America/Detroit
 
 ## 2026-09-08
 

@@ -18,10 +18,10 @@ Last updated: 2026-09-09
 2. Causal Reasoning（因果推理）
 3. Probability（概率）
 4. Bayesian Thinking（贝叶斯思维）
-5. Information Hygiene（信息卫生）
+5. Cognitive Bias & Source Evaluation（认知偏差与信息源评估）
 6. Forecasting（预测）
 
-## Daily Brief（每日日报）固定五轨
+## Daily Lesson Model（每日课程模型）
 
 已废弃“五轨并列 newsletter”形式。新的 Daily Knowledge Lesson（每日知识课）遵守 `DAILY_TEACHING_PROTOCOL.md` 和 `DEEP_TEACHING_STANDARD.md`：
 
@@ -32,7 +32,9 @@ Last updated: 2026-09-09
 - Serendipity（偶遇）改为周末
 - 结尾只保留 1-2 个 Teach-back（反向讲解）诊断问题
 - 重要课程必须包含真实具名 Deep Case（深度案例）
-- 普通工作日目标是 30-45 分钟有效阅读与思考
+- 普通工作日允许 45-60 分钟有效阅读与思考
+- 每课采用 Mastery Core → Knowledge Expansion → Connection Preview 三圈结构，但只点亮当天 Anchor Concept
+- 普通核心概念原则上一天完成；现有深度不降低，9月第一轮 Thinking Toolkit 必须在 9 月 30 日完成
 
 ## September Industry Window（9月行业窗口）
 
@@ -58,7 +60,7 @@ Last updated: 2026-09-09
 
 ## Automation Rhythm（自动节奏）
 
-- Daily Knowledge Guided Lesson（每日引导式知识课）：每天 09:00 America/Detroit；Codex heartbeat 已启用，优先尝试 Gmail 推送，备用为当前 Codex 任务推送
+- Daily Knowledge Guided Lesson（每日引导式知识课）：每天 11:00 America/Detroit；Codex heartbeat 已启用，优先尝试 Gmail 推送，备用为当前 Codex 任务推送
 - Weekly Knowledge State（每周知识状态）：每周日晚上
 
 ## Next Immediate Focus（下一步）
@@ -67,7 +69,7 @@ Last updated: 2026-09-09
 
 ## Operating Model（运行模型）
 
-每日投入约 1 小时，采用 `OPERATING_MODEL.md` 中的连续性规则：30-40 分钟阅读与思考，20-30 分钟追问与 ChatGPT 讨论。每日 Brief（每日简报）先读取当前状态和最近 7 天记录，再根据已达成节点、待强化节点和 9 月路线选择当天新内容。
+普通课程允许 45-60 分钟阅读与思考，另留 20-30 分钟追问与 ChatGPT 讨论；忙碌日先完成 Mastery Core。每日 Lesson 先读取当前状态和最近 7 天记录，再根据固定的 9 月日程、已达成节点和待强化节点选择内容，不让普通概念无限延长。
 
 ## Delivery Test（推送测试）
 
