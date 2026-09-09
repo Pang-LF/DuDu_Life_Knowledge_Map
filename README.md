@@ -58,14 +58,14 @@
 
 ## 运行节奏
 
-### Daily Knowledge Brief（每日知识简报）
-每天 9:00（America/Detroit）推送，采用 5-track（五轨）结构：
+### Daily Knowledge Lesson（每日知识课）
+每天 11:00（America/Detroit）推送，普通工作日采用一条连续主线和 Three-Ring Structure（三圈结构）：
 
-1. Core Quest（核心任务）
-2. World Signals（世界信号）
-3. Industry Window（行业窗口）
-4. Serendipity Node（偶遇节点）
-5. Judgment & Belief（判断与信念）
+1. Mastery Core（掌握核心）：一天讲透一个 Anchor Concept（锚点概念），等待 Teach-back 验证后再升级掌握等级。
+2. Knowledge Expansion（知识拓展）：围绕主案例建立必要的领域知识骨架，但不冒充新的已掌握节点。
+3. Connection Preview（连接预览）：预告当天概念以后如何连接其他领域，不提前占用后续主课。
+
+主课允许 45–60 分钟阅读与思考，另留 20–30 分钟追问与讨论；Industry Apprenticeship（行业学徒制）每天只推进一个连续问题。World Signals 仅在服务当天概念时出现，Serendipity 移至周末。
 
 ### Weekly Knowledge State（每周知识状态）
 每周日晚上进行整合：
@@ -142,7 +142,7 @@ Core Node（核心节点）长期目标一般为 L3–L4；个人 Deep Domain（
 - 首页展示连续的 Island Atlas（岛屿地图集）：八大 Domain（领域）和 META（元能力）是空间中的岛屿轮廓
 - 岛上以地标形式显示 Node（节点），未展开内容以 seed（种子）形式保留
 - 点击节点后，在右侧 Inspector（详情面板）查看 Mastery（掌握等级）、摘要、所属岛屿和跨岛连接
-- 显示当天 Daily Brief（每日知识简报）和 9 月主线进度
+- 显示当天 Daily Knowledge Lesson（每日知识课）和 9 月主线进度
 
 ## 最重要的一句话
 

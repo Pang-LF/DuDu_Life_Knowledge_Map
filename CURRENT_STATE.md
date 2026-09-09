@@ -77,7 +77,7 @@ Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进�
 
 ## Latest Daily Brief（最新每日简报）
 
-2026-09-09：完成 Systems Thinking Day 2 — Coupling（耦合）。主课从一笔电网功率的重新分配出发，以 2003 Northeast Blackout 按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 重建“局部状态变化如何成为相邻部分的新条件”。行业课完成 Day 2，区分 DIRECTV 拥有的客户与产品层、合同取得的内容分发权，以及所协调但不完全拥有的第三方内容和网络。两个新节点均等待 Teach-back，不自动升级正式掌握等级。
+2026-09-09：完成并按当前规则重发 Systems Thinking Day 2 — Coupling（耦合）第二版。Mastery Core 仍只有 Coupling；Bulk Power Grid Operations（大电网运行）明确记为 Knowledge Expansion exposure；金融、软件系统与供应链只记为 Connection Preview，不创建新 mastery 节点。主案例仍以 2003 Northeast Blackout 重建“局部状态变化如何成为相邻部分的新条件”。行业课完成 Day 2，区分 DIRECTV 拥有的客户与产品层、合同取得的内容分发权，以及所协调但不完全拥有的第三方内容和网络。两个正式节点均等待 Teach-back，不自动升级掌握等级。
 
 ## Repository Rule（仓库规则）
 

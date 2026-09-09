@@ -41,6 +41,13 @@ The task force judged the event preventable. Useful interventions existed before
 
 Coupling is not inherently harmful. The same connections that share capacity during normal operation can transmit disturbance when margins, visibility, isolation, or intervention speed are inadequate.
 
+## Three-Ring Attribution
+
+- Mastery Core: `META.SYSTEMS.COUPLING`
+- Knowledge Expansion only: generation-load balance, shared transmission capacity, protection, state estimation, and operator coordination
+- Connection Preview only: finance, software systems, and supply chains
+- Boundary: expansion and previews do not create or upgrade mastery nodes on 2026-09-09
+
 ## Sources
 
 - https://www.energy.gov/oe/august-2003-blackout

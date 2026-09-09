@@ -14,6 +14,8 @@
 - 锁定 9/10–9/30 Thinking Toolkit 日程，并按真实问题与 Concept Family 而非术语清单组织后半月
 - 将普通课程阅读与思考量调整为允许 45–60 分钟，Industry Apprenticeship 保持每日完整一章
 - 同步修正 Daily heartbeat 时间记录为每天 11:00 America/Detroit
+- 按 Three-Ring Structure 重写并重发 Day 2 第二版：Coupling 为唯一 Mastery Core，电网运行为 Knowledge Expansion，金融、软件与供应链仅作 Connection Preview
+- 修正 README 中残留的旧版 09:00 五轨规则，统一为 11:00 Daily Knowledge Lesson
 
 ## 2026-09-08
 

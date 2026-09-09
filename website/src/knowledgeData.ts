@@ -168,9 +168,9 @@ export const nodes: GraphNode[] = [
 
 export const todayBrief = {
   date: '2026-09-09',
-  title: 'Day 2 — Coupling（耦合）',
+  title: 'Day 2 — Coupling（耦合）· Three-Ring Edition',
   question: '三条输电线路接触树木，为什么可能让五千万人停电？',
-  reading: '30-45 min：跟随电网中的一笔功率，理解线路退出后压力如何重新分配并传播。',
+  reading: '45-60 min：以 Coupling 为唯一掌握核心，借电网运行拓展机制，并预览金融、软件与供应链连接。',
   discussion: '20-30 min：解释连接为何既能提供韧性又能传播故障，并拆解 DIRECTV 的资产边界。',
   next: '2026-09-10：Feedback Loop（反馈回路）——影响如何返回并改变最初的变化？',
 }
