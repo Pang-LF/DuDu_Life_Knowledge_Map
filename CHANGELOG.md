@@ -32,3 +32,10 @@
 - 完成 2026-09-08 第三版课程：以 Southwest 2022 假日运营崩溃拆解系统耦合、容量阈值和反馈，以 ESPN 拆解付费电视捆绑中的钱流、议价权和成本权衡
 - 新增 `CASE.SOUTHWEST.2022_MELTDOWN` 与 `BUS.MEDIA.ESPN.BUNDLE_POWER` 两个案例节点，并同步网站知识数据
 - 每日 09:00 自动任务已更新为同时读取 `DAILY_TEACHING_PROTOCOL.md` 与 `DEEP_TEACHING_STANDARD.md`
+- 第三版因“研究报告式压缩”判定不合格；保留在 Git 历史中，不再作为当前课程
+- 新增最高优先级 `NARRATIVE_TEACHING_STANDARD.md`，教学目标从 knowledge summary 改为 reconstruction of understanding（理解重建）
+- 重排 Systems Thinking 前七课：Interdependence → Coupling → Feedback → Nonlinearity → Bottleneck → Delay → Integration
+- 重排媒体行业前五课，从玩家、资产、内容流和钱流开始；ESPN 议价权延后到 Day 4
+- 完成 2026-09-08 第四版：跟随一架飞机和一组机组逐步建立 Interdependence，并新增 `BUS.MEDIA.PAYTV.VALUE_CHAIN`
+- 新增可复用 HTML 邮件渲染器，并重发第四版 Gmail 邮件
+- 每日 09:00 自动任务升级为 Guided Lesson，发送前必须通过单一主旨、前置知识、叙事、对比、行业术语和记忆测试

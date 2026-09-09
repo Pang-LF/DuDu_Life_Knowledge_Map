@@ -1,0 +1,31 @@
+id: "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+name_en: "Pay-TV Value Chain"
+name_zh: "付费电视价值链"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A system linking consumers, distributors, programmers, studios or rights holders, advertisers, and device platforms through content, payment, attention, and customer relationships."
+why: "No single actor normally owns the entire path from original content rights to the household screen."
+mechanism: "Rights holders supply content; programmers organize channels; distributors aggregate and deliver them; households pay for access; advertisers pay for attention."
+example: "A sports league licenses a game, a programmer places it on a channel, and DIRECTV carries that channel inside a household package."
+my_take: "Industry power cannot be understood before separating ownership of content, customer relationships, distribution, and attention."
+
+prerequisites: []
+connections:
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+  - "BUS.SUBSCRIPTION.BUNDLE"
+  - "BUS.MEDIA.ESPN.BUNDLE_POWER"
+questions:
+  - "Which parts of the value chain does DIRECTV own, rent, or merely coordinate?"
+
+first_seen: "2026-09-08"
+last_reviewed: "2026-09-08"
+next_review: "2026-09-09"
+sources:
+  - "https://docs.fcc.gov/public/attachments/DOC-355217A1.pdf"
+  - "https://www.sec.gov/Archives/edgar/data/1514991/000151499125000009/amcx-123118x10k.htm"
+notes: "Industry Apprenticeship Day 1 foundation."

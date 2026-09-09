@@ -1,22 +1,26 @@
 # Daily Knowledge Lesson — YYYY-MM-DD
 
+## Today's One Idea（今天只学一个核心思想）
+
+> 今天如果只记住一件事，就是：
+
 ## 1. Yesterday → Today（承上启下）
 
 昨天：
 
 今天自然接上的问题：
 
-## 2. Today's Question（今日问题）
+## 2. Opening Puzzle（开场谜题）
 
-## 3. Intuition First（先建立直觉）
+## 3. Follow One Unit（跟随一个最小单位）
 
-## 4. Core Concept（核心概念）
+## 4. Background Before Analysis（先建立背景）
 
 ### Core Nodes（核心节点）
 
 - `NODE.ID` — English（中文） — Target: L?
 
-## 5. Mechanism（机制）
+## 5. Name the Core Concept（命名核心概念）
 
 ```text
 A
@@ -26,11 +30,15 @@ A
 
 每个箭头为什么成立：
 
-## 6. What It Is Not（它不是什么）
+## 6. Case Unfolding（案例展开）
 
-## 7. Worked Example（完整案例）
+Before → Pressure Builds → Turning Point → Cascade → Decision → Outcome → Aftermath
 
-## 8. Connection to the World Model（连接世界模型）
+## 7. Comparison and Interpreted Numbers（对比与数字解释）
+
+## 8. Return to the Puzzle（回到开场谜题）
+
+明确写：现在我们可以重新回答开头的问题。
 
 ## 9. Industry Apprenticeship（行业学徒制）
 

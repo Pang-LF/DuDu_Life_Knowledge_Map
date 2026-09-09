@@ -4,51 +4,46 @@
 
 9月不是“学习很多学科”，而是先安装后续知识体系需要的 Thinking Toolkit（思维工具箱）。
 
-同时启动 5-track Daily Knowledge Brief（五轨每日知识简报），避免课程与现实世界脱节。
+同时启动连续的 Daily Knowledge Lesson（每日知识课）。每天只有一个核心概念，现实案例负责重建理解，行业学徒课按前置知识逐日推进。
 
-## Daily 5-track（每日五轨）
+## Daily Lesson Rule（每日课程规则）
 
-### 1. Core Quest（核心任务）
-当天主线知识点，1–2 个 Core Nodes（核心节点）。
-
-### 2. World Signals（世界信号）
-每天 2–4 条真正重要的当日变化，覆盖 AI（人工智能）、商业、经济、科技、地缘政治、科学、社会等；优先选择未来 5 年仍可能重要的信号。
-
-### 3. Industry Window（行业窗口）
-9月固定行业：**Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）**。
-
-### 4. Serendipity Node（偶遇节点）
-每天 1 个用户大概率不会主动搜索的陌生知识点，防止信息茧房。
-
-### 5. Judgment & Belief（判断与信念）
-每天 1 个需要用户形成判断的问题；必要时进入 Belief Ledger（信念账本）。
+- Core Lesson：每天只有一个 One Idea（核心思想）和一个主案例。
+- Industry Apprenticeship：每天只有一个行业问题，按前置知识顺序推进。
+- World Signal：仅在能帮助应用已学概念时最多加入一条。
+- Serendipity：周末单独安排，不打断工作日主课。
+- Judgment & Belief：在用户完成 Teach-back 后再形成或更新。
 
 ---
 
-## Week 1 — Sep 9–13
+## Systems Thinking Sequence — Sep 8–14
 ### Systems Thinking（系统思维）
 
 核心节点：
 
 - `META.SYSTEMS.SYSTEM` — System（系统）
+- `META.SYSTEMS.INTERDEPENDENCE` — Interdependence（相互依赖）
+- `META.SYSTEMS.COUPLING` — Coupling（耦合）
 - `META.SYSTEMS.FEEDBACK` — Feedback Loop（反馈回路）
+- `META.SYSTEMS.NONLINEARITY` — Nonlinearity（非线性）
 - `META.SYSTEMS.DELAY` — Delay（延迟）
 - `META.SYSTEMS.BOTTLENECK` — Bottleneck（瓶颈）
-- `META.SYSTEMS.SECOND_ORDER` — Second-order Effect（二阶效应）
 
 每日主题：
 
-- Sep 9：什么叫 System（系统），为什么“拆成零件”不一定能理解整体
-- Sep 10：Positive Feedback（正反馈）与 Negative Feedback（负反馈）
-- Sep 11：Delay（延迟）为什么让很多政策和商业决策被误判
-- Sep 12：Bottleneck（瓶颈）为什么决定系统产出
-- Sep 13：Second-order Effects（二阶效应）——解决一个问题为什么可能制造另一个问题
+- Sep 8 / Day 1：System（系统）与 Interdependence（相互依赖）——为什么局部正常不代表整体能够运行？
+- Sep 9 / Day 2：Coupling（耦合）——为什么一个地方的扰动会传播到远处？
+- Sep 10 / Day 3：Feedback Loop（反馈回路）——为什么结果会反过来强化原因？
+- Sep 11 / Day 4：Nonlinearity（非线性）——为什么小变化有时产生巨大后果？
+- Sep 12 / Day 5：Bottleneck（瓶颈）——为什么系统表现经常由最窄的一环决定？
+- Sep 13 / Day 6：Delay（延迟）——为什么系统反应常常发生得比人们预期晚？
+- Sep 14 / Day 7：Weekly Integration（周度整合）——组合上述概念分析一个新案例。
 
 周目标：能从单线因果升级为系统因果。
 
 ---
 
-## Week 2 — Sep 14–20
+## Week 2 — Sep 15–20
 ### Causal Reasoning（因果推理）
 
 核心节点：
@@ -107,6 +102,16 @@
 从“做订阅影视行业的数据分析”升级为理解整个 Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）系统。
 
 ## 建议学习顺序
+
+### First Five Lessons（前五课）
+
+1. 传统电视 / Pay-TV 行业有哪些玩家？钱、内容和客户分别掌握在谁手里？
+2. DIRECTV 到底是什么类型的公司，它在产业链中拥有和不拥有什么？
+3. 为什么电视 Bundle（捆绑）曾经能成为一门如此强大的生意？
+4. 为什么消费者即使不看 ESPN，过去也经常必须为 ESPN 付钱？
+5. 为什么 Cord Cutting（剪线）会动摇整个传统电视系统，而不只是让 DIRECTV 少几个客户？
+
+前五课完成前，不得提前深入 ESPN 议价权、Churn、LTV 或复杂定价。
 
 ### A. Industry Structure（行业结构）
 - Pay-TV（付费电视）

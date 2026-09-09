@@ -20,6 +20,7 @@ Codex：整理、合并、维护结构、更新状态、记录版本。
 4. 如涉及具体主题，再读取对应 `nodes/` / `industries/` / `beliefs/`
 5. `DAILY_TEACHING_PROTOCOL.md`
 6. `DEEP_TEACHING_STANDARD.md`
+7. `NARRATIVE_TEACHING_STANDARD.md`
 
 ## Daily Teaching Rule（每日教学规则）
 
@@ -39,6 +40,15 @@ Codex：整理、合并、维护结构、更新状态、记录版本。
 - 案例必须包含背景、触发、参与者、激励、时间线、机制、数字、结果、反事实和迁移
 - Industry Apprenticeship（行业学徒制）必须讲真实行业机制，追踪 money（钱）和 power（权力）
 - 普通工作日目标是 30-45 分钟有效阅读与思考
+
+教学表达最高优先遵守 `NARRATIVE_TEACHING_STANDARD.md`：
+
+- 每天明确一句 Today's One Idea（今天只学一个核心思想）
+- 先情境和困惑，后术语；先跟随一个最小单位，后拉远到系统
+- 案例必须像故事一样展开，不得压缩成时间线或箭头摘要
+- 需要时提供对比，并解释每个数字为什么改变理解
+- 行业课从玩家、资产、钱流和内容流开始，经典术语首次出现时完整教学
+- 结尾必须回到开场谜题，用当天唯一核心概念重新回答
 
 ## ChatGPT 每日结束时建议输出 Daily Sync Packet（每日同步包）
 

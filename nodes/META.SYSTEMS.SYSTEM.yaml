@@ -5,7 +5,7 @@ domain: "META"
 module: "Systems Thinking（系统思维）"
 importance: "Core"
 mastery_current: "L0"
-mastery_candidate: "L2"
+mastery_candidate: "L1"
 
 what: "A system is a set of elements, relationships, flows, and a purpose or function that produces behavior over time."
 why: "Many important problems cannot be understood by listing parts alone; the relationships and flows between parts often explain outcomes."
@@ -15,6 +15,7 @@ my_take: "When a system's stated purpose and actual rewards diverge, actual rewa
 
 prerequisites: []
 connections:
+  - "META.SYSTEMS.INTERDEPENDENCE"
   - "BUS.MEDIA.AGGREGATOR"
   - "BUS.SUBSCRIPTION.BUNDLE"
   - "SYSTEM.ECON.INFLATION"
@@ -31,4 +32,4 @@ next_review: "2026-09-09"
 sources:
   - "https://www.transportation.gov/briefing-room/dot-penalizes-southwest-airlines-140-million-2022-holiday-meltdown"
   - "https://investors.southwest.com/sec-filings/all-sec-filings/content/0000092380-23-000010/luv-20221231.htm"
-notes: "Deepened on 2026-09-08 with coupling, capacity threshold, information delay, reinforcing feedback, and operational resilience."
+notes: "Used only as the parent frame on Day 1; the primary concept is Interdependence. Earlier compressed treatment was superseded by lesson v4."

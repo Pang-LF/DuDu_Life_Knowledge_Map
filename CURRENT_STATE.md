@@ -58,7 +58,7 @@ Last updated: 2026-09-08
 
 ## Automation Rhythm（自动节奏）
 
-- Daily Knowledge Brief（每日知识简报）：每天 09:00 America/Detroit；已创建 Codex heartbeat（心跳任务），优先尝试 Gmail 推送，备用为当前 ChatGPT / Codex 任务推送
+- Daily Knowledge Guided Lesson（每日引导式知识课）：每天 09:00 America/Detroit；Codex heartbeat 已启用，优先尝试 Gmail 推送，备用为当前 Codex 任务推送
 - Weekly Knowledge State（每周知识状态）：每周日晚上
 
 ## Next Immediate Focus（下一步）
@@ -75,7 +75,7 @@ Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进�
 
 ## Latest Daily Brief（最新每日简报）
 
-2026-09-08：第三版已按 `DEEP_TEACHING_STANDARD.md` 完成。核心案例为 Southwest Airlines 2022 Holiday Meltdown，行业案例为 ESPN Pay-TV Bundle Power；`META.SYSTEMS.SYSTEM` 保持 L2 candidate，等待用户 Teach-back 验证。
+2026-09-08：第三版因“研究报告式压缩”判定不合格。第四版已按最高优先级 `NARRATIVE_TEACHING_STANDARD.md` 重写：唯一核心概念是 `META.SYSTEMS.INTERDEPENDENCE`，跟随一架飞机和一组机组逐步展开 Southwest 2022；行业课重置为 Day 1，只建立 Pay-TV 玩家、资产、内容流和基础钱流。ESPN 议价权延后到 Industry Day 4。
 
 ## Repository Rule（仓库规则）
 

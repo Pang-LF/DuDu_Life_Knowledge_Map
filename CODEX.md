@@ -55,7 +55,7 @@ Codex 可以写 `mastery_candidate`，但未经明确证据不要直接改 `mast
 ## 每次 Daily Sync（每日同步）应执行
 
 1. 读取 `CURRENT_STATE.md`。
-2. 读取 `DAILY_TEACHING_PROTOCOL.md` 和 `DEEP_TEACHING_STANDARD.md`。
+2. 读取 `DAILY_TEACHING_PROTOCOL.md`、`DEEP_TEACHING_STANDARD.md` 和 `NARRATIVE_TEACHING_STANDARD.md`。
 3. 合并当天新增的 Nodes（节点）。
 4. 合并候选 Connections（连接）。
 5. 更新 Beliefs（信念）和 Questions（问题）。
@@ -67,7 +67,7 @@ Codex 可以写 `mastery_candidate`，但未经明确证据不要直接改 `mast
 
 ## Daily Lesson（每日知识课）质量规则
 
-`DAILY_TEACHING_PROTOCOL.md` 负责课程连续性和教学顺序；`DEEP_TEACHING_STANDARD.md` 负责深度、案例质量和行业知识质量。生成任何 Daily Knowledge Lesson（每日知识课）前必须同时读取两者。
+`DAILY_TEACHING_PROTOCOL.md` 负责连续性；`DEEP_TEACHING_STANDARD.md` 负责案例与证据深度；`NARRATIVE_TEACHING_STANDARD.md` 负责理解如何一步步重建，并在教学表达与课程聚焦上拥有最高优先级。生成任何课程前必须同时读取三者。
 
 普通工作日目标是 30-45 分钟有效阅读与思考。不要为了长度灌水；每一段都应增加机制理解、现实知识、数量级、历史背景、权衡、反例或跨领域连接。
 

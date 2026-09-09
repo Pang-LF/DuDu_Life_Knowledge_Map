@@ -1,0 +1,33 @@
+id: "META.SYSTEMS.INTERDEPENDENCE"
+name_en: "Interdependence"
+name_zh: "相互依赖"
+domain: "META"
+module: "Systems Thinking（系统思维）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "A component's ability to perform depends on the state, timing, location, and coordination of other components."
+why: "System capability often exists in executable combinations among parts rather than in the isolated health or quantity of each part."
+mechanism: "Resources create output only when their constraints and relationships are simultaneously satisfied. A mismatch can make individually healthy resources collectively unusable."
+example: "A serviceable aircraft and a legal crew cannot operate a flight when they are in different cities or their schedules do not align."
+my_take: "Local health is weak evidence of system health when output requires coordinated matching."
+
+prerequisites:
+  - "META.SYSTEMS.SYSTEM"
+connections:
+  - "CASE.SOUTHWEST.2022_MELTDOWN"
+  - "META.SYSTEMS.COUPLING"
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+questions:
+  - "How can an organization measure the health of relationships rather than only the health of components?"
+cases:
+  - "Southwest Airlines 2022 holiday operational meltdown"
+
+first_seen: "2026-09-08"
+last_reviewed: "2026-09-08"
+next_review: "2026-09-09"
+sources:
+  - "https://investors.southwest.com/sec-filings/all-sec-filings/content/0000092380-23-000010/luv-20221231.htm"
+  - "https://www.transportation.gov/briefing-room/air-travel-consumer-report-december-2022-full-year-2022-numbers"
+notes: "Primary One Idea for Day 1. Mastery remains candidate until user Teach-back."

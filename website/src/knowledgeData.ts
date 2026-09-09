@@ -96,25 +96,33 @@ export const nodes: GraphNode[] = [
     id: 'META.SYSTEMS.SYSTEM',
     label: 'System（系统）',
     domain: 'META',
+    mastery: 'L1 candidate',
+    summary: 'The parent frame for understanding how relationships among parts produce behavior that cannot be inferred from a parts list.',
+    connections: ['META.SYSTEMS.INTERDEPENDENCE', 'BUS.MEDIA.PAYTV.VALUE_CHAIN'],
+  },
+  {
+    id: 'META.SYSTEMS.INTERDEPENDENCE',
+    label: 'Interdependence（相互依赖）',
+    domain: 'META',
     mastery: 'L2 candidate',
-    summary: 'Elements, relationships, flows, constraints and feedback produce behavior over time; Southwest 2022 shows how coupled networks can cross a recovery-capacity threshold.',
-    connections: ['CASE.SOUTHWEST.2022_MELTDOWN', 'BUS.MEDIA.ESPN.BUNDLE_POWER', 'BUS.MEDIA.AGGREGATOR', 'BUS.SUBSCRIPTION.BUNDLE'],
+    summary: 'A part can perform only when other parts align in time, location, state, and constraints. Local health therefore does not guarantee system capability.',
+    connections: ['META.SYSTEMS.SYSTEM', 'CASE.SOUTHWEST.2022_MELTDOWN', 'BUS.MEDIA.PAYTV.VALUE_CHAIN'],
   },
   {
     id: 'CASE.SOUTHWEST.2022_MELTDOWN',
     label: 'Southwest 2022（西南航空运营崩溃）',
     domain: 'META',
     mastery: 'Case studied',
-    summary: 'Weather triggered cascading cancellations; crew and aircraft state fell out of sync, processing capacity was overwhelmed, and a reinforcing loop prolonged recovery.',
-    connections: ['META.SYSTEMS.SYSTEM'],
+    summary: 'A healthy aircraft and a legal crew can still be unusable when they are in different cities; the 2022 disruption exposed system capability living in their coordination.',
+    connections: ['META.SYSTEMS.INTERDEPENDENCE'],
   },
   {
-    id: 'BUS.MEDIA.ESPN.BUNDLE_POWER',
-    label: 'ESPN Bundle Power（ESPN 捆绑议价权）',
+    id: 'BUS.MEDIA.PAYTV.VALUE_CHAIN',
+    label: 'Pay-TV Value Chain（付费电视价值链）',
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
-    summary: 'Scarce live sports create blackout-driven churn risk, supporting affiliate fees and broad distribution while rising rights costs pressure the system.',
-    connections: ['META.SYSTEMS.SYSTEM', 'BUS.SUBSCRIPTION.BUNDLE'],
+    summary: 'Consumers, distributors, programmers, rights holders, advertisers, and platforms exchange content, access, money, attention, and customer relationships.',
+    connections: ['META.SYSTEMS.INTERDEPENDENCE', 'BUS.MEDIA.AGGREGATOR', 'BUS.SUBSCRIPTION.BUNDLE'],
   },
   {
     id: 'BUS.MEDIA.AGGREGATOR',
@@ -136,11 +144,11 @@ export const nodes: GraphNode[] = [
 
 export const todayBrief = {
   date: '2026-09-08',
-  title: 'Day 1 — System Under Stress（压力下的系统）',
+  title: 'Day 1 — Interdependence（相互依赖）',
   question: '为什么同一场风暴让 Southwest 在天气改善后仍持续大规模取消航班？',
-  reading: '30-45 min：用 Southwest 2022 深度案例理解耦合、容量阈值、信息延迟与强化回路。',
-  discussion: '20-30 min：完成一个 Teach-back，并把机制迁移到工作或个人生活中的系统。',
-  next: '2026-09-09：继续 System（系统），进入 Feedback Loop（反馈回路）与平衡式干预。',
+  reading: '30-45 min：跟随一架飞机和一组机组，理解为什么局部正常不保证整体能够运行。',
+  discussion: '20-30 min：用自己的话重建相互依赖，再复述 Pay-TV 的玩家、内容流和钱流。',
+  next: '2026-09-09：Coupling（耦合）——为什么一个地方的扰动会传播到远处？',
 }
 
 export const monthlyTrack = [
