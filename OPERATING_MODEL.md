@@ -67,6 +67,7 @@ Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒�
 - `DAILY_TEACHING_PROTOCOL.md`
 - `DEEP_TEACHING_STANDARD.md`
 - `NARRATIVE_TEACHING_STANDARD.md`
+- `KNOWLEDGE_MAP_ORIENTATION_PROTOCOL.md`
 - 当前月份计划，如 `september_2026.md`
 - 最近 7 天 `daily/` 日志
 - 当前主题相关的 `nodes/`、`industries/`、`beliefs/`、`questions/`

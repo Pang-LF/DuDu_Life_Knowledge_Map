@@ -21,6 +21,7 @@ Codex：整理、合并、维护结构、更新状态、记录版本。
 5. `DAILY_TEACHING_PROTOCOL.md`
 6. `DEEP_TEACHING_STANDARD.md`
 7. `NARRATIVE_TEACHING_STANDARD.md`
+8. `KNOWLEDGE_MAP_ORIENTATION_PROTOCOL.md`
 
 ## Daily Teaching Rule（每日教学规则）
 
@@ -49,6 +50,8 @@ Codex：整理、合并、维护结构、更新状态、记录版本。
 - 需要时提供对比，并解释每个数字为什么改变理解
 - 行业课从玩家、资产、钱流和内容流开始，经典术语首次出现时完整教学
 - 结尾必须回到开场谜题，用当天唯一核心概念重新回答
+
+每课还必须遵守 `KNOWLEDGE_MAP_ORIENTATION_PROTOCOL.md`：进入新 Domain 或 Module 时先完整解释“在哪里、是什么、为什么学、接下来怎样走”；同一模块内只做简短 Daily Orientation；结尾回到地图说明今天点亮的节点和下一步连接。
 
 ## ChatGPT 每日结束时建议输出 Daily Sync Packet（每日同步包）
 

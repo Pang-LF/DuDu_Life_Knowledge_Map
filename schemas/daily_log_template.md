@@ -1,5 +1,17 @@
 # Daily Knowledge Lesson — YYYY-MM-DD
 
+## Knowledge Map Position（知识地图定位）
+
+```text
+2031 Personal World Model
+→ DOMAIN
+→ Module
+→ Parent Concept
+→ Today's Node ← Today
+```
+
+若为新 Domain 或 Module，先解释它是什么、为什么学、解决什么问题和后续路线；否则用 1-3 个短段落承上启下。
+
 ## Today's One Idea（今天只学一个核心思想）
 
 > 今天如果只记住一件事，就是：
@@ -66,6 +78,7 @@ Before → Pressure Builds → Turning Point → Cascade → Decision → Outcom
 
 ```yaml
 date: YYYY-MM-DD
+map_path: []
 nodes_updated: []
 new_connections: []
 belief_updates: []

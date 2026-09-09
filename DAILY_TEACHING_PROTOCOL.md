@@ -179,6 +179,6 @@ Repository（仓库）可以保存 Markdown，但邮件必须是易读排版后�
 
 ## 12. Depth Standard（深度标准）
 
-本文件负责课程连续性和教学顺序。深度与证据质量必须遵守 `DEEP_TEACHING_STANDARD.md`；理解重建、叙事展开、单一主旨和术语引入必须遵守最高优先级的 `NARRATIVE_TEACHING_STANDARD.md`。
+本文件负责课程连续性和教学顺序。深度与证据质量必须遵守 `DEEP_TEACHING_STANDARD.md`；理解重建、叙事展开、单一主旨和术语引入必须遵守最高优先级的 `NARRATIVE_TEACHING_STANDARD.md`；Domain、Module 与 Daily 定位必须遵守 `KNOWLEDGE_MAP_ORIENTATION_PROTOCOL.md`。
 
-生成任何 Daily Knowledge Lesson（每日知识课）前必须同时读取三个教学文件。
+生成任何 Daily Knowledge Lesson（每日知识课）前必须同时读取四个教学文件。

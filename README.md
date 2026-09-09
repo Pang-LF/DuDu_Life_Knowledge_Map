@@ -119,6 +119,7 @@ Core Node（核心节点）长期目标一般为 L3–L4；个人 Deep Domain（
 - `DAILY_TEACHING_PROTOCOL.md`：每日知识课教学协议，规定一条主线、连续课程和 HTML 邮件排版
 - `DEEP_TEACHING_STANDARD.md`：深度教学标准，规定真实案例、行业机制、数字、权衡和质量测试
 - `NARRATIVE_TEACHING_STANDARD.md`：最高优先级叙事教学标准，规定单一主旨、从最小单位展开案例、先背景后术语，并重建理解过程
+- `KNOWLEDGE_MAP_ORIENTATION_PROTOCOL.md`：知识地图定位协议，规定新领域、新模块与每日课程如何解释“在哪里、为什么学、接下来去哪里”
 - `scripts/render_lesson_email.mjs`：把每日 Markdown 课程渲染为易读 HTML 邮件，并自动排除仓库专用同步包
 - `schemas/`：Node / Belief / Daily Log 等结构规范
 - `daily/`：每日学习记录

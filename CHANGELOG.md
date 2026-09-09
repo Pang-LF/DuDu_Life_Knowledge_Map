@@ -39,3 +39,6 @@
 - 完成 2026-09-08 第四版：跟随一架飞机和一组机组逐步建立 Interdependence，并新增 `BUS.MEDIA.PAYTV.VALUE_CHAIN`
 - 新增可复用 HTML 邮件渲染器，并重发第四版 Gmail 邮件
 - 每日 09:00 自动任务升级为 Guided Lesson，发送前必须通过单一主旨、前置知识、叙事、对比、行业术语和记忆测试
+- 新增 `KNOWLEDGE_MAP_ORIENTATION_PROTOCOL.md`，规定 Domain、Module 与 Daily 三层知识地图定位
+- 将 2026-09-08 更新为第五版：在原 Guided Lecture 前补充五年地图位置、Systems Thinking 学习动机、System 定义、直观例子与课程顺序
+- 每日 09:00 自动任务新增 Orientation Test，并按概念跨度控制定位篇幅
