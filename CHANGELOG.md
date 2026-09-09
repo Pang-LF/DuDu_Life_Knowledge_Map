@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 2026-09-09
+
+- 完成 Systems Thinking Day 2：`META.SYSTEMS.COUPLING`，唯一主旨为“局部状态变化会改变相邻部分的运行条件”
+- 新增 2003 Northeast Blackout 深度案例，区分触发因素、传播机制、因果证据与反事实干预窗口
+- 完成 Industry Apprenticeship Day 2：建立 `BUS.MEDIA.DISTRIBUTOR.DIRECTV`，区分拥有、许可与协调
+- 修正行业学习记录：2026-09-08 只计 Pay-TV Value Chain，ESPN 议价权继续延后至 Day 4
+- 更新 Question Bank、节点复习日期、CURRENT_STATE 与网站地图数据
+- HTML 邮件渲染器新增易读表格支持，避免 Markdown 表格在 Gmail 中退化为纯文本
+- 已将正式 HTML 课程发送至当前账户 Gmail
+
 ## 2026-09-08
 
 - 建立 Knowledge Map 2031 v0.1（知识地图 2031 v0.1）

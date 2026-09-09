@@ -1,0 +1,34 @@
+id: "META.SYSTEMS.COUPLING"
+name_en: "Coupling"
+name_zh: "耦合"
+domain: "META"
+module: "Systems Thinking（系统思维）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "Coupling describes how directly, quickly, and strongly a state change in one component alters the operating conditions of connected components."
+why: "A local failure becomes a system event only when its effects can travel through relationships faster or farther than the system can absorb or isolate them."
+mechanism: "When one path or component changes, flows redistribute across the remaining network. Connected parts inherit new loads or constraints; if margins and controls cannot absorb them, the disturbance propagates."
+example: "In the 2003 Northeast blackout, transmission-line outages redistributed power onto remaining lines, changing their loads and voltages and enabling a regional cascade."
+my_take: "A connection is both a channel for support and a channel for disturbance; resilience depends on margins, visibility, isolation, and intervention speed."
+
+prerequisites:
+  - "META.SYSTEMS.SYSTEM"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+connections:
+  - "CASE.NORTHEAST_BLACKOUT.2003"
+  - "META.SYSTEMS.FEEDBACK_LOOP"
+  - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+questions:
+  - "How can coupling strength and intervention time be measured in an unfamiliar system?"
+cases:
+  - "2003 Northeast blackout"
+
+first_seen: "2026-09-09"
+last_reviewed: "2026-09-09"
+next_review: "2026-09-10"
+sources:
+  - "https://www.energy.gov/oe/august-2003-blackout"
+  - "https://www.nerc.com/globalassets/our-work/reports/event-reports/august_2003_blackout_final_report.pdf"
+notes: "Primary One Idea for Systems Thinking Day 2. Mastery remains candidate until user Teach-back."

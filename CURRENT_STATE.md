@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 ## Current Phase（当前阶段）
 
@@ -63,7 +63,7 @@ Last updated: 2026-09-08
 
 ## Next Immediate Focus（下一步）
 
-2026-09-09：继续 System（系统），用一个陌生案例确认 L2；然后进入 Feedback Loop（反馈回路）。
+2026-09-10：进入 Systems Thinking Day 3 — Feedback Loop（反馈回路），先区分“影响向前传播”和“影响返回起点”；Industry Apprenticeship Day 3 只回答传统 Bundle（捆绑）为什么曾经强大。
 
 ## Operating Model（运行模型）
 
@@ -75,7 +75,7 @@ Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进�
 
 ## Latest Daily Brief（最新每日简报）
 
-2026-09-08：第五版已完成。保留第四版的 Guided Lecture 与 Southwest 叙事，新增 Orientation Layer：从 2031 World Model 逐层定位到 META → Thinking Toolkit → Systems Thinking → System → Interdependence；先解释为什么学 Systems Thinking、System 的基础定义、例子与非例子，再进入主案例。行业课仍为 Day 1，ESPN 议价权延后到 Industry Day 4。
+2026-09-09：完成 Systems Thinking Day 2 — Coupling（耦合）。主课从一笔电网功率的重新分配出发，以 2003 Northeast Blackout 按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 重建“局部状态变化如何成为相邻部分的新条件”。行业课完成 Day 2，区分 DIRECTV 拥有的客户与产品层、合同取得的内容分发权，以及所协调但不完全拥有的第三方内容和网络。两个新节点均等待 Teach-back，不自动升级正式掌握等级。
 
 ## Repository Rule（仓库规则）
 

@@ -1,0 +1,36 @@
+id: "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+name_en: "DIRECTV as Distributor and Aggregator"
+name_zh: "DIRECTV 的分发与聚合角色"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "DIRECTV packages licensed content into a household service and controls important customer, billing, service, discovery, and product relationships."
+why: "Understanding the boundary between ownership, licensed access, and coordination is necessary before analyzing bundles, carriage negotiations, or cord cutting."
+mechanism: "DIRECTV contracts for distribution rights, designs packages and product interfaces, delivers service by satellite or internet, bills subscribers, and integrates some third-party apps while depending on programmers, rights holders, internet providers, and separate subscriptions."
+example: "Gemini can place DIRECTV programming and third-party streaming apps in one interface, while some third-party apps still require separately paid subscriptions."
+my_take: "DIRECTV's core asset is not ownership of every program; it is the capability and customer permission to organize other parties' content into a usable product."
+
+prerequisites:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+connections:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.MEDIA.AGGREGATOR"
+  - "BUS.SUBSCRIPTION.BUNDLE"
+  - "META.SYSTEMS.COUPLING"
+questions:
+  - "Which layer of aggregation creates the most durable customer relationship: search, device, identity, billing, or content packaging?"
+cases:
+  - "DIRECTV Gemini integration and third-party subscription boundaries"
+
+first_seen: "2026-09-09"
+last_reviewed: "2026-09-09"
+next_review: "2026-09-10"
+sources:
+  - "https://www.directv.com/insider/corporate/company/"
+  - "https://www.directv.com/technology/gemini/"
+  - "https://www.directv.com/technology/"
+  - "https://shareholders.tpg.com/news-releases/news-release-details/tpg-completes-acquisition-atts-70-stake-directv"
+notes: "Industry Apprenticeship Day 2. Mastery remains candidate until the user can distinguish owned, licensed, and coordinated layers."

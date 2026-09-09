@@ -44,7 +44,20 @@ const closeList = () => {
   listType = null
 }
 
-for (const line of lines) {
+const tableCells = (line) =>
+  line
+    .trim()
+    .replace(/^\|/, '')
+    .replace(/\|$/, '')
+    .split('|')
+    .map((cell) => cell.trim())
+
+const isTableSeparator = (line) =>
+  /^\s*\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(line)
+
+for (let i = 0; i < lines.length; i += 1) {
+  const line = lines[i]
+
   if (line.startsWith('```')) {
     flushParagraph()
     closeList()
@@ -64,6 +77,27 @@ for (const line of lines) {
   if (!line.trim()) {
     flushParagraph()
     closeList()
+    continue
+  }
+
+  if (line.trim().startsWith('|') && isTableSeparator(lines[i + 1] ?? '')) {
+    flushParagraph()
+    closeList()
+    const headers = tableCells(line)
+    const rows = []
+    i += 2
+    while (i < lines.length && lines[i].trim().startsWith('|')) {
+      rows.push(tableCells(lines[i]))
+      i += 1
+    }
+    i -= 1
+    output.push('<div style="overflow-x:auto;margin:8px 0 22px"><table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.55">')
+    output.push(`<thead><tr>${headers.map((cell) => `<th style="text-align:left;background:#e8f3f6;color:#123f55;border:1px solid #cbdde4;padding:10px 11px;vertical-align:top">${inline(cell)}</th>`).join('')}</tr></thead>`)
+    output.push('<tbody>')
+    for (const row of rows) {
+      output.push(`<tr>${row.map((cell) => `<td style="border:1px solid #d7e3e8;padding:10px 11px;vertical-align:top">${inline(cell)}</td>`).join('')}</tr>`)
+    }
+    output.push('</tbody></table></div>')
     continue
   }
 

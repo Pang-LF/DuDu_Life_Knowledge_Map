@@ -48,11 +48,21 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 
 ## Apprenticeship Log（学徒记录）
 
-### 2026-09-08 — ESPN and Pay-TV Bundle Power
+### 2026-09-08 — Pay-TV Players, Assets, Money And Content Flows
 
-- Question: Why could ESPN command strong carriage economics inside the traditional bundle?
-- Money flow: Household subscription bill → distributor → affiliate fee → ESPN → sports rights and production.
-- Power source: Scarce live sports reduced substitution and increased distributor churn risk during a blackout.
-- 2025 anchors: $10.837B domestic affiliate/subscription fees; $4.273B domestic advertising; $11.240B domestic programming and production costs.
-- Structural change: 7% effective-rate growth offset 7% subscriber decline, showing rate escalation temporarily countering linear erosion.
-- Case: `BUS.MEDIA.ESPN.BUNDLE_POWER`
+- Question: Which actors make a traditional Pay-TV service work, and who controls content, payment, attention, and the customer relationship?
+- Foundation: Rights holder → programmer → distributor / MVPD → household.
+- Money flow: Household subscription → distributor → contracted channel fees → programmer → content production or rights holder.
+- Status: `BUS.MEDIA.PAYTV.VALUE_CHAIN` at L1 candidate; Teach-back pending.
+- Deferred: ESPN bargaining power remains reserved for Industry Day 4.
+
+### 2026-09-09 — DIRECTV's Ownership And Coordination Boundaries
+
+- Question: What kind of company is DIRECTV, and what does it own, license, or coordinate?
+- Owns or controls: Customer relationship, DIRECTV billing and packaging, service operations, discovery interface, DVR, app and device experience.
+- Licenses: Time-bounded distribution access to external channels and content under commercial agreements.
+- Coordinates: Satellite and internet delivery, devices, third-party apps, programmers, rights holders, and household access.
+- Does not generally own: Most underlying external program rights, separate third-party app subscriptions, the household broadband last mile, or consumer attention.
+- Current structure: TPG completed its acquisition of AT&T's remaining 70% stake on 2025-07-02.
+- Status: `BUS.MEDIA.DISTRIBUTOR.DIRECTV` at L1 candidate; Teach-back pending.
+- Next: Why the traditional Bundle became powerful.

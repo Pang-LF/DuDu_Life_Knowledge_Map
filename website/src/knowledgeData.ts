@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 8,
+    progress: 12,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 4,
+    progress: 8,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -98,7 +98,7 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L1 candidate',
     summary: 'The parent frame for understanding how relationships among parts produce behavior that cannot be inferred from a parts list.',
-    connections: ['META.SYSTEMS.INTERDEPENDENCE', 'BUS.MEDIA.PAYTV.VALUE_CHAIN'],
+    connections: ['META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'BUS.MEDIA.PAYTV.VALUE_CHAIN'],
   },
   {
     id: 'META.SYSTEMS.INTERDEPENDENCE',
@@ -106,7 +106,23 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'A part can perform only when other parts align in time, location, state, and constraints. Local health therefore does not guarantee system capability.',
-    connections: ['META.SYSTEMS.SYSTEM', 'CASE.SOUTHWEST.2022_MELTDOWN', 'BUS.MEDIA.PAYTV.VALUE_CHAIN'],
+    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.COUPLING', 'CASE.SOUTHWEST.2022_MELTDOWN', 'BUS.MEDIA.PAYTV.VALUE_CHAIN'],
+  },
+  {
+    id: 'META.SYSTEMS.COUPLING',
+    label: 'Coupling（耦合）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'A local state change alters the conditions faced by connected parts. Connections can share capacity in normal times and transmit disturbance when margins or controls fail.',
+    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.INTERDEPENDENCE', 'CASE.NORTHEAST_BLACKOUT.2003', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV'],
+  },
+  {
+    id: 'CASE.NORTHEAST_BLACKOUT.2003',
+    label: '2003 Northeast Blackout（北美东北部大停电）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'Line outages redistributed power onto remaining paths while operators lost situational awareness, allowing a local Ohio disturbance to become a regional cascade.',
+    connections: ['META.SYSTEMS.COUPLING'],
   },
   {
     id: 'CASE.SOUTHWEST.2022_MELTDOWN',
@@ -122,7 +138,15 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Consumers, distributors, programmers, rights holders, advertisers, and platforms exchange content, access, money, attention, and customer relationships.',
-    connections: ['META.SYSTEMS.INTERDEPENDENCE', 'BUS.MEDIA.AGGREGATOR', 'BUS.SUBSCRIPTION.BUNDLE'],
+    connections: ['META.SYSTEMS.INTERDEPENDENCE', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR', 'BUS.SUBSCRIPTION.BUNDLE'],
+  },
+  {
+    id: 'BUS.MEDIA.DISTRIBUTOR.DIRECTV',
+    label: 'DIRECTV（分发与聚合）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'DIRECTV controls customer, billing, package, service, and product relationships while licensing most external content and coordinating third-party networks and apps.',
+    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.AGGREGATOR', 'BUS.SUBSCRIPTION.BUNDLE', 'META.SYSTEMS.COUPLING'],
   },
   {
     id: 'BUS.MEDIA.AGGREGATOR',
@@ -130,7 +154,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'A platform that reduces search, billing, identity, and discovery friction across fragmented media services.',
-    connections: ['META.SYSTEMS.SYSTEM', 'BUS.SUBSCRIPTION.BUNDLE'],
+    connections: ['META.SYSTEMS.SYSTEM', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.SUBSCRIPTION.BUNDLE'],
   },
   {
     id: 'BUS.SUBSCRIPTION.BUNDLE',
@@ -138,17 +162,17 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'A packaging mechanism that trades user choice for convenience, price framing, retention, and bargaining power.',
-    connections: ['META.SYSTEMS.SYSTEM', 'BUS.MEDIA.AGGREGATOR'],
+    connections: ['META.SYSTEMS.SYSTEM', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR'],
   },
 ]
 
 export const todayBrief = {
-  date: '2026-09-08',
-  title: 'Day 1 — Interdependence（相互依赖）',
-  question: '为什么同一场风暴让 Southwest 在天气改善后仍持续大规模取消航班？',
-  reading: '30-45 min：跟随一架飞机和一组机组，理解为什么局部正常不保证整体能够运行。',
-  discussion: '20-30 min：用自己的话重建相互依赖，再复述 Pay-TV 的玩家、内容流和钱流。',
-  next: '2026-09-09：Coupling（耦合）——为什么一个地方的扰动会传播到远处？',
+  date: '2026-09-09',
+  title: 'Day 2 — Coupling（耦合）',
+  question: '三条输电线路接触树木，为什么可能让五千万人停电？',
+  reading: '30-45 min：跟随电网中的一笔功率，理解线路退出后压力如何重新分配并传播。',
+  discussion: '20-30 min：解释连接为何既能提供韧性又能传播故障，并拆解 DIRECTV 的资产边界。',
+  next: '2026-09-10：Feedback Loop（反馈回路）——影响如何返回并改变最初的变化？',
 }
 
 export const monthlyTrack = [
