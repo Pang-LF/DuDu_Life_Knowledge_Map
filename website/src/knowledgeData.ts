@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 12,
+    progress: 16,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 8,
+    progress: 10,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -114,7 +114,23 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'A local state change alters the conditions faced by connected parts. Connections can share capacity in normal times and transmit disturbance when margins or controls fail.',
-    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.INTERDEPENDENCE', 'CASE.NORTHEAST_BLACKOUT.2003', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV'],
+    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.FEEDBACK_LOOP', 'CASE.NORTHEAST_BLACKOUT.2003', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV'],
+  },
+  {
+    id: 'META.SYSTEMS.FEEDBACK_LOOP',
+    label: 'Feedback Loop（反馈回路）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'A system result returns through a causal path to alter its starting condition, either reinforcing the original direction or balancing a deviation.',
+    connections: ['META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'CASE.SVB.2023_BANK_RUN', 'BUS.SUBSCRIPTION.BUNDLE'],
+  },
+  {
+    id: 'CASE.SVB.2023_BANK_RUN',
+    label: 'SVB 2023 Bank Run（硅谷银行挤兑）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'Concern drove uninsured deposit withdrawals; withdrawals reduced liquidity and exposed distress; visible distress returned as stronger concern.',
+    connections: ['META.SYSTEMS.FEEDBACK_LOOP'],
   },
   {
     id: 'CASE.NORTHEAST_BLACKOUT.2003',
@@ -161,18 +177,18 @@ export const nodes: GraphNode[] = [
     label: 'Bundle（捆绑）',
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
-    summary: 'A packaging mechanism that trades user choice for convenience, price framing, retention, and bargaining power.',
-    connections: ['META.SYSTEMS.SYSTEM', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR'],
+    summary: 'A broad package can smooth heterogeneous household valuations and combine search, contracting, delivery, billing, service, and content funding into one recurring product.',
+    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.FEEDBACK_LOOP', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR'],
   },
 ]
 
 export const todayBrief = {
-  date: '2026-09-09',
-  title: 'Day 2 — Coupling（耦合）· Three-Ring Edition',
-  question: '三条输电线路接触树木，为什么可能让五千万人停电？',
-  reading: '45-60 min：以 Coupling 为唯一掌握核心，借电网运行拓展机制，并预览金融、软件与供应链连接。',
-  discussion: '20-30 min：解释连接为何既能提供韧性又能传播故障，并拆解 DIRECTV 的资产边界。',
-  next: '2026-09-10：Feedback Loop（反馈回路）——影响如何返回并改变最初的变化？',
+  date: '2026-09-10',
+  title: 'Day 3 — Feedback Loop（反馈回路）',
+  question: '一家银行想通过卖证券和筹资本增强安全，为什么反而在两天内倒下？',
+  reading: '45-60 min：跟随一笔未保险工资存款，看担忧、提款和流动性怎样形成返回起点的回路。',
+  discussion: '20-30 min：重建完整反馈路径，并解释传统 Pay-TV Bundle 的聚合价值与权力边界。',
+  next: '2026-09-11：Nonlinearity（非线性）——为什么小差异有时形成不成比例的结果？',
 }
 
 export const monthlyTrack = [

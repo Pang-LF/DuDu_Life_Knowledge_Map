@@ -36,6 +36,7 @@ const domainPoints: DomainPoint[] = [
 
 const nodePoints: NodePoint[] = [
   { id: 'META.SYSTEMS.SYSTEM', x: 558, y: 306 },
+  { id: 'META.SYSTEMS.FEEDBACK_LOOP', x: 620, y: 366 },
   { id: 'BUS.MEDIA.AGGREGATOR', x: 354, y: 566 },
   { id: 'BUS.SUBSCRIPTION.BUNDLE', x: 430, y: 622 },
   { id: 'SYSTEM.ECON.INFLATION', x: 800, y: 565, virtual: true },

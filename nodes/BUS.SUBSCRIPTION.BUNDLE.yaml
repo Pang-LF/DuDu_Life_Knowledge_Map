@@ -1,0 +1,36 @@
+id: "BUS.SUBSCRIPTION.BUNDLE"
+name_en: "Traditional Pay-TV Bundle"
+name_zh: "传统付费电视捆绑"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A bundle combines access to many channels into one purchasing unit, recurring price, distribution experience, and customer relationship."
+why: "Traditional Pay-TV became powerful by aggregating heterogeneous household preferences and reducing repeated search, contracting, billing, distribution, and service costs."
+mechanism: "Different households value different channels, but their total values for a broad package can be more predictable. Wide carriage also supports affiliate revenue and advertising reach, while distributors spread shared infrastructure and customer-service capabilities across the package."
+example: "The FCC reported that DIRECTV Choice averaged 239 channels at $78.99 in 2017, a consumer-side average of about $0.33 per channel, while actual viewing and channel economics varied widely."
+my_take: "A bundle is strongest when it creates aggregation and transaction value; it becomes extractive when scarce content and weak alternatives force households to buy components whose cost exceeds their option value."
+
+prerequisites:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+connections:
+  - "META.SYSTEMS.SYSTEM"
+  - "META.SYSTEMS.FEEDBACK_LOOP"
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+  - "BUS.MEDIA.ESPN.BUNDLE_POWER"
+  - "BUS.MEDIA.AGGREGATOR"
+questions:
+  - "Under what conditions does bundling create more total value, and when does it mainly transfer value through market power?"
+
+first_seen: "2026-09-08"
+last_reviewed: "2026-09-10"
+next_review: "2026-09-11"
+sources:
+  - "https://ccs.mit.edu/papers/CCSWP199/"
+  - "https://docs.fcc.gov/public/attachments/FCC-18-181A7.pdf"
+  - "https://www.sec.gov/Archives/edgar/data/1091667/000109166724000028/chtr-20231231.htm"
+notes: "Industry Apprenticeship Day 3. The user has received the mechanism but has not yet completed Teach-back."

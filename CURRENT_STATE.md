@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-09
+Last updated: 2026-09-10
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-09
 
 ## Next Immediate Focus（下一步）
 
-2026-09-10：进入 Systems Thinking Day 3 — Feedback Loop（反馈回路），先区分“影响向前传播”和“影响返回起点”；Industry Apprenticeship Day 3 只回答传统 Bundle（捆绑）为什么曾经强大。
+2026-09-11：进入 Systems Thinking Day 4 — Nonlinearity（非线性），研究为什么回路运行后小差异可能形成不成比例的结果；Industry Apprenticeship Day 4 只回答为什么不看 ESPN 的家庭过去也经常为 ESPN 付钱。
 
 ## Operating Model（运行模型）
 
@@ -77,7 +77,7 @@ Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进�
 
 ## Latest Daily Brief（最新每日简报）
 
-2026-09-09：完成并按当前规则重发 Systems Thinking Day 2 — Coupling（耦合）第二版。Mastery Core 仍只有 Coupling；Bulk Power Grid Operations（大电网运行）明确记为 Knowledge Expansion exposure；金融、软件系统与供应链只记为 Connection Preview，不创建新 mastery 节点。主案例仍以 2003 Northeast Blackout 重建“局部状态变化如何成为相邻部分的新条件”。行业课完成 Day 2，区分 DIRECTV 拥有的客户与产品层、合同取得的内容分发权，以及所协调但不完全拥有的第三方内容和网络。两个正式节点均等待 Teach-back，不自动升级掌握等级。
+2026-09-10：完成 Systems Thinking Day 3 — Feedback Loop（反馈回路）。主课跟随一家创业公司的未保险工资账户，以 2023 Silicon Valley Bank bank run 展开“担忧如何经提款、流动性下降与可见压力返回并强化担忧”，并用完全受保险零售账户作对照。银行资产负债表、流动性、存款保险与期限转换只记 Knowledge Expansion exposure；平台、人体与气候连接只记 preview。Industry Apprenticeship Day 3 完成传统 Pay-TV Bundle：区分聚合偏好、交易成本、广泛分发、钱流、规模和市场权力。`META.SYSTEMS.FEEDBACK_LOOP` 为 L2 candidate，`BUS.SUBSCRIPTION.BUNDLE` 为 L1 candidate，均等待 Teach-back。
 
 ## Repository Rule（仓库规则）
 

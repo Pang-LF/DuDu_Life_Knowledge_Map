@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 2026-09-10
+
+- 完成 Systems Thinking Day 3：新增 `META.SYSTEMS.FEEDBACK_LOOP`，唯一主旨为“结果返回系统并改变起点”
+- 新增 `CASE.SVB.2023_BANK_RUN`，以 2023 Silicon Valley Bank 的未保险存款、资产出售和提款速度拆解强化反馈
+- 将银行资产负债表、流动性、偿付能力、存款保险与期限转换明确记录为 Knowledge Expansion exposure
+- 完成 Industry Apprenticeship Day 3：新增 `BUS.SUBSCRIPTION.BUNDLE`，解释偏好聚合、交易成本、广泛分发、钱流和权力边界
+- 更新行业日志、Question Bank、复习日期、CURRENT_STATE 与网站地图数据
+- 下一课锁定 2026-09-11 Nonlinearity 与“不看 ESPN 的家庭为什么也经常付钱”
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认进入收件箱
+
 ## 2026-09-09
 
 - 完成 Systems Thinking Day 2：`META.SYSTEMS.COUPLING`，唯一主旨为“局部状态变化会改变相邻部分的运行条件”

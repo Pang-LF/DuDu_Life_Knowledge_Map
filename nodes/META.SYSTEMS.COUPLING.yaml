@@ -26,8 +26,8 @@ cases:
   - "2003 Northeast blackout"
 
 first_seen: "2026-09-09"
-last_reviewed: "2026-09-09"
-next_review: "2026-09-10"
+last_reviewed: "2026-09-10"
+next_review: "2026-09-13"
 sources:
   - "https://www.energy.gov/oe/august-2003-blackout"
   - "https://www.nerc.com/globalassets/our-work/reports/event-reports/august_2003_blackout_final_report.pdf"

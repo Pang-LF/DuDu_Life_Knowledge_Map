@@ -26,8 +26,8 @@ cases:
   - "DIRECTV Gemini integration and third-party subscription boundaries"
 
 first_seen: "2026-09-09"
-last_reviewed: "2026-09-09"
-next_review: "2026-09-10"
+last_reviewed: "2026-09-10"
+next_review: "2026-09-13"
 sources:
   - "https://www.directv.com/insider/corporate/company/"
   - "https://www.directv.com/technology/gemini/"

@@ -66,3 +66,15 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Current structure: TPG completed its acquisition of AT&T's remaining 70% stake on 2025-07-02.
 - Status: `BUS.MEDIA.DISTRIBUTOR.DIRECTV` at L1 candidate; Teach-back pending.
 - Next: Why the traditional Bundle became powerful.
+
+### 2026-09-10 — Why The Traditional Pay-TV Bundle Was Powerful
+
+- Question: Why could one broad package outperform selling every channel separately?
+- Consumer mechanism: Household values differ sharply by channel but can cluster more tightly for a broad package, making total willingness to pay more predictable.
+- Transaction mechanism: One package combines search, contracting, authentication, delivery, billing and customer service.
+- Money flow: Household subscription fees reach the distributor; affiliate and retransmission payments continue to programmers and broadcasters; advertising adds a second revenue source around audience reach.
+- Power: Broad reach and customer ownership strengthen the distributor, while scarce low-substitutability content can let programmers demand higher rates or wider carriage.
+- Quantitative anchor: The FCC reported 239 channels and a $78.99 average price for DIRECTV Choice in 2017, or about $0.33 per channel as a consumer-side average.
+- Boundary: Bundling can create aggregation value and also extract value when alternatives are weak. Neither consumer benefit nor harm follows from bundling alone.
+- Status: `BUS.SUBSCRIPTION.BUNDLE` at L1 candidate; Teach-back pending.
+- Next: Why households that did not watch ESPN still often paid for ESPN.

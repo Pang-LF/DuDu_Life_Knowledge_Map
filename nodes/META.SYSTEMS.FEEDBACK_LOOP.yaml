@@ -1,0 +1,36 @@
+id: "META.SYSTEMS.FEEDBACK_LOOP"
+name_en: "Feedback Loop"
+name_zh: "反馈回路"
+domain: "META"
+module: "Systems Thinking（系统思维）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "A feedback loop exists when a system's output or consequence returns through a causal path and changes the variable or process that produced it."
+why: "A one-way chain explains propagation once; feedback explains why a change can sustain, amplify, or regulate itself across repeated rounds."
+mechanism: "In reinforcing feedback, the returned effect pushes change in the same direction. In balancing feedback, the returned effect opposes deviation from a goal, limit, or reference state."
+example: "At Silicon Valley Bank in March 2023, rising depositor concern prompted withdrawals, withdrawals reduced liquidity and exposed distress, and visible distress increased depositor concern."
+my_take: "To find feedback, trace an effect all the way back to its starting variable and identify the speed, sign, and break points of the return path."
+
+prerequisites:
+  - "META.SYSTEMS.SYSTEM"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.COUPLING"
+connections:
+  - "CASE.SVB.2023_BANK_RUN"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "BUS.SUBSCRIPTION.BUNDLE"
+questions:
+  - "Which variables, delays, and interventions determine whether a feedback loop stabilizes or runs away?"
+cases:
+  - "Silicon Valley Bank 2023 bank run"
+
+first_seen: "2026-09-10"
+last_reviewed: "2026-09-10"
+next_review: "2026-09-11"
+sources:
+  - "https://www.federalreserve.gov/publications/2023-April-SVB-Executive-Summary.htm"
+  - "https://www.federalreserve.gov/publications/2023-April-SVB-Evolution-of-Silicon-Valley-Bank.htm"
+  - "https://www.fdic.gov/news/press-releases/2026/fdic-releases-staff-study-deposit-flows-three-failed-banks-spring-2023"
+notes: "Primary One Idea for Systems Thinking Day 3. Banking concepts are exposure only. Mastery remains candidate until user Teach-back."
