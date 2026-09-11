@@ -1,0 +1,37 @@
+id: "META.SYSTEMS.NONLINEARITY"
+name_en: "Nonlinearity"
+name_zh: "非线性"
+domain: "META"
+module: "Systems Thinking（系统思维）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "Nonlinearity means that equal-sized input changes do not necessarily produce equal-sized output changes because the marginal effect depends on the system's current state and proximity to functional boundaries."
+why: "Linear extrapolation can conceal thresholds where a small additional change switches a system from functioning to failure."
+mechanism: "Material response, dynamic timing, interacting conditions, and a finite operating window can create a threshold. Far from the boundary, a change is absorbed; near it, the same change crosses the boundary and changes the outcome category."
+example: "On Challenger, cold slowed O-ring recovery while the solid rocket booster field joint opened during ignition; once sealing response lagged behind the dynamic window, hot gas obtained a leak path."
+my_take: "When outcomes look disproportionate, I should locate the changing slope or functional boundary instead of stopping at 'small cause, big effect.'"
+
+prerequisites:
+  - "META.SYSTEMS.SYSTEM"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.COUPLING"
+  - "META.SYSTEMS.FEEDBACK_LOOP"
+connections:
+  - "CASE.CHALLENGER.1986"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "BUS.MEDIA.ESPN.BUNDLE_POWER"
+questions:
+  - "What evidence distinguishes a true threshold from an ordinary steep but continuous relationship?"
+cases:
+  - "Space Shuttle Challenger STS-51L accident"
+
+first_seen: "2026-09-11"
+last_reviewed: "2026-09-11"
+next_review: "2026-09-12"
+sources:
+  - "https://www.nasa.gov/history/rogersrep/v1ch4.htm"
+  - "https://www.nasa.gov/history/rogersrep/v1ch5.htm"
+  - "https://www.nasa.gov/history/rogersrep/v1ch6.htm"
+notes: "Primary One Idea for Systems Thinking Day 4. Rocket-joint and materials concepts are exposure only. Mastery remains candidate until user Teach-back."

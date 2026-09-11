@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-10
+Last updated: 2026-09-11
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-10
 
 ## Next Immediate Focus（下一步）
 
-2026-09-11：进入 Systems Thinking Day 4 — Nonlinearity（非线性），研究为什么回路运行后小差异可能形成不成比例的结果；Industry Apprenticeship Day 4 只回答为什么不看 ESPN 的家庭过去也经常为 ESPN 付钱。
+2026-09-12：进入 Systems Thinking Day 5 — Bottleneck（瓶颈），研究哪一个受限环节决定整体产出；Industry Apprenticeship Day 5 只回答 Cord Cutting 为什么动摇整个传统 Pay-TV 系统。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-10
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-11：完成 Systems Thinking Day 4 — Nonlinearity（非线性）。主课跟随挑战者号右侧固体火箭助推器接头的一小段 O-ring，以材料回弹速度和动态密封窗口解释“相同输入变化为何在临界边界附近改变结果类别”，并区分温度事实、密封机制与无法精确量化的单度风险。助推器接头、弹性体回弹和工程操作边界只记 Knowledge Expansion exposure；医学、金融和生态连接只记 preview。Industry Apprenticeship Day 4 完成 ESPN 广泛覆盖机制：沿家庭、Distributor、ESPN 和体育版权追踪 affiliate fee、receiving subscriber、minimum penetration 与 churn-based bargaining power。`META.SYSTEMS.NONLINEARITY` 为 L2 candidate，`BUS.MEDIA.ESPN.BUNDLE_POWER` 为 L1 candidate，均等待 Teach-back。
 
 2026-09-10：完成 Systems Thinking Day 3 — Feedback Loop（反馈回路）。主课跟随一家创业公司的未保险工资账户，以 2023 Silicon Valley Bank bank run 展开“担忧如何经提款、流动性下降与可见压力返回并强化担忧”，并用完全受保险零售账户作对照。银行资产负债表、流动性、存款保险与期限转换只记 Knowledge Expansion exposure；平台、人体与气候连接只记 preview。Industry Apprenticeship Day 3 完成传统 Pay-TV Bundle：区分聚合偏好、交易成本、广泛分发、钱流、规模和市场权力。`META.SYSTEMS.FEEDBACK_LOOP` 为 L2 candidate，`BUS.SUBSCRIPTION.BUNDLE` 为 L1 candidate，均等待 Teach-back。
 

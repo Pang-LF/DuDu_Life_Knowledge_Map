@@ -78,3 +78,16 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Boundary: Bundling can create aggregation value and also extract value when alternatives are weak. Neither consumer benefit nor harm follows from bundling alone.
 - Status: `BUS.SUBSCRIPTION.BUNDLE` at L1 candidate; Teach-back pending.
 - Next: Why households that did not watch ESPN still often paid for ESPN.
+
+### 2026-09-11 — Why Non-viewing Households Still Paid For ESPN
+
+- Question: Why did a household that never watched ESPN still indirectly fund it through a traditional Pay-TV package?
+- Payment mechanism: The household paid one bundle price to the distributor; the distributor commonly paid ESPN an affiliate fee based on households receiving the channel, not minutes viewed.
+- Bargaining mechanism: Scarce live sports made ESPN's absence a potential churn trigger for sports-focused households, giving ESPN leverage to seek broad carriage.
+- Contract mechanism: Large programmers can require popular networks to reach a large percentage of subscribers and can link carriage across a portfolio, limiting distributor package flexibility.
+- Money flow: Household bundle payment → distributor → ESPN affiliate fee → sports rights and production; advertiser spending supplies a second ESPN revenue stream.
+- Quantitative anchor: Disney reported $10.837 billion in domestic ESPN affiliate and subscription fees in fiscal 2025, about 2.5 times $4.273 billion in domestic advertising revenue.
+- Bargaining test: The 2023 Charter–Disney settlement retained the ESPN network suite, dropped eight other Disney networks, added streaming entitlements, and increased package flexibility.
+- Boundary: Confidential ESPN rates and penetration percentages are not public; the programming fee is not automatically a dollar-for-dollar household bill item.
+- Status: `BUS.MEDIA.ESPN.BUNDLE_POWER` at L1 candidate; Teach-back pending.
+- Next: Why Cord Cutting destabilizes the broader Pay-TV system.

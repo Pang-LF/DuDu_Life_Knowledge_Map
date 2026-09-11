@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 2026-09-11
+
+- 完成 Systems Thinking Day 4：新增 `META.SYSTEMS.NONLINEARITY`，唯一主旨为“输入与结果没有固定比例，临界边界附近的小变化可改变结果类别”
+- 新增 `CASE.CHALLENGER.1986`，用固体火箭助推器接头、O-ring 回弹和动态密封窗口拆解非线性
+- 将航天接头、材料回弹和工程操作边界明确记录为 Knowledge Expansion exposure
+- 完成 Industry Apprenticeship Day 4：新增 `BUS.MEDIA.ESPN.BUNDLE_POWER`，解释非观看家庭如何通过广泛覆盖间接承担 ESPN 成本
+- 更新 ESPN 案例状态，以 2023 Charter–Disney 争议验证 affiliate fee、minimum penetration、churn risk 与双边议价机制
+- 更新行业日志、Question Bank、复习日期、CURRENT_STATE 与网站地图数据
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认进入收件箱
+- 下一课锁定 2026-09-12 Bottleneck 与 Cord Cutting 的系统影响
+
 ## 2026-09-10
 
 - 完成 Systems Thinking Day 3：新增 `META.SYSTEMS.FEEDBACK_LOOP`，唯一主旨为“结果返回系统并改变起点”

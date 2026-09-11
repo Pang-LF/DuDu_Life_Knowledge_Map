@@ -1,0 +1,38 @@
+id: "BUS.MEDIA.ESPN.BUNDLE_POWER"
+name_en: "ESPN Bundle Power"
+name_zh: "ESPN 的套餐议价权"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "ESPN historically used scarce live sports and the distributor's fear of losing sports-focused households to obtain broad carriage and per-receiving-subscriber fees."
+why: "It explains why a household could indirectly fund an expensive channel without watching it and how content scarcity shapes bundle costs and choice."
+mechanism: "Households pay one bundle price; distributors pay affiliate fees for households receiving ESPN; minimum-penetration and portfolio negotiations can keep ESPN in broad tiers; expected churn among sports households raises ESPN's bargaining power."
+example: "Disney reported $10.837 billion in domestic ESPN affiliate and subscription fees in fiscal 2025, about 2.5 times its $4.273 billion in domestic advertising revenue."
+my_take: "ESPN did not need every household to watch; it needed enough households to treat its absence as a reason to leave the distributor."
+
+prerequisites:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+  - "BUS.SUBSCRIPTION.BUNDLE"
+connections:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+  - "BUS.SUBSCRIPTION.BUNDLE"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
+questions:
+  - "When does broad carriage fund shared value, and when does it mainly reflect content-owner market power?"
+cases:
+  - "Charter–Disney 2023 carriage dispute"
+
+first_seen: "2026-09-08"
+last_reviewed: "2026-09-11"
+next_review: "2026-09-12"
+sources:
+  - "https://www.sec.gov/Archives/edgar/data/1744489/000174448925000155/dis-20250927.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1091667/000109166724000028/chtr-20231231.htm"
+  - "https://corporate.charter.com/newsroom/the-walt-disney-company-and-charter-communications-announce-transformative-agreement-2023"
+notes: "Industry Apprenticeship Day 4. Mastery remains candidate until the user can trace money, receiving-subscriber fees, minimum penetration, and churn-based bargaining power."

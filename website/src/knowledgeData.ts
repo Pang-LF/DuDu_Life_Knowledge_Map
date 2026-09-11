@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 16,
+    progress: 22,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 10,
+    progress: 14,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -125,6 +125,22 @@ export const nodes: GraphNode[] = [
     connections: ['META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'CASE.SVB.2023_BANK_RUN', 'BUS.SUBSCRIPTION.BUNDLE'],
   },
   {
+    id: 'META.SYSTEMS.NONLINEARITY',
+    label: 'Nonlinearity（非线性）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'Equal input changes need not produce equal output changes. Near a functional boundary, a small additional step can switch a system from operating to failure.',
+    connections: ['META.SYSTEMS.FEEDBACK_LOOP', 'CASE.CHALLENGER.1986', 'BUS.MEDIA.ESPN.BUNDLE_POWER'],
+  },
+  {
+    id: 'CASE.CHALLENGER.1986',
+    label: 'Challenger STS-51L（挑战者号事故）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'Cold slowed O-ring recovery while the booster field joint opened during ignition, turning a dynamic sealing margin into a failed pressure boundary.',
+    connections: ['META.SYSTEMS.NONLINEARITY'],
+  },
+  {
     id: 'CASE.SVB.2023_BANK_RUN',
     label: 'SVB 2023 Bank Run（硅谷银行挤兑）',
     domain: 'META',
@@ -178,17 +194,25 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'A broad package can smooth heterogeneous household valuations and combine search, contracting, delivery, billing, service, and content funding into one recurring product.',
-    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.FEEDBACK_LOOP', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR'],
+    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.FEEDBACK_LOOP', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR', 'BUS.MEDIA.ESPN.BUNDLE_POWER'],
+  },
+  {
+    id: 'BUS.MEDIA.ESPN.BUNDLE_POWER',
+    label: 'ESPN Bundle Power（ESPN 套餐议价权）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Receiving-subscriber fees and scarce live sports let ESPN seek broad carriage, so non-viewing households indirectly entered the bundle cost base.',
+    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.SUBSCRIPTION.BUNDLE', 'META.SYSTEMS.NONLINEARITY'],
   },
 ]
 
 export const todayBrief = {
-  date: '2026-09-10',
-  title: 'Day 3 — Feedback Loop（反馈回路）',
-  question: '一家银行想通过卖证券和筹资本增强安全，为什么反而在两天内倒下？',
-  reading: '45-60 min：跟随一笔未保险工资存款，看担忧、提款和流动性怎样形成返回起点的回路。',
-  discussion: '20-30 min：重建完整反馈路径，并解释传统 Pay-TV Bundle 的聚合价值与权力边界。',
-  next: '2026-09-11：Nonlinearity（非线性）——为什么小差异有时形成不成比例的结果？',
+  date: '2026-09-11',
+  title: 'Day 4 — Nonlinearity（非线性）',
+  question: '为什么此前的 O-ring 损伤没有毁掉任务，而挑战者号这次却在 73 秒后解体？',
+  reading: '45-60 min：跟随助推器接头的一小段 O-ring，理解动态密封的临界边界。',
+  discussion: '20-30 min：重建非线性机制，并沿家庭、分发商、ESPN 与版权方追踪钱流。',
+  next: '2026-09-12：Bottleneck（瓶颈）——哪一个受限环节决定整个系统的产出？',
 }
 
 export const monthlyTrack = [
