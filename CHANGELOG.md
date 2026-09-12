@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 2026-09-12
+
+- 完成 Systems Thinking Day 5：新增 `META.SYSTEMS.BOTTLENECK`，唯一主旨为“当前最稀缺的必要能力控制整体吞吐量，改善非瓶颈只会增加排队，解除后约束会移动”
+- 新增 `CASE.TESLA.MODEL3_RAMP.2017_2018`，用 2017–2018 Model 3 的电池模块、半自动流程、总装扩容与交付物流拆解移动瓶颈
+- 将电池 cell/module/pack、自动化、Work in Process 与生产爬坡明确记录为 Knowledge Expansion exposure
+- 完成 Industry Apprenticeship Day 5：新增 `BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT`，解释一个家庭退出如何改变 Distributor、Programmer、Rights Holder 与剩余家庭的条件
+- 新增 `CASE.PAYTV.CORD_CUTTING`，以 FCC、Disney、Comcast 与 Charter 的公开文件验证订户、费率、节目成本和资产边界
+- 更新行业日志、Question Bank、复习日期、CURRENT_STATE 与网站地图数据
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认进入收件箱
+- 下一课锁定 2026-09-13 Delay 与 DTC 的客户、数据和账单关系
+
 ## 2026-09-11
 
 - 完成 Systems Thinking Day 4：新增 `META.SYSTEMS.NONLINEARITY`，唯一主旨为“输入与结果没有固定比例，临界边界附近的小变化可改变结果类别”

@@ -1,0 +1,39 @@
+id: "META.SYSTEMS.BOTTLENECK"
+name_en: "Bottleneck"
+name_zh: "瓶颈"
+domain: "META"
+module: "Systems Thinking（系统思维）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "A bottleneck is the current resource or step whose marginal effective capacity most limits the throughput of the whole system."
+why: "Local speed, utilization, cost, and activity can improve without increasing completed output; locating the constraint prevents resources from being spent on work that only creates queues or inventory."
+mechanism: "Every completed unit requires a set of necessary capabilities. When demand exceeds capacity, the scarcest effective capability sets the feasible flow; upstream excess becomes work in process and downstream resources wait. Once the constraint is relieved, another capability becomes limiting."
+example: "During the 2017 Model 3 ramp, Tesla identified battery module assembly as the primary production constraint even while several other subsystems demonstrated much higher burst rates; after module and assembly capacity improved, vehicle delivery logistics became a major challenge."
+my_take: "I should define the system's completed output first, then ask where one more unit of effective capacity would raise that output rather than merely increase local activity."
+
+prerequisites:
+  - "META.SYSTEMS.SYSTEM"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.COUPLING"
+  - "META.SYSTEMS.NONLINEARITY"
+connections:
+  - "CASE.TESLA.MODEL3_RAMP.2017_2018"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "META.SYSTEMS.DELAY"
+  - "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
+questions:
+  - "What marginal-capacity test distinguishes a true bottleneck from the busiest, slowest, most expensive, or most error-prone local step?"
+cases:
+  - "Tesla Model 3 production ramp, 2017-2018"
+
+first_seen: "2026-09-12"
+last_reviewed: "2026-09-12"
+next_review: "2026-09-14"
+sources:
+  - "https://www.sec.gov/Archives/edgar/data/1318605/000156459017020822/tsla-ex991_6.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1318605/000156459018011086/tsla-10q_20180331.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1318605/000156459018024902/tsla-ex991_6.htm"
+  - "https://www.sciencedirect.com/science/article/pii/S136757881000009X"
+notes: "Primary One Idea for Systems Thinking Day 5. Manufacturing details are exposure only. Mastery remains candidate until user Teach-back."

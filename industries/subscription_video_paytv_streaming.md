@@ -91,3 +91,17 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Boundary: Confidential ESPN rates and penetration percentages are not public; the programming fee is not automatically a dollar-for-dollar household bill item.
 - Status: `BUS.MEDIA.ESPN.BUNDLE_POWER` at L1 candidate; Teach-back pending.
 - Next: Why Cord Cutting destabilizes the broader Pay-TV system.
+
+### 2026-09-12 — Why Cord Cutting Destabilizes The Pay-TV System
+
+- Question: Why does one household's cancellation affect programmers, rights holders, remaining subscribers, and product strategy instead of only one distributor?
+- Parent concept: A subscription business maintains a recurring payer base; churn removes a relationship that would otherwise continue generating monthly revenue.
+- Definition: Cord cutting is cancellation of a traditional multichannel Pay-TV subscription, not the end of video consumption and not merely switching to another traditional distributor.
+- Money flow: The distributor loses video revenue and avoids some per-subscriber costs; programmers lose affiliate-fee and linear-reach bases; multi-year rights and production commitments can adjust more slowly.
+- System mechanism: A shrinking payer base, rising per-subscriber rates, package changes, and household exits can reinforce one another, although company strategy can weaken or redirect the loop.
+- Quantitative anchor: Traditional U.S. MVPD subscriptions fell from 101.6 million at the 2012 peak to 54.1 million at the end of 2023; 2023 alone lost 7.8 million, about 12.6%.
+- Company test: Disney reported a positive 7% ESPN contractual-rate effect almost offset by a negative 7% subscriber effect in fiscal 2025.
+- Strategic response: Distributors shift toward broadband, mobile, slimmer packages, and app aggregation; programmers use DTC to seek the customer relationship while assuming acquisition, technology, billing, service, and churn costs.
+- Boundary: FCC traditional MVPD, vMVPD, and individual DTC subscriptions use different definitions and cannot be added mechanically.
+- Status: `BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT` at L1 candidate; Teach-back pending.
+- Next: How DTC changes ownership of the customer, data, billing, and operating costs.

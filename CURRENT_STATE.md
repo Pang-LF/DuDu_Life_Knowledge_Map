@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-11
+Last updated: 2026-09-12
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-11
 
 ## Next Immediate Focus（下一步）
 
-2026-09-12：进入 Systems Thinking Day 5 — Bottleneck（瓶颈），研究哪一个受限环节决定整体产出；Industry Apprenticeship Day 5 只回答 Cord Cutting 为什么动摇整个传统 Pay-TV 系统。
+2026-09-13：进入 Systems Thinking Day 6 — Delay（延迟），研究为什么行动与结果之间的时间差会造成队列、过度反应和错误诊断；Industry Apprenticeship Day 6 只回答 DTC Streaming 到底改变了谁拥有客户、数据和账单。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-11
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-12：完成 Systems Thinking Day 5 — Bottleneck（瓶颈）。主课跟随一辆缺少完整电池包的 Model 3，以 2017–2018 产能爬坡拆解整体 Throughput、有效能力、在制品与移动约束，并区分最忙、最慢、最贵、最常出错和真正瓶颈。Tesla 电池模块、自动化、总装与交付物流只记 Knowledge Expansion exposure；医疗、AI 基础设施和个人系统连接只记 preview。Industry Apprenticeship Day 5 完成 Cord Cutting 系统影响：先定义 Subscription Business 与 Churn，再沿家庭、Distributor、Programmer 与 Rights Holder 重建退出后的收入、可避免成本、长期承诺、覆盖与议价变化。`META.SYSTEMS.BOTTLENECK` 为 L2 candidate，`BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT` 为 L1 candidate，均等待 Teach-back。
 
 2026-09-11：完成 Systems Thinking Day 4 — Nonlinearity（非线性）。主课跟随挑战者号右侧固体火箭助推器接头的一小段 O-ring，以材料回弹速度和动态密封窗口解释“相同输入变化为何在临界边界附近改变结果类别”，并区分温度事实、密封机制与无法精确量化的单度风险。助推器接头、弹性体回弹和工程操作边界只记 Knowledge Expansion exposure；医学、金融和生态连接只记 preview。Industry Apprenticeship Day 4 完成 ESPN 广泛覆盖机制：沿家庭、Distributor、ESPN 和体育版权追踪 affiliate fee、receiving subscriber、minimum penetration 与 churn-based bargaining power。`META.SYSTEMS.NONLINEARITY` 为 L2 candidate，`BUS.MEDIA.ESPN.BUNDLE_POWER` 为 L1 candidate，均等待 Teach-back。
 

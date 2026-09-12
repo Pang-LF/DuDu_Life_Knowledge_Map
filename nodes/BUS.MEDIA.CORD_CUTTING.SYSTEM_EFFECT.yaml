@@ -1,0 +1,41 @@
+id: "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
+name_en: "Cord Cutting System Effect"
+name_zh: "剪线退订的系统影响"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Cord cutting is a household's cancellation of a traditional multichannel Pay-TV subscription, removing a recurring payer from the legacy distribution system rather than ending video consumption."
+why: "One cancellation changes more than distributor revenue: it reduces the affiliate-fee and advertising reach base, weakens shared cost funding and bargaining scale, and forces distributors, programmers, and rights holders to redesign products and customer relationships."
+mechanism: "The distributor loses video revenue while avoiding some per-subscriber costs; programmers lose receiving-subscriber fees and linear reach while multi-year content commitments adjust more slowly; higher rates, thinner packages, or lower value can alter the remaining households' incentive to stay."
+example: "The FCC reported that traditional U.S. MVPD subscriptions fell from a 2012 peak of 101.6 million to 54.1 million at the end of 2023, while Disney reported that a 7% positive ESPN rate effect in fiscal 2025 was almost offset by a 7% negative subscriber effect."
+my_take: "Cord cutting is a withdrawal from a recurring funding and distribution relationship; to understand it, I should trace the missing payment through every actor rather than equate it with less viewing."
+
+prerequisites:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+  - "BUS.SUBSCRIPTION.BUNDLE"
+  - "BUS.MEDIA.ESPN.BUNDLE_POWER"
+connections:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+  - "BUS.SUBSCRIPTION.BUNDLE"
+  - "BUS.MEDIA.ESPN.BUNDLE_POWER"
+  - "META.SYSTEMS.FEEDBACK_LOOP"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+questions:
+  - "Which legacy Pay-TV costs fall with a lost subscriber, which remain committed, and who gains the customer relationship after cancellation?"
+cases:
+  - "U.S. traditional MVPD decline through 2023"
+
+first_seen: "2026-09-12"
+last_reviewed: "2026-09-12"
+next_review: "2026-09-14"
+sources:
+  - "https://docs.fcc.gov/public/attachments/FCC-24-136A1.pdf"
+  - "https://www.sec.gov/Archives/edgar/data/1744489/000174448925000155/dis-20250927.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1166691/000162828026004994/cmcsa-20251231.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1091667/000109166726000017/chtr-20251231.htm"
+notes: "Industry Apprenticeship Day 5. DTC, vMVPD, broadband strategy, and rights economics are supporting context; mastery remains candidate until Teach-back."
