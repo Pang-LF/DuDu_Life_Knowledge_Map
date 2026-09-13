@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-12
+Last updated: 2026-09-13
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-12
 
 ## Next Immediate Focus（下一步）
 
-2026-09-13：进入 Systems Thinking Day 6 — Delay（延迟），研究为什么行动与结果之间的时间差会造成队列、过度反应和错误诊断；Industry Apprenticeship Day 6 只回答 DTC Streaming 到底改变了谁拥有客户、数据和账单。
+2026-09-14：进入 Systems Thinking Day 7 — Weekly Integration（系统思维整合），用陌生案例联合应用 Interdependence、Coupling、Feedback Loop、Nonlinearity、Bottleneck 与 Delay，并诊断待验证 mastery；Industry Apprenticeship 只比较 Cable、Satellite、vMVPD 与 Streaming 在传输、套餐和客户关系上的差异。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-12
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-13：完成 Systems Thinking Day 6 — Delay（延迟）。主课跟随一枚在 1980 年代释放的 CFC-11 分子，以 Montreal Protocol 后 ODS 排放、EESC 和臭氧恢复的不同转弯时间，重建“当前结果主要反映过去输入”的机制，并区分延迟、无效与短期噪声。CFC 大气寿命、平流层输送、南极臭氧化学、EESC 和条约调整只记 Knowledge Expansion exposure；医学、货币政策与供应链连接只记 preview。Industry Apprenticeship Day 6 完成 Disney+ DTC Customer Relationship：把“拥有客户”拆成获客、身份、账单、产品数据、客服、取消和赢回能力，并比较直接订阅、App Store 内购与批发权益的关系分配。`META.SYSTEMS.DELAY` 为 L2 candidate，`BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP` 为 L1 candidate，均等待 Teach-back。
 
 2026-09-12：完成 Systems Thinking Day 5 — Bottleneck（瓶颈）。主课跟随一辆缺少完整电池包的 Model 3，以 2017–2018 产能爬坡拆解整体 Throughput、有效能力、在制品与移动约束，并区分最忙、最慢、最贵、最常出错和真正瓶颈。Tesla 电池模块、自动化、总装与交付物流只记 Knowledge Expansion exposure；医疗、AI 基础设施和个人系统连接只记 preview。Industry Apprenticeship Day 5 完成 Cord Cutting 系统影响：先定义 Subscription Business 与 Churn，再沿家庭、Distributor、Programmer 与 Rights Holder 重建退出后的收入、可避免成本、长期承诺、覆盖与议价变化。`META.SYSTEMS.BOTTLENECK` 为 L2 candidate，`BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT` 为 L1 candidate，均等待 Teach-back。
 

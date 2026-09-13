@@ -1,0 +1,40 @@
+id: "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+name_en: "DTC Customer Relationship"
+name_zh: "DTC 客户关系"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A DTC streaming service moves more pricing, account, billing, product, usage-data, service, retention, and cancellation capabilities from a traditional distributor toward the programmer, but the relationship can still be split with app stores, device platforms, and wholesale partners."
+why: "Saying that a company 'owns the customer' hides which operational rights and responsibilities it actually controls and whether the relationship produces profitable economics."
+mechanism: "Direct signup gives the programmer recurring payment and first-party product interaction while making it responsible for acquisition, technology, content, payment, service, and churn. Platform billing or wholesale entitlements divide acquisition, billing, identity, data, and revenue by contract."
+example: "Disney+ launched in 2019 with direct web subscriptions as well as Apple, Amazon, Google, Roku, and Verizon paths; Disney therefore operated the product for all users while the billing and acquisition relationship varied by channel."
+my_take: "To identify who owns a customer relationship, I should trace acquisition, identity, billing, usage data, service, cancellation, and winback separately instead of inferring ownership from the app brand."
+
+prerequisites:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+  - "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
+connections:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+  - "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
+  - "BUS.SUBSCRIPTION.BUNDLE"
+  - "BUS.MEDIA.AGGREGATOR"
+  - "BUS.MEDIA.DISTRIBUTION.MODELS"
+questions:
+  - "Across direct billing, app-store billing, and wholesale entitlements, which party controls acquisition, payment, behavioral data, cancellation, and the right to re-engage the user?"
+cases:
+  - "Disney+ DTC launch and profitability path, 2019-2025"
+
+first_seen: "2026-09-13"
+last_reviewed: "2026-09-13"
+next_review: "2026-09-14"
+sources:
+  - "https://www.sec.gov/Archives/edgar/data/1744489/000174448919000225/fy2019q410k.htm"
+  - "https://thewaltdisneycompany.com/news/disney-launches-today-and-a-new-era-of-disney-entertainment-begins/"
+  - "https://www.sec.gov/Archives/edgar/data/1744489/000174448922000213/dis-20221001.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1744489/000174448925000155/dis-20250927.htm"
+notes: "Industry Apprenticeship Day 6. Platform distribution, advertising, ARPU, and churn are supporting context. Mastery remains candidate until Teach-back."

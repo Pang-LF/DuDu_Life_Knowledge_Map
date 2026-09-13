@@ -105,3 +105,17 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Boundary: FCC traditional MVPD, vMVPD, and individual DTC subscriptions use different definitions and cannot be added mechanically.
 - Status: `BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT` at L1 candidate; Teach-back pending.
 - Next: How DTC changes ownership of the customer, data, billing, and operating costs.
+
+### 2026-09-13 — How DTC Reallocates The Customer Relationship
+
+- Question: When Disney moves programming from a cable bundle into Disney+, who controls the customer, data, bill, and operating responsibility?
+- Definition: DTC moves the content company closer to the household through its own branded subscription product, but does not remove every intermediary.
+- Relationship test: Trace acquisition, identity, billing, product usage, service, cancellation, and winback separately rather than saying one firm simply “owns the customer.”
+- Direct path: A DisneyPlus.com subscriber gives Disney more control over price, account, payment, usage data, service, renewal, and cancellation.
+- Partner path: App-store billing and wholesale entitlements split acquisition, payment, identity, data, and revenue with Apple, Verizon, Roku, Amazon, or another platform by contract.
+- Money flow: Direct subscription revenue moves toward Disney, while technology, distribution, marketing, payment, service, content, and churn costs also move inside Disney's operating boundary.
+- Quantitative anchor: Disney+ reached 73.7 million paid subscribers by fiscal year-end 2020; the former DTC segment lost $4.015 billion in fiscal 2022; Entertainment DTC reported $24.614 billion revenue and $1.327 billion operating income in fiscal 2025.
+- Reporting boundary: Fiscal 2022 and 2025 segment definitions are not fully comparable, and paid-subscriber counts include some wholesale entitlements.
+- Sequencing note: DTC customer ownership was pulled forward from the transformation sequence because it was the explicit next focus after Cord Cutting; Cable, Satellite, vMVPD, and Streaming architecture moves to the next industry lesson.
+- Status: `BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP` at L1 candidate; Teach-back pending.
+- Next: How Cable, Satellite, vMVPD, and Streaming differ in transmission, packaging, and customer relationship.

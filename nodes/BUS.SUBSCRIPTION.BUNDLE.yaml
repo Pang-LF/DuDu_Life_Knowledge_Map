@@ -23,12 +23,13 @@ connections:
   - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
   - "BUS.MEDIA.ESPN.BUNDLE_POWER"
   - "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
   - "BUS.MEDIA.AGGREGATOR"
 questions:
   - "Under what conditions does bundling create more total value, and when does it mainly transfer value through market power?"
 
 first_seen: "2026-09-08"
-last_reviewed: "2026-09-12"
+last_reviewed: "2026-09-13"
 next_review: "2026-09-14"
 sources:
   - "https://ccs.mit.edu/papers/CCSWP199/"

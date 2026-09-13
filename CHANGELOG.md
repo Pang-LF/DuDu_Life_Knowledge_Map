@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 2026-09-13
+
+- 完成 Systems Thinking Day 6：新增 `META.SYSTEMS.DELAY`，唯一主旨为“原因、行动与可观察结果在时间上分离时，当前结果主要反映过去输入”
+- 新增 `CASE.MONTREAL_PROTOCOL.OZONE_RECOVERY`，用 ODS 排放、长期大气存量、EESC 与臭氧恢复的不同时间尺度拆解延迟
+- 将 CFC 大气寿命、平流层输送、南极臭氧化学与条约调整明确记录为 Knowledge Expansion exposure
+- 完成 Industry Apprenticeship Day 6：新增 `BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP`，把“拥有客户”拆成获客、身份、账单、使用数据、客服、取消与再次触达
+- 新增 `CASE.DISNEY_PLUS.DTC_2019_2025`，比较 DisneyPlus.com、平台内购和批发权益，并记录 DTC 规模、成本与盈利路径
+- 更新行业日志、Question Bank、复习日期、CURRENT_STATE 与网站地图数据
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认进入收件箱
+- 下一课锁定 2026-09-14 Systems Thinking Integration 与 Cable、Satellite、vMVPD、Streaming 分发架构
+
 ## 2026-09-12
 
 - 完成 Systems Thinking Day 5：新增 `META.SYSTEMS.BOTTLENECK`，唯一主旨为“当前最稀缺的必要能力控制整体吞吐量，改善非瓶颈只会增加排队，解除后约束会移动”

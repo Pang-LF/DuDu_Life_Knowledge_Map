@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 28,
+    progress: 34,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 18,
+    progress: 22,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -122,7 +122,7 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'A system result returns through a causal path to alter its starting condition, either reinforcing the original direction or balancing a deviation.',
-    connections: ['META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'CASE.SVB.2023_BANK_RUN', 'BUS.SUBSCRIPTION.BUNDLE'],
+    connections: ['META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY', 'CASE.SVB.2023_BANK_RUN', 'BUS.SUBSCRIPTION.BUNDLE'],
   },
   {
     id: 'META.SYSTEMS.NONLINEARITY',
@@ -138,7 +138,23 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'The current constraint whose marginal effective capacity most limits whole-system throughput. Improving a non-bottleneck creates queues; relieving it moves the constraint.',
-    connections: ['META.SYSTEMS.NONLINEARITY', 'CASE.TESLA.MODEL3_RAMP.2017_2018', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT'],
+    connections: ['META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY', 'CASE.TESLA.MODEL3_RAMP.2017_2018', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT'],
+  },
+  {
+    id: 'META.SYSTEMS.DELAY',
+    label: 'Delay（延迟）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'Cause, intervention, and observable outcome are separated in time. Current results can therefore reflect past inputs, making premature adjustment prone to misdiagnosis and overshoot.',
+    connections: ['META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.BOTTLENECK', 'CASE.MONTREAL_PROTOCOL.OZONE_RECOVERY'],
+  },
+  {
+    id: 'CASE.MONTREAL_PROTOCOL.OZONE_RECOVERY',
+    label: 'Ozone Recovery（臭氧层延迟恢复）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'ODS emissions fell first, effective stratospheric chlorine peaked nearly a decade later, and ozone recovery takes decades because long-lived atmospheric stocks and transport preserve past inputs.',
+    connections: ['META.SYSTEMS.DELAY'],
   },
   {
     id: 'CASE.TESLA.MODEL3_RAMP.2017_2018',
@@ -186,7 +202,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Consumers, distributors, programmers, rights holders, advertisers, and platforms exchange content, access, money, attention, and customer relationships.',
-    connections: ['META.SYSTEMS.INTERDEPENDENCE', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR', 'BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT'],
+    connections: ['META.SYSTEMS.INTERDEPENDENCE', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR', 'BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP'],
   },
   {
     id: 'BUS.MEDIA.DISTRIBUTOR.DIRECTV',
@@ -194,7 +210,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'DIRECTV controls customer, billing, package, service, and product relationships while licensing most external content and coordinating third-party networks and apps.',
-    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.AGGREGATOR', 'BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'META.SYSTEMS.COUPLING'],
+    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.AGGREGATOR', 'BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'META.SYSTEMS.COUPLING'],
   },
   {
     id: 'BUS.MEDIA.AGGREGATOR',
@@ -202,7 +218,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'A platform that reduces search, billing, identity, and discovery friction across fragmented media services.',
-    connections: ['META.SYSTEMS.SYSTEM', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.SUBSCRIPTION.BUNDLE'],
+    connections: ['META.SYSTEMS.SYSTEM', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP'],
   },
   {
     id: 'BUS.SUBSCRIPTION.BUNDLE',
@@ -210,7 +226,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'A broad package can smooth heterogeneous household valuations and combine search, contracting, delivery, billing, service, and content funding into one recurring product.',
-    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.FEEDBACK_LOOP', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR', 'BUS.MEDIA.ESPN.BUNDLE_POWER', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT'],
+    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.FEEDBACK_LOOP', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR', 'BUS.MEDIA.ESPN.BUNDLE_POWER', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP'],
   },
   {
     id: 'BUS.MEDIA.ESPN.BUNDLE_POWER',
@@ -226,17 +242,33 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Canceling traditional multichannel Pay-TV removes a recurring payer from the affiliate-fee, advertising-reach, and shared-cost system while video consumption moves elsewhere.',
-    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.ESPN.BUNDLE_POWER', 'META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.BOTTLENECK'],
+    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.ESPN.BUNDLE_POWER', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.BOTTLENECK'],
+  },
+  {
+    id: 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP',
+    label: 'DTC Customer Relationship（DTC 客户关系）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'DTC moves pricing, account, billing, product data, service, and cancellation capabilities toward the programmer, while platform and wholesale paths can still divide the relationship.',
+    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR', 'BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'CASE.DISNEY_PLUS.DTC_2019_2025'],
+  },
+  {
+    id: 'CASE.DISNEY_PLUS.DTC_2019_2025',
+    label: 'Disney+ DTC（Disney+ 直面消费者）',
+    domain: 'BUSINESS',
+    mastery: 'Case studied',
+    summary: 'Disney gained direct product and customer capabilities while taking on technology, marketing, service, content, and churn; partner billing still divided parts of the relationship.',
+    connections: ['BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP'],
   },
 ]
 
 export const todayBrief = {
-  date: '2026-09-12',
-  title: 'Day 5 — Bottleneck（瓶颈）',
-  question: '为什么高速冲压、喷漆和电机生产都不能阻止 Model 3 在 2017 年第三季度只造出 260 辆？',
-  reading: '45-60 min：跟随一辆缺少完整电池包的 Model 3，识别控制整体吞吐量的移动约束。',
-  discussion: '20-30 min：用边际产能寻找瓶颈，并追踪一个家庭退出传统 Pay-TV 后的钱流与权力变化。',
-  next: '2026-09-13：Delay（延迟）——为什么行动与结果之间的时间差会制造错误判断？',
+  date: '2026-09-13',
+  title: 'Day 6: Delay（延迟）',
+  question: '世界已经开始淘汰 CFC，为什么南极臭氧洞在接下来的十多年里仍然加深？',
+  reading: '45-60 min：跟随一枚 CFC-11 分子，理解流量先变、存量后变、最终结果最后显现。',
+  discussion: '20-30 min：区分延迟与无效，并比较三种 Disney+ 订阅路径中的客户关系分配。',
+  next: '2026-09-14：Systems Thinking Integration（系统思维整合）。',
 }
 
 export const monthlyTrack = [

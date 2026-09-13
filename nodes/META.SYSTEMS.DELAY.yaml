@@ -1,0 +1,38 @@
+id: "META.SYSTEMS.DELAY"
+name_en: "Delay"
+name_zh: "延迟"
+domain: "META"
+module: "Systems Thinking（系统思维）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "Delay is the time interval separating a cause or intervention from its arrival in another part of the system or its appearance in an observable outcome."
+why: "Current results often reflect past inputs. Without matching observation and decision intervals to the causal timescale, people can mistake a pending effect for failure, repeat an action before feedback returns, or abandon an effective intervention."
+mechanism: "Material transport, information processing, implementation, and slow adjustment of accumulated stocks separate action from outcome. Leading variables may turn first, intermediate states later, and final outcomes last; repeated decisions made inside that gap can create overshoot or oscillation."
+example: "Ozone-depleting emissions fell sharply after the Montreal Protocol, but long-lived atmospheric CFC stocks and years of stratospheric transport meant effective chlorine peaked nearly a decade after emissions and ozone recovery will take decades."
+my_take: "Before judging an intervention, I should state which variable should change first, which stock must adjust, how long each step should take, and what evidence would distinguish delay from ineffectiveness."
+
+prerequisites:
+  - "META.SYSTEMS.SYSTEM"
+  - "META.SYSTEMS.FEEDBACK_LOOP"
+  - "META.SYSTEMS.BOTTLENECK"
+connections:
+  - "CASE.MONTREAL_PROTOCOL.OZONE_RECOVERY"
+  - "META.SYSTEMS.FEEDBACK_LOOP"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.INTEGRATION"
+questions:
+  - "Which leading and intermediate indicators can distinguish a delayed effect from an intervention that never touched the causal mechanism?"
+cases:
+  - "Montreal Protocol and delayed ozone recovery"
+
+first_seen: "2026-09-13"
+last_reviewed: "2026-09-13"
+next_review: "2026-09-14"
+sources:
+  - "https://csl.noaa.gov/assessments/ozone/2022/executivesummary/"
+  - "https://csl.noaa.gov/assessments/ozone/2022/twentyquestions/"
+  - "https://ozone.unep.org/treaties/montreal-protocol"
+  - "https://www.epa.gov/ozone-layer-protection/ozone-depleting-substances"
+notes: "Primary One Idea for Systems Thinking Day 6. Atmospheric chemistry and treaty governance are exposure only. Mastery remains candidate until user Teach-back."
