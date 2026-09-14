@@ -119,3 +119,17 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Sequencing note: DTC customer ownership was pulled forward from the transformation sequence because it was the explicit next focus after Cord Cutting; Cable, Satellite, vMVPD, and Streaming architecture moves to the next industry lesson.
 - Status: `BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP` at L1 candidate; Teach-back pending.
 - Next: How Cable, Satellite, vMVPD, and Streaming differ in transmission, packaging, and customer relationship.
+
+### 2026-09-14 — Cable, Satellite, vMVPD And Streaming Are Different Layers
+
+- Question: If all four can appear on a television screen, why are they not the same commercial role?
+- Parent distinction: Streaming is internet delivery technology; MVPD and vMVPD describe multichannel aggregation; SVOD describes a recurring on-demand product; DTC describes a closer commercial relationship with the consumer.
+- Cable: Can combine a local HFC broadband last mile, a multichannel video package, billing, installation, service, and product data.
+- Satellite: Aggregates multichannel video over a wide-area DBS path but usually does not own the household broadband last mile used by apps.
+- vMVPD: Aggregates subscription packages of live linear channels over the customer's ISP, preserving programming costs and distributor responsibilities without a dedicated access network.
+- SVOD: Sells recurring access to an on-demand service while depending on ISPs, CDNs, devices, app stores, clouds, and billing partners.
+- Money flow: Households may pay an ISP plus a video distributor or DTC service; multichannel distributors pay programmers, while DTC services fund or license content and bear product, technology, marketing, service, and churn costs.
+- Quantitative anchor: Comcast ended 2025 with about 31.3 million domestic broadband customers and 11.3 million domestic video customers, showing that cable's access relationship extends beyond the traditional video bundle.
+- Boundary: An app interface and internet transport do not reveal who owns content, the package, billing, the customer relationship, or the last mile.
+- Status: `BUS.MEDIA.DISTRIBUTION.MODELS` at L1 candidate; Teach-back pending.
+- Next: Broadband and the technological foundations of streaming.

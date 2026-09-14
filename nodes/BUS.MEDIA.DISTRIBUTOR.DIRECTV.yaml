@@ -21,6 +21,7 @@ connections:
   - "BUS.SUBSCRIPTION.BUNDLE"
   - "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
   - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.MEDIA.DISTRIBUTION.MODELS"
   - "META.SYSTEMS.COUPLING"
 questions:
   - "Which layer of aggregation creates the most durable customer relationship: search, device, identity, billing, or content packaging?"
@@ -28,8 +29,8 @@ cases:
   - "DIRECTV Gemini integration and third-party subscription boundaries"
 
 first_seen: "2026-09-09"
-last_reviewed: "2026-09-13"
-next_review: "2026-09-14"
+last_reviewed: "2026-09-14"
+next_review: "2026-09-18"
 sources:
   - "https://www.directv.com/insider/corporate/company/"
   - "https://www.directv.com/technology/gemini/"

@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-13
+Last updated: 2026-09-14
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-13
 
 ## Next Immediate Focus（下一步）
 
-2026-09-14：进入 Systems Thinking Day 7 — Weekly Integration（系统思维整合），用陌生案例联合应用 Interdependence、Coupling、Feedback Loop、Nonlinearity、Bottleneck 与 Delay，并诊断待验证 mastery；Industry Apprenticeship 只比较 Cable、Satellite、vMVPD 与 Streaming 在传输、套餐和客户关系上的差异。
+2026-09-15：进入 Causal Reasoning Day 1 — Correlation、Causation 与 Reverse Causality（相关、因果与反向因果），回答“A 和 B 一起发生，为什么不能证明 A 导致 B？”；Industry Apprenticeship 进入 Broadband and the Technological Foundations of Streaming（宽带与流媒体技术基础）。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-13
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-14：完成 Systems Thinking Day 7 — Integration（系统思维整合）。主课跟随一枚缺失的汽车微控制器，以“先定义完整可交付车辆，再沿必要单位寻找主导结构”为唯一方法，整合 Interdependence、Coupling、Feedback Loop candidate、Nonlinearity、Bottleneck 与 Delay；Commerce 报告的库存从 40 天降至不足 5 天、需求高约 17% 和晶圆厂 90% 以上利用率用于解释缓冲跨越边界，Ford 文件用于固定未完成车辆与数量级。半导体设计、晶圆制造、封装、汽车模块、验证与产能周期只记 Knowledge Expansion exposure。Industry Apprenticeship Day 7 完成 Video Distribution Models：把 Streaming 从商业模式中分离为传输方式，并比较 Cable、Satellite、vMVPD 与 SVOD 在网络、套餐、账单、内容和客户关系上的差异。`META.SYSTEMS.INTEGRATION` 为 L2 candidate，`BUS.MEDIA.DISTRIBUTION.MODELS` 为 L1 candidate，均等待 Teach-back；前六个系统节点完成复习但不自动升级。
 
 2026-09-13：完成 Systems Thinking Day 6 — Delay（延迟）。主课跟随一枚在 1980 年代释放的 CFC-11 分子，以 Montreal Protocol 后 ODS 排放、EESC 和臭氧恢复的不同转弯时间，重建“当前结果主要反映过去输入”的机制，并区分延迟、无效与短期噪声。CFC 大气寿命、平流层输送、南极臭氧化学、EESC 和条约调整只记 Knowledge Expansion exposure；医学、货币政策与供应链连接只记 preview。Industry Apprenticeship Day 6 完成 Disney+ DTC Customer Relationship：把“拥有客户”拆成获客、身份、账单、产品数据、客服、取消和赢回能力，并比较直接订阅、App Store 内购与批发权益的关系分配。`META.SYSTEMS.DELAY` 为 L2 candidate，`BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP` 为 L1 candidate，均等待 Teach-back。
 

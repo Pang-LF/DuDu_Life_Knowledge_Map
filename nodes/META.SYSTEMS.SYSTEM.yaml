@@ -17,6 +17,7 @@ prerequisites: []
 connections:
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "META.SYSTEMS.COUPLING"
+  - "META.SYSTEMS.INTEGRATION"
   - "BUS.MEDIA.AGGREGATOR"
   - "BUS.SUBSCRIPTION.BUNDLE"
   - "SYSTEM.ECON.INFLATION"
@@ -28,8 +29,8 @@ cases:
   - "Southwest Airlines 2022 holiday operational meltdown"
 
 first_seen: "2026-09-08"
-last_reviewed: "2026-09-09"
-next_review: "2026-09-15"
+last_reviewed: "2026-09-14"
+next_review: "2026-09-18"
 sources:
   - "https://www.transportation.gov/briefing-room/dot-penalizes-southwest-airlines-140-million-2022-holiday-meltdown"
   - "https://investors.southwest.com/sec-filings/all-sec-filings/content/0000092380-23-000010/luv-20221231.htm"

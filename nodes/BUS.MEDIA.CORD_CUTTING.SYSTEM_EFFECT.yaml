@@ -25,14 +25,15 @@ connections:
   - "BUS.MEDIA.ESPN.BUNDLE_POWER"
   - "META.SYSTEMS.FEEDBACK_LOOP"
   - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.MEDIA.DISTRIBUTION.MODELS"
 questions:
   - "Which legacy Pay-TV costs fall with a lost subscriber, which remain committed, and who gains the customer relationship after cancellation?"
 cases:
   - "U.S. traditional MVPD decline through 2023"
 
 first_seen: "2026-09-12"
-last_reviewed: "2026-09-13"
-next_review: "2026-09-14"
+last_reviewed: "2026-09-14"
+next_review: "2026-09-18"
 sources:
   - "https://docs.fcc.gov/public/attachments/FCC-24-136A1.pdf"
   - "https://www.sec.gov/Archives/edgar/data/1744489/000174448925000155/dis-20250927.htm"

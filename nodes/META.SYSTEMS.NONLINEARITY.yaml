@@ -21,6 +21,7 @@ prerequisites:
 connections:
   - "CASE.CHALLENGER.1986"
   - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.INTEGRATION"
   - "BUS.MEDIA.ESPN.BUNDLE_POWER"
 questions:
   - "What evidence distinguishes a true threshold from an ordinary steep but continuous relationship?"
@@ -28,8 +29,8 @@ cases:
   - "Space Shuttle Challenger STS-51L accident"
 
 first_seen: "2026-09-11"
-last_reviewed: "2026-09-12"
-next_review: "2026-09-14"
+last_reviewed: "2026-09-14"
+next_review: "2026-09-18"
 sources:
   - "https://www.nasa.gov/history/rogersrep/v1ch4.htm"
   - "https://www.nasa.gov/history/rogersrep/v1ch5.htm"

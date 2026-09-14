@@ -1,0 +1,39 @@
+id: "BUS.MEDIA.DISTRIBUTION.MODELS"
+name_en: "Video Distribution Models"
+name_zh: "视频分发模式"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Cable, satellite, vMVPD, and SVOD can all put video on a television while allocating access network, content aggregation, billing, product data, and customer control to different actors. Streaming describes internet delivery and does not by itself identify the commercial role."
+why: "Treating every app-delivered service as the same business hides who pays programming costs, who owns the broadband last mile, who controls the package and bill, and where bargaining power sits."
+mechanism: "Cable can combine a local HFC access network with video aggregation; satellite aggregates channels over a wide-area broadcast path but usually lacks the household broadband last mile; vMVPD aggregates live linear channels over a customer's ISP; SVOD sells recurring on-demand access while depending on ISPs and device platforms."
+example: "A household can use Comcast broadband, Apple TV, YouTube TV for ESPN, and Netflix for a film. Each company controls a different layer even though both video services stream."
+my_take: "I should separate transmission, aggregation, content ownership, billing, product data, and device access before deciding who owns the customer or captures value."
+
+prerequisites:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+connections:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
+  - "BUS.MEDIA.STREAMING.TECH_FOUNDATIONS"
+questions:
+  - "Which layer creates the most durable leverage when content, billing, broadband, and device access are controlled by different firms?"
+cases:
+  - "One household across Comcast broadband, YouTube TV, ESPN, Apple TV, and Netflix"
+
+first_seen: "2026-09-14"
+last_reviewed: "2026-09-14"
+next_review: "2026-09-18"
+sources:
+  - "https://docs.fcc.gov/public/attachments/FCC-24-136A1.pdf"
+  - "https://www.sec.gov/Archives/edgar/data/1166691/000162828026004994/cmcsa-20251231.htm"
+  - "https://www.directv.com/how-to-watch/"
+  - "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm"
+notes: "Industry Apprenticeship Day 7. Broadband and streaming technology are reserved for the next lesson. Mastery remains candidate until Teach-back."

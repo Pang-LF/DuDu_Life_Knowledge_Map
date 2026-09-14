@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 34,
+    progress: 40,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 22,
+    progress: 27,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -146,7 +146,23 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'Cause, intervention, and observable outcome are separated in time. Current results can therefore reflect past inputs, making premature adjustment prone to misdiagnosis and overshoot.',
-    connections: ['META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.BOTTLENECK', 'CASE.MONTREAL_PROTOCOL.OZONE_RECOVERY'],
+    connections: ['META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.INTEGRATION', 'CASE.MONTREAL_PROTOCOL.OZONE_RECOVERY'],
+  },
+  {
+    id: 'META.SYSTEMS.INTEGRATION',
+    label: 'Systems Integration（系统整合）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'Start with a whole-system outcome, then follow one necessary unit through dependencies, propagation, returning effects, boundaries, constraints, and delays to locate a real lever.',
+    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022'],
+  },
+  {
+    id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
+    label: 'Automotive Chip Shortage（汽车缺芯）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'A missing qualified chip blocked complete vehicles while depleted buffers, constrained wafer capacity, multi-tier signals, and production delays turned a component shortage into an industry-wide output constraint.',
+    connections: ['META.SYSTEMS.INTEGRATION'],
   },
   {
     id: 'CASE.MONTREAL_PROTOCOL.OZONE_RECOVERY',
@@ -250,7 +266,15 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'DTC moves pricing, account, billing, product data, service, and cancellation capabilities toward the programmer, while platform and wholesale paths can still divide the relationship.',
-    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR', 'BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'CASE.DISNEY_PLUS.DTC_2019_2025'],
+    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR', 'BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DISTRIBUTION.MODELS', 'CASE.DISNEY_PLUS.DTC_2019_2025'],
+  },
+  {
+    id: 'BUS.MEDIA.DISTRIBUTION.MODELS',
+    label: 'Video Distribution Models（视频分发模式）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Cable, satellite, vMVPD, and SVOD allocate the access network, content package, bill, product data, and customer relationship differently; streaming alone describes internet delivery.',
+    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT'],
   },
   {
     id: 'CASE.DISNEY_PLUS.DTC_2019_2025',
@@ -263,12 +287,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-09-13',
-  title: 'Day 6: Delay（延迟）',
-  question: '世界已经开始淘汰 CFC，为什么南极臭氧洞在接下来的十多年里仍然加深？',
-  reading: '45-60 min：跟随一枚 CFC-11 分子，理解流量先变、存量后变、最终结果最后显现。',
-  discussion: '20-30 min：区分延迟与无效，并比较三种 Disney+ 订阅路径中的客户关系分配。',
-  next: '2026-09-14：Systems Thinking Integration（系统思维整合）。',
+  date: '2026-09-14',
+  title: 'Day 7: Systems Thinking Integration（系统思维整合）',
+  question: '为什么少一枚并不先进的芯片，会让一辆昂贵汽车无法出售？',
+  reading: '45-60 min：跟随一枚汽车微控制器，把六种系统行为合成一张能寻找杠杆的动态图。',
+  discussion: '20-30 min：迁移到医院患者流，并分离 Cable、Satellite、vMVPD 与 Streaming 的商业角色。',
+  next: '2026-09-15：Correlation、Causation 与 Reverse Causality（相关、因果与反向因果）。',
 }
 
 export const monthlyTrack = [

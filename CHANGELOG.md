@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-09-14
+
+- 完成 Systems Thinking Day 7：新增 `META.SYSTEMS.INTEGRATION`，以“先定义整体产出，再沿一个必要单位寻找主导结构与杠杆”为唯一主旨
+- 新增 `CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022`，跟随一枚缺失的汽车微控制器，整合相互依赖、耦合、反馈候选、非线性边界、瓶颈与延迟
+- 明确区分 Commerce、Ford 与 NIST 记录的事实、机制解释和无法由公开汇总资料识别的防御性下单推断
+- 将半导体设计、晶圆制造、封装、汽车电子模块、验证、库存缓冲与产能周期记录为 Knowledge Expansion exposure
+- 完成 Industry Apprenticeship Day 7：新增 `BUS.MEDIA.DISTRIBUTION.MODELS`，分离 Cable、Satellite、vMVPD、SVOD、DTC 与 Streaming 的传输、聚合、账单、客户和网络角色
+- 对 Systems Thinking 全部基础节点完成一次陌生案例复习，保持 mastery candidate，等待医院案例 Teach-back 验证
+- 更新行业日志、Question Bank、复习日期、CURRENT_STATE 与网站地图数据
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认进入收件箱
+- 下一课锁定 2026-09-15 Correlation / Causation / Reverse Causality 与宽带及流媒体技术基础
+
 ## 2026-09-13
 
 - 完成 Systems Thinking Day 6：新增 `META.SYSTEMS.DELAY`，唯一主旨为“原因、行动与可观察结果在时间上分离时，当前结果主要反映过去输入”

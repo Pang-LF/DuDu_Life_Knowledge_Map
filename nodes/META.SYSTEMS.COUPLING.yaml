@@ -19,6 +19,7 @@ prerequisites:
 connections:
   - "CASE.NORTHEAST_BLACKOUT.2003"
   - "META.SYSTEMS.FEEDBACK_LOOP"
+  - "META.SYSTEMS.INTEGRATION"
   - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
 questions:
   - "How can coupling strength and intervention time be measured in an unfamiliar system?"
@@ -26,8 +27,8 @@ cases:
   - "2003 Northeast blackout"
 
 first_seen: "2026-09-09"
-last_reviewed: "2026-09-11"
-next_review: "2026-09-14"
+last_reviewed: "2026-09-14"
+next_review: "2026-09-18"
 sources:
   - "https://www.energy.gov/oe/august-2003-blackout"
   - "https://www.nerc.com/globalassets/our-work/reports/event-reports/august_2003_blackout_final_report.pdf"

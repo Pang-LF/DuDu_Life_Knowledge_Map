@@ -21,6 +21,7 @@ connections:
   - "CASE.SVB.2023_BANK_RUN"
   - "META.SYSTEMS.NONLINEARITY"
   - "META.SYSTEMS.DELAY"
+  - "META.SYSTEMS.INTEGRATION"
   - "BUS.SUBSCRIPTION.BUNDLE"
   - "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
 questions:
@@ -29,8 +30,8 @@ cases:
   - "Silicon Valley Bank 2023 bank run"
 
 first_seen: "2026-09-10"
-last_reviewed: "2026-09-13"
-next_review: "2026-09-14"
+last_reviewed: "2026-09-14"
+next_review: "2026-09-18"
 sources:
   - "https://www.federalreserve.gov/publications/2023-April-SVB-Executive-Summary.htm"
   - "https://www.federalreserve.gov/publications/2023-April-SVB-Evolution-of-Silicon-Valley-Bank.htm"

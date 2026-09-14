@@ -1,0 +1,41 @@
+id: "META.SYSTEMS.INTEGRATION"
+name_en: "Systems Thinking Integration"
+name_zh: "系统思维整合"
+domain: "META"
+module: "Systems Thinking（系统思维）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "Systems thinking integration begins with a whole-system outcome and follows one necessary unit through dependencies, propagation, returning effects, functional boundaries, the current constraint, and time delays."
+why: "Separate concepts become useful only when they help diagnose an unfamiliar system and locate a lever that changes whole-system behavior rather than a local metric."
+mechanism: "Define throughput and boundary, follow a concrete unit, identify necessary relationships, trace how changed conditions propagate and return, locate threshold behavior and the marginal constraint, then match interventions to causal delays and evidence."
+example: "During the 2020-2022 automotive semiconductor shortage, a missing qualified microcontroller could prevent a nearly complete vehicle from becoming deliverable while depleted inventory, constrained wafer capacity, multi-tier ordering, and production delays amplified the effect."
+my_take: "I should not start by labeling a case. I should start with the result the system must produce and let one necessary unit reveal which structures matter."
+
+prerequisites:
+  - "META.SYSTEMS.SYSTEM"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.COUPLING"
+  - "META.SYSTEMS.FEEDBACK_LOOP"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.DELAY"
+connections:
+  - "CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022"
+  - "META.CAUSAL.CORRELATION_CAUSATION"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "SYSTEM.HEALTHCARE.OPERATIONS"
+questions:
+  - "In an unfamiliar system, what evidence identifies the dominant structure rather than merely a plausible story?"
+cases:
+  - "Global automotive semiconductor shortage, 2020-2022"
+
+first_seen: "2026-09-14"
+last_reviewed: "2026-09-14"
+next_review: "2026-09-18"
+sources:
+  - "https://www.commerce.gov/news/press-releases/2022/01/commerce-semiconductor-data-confirms-urgent-need-congress-pass-us"
+  - "https://www.sec.gov/Archives/edgar/data/37996/000003799622000013/f-20211231.htm"
+  - "https://www.gao.gov/assets/gao-22-105923.pdf"
+notes: "Systems Thinking Day 7 integration. Semiconductor supply-chain knowledge is exposure only. Mastery remains candidate until the hospital Teach-back."
