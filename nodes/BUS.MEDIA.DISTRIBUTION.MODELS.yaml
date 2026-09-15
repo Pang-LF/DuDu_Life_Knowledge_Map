@@ -29,11 +29,11 @@ cases:
   - "One household across Comcast broadband, YouTube TV, ESPN, Apple TV, and Netflix"
 
 first_seen: "2026-09-14"
-last_reviewed: "2026-09-14"
-next_review: "2026-09-18"
+last_reviewed: "2026-09-15"
+next_review: "2026-09-19"
 sources:
   - "https://docs.fcc.gov/public/attachments/FCC-24-136A1.pdf"
   - "https://www.sec.gov/Archives/edgar/data/1166691/000162828026004994/cmcsa-20251231.htm"
   - "https://www.directv.com/how-to-watch/"
   - "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm"
-notes: "Industry Apprenticeship Day 7. Broadband and streaming technology are reserved for the next lesson. Mastery remains candidate until Teach-back."
+notes: "Industry Apprenticeship Day 7. Reviewed on 2026-09-15 as the commercial-layer prerequisite for broadband and streaming technology. Mastery remains candidate until Teach-back."

@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 40,
+    progress: 44,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 27,
+    progress: 31,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -154,7 +154,23 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'Start with a whole-system outcome, then follow one necessary unit through dependencies, propagation, returning effects, boundaries, constraints, and delays to locate a real lever.',
-    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022'],
+    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'META.CAUSAL.CORRELATION_CAUSATION', 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022'],
+  },
+  {
+    id: 'META.CAUSAL.CORRELATION_CAUSATION',
+    label: 'Correlation & Causation（相关与因果）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'Correlation is a symmetric observation of co-movement; causation is a directional intervention claim. Temporal order and reverse paths must be tested before treating a predictor as a lever.',
+    connections: ['META.SYSTEMS.INTEGRATION', 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004'],
+  },
+  {
+    id: 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004',
+    label: 'Smoking & Lung Cancer（吸烟与肺癌）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'Case-control association, prospective timing, dose and cessation patterns, replication, and mechanism progressively constrained reverse-causality explanations without an unethical smoking trial.',
+    connections: ['META.CAUSAL.CORRELATION_CAUSATION'],
   },
   {
     id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
@@ -274,7 +290,23 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Cable, satellite, vMVPD, and SVOD allocate the access network, content package, bill, product data, and customer relationship differently; streaming alone describes internet delivery.',
-    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT'],
+    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.STREAMING.TECH_FOUNDATIONS'],
+  },
+  {
+    id: 'BUS.MEDIA.STREAMING.TECH_FOUNDATIONS',
+    label: 'Streaming Delivery（流媒体交付）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Encoded segments move through manifests, CDNs, interconnection, ISP access, home networks, devices, buffers, and adaptive bitrate logic; plan Mbps describes only one link.',
+    connections: ['BUS.MEDIA.DISTRIBUTION.MODELS', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'CASE.NETFLIX.OPEN_CONNECT'],
+  },
+  {
+    id: 'CASE.NETFLIX.OPEN_CONNECT',
+    label: 'Netflix Open Connect（本地内容交付）',
+    domain: 'BUSINESS',
+    mastery: 'Case studied',
+    summary: 'Netflix places encoded content near or inside ISP networks to reduce repeated long-haul delivery while preserving separate video-service and broadband relationships.',
+    connections: ['BUS.MEDIA.STREAMING.TECH_FOUNDATIONS'],
   },
   {
     id: 'CASE.DISNEY_PLUS.DTC_2019_2025',
@@ -287,12 +319,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-09-14',
-  title: 'Day 7: Systems Thinking Integration（系统思维整合）',
-  question: '为什么少一枚并不先进的芯片，会让一辆昂贵汽车无法出售？',
-  reading: '45-60 min：跟随一枚汽车微控制器，把六种系统行为合成一张能寻找杠杆的动态图。',
-  discussion: '20-30 min：迁移到医院患者流，并分离 Cable、Satellite、vMVPD 与 Streaming 的商业角色。',
-  next: '2026-09-15：Correlation、Causation 与 Reverse Causality（相关、因果与反向因果）。',
+  date: '2026-09-15',
+  title: 'Causal Reasoning Day 1（因果推理第一课）',
+  question: '没有让人随机吸烟，科学家怎么知道吸烟会导致肺癌？',
+  reading: '45-60 min：从病例对照走到 50 年队列，区分相关、因果与反向因果。',
+  discussion: '20-30 min：迁移到产品留存，并沿一段 4 秒视频诊断 Streaming 交付。',
+  next: '2026-09-16：Confounder（混杂因素）与 Industry Power Shift（行业权力转移）。',
 }
 
 export const monthlyTrack = [

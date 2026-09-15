@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-14
+Last updated: 2026-09-15
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-14
 
 ## Next Immediate Focus（下一步）
 
-2026-09-15：进入 Causal Reasoning Day 1 — Correlation、Causation 与 Reverse Causality（相关、因果与反向因果），回答“A 和 B 一起发生，为什么不能证明 A 导致 B？”；Industry Apprenticeship 进入 Broadband and the Technological Foundations of Streaming（宽带与流媒体技术基础）。
+2026-09-16：Causal Reasoning Day 2 — Confounder（混杂因素），回答“即使 A 先于 B，第三个变量怎样同时制造 A 与 B 的关联？”；Industry Apprenticeship 进入 Industry Power Shift（行业权力转移）。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-14
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-15：进入 Causal Reasoning Day 1 — Correlation、Causation 与 Reverse Causality。主课从 1950 年 Doll–Hill 病例对照研究的一张吸烟史比较表开始，跟随一位 1951 年先记录吸烟状态、后观察疾病与死亡的英国医生，重建“相关是对称观察，因果是有方向的干预主张，结果还可能反向改变暴露标签”。1964 年 Surgeon General 对不同疾病作出不同证据等级判断，以及 34,439 名男性医生的 50 年随访，用于说明时间顺序、剂量、戒烟后远期变化、重复与机制怎样共同约束替代方向；流行病学与公共卫生只记 Knowledge Expansion exposure。Industry Apprenticeship Day 8 跟随一段 4 秒视频，建立 Encoding、Manifest、CDN、Interconnection、ISP、家庭网络、设备、Buffer 与 ABR 的端到端骨架，并以 Netflix Open Connect 解释内容本地化和钱流边界。`META.CAUSAL.CORRELATION_CAUSATION` 为 L2 candidate，`BUS.MEDIA.STREAMING.TECH_FOUNDATIONS` 为 L1 candidate，等待 Teach-back；Confounder 保留到下一课。
 
 2026-09-14：完成 Systems Thinking Day 7 — Integration（系统思维整合）。主课跟随一枚缺失的汽车微控制器，以“先定义完整可交付车辆，再沿必要单位寻找主导结构”为唯一方法，整合 Interdependence、Coupling、Feedback Loop candidate、Nonlinearity、Bottleneck 与 Delay；Commerce 报告的库存从 40 天降至不足 5 天、需求高约 17% 和晶圆厂 90% 以上利用率用于解释缓冲跨越边界，Ford 文件用于固定未完成车辆与数量级。半导体设计、晶圆制造、封装、汽车模块、验证与产能周期只记 Knowledge Expansion exposure。Industry Apprenticeship Day 7 完成 Video Distribution Models：把 Streaming 从商业模式中分离为传输方式，并比较 Cable、Satellite、vMVPD 与 SVOD 在网络、套餐、账单、内容和客户关系上的差异。`META.SYSTEMS.INTEGRATION` 为 L2 candidate，`BUS.MEDIA.DISTRIBUTION.MODELS` 为 L1 candidate，均等待 Teach-back；前六个系统节点完成复习但不自动升级。
 

@@ -1,0 +1,39 @@
+id: "BUS.MEDIA.STREAMING.TECH_FOUNDATIONS"
+name_en: "Broadband and Streaming Technology Foundations"
+name_zh: "宽带与流媒体技术基础"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Streaming delivery moves encoded video segments through manifests, CDNs, network interconnection, an ISP access network, a home network, a playback device, and adaptive bitrate logic. An advertised broadband tier describes only part of that end-to-end path."
+why: "Customer experience, delivery cost, and bargaining leverage cannot be diagnosed from the household Mbps tier alone. Different actors own and constrain different links."
+mechanism: "Encode the same content into multiple bitrate variants, divide it into segments, place copies near users, deliver each request through ISP and home networks, and let the player select variants based on recent throughput and buffer state."
+example: "A hypothetical four-second segment at 15 Mbps contains about 60 megabits. At a stable 30 Mbps it can arrive in about two seconds and add buffer; at 10 Mbps it needs about six seconds and depletes buffer during playback."
+my_take: "When video buffers, I should follow one segment through the entire path and test the constrained link instead of treating the broadband plan speed as the whole system."
+
+prerequisites:
+  - "BUS.MEDIA.DISTRIBUTION.MODELS"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+connections:
+  - "BUS.MEDIA.DISTRIBUTION.MODELS"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+  - "BUS.MEDIA.INDUSTRY_POWER_SHIFT"
+  - "CASE.NETFLIX.OPEN_CONNECT"
+questions:
+  - "Which part of the end-to-end path constrains start time, delivered quality, or rebuffering for a specific cohort?"
+cases:
+  - "Netflix Open Connect content delivery architecture"
+
+first_seen: "2026-09-15"
+last_reviewed: "2026-09-15"
+next_review: "2026-09-19"
+sources:
+  - "https://developer.apple.com/documentation/http-live-streaming"
+  - "https://help.netflix.com/en/node/306"
+  - "https://openconnect.netflix.com/"
+  - "https://openconnect.netflix.com/Open-Connect-Briefing-Paper.pdf"
+  - "https://docs.fcc.gov/public/attachments/FCC-22-103A2.pdf"
+notes: "Industry Apprenticeship Day 8. Technical mastery remains candidate until the four-second-segment diagnostic Teach-back."

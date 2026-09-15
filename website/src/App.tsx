@@ -38,9 +38,11 @@ const nodePoints: NodePoint[] = [
   { id: 'META.SYSTEMS.SYSTEM', x: 558, y: 306 },
   { id: 'META.SYSTEMS.FEEDBACK_LOOP', x: 620, y: 366 },
   { id: 'META.SYSTEMS.INTEGRATION', x: 650, y: 290 },
+  { id: 'META.CAUSAL.CORRELATION_CAUSATION', x: 516, y: 366 },
   { id: 'BUS.MEDIA.AGGREGATOR', x: 354, y: 566 },
   { id: 'BUS.SUBSCRIPTION.BUNDLE', x: 430, y: 622 },
   { id: 'BUS.MEDIA.DISTRIBUTION.MODELS', x: 322, y: 632 },
+  { id: 'BUS.MEDIA.STREAMING.TECH_FOUNDATIONS', x: 422, y: 544 },
   { id: 'SYSTEM.ECON.INFLATION', x: 800, y: 565, virtual: true },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
@@ -79,7 +81,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState(nodes[0].id)
+  const [selectedNodeId, setSelectedNodeId] = useState('META.CAUSAL.CORRELATION_CAUSATION')
   const [selectedDomainId, setSelectedDomainId] = useState('META')
 
   const selectedNode = useMemo(
@@ -131,7 +133,7 @@ function App() {
           </div>
           <ol className="route-list">
             {monthlyTrack.map((item, index) => (
-              <li className={index === 0 ? 'current' : ''} key={item}>
+              <li className={index === 1 ? 'current' : ''} key={item}>
                 <span>{index + 1}</span>
                 {item}
               </li>

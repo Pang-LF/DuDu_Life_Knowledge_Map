@@ -1,0 +1,38 @@
+id: "META.CAUSAL.CORRELATION_CAUSATION"
+name_en: "Correlation, Causation, and Reverse Causality"
+name_zh: "相关、因果与反向因果"
+domain: "META"
+module: "Causal Reasoning（因果推理）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "Correlation is a symmetric observation that variables co-vary. Causation is the directional claim that changing one variable would change another. Reverse causality occurs when the presumed outcome changes the presumed cause."
+why: "Predictions, interventions, and explanations require different evidence. Treating every predictor as a lever can make a business, medical, or personal decision target the wrong variable."
+mechanism: "Begin with the observed association, state the proposed intervention direction, establish whether exposure precedes outcome, test whether the outcome could have changed exposure, and seek patterns produced by changing the exposure rather than merely measuring both variables once."
+example: "The smoking-lung cancer evidence moved from a strong 1950 case-control association to prospective exposure measurement, dose and duration gradients, cessation patterns, repeated studies, and biological mechanisms that increasingly constrained reverse-direction explanations."
+my_take: "Before treating an associated variable as a lever, I should say what changing it means, place cause before effect, and ask whether the outcome has already altered the variable I measured."
+
+prerequisites:
+  - "META.SYSTEMS.INTEGRATION"
+connections:
+  - "META.SYSTEMS.INTEGRATION"
+  - "META.CAUSAL.CONFOUNDER"
+  - "META.PROBABILITY.BASE_RATE"
+  - "META.EVIDENCE.SOURCE_EVALUATION"
+  - "CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004"
+questions:
+  - "What evidence turns a predictive relationship into a credible intervention claim, and what reverse path remains plausible?"
+cases:
+  - "Smoking and lung cancer causal inference, 1950-2004"
+
+first_seen: "2026-09-15"
+last_reviewed: "2026-09-15"
+next_review: "2026-09-18"
+sources:
+  - "https://www.bmj.com/content/2/4682/739"
+  - "https://www.bmj.com/content/328/7455/1519"
+  - "https://www.cdc.gov/tobacco-surgeon-general-reports/about/history.html"
+  - "https://www.ncbi.nlm.nih.gov/books/NBK294317/table/ch4.t11/"
+  - "https://www.cancer.gov/types/lung/hp/lung-prevention-pdq"
+notes: "Causal Reasoning Day 1. Confounding is preview only and reserved for 2026-09-16. Mastery remains candidate until the product-retention Teach-back."

@@ -133,3 +133,17 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Boundary: An app interface and internet transport do not reveal who owns content, the package, billing, the customer relationship, or the last mile.
 - Status: `BUS.MEDIA.DISTRIBUTION.MODELS` at L1 candidate; Teach-back pending.
 - Next: Broadband and the technological foundations of streaming.
+
+### 2026-09-15 — Broadband And The Technological Foundations Of Streaming
+
+- Question: Why can two households on the same advertised 300 Mbps broadband tier have very different 4K start time, quality, and rebuffering?
+- Parent concept: Broadband is the household's high-capacity internet access relationship; its advertised Mbps tier describes one link, not guaranteed end-to-end application throughput.
+- Minimum unit: One hypothetical four-second video segment moves through an encoded bitrate variant, manifest, CDN, interconnection, ISP access network, home network, device, and adaptive bitrate player.
+- Segment arithmetic: Four seconds at 15 Mbps contains about 60 megabits or 7.5 megabytes; stable 30 Mbps delivery takes roughly two seconds and adds buffer, while 10 Mbps takes roughly six seconds and depletes buffer.
+- CDN mechanism: Distributed copies reduce repeated origin and long-haul delivery; they do not upgrade the household's last mile or merge the ISP and video-service bills.
+- Open Connect evidence: Netflix reported in 2021 that it had invested more than $1 billion in over 14,000 appliances across 142 countries; qualifying ISPs can receive embedded appliances without hardware charge while providing space, power, and connectivity.
+- ABR mechanism: The player selects among pre-encoded variants using recent throughput and buffer state, trading temporary quality reduction for lower rebuffer risk.
+- Operational metrics: Diagnose video start time, delivered bitrate or resolution, rebuffer ratio, and playback failure by ISP, region, device, time, and delivery path rather than relying on plan speed alone.
+- Boundary: Real segment sizes and encodes vary; the 4-second arithmetic is illustrative, and a router-side speed test does not localize CDN, interconnection, Wi-Fi, device, or player constraints.
+- Status: `BUS.MEDIA.STREAMING.TECH_FOUNDATIONS` at L1 candidate; Teach-back pending.
+- Next: How broadband, DTC, platforms, devices, content scarcity, and aggregation shifted industry bargaining power.

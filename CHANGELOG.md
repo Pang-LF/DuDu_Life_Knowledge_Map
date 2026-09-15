@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-09-15
+
+- 进入 Causal Reasoning Day 1：新增 `META.CAUSAL.CORRELATION_CAUSATION`，以“相关是对称观察，因果是有方向的干预主张”为唯一主旨
+- 新增 `CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004`，从 1950 病例对照、1951 前瞻队列、1964 Surgeon General 判断追踪到 2004 年 50 年随访
+- 明确区分先后顺序、反向因果、暴露变化后的结果轨迹，以及无法对个体病例作确定归因的证据边界
+- 将病例对照、前瞻队列、剂量关系、戒烟轨迹与公共卫生判断记录为 Knowledge Expansion exposure；Confounder 保留到 9 月 16 日
+- 完成 Industry Apprenticeship Day 8：新增 `BUS.MEDIA.STREAMING.TECH_FOUNDATIONS`，沿一个 4 秒视频片段拆解 Encoding、Manifest、CDN、Interconnection、ISP、家庭网络、设备、Buffer 与 ABR
+- 新增 `CASE.NETFLIX.OPEN_CONNECT`，记录本地内容缓存、ISP 合作、交付成本与家庭宽带套餐之间的边界
+- 更新行业日志、Question Bank、复习日期、CURRENT_STATE 与网站地图数据
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认进入收件箱
+- 下一课锁定 2026-09-16 Confounder 与 Industry Power Shift
+
 ## 2026-09-14
 
 - 完成 Systems Thinking Day 7：新增 `META.SYSTEMS.INTEGRATION`，以“先定义整体产出，再沿一个必要单位寻找主导结构与杠杆”为唯一主旨
