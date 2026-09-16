@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-15
+Last updated: 2026-09-16
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-15
 
 ## Next Immediate Focus（下一步）
 
-2026-09-16：Causal Reasoning Day 2 — Confounder（混杂因素），回答“即使 A 先于 B，第三个变量怎样同时制造 A 与 B 的关联？”；Industry Apprenticeship 进入 Industry Power Shift（行业权力转移）。
+2026-09-17：Causal Reasoning Day 3 — Counterfactual（反事实），回答“如果没有发生 X，世界本来会怎样，以及我们怎样为看不见的结果寻找可信替身？”；Industry Apprenticeship 进入 Subscription Economics Foundation（订阅经济基础）。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-15
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-16：完成 Causal Reasoning Day 2 — Confounder（混杂因素）。主课跟随一位绝经后女性的处方决定，对比 Nurses' Health Study 的观察性保护关联与 Women's Health Initiative 对特定雌激素加孕激素方案的随机试验，重建“处理前共同原因同时影响分组与结果，使组间差异混入原有差异”。48,470 名女性、337,854 人年、观察性相对风险 0.56、WHI 16,608 人、冠心病风险率比 1.24 与每 10,000 人年 19 个总体指标净事件均按分母和含义解释；健康使用者效应是重要候选，但配方、年龄、开始时点与依从差异保留为证据边界。临床流行病学与女性健康只记 Knowledge Expansion exposure。Industry Apprenticeship Day 9 以 2023–2025 Charter–Disney 协议解释议价权取决于 outside option、无协议成本、内容稀缺与客户入口，而非公司大小；`META.CAUSAL.CONFOUNDER` 为 L2 candidate，`BUS.MEDIA.INDUSTRY_POWER_SHIFT` 为 L1 candidate，等待 Teach-back。
 
 2026-09-15：进入 Causal Reasoning Day 1 — Correlation、Causation 与 Reverse Causality。主课从 1950 年 Doll–Hill 病例对照研究的一张吸烟史比较表开始，跟随一位 1951 年先记录吸烟状态、后观察疾病与死亡的英国医生，重建“相关是对称观察，因果是有方向的干预主张，结果还可能反向改变暴露标签”。1964 年 Surgeon General 对不同疾病作出不同证据等级判断，以及 34,439 名男性医生的 50 年随访，用于说明时间顺序、剂量、戒烟后远期变化、重复与机制怎样共同约束替代方向；流行病学与公共卫生只记 Knowledge Expansion exposure。Industry Apprenticeship Day 8 跟随一段 4 秒视频，建立 Encoding、Manifest、CDN、Interconnection、ISP、家庭网络、设备、Buffer 与 ABR 的端到端骨架，并以 Netflix Open Connect 解释内容本地化和钱流边界。`META.CAUSAL.CORRELATION_CAUSATION` 为 L2 candidate，`BUS.MEDIA.STREAMING.TECH_FOUNDATIONS` 为 L1 candidate，等待 Teach-back；Confounder 保留到下一课。
 

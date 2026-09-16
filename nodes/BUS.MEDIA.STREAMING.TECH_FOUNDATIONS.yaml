@@ -28,12 +28,12 @@ cases:
   - "Netflix Open Connect content delivery architecture"
 
 first_seen: "2026-09-15"
-last_reviewed: "2026-09-15"
-next_review: "2026-09-19"
+last_reviewed: "2026-09-16"
+next_review: "2026-09-20"
 sources:
   - "https://developer.apple.com/documentation/http-live-streaming"
   - "https://help.netflix.com/en/node/306"
   - "https://openconnect.netflix.com/"
   - "https://openconnect.netflix.com/Open-Connect-Briefing-Paper.pdf"
   - "https://docs.fcc.gov/public/attachments/FCC-22-103A2.pdf"
-notes: "Industry Apprenticeship Day 8. Technical mastery remains candidate until the four-second-segment diagnostic Teach-back."
+notes: "Industry Apprenticeship Day 8. Reviewed on 2026-09-16 as the delivery-layer prerequisite to industry power. Technical mastery remains candidate until the four-second-segment diagnostic Teach-back."

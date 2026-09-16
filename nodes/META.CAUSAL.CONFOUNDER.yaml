@@ -1,0 +1,38 @@
+id: "META.CAUSAL.CONFOUNDER"
+name_en: "Confounder"
+name_zh: "混杂因素"
+domain: "META"
+module: "Causal Reasoning（因果推理）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "A confounder is a pre-treatment common cause that influences both treatment selection and outcome risk, making treated and untreated groups incomparable before treatment occurs."
+why: "Without identifying why people enter different groups, an observed outcome difference can be mistaken for an intervention effect even after temporal order and reverse causality have been addressed."
+mechanism: "State treatment and outcome, identify variables that existed before treatment, ask which changed both assignment probability and outcome risk, then improve comparability through design or justified adjustment while preserving mediators and acknowledging unmeasured or mismeasured common causes."
+example: "Observational studies associated menopausal hormone use with lower coronary risk, while the randomized WHI trial of a specific estrogen-plus-progestin regimen did not support cardiac prevention. Treatment selection and baseline health were important confounding candidates, although regimen, age, timing, and adherence also limited direct comparability."
+my_take: "Before interpreting a group difference as treatment effect, I should ask who entered each group, why, and whether those reasons already predicted the outcome."
+
+prerequisites:
+  - "META.CAUSAL.CORRELATION_CAUSATION"
+connections:
+  - "META.CAUSAL.CORRELATION_CAUSATION"
+  - "META.CAUSAL.COUNTERFACTUAL"
+  - "META.CAUSAL.SELECTION_BIAS"
+  - "META.PROBABILITY.CONDITIONAL"
+  - "CASE.WHI.HORMONE_THERAPY.1991_2002"
+questions:
+  - "What pre-treatment common causes make the treatment and comparison groups non-exchangeable, and which remain unmeasured after adjustment?"
+cases:
+  - "Menopausal hormone therapy, observational evidence, and the Women's Health Initiative"
+
+first_seen: "2026-09-16"
+last_reviewed: "2026-09-16"
+next_review: "2026-09-19"
+sources:
+  - "https://www.nejm.org/doi/abs/10.1056/NEJM199109123251102"
+  - "https://pubmed.ncbi.nlm.nih.gov/12117397/"
+  - "https://www.nejm.org/doi/full/10.1056/NEJMoa030808"
+  - "https://www.nhlbi.nih.gov/science/womens-health-initiative-whi"
+  - "https://jamanetwork.com/journals/jama/article-abstract/2818206"
+notes: "Causal Reasoning Day 2. Mediators, effect modification, and colliders are boundary distinctions only. Mastery remains candidate until the fitness-app Teach-back."

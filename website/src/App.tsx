@@ -39,10 +39,12 @@ const nodePoints: NodePoint[] = [
   { id: 'META.SYSTEMS.FEEDBACK_LOOP', x: 620, y: 366 },
   { id: 'META.SYSTEMS.INTEGRATION', x: 650, y: 290 },
   { id: 'META.CAUSAL.CORRELATION_CAUSATION', x: 516, y: 366 },
+  { id: 'META.CAUSAL.CONFOUNDER', x: 562, y: 414 },
   { id: 'BUS.MEDIA.AGGREGATOR', x: 354, y: 566 },
   { id: 'BUS.SUBSCRIPTION.BUNDLE', x: 430, y: 622 },
   { id: 'BUS.MEDIA.DISTRIBUTION.MODELS', x: 322, y: 632 },
   { id: 'BUS.MEDIA.STREAMING.TECH_FOUNDATIONS', x: 422, y: 544 },
+  { id: 'BUS.MEDIA.INDUSTRY_POWER_SHIFT', x: 474, y: 584 },
   { id: 'SYSTEM.ECON.INFLATION', x: 800, y: 565, virtual: true },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
@@ -81,7 +83,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('META.CAUSAL.CORRELATION_CAUSATION')
+  const [selectedNodeId, setSelectedNodeId] = useState('META.CAUSAL.CONFOUNDER')
   const [selectedDomainId, setSelectedDomainId] = useState('META')
 
   const selectedNode = useMemo(

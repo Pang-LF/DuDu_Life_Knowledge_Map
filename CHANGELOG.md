@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-09-16
+
+- 完成 Causal Reasoning Day 2：新增 `META.CAUSAL.CONFOUNDER`，唯一主旨为“处理前共同原因让处理组与对照组在处理发生前就不可比”
+- 新增 `CASE.WHI.HORMONE_THERAPY.1991_2002`，对比 Nurses' Health Study 观察结果与 Women's Health Initiative 随机试验，并保留配方、年龄、开始时点与依从差异
+- 解释 relative risk、hazard ratio、person-years 与每 10,000 人年绝对事件，区分精确度、有效性和 residual confounding
+- 将临床流行病学、激素治疗、随机化及预防性治疗收益风险记录为 Knowledge Expansion exposure；Counterfactual 保留到 9 月 17 日
+- 完成 Industry Apprenticeship Day 9：新增 `BUS.MEDIA.INDUSTRY_POWER_SHIFT`，用 outside option、no-deal cost、内容稀缺、客户入口与时间敏感性解释议价权
+- 新增 `CASE.CHARTER.DISNEY.DISTRIBUTION.2023_2025`，记录停播、19 个保留网络、8 个移除后回归网络及批发 DTC 权益的演化
+- 更新行业日志、Question Bank、复习日期、CURRENT_STATE 与网站地图数据
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认进入收件箱
+- 下一课锁定 2026-09-17 Counterfactual 与 Subscription Economics Foundation
+
 ## 2026-09-15
 
 - 进入 Causal Reasoning Day 1：新增 `META.CAUSAL.CORRELATION_CAUSATION`，以“相关是对称观察，因果是有方向的干预主张”为唯一主旨

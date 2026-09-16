@@ -1,0 +1,44 @@
+id: "BUS.MEDIA.INDUSTRY_POWER_SHIFT"
+name_en: "Media Industry Power Shift"
+name_zh: "媒体行业权力转移"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Media bargaining power depends on each party's outside option, no-deal cost, time sensitivity, and control of scarce content, customer access, broadband, billing, packaging, data, and discovery. DTC and broadband alter but do not eliminate bilateral dependence."
+why: "Treating DTC as complete disintermediation or broadband ownership as independence hides why programmers and distributors continue to negotiate hybrid linear, streaming, and wholesale arrangements."
+mechanism: "Compare what each party loses during a blackout, how quickly households switch, which assets are difficult to replace, and which price or non-price terms can improve each side's fallback path."
+example: "The 2023 Charter-Disney dispute restored 19 Disney networks, removed eight, added wholesale Disney+ and ESPN+ entitlements, and expanded package flexibility; a 2025 agreement later added Hulu and returned the eight networks under changed terms."
+my_take: "I should judge media power from the cost of no agreement and the substitutability of each specific asset, not from company size or the existence of an app alone."
+
+prerequisites:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.MEDIA.ESPN.BUNDLE_POWER"
+  - "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.MEDIA.DISTRIBUTION.MODELS"
+  - "BUS.MEDIA.STREAMING.TECH_FOUNDATIONS"
+connections:
+  - "BUS.MEDIA.ESPN.BUNDLE_POWER"
+  - "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.MEDIA.DISTRIBUTION.MODELS"
+  - "BUS.MEDIA.STREAMING.TECH_FOUNDATIONS"
+  - "BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION"
+  - "CASE.CHARTER.DISNEY.DISTRIBUTION.2023_2025"
+questions:
+  - "Which new fact changes the relative cost of no agreement rather than merely increasing one company's scale?"
+cases:
+  - "Charter-Disney distribution agreements, 2023-2025"
+
+first_seen: "2026-09-16"
+last_reviewed: "2026-09-16"
+next_review: "2026-09-20"
+sources:
+  - "https://ir.charter.com/static-files/b0a153b2-7f0e-4fae-b94c-a0cda2eaa27f"
+  - "https://corporate.charter.com/newsroom/the-walt-disney-company-and-charter-communications-announce-transformative-agreement-2023"
+  - "https://ir.charter.com/news-releases/news-release-details/charter-announces-fourth-quarter-and-full-year-2023-results"
+  - "https://ir.charter.com/news-releases/news-release-details/spectrum-tv-select-customers-receive-hulu-part-expanded"
+notes: "Industry Apprenticeship Day 9. Mastery remains candidate until the outside-option Teach-back."

@@ -147,3 +147,17 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Boundary: Real segment sizes and encodes vary; the 4-second arithmetic is illustrative, and a router-side speed test does not localize CDN, interconnection, Wi-Fi, device, or player constraints.
 - Status: `BUS.MEDIA.STREAMING.TECH_FOUNDATIONS` at L1 candidate; Teach-back pending.
 - Next: How broadband, DTC, platforms, devices, content scarcity, and aggregation shifted industry bargaining power.
+
+### 2026-09-16 — How DTC And Broadband Shifted, But Did Not Eliminate, Bilateral Power
+
+- Question: If Disney can distribute directly to consumers and Charter can retain households through broadband, why could neither party bypass the other without material cost in 2023?
+- Parent concept: Bargaining power comes from relative no-deal costs, outside options, switching speed, time sensitivity, and control of assets the counterparty cannot readily replace; it is not company size alone.
+- Household unit: One Spectrum family seeking ESPN during the blackout can wait, switch distributors, cancel video, buy another service, or retain Spectrum broadband; aggregated household choices turn content scarcity and customer access into leverage.
+- Disney leverage: Scarce live sports can trigger immediate dissatisfaction and video churn; linear distribution also supplies affiliate revenue and advertising reach that DTC did not instantly replace.
+- Charter leverage: Its video scale, billing, packaging, service, and large broadband relationship can redirect customers toward other packages and DTC services, but missing ESPN can still damage the video relationship.
+- Quantitative anchors: Charter expected to pay Disney more than $2.2 billion in 2023; the temporary loss produced a $61 million programming-cost benefit, which was avoided cost rather than net gain; Q4 video customers fell 248,000 versus 145,000 a year earlier, partly due to the dispute.
+- 2023 settlement: Restored 19 Disney networks including the ESPN suite, removed eight lower-priority networks, included wholesale Disney+ and ESPN+ entitlements, expanded package flexibility, and opened DTC retail access to Charter's broadband-only base.
+- 2025 aftermath: Hulu with Ads entered the package and the eight networks returned under a larger agreement, showing that asset value depends on the full set of exchanged terms rather than a permanent winner.
+- Boundary: Public documents do not reveal confidential rates, wholesale app economics, or exact churn attribution; list-price bundle value is not wholesale cost or household willingness to pay.
+- Status: `BUS.MEDIA.INDUSTRY_POWER_SHIFT` at L1 candidate; Teach-back pending.
+- Next: Subscription Economics Foundation — revenue, churn, retention, cohorts, and the correct unit of analysis.

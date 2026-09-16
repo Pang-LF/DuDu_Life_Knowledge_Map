@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 44,
+    progress: 48,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 31,
+    progress: 35,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -162,7 +162,15 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'Correlation is a symmetric observation of co-movement; causation is a directional intervention claim. Temporal order and reverse paths must be tested before treating a predictor as a lever.',
-    connections: ['META.SYSTEMS.INTEGRATION', 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004'],
+    connections: ['META.SYSTEMS.INTEGRATION', 'META.CAUSAL.CONFOUNDER', 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004'],
+  },
+  {
+    id: 'META.CAUSAL.CONFOUNDER',
+    label: 'Confounder（混杂因素）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'A pre-treatment common cause changes both treatment selection and outcome risk, so an observed group difference can mix the intervention effect with a difference that existed before treatment.',
+    connections: ['META.CAUSAL.CORRELATION_CAUSATION', 'CASE.WHI.HORMONE_THERAPY.1991_2002'],
   },
   {
     id: 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004',
@@ -171,6 +179,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'Case-control association, prospective timing, dose and cessation patterns, replication, and mechanism progressively constrained reverse-causality explanations without an unethical smoking trial.',
     connections: ['META.CAUSAL.CORRELATION_CAUSATION'],
+  },
+  {
+    id: 'CASE.WHI.HORMONE_THERAPY.1991_2002',
+    label: 'WHI Hormone Therapy（WHI 激素治疗）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'Observational treatment selection could mix baseline health with treatment effects; randomization improved comparability while formulation, age, timing, and adherence still bounded direct study comparison.',
+    connections: ['META.CAUSAL.CONFOUNDER'],
   },
   {
     id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
@@ -266,7 +282,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Receiving-subscriber fees and scarce live sports let ESPN seek broad carriage, so non-viewing households indirectly entered the bundle cost base.',
-    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.SUBSCRIPTION.BUNDLE', 'META.SYSTEMS.NONLINEARITY', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT'],
+    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.SUBSCRIPTION.BUNDLE', 'META.SYSTEMS.NONLINEARITY', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.INDUSTRY_POWER_SHIFT'],
   },
   {
     id: 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT',
@@ -298,7 +314,15 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Encoded segments move through manifests, CDNs, interconnection, ISP access, home networks, devices, buffers, and adaptive bitrate logic; plan Mbps describes only one link.',
-    connections: ['BUS.MEDIA.DISTRIBUTION.MODELS', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'CASE.NETFLIX.OPEN_CONNECT'],
+    connections: ['BUS.MEDIA.DISTRIBUTION.MODELS', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.INDUSTRY_POWER_SHIFT', 'CASE.NETFLIX.OPEN_CONNECT'],
+  },
+  {
+    id: 'BUS.MEDIA.INDUSTRY_POWER_SHIFT',
+    label: 'Industry Power Shift（行业权力转移）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Media bargaining power depends on outside options, no-deal costs, time sensitivity, and control of scarce content, customer access, broadband, billing, packaging, data, and discovery.',
+    connections: ['BUS.MEDIA.ESPN.BUNDLE_POWER', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.DISTRIBUTION.MODELS', 'BUS.MEDIA.STREAMING.TECH_FOUNDATIONS', 'CASE.CHARTER.DISNEY.DISTRIBUTION.2023_2025'],
   },
   {
     id: 'CASE.NETFLIX.OPEN_CONNECT',
@@ -307,6 +331,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'Netflix places encoded content near or inside ISP networks to reduce repeated long-haul delivery while preserving separate video-service and broadband relationships.',
     connections: ['BUS.MEDIA.STREAMING.TECH_FOUNDATIONS'],
+  },
+  {
+    id: 'CASE.CHARTER.DISNEY.DISTRIBUTION.2023_2025',
+    label: 'Charter–Disney 2023–25（分发协议）',
+    domain: 'BUSINESS',
+    mastery: 'Case studied',
+    summary: 'A blackout made each side\'s fallback costs visible; successive agreements traded core networks, package flexibility, wholesale streaming entitlements, broadband distribution, and advertising reach.',
+    connections: ['BUS.MEDIA.INDUSTRY_POWER_SHIFT'],
   },
   {
     id: 'CASE.DISNEY_PLUS.DTC_2019_2025',
@@ -319,12 +351,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-09-15',
-  title: 'Causal Reasoning Day 1（因果推理第一课）',
-  question: '没有让人随机吸烟，科学家怎么知道吸烟会导致肺癌？',
-  reading: '45-60 min：从病例对照走到 50 年队列，区分相关、因果与反向因果。',
-  discussion: '20-30 min：迁移到产品留存，并沿一段 4 秒视频诊断 Streaming 交付。',
-  next: '2026-09-16：Confounder（混杂因素）与 Industry Power Shift（行业权力转移）。',
+  date: '2026-09-16',
+  title: 'Causal Reasoning Day 2（因果推理第二课）',
+  question: '一种药为什么会在观察中“保护心脏”，在随机试验中却没有？',
+  reading: '45-60 min：从处方选择走到 WHI 随机试验，理解处理前共同原因怎样制造混杂。',
+  discussion: '20-30 min：迁移到产品实验，并用 Charter–Disney 谈判诊断真实议价权。',
+  next: '2026-09-17：Counterfactual（反事实）与 Subscription Economics Foundation（订阅经济基础）。',
 }
 
 export const monthlyTrack = [
