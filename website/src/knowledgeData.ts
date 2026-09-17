@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 48,
+    progress: 52,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 35,
+    progress: 39,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -170,7 +170,15 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'A pre-treatment common cause changes both treatment selection and outcome risk, so an observed group difference can mix the intervention effect with a difference that existed before treatment.',
-    connections: ['META.CAUSAL.CORRELATION_CAUSATION', 'CASE.WHI.HORMONE_THERAPY.1991_2002'],
+    connections: ['META.CAUSAL.CORRELATION_CAUSATION', 'META.CAUSAL.COUNTERFACTUAL', 'CASE.WHI.HORMONE_THERAPY.1991_2002'],
+  },
+  {
+    id: 'META.CAUSAL.COUNTERFACTUAL',
+    label: 'Counterfactual（反事实）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'The causal target contrasts two potential outcomes for the same unit at the same time, although only one is observable; a justified comparison group estimates the missing outcome on average.',
+    connections: ['META.CAUSAL.CORRELATION_CAUSATION', 'META.CAUSAL.CONFOUNDER', 'CASE.OREGON.MEDICAID.LOTTERY.2008_2013'],
   },
   {
     id: 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004',
@@ -187,6 +195,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'Observational treatment selection could mix baseline health with treatment effects; randomization improved comparability while formulation, age, timing, and adherence still bounded direct study comparison.',
     connections: ['META.CAUSAL.CONFOUNDER'],
+  },
+  {
+    id: 'CASE.OREGON.MEDICAID.LOTTERY.2008_2013',
+    label: 'Oregon Medicaid Lottery（医疗补助抽签）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'A random opportunity to apply created a credible counterfactual for the offer effect, while actual coverage effects required the lottery-induced take-up difference and additional assumptions.',
+    connections: ['META.CAUSAL.COUNTERFACTUAL'],
   },
   {
     id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
@@ -322,7 +338,15 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Media bargaining power depends on outside options, no-deal costs, time sensitivity, and control of scarce content, customer access, broadband, billing, packaging, data, and discovery.',
-    connections: ['BUS.MEDIA.ESPN.BUNDLE_POWER', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.DISTRIBUTION.MODELS', 'BUS.MEDIA.STREAMING.TECH_FOUNDATIONS', 'CASE.CHARTER.DISNEY.DISTRIBUTION.2023_2025'],
+    connections: ['BUS.MEDIA.ESPN.BUNDLE_POWER', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.DISTRIBUTION.MODELS', 'BUS.MEDIA.STREAMING.TECH_FOUNDATIONS', 'BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'CASE.CHARTER.DISNEY.DISTRIBUTION.2023_2025'],
+  },
+  {
+    id: 'BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION',
+    label: 'Subscription Economics（订阅经济基础）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'A subscription is a continuing payer relationship: additions and cancellations change the customer stock, while customer-months, realized prices and plan mix generate period revenue.',
+    connections: ['BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.INDUSTRY_POWER_SHIFT', 'CASE.NETFLIX.PRICING.2011'],
   },
   {
     id: 'CASE.NETFLIX.OPEN_CONNECT',
@@ -348,15 +372,23 @@ export const nodes: GraphNode[] = [
     summary: 'Disney gained direct product and customer capabilities while taking on technology, marketing, service, content, and churn; partner billing still divided parts of the relationship.',
     connections: ['BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP'],
   },
+  {
+    id: 'CASE.NETFLIX.PRICING.2011',
+    label: 'Netflix Pricing 2011（订阅关系冲击）',
+    domain: 'BUSINESS',
+    mastery: 'Case studied',
+    summary: 'Gross additions remained large, but cancellations were larger; customer-month timing, price and plan mix allowed current revenue growth even as the ending subscriber stock declined.',
+    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-09-16',
-  title: 'Causal Reasoning Day 2（因果推理第二课）',
-  question: '一种药为什么会在观察中“保护心脏”，在随机试验中却没有？',
-  reading: '45-60 min：从处方选择走到 WHI 随机试验，理解处理前共同原因怎样制造混杂。',
-  discussion: '20-30 min：迁移到产品实验，并用 Charter–Disney 谈判诊断真实议价权。',
-  next: '2026-09-17：Counterfactual（反事实）与 Subscription Economics Foundation（订阅经济基础）。',
+  date: '2026-09-17',
+  title: 'Causal Reasoning Day 3（因果推理第三课）',
+  question: '同一个人的另一条路径永远看不见，我们凭什么说某个改变造成了结果？',
+  reading: '45-60 min：跟随 Oregon Medicaid lottery，从两个潜在结果走到可信的群体平均反事实。',
+  discussion: '20-30 min：设计学习 App 的随机邀请，并拆解流媒体订阅的 stock、flow 与 customer-month revenue。',
+  next: '2026-09-18：Selection Bias / Survivorship Bias 与 Churn & Retention by Cohort。',
 }
 
 export const monthlyTrack = [

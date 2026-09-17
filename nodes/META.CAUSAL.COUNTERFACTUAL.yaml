@@ -1,0 +1,37 @@
+id: "META.CAUSAL.COUNTERFACTUAL"
+name_en: "Counterfactual"
+name_zh: "反事实"
+domain: "META"
+module: "Causal Reasoning（因果推理）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "A counterfactual is the unobserved outcome for the same unit, at the same time, under an alternative treatment state. An individual causal effect contrasts two potential outcomes, although only one can be observed."
+why: "Every causal claim requires a missing comparison. Naming the counterfactual prevents an arbitrary observed group, past value, or convenient story from being treated as the outcome that would have occurred without the intervention."
+mechanism: "Define the unit, treatment, outcome, and time; state Y(1) and Y(0); identify which is observed; then justify how a comparison group or design can estimate the missing outcome on average, keeping the estimand and assumptions explicit."
+example: "Oregon's 2008 Medicaid lottery randomly assigned an opportunity to apply, creating a credible average counterfactual for the effect of that opportunity. Estimating actual coverage effects required using the lottery-induced 24.1-percentage-point coverage difference and additional assumptions."
+my_take: "Before trusting a causal difference, I should state the missing outcome in one sentence and explain exactly why the comparison group can stand in for it."
+
+prerequisites:
+  - "META.CAUSAL.CORRELATION_CAUSATION"
+  - "META.CAUSAL.CONFOUNDER"
+connections:
+  - "META.CAUSAL.CORRELATION_CAUSATION"
+  - "META.CAUSAL.CONFOUNDER"
+  - "META.CAUSAL.SELECTION_BIAS"
+  - "META.PROBABILITY.CONDITIONAL"
+  - "CASE.OREGON.MEDICAID.LOTTERY.2008_2013"
+questions:
+  - "What is the unobserved potential outcome, and why is the proposed comparison group a credible substitute for it?"
+cases:
+  - "Oregon Medicaid lottery, 2008-2013"
+
+first_seen: "2026-09-17"
+last_reviewed: "2026-09-17"
+next_review: "2026-09-20"
+sources:
+  - "https://www.nber.org/papers/w17190"
+  - "https://www.nejm.org/doi/full/10.1056/NEJMsa1212321"
+  - "https://www.nber.org/oregon"
+notes: "Causal Reasoning Day 3. ITT, instrumental variables, and LATE are supporting distinctions, not separate mastery targets. Mastery remains candidate until the learning-app Teach-back."

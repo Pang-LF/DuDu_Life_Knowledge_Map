@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-09-17
+
+- 完成 Causal Reasoning Day 3：新增 `META.CAUSAL.COUNTERFACTUAL`，唯一主旨为“因果效应比较同一单位两种互斥处理状态的潜在结果，但现实只能观察其中一个”
+- 新增 `CASE.OREGON.MEDICAID.LOTTERY.2008_2013`，区分随机申请机会、实际参保、ITT 与带额外假设的 coverage effect
+- 解释 89,824 人等待名单、12,229 人随访样本、24.1 个百分点 coverage 差、抑郁筛查和灾难性支出的分母与证据边界
+- 将公共医疗保险、随机政策评估、ITT 与工具变量记录为 Knowledge Expansion exposure；Selection Bias 保留到 9 月 18 日
+- 完成 Industry Apprenticeship Day 10：新增 `BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION`，先定义 Subscription Business，再拆解 customer-month、stock、flow、price、plan mix 与 cohort
+- 新增 `CASE.NETFLIX.PRICING.2011`，用 2011 年 Q3 的 471.4 万新增、551.9 万取消、净减 80.5 万和 7.99 亿美元收入说明订户存量与当期收入的时间差
+- 更新行业日志、Question Bank、CURRENT_STATE 与网站地图数据
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认进入收件箱
+- 下一课锁定 2026-09-18 Selection Bias / Survivorship Bias 与 Churn & Retention by Cohort
+
 ## 2026-09-16
 
 - 完成 Causal Reasoning Day 2：新增 `META.CAUSAL.CONFOUNDER`，唯一主旨为“处理前共同原因让处理组与对照组在处理发生前就不可比”

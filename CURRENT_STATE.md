@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-16
+Last updated: 2026-09-17
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-16
 
 ## Next Immediate Focus（下一步）
 
-2026-09-17：Causal Reasoning Day 3 — Counterfactual（反事实），回答“如果没有发生 X，世界本来会怎样，以及我们怎样为看不见的结果寻找可信替身？”；Industry Apprenticeship 进入 Subscription Economics Foundation（订阅经济基础）。
+2026-09-18：Causal Reasoning Day 4 — Selection Bias & Survivorship Bias（选择偏差与幸存者偏差），回答“进入数据的人是怎样被结果、暴露或共同原因共同筛选出来的？”；Industry Apprenticeship 进入 Churn & Retention by Cohort（按队列理解流失与留存）。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-16
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-17：完成 Causal Reasoning Day 3 — Counterfactual（反事实）。主课跟随一位 Oregon Medicaid 等待名单上的低收入无保险成年人，定义同一单位在同一时点的 `Y(1)` 与 `Y(0)`，并用 2008 年 lottery 解释现实无法观察个人两条路径、随机比较只能估计群体平均反事实。89,824 人等待名单、约 3 万个随机申请机会、12,229 人面对面研究样本和 24.1 个百分点 coverage 差均按 treatment assignment、实际 enrollment 与 estimand 分开解释；抑郁筛查、灾难性支出和身体指标的不同结果用于说明“未显著”不等于精确为零。公共医疗保险、ITT 和工具变量只记 Knowledge Expansion exposure。Industry Apprenticeship Day 10 先定义 Subscription Business，再以 Netflix 2011 年 Q3 的 2,459.4 万期初订户、471.4 万新增、551.9 万取消、2,378.9 万期末订户与 7.99 亿美元收入，建立 customer-month、stock、flow、price、plan mix 与 cohort 的骨架。`META.CAUSAL.COUNTERFACTUAL` 为 L2 candidate，`BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION` 为 L1 candidate，等待 Teach-back。
 
 2026-09-16：完成 Causal Reasoning Day 2 — Confounder（混杂因素）。主课跟随一位绝经后女性的处方决定，对比 Nurses' Health Study 的观察性保护关联与 Women's Health Initiative 对特定雌激素加孕激素方案的随机试验，重建“处理前共同原因同时影响分组与结果，使组间差异混入原有差异”。48,470 名女性、337,854 人年、观察性相对风险 0.56、WHI 16,608 人、冠心病风险率比 1.24 与每 10,000 人年 19 个总体指标净事件均按分母和含义解释；健康使用者效应是重要候选，但配方、年龄、开始时点与依从差异保留为证据边界。临床流行病学与女性健康只记 Knowledge Expansion exposure。Industry Apprenticeship Day 9 以 2023–2025 Charter–Disney 协议解释议价权取决于 outside option、无协议成本、内容稀缺与客户入口，而非公司大小；`META.CAUSAL.CONFOUNDER` 为 L2 candidate，`BUS.MEDIA.INDUSTRY_POWER_SHIFT` 为 L1 candidate，等待 Teach-back。
 
