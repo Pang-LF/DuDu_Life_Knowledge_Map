@@ -175,3 +175,18 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Boundary: Aggregate filings cannot isolate the causal contribution of price, communication, and Qwikster; churn definitions vary, and LTV is deferred.
 - Status: `BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION` at L1 candidate; Teach-back pending.
 - Next: Churn and Retention by Cohort — how relationship exit rates reshape the future payer base.
+
+### 2026-09-18 — Churn Must Be Defined And Read By Cohort
+
+- Question: What does Netflix's reported 6.3% churn measure, and why can it not identify which customer relationships deteriorated?
+- Parent concept: A subscription is a continuing customer-period relationship; churn measures defined exits, while retention follows the same acquisition cohort over relationship age.
+- Netflix definition: Quarterly cancellations divided by beginning subscribers plus gross additions, then divided by three months.
+- Q3 2011 arithmetic: 5.519 million / (24.594 million + 4.714 million) / 3 = 6.28%, reported as 6.3%.
+- Comparison: Q3 churn rose from 4.2% in Q2 and 3.8% a year earlier; the 2.5-point year-over-year increase was about 65.8% relative.
+- Compounding intuition: A hypothetical cohort facing a stable 6.3% monthly exit hazard would retain about 45.8% after 12 months, versus 62.8% at 3.8%; Netflix's aggregate metric is not itself that forecast.
+- Cohort method: Group customers by acquisition month, plan, price, channel, and intervention, then track retention by months since start and exit hazard among those active at each month.
+- Exit taxonomy: Separate voluntary cancellation, involuntary payment failure, pause, downgrade, plan migration, and reactivation or winback.
+- Selection connection: Aggregate churn can improve after high-risk customers have already exited, so survivors may look healthier without recovery of the original cohort.
+- Boundary: Public filings do not reveal household-level cohorts and cannot isolate price, Qwikster, communication, plan migration, or changing acquisition mix.
+- Status: `BUS.SUBSCRIPTION.CHURN_RETENTION` at L1 candidate; Teach-back pending.
+- Next: CAC and Payback Period — how many retained customer-months are needed to recover acquisition spending.

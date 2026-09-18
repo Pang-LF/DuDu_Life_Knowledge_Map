@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 52,
+    progress: 56,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 39,
+    progress: 43,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -178,7 +178,15 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'The causal target contrasts two potential outcomes for the same unit at the same time, although only one is observable; a justified comparison group estimates the missing outcome on average.',
-    connections: ['META.CAUSAL.CORRELATION_CAUSATION', 'META.CAUSAL.CONFOUNDER', 'CASE.OREGON.MEDICAID.LOTTERY.2008_2013'],
+    connections: ['META.CAUSAL.CORRELATION_CAUSATION', 'META.CAUSAL.CONFOUNDER', 'META.CAUSAL.SELECTION_BIAS', 'CASE.OREGON.MEDICAID.LOTTERY.2008_2013'],
+  },
+  {
+    id: 'META.CAUSAL.SELECTION_BIAS',
+    label: 'Selection Bias（选择偏差）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'Observed data become systematically unrepresentative when entry or retention depends on causes or outcomes under study; survivorship bias is the special case requiring persistence or visible success.',
+    connections: ['META.CAUSAL.CONFOUNDER', 'META.CAUSAL.COUNTERFACTUAL', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'CASE.WALD.AIRCRAFT.SURVIVORSHIP.1943'],
   },
   {
     id: 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004',
@@ -203,6 +211,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'A random opportunity to apply created a credible counterfactual for the offer effect, while actual coverage effects required the lottery-induced take-up difference and additional assumptions.',
     connections: ['META.CAUSAL.COUNTERFACTUAL'],
+  },
+  {
+    id: 'CASE.WALD.AIRCRAFT.SURVIVORSHIP.1943',
+    label: 'Wald Aircraft Survivorship（返航飞机选择）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'Returning-plane damage is conditional on survival; Wald modeled location-specific vulnerability from survivor-selected data instead of ranking armor by visible hit counts.',
+    connections: ['META.CAUSAL.SELECTION_BIAS'],
   },
   {
     id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
@@ -346,7 +362,15 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'A subscription is a continuing payer relationship: additions and cancellations change the customer stock, while customer-months, realized prices and plan mix generate period revenue.',
-    connections: ['BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.INDUSTRY_POWER_SHIFT', 'CASE.NETFLIX.PRICING.2011'],
+    connections: ['BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.INDUSTRY_POWER_SHIFT', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'CASE.NETFLIX.PRICING.2011'],
+  },
+  {
+    id: 'BUS.SUBSCRIPTION.CHURN_RETENTION',
+    label: 'Churn & Retention（流失与留存）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Churn requires an explicit exit, denominator and period; cohort retention follows the same relationships through tenure so changing acquisition, plan and exit mix cannot hide inside one aggregate rate.',
+    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'META.CAUSAL.SELECTION_BIAS', 'CASE.NETFLIX.PRICING.2011'],
   },
   {
     id: 'CASE.NETFLIX.OPEN_CONNECT',
@@ -377,18 +401,18 @@ export const nodes: GraphNode[] = [
     label: 'Netflix Pricing 2011（订阅关系冲击）',
     domain: 'BUSINESS',
     mastery: 'Case studied',
-    summary: 'Gross additions remained large, but cancellations were larger; customer-month timing, price and plan mix allowed current revenue growth even as the ending subscriber stock declined.',
-    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION'],
+    summary: 'Gross additions remained large, but cancellations were larger; reported churn rose to 6.3%, while customer-month timing, price, plan and cohort mix shaped revenue and the ending subscriber stock.',
+    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CHURN_RETENTION'],
   },
 ]
 
 export const todayBrief = {
-  date: '2026-09-17',
-  title: 'Causal Reasoning Day 3（因果推理第三课）',
-  question: '同一个人的另一条路径永远看不见，我们凭什么说某个改变造成了结果？',
-  reading: '45-60 min：跟随 Oregon Medicaid lottery，从两个潜在结果走到可信的群体平均反事实。',
-  discussion: '20-30 min：设计学习 App 的随机邀请，并拆解流媒体订阅的 stock、flow 与 customer-month revenue。',
-  next: '2026-09-18：Selection Bias / Survivorship Bias 与 Churn & Retention by Cohort。',
+  date: '2026-09-18',
+  title: 'Causal Reasoning Day 4（因果推理第四课）',
+  question: '返航飞机的弹孔究竟在告诉我们哪里危险，还是哪里受伤以后仍能被看见？',
+  reading: '45-60 min：跟随一发命中通过返航选择门，理解 Selection Bias 与 Survivorship Bias。',
+  discussion: '20-30 min：诊断活跃用户调查，并用 cohort 区分真实 retention 改善与客户构成变化。',
+  next: '2026-09-19：Causal Reasoning Integration 与 CAC / Payback Period。',
 }
 
 export const monthlyTrack = [

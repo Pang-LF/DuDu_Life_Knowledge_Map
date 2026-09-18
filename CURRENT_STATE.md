@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-17
+Last updated: 2026-09-18
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-17
 
 ## Next Immediate Focus（下一步）
 
-2026-09-18：Causal Reasoning Day 4 — Selection Bias & Survivorship Bias（选择偏差与幸存者偏差），回答“进入数据的人是怎样被结果、暴露或共同原因共同筛选出来的？”；Industry Apprenticeship 进入 Churn & Retention by Cohort（按队列理解流失与留存）。
+2026-09-19：Causal Reasoning Day 5 — Integration（因果推理整合），把相关方向、混杂、反事实与选择门用于同一个陌生问题；Industry Apprenticeship 进入 CAC & Payback Period（获客成本与回收期）。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-17
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-18：完成 Causal Reasoning Day 4 — Selection Bias（选择偏差），并把 Survivorship Bias（幸存者偏差）作为“必须幸存、持续或成功可见才能进入数据”的特殊形式。主课跟随一发命中怎样进入返航飞机损伤表，以 Abraham Wald 1943 年飞机脆弱度备忘录重建 Target Population、Selection Gate 与 `P(Hit Location | Returned)` / `P(Downed | Hit Location)` 的方向差异。报告的 1,000 架派出、634 架攻击、32 架损失和 399 次返航命中均明确为 hypothetical example；发动机只占 11.3% 可见命中却估计 17.9% 脆弱度，其余部位占 59.6% 可见命中却估计 3.8%，用于解释选择门怎样反转表面排序。网络流传弹孔图与戏剧化对话保留为历史边界。Industry Apprenticeship Day 11 重算 Netflix 2011 Q3 的 6.3% churn：`5.519 / (24.594 + 4.714) / 3`，并区分 aggregate churn、cohort retention、monthly hazard、自愿 / 非自愿流失和回流。`META.CAUSAL.SELECTION_BIAS` 为 L2 candidate，`BUS.SUBSCRIPTION.CHURN_RETENTION` 为 L1 candidate，等待 Teach-back。
 
 2026-09-17：完成 Causal Reasoning Day 3 — Counterfactual（反事实）。主课跟随一位 Oregon Medicaid 等待名单上的低收入无保险成年人，定义同一单位在同一时点的 `Y(1)` 与 `Y(0)`，并用 2008 年 lottery 解释现实无法观察个人两条路径、随机比较只能估计群体平均反事实。89,824 人等待名单、约 3 万个随机申请机会、12,229 人面对面研究样本和 24.1 个百分点 coverage 差均按 treatment assignment、实际 enrollment 与 estimand 分开解释；抑郁筛查、灾难性支出和身体指标的不同结果用于说明“未显著”不等于精确为零。公共医疗保险、ITT 和工具变量只记 Knowledge Expansion exposure。Industry Apprenticeship Day 10 先定义 Subscription Business，再以 Netflix 2011 年 Q3 的 2,459.4 万期初订户、471.4 万新增、551.9 万取消、2,378.9 万期末订户与 7.99 亿美元收入，建立 customer-month、stock、flow、price、plan mix 与 cohort 的骨架。`META.CAUSAL.COUNTERFACTUAL` 为 L2 candidate，`BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION` 为 L1 candidate，等待 Teach-back。
 

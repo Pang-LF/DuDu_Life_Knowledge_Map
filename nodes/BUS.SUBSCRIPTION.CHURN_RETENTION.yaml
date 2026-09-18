@@ -1,0 +1,35 @@
+id: "BUS.SUBSCRIPTION.CHURN_RETENTION"
+name_en: "Churn and Retention by Cohort"
+name_zh: "按队列理解流失与留存"
+domain: "BUSINESS"
+module: "Subscription Economics（订阅经济）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Churn is a defined rate of relationship exits over a stated denominator and time window. Retention follows the same acquisition cohort across relationship age, while a period's aggregate churn mixes cohorts, plans, channels, prices, and exit mechanisms."
+why: "An improving aggregate churn metric can reflect better customer experience, fewer high-risk new customers, prior exit of price-sensitive customers, or a changing mix. Without cohorts, a team cannot tell which relationship or operational lever changed."
+mechanism: "Specify logo or revenue unit, cancellation event, denominator, and period; group customers by acquisition time and relevant offer; compute retention by months since start and monthly exit hazard among those active at each month; separate voluntary, involuntary, migration, pause, and reactivation paths."
+example: "Netflix defined Q3 2011 monthly churn as 5.519 million cancellations divided by 24.594 million beginning subscribers plus 4.714 million gross additions, then divided by three, yielding 6.3%. This aggregate rose from 4.2% in Q2 and 3.8% a year earlier but did not reveal which tenure or plan cohort drove the change."
+my_take: "I should not ask only whether churn moved; I should ask which cohort, at what relationship age, under which price and plan, left through which mechanism."
+
+prerequisites:
+  - "BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION"
+connections:
+  - "BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION"
+  - "BUS.SUBSCRIPTION.CAC_PAYBACK"
+  - "META.CAUSAL.SELECTION_BIAS"
+  - "CASE.NETFLIX.PRICING.2011"
+questions:
+  - "Did aggregate churn change because customer-level retention improved, or because the mix of acquisition cohorts, plans, prices, and exit types changed?"
+cases:
+  - "Netflix pricing, churn and plan migration, 2011"
+
+first_seen: "2026-09-18"
+last_reviewed: "2026-09-18"
+next_review: "2026-09-21"
+sources:
+  - "https://www.sec.gov/Archives/edgar/data/1065280/000119312511278716/d246709dex991.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1065280/000119312511284366/d222257d10q.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1065280/000119312512053009/d260328d10k.htm"
+notes: "Industry apprenticeship continuation. Aggregate churn, cohort retention, monthly hazard, voluntary and involuntary exits are introduced; CAC, payback and LTV are deferred. Mastery remains candidate until Teach-back."

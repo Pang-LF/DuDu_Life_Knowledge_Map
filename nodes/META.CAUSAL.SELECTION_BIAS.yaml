@@ -1,0 +1,38 @@
+id: "META.CAUSAL.SELECTION_BIAS"
+name_en: "Selection Bias"
+name_zh: "选择偏差"
+domain: "META"
+module: "Causal Reasoning（因果推理）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "Selection bias arises when entry into or retention in observed data depends on causes or outcomes under study, making the observed relationship systematically different from the relationship in the target population. Survivorship bias is the special case in which observation requires survival, persistence, or visible success."
+why: "A large, precisely measured sample can still answer the wrong population question when the observation gate removes units in a direction related to the variables being compared."
+mechanism: "Define the target population before inspecting results, state the selection indicator and every gate required to enter analysis, identify how study variables change selection probability, then recover denominators, follow exits, compare selected and unselected units, or use explicit weighting and sensitivity assumptions."
+example: "Wald's aircraft-survivability work modeled vulnerability from damage on returning planes. In his hypothetical example, engines accounted for only 11.3% of visible hits but had an estimated 17.9% vulnerability per hit, while the remainder had 59.6% of visible hits but only 3.8% estimated vulnerability."
+my_take: "Before interpreting a dataset, I should ask who had to pass which gate to become a row, and whether those missing outside the gate would change the relationship I see."
+
+prerequisites:
+  - "META.CAUSAL.CORRELATION_CAUSATION"
+  - "META.CAUSAL.CONFOUNDER"
+  - "META.CAUSAL.COUNTERFACTUAL"
+connections:
+  - "META.CAUSAL.CONFOUNDER"
+  - "META.CAUSAL.COUNTERFACTUAL"
+  - "META.CAUSAL.INTEGRATION"
+  - "BUS.SUBSCRIPTION.CHURN_RETENTION"
+  - "CASE.WALD.AIRCRAFT.SURVIVORSHIP.1943"
+questions:
+  - "What is the target population, what gate determines S=1, and how do the variables under study change the probability of passing that gate?"
+cases:
+  - "Abraham Wald's aircraft survivability memoranda, 1943"
+
+first_seen: "2026-09-18"
+last_reviewed: "2026-09-18"
+next_review: "2026-09-21"
+sources:
+  - "https://www.cna.org/reports/1980/0204320000.pdf"
+  - "https://doi.org/10.1080/01621459.1984.10478038"
+  - "https://www.ams.org/publicoutreach/feature-column/fc-2016-06"
+notes: "Causal Reasoning Day 4. Survivorship bias is treated as a subtype, not a parallel mastery node. Historical folklore is separated from the primary report. Mastery remains candidate until the fitness-app Teach-back."

@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 2026-09-18
+
+- 完成 Causal Reasoning Day 4：新增 `META.CAUSAL.SELECTION_BIAS`，唯一主旨为“进入或留在数据里的概率若由研究中的原因或结果决定，观察关系会系统偏离目标总体”
+- 将 Survivorship Bias 记录为 Selection Bias 的特殊机制，不新建平级 mastery 节点
+- 新增 `CASE.WALD.AIRCRAFT.SURVIVORSHIP.1943`，用 Wald 原始报告的假设数据区分返航命中分布与部位毁伤脆弱度
+- 明确标注 1,000 架派出、634 架攻击、32 架损失、399 次命中和 vulnerability estimates 均属于方法演示，并保留网络传奇的历史证据边界
+- 将飞机生存性、装甲权衡与 Operations Research 记录为 Knowledge Expansion exposure；Causal Integration 保留到 9 月 19 日
+- 完成 Industry Apprenticeship Day 11：新增 `BUS.SUBSCRIPTION.CHURN_RETENTION`，重算 Netflix 6.3% churn 并区分 aggregate、cohort retention、hazard 与 exit type
+- 扩展 `CASE.NETFLIX.PRICING.2011`，记录 churn 公式、plan mix、Q4 回落及 cohort composition 边界
+- 更新行业日志、Question Bank、CURRENT_STATE 与网站地图数据
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认进入收件箱
+- 下一课锁定 2026-09-19 Causal Reasoning Integration 与 CAC / Payback Period
+
 ## 2026-09-17
 
 - 完成 Causal Reasoning Day 3：新增 `META.CAUSAL.COUNTERFACTUAL`，唯一主旨为“因果效应比较同一单位两种互斥处理状态的潜在结果，但现实只能观察其中一个”

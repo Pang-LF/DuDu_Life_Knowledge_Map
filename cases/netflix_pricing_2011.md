@@ -2,7 +2,7 @@
 
 - Case ID: `CASE.NETFLIX.PRICING.2011`
 - Domain: BUSINESS / Subscription Economics
-- Primary concept: Subscription Economics Foundation
+- Primary concepts: Subscription Economics Foundation; Churn and Retention by Cohort
 - Status: Studied; Teach-back pending
 
 ## Puzzle
@@ -38,7 +38,16 @@ Ending stock equals beginning stock plus additions minus cancellations under the
 
 The public filing gives aggregate subscriber flows and management's interpretation, not household-level causal effects of price, communication, and Qwikster separately. The case demonstrates accounting relationships and timing; it does not prove every price increase causes churn or that subscriber decline always reduces current-quarter revenue.
 
+## Churn And Cohort Extension
+
+Netflix defined Q3 2011 monthly churn as quarterly cancellations divided by beginning subscribers plus gross additions, then divided by three months. The published numbers reproduce 6.3%: 5.519 / (24.594 + 4.714) / 3 = 6.28%. This rose from 4.2% in Q2 2011 and 3.8% in Q3 2010.
+
+The aggregate measure mixes old hybrid customers, new streaming-only customers, plan migrations, free-to-paid transitions, and different cancellation mechanisms. Netflix reported that 73.6% of 2011 domestic gross new unique subscribers chose streaming-only. A customer-level cohort table would be required to distinguish a true retention improvement from a changing acquisition and plan mix. Q4 churn fell to 5.3%, but the public aggregate does not identify how much reflected recovery, the earlier exit of price-sensitive customers, or new-cohort composition.
+
 ## Sources
 
 - https://s22.q4cdn.com/959853165/files/doc_news/archive/8ab8f6b7-1ed7-4c0b-9539-5ebb4e212e2d.pdf
 - https://www.sec.gov/Archives/edgar/data/1065280/000119312511278716/d246709dex991.htm
+- https://www.sec.gov/Archives/edgar/data/1065280/000119312511284366/d222257d10q.htm
+- https://www.sec.gov/Archives/edgar/data/1065280/000119312512053009/d260328d10k.htm
+- https://s22.q4cdn.com/959853165/files/doc_financials/quarterly_reports/2011/q4/Investor-Letter-Q4-2011.pdf
