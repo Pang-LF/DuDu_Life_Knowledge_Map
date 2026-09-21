@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-09-19
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件进入收件箱
+- 完成 Causal Reasoning Day 5：新增 `META.CAUSAL.INTEGRATION`，用“干预与方向 → 反事实 → 分组 → 观察门 → 识别边界”整合四个前置节点
+- 新增 `CASE.SALK.POLIO_VACCINE_FIELD_TRIAL.1954`，比较随机疫苗组 16 / 100,000、安慰剂组 55 / 100,000 与未注射组 36 / 100,000
+- 用同意门后的随机分配解释为什么约 71% 的安慰剂比较比约 56% 的未参与者比较更可信，并区分 randomization、blinding、internal validity 与 generalization
+- 将临床试验设计、脊髓灰质炎史、病例分类与外部有效性记录为 Knowledge Expansion exposure；Probability Foundation 保留到 9 月 20 日
+- 完成 Industry Apprenticeship：新增 `BUS.SUBSCRIPTION.CAC_PAYBACK` 与 `CASE.DIRECTV.SAC_PAYBACK.2014`
+- 重建 DIRECTV 2014 年 33.60 亿美元 acquisition cost / 380.4 万 gross adds = 883 美元 SAC，并区分 8.3 个月收入法、24.2 个月 pre-churn proxy 与约 30 个月假设 retention-adjusted proxy
+- 更新四个因果前置节点的 review、订阅经济节点、行业日志、Question Bank、CURRENT_STATE 与网站地图数据
+- 下一课锁定 2026-09-20 Probability Foundation 与 LTV / Unit Economics
+
 ## 2026-09-18
 
 - 完成 Causal Reasoning Day 4：新增 `META.CAUSAL.SELECTION_BIAS`，唯一主旨为“进入或留在数据里的概率若由研究中的原因或结果决定，观察关系会系统偏离目标总体”

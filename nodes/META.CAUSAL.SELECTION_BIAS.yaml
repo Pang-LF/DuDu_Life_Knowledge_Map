@@ -29,10 +29,10 @@ cases:
   - "Abraham Wald's aircraft survivability memoranda, 1943"
 
 first_seen: "2026-09-18"
-last_reviewed: "2026-09-18"
-next_review: "2026-09-21"
+last_reviewed: "2026-09-19"
+next_review: "2026-09-22"
 sources:
   - "https://www.cna.org/reports/1980/0204320000.pdf"
   - "https://doi.org/10.1080/01621459.1984.10478038"
   - "https://www.ams.org/publicoutreach/feature-column/fc-2016-06"
-notes: "Causal Reasoning Day 4. Survivorship bias is treated as a subtype, not a parallel mastery node. Historical folklore is separated from the primary report. Mastery remains candidate until the fitness-app Teach-back."
+notes: "Causal Reasoning Day 4. Reviewed on 2026-09-19 through the parental-consent gate and the difference between internal validity among participants and generalization beyond them. Mastery remains candidate until Teach-back."

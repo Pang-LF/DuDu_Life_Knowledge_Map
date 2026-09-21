@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-18
+Last updated: 2026-09-19
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-18
 
 ## Next Immediate Focus（下一步）
 
-2026-09-19：Causal Reasoning Day 5 — Integration（因果推理整合），把相关方向、混杂、反事实与选择门用于同一个陌生问题；Industry Apprenticeship 进入 CAC & Payback Period（获客成本与回收期）。
+2026-09-20：Probability Day 1 — Probability Foundation（概率基础），建立“不确定性的可比较表达”；Industry Apprenticeship 进入 LTV & Unit Economics（客户终身价值与单位经济模型）的前置骨架。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-18
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-19：完成 Causal Reasoning Day 5 — Integration（因果推理整合）。主课跟随 1954 年 Salk 脊髓灰质炎疫苗现场试验中的一名儿童，沿地区、学校、父母同意、随机分配、症状报告和病例分类逐层审计比较。随机安慰剂区的疫苗组为 200,745 人、33 例麻痹型病例、16 / 100,000；安慰剂组为 201,229 人、110 例、55 / 100,000，对应约 71% 相对效力；同区未注射者却只有 36 / 100,000，说明几十万样本仍无法修复 consent selection。Randomization、blinding、internal validity 与 generalization 被按各自阻断的偏差路径分开。Industry Apprenticeship 用 DIRECTV 2014 年 33.60 亿美元 acquisition cost、380.4 万 gross adds 与 883 美元 SAC 说明收入法把 payback 错算为 8.3 个月；34.1% Pre-SAC Margin 只能给出约 24.2 个月的 segment-average proxy，加入 1.52% 假设固定 churn 后约 30 个月，均明确不是公司官方 cohort payback。`META.CAUSAL.INTEGRATION` 为 L2 candidate，四个前置因果节点完成陌生案例复习；`BUS.SUBSCRIPTION.CAC_PAYBACK` 为 L1 candidate，均等待 Teach-back。
 
 2026-09-18：完成 Causal Reasoning Day 4 — Selection Bias（选择偏差），并把 Survivorship Bias（幸存者偏差）作为“必须幸存、持续或成功可见才能进入数据”的特殊形式。主课跟随一发命中怎样进入返航飞机损伤表，以 Abraham Wald 1943 年飞机脆弱度备忘录重建 Target Population、Selection Gate 与 `P(Hit Location | Returned)` / `P(Downed | Hit Location)` 的方向差异。报告的 1,000 架派出、634 架攻击、32 架损失和 399 次返航命中均明确为 hypothetical example；发动机只占 11.3% 可见命中却估计 17.9% 脆弱度，其余部位占 59.6% 可见命中却估计 3.8%，用于解释选择门怎样反转表面排序。网络流传弹孔图与戏剧化对话保留为历史边界。Industry Apprenticeship Day 11 重算 Netflix 2011 Q3 的 6.3% churn：`5.519 / (24.594 + 4.714) / 3`，并区分 aggregate churn、cohort retention、monthly hazard、自愿 / 非自愿流失和回流。`META.CAUSAL.SELECTION_BIAS` 为 L2 candidate，`BUS.SUBSCRIPTION.CHURN_RETENTION` 为 L1 candidate，等待 Teach-back。
 

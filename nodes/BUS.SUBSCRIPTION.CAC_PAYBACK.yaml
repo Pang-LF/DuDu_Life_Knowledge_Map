@@ -1,0 +1,36 @@
+id: "BUS.SUBSCRIPTION.CAC_PAYBACK"
+name_en: "Customer Acquisition Cost and Payback Period"
+name_zh: "客户获取成本与回收期"
+domain: "BUSINESS"
+module: "Subscription Economics（订阅经济）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "CAC or SAC measures the consistently defined upfront cost of acquiring a new customer or subscriber. Payback period is the time required for a retained acquisition cohort's cumulative contribution margin, not revenue, to recover that cost."
+why: "A cheap signup can be economically expensive when it churns early or contributes little margin, while a higher-cost acquisition can be superior when retention and contribution are stronger."
+mechanism: "Define included acquisition spending and gross adds; group customers by channel and offer; track monthly active retention, realized revenue, variable service and content costs, and contribution margin; accumulate retained cohort contribution until it exceeds CAC or SAC."
+example: "DIRECTV U.S. reported $3.360 billion of total acquisition costs and 3.804 million gross additions in 2014, producing $883 SAC. Dividing by $106.94 ARPU implies 8.3 months but treats revenue as margin; a clearly labeled proxy using the 34.1% Pre-SAC Margin ratio implies about $36.47 monthly contribution and 24.2 months before churn adjustment."
+my_take: "I should compare acquisition channels on retained cumulative contribution and cash recovery, not on CAC, gross adds, or ARPU alone."
+
+prerequisites:
+  - "BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION"
+  - "BUS.SUBSCRIPTION.CHURN_RETENTION"
+connections:
+  - "BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION"
+  - "BUS.SUBSCRIPTION.CHURN_RETENTION"
+  - "BUS.SUBSCRIPTION.LTV"
+  - "META.CAUSAL.SELECTION_BIAS"
+  - "CASE.DIRECTV.SAC_PAYBACK.2014"
+questions:
+  - "Does a higher acquisition cost buy a cohort with enough retained contribution margin to recover faster and create more value?"
+cases:
+  - "DIRECTV U.S. subscriber acquisition economics, 2014"
+
+first_seen: "2026-09-19"
+last_reviewed: "2026-09-19"
+next_review: "2026-09-22"
+sources:
+  - "https://www.sec.gov/Archives/edgar/data/1465112/000104746915001196/a2223104z10-k.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1465112/000115752315000626/a51043087ex99_1.htm"
+notes: "Industry apprenticeship continuation. The 24.2-month figure is an instructional segment-average proxy, not an official DIRECTV cohort payback. Mastery remains candidate until the channel-cohort Teach-back."

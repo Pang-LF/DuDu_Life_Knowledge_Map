@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 56,
+    progress: 62,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 43,
+    progress: 48,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -162,7 +162,7 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'Correlation is a symmetric observation of co-movement; causation is a directional intervention claim. Temporal order and reverse paths must be tested before treating a predictor as a lever.',
-    connections: ['META.SYSTEMS.INTEGRATION', 'META.CAUSAL.CONFOUNDER', 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004'],
+    connections: ['META.SYSTEMS.INTEGRATION', 'META.CAUSAL.CONFOUNDER', 'META.CAUSAL.INTEGRATION', 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004'],
   },
   {
     id: 'META.CAUSAL.CONFOUNDER',
@@ -170,7 +170,7 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'A pre-treatment common cause changes both treatment selection and outcome risk, so an observed group difference can mix the intervention effect with a difference that existed before treatment.',
-    connections: ['META.CAUSAL.CORRELATION_CAUSATION', 'META.CAUSAL.COUNTERFACTUAL', 'CASE.WHI.HORMONE_THERAPY.1991_2002'],
+    connections: ['META.CAUSAL.CORRELATION_CAUSATION', 'META.CAUSAL.COUNTERFACTUAL', 'META.CAUSAL.INTEGRATION', 'CASE.WHI.HORMONE_THERAPY.1991_2002'],
   },
   {
     id: 'META.CAUSAL.COUNTERFACTUAL',
@@ -178,7 +178,7 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'The causal target contrasts two potential outcomes for the same unit at the same time, although only one is observable; a justified comparison group estimates the missing outcome on average.',
-    connections: ['META.CAUSAL.CORRELATION_CAUSATION', 'META.CAUSAL.CONFOUNDER', 'META.CAUSAL.SELECTION_BIAS', 'CASE.OREGON.MEDICAID.LOTTERY.2008_2013'],
+    connections: ['META.CAUSAL.CORRELATION_CAUSATION', 'META.CAUSAL.CONFOUNDER', 'META.CAUSAL.SELECTION_BIAS', 'META.CAUSAL.INTEGRATION', 'CASE.OREGON.MEDICAID.LOTTERY.2008_2013'],
   },
   {
     id: 'META.CAUSAL.SELECTION_BIAS',
@@ -186,7 +186,15 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'Observed data become systematically unrepresentative when entry or retention depends on causes or outcomes under study; survivorship bias is the special case requiring persistence or visible success.',
-    connections: ['META.CAUSAL.CONFOUNDER', 'META.CAUSAL.COUNTERFACTUAL', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'CASE.WALD.AIRCRAFT.SURVIVORSHIP.1943'],
+    connections: ['META.CAUSAL.CONFOUNDER', 'META.CAUSAL.COUNTERFACTUAL', 'META.CAUSAL.INTEGRATION', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'CASE.WALD.AIRCRAFT.SURVIVORSHIP.1943'],
+  },
+  {
+    id: 'META.CAUSAL.INTEGRATION',
+    label: 'Causal Integration（因果整合）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'Define the intervention and missing counterfactual, then audit direction, treatment assignment, observation gates, and the exact effect the resulting comparison can identify.',
+    connections: ['META.CAUSAL.CORRELATION_CAUSATION', 'META.CAUSAL.CONFOUNDER', 'META.CAUSAL.COUNTERFACTUAL', 'META.CAUSAL.SELECTION_BIAS', 'META.PROBABILITY.FOUNDATION', 'CASE.SALK.POLIO_VACCINE_FIELD_TRIAL.1954'],
   },
   {
     id: 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004',
@@ -219,6 +227,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'Returning-plane damage is conditional on survival; Wald modeled location-specific vulnerability from survivor-selected data instead of ranking armor by visible hit counts.',
     connections: ['META.CAUSAL.SELECTION_BIAS'],
+  },
+  {
+    id: 'CASE.SALK.POLIO_VACCINE_FIELD_TRIAL.1954',
+    label: 'Salk Polio Trial 1954（脊灰疫苗试验）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'Randomized placebo recipients supplied a credible counterfactual among consenters; the lower disease rate among uninoculated nonparticipants exposed why untreated groups are not automatically comparable.',
+    connections: ['META.CAUSAL.INTEGRATION'],
   },
   {
     id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
@@ -362,7 +378,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'A subscription is a continuing payer relationship: additions and cancellations change the customer stock, while customer-months, realized prices and plan mix generate period revenue.',
-    connections: ['BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.INDUSTRY_POWER_SHIFT', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'CASE.NETFLIX.PRICING.2011'],
+    connections: ['BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.INDUSTRY_POWER_SHIFT', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.CAC_PAYBACK', 'CASE.NETFLIX.PRICING.2011'],
   },
   {
     id: 'BUS.SUBSCRIPTION.CHURN_RETENTION',
@@ -370,7 +386,15 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Churn requires an explicit exit, denominator and period; cohort retention follows the same relationships through tenure so changing acquisition, plan and exit mix cannot hide inside one aggregate rate.',
-    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'META.CAUSAL.SELECTION_BIAS', 'CASE.NETFLIX.PRICING.2011'],
+    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CAC_PAYBACK', 'META.CAUSAL.SELECTION_BIAS', 'CASE.NETFLIX.PRICING.2011'],
+  },
+  {
+    id: 'BUS.SUBSCRIPTION.CAC_PAYBACK',
+    label: 'CAC & Payback（获客成本与回收期）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Acquisition spending is recovered by retained cohort contribution margin, not ARPU; payback accumulates active customer-month margin until it covers consistently defined CAC or SAC.',
+    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.LTV', 'CASE.DIRECTV.SAC_PAYBACK.2014'],
   },
   {
     id: 'CASE.NETFLIX.OPEN_CONNECT',
@@ -404,15 +428,23 @@ export const nodes: GraphNode[] = [
     summary: 'Gross additions remained large, but cancellations were larger; reported churn rose to 6.3%, while customer-month timing, price, plan and cohort mix shaped revenue and the ending subscriber stock.',
     connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CHURN_RETENTION'],
   },
+  {
+    id: 'CASE.DIRECTV.SAC_PAYBACK.2014',
+    label: 'DIRECTV SAC 2014（订户获取经济）',
+    domain: 'BUSINESS',
+    mastery: 'Case studied',
+    summary: 'DIRECTV reported $883 SAC; ARPU implied a false 8.3-month recovery, while contribution margin and retained cohort customer-months made the economic payback much longer.',
+    connections: ['BUS.SUBSCRIPTION.CAC_PAYBACK'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-09-18',
-  title: 'Causal Reasoning Day 4（因果推理第四课）',
-  question: '返航飞机的弹孔究竟在告诉我们哪里危险，还是哪里受伤以后仍能被看见？',
-  reading: '45-60 min：跟随一发命中通过返航选择门，理解 Selection Bias 与 Survivorship Bias。',
-  discussion: '20-30 min：诊断活跃用户调查，并用 cohort 区分真实 retention 改善与客户构成变化。',
-  next: '2026-09-19：Causal Reasoning Integration 与 CAC / Payback Period。',
+  date: '2026-09-19',
+  title: 'Causal Reasoning Integration（因果推理整合）',
+  question: '安慰剂没有保护作用，为什么安慰剂儿童的瘫痪率反而高于未参加注射的儿童？',
+  reading: '45-60 min：跟随一名儿童穿过同意、随机分组与诊断门，完成一次完整因果比较审计。',
+  discussion: '20-30 min：审计 AI 助手产出结论，并用 retained cohort margin 比较两个获客渠道。',
+  next: '2026-09-20：Probability Foundation 与 LTV / Unit Economics。',
 }
 
 export const monthlyTrack = [

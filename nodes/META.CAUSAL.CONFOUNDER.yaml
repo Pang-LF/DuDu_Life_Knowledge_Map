@@ -19,6 +19,7 @@ connections:
   - "META.CAUSAL.CORRELATION_CAUSATION"
   - "META.CAUSAL.COUNTERFACTUAL"
   - "META.CAUSAL.SELECTION_BIAS"
+  - "META.CAUSAL.INTEGRATION"
   - "META.PROBABILITY.CONDITIONAL"
   - "CASE.WHI.HORMONE_THERAPY.1991_2002"
 questions:
@@ -27,12 +28,12 @@ cases:
   - "Menopausal hormone therapy, observational evidence, and the Women's Health Initiative"
 
 first_seen: "2026-09-16"
-last_reviewed: "2026-09-16"
-next_review: "2026-09-19"
+last_reviewed: "2026-09-19"
+next_review: "2026-09-22"
 sources:
   - "https://www.nejm.org/doi/abs/10.1056/NEJM199109123251102"
   - "https://pubmed.ncbi.nlm.nih.gov/12117397/"
   - "https://www.nejm.org/doi/full/10.1056/NEJMoa030808"
   - "https://www.nhlbi.nih.gov/science/womens-health-initiative-whi"
   - "https://jamanetwork.com/journals/jama/article-abstract/2818206"
-notes: "Causal Reasoning Day 2. Mediators, effect modification, and colliders are boundary distinctions only. Mastery remains candidate until the fitness-app Teach-back."
+notes: "Causal Reasoning Day 2. Reviewed on 2026-09-19 by comparing randomized placebo recipients with age- and consent-selected controls in the Salk trial. Mastery remains candidate until Teach-back."

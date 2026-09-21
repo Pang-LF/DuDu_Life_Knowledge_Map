@@ -21,6 +21,7 @@ connections:
   - "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
   - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
   - "BUS.SUBSCRIPTION.CHURN_RETENTION"
+  - "BUS.SUBSCRIPTION.CAC_PAYBACK"
   - "CASE.NETFLIX.PRICING.2011"
 questions:
   - "How do beginning subscribers, additions, cancellations, customer-months, price, plan mix, and cohorts jointly explain subscription revenue and ending stock?"
@@ -28,8 +29,8 @@ cases:
   - "Netflix pricing and subscriber flows, 2011"
 
 first_seen: "2026-09-17"
-last_reviewed: "2026-09-17"
-next_review: "2026-09-20"
+last_reviewed: "2026-09-19"
+next_review: "2026-09-22"
 sources:
   - "https://s22.q4cdn.com/959853165/files/doc_news/archive/8ab8f6b7-1ed7-4c0b-9539-5ebb4e212e2d.pdf"
   - "https://www.sec.gov/Archives/edgar/data/1065280/000119312511278716/d246709dex991.htm"

@@ -20,6 +20,7 @@ connections:
   - "META.CAUSAL.CORRELATION_CAUSATION"
   - "META.CAUSAL.CONFOUNDER"
   - "META.CAUSAL.SELECTION_BIAS"
+  - "META.CAUSAL.INTEGRATION"
   - "META.PROBABILITY.CONDITIONAL"
   - "CASE.OREGON.MEDICAID.LOTTERY.2008_2013"
 questions:
@@ -28,10 +29,10 @@ cases:
   - "Oregon Medicaid lottery, 2008-2013"
 
 first_seen: "2026-09-17"
-last_reviewed: "2026-09-17"
-next_review: "2026-09-20"
+last_reviewed: "2026-09-19"
+next_review: "2026-09-22"
 sources:
   - "https://www.nber.org/papers/w17190"
   - "https://www.nejm.org/doi/full/10.1056/NEJMsa1212321"
   - "https://www.nber.org/oregon"
-notes: "Causal Reasoning Day 3. ITT, instrumental variables, and LATE are supporting distinctions, not separate mastery targets. Mastery remains candidate until the learning-app Teach-back."
+notes: "Causal Reasoning Day 3. Reviewed on 2026-09-19 by asking why randomized placebo recipients can represent vaccinated participants' missing average outcome. Mastery remains candidate until Teach-back."

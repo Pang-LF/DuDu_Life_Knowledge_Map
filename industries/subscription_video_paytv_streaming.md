@@ -190,3 +190,18 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Boundary: Public filings do not reveal household-level cohorts and cannot isolate price, Qwikster, communication, plan migration, or changing acquisition mix.
 - Status: `BUS.SUBSCRIPTION.CHURN_RETENTION` at L1 candidate; Teach-back pending.
 - Next: CAC and Payback Period — how many retained customer-months are needed to recover acquisition spending.
+
+### 2026-09-19 — Acquisition Cost Is Recovered By Retained Margin, Not Revenue
+
+- Question: Why does DIRECTV's $883 SAC divided by $106.94 ARPU not imply an 8.3-month payback?
+- Parent concept: A subscription acquisition buys a sequence of uncertain future customer-months; the upfront cost is recovered only by contribution margin from relationships that remain active.
+- Cost definition: DIRECTV SAC included expensed acquisition costs plus cash paid for new-subscriber leased equipment, divided by gross additions; equipment, installation, commissions, advertising, marketing and acquisition call-center costs were inside the stated boundary.
+- 2014 arithmetic: $2.853 billion expensed cost + $0.507 billion acquisition equipment cash = $3.360 billion, divided by 3.804 million gross additions = $883 SAC.
+- Stock-flow boundary: 3.804 million gross additions and 3.705 million disconnections produced only about 99,000 net additions; replacement acquisition can preserve the payer base without creating equivalent net growth.
+- Revenue error: $883 / $106.94 ARPU = 8.3 months but treats revenue as recoverable cash and ignores programming, service, operations, retention and other continuing costs.
+- Contribution proxy: Applying the disclosed 34.1% Pre-SAC Margin ratio to ARPU yields about $36.47 per active subscriber-month and a 24.2-month pre-churn proxy.
+- Retention extension: Under a clearly hypothetical constant 1.52% monthly hazard and constant contribution, retained cumulative contribution reaches $883 after roughly 30 months; this is not an official DIRECTV cohort result.
+- Practitioner method: Compare channel and offer cohorts using monthly active retention, realized revenue, variable cost, contribution margin, cumulative contribution and the first month cumulative contribution exceeds CAC or SAC.
+- Boundary: Pre-SAC Margin is a non-GAAP segment average over new and mature subscribers, not an incremental new-customer margin; disclosed aggregates cannot reveal true cohort payback.
+- Status: `BUS.SUBSCRIPTION.CAC_PAYBACK` at L1 candidate; Teach-back pending.
+- Next: LTV and unit economics — how lifetime retention, margin and time value extend beyond payback.

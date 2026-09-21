@@ -1,0 +1,41 @@
+id: "META.CAUSAL.INTEGRATION"
+name_en: "Causal Reasoning Integration"
+name_zh: "因果推理整合"
+domain: "META"
+module: "Causal Reasoning（因果推理）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "Causal reasoning integration is a disciplined audit of a comparison: define the intervention and outcome, establish direction, state the missing counterfactual, inspect treatment assignment and observation gates, then limit the conclusion to the effect that design can identify."
+why: "Correlation, confounding, counterfactuals, and selection are not independent warning labels. They protect different parts of the same attempt to use an observed group as a substitute for an unobserved potential outcome."
+mechanism: "Specify unit, intervention, outcome, and time; test temporal and reverse direction; write Y(1) and Y(0); identify pre-treatment common causes of assignment; map every gate into measurement and analysis; justify the comparison group; state the estimand, population, period, assumptions, and boundaries."
+example: "In the randomized placebo areas of the 1954 Salk polio trial, vaccinated and placebo children passed the same parental-consent gate and were assigned by chance. Paralytic polio rates were 16 versus 55 per 100,000, implying about 71% relative efficacy. Non-inoculated children had a lower rate of 36 despite no vaccine, showing why an unrandomized untreated group was not an equivalent counterfactual."
+my_take: "Before accepting a causal difference, I should explain why this particular control group can stand in for the treated group's missing outcome and what selection or measurement boundary remains."
+
+prerequisites:
+  - "META.CAUSAL.CORRELATION_CAUSATION"
+  - "META.CAUSAL.CONFOUNDER"
+  - "META.CAUSAL.COUNTERFACTUAL"
+  - "META.CAUSAL.SELECTION_BIAS"
+connections:
+  - "META.CAUSAL.CORRELATION_CAUSATION"
+  - "META.CAUSAL.CONFOUNDER"
+  - "META.CAUSAL.COUNTERFACTUAL"
+  - "META.CAUSAL.SELECTION_BIAS"
+  - "META.PROBABILITY.FOUNDATION"
+  - "CASE.SALK.POLIO_VACCINE_FIELD_TRIAL.1954"
+questions:
+  - "Why can the proposed comparison group estimate the treated group's missing outcome, and what assignment, observation, or generalization boundary remains?"
+cases:
+  - "1954 Salk poliomyelitis vaccine field trial"
+
+first_seen: "2026-09-19"
+last_reviewed: "2026-09-19"
+next_review: "2026-09-22"
+sources:
+  - "https://pubmed.ncbi.nlm.nih.gov/14361811/"
+  - "https://jhanley.biostat.mcgill.ca/bios601/Polio/PolioTrial-I-SummaryConclusions.pdf"
+  - "https://sph.umich.edu/polio/"
+  - "https://pmc.ncbi.nlm.nih.gov/articles/PMC1114166/"
+notes: "Causal Reasoning Day 5 integration. The four prerequisite nodes were reviewed in one unfamiliar case but remain candidates until the AI-assistant Teach-back demonstrates integrated application."

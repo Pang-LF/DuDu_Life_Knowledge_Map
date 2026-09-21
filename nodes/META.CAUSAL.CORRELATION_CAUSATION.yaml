@@ -18,6 +18,7 @@ prerequisites:
 connections:
   - "META.SYSTEMS.INTEGRATION"
   - "META.CAUSAL.CONFOUNDER"
+  - "META.CAUSAL.INTEGRATION"
   - "META.PROBABILITY.BASE_RATE"
   - "META.EVIDENCE.SOURCE_EVALUATION"
   - "CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004"
@@ -27,12 +28,12 @@ cases:
   - "Smoking and lung cancer causal inference, 1950-2004"
 
 first_seen: "2026-09-15"
-last_reviewed: "2026-09-16"
-next_review: "2026-09-19"
+last_reviewed: "2026-09-19"
+next_review: "2026-09-22"
 sources:
   - "https://www.bmj.com/content/2/4682/739"
   - "https://www.bmj.com/content/328/7455/1519"
   - "https://www.cdc.gov/tobacco-surgeon-general-reports/about/history.html"
   - "https://www.ncbi.nlm.nih.gov/books/NBK294317/table/ch4.t11/"
   - "https://www.cancer.gov/types/lung/hp/lung-prevention-pdq"
-notes: "Causal Reasoning Day 1. Reviewed on 2026-09-16 as the association-and-direction prerequisite to confounding. Mastery remains candidate until the product-retention Teach-back."
+notes: "Causal Reasoning Day 1. Reviewed on 2026-09-19 inside the Salk trial integration, where temporal direction was separated from comparison validity. Mastery remains candidate until Teach-back."
