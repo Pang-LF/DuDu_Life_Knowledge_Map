@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-09-21
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件进入收件箱
+- 完成 Probability Day 2：新增 `META.PROBABILITY.BASE_RATE`，以“先数目标池与非目标池，再解释信号”为唯一主旨
+- 新增 `CASE.WISCONSIN.CAMPUS_ANTIGEN_SCREENING.2020`，用 871 份无症状配对样本解释 2% base rate、98.4% specificity 与 33.3% PPV 如何同时成立
+- 区分 specificity、sensitivity、PPV、参照类与不同分母，并保留 RT-PCR、校园人群、重复测试和现场 cluster 的证据边界
+- 将校园筛查、抗原检测、RT-PCR 与诊断研究设计记录为 Knowledge Expansion exposure；Conditional Probability 保留到 9 月 22 日
+- 完成 Industry Apprenticeship：新增 `BUS.SUBSCRIPTION.PRICING_PACKAGING` 与 `CASE.DISNEY_PLUS.TIERING.2022_2023`
+- 重建 Disney+ 2022 年 7.99 美元广告档与 10.99 美元无广告档的 price fence，并区分 list price、advertising、bundle mix、realized ARPU 与 cohort value
+- 更新 Probability Foundation、LTV、行业日志、Question Bank、CURRENT_STATE 与网站地图数据
+- 下一课锁定 2026-09-22 Conditional Probability 与 Ad-Supported Streaming
+
 ## 2026-09-20
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件进入收件箱

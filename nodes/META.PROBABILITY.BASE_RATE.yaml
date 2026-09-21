@@ -1,0 +1,38 @@
+id: "META.PROBABILITY.BASE_RATE"
+name_en: "Base Rate"
+name_zh: "基础概率"
+domain: "META"
+module: "Probability & Bayesian Thinking（概率与贝叶斯思维）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "A base rate is the prevalence or starting probability of a target event in a relevant reference class before case-specific evidence is incorporated."
+why: "When the target event is rare, even a small false-positive rate applied to a large non-target population can create more alerts than true detections. Ignoring the starting pool sizes makes vivid evidence look more decisive than it is."
+mechanism: "Define the target event and defensible reference class; count target and non-target pools; apply the signal's detection rate to the target pool and false-positive rate to the non-target pool; compare both sources of positive signals before interpreting an individual alert."
+example: "Among 871 asymptomatic paired samples at two Wisconsin universities in 2020, 17 were RT-PCR positive, a base rate of about 2%. The antigen test produced seven true positives and 14 false positives, so only 7 of 21 antigen-positive results, or 33.3%, were also RT-PCR positive despite 98.4% specificity."
+my_take: "Before reacting to an alert, I should identify the relevant reference class and make the true-detection and false-alarm pools visible."
+
+prerequisites:
+  - "META.PROBABILITY.FOUNDATION"
+connections:
+  - "META.PROBABILITY.FOUNDATION"
+  - "META.PROBABILITY.CONDITIONAL"
+  - "META.BAYESIAN.UPDATING"
+  - "META.CAUSAL.SELECTION_BIAS"
+  - "BUS.SUBSCRIPTION.PRICING_PACKAGING"
+  - "CASE.WISCONSIN.CAMPUS_ANTIGEN_SCREENING.2020"
+questions:
+  - "What is the relevant reference class, how common is the target event before this evidence, and how many false alarms should the non-target pool generate?"
+cases:
+  - "Wisconsin university SARS-CoV-2 antigen screening, 2020"
+
+first_seen: "2026-09-21"
+last_reviewed: "2026-09-21"
+next_review: "2026-09-24"
+sources:
+  - "https://www.cdc.gov/mmwr/volumes/69/wr/mm695152a3.htm"
+  - "https://www.cdc.gov/mmwr/volumes/69/wr/pdfs/mm695152a3-H.pdf"
+  - "https://www.fda.gov/medical-devices/coronavirus-covid-19-and-medical-devices/antibody-serology-testing-covid-19-information-patients-and-consumers"
+notes: "Probability Day 2. Mastery remains a candidate until the user can solve an unfamiliar low-base-rate alert problem with natural frequencies. Conditional probability and formal direction reversal remain scheduled for 2026-09-22."
+

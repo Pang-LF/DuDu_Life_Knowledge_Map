@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 66,
+    progress: 70,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 52,
+    progress: 56,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -205,6 +205,14 @@ export const nodes: GraphNode[] = [
     connections: ['META.CAUSAL.INTEGRATION', 'META.PROBABILITY.BASE_RATE', 'META.PROBABILITY.CONDITIONAL', 'META.BAYESIAN.UPDATING', 'META.FORECASTING.CALIBRATION', 'BUS.SUBSCRIPTION.LTV', 'CASE.APOPHIS.IMPACT_PROBABILITY.2004_2021'],
   },
   {
+    id: 'META.PROBABILITY.BASE_RATE',
+    label: 'Base Rate（基础概率）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'A base rate is the target event\'s prevalence in a relevant reference class before case-specific evidence; low prevalence lets a small false-positive rate create more alerts than true detections.',
+    connections: ['META.PROBABILITY.FOUNDATION', 'META.PROBABILITY.CONDITIONAL', 'META.BAYESIAN.UPDATING', 'META.CAUSAL.SELECTION_BIAS', 'BUS.SUBSCRIPTION.PRICING_PACKAGING', 'CASE.WISCONSIN.CAMPUS_ANTIGEN_SCREENING.2020'],
+  },
+  {
     id: 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004',
     label: 'Smoking & Lung Cancer（吸烟与肺癌）',
     domain: 'META',
@@ -251,6 +259,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'Limited 2004 observations briefly assigned 2.7% probability to a 2029 impact; archival images and radar narrowed and shifted the allowed orbit distribution until impact was excluded for at least 100 years.',
     connections: ['META.PROBABILITY.FOUNDATION'],
+  },
+  {
+    id: 'CASE.WISCONSIN.CAMPUS_ANTIGEN_SCREENING.2020',
+    label: 'Wisconsin Campus Screening（校园抗原筛查）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'With a 2% asymptomatic base rate, seven true-positive and fourteen false-positive antigen results produced 33.3% PPV despite 98.4% specificity.',
+    connections: ['META.PROBABILITY.BASE_RATE'],
   },
   {
     id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
@@ -338,7 +354,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'A broad package can smooth heterogeneous household valuations and combine search, contracting, delivery, billing, service, and content funding into one recurring product.',
-    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.FEEDBACK_LOOP', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR', 'BUS.MEDIA.ESPN.BUNDLE_POWER', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP'],
+    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.FEEDBACK_LOOP', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.MEDIA.DISTRIBUTOR.DIRECTV', 'BUS.MEDIA.AGGREGATOR', 'BUS.MEDIA.ESPN.BUNDLE_POWER', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.SUBSCRIPTION.PRICING_PACKAGING'],
   },
   {
     id: 'BUS.MEDIA.ESPN.BUNDLE_POWER',
@@ -394,7 +410,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'A subscription is a continuing payer relationship: additions and cancellations change the customer stock, while customer-months, realized prices and plan mix generate period revenue.',
-    connections: ['BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.INDUSTRY_POWER_SHIFT', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.CAC_PAYBACK', 'BUS.SUBSCRIPTION.LTV', 'CASE.NETFLIX.PRICING.2011'],
+    connections: ['BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.INDUSTRY_POWER_SHIFT', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.CAC_PAYBACK', 'BUS.SUBSCRIPTION.LTV', 'BUS.SUBSCRIPTION.PRICING_PACKAGING', 'CASE.NETFLIX.PRICING.2011'],
   },
   {
     id: 'BUS.SUBSCRIPTION.CHURN_RETENTION',
@@ -402,7 +418,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Churn requires an explicit exit, denominator and period; cohort retention follows the same relationships through tenure so changing acquisition, plan and exit mix cannot hide inside one aggregate rate.',
-    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CAC_PAYBACK', 'BUS.SUBSCRIPTION.LTV', 'META.CAUSAL.SELECTION_BIAS', 'CASE.NETFLIX.PRICING.2011'],
+    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CAC_PAYBACK', 'BUS.SUBSCRIPTION.LTV', 'BUS.SUBSCRIPTION.PRICING_PACKAGING', 'META.CAUSAL.SELECTION_BIAS', 'CASE.NETFLIX.PRICING.2011'],
   },
   {
     id: 'BUS.SUBSCRIPTION.CAC_PAYBACK',
@@ -419,6 +435,14 @@ export const nodes: GraphNode[] = [
     mastery: 'L1 candidate',
     summary: 'LTV is the present value of future cohort contribution margin, built from retention, realized margin and discounting; acquisition value requires comparison with consistently scoped CAC or SAC.',
     connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.CAC_PAYBACK', 'BUS.SUBSCRIPTION.PRICING_PACKAGING', 'META.PROBABILITY.FOUNDATION', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.DIRECTV.LTV_PROXY.2014'],
+  },
+  {
+    id: 'BUS.SUBSCRIPTION.PRICING_PACKAGING',
+    label: 'Pricing & Packaging（定价与套餐）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Pricing sets exchange terms; packaging combines content, features, advertising and products into tiers whose migration, retention and contribution determine value beyond list price.',
+    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.LTV', 'BUS.MEDIA.AD_SUPPORTED_STREAMING', 'BUS.SUBSCRIPTION.BUNDLE', 'CASE.DISNEY_PLUS.TIERING.2022_2023'],
   },
   {
     id: 'CASE.NETFLIX.OPEN_CONNECT',
@@ -468,15 +492,23 @@ export const nodes: GraphNode[] = [
     summary: 'Public segment averages illustrate how retention, contribution and discounting shape LTV, while their mixed-cohort boundaries prevent the proxy from becoming an official customer-level result.',
     connections: ['BUS.SUBSCRIPTION.LTV'],
   },
+  {
+    id: 'CASE.DISNEY_PLUS.TIERING.2022_2023',
+    label: 'Disney+ Tiering 2022–23（分层定价）',
+    domain: 'BUSINESS',
+    mastery: 'Case studied',
+    summary: 'Disney+ preserved a $7.99 ad-supported entry tier and raised ad-free to $10.99, combining subscription pricing, advertiser revenue and bundle mix without revealing plan-level retention.',
+    connections: ['BUS.SUBSCRIPTION.PRICING_PACKAGING'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-09-20',
-  title: 'Probability Foundation（概率基础）',
-  question: 'Apophis 的真实轨道没有改变，撞击概率为什么能从 2.7% 变成被排除？',
-  reading: '45-60 min：跟随一个天文观测点进入可能轨道分布，重建概率的事件、信息与模型边界。',
-  discussion: '20-30 min：解释单次结果为何不能判定概率对错，并按 cohort retention 重建 LTV。',
-  next: '2026-09-21：Base Rate 与 Pricing & Packaging。',
+  date: '2026-09-21',
+  title: 'Base Rate（基础概率）',
+  question: '一项特异度 98.4% 的检测呈阳性，为什么阳性者里只有三分之一与 RT-PCR 同为阳性？',
+  reading: '45-60 min：沿一份无症状配对样本，先数目标池与非目标池，再解释阳性信号。',
+  discussion: '20-30 min：解决设备故障预警，并用 plan-level retention 与贡献判断双档定价。',
+  next: '2026-09-22：Conditional Probability 与 Ad-Supported Streaming。',
 }
 
 export const monthlyTrack = [

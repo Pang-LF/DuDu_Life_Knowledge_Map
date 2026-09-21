@@ -28,3 +28,5 @@
 - 2026-09-19 — 更高 CAC / SAC 是否买到了更快回收的 cohort，还是只让 acquisition spending 上升？
 - 2026-09-20 — 一个概率究竟对应哪个事件、截止时间、信息集与模型，什么新证据应让它改变？
 - 2026-09-20 — 一个 acquisition cohort 的 LTV 对 retention tail、contribution margin、discount rate 与 CAC 口径分别有多敏感？
+- 2026-09-21 — 当前个案属于哪个相关参照类，目标事件的 base rate 多大，非目标池会制造多少 false alarms？
+- 2026-09-21 — 一次提价与套餐重组究竟提高了 retained cohort contribution，还是只提高了 list price 与 aggregate ARPU？

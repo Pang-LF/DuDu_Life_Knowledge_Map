@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-20
+Last updated: 2026-09-21
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-20
 
 ## Next Immediate Focus（下一步）
 
-2026-09-21：Probability Day 2 — Base Rate（基础概率），建立“新证据必须放回参照类”的直觉；Industry Apprenticeship 进入 Pricing & Packaging（定价与套餐）。
+2026-09-22：Probability Day 3 — Conditional Probability（条件概率），建立“交换条件会改变分母”的机制；Industry Apprenticeship 进入 Ad-Supported Streaming（广告支持流媒体）。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-20
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-21：完成 Probability Day 2 — Base Rate（基础概率）。主课跟随 2020 年威斯康星两所大学的一份无症状抗原阳性样本，重建“先数参照类，再解释新信号”。871 份无症状配对样本中只有 17 份 RT-PCR 阳性，base rate 约 2%；抗原检测识别 7 份 true positives，却从 854 份 RT-PCR 阴性中产生 14 份 false positives，因此 21 个抗原阳性中只有 33.3% 与 RT-PCR 同为阳性，尽管 specificity 为 98.4%。课程区分 specificity、PPV 与不同分母，并用有症状组 17.6% base rate、94.1% PPV 作有边界对照。Industry Apprenticeship 用 Disney+ 2022 年分层定价说明 Packaging：保留 7.99 美元广告档，把无广告档从 7.99 提到 10.99 美元；截至 2023 年 9 月美国广告档 520 万订户，财年 domestic ARPU 从 6.34 升到 6.97 美元，但公开数据不能识别 plan-level retention 或因果效果。`META.PROBABILITY.BASE_RATE` 为 L2 candidate，`BUS.SUBSCRIPTION.PRICING_PACKAGING` 为 L1 candidate，等待 Teach-back。
 
 2026-09-20：进入 Probability & Bayesian Thinking 新模块，完成 Probability Day 1 — Foundation（概率基础）。主课跟随 Apophis 从一个望远镜光点变成可能轨道分布：2004 年有限信息下的 2029 撞击概率一度约 2.7%，档案影像排除 2029 撞击，Arecibo 雷达将预测位置不确定性降低约 98%，2021 年 Goldstone 与 Green Bank 雷达最终排除至少 100 年内撞击。课程区分真实轨道与知识分布、概率与结果、低概率事件发生与概率错误，并要求每个概率写明事件、时间、信息集和模型。Industry Apprenticeship 新增 LTV & Unit Economics：用 DIRECTV 公开数据建立明确标注的教学 proxy，36.47 美元月贡献与 1.52% 恒定 churn 给出约 2,399 美元未折现 gross LTV；加入假设 10% 年折现后约 1,574 美元，均非官方 cohort LTV。`META.PROBABILITY.FOUNDATION` 为 L2 candidate，`BUS.SUBSCRIPTION.LTV` 为 L1 candidate，等待 Teach-back。
 

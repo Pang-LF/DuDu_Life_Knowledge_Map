@@ -219,3 +219,18 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Boundary: The figures are instructional, not official DIRECTV cohort LTV. Segment-average margin and churn mix new and mature subscribers and omit tenure, plan, channel, contract, reactivation and cost variation.
 - Status: `BUS.SUBSCRIPTION.LTV` at L1 candidate; Teach-back pending.
 - Next: Pricing and packaging — how price, plan mix, contribution and retention move together.
+
+### 2026-09-21 — Pricing Works Through Packages, Mix And Retention
+
+- Question: Why did Disney+ preserve a $7.99 entry tier with advertising while moving the ad-free tier from $7.99 to $10.99 instead of applying one uniform increase?
+- Parent concepts: Pricing sets exchange terms; packaging groups content, features, advertising experience and products into plans that change customer choice and unit economics.
+- Price fence: Basic users kept a $7.99 entry price in exchange for advertising and feature boundaries; Premium users paid $10.99 for an ad-free experience, a 37.5% monthly increase.
+- Second payer: The ad tier added advertiser revenue to subscription revenue, so a lower subscription price does not automatically imply lower contribution.
+- Bundle architecture: Disney+ and Hulu with ads were $9.99; Disney+, Hulu and ESPN+ with ads were $12.99, trading a lower combined price for a broader relationship.
+- Adoption anchor: The U.S. Disney+ ad tier had 5.2 million subscribers as of September 30, 2023.
+- ARPU anchor: Fiscal-2023 domestic Disney+ average monthly revenue per paid subscriber rose from $6.34 to $6.97, about 10%, due to retail pricing and advertising, partly offset by multi-product plan mix.
+- Measurement lesson: Realized ARPU can remain below major list prices because it mixes bundles, wholesale relationships, promotions, revenue allocation, timing and advertising.
+- Decision method: Compare starts, migrations, churn, subscription and ad revenue, attributable costs, contribution, payback and LTV by plan and cohort.
+- Boundary: Public disclosures do not provide plan-level retention, ad contribution or LTV; aggregate subscriber and ARPU changes do not identify a causal effect of tiering alone.
+- Status: `BUS.SUBSCRIPTION.PRICING_PACKAGING` at L1 candidate; Teach-back pending.
+- Next: Ad-supported streaming — how a two-sided viewer-and-advertiser model changes revenue, experience and scale.

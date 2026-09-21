@@ -1,0 +1,41 @@
+id: "BUS.SUBSCRIPTION.PRICING_PACKAGING"
+name_en: "Pricing and Packaging"
+name_zh: "定价与套餐设计"
+domain: "BUSINESS"
+module: "Subscription Economics（订阅经济）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Pricing sets the exchange terms for access; packaging groups content, features, advertising experience and products into plans. Tiers and price fences let customers self-select among different prices and experiences."
+why: "A uniform price can leave willingness to pay unserved or trigger avoidable churn. Tiering may preserve a lower entry point while monetizing advertising or higher willingness to pay, but it also adds complexity and cannibalization risk."
+mechanism: "Define plan entitlements and fences; track starts, migrations, upgrades, downgrades and cancellations by cohort; combine realized subscription revenue, advertising revenue, attributable costs and retention; compare plan-level contribution, payback and LTV rather than list price or aggregate ARPU alone."
+example: "In December 2022 Disney+ kept an ad-supported U.S. entry tier at $7.99 per month while moving the ad-free tier from $7.99 to $10.99, a 37.5% increase. By September 2023 the U.S. ad tier had 5.2 million subscribers, while fiscal-2023 domestic ARPU rose from $6.34 to $6.97 due to retail pricing and advertising, partly offset by multi-product plan mix."
+my_take: "I should judge a pricing change by plan-level retained contribution and migration, not by the percentage increase in list price."
+
+prerequisites:
+  - "BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION"
+  - "BUS.SUBSCRIPTION.CHURN_RETENTION"
+  - "BUS.SUBSCRIPTION.LTV"
+connections:
+  - "BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION"
+  - "BUS.SUBSCRIPTION.CHURN_RETENTION"
+  - "BUS.SUBSCRIPTION.LTV"
+  - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
+  - "BUS.SUBSCRIPTION.BUNDLE"
+  - "CASE.DISNEY_PLUS.TIERING.2022_2023"
+questions:
+  - "Did a new price and package increase retained cohort contribution after migration, advertising, churn and service costs, or only raise the posted price?"
+cases:
+  - "Disney+ U.S. ad-supported and premium tiering, 2022-2023"
+
+first_seen: "2026-09-21"
+last_reviewed: "2026-09-21"
+next_review: "2026-09-24"
+sources:
+  - "https://thewaltdisneycompany.com/app/uploads/2022/08/2022-Domestic-DTC-Pricing-Changes.pdf"
+  - "https://thewaltdisneycompany.com/news/ad-supported-disney-plan-launches-with-more-than-100-advertisers/"
+  - "https://www.sec.gov/Archives/edgar/data/1744489/000174448923000216/dis-20230930.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1744489/000174448924000073/dis-20240201.htm"
+notes: "Industry apprenticeship continuation. Public filings show aggregate subscribers and ARPU, not plan-level retention, ad contribution or LTV, so no causal claim is made that tiering alone improved value. Mastery remains candidate until Teach-back."
+
