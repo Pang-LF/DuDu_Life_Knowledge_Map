@@ -205,3 +205,17 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Boundary: Pre-SAC Margin is a non-GAAP segment average over new and mature subscribers, not an incremental new-customer margin; disclosed aggregates cannot reveal true cohort payback.
 - Status: `BUS.SUBSCRIPTION.CAC_PAYBACK` at L1 candidate; Teach-back pending.
 - Next: LTV and unit economics — how lifetime retention, margin and time value extend beyond payback.
+
+### 2026-09-20 — LTV Is A Discounted Cohort Contribution Stream
+
+- Question: Why can ARPU divided by aggregate churn illustrate a shortcut but not determine a decision-ready LTV?
+- Parent concept: Payback asks when retained cumulative contribution first recovers acquisition cost; LTV includes the discounted value tail before and after that crossing.
+- Definition: Gross LTV is the present value of future contribution margin from a customer or acquisition cohort; net value after acquisition subtracts consistently scoped CAC or SAC.
+- Minimum unit: One active household-month contributes realized revenue minus attributable service and content costs, weighted by cohort retention at that relationship age.
+- DIRECTV inputs: 2014 U.S. ARPU was $106.94, average monthly churn was 1.52%, SAC was $883, and Pre-SAC Margin was 34.1%.
+- Undiscounted proxy: $106.94 × 34.1% gives $36.47 monthly contribution; under hypothetical constant churn and margin, $36.47 / 1.52% gives about $2,399 gross LTV, 2.72× SAC, and $1,516 after SAC.
+- Discounted proxy: A hypothetical 10% effective annual discount rate reduces gross LTV to about $1,574, 1.78× SAC, and about $691 after SAC.
+- Payback comparison: Two cohorts can recover CAC in the same month yet have different LTV when their retention tails diverge; a high LTV can also coexist with cash-risking slow payback.
+- Boundary: The figures are instructional, not official DIRECTV cohort LTV. Segment-average margin and churn mix new and mature subscribers and omit tenure, plan, channel, contract, reactivation and cost variation.
+- Status: `BUS.SUBSCRIPTION.LTV` at L1 candidate; Teach-back pending.
+- Next: Pricing and packaging — how price, plan mix, contribution and retention move together.

@@ -1,0 +1,40 @@
+id: "BUS.SUBSCRIPTION.LTV"
+name_en: "Lifetime Value and Unit Economics"
+name_zh: "客户终身价值与单位经济模型"
+domain: "BUSINESS"
+module: "Subscription Economics（订阅经济）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Lifetime value is the present value of future contribution margin expected from a customer or acquisition cohort. Gross LTV excludes acquisition cost; net value after acquisition subtracts consistently defined CAC or SAC."
+why: "Payback shows when acquisition spending is recovered, while LTV measures value before and after that crossing. Revenue, aggregate churn, and undiscounted averages can materially overstate the economic value of a new cohort."
+mechanism: "Define the customer or cohort unit; project retention by relationship age; estimate realized revenue and attributable service or content costs; calculate monthly contribution; discount future cohort contribution to the decision date; sum it and compare with consistently scoped CAC or SAC."
+example: "Using DIRECTV 2014 segment averages only as an instructional proxy, $106.94 ARPU times a 34.1% Pre-SAC Margin ratio gives about $36.47 monthly contribution. A hypothetical constant 1.52% monthly churn implies about $2,399 undiscounted gross LTV; a hypothetical 10% annual discount rate lowers it to about $1,574, neither of which is an official DIRECTV cohort LTV."
+my_take: "I should treat LTV as a cohort cash-flow model with explicit retention, margin, time and acquisition-cost boundaries, not as ARPU divided by one company-wide churn number."
+
+prerequisites:
+  - "BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION"
+  - "BUS.SUBSCRIPTION.CHURN_RETENTION"
+  - "BUS.SUBSCRIPTION.CAC_PAYBACK"
+connections:
+  - "BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION"
+  - "BUS.SUBSCRIPTION.CHURN_RETENTION"
+  - "BUS.SUBSCRIPTION.CAC_PAYBACK"
+  - "BUS.SUBSCRIPTION.PRICING_PACKAGING"
+  - "META.PROBABILITY.FOUNDATION"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "CASE.DIRECTV.LTV_PROXY.2014"
+questions:
+  - "How much discounted contribution does each acquisition cohort create after CAC, and which retention, margin, or discount assumptions dominate the answer?"
+cases:
+  - "DIRECTV U.S. LTV proxy and disclosed aggregate boundaries, 2014"
+
+first_seen: "2026-09-20"
+last_reviewed: "2026-09-20"
+next_review: "2026-09-23"
+sources:
+  - "https://www.sec.gov/Archives/edgar/data/1465112/000104746915001196/a2223104z10-k.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1465112/000115752315000626/a51043087ex99_1.htm"
+notes: "Industry apprenticeship continuation. The $2,399 undiscounted and $1,574 discounted figures are instructional proxies using segment averages, constant churn and margin, no reactivation, and a hypothetical 10% annual discount rate. They are not official DIRECTV cohort LTV disclosures. Mastery remains candidate until Teach-back."
+

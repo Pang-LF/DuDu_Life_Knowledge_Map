@@ -1,0 +1,41 @@
+id: "META.PROBABILITY.FOUNDATION"
+name_en: "Probability Foundation"
+name_zh: "概率基础"
+domain: "META"
+module: "Probability & Bayesian Thinking（概率与贝叶斯思维）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "Probability is a number from zero to one assigned to a defined event under a stated time horizon, information set, and model. It quantifies uncertainty before resolution rather than relabeling the outcome afterward."
+why: "Without an explicit event, horizon, information date, and model, percentages cannot be compared, checked, calibrated, or updated. A single realized outcome also cannot by itself validate or falsify a non-extreme probability."
+mechanism: "Define the unit and event; specify time and scope; state the available information and generating model; assign probability mass across mutually exclusive outcomes; update the allowed outcome distribution when evidence changes; assess quality across comparable forecasts and model checks rather than one realization."
+example: "Apophis briefly had an estimated 2.7% probability of impacting Earth on April 13, 2029 under limited 2004 observations. Archival optical images and radar narrowed and shifted the allowed orbit distribution, ruling out 2029 and, by 2021, any impact for at least 100 years even though the asteroid's true trajectory had not changed."
+my_take: "Before debating a probability, I should ask what exact event, deadline, information set, model, and comparison class the number describes."
+
+prerequisites:
+  - "META.CAUSAL.INTEGRATION"
+connections:
+  - "META.CAUSAL.INTEGRATION"
+  - "META.PROBABILITY.BASE_RATE"
+  - "META.PROBABILITY.CONDITIONAL"
+  - "META.BAYESIAN.UPDATING"
+  - "META.FORECASTING.CALIBRATION"
+  - "BUS.SUBSCRIPTION.LTV"
+  - "CASE.APOPHIS.IMPACT_PROBABILITY.2004_2021"
+questions:
+  - "What exact event, time horizon, information set, and model does this probability describe, and what evidence would change it?"
+cases:
+  - "Apophis impact-probability updates, 2004-2021"
+
+first_seen: "2026-09-20"
+last_reviewed: "2026-09-20"
+next_review: "2026-09-23"
+sources:
+  - "https://science.nasa.gov/solar-system/asteroids/apophis-facts/"
+  - "https://cneos.jpl.nasa.gov/doc/apophis/"
+  - "https://www.jpl.nasa.gov/images/pia24168-radar-observations-of-asteroid-99942-apophis/"
+  - "https://cneos.jpl.nasa.gov/sentry/notes.html"
+  - "https://cneos.jpl.nasa.gov/news/news146.html"
+  - "https://www.weather.gov/lmk/pops"
+notes: "Probability Day 1. Mastery remains a candidate until the user can define a probability's event, horizon, information and model, and explain why one realized outcome does not determine calibration. Base rate, conditional probability, Bayesian updating, expected value and calibration remain scheduled later."

@@ -26,3 +26,5 @@
 - 2026-09-18 — Aggregate churn 的变化来自同一 cohort 的 retention 改善，还是新客、套餐、价格与退出类型的构成变化？
 - 2026-09-19 — 一个观察组凭什么能替代处理组缺失的反事实，分组、观察和推广边界分别还留下什么风险？
 - 2026-09-19 — 更高 CAC / SAC 是否买到了更快回收的 cohort，还是只让 acquisition spending 上升？
+- 2026-09-20 — 一个概率究竟对应哪个事件、截止时间、信息集与模型，什么新证据应让它改变？
+- 2026-09-20 — 一个 acquisition cohort 的 LTV 对 retention tail、contribution margin、discount rate 与 CAC 口径分别有多敏感？

@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-09-20
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件进入收件箱
+- 进入 Probability & Bayesian Thinking 新模块，新增 `META.PROBABILITY.FOUNDATION`
+- 新增 `CASE.APOPHIS.IMPACT_PROBABILITY.2004_2021`，用 2.7% 撞击估计、档案影像、98% 位置不确定性缩减与 2021 年雷达排除建立概率直觉
+- 明确概率必须附着于事件、时间、信息集与模型，并区分真实结果、知识分布、单次结果和长期校准
+- 将近地天体观测、光学 astrometry、雷达测距、Sentry 与行星防御记录为 Knowledge Expansion exposure；Base Rate 保留到 9 月 21 日
+- 完成 Industry Apprenticeship：新增 `BUS.SUBSCRIPTION.LTV` 与 `CASE.DIRECTV.LTV_PROXY.2014`
+- 用 DIRECTV 2014 年公开数据构建严格标注的教学 proxy：未折现 gross LTV 约 2,399 美元，假设 10% 年折现后约 1,574 美元，均非官方 cohort LTV
+- 更新因果整合、CAC / Payback、行业日志、Question Bank、CURRENT_STATE 与网站地图数据
+- 下一课锁定 2026-09-21 Base Rate 与 Pricing & Packaging
+
 ## 2026-09-19
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件进入收件箱

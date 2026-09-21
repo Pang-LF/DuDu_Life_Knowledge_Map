@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-19
+Last updated: 2026-09-20
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-19
 
 ## Next Immediate Focus（下一步）
 
-2026-09-20：Probability Day 1 — Probability Foundation（概率基础），建立“不确定性的可比较表达”；Industry Apprenticeship 进入 LTV & Unit Economics（客户终身价值与单位经济模型）的前置骨架。
+2026-09-21：Probability Day 2 — Base Rate（基础概率），建立“新证据必须放回参照类”的直觉；Industry Apprenticeship 进入 Pricing & Packaging（定价与套餐）。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-19
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-20：进入 Probability & Bayesian Thinking 新模块，完成 Probability Day 1 — Foundation（概率基础）。主课跟随 Apophis 从一个望远镜光点变成可能轨道分布：2004 年有限信息下的 2029 撞击概率一度约 2.7%，档案影像排除 2029 撞击，Arecibo 雷达将预测位置不确定性降低约 98%，2021 年 Goldstone 与 Green Bank 雷达最终排除至少 100 年内撞击。课程区分真实轨道与知识分布、概率与结果、低概率事件发生与概率错误，并要求每个概率写明事件、时间、信息集和模型。Industry Apprenticeship 新增 LTV & Unit Economics：用 DIRECTV 公开数据建立明确标注的教学 proxy，36.47 美元月贡献与 1.52% 恒定 churn 给出约 2,399 美元未折现 gross LTV；加入假设 10% 年折现后约 1,574 美元，均非官方 cohort LTV。`META.PROBABILITY.FOUNDATION` 为 L2 candidate，`BUS.SUBSCRIPTION.LTV` 为 L1 candidate，等待 Teach-back。
 
 2026-09-19：完成 Causal Reasoning Day 5 — Integration（因果推理整合）。主课跟随 1954 年 Salk 脊髓灰质炎疫苗现场试验中的一名儿童，沿地区、学校、父母同意、随机分配、症状报告和病例分类逐层审计比较。随机安慰剂区的疫苗组为 200,745 人、33 例麻痹型病例、16 / 100,000；安慰剂组为 201,229 人、110 例、55 / 100,000，对应约 71% 相对效力；同区未注射者却只有 36 / 100,000，说明几十万样本仍无法修复 consent selection。Randomization、blinding、internal validity 与 generalization 被按各自阻断的偏差路径分开。Industry Apprenticeship 用 DIRECTV 2014 年 33.60 亿美元 acquisition cost、380.4 万 gross adds 与 883 美元 SAC 说明收入法把 payback 错算为 8.3 个月；34.1% Pre-SAC Margin 只能给出约 24.2 个月的 segment-average proxy，加入 1.52% 假设固定 churn 后约 30 个月，均明确不是公司官方 cohort payback。`META.CAUSAL.INTEGRATION` 为 L2 candidate，四个前置因果节点完成陌生案例复习；`BUS.SUBSCRIPTION.CAC_PAYBACK` 为 L1 candidate，均等待 Teach-back。
 

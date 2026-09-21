@@ -29,9 +29,9 @@ cases:
   - "Netflix pricing and subscriber flows, 2011"
 
 first_seen: "2026-09-17"
-last_reviewed: "2026-09-19"
-next_review: "2026-09-22"
+last_reviewed: "2026-09-20"
+next_review: "2026-09-23"
 sources:
   - "https://s22.q4cdn.com/959853165/files/doc_news/archive/8ab8f6b7-1ed7-4c0b-9539-5ebb4e212e2d.pdf"
   - "https://www.sec.gov/Archives/edgar/data/1065280/000119312511278716/d246709dex991.htm"
-notes: "Industry foundation lesson. Churn, retention, cohorts, and customer-month were introduced as vocabulary, but detailed churn measurement and LTV are deferred. Mastery remains candidate until Teach-back."
+notes: "Industry foundation lesson. Reviewed on 2026-09-20 as the customer-month and cohort prerequisite for LTV. Churn and retention have now been taught in detail; mastery remains candidate until Teach-back."

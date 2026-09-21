@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 62,
+    progress: 66,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 48,
+    progress: 52,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -197,6 +197,14 @@ export const nodes: GraphNode[] = [
     connections: ['META.CAUSAL.CORRELATION_CAUSATION', 'META.CAUSAL.CONFOUNDER', 'META.CAUSAL.COUNTERFACTUAL', 'META.CAUSAL.SELECTION_BIAS', 'META.PROBABILITY.FOUNDATION', 'CASE.SALK.POLIO_VACCINE_FIELD_TRIAL.1954'],
   },
   {
+    id: 'META.PROBABILITY.FOUNDATION',
+    label: 'Probability Foundation（概率基础）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'Probability quantifies uncertainty about a defined event under a stated horizon, information set and model; evidence can change the distribution even when the underlying event does not change.',
+    connections: ['META.CAUSAL.INTEGRATION', 'META.PROBABILITY.BASE_RATE', 'META.PROBABILITY.CONDITIONAL', 'META.BAYESIAN.UPDATING', 'META.FORECASTING.CALIBRATION', 'BUS.SUBSCRIPTION.LTV', 'CASE.APOPHIS.IMPACT_PROBABILITY.2004_2021'],
+  },
+  {
     id: 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004',
     label: 'Smoking & Lung Cancer（吸烟与肺癌）',
     domain: 'META',
@@ -235,6 +243,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'Randomized placebo recipients supplied a credible counterfactual among consenters; the lower disease rate among uninoculated nonparticipants exposed why untreated groups are not automatically comparable.',
     connections: ['META.CAUSAL.INTEGRATION'],
+  },
+  {
+    id: 'CASE.APOPHIS.IMPACT_PROBABILITY.2004_2021',
+    label: 'Apophis Impact Probability（阿波菲斯撞击概率）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'Limited 2004 observations briefly assigned 2.7% probability to a 2029 impact; archival images and radar narrowed and shifted the allowed orbit distribution until impact was excluded for at least 100 years.',
+    connections: ['META.PROBABILITY.FOUNDATION'],
   },
   {
     id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
@@ -378,7 +394,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'A subscription is a continuing payer relationship: additions and cancellations change the customer stock, while customer-months, realized prices and plan mix generate period revenue.',
-    connections: ['BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.INDUSTRY_POWER_SHIFT', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.CAC_PAYBACK', 'CASE.NETFLIX.PRICING.2011'],
+    connections: ['BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.INDUSTRY_POWER_SHIFT', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.CAC_PAYBACK', 'BUS.SUBSCRIPTION.LTV', 'CASE.NETFLIX.PRICING.2011'],
   },
   {
     id: 'BUS.SUBSCRIPTION.CHURN_RETENTION',
@@ -386,7 +402,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Churn requires an explicit exit, denominator and period; cohort retention follows the same relationships through tenure so changing acquisition, plan and exit mix cannot hide inside one aggregate rate.',
-    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CAC_PAYBACK', 'META.CAUSAL.SELECTION_BIAS', 'CASE.NETFLIX.PRICING.2011'],
+    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CAC_PAYBACK', 'BUS.SUBSCRIPTION.LTV', 'META.CAUSAL.SELECTION_BIAS', 'CASE.NETFLIX.PRICING.2011'],
   },
   {
     id: 'BUS.SUBSCRIPTION.CAC_PAYBACK',
@@ -395,6 +411,14 @@ export const nodes: GraphNode[] = [
     mastery: 'L1 candidate',
     summary: 'Acquisition spending is recovered by retained cohort contribution margin, not ARPU; payback accumulates active customer-month margin until it covers consistently defined CAC or SAC.',
     connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.LTV', 'CASE.DIRECTV.SAC_PAYBACK.2014'],
+  },
+  {
+    id: 'BUS.SUBSCRIPTION.LTV',
+    label: 'LTV & Unit Economics（终身价值与单位经济）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'LTV is the present value of future cohort contribution margin, built from retention, realized margin and discounting; acquisition value requires comparison with consistently scoped CAC or SAC.',
+    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.CAC_PAYBACK', 'BUS.SUBSCRIPTION.PRICING_PACKAGING', 'META.PROBABILITY.FOUNDATION', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.DIRECTV.LTV_PROXY.2014'],
   },
   {
     id: 'CASE.NETFLIX.OPEN_CONNECT',
@@ -436,15 +460,23 @@ export const nodes: GraphNode[] = [
     summary: 'DIRECTV reported $883 SAC; ARPU implied a false 8.3-month recovery, while contribution margin and retained cohort customer-months made the economic payback much longer.',
     connections: ['BUS.SUBSCRIPTION.CAC_PAYBACK'],
   },
+  {
+    id: 'CASE.DIRECTV.LTV_PROXY.2014',
+    label: 'DIRECTV LTV Proxy 2014（终身价值代理）',
+    domain: 'BUSINESS',
+    mastery: 'Case studied',
+    summary: 'Public segment averages illustrate how retention, contribution and discounting shape LTV, while their mixed-cohort boundaries prevent the proxy from becoming an official customer-level result.',
+    connections: ['BUS.SUBSCRIPTION.LTV'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-09-19',
-  title: 'Causal Reasoning Integration（因果推理整合）',
-  question: '安慰剂没有保护作用，为什么安慰剂儿童的瘫痪率反而高于未参加注射的儿童？',
-  reading: '45-60 min：跟随一名儿童穿过同意、随机分组与诊断门，完成一次完整因果比较审计。',
-  discussion: '20-30 min：审计 AI 助手产出结论，并用 retained cohort margin 比较两个获客渠道。',
-  next: '2026-09-20：Probability Foundation 与 LTV / Unit Economics。',
+  date: '2026-09-20',
+  title: 'Probability Foundation（概率基础）',
+  question: 'Apophis 的真实轨道没有改变，撞击概率为什么能从 2.7% 变成被排除？',
+  reading: '45-60 min：跟随一个天文观测点进入可能轨道分布，重建概率的事件、信息与模型边界。',
+  discussion: '20-30 min：解释单次结果为何不能判定概率对错，并按 cohort retention 重建 LTV。',
+  next: '2026-09-21：Base Rate 与 Pricing & Packaging。',
 }
 
 export const monthlyTrack = [
