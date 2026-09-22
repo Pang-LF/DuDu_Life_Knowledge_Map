@@ -1,0 +1,43 @@
+id: "BUS.MEDIA.AD_SUPPORTED_STREAMING"
+name_en: "Ad-Supported Streaming"
+name_zh: "广告支持流媒体"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Ad-supported streaming turns viewing time into measurable advertising inventory while charging viewers a lower subscription fee or no fee. The platform serves both viewers and advertisers through the same content and product."
+why: "A second payer can expand monetization and support a lower consumer price, but value depends on viewing, ad load, sold inventory, realized net CPM, ad costs, rights, experience and retention rather than subscriber price alone."
+mechanism: "Acquire and retain an active ad-tier audience; create limited ad inventory from viewing; sell and deliver impressions subject to fill and frequency controls; measure advertiser outcomes; combine subscription and advertising revenue; subtract attributable content, service, sales and technology costs; compare cohort retention and LTV with ad-free alternatives."
+example: "Netflix launched U.S. Basic with Ads at $6.99 in November 2022 with an average four to five advertising minutes per hour. It reported nearly 5 million global monthly active users in May 2023, 15 million in November 2023 and 40 million in May 2024, while public data did not disclose plan-level contribution or LTV."
+my_take: "I should evaluate an ad tier as a two-sided cohort business whose unit value is conditional on viewing, fill, net CPM, costs and retention, not as a cheap subscription with automatic extra revenue."
+
+prerequisites:
+  - "BUS.SUBSCRIPTION.PRICING_PACKAGING"
+  - "BUS.MEDIA.STREAMING.TECH_FOUNDATIONS"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+connections:
+  - "BUS.SUBSCRIPTION.PRICING_PACKAGING"
+  - "BUS.SUBSCRIPTION.CHURN_RETENTION"
+  - "BUS.SUBSCRIPTION.LTV"
+  - "BUS.MEDIA.STREAMING.TECH_FOUNDATIONS"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.MEDIA.REAGGREGATION"
+  - "META.PROBABILITY.CONDITIONAL"
+  - "CASE.NETFLIX.AD_SUPPORTED_PLAN.2022_2024"
+questions:
+  - "Does subscription plus advertising contribution, after ad costs and retention effects, create incremental cohort LTV or merely migrate existing users to a cheaper plan?"
+cases:
+  - "Netflix ad-supported plan launch and scale-up, 2022-2024"
+
+first_seen: "2026-09-22"
+last_reviewed: "2026-09-22"
+next_review: "2026-09-25"
+sources:
+  - "https://about.netflix.com/en/news/announcing-basic-with-ads-us"
+  - "https://about.netflix.com/en/news/netflix-2023-upfront-building-a-forever-business"
+  - "https://about.netflix.com/en/news/one-year-into-netflix-ads"
+  - "https://ir.netflix.net/files/doc_financials/2023/q4/NEW-FINAL-Q4-23-Shareholder-Letter.pdf"
+  - "https://about.netflix.com/en/news/netflix-upfront-2024-the-year-of-growth-and-momentum"
+notes: "Industry apprenticeship continuation. Monthly active users are not paid memberships, revenue or profit. Public sources do not identify ad-tier cohort retention, incremental migration, net advertising contribution or LTV. Mastery remains candidate until Teach-back."

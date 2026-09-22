@@ -234,3 +234,17 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Boundary: Public disclosures do not provide plan-level retention, ad contribution or LTV; aggregate subscriber and ARPU changes do not identify a causal effect of tiering alone.
 - Status: `BUS.SUBSCRIPTION.PRICING_PACKAGING` at L1 candidate; Teach-back pending.
 - Next: Ad-supported streaming — how a two-sided viewer-and-advertiser model changes revenue, experience and scale.
+
+### 2026-09-22 — Ad-Supported Streaming Is A Two-Sided Cohort Business
+
+- Question: Why can Netflix's lower-priced ad plan create more unit value than a higher-priced ad-free plan, and what must be measured before believing that it does?
+- Parent concepts: Pricing & Packaging defines the plan and price fence; Streaming Delivery supplies viewer-hours; Customer Relationship and Retention determine whether the lower entry point expands a durable cohort.
+- Second payer: Viewers pay a subscription fee and contribute attention; advertisers pay for measurable access to the resulting audience.
+- Inventory mechanism: Viewer-hours become impressions through ad load, while fill rate, realized net CPM and frequency caps determine which theoretical slots become valuable revenue.
+- Rights boundary: The 2022 launch lacked some titles because subscription streaming rights did not automatically include advertising rights.
+- Product trade-off: Netflix launched at $6.99 with four to five ad minutes per hour, 720p and no downloads, then improved the plan to 1080p, two streams and downloads in 2023.
+- Scale anchors: Nearly 5 million global MAU in May 2023, 15 million in November 2023 and 40 million in May 2024; over 40% of signups in ad countries selected the ad plan by May 2024.
+- Measurement boundary: MAU is not paid membership, revenue or profit. Public disclosures do not identify plan-level retention, migration, net ad contribution or LTV.
+- Decision method: Compare cohort subscription and ad revenue, viewing, fill, net CPM, attributable ad costs, migration, retention, contribution, payback and LTV.
+- Status: `BUS.MEDIA.AD_SUPPORTED_STREAMING` at L1 candidate; Teach-back pending.
+- Next: Re-aggregation — why streaming services are being recombined through devices, billing, discovery, discounts and content packages.

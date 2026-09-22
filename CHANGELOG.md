@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 2026-09-22
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件进入收件箱
+- 完成 Probability Day 3：新增 `META.PROBABILITY.CONDITIONAL`，以“条件筛选子总体并改变分母”为唯一主旨
+- 新增 `CASE.UC_BERKELEY.ADMISSIONS.1973`，区分全校 44.3% / 34.6% 汇总录取率、交换条件后的 28.6% 与院系条件录取率
+- 用六个最大院系的申请组合解释汇总与分组方向为何不同，并把 Simpson's Paradox、录取统计与分层分析记录为 Knowledge Expansion exposure
+- 保留关键证据边界：院系条件适合审计院系决策，但不能证明整个教育系统公平，也不能自动产生因果结论
+- 完成 Industry Apprenticeship：新增 `BUS.MEDIA.AD_SUPPORTED_STREAMING` 与 `CASE.NETFLIX.AD_SUPPORTED_PLAN.2022_2024`
+- 沿一个 viewer-month 重建订阅费、ad load、impression、fill rate、net CPM、frequency cap、成本、retention 与 LTV
+- 区分 Netflix 广告档 MAU、付费会员、收入与利润，并保留公开数据无法识别 plan-level contribution 和增量 LTV 的边界
+- 更新 Probability Foundation、Base Rate、Pricing & Packaging、LTV、行业日志、Question Bank、CURRENT_STATE 与网站地图数据
+- 下一课锁定 2026-09-23 Bayesian Updating 与 Re-aggregation
+
 ## 2026-09-21
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件进入收件箱

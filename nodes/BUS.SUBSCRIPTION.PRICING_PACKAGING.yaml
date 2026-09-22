@@ -30,12 +30,11 @@ cases:
   - "Disney+ U.S. ad-supported and premium tiering, 2022-2023"
 
 first_seen: "2026-09-21"
-last_reviewed: "2026-09-21"
-next_review: "2026-09-24"
+last_reviewed: "2026-09-22"
+next_review: "2026-09-25"
 sources:
   - "https://thewaltdisneycompany.com/app/uploads/2022/08/2022-Domestic-DTC-Pricing-Changes.pdf"
   - "https://thewaltdisneycompany.com/news/ad-supported-disney-plan-launches-with-more-than-100-advertisers/"
   - "https://www.sec.gov/Archives/edgar/data/1744489/000174448923000216/dis-20230930.htm"
   - "https://www.sec.gov/Archives/edgar/data/1744489/000174448924000073/dis-20240201.htm"
-notes: "Industry apprenticeship continuation. Public filings show aggregate subscribers and ARPU, not plan-level retention, ad contribution or LTV, so no causal claim is made that tiering alone improved value. Mastery remains candidate until Teach-back."
-
+notes: "Industry apprenticeship continuation. Reviewed on 2026-09-22 as the parent concept for ad-supported streaming: the lower-priced package adds a second payer but must still be judged by plan-level retained contribution. Mastery remains candidate until Teach-back."

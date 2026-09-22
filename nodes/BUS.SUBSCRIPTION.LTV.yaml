@@ -22,6 +22,7 @@ connections:
   - "BUS.SUBSCRIPTION.CHURN_RETENTION"
   - "BUS.SUBSCRIPTION.CAC_PAYBACK"
   - "BUS.SUBSCRIPTION.PRICING_PACKAGING"
+  - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
   - "META.PROBABILITY.FOUNDATION"
   - "META.PROBABILITY.EXPECTED_VALUE"
   - "CASE.DIRECTV.LTV_PROXY.2014"
@@ -31,9 +32,9 @@ cases:
   - "DIRECTV U.S. LTV proxy and disclosed aggregate boundaries, 2014"
 
 first_seen: "2026-09-20"
-last_reviewed: "2026-09-21"
-next_review: "2026-09-24"
+last_reviewed: "2026-09-22"
+next_review: "2026-09-25"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1465112/000104746915001196/a2223104z10-k.htm"
   - "https://www.sec.gov/Archives/edgar/data/1465112/000115752315000626/a51043087ex99_1.htm"
-notes: "Industry apprenticeship continuation. Reviewed on 2026-09-21 as the retained-value test for pricing and packaging. The DIRECTV figures remain instructional proxies rather than official cohort LTV disclosures; mastery remains candidate until Teach-back."
+notes: "Industry apprenticeship continuation. Reviewed on 2026-09-22 as the decision boundary for ad-supported streaming: subscription plus ad contribution must be adjusted for costs, migration and retention. The DIRECTV proxy remains instructional; mastery remains candidate until Teach-back."

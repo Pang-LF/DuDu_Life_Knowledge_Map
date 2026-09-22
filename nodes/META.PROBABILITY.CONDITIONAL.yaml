@@ -1,0 +1,40 @@
+id: "META.PROBABILITY.CONDITIONAL"
+name_en: "Conditional Probability"
+name_zh: "条件概率"
+domain: "META"
+module: "Probability & Bayesian Thinking（概率与贝叶斯思维）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "Conditional probability is the probability of a target event recalculated within the subpopulation selected by a stated condition. P(A|B) and P(B|A) usually differ because they use different denominators."
+why: "Aggregated rates mix subgroup probabilities with subgroup composition. Without naming the condition and denominator, evidence can be reversed, subgroup patterns can be hidden, and descriptive probabilities can be mistaken for causal effects."
+mechanism: "Define target event A and condition B; retain only units satisfying B; count A within that subset; write the denominator explicitly; when reversing or adding a condition, rebuild the denominator; use the data-generating process to decide which conditioning set answers the question."
+example: "Among all 1973 UC Berkeley graduate applications, 44.3% of male and 34.6% of female applicants were admitted. Within the six largest departments, women applied far more heavily to low-admission departments, so department-conditioned rates did not reproduce the aggregate disadvantage."
+my_take: "Before interpreting a percentage, I should complete the sentence 'among units satisfying which condition?' and avoid reversing the condition without rebuilding the denominator."
+
+prerequisites:
+  - "META.PROBABILITY.FOUNDATION"
+  - "META.PROBABILITY.BASE_RATE"
+connections:
+  - "META.PROBABILITY.FOUNDATION"
+  - "META.PROBABILITY.BASE_RATE"
+  - "META.BAYESIAN.UPDATING"
+  - "META.CAUSAL.SELECTION_BIAS"
+  - "META.CAUSAL.CONFOUNDER"
+  - "META.FORECASTING.CALIBRATION"
+  - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
+  - "CASE.UC_BERKELEY.ADMISSIONS.1973"
+questions:
+  - "What event is in the numerator, which stated condition defines the denominator, and would reversing or adding a condition answer a different question?"
+cases:
+  - "UC Berkeley graduate admissions, 1973"
+
+first_seen: "2026-09-22"
+last_reviewed: "2026-09-22"
+next_review: "2026-09-24"
+sources:
+  - "https://faculty.ucmerced.edu/jvevea/classes/Spark/readings/Bickel-Berkeley.pdf"
+  - "https://pubmed.ncbi.nlm.nih.gov/17835295/"
+  - "https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/UCBAdmissions.html"
+notes: "Probability Day 3. Simpson's paradox and stratified admissions analysis are exposure, not separate mastery nodes. Mastery remains a candidate until the user correctly selects and reverses denominators in an unfamiliar case and separates conditional description from causation."

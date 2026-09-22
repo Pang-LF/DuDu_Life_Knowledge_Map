@@ -30,3 +30,5 @@
 - 2026-09-20 — 一个 acquisition cohort 的 LTV 对 retention tail、contribution margin、discount rate 与 CAC 口径分别有多敏感？
 - 2026-09-21 — 当前个案属于哪个相关参照类，目标事件的 base rate 多大，非目标池会制造多少 false alarms？
 - 2026-09-21 — 一次提价与套餐重组究竟提高了 retained cohort contribution，还是只提高了 list price 与 aggregate ARPU？
+- 2026-09-22 — 当前百分比把什么事件放在分子、用什么已知条件筛选分母，交换或增加条件以后究竟回答了哪一个新问题？
+- 2026-09-22 — 广告档的订阅收入、观看量、fill rate、net CPM、成本与 retention 是否形成新增 cohort LTV，还是只让原有高价用户降级？

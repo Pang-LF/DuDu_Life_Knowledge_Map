@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-21
+Last updated: 2026-09-22
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-21
 
 ## Next Immediate Focus（下一步）
 
-2026-09-22：Probability Day 3 — Conditional Probability（条件概率），建立“交换条件会改变分母”的机制；Industry Apprenticeship 进入 Ad-Supported Streaming（广告支持流媒体）。
+2026-09-23：Probability Day 4 — Bayesian Updating（贝叶斯更新），从 Base Rate 出发用证据的似然更新信念；Industry Apprenticeship 进入 Re-aggregation（再聚合）。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-21
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-22：完成 Probability Day 3 — Conditional Probability（条件概率）。主课跟随 1973 年 UC Berkeley 的一份研究生申请，区分 `P(录取 | 女性)`、`P(女性 | 录取)`与`P(录取 | 女性，院系)`。全校 8,442 名男性申请者录取 3,738 人、44.3%，4,321 名女性录取 1,494 人、34.6%；但六个最大院系中，约 51.5% 男性申请者进入高录取率 A、B，女性只有约 7.2%，申请组合使汇总方向与多个院系内部方向不同。课程保留重要边界：按院系条件化适合审计院系决策，却不能证明整个教育与机会系统公平。Industry Apprenticeship 以 Netflix 2022–2024 广告档说明双边模式：6.99 美元订阅与每小时 4–5 分钟广告把 viewer-hours 转为 inventory，收入取决于 fill、net CPM、成本与 retention；全球 MAU 从 2023 年 5 月接近 500 万增至 2024 年 5 月 4,000 万，但 MAU 不是订户、收入或利润。`META.PROBABILITY.CONDITIONAL` 为 L2 candidate，`BUS.MEDIA.AD_SUPPORTED_STREAMING` 为 L1 candidate，等待 Teach-back。
 
 2026-09-21：完成 Probability Day 2 — Base Rate（基础概率）。主课跟随 2020 年威斯康星两所大学的一份无症状抗原阳性样本，重建“先数参照类，再解释新信号”。871 份无症状配对样本中只有 17 份 RT-PCR 阳性，base rate 约 2%；抗原检测识别 7 份 true positives，却从 854 份 RT-PCR 阴性中产生 14 份 false positives，因此 21 个抗原阳性中只有 33.3% 与 RT-PCR 同为阳性，尽管 specificity 为 98.4%。课程区分 specificity、PPV 与不同分母，并用有症状组 17.6% base rate、94.1% PPV 作有边界对照。Industry Apprenticeship 用 Disney+ 2022 年分层定价说明 Packaging：保留 7.99 美元广告档，把无广告档从 7.99 提到 10.99 美元；截至 2023 年 9 月美国广告档 520 万订户，财年 domestic ARPU 从 6.34 升到 6.97 美元，但公开数据不能识别 plan-level retention 或因果效果。`META.PROBABILITY.BASE_RATE` 为 L2 candidate，`BUS.SUBSCRIPTION.PRICING_PACKAGING` 为 L1 candidate，等待 Teach-back。
 

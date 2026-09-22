@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 70,
+    progress: 74,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 56,
+    progress: 60,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -213,6 +213,14 @@ export const nodes: GraphNode[] = [
     connections: ['META.PROBABILITY.FOUNDATION', 'META.PROBABILITY.CONDITIONAL', 'META.BAYESIAN.UPDATING', 'META.CAUSAL.SELECTION_BIAS', 'BUS.SUBSCRIPTION.PRICING_PACKAGING', 'CASE.WISCONSIN.CAMPUS_ANTIGEN_SCREENING.2020'],
   },
   {
+    id: 'META.PROBABILITY.CONDITIONAL',
+    label: 'Conditional Probability（条件概率）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'Conditional probability recalculates an event within the subpopulation selected by a stated condition; changing or reversing the condition changes the denominator, question and usually the answer.',
+    connections: ['META.PROBABILITY.FOUNDATION', 'META.PROBABILITY.BASE_RATE', 'META.BAYESIAN.UPDATING', 'META.CAUSAL.SELECTION_BIAS', 'META.CAUSAL.CONFOUNDER', 'META.FORECASTING.CALIBRATION', 'BUS.MEDIA.AD_SUPPORTED_STREAMING', 'CASE.UC_BERKELEY.ADMISSIONS.1973'],
+  },
+  {
     id: 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004',
     label: 'Smoking & Lung Cancer（吸烟与肺癌）',
     domain: 'META',
@@ -267,6 +275,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'With a 2% asymptomatic base rate, seven true-positive and fourteen false-positive antigen results produced 33.3% PPV despite 98.4% specificity.',
     connections: ['META.PROBABILITY.BASE_RATE'],
+  },
+  {
+    id: 'CASE.UC_BERKELEY.ADMISSIONS.1973',
+    label: 'UC Berkeley Admissions 1973（伯克利录取）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'Women had a lower aggregate admission rate, but their applications were concentrated in more selective departments; conditioning on the decision unit changed the denominator and the observed relationship.',
+    connections: ['META.PROBABILITY.CONDITIONAL'],
   },
   {
     id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
@@ -434,7 +450,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'LTV is the present value of future cohort contribution margin, built from retention, realized margin and discounting; acquisition value requires comparison with consistently scoped CAC or SAC.',
-    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.CAC_PAYBACK', 'BUS.SUBSCRIPTION.PRICING_PACKAGING', 'META.PROBABILITY.FOUNDATION', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.DIRECTV.LTV_PROXY.2014'],
+    connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.CAC_PAYBACK', 'BUS.SUBSCRIPTION.PRICING_PACKAGING', 'BUS.MEDIA.AD_SUPPORTED_STREAMING', 'META.PROBABILITY.FOUNDATION', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.DIRECTV.LTV_PROXY.2014'],
   },
   {
     id: 'BUS.SUBSCRIPTION.PRICING_PACKAGING',
@@ -443,6 +459,14 @@ export const nodes: GraphNode[] = [
     mastery: 'L1 candidate',
     summary: 'Pricing sets exchange terms; packaging combines content, features, advertising and products into tiers whose migration, retention and contribution determine value beyond list price.',
     connections: ['BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.LTV', 'BUS.MEDIA.AD_SUPPORTED_STREAMING', 'BUS.SUBSCRIPTION.BUNDLE', 'CASE.DISNEY_PLUS.TIERING.2022_2023'],
+  },
+  {
+    id: 'BUS.MEDIA.AD_SUPPORTED_STREAMING',
+    label: 'Ad-Supported Streaming（广告支持流媒体）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Viewer-hours create limited advertising inventory; subscription plus ad revenue must be evaluated after fill, net CPM, rights, ad costs, migration and retention rather than from the lower subscription price alone.',
+    connections: ['BUS.SUBSCRIPTION.PRICING_PACKAGING', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.LTV', 'BUS.MEDIA.STREAMING.TECH_FOUNDATIONS', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.REAGGREGATION', 'META.PROBABILITY.CONDITIONAL', 'CASE.NETFLIX.AD_SUPPORTED_PLAN.2022_2024'],
   },
   {
     id: 'CASE.NETFLIX.OPEN_CONNECT',
@@ -500,15 +524,23 @@ export const nodes: GraphNode[] = [
     summary: 'Disney+ preserved a $7.99 ad-supported entry tier and raised ad-free to $10.99, combining subscription pricing, advertiser revenue and bundle mix without revealing plan-level retention.',
     connections: ['BUS.SUBSCRIPTION.PRICING_PACKAGING'],
   },
+  {
+    id: 'CASE.NETFLIX.AD_SUPPORTED_PLAN.2022_2024',
+    label: 'Netflix Ads 2022–24（Netflix 广告档）',
+    domain: 'BUSINESS',
+    mastery: 'Case studied',
+    summary: 'Netflix launched a $6.99 ad tier with four to five ad minutes per hour and scaled reported global MAU from nearly 5 million to 40 million, without disclosing plan-level contribution or LTV.',
+    connections: ['BUS.MEDIA.AD_SUPPORTED_STREAMING'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-09-21',
-  title: 'Base Rate（基础概率）',
-  question: '一项特异度 98.4% 的检测呈阳性，为什么阳性者里只有三分之一与 RT-PCR 同为阳性？',
-  reading: '45-60 min：沿一份无症状配对样本，先数目标池与非目标池，再解释阳性信号。',
-  discussion: '20-30 min：解决设备故障预警，并用 plan-level retention 与贡献判断双档定价。',
-  next: '2026-09-22：Conditional Probability 与 Ad-Supported Streaming。',
+  date: '2026-09-22',
+  title: 'Conditional Probability（条件概率）',
+  question: '为什么 Berkeley 女性汇总录取率更低，多数院系内部却没有相同方向？',
+  reading: '45-60 min：跟随一份申请进入院系条件，重建分母、方向与汇总权重。',
+  discussion: '20-30 min：交换客服工单条件，并沿一个广告档用户判断新增 LTV。',
+  next: '2026-09-23：Bayesian Updating 与 Re-aggregation。',
 }
 
 export const monthlyTrack = [
