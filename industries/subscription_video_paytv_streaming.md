@@ -248,3 +248,16 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Decision method: Compare cohort subscription and ad revenue, viewing, fill, net CPM, attributable ad costs, migration, retention, contribution, payback and LTV.
 - Status: `BUS.MEDIA.AD_SUPPORTED_STREAMING` at L1 candidate; Teach-back pending.
 - Next: Re-aggregation — why streaming services are being recombined through devices, billing, discovery, discounts and content packages.
+
+### 2026-09-23 — Re-aggregation Recombines Layers, Not Necessarily Apps
+
+- Question: Why can Comcast recombine Netflix, Peacock and Apple TV+ after streaming grew by unbundling the traditional Cable package?
+- Definition: Re-aggregation recombines selected layers such as price, billing, entitlement, discovery, device placement or support while partner services can retain separate brands, apps, rights and product data.
+- StreamSaver structure: Eligible Xfinity Internet or TV customers could buy Netflix Standard with Ads, Peacock Premium and Apple TV+ for $15 monthly without an annual contract.
+- Savings anchor: Comcast stated more than 30%, or nearly $100 per year, versus then-current separate retail prices; this comparison does not measure value for households that would otherwise buy fewer services.
+- Relationship split: Comcast controls the bundle offer, billing and parts of device discovery; each service retains its app, content and important product-experience layers; entitlement synchronizes access without transferring content ownership.
+- Money-flow boundary: The household pays Comcast, but wholesale rates, revenue shares, cancellation duties and shared data fields are not public.
+- Decision test: Compare incremental adoption, migration, partner and broadband retention, contribution, support costs and cohort LTV against separate-purchase counterfactuals.
+- Structural comparison: Traditional Cable broadly combined linear channels and carriage in one package; StreamSaver is an optional modular combination of independent DTC services.
+- Status: `BUS.MEDIA.REAGGREGATION` at L1 candidate; Teach-back pending.
+- Next: Device and Operating-System Power — how the television home screen, default placement, cross-app search and advertising create leverage without content ownership.

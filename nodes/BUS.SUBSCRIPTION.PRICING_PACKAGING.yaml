@@ -22,6 +22,7 @@ connections:
   - "BUS.SUBSCRIPTION.CHURN_RETENTION"
   - "BUS.SUBSCRIPTION.LTV"
   - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
+  - "BUS.MEDIA.REAGGREGATION"
   - "BUS.SUBSCRIPTION.BUNDLE"
   - "CASE.DISNEY_PLUS.TIERING.2022_2023"
 questions:
@@ -30,11 +31,11 @@ cases:
   - "Disney+ U.S. ad-supported and premium tiering, 2022-2023"
 
 first_seen: "2026-09-21"
-last_reviewed: "2026-09-22"
-next_review: "2026-09-25"
+last_reviewed: "2026-09-23"
+next_review: "2026-09-26"
 sources:
   - "https://thewaltdisneycompany.com/app/uploads/2022/08/2022-Domestic-DTC-Pricing-Changes.pdf"
   - "https://thewaltdisneycompany.com/news/ad-supported-disney-plan-launches-with-more-than-100-advertisers/"
   - "https://www.sec.gov/Archives/edgar/data/1744489/000174448923000216/dis-20230930.htm"
   - "https://www.sec.gov/Archives/edgar/data/1744489/000174448924000073/dis-20240201.htm"
-notes: "Industry apprenticeship continuation. Reviewed on 2026-09-22 as the parent concept for ad-supported streaming: the lower-priced package adds a second payer but must still be judged by plan-level retained contribution. Mastery remains candidate until Teach-back."
+notes: "Industry apprenticeship continuation. Reviewed on 2026-09-23 through StreamSaver's optional three-service discount and the difference between list-price savings, migration and incremental cohort contribution. Mastery remains candidate until Teach-back."

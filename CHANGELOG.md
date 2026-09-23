@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-09-23
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件可在账户中检索
+- 完成 Probability Day 4：新增 `META.BAYESIAN.UPDATING`，以“从 Prior 出发，按证据在竞争假设下的区分力重新分配概率”为唯一主旨
+- 新增 `CASE.AF447.SEARCH.2009_2011`，用 AF447 搜索中的飞行动力学 / 反向漂移 Prior、区域 POD、信标存活与依赖假设重建 Bayesian Updating
+- 用 90% 与 20% POD 的明确假设对照解释为什么同一次未发现可把 20% 先验分别更新到约 2.4% 与 16.7%，但只要 POD 低于 100% 就不能归零
+- 保留关键证据边界：2011 年发现位置支持后验地图的资源配置用途，却不能验证全部先验权重、传感器 POD、漂移模型和执行假设
+- 将深海搜索、反向漂移、声学信标、侧扫声呐与 REMUS 6000 记录为 Knowledge Expansion exposure
+- 完成 Industry Apprenticeship：新增 `BUS.MEDIA.REAGGREGATION` 与 `CASE.COMCAST.STREAMSAVER.2024`
+- 以 Comcast 15 美元 StreamSaver 区分统一折扣、账单、权益与设备入口，以及仍由 Netflix、Peacock、Apple TV+ 保留的 App、内容和产品边界
+- 明确公开资料无法识别批发分成、plan-level adoption、迁移、宽带留存、partner contribution 或 cohort LTV
+- 更新 Probability Foundation、Base Rate、Conditional Probability、传统 Bundle、DTC Customer Relationship、Pricing、Churn、LTV、行业日志、Question Bank、CURRENT_STATE 与网站地图数据
+- 下一课锁定 2026-09-24 Expected Value + Calibration + Decision Case 与 Device & Operating-System Power
+
 ## 2026-09-22
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件进入收件箱

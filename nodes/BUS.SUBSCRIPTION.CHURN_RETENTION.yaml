@@ -16,6 +16,7 @@ my_take: "I should not ask only whether churn moved; I should ask which cohort, 
 prerequisites:
   - "BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION"
 connections:
+  - "BUS.MEDIA.REAGGREGATION"
   - "BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION"
   - "BUS.SUBSCRIPTION.CAC_PAYBACK"
   - "META.CAUSAL.SELECTION_BIAS"
@@ -26,10 +27,10 @@ cases:
   - "Netflix pricing, churn and plan migration, 2011"
 
 first_seen: "2026-09-18"
-last_reviewed: "2026-09-20"
-next_review: "2026-09-23"
+last_reviewed: "2026-09-23"
+next_review: "2026-09-26"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1065280/000119312511278716/d246709dex991.htm"
   - "https://www.sec.gov/Archives/edgar/data/1065280/000119312511284366/d222257d10q.htm"
   - "https://www.sec.gov/Archives/edgar/data/1065280/000119312512053009/d260328d10k.htm"
-notes: "Industry apprenticeship continuation. Reviewed on 2026-09-20 as the cohort survival input to LTV. Aggregate churn remains insufficient for a decision-ready cohort model; mastery remains candidate until Teach-back."
+notes: "Industry apprenticeship continuation. Reviewed on 2026-09-23 as a necessary test of re-aggregation: public launch facts do not identify whether a discounted bundle improves partner or broadband cohort retention. Mastery remains candidate until Teach-back."

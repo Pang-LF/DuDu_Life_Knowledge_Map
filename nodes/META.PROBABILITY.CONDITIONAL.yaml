@@ -31,10 +31,10 @@ cases:
   - "UC Berkeley graduate admissions, 1973"
 
 first_seen: "2026-09-22"
-last_reviewed: "2026-09-22"
-next_review: "2026-09-24"
+last_reviewed: "2026-09-23"
+next_review: "2026-09-25"
 sources:
   - "https://faculty.ucmerced.edu/jvevea/classes/Spark/readings/Bickel-Berkeley.pdf"
   - "https://pubmed.ncbi.nlm.nih.gov/17835295/"
   - "https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/UCBAdmissions.html"
-notes: "Probability Day 3. Simpson's paradox and stratified admissions analysis are exposure, not separate mastery nodes. Mastery remains a candidate until the user correctly selects and reverses denominators in an unfamiliar case and separates conditional description from causation."
+notes: "Probability Day 3. Reviewed on 2026-09-23 through P(no detection | wreckage in cell) versus P(wreckage in cell | no detection). Mastery remains a candidate until the user correctly selects and reverses denominators in an unfamiliar case."

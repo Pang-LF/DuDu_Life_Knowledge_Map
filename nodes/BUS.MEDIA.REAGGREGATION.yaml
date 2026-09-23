@@ -1,0 +1,41 @@
+id: "BUS.MEDIA.REAGGREGATION"
+name_en: "Streaming Re-aggregation"
+name_zh: "流媒体再聚合"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Streaming re-aggregation recombines selected layers of otherwise independent services, such as pricing, billing, entitlement, discovery, device placement or support, while the services can retain separate brands, apps, content rights and parts of the customer relationship."
+why: "DTC unbundling expanded choice and direct control but also multiplied acquisition, billing, discovery, cancellation and account-management costs. An aggregator can reduce these frictions and distribute services through an existing broadband, device or billing relationship."
+mechanism: "Acquire a household through an existing relationship; sell an optional multi-service package; synchronize entitlements across partner apps; consolidate billing and sometimes discovery; settle undisclosed wholesale or revenue-share economics; measure incremental adoption, migration, retention, contribution and LTV against separate-purchase counterfactuals."
+example: "Comcast launched StreamSaver in May 2024 for eligible Xfinity Internet or TV customers at $15 per month without an annual contract, combining Netflix Standard with Ads, Peacock Premium and Apple TV+ while the services remained separate apps."
+my_take: "I should evaluate re-aggregation layer by layer: who controls acquisition, identity, billing, entitlement, discovery, usage data, cancellation and winback, and whether the bundle creates incremental cohort value rather than discounted migration."
+
+prerequisites:
+  - "BUS.SUBSCRIPTION.BUNDLE"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.SUBSCRIPTION.PRICING_PACKAGING"
+connections:
+  - "BUS.SUBSCRIPTION.BUNDLE"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.SUBSCRIPTION.PRICING_PACKAGING"
+  - "BUS.SUBSCRIPTION.CHURN_RETENTION"
+  - "BUS.SUBSCRIPTION.LTV"
+  - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
+  - "BUS.MEDIA.DEVICE_OS_POWER"
+  - "META.BAYESIAN.UPDATING"
+  - "CASE.COMCAST.STREAMSAVER.2024"
+questions:
+  - "Which layers does the aggregator truly control, and does the bundle create incremental adoption, retention and contribution or mainly move existing customers to a discounted wholesale relationship?"
+cases:
+  - "Comcast StreamSaver launch, 2024"
+
+first_seen: "2026-09-23"
+last_reviewed: "2026-09-23"
+next_review: "2026-09-26"
+sources:
+  - "https://corporate.comcast.com/press/releases/comcast-introduces-peacock-netflix-and-apple-tv-streaming-bundle"
+  - "https://corporate.comcast.com/press/releases/streamsaver-bundle-netflix-peacock-apple-tv-plus"
+notes: "Industry apprenticeship continuation. Public materials do not disclose wholesale settlement, plan-level adoption, migration, broadband retention, partner contribution or cohort LTV. Mastery remains candidate until Teach-back."

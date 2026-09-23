@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 74,
+    progress: 79,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 60,
+    progress: 64,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -221,6 +221,14 @@ export const nodes: GraphNode[] = [
     connections: ['META.PROBABILITY.FOUNDATION', 'META.PROBABILITY.BASE_RATE', 'META.BAYESIAN.UPDATING', 'META.CAUSAL.SELECTION_BIAS', 'META.CAUSAL.CONFOUNDER', 'META.FORECASTING.CALIBRATION', 'BUS.MEDIA.AD_SUPPORTED_STREAMING', 'CASE.UC_BERKELEY.ADMISSIONS.1973'],
   },
   {
+    id: 'META.BAYESIAN.UPDATING',
+    label: 'Bayesian Updating（贝叶斯更新）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'Start from a prior and reallocate probability according to how likely the evidence was under competing hypotheses; more discriminating evidence produces a larger update.',
+    connections: ['META.PROBABILITY.FOUNDATION', 'META.PROBABILITY.BASE_RATE', 'META.PROBABILITY.CONDITIONAL', 'META.PROBABILITY.EXPECTED_VALUE', 'META.FORECASTING.CALIBRATION', 'META.CAUSAL.INTEGRATION', 'BUS.MEDIA.REAGGREGATION', 'CASE.AF447.SEARCH.2009_2011'],
+  },
+  {
     id: 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004',
     label: 'Smoking & Lung Cancer（吸烟与肺癌）',
     domain: 'META',
@@ -283,6 +291,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'Women had a lower aggregate admission rate, but their applications were concentrated in more selective departments; conditioning on the decision unit changed the denominator and the observed relationship.',
     connections: ['META.PROBABILITY.CONDITIONAL'],
+  },
+  {
+    id: 'CASE.AF447.SEARCH.2009_2011',
+    label: 'AF447 Bayesian Search（AF447 贝叶斯搜索）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'Prior location probabilities were updated by search-specific detection probabilities, so failed high-POD searches reduced an area more than failed low-POD searches without automatically eliminating it.',
+    connections: ['META.BAYESIAN.UPDATING'],
   },
   {
     id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
@@ -469,6 +485,14 @@ export const nodes: GraphNode[] = [
     connections: ['BUS.SUBSCRIPTION.PRICING_PACKAGING', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.LTV', 'BUS.MEDIA.STREAMING.TECH_FOUNDATIONS', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.REAGGREGATION', 'META.PROBABILITY.CONDITIONAL', 'CASE.NETFLIX.AD_SUPPORTED_PLAN.2022_2024'],
   },
   {
+    id: 'BUS.MEDIA.REAGGREGATION',
+    label: 'Streaming Re-aggregation（流媒体再聚合）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Independent streaming services can recombine pricing, billing, entitlement, discovery and device placement while retaining separate apps, brands, rights and parts of the customer relationship.',
+    connections: ['BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.SUBSCRIPTION.PRICING_PACKAGING', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.LTV', 'BUS.MEDIA.AD_SUPPORTED_STREAMING', 'BUS.MEDIA.DEVICE_OS_POWER', 'META.BAYESIAN.UPDATING', 'CASE.COMCAST.STREAMSAVER.2024'],
+  },
+  {
     id: 'CASE.NETFLIX.OPEN_CONNECT',
     label: 'Netflix Open Connect（本地内容交付）',
     domain: 'BUSINESS',
@@ -532,15 +556,23 @@ export const nodes: GraphNode[] = [
     summary: 'Netflix launched a $6.99 ad tier with four to five ad minutes per hour and scaled reported global MAU from nearly 5 million to 40 million, without disclosing plan-level contribution or LTV.',
     connections: ['BUS.MEDIA.AD_SUPPORTED_STREAMING'],
   },
+  {
+    id: 'CASE.COMCAST.STREAMSAVER.2024',
+    label: 'Comcast StreamSaver 2024（流媒体再聚合）',
+    domain: 'BUSINESS',
+    mastery: 'Case studied',
+    summary: 'A $15 Xfinity bundle recombined Netflix, Peacock and Apple TV+ pricing, billing and entitlements while the services remained distinct apps and undisclosed wholesale economics limited value conclusions.',
+    connections: ['BUS.MEDIA.REAGGREGATION'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-09-22',
-  title: 'Conditional Probability（条件概率）',
-  question: '为什么 Berkeley 女性汇总录取率更低，多数院系内部却没有相同方向？',
-  reading: '45-60 min：跟随一份申请进入院系条件，重建分母、方向与汇总权重。',
-  discussion: '20-30 min：交换客服工单条件，并沿一个广告档用户判断新增 LTV。',
-  next: '2026-09-23：Bayesian Updating 与 Re-aggregation。',
+  date: '2026-09-23',
+  title: 'Bayesian Updating（贝叶斯更新）',
+  question: '为什么一次“没有找到”既能改变海底概率地图，又不能把区域概率直接归零？',
+  reading: '45-60 min：跟随 AF447 搜索图上的一格海底，从 Prior、POD 与未发现结果重建 Posterior。',
+  discussion: '20-30 min：计算陌生安全告警的后验，并拆解 StreamSaver 的客户关系层。',
+  next: '2026-09-24：Expected Value + Calibration 与 Device / OS Power。',
 }
 
 export const monthlyTrack = [

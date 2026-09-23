@@ -29,8 +29,8 @@ cases:
   - "Apophis impact-probability updates, 2004-2021"
 
 first_seen: "2026-09-20"
-last_reviewed: "2026-09-22"
-next_review: "2026-09-24"
+last_reviewed: "2026-09-23"
+next_review: "2026-09-25"
 sources:
   - "https://science.nasa.gov/solar-system/asteroids/apophis-facts/"
   - "https://cneos.jpl.nasa.gov/doc/apophis/"
@@ -38,4 +38,4 @@ sources:
   - "https://cneos.jpl.nasa.gov/sentry/notes.html"
   - "https://cneos.jpl.nasa.gov/news/news146.html"
   - "https://www.weather.gov/lmk/pops"
-notes: "Probability Day 1. Reviewed on 2026-09-22 as the parent concept for Conditional Probability: every conditional percentage still requires a defined event, information set and denominator. Mastery remains a candidate until user Teach-back."
+notes: "Probability Day 1. Reviewed on 2026-09-23 as the parent concept for Bayesian Updating: AF447's location probability described uncertainty under a stated model and information set, not a changing physical location. Mastery remains a candidate until user Teach-back."

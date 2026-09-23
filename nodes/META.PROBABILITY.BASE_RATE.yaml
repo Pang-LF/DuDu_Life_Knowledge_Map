@@ -28,10 +28,10 @@ cases:
   - "Wisconsin university SARS-CoV-2 antigen screening, 2020"
 
 first_seen: "2026-09-21"
-last_reviewed: "2026-09-22"
-next_review: "2026-09-24"
+last_reviewed: "2026-09-23"
+next_review: "2026-09-25"
 sources:
   - "https://www.cdc.gov/mmwr/volumes/69/wr/mm695152a3.htm"
   - "https://www.cdc.gov/mmwr/volumes/69/wr/pdfs/mm695152a3-H.pdf"
   - "https://www.fda.gov/medical-devices/coronavirus-covid-19-and-medical-devices/antibody-serology-testing-covid-19-information-patients-and-consumers"
-notes: "Probability Day 2. Reviewed on 2026-09-22 as the pre-evidence starting point for conditional interpretation. Mastery remains a candidate until the user can solve an unfamiliar low-base-rate alert problem with natural frequencies."
+notes: "Probability Day 2. Reviewed on 2026-09-23 as the prior starting point for Bayesian Updating and in the unfamiliar cybersecurity alert example. Mastery remains a candidate until the user solves the Teach-back with natural frequencies."

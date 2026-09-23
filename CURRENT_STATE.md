@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-22
+Last updated: 2026-09-23
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-22
 
 ## Next Immediate Focus（下一步）
 
-2026-09-23：Probability Day 4 — Bayesian Updating（贝叶斯更新），从 Base Rate 出发用证据的似然更新信念；Industry Apprenticeship 进入 Re-aggregation（再聚合）。
+2026-09-24：Probability Day 5 — Expected Value（期望值）+ Calibration（校准）+ Decision Case（决策案例）；Industry Apprenticeship 进入 Device & Operating-System Power（设备与操作系统权力）。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-22
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-23：完成 Probability Day 4 — Bayesian Updating（贝叶斯更新）。主课跟随 AF447 海底搜索图上的一格区域，先用假设例子比较 90% 与 20% detection probability 下同一次“没有找到”：区域后验分别从 20% 降至约 2.4% 与 16.7%，再进入真实搜索的飞行动力学 / 反向漂移 Prior、旧搜索 POD、信标存活和相关性假设。2011 年后验地图帮助优先配置第四阶段搜索，WHOI 团队约一周后在约 3,900 米深处、距最后已知点约 6.5 海里处发现残骸；课程保留“成功不验证所有权重、POD 与执行假设”的边界。Industry Apprenticeship 以 Comcast 2024 StreamSaver 解释 Re-aggregation：15 美元组合 Netflix Standard with Ads、Peacock Premium 与 Apple TV+，重新组合折扣、账单、权益与设备入口，但不合并 App、品牌和内容权利；公开资料不识别批发分成、迁移、宽带留存或 cohort LTV。`META.BAYESIAN.UPDATING` 为 L2 candidate，`BUS.MEDIA.REAGGREGATION` 为 L1 candidate，等待 Teach-back。
 
 2026-09-22：完成 Probability Day 3 — Conditional Probability（条件概率）。主课跟随 1973 年 UC Berkeley 的一份研究生申请，区分 `P(录取 | 女性)`、`P(女性 | 录取)`与`P(录取 | 女性，院系)`。全校 8,442 名男性申请者录取 3,738 人、44.3%，4,321 名女性录取 1,494 人、34.6%；但六个最大院系中，约 51.5% 男性申请者进入高录取率 A、B，女性只有约 7.2%，申请组合使汇总方向与多个院系内部方向不同。课程保留重要边界：按院系条件化适合审计院系决策，却不能证明整个教育与机会系统公平。Industry Apprenticeship 以 Netflix 2022–2024 广告档说明双边模式：6.99 美元订阅与每小时 4–5 分钟广告把 viewer-hours 转为 inventory，收入取决于 fill、net CPM、成本与 retention；全球 MAU 从 2023 年 5 月接近 500 万增至 2024 年 5 月 4,000 万，但 MAU 不是订户、收入或利润。`META.PROBABILITY.CONDITIONAL` 为 L2 candidate，`BUS.MEDIA.AD_SUPPORTED_STREAMING` 为 L1 candidate，等待 Teach-back。
 

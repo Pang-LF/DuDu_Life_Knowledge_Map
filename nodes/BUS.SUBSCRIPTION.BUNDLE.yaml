@@ -25,14 +25,15 @@ connections:
   - "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
   - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
   - "BUS.MEDIA.AGGREGATOR"
+  - "BUS.MEDIA.REAGGREGATION"
 questions:
   - "Under what conditions does bundling create more total value, and when does it mainly transfer value through market power?"
 
 first_seen: "2026-09-08"
-last_reviewed: "2026-09-14"
-next_review: "2026-09-18"
+last_reviewed: "2026-09-23"
+next_review: "2026-09-26"
 sources:
   - "https://ccs.mit.edu/papers/CCSWP199/"
   - "https://docs.fcc.gov/public/attachments/FCC-18-181A7.pdf"
   - "https://www.sec.gov/Archives/edgar/data/1091667/000109166724000028/chtr-20231231.htm"
-notes: "Industry Apprenticeship Day 3. The user has received the mechanism but has not yet completed Teach-back."
+notes: "Industry Apprenticeship Day 3. Reviewed on 2026-09-23 against streaming re-aggregation: traditional Cable combined broad linear carriage, billing and interface, while StreamSaver recombines selected layers of independent apps. Mastery remains candidate until Teach-back."

@@ -1,0 +1,43 @@
+id: "META.BAYESIAN.UPDATING"
+name_en: "Bayesian Updating"
+name_zh: "贝叶斯更新"
+domain: "META"
+module: "Probability & Bayesian Thinking（概率与贝叶斯思维）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "Bayesian updating starts from a prior probability and reallocates probability after evidence according to how likely that evidence was under competing hypotheses. Evidence that discriminates more strongly between hypotheses produces a larger update."
+why: "New information should neither erase previous evidence nor be ignored. A disciplined update combines the starting prevalence with the evidence's true-detection and false-alarm behavior, preventing vivid signals, search failures or repeated correlated alerts from being overinterpreted."
+mechanism: "State mutually competing hypotheses and their priors; estimate the likelihood of the observed evidence under each; multiply prior odds by the likelihood ratio; normalize to obtain posterior probabilities; test sensitivity to model assumptions and evidence dependence; treat the posterior as the prior for the next genuinely new observation."
+example: "In the AF447 search, each seabed cell's prior probability was reduced according to the probability that previous search equipment would have detected wreckage there. A failed high-detection-probability search reduced a cell more than a failed low-detection-probability search, without making either probability automatically zero."
+my_take: "When evidence arrives, I should ask how often I would see it under each competing explanation, update from the recorded starting probability, and expose assumptions about detection, false alarms and dependence."
+
+prerequisites:
+  - "META.PROBABILITY.FOUNDATION"
+  - "META.PROBABILITY.BASE_RATE"
+  - "META.PROBABILITY.CONDITIONAL"
+connections:
+  - "META.PROBABILITY.FOUNDATION"
+  - "META.PROBABILITY.BASE_RATE"
+  - "META.PROBABILITY.CONDITIONAL"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.FORECASTING.CALIBRATION"
+  - "META.CAUSAL.INTEGRATION"
+  - "BUS.MEDIA.REAGGREGATION"
+  - "CASE.AF447.SEARCH.2009_2011"
+questions:
+  - "What was my prior, how probable is this evidence under each competing hypothesis, how dependent is it on evidence already counted, and which assumption drives the posterior?"
+cases:
+  - "Air France Flight 447 underwater search, 2009-2011"
+
+first_seen: "2026-09-23"
+last_reviewed: "2026-09-23"
+next_review: "2026-09-25"
+sources:
+  - "https://bea.aero/en/investigation-reports/notified-events/detail/accident-to-the-airbus-a330-203-registered-f-gzcp-and-operated-by-air-france-occured-on-06-01-2009-in-the-atlantic-ocean"
+  - "https://bea.aero/uploads/tx_elyextendttnews/metron.search.analysis.pdf"
+  - "https://bea.aero/fileadmin/uploads/tx_elyextendttnews/sea.search.ops.af447.05.11.2012.en_03.pdf"
+  - "https://www.whoi.edu/press-room/news-release/whoi-led-team-locates-air-france-wreckage/"
+  - "https://arxiv.org/abs/1405.4720"
+notes: "Probability Day 4. Deep-sea search technology is exposure only. Mastery remains a candidate until the user reconstructs a posterior from natural frequencies in an unfamiliar cybersecurity case and recognizes correlated evidence."
