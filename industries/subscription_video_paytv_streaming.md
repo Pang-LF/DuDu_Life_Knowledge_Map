@@ -261,3 +261,17 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Structural comparison: Traditional Cable broadly combined linear channels and carriage in one package; StreamSaver is an optional modular combination of independent DTC services.
 - Status: `BUS.MEDIA.REAGGREGATION` at L1 candidate; Teach-back pending.
 - Next: Device and Operating-System Power — how the television home screen, default placement, cross-app search and advertising create leverage without content ownership.
+
+### 2026-09-24 — The TV Operating System Controls The Moment Before App Choice
+
+- Question: Why can Roku gain industry power without owning most programming or the household broadband connection?
+- Minimum unit: One viewer turns on a Roku-powered TV, sees the home screen, discovers a title, opens or installs an app, signs up or returns, and watches.
+- Power mechanism: The OS controls repeated pre-viewing surfaces including the home screen, cross-app discovery, account, optional billing, native advertising and some behavioral data.
+- Partner economics: Roku reports digital advertising plus streaming distribution revenue, including subscription and transaction shares, Premium Subscriptions and branded remote-control app buttons.
+- Scale anchors: Roku ended 2024 with 89.8 million Streaming Households and 127.1 billion Streaming Hours, up about 19.9% from 106.0 billion.
+- Segment contrast: Platform revenue was $3.523 billion and platform gross profit $1.886 billion; devices revenue was $590 million and devices recorded an $80.3 million gross loss.
+- Strategic interpretation: Competitive device pricing can acquire an installed OS relationship whose multi-year platform monetization matters more than hardware margin alone.
+- Power boundary: Strong apps can acquire directly, content partners can withhold apps, users and OEMs can choose rival platforms, and privacy rules can constrain data and advertising.
+- Evidence boundary: Segment totals do not reveal device-cohort LTV, home-screen causal effects, ranking motives or confidential partner economics.
+- Status: `BUS.MEDIA.DEVICE_OS_POWER` at L1 candidate; Teach-back pending.
+- Next: App Distribution & Platform Terms — how listing, billing, revenue share, advertising inventory and data rights make a DTC relationship partly indirect.

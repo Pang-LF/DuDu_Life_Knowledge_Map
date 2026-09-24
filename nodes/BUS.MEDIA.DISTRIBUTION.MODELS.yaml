@@ -23,17 +23,18 @@ connections:
   - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
   - "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
   - "BUS.MEDIA.STREAMING.TECH_FOUNDATIONS"
+  - "BUS.MEDIA.DEVICE_OS_POWER"
 questions:
   - "Which layer creates the most durable leverage when content, billing, broadband, and device access are controlled by different firms?"
 cases:
   - "One household across Comcast broadband, YouTube TV, ESPN, Apple TV, and Netflix"
 
 first_seen: "2026-09-14"
-last_reviewed: "2026-09-15"
-next_review: "2026-09-19"
+last_reviewed: "2026-09-24"
+next_review: "2026-09-27"
 sources:
   - "https://docs.fcc.gov/public/attachments/FCC-24-136A1.pdf"
   - "https://www.sec.gov/Archives/edgar/data/1166691/000162828026004994/cmcsa-20251231.htm"
   - "https://www.directv.com/how-to-watch/"
   - "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm"
-notes: "Industry Apprenticeship Day 7. Reviewed on 2026-09-15 as the commercial-layer prerequisite for broadband and streaming technology. Mastery remains candidate until Teach-back."
+notes: "Industry Apprenticeship Day 7. Reviewed on 2026-09-24 to separate Roku's device and OS layer from content ownership, app operation and the household broadband last mile. Mastery remains candidate until Teach-back."

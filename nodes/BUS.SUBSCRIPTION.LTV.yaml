@@ -33,9 +33,9 @@ cases:
   - "DIRECTV U.S. LTV proxy and disclosed aggregate boundaries, 2014"
 
 first_seen: "2026-09-20"
-last_reviewed: "2026-09-23"
-next_review: "2026-09-26"
+last_reviewed: "2026-09-24"
+next_review: "2026-09-27"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1465112/000104746915001196/a2223104z10-k.htm"
   - "https://www.sec.gov/Archives/edgar/data/1465112/000115752315000626/a51043087ex99_1.htm"
-notes: "Industry apprenticeship continuation. Reviewed on 2026-09-23 as the decision boundary for re-aggregation: discount, wholesale settlement, migration, incremental adoption and retention must be evaluated together. Mastery remains candidate until Teach-back."
+notes: "Industry apprenticeship continuation. Reviewed on 2026-09-24 by treating a low- or negative-margin device as a potential acquisition investment whose value depends on retained multi-year platform contribution, not segment averages alone. Mastery remains candidate until Teach-back."

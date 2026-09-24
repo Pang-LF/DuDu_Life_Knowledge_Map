@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 79,
+    progress: 84,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 64,
+    progress: 68,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -229,6 +229,14 @@ export const nodes: GraphNode[] = [
     connections: ['META.PROBABILITY.FOUNDATION', 'META.PROBABILITY.BASE_RATE', 'META.PROBABILITY.CONDITIONAL', 'META.PROBABILITY.EXPECTED_VALUE', 'META.FORECASTING.CALIBRATION', 'META.CAUSAL.INTEGRATION', 'BUS.MEDIA.REAGGREGATION', 'CASE.AF447.SEARCH.2009_2011'],
   },
   {
+    id: 'META.PROBABILITY.EXPECTED_VALUE',
+    label: 'Expected Value（期望值）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'Compare actions before uncertainty resolves by multiplying each mutually exclusive outcome probability by its value; one lucky or unlucky realization does not determine decision quality.',
+    connections: ['META.PROBABILITY.FOUNDATION', 'META.BAYESIAN.UPDATING', 'META.FORECASTING.CALIBRATION', 'META.CAUSAL.INTEGRATION', 'BUS.SUBSCRIPTION.LTV', 'BUS.MEDIA.DEVICE_OS_POWER', 'CASE.CDC.ACIP.MRNA_BENEFIT_RISK.2021'],
+  },
+  {
     id: 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004',
     label: 'Smoking & Lung Cancer（吸烟与肺癌）',
     domain: 'META',
@@ -299,6 +307,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'Prior location probabilities were updated by search-specific detection probabilities, so failed high-POD searches reduced an area more than failed low-POD searches without automatically eliminating it.',
     connections: ['META.BAYESIAN.UPDATING'],
+  },
+  {
+    id: 'CASE.CDC.ACIP.MRNA_BENEFIT_RISK.2021',
+    label: 'ACIP Benefit-Risk 2021（疫苗收益风险）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'A 120-day per-million-dose model exposed how incidence, effectiveness, age-specific severe outcomes and myocarditis risk jointly shaped an updateable decision rather than a timeless prescription.',
+    connections: ['META.PROBABILITY.EXPECTED_VALUE'],
   },
   {
     id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
@@ -493,6 +509,14 @@ export const nodes: GraphNode[] = [
     connections: ['BUS.SUBSCRIPTION.BUNDLE', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.SUBSCRIPTION.PRICING_PACKAGING', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.LTV', 'BUS.MEDIA.AD_SUPPORTED_STREAMING', 'BUS.MEDIA.DEVICE_OS_POWER', 'META.BAYESIAN.UPDATING', 'CASE.COMCAST.STREAMSAVER.2024'],
   },
   {
+    id: 'BUS.MEDIA.DEVICE_OS_POWER',
+    label: 'Device & OS Power（设备与操作系统权力）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'The TV OS controls repeated pre-viewing surfaces such as the home screen, cross-app discovery, identity, optional billing, advertising and data, creating distribution power without owning most content or broadband.',
+    connections: ['BUS.MEDIA.DISTRIBUTION.MODELS', 'BUS.MEDIA.STREAMING.TECH_FOUNDATIONS', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.REAGGREGATION', 'BUS.MEDIA.AD_SUPPORTED_STREAMING', 'BUS.MEDIA.APP_DISTRIBUTION_TERMS', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.ROKU.DEVICE_OS_POWER.2024'],
+  },
+  {
     id: 'CASE.NETFLIX.OPEN_CONNECT',
     label: 'Netflix Open Connect（本地内容交付）',
     domain: 'BUSINESS',
@@ -564,15 +588,23 @@ export const nodes: GraphNode[] = [
     summary: 'A $15 Xfinity bundle recombined Netflix, Peacock and Apple TV+ pricing, billing and entitlements while the services remained distinct apps and undisclosed wholesale economics limited value conclusions.',
     connections: ['BUS.MEDIA.REAGGREGATION'],
   },
+  {
+    id: 'CASE.ROKU.DEVICE_OS_POWER.2024',
+    label: 'Roku OS Power 2024（Roku 平台权力）',
+    domain: 'BUSINESS',
+    mastery: 'Case studied',
+    summary: 'Roku paired low- or negative-margin device economics with a much larger profitable platform layer built on home-screen discovery, advertising, billing and distribution relationships.',
+    connections: ['BUS.MEDIA.DEVICE_OS_POWER'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-09-23',
-  title: 'Bayesian Updating（贝叶斯更新）',
-  question: '为什么一次“没有找到”既能改变海底概率地图，又不能把区域概率直接归零？',
-  reading: '45-60 min：跟随 AF447 搜索图上的一格海底，从 Prior、POD 与未发现结果重建 Posterior。',
-  discussion: '20-30 min：计算陌生安全告警的后验，并拆解 StreamSaver 的客户关系层。',
-  next: '2026-09-24：Expected Value + Calibration 与 Device / OS Power。',
+  date: '2026-09-24',
+  title: 'Expected Value（期望值）',
+  question: '如果一项行动有少量严重副作用，为什么它仍可能拥有更高的概率加权价值？',
+  reading: '45-60 min：沿 ACIP 每一百万第二剂的决策单位，拆开概率、结果层级、价值与敏感假设。',
+  discussion: '20-30 min：计算工厂安全投资的期望成本，并沿一名观众拆解 Roku OS 权力。',
+  next: '2026-09-25：Anchoring 与 App Distribution / Platform Terms。',
 }
 
 export const monthlyTrack = [

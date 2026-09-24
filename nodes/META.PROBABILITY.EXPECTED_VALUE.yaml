@@ -1,0 +1,41 @@
+id: "META.PROBABILITY.EXPECTED_VALUE"
+name_en: "Expected Value"
+name_zh: "期望值"
+domain: "META"
+module: "Probability & Bayesian Thinking（概率与贝叶斯思维）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "Expected value is the probability-weighted average value of the mutually exclusive outcomes produced by an action. It compares decisions before uncertainty resolves rather than selecting the most likely outcome or judging a decision from one realized result."
+why: "Low-probability high-impact outcomes can dominate a decision even when nothing happening is the most likely individual result. Without outcome values, probabilities cannot select an action; without probabilities, vivid consequences cannot be compared consistently."
+mechanism: "Define the decision objective, available actions, time horizon and target population; enumerate mutually exclusive and collectively relevant outcomes under each action; estimate conditional probabilities; assign transparent values or retain a multi-dimensional consequence vector; multiply probability by value and sum; test sensitive inputs, constraints, risk tolerance and calibration; update when evidence or context changes."
+example: "In June 2021, ACIP estimated that one million second mRNA vaccine doses to males aged 12-29 could prevent 11,000 COVID-19 cases, 560 hospitalizations, 138 ICU admissions and six deaths over 120 days while producing 39-47 expected myocarditis cases. The dimensions were not treated as interchangeable counts, and the conclusion was explicitly conditional on contemporaneous incidence, vaccine effectiveness and surveillance evidence."
+my_take: "I should compare actions by their full probability-weighted consequences, expose value judgments and sensitive assumptions, and keep decision quality separate from the luck of one realized outcome."
+
+prerequisites:
+  - "META.PROBABILITY.FOUNDATION"
+  - "META.PROBABILITY.BASE_RATE"
+  - "META.PROBABILITY.CONDITIONAL"
+  - "META.BAYESIAN.UPDATING"
+connections:
+  - "META.PROBABILITY.FOUNDATION"
+  - "META.BAYESIAN.UPDATING"
+  - "META.FORECASTING.CALIBRATION"
+  - "META.CAUSAL.INTEGRATION"
+  - "BUS.SUBSCRIPTION.LTV"
+  - "BUS.MEDIA.DEVICE_OS_POWER"
+  - "CASE.CDC.ACIP.MRNA_BENEFIT_RISK.2021"
+questions:
+  - "What are the available actions, mutually exclusive outcomes, conditional probabilities, value scale, constraints and sensitive assumptions, and would the decision remain the same across plausible ranges?"
+cases:
+  - "CDC ACIP mRNA vaccine benefit-risk assessment, June 2021"
+
+first_seen: "2026-09-24"
+last_reviewed: "2026-09-24"
+next_review: "2026-09-27"
+sources:
+  - "https://www.cdc.gov/mmwr/volumes/70/wr/mm7027e2.htm"
+  - "https://www.cdc.gov/vaccine-safety-systems/vaers/index.html"
+  - "https://www.cdc.gov/vaccine-safety-systems/vsd/index.html"
+notes: "Probability Day 5 and the formal mastery core. Calibration was introduced only as an exposure-level probability-input quality test and remains reserved for the Forecasting module. Mastery remains candidate until the user solves an unfamiliar safety-investment case and names constraints that simple EV omits."

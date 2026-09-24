@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-23
+Last updated: 2026-09-24
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-23
 
 ## Next Immediate Focus（下一步）
 
-2026-09-24：Probability Day 5 — Expected Value（期望值）+ Calibration（校准）+ Decision Case（决策案例）；Industry Apprenticeship 进入 Device & Operating-System Power（设备与操作系统权力）。
+2026-09-25：进入 Cognitive Bias & Source Evaluation（认知偏差与信息源评估），以 Anchoring（锚定效应）为当天唯一 Mastery Core；Industry Apprenticeship 进入 App Distribution & Platform Terms（App 分发与平台条款）。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-23
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-24：完成 Probability Day 5 — Expected Value（期望值），以 Calibration（概率校准）作为概率输入的质量检验 exposure。主课跟随 CDC/ACIP 2021 年 mRNA 疫苗收益—风险决策，把单位统一为特定年龄性别人群每一百万第二剂与 120 天窗口。对 12–29 岁男性，模型估计避免 11,000 例病例、560 次住院、138 次 ICU 和 6 例死亡，同时出现 39–47 例心肌炎；课程明确这些嵌套且不同价值的结果不能机械相加或一比一相减，并用 30 岁以上男性的 4,598 次住院、700 例死亡与 3–4 例心肌炎作对照。Calibration 只定义为重复概率预测与实际频率的一致性，留待 9 月 28 日正式点亮。Industry Apprenticeship 以 Roku 2024 年 8,980 万 Streaming Households、1,271 亿 Streaming Hours、35.23 亿美元平台收入、18.86 亿美元平台毛利与 8,032 万美元设备毛亏损，解释首页、跨 App 发现、账单、数据和广告怎样让 OS 获得权力。`META.PROBABILITY.EXPECTED_VALUE` 为 L2 candidate，`BUS.MEDIA.DEVICE_OS_POWER` 为 L1 candidate，等待 Teach-back。
 
 2026-09-23：完成 Probability Day 4 — Bayesian Updating（贝叶斯更新）。主课跟随 AF447 海底搜索图上的一格区域，先用假设例子比较 90% 与 20% detection probability 下同一次“没有找到”：区域后验分别从 20% 降至约 2.4% 与 16.7%，再进入真实搜索的飞行动力学 / 反向漂移 Prior、旧搜索 POD、信标存活和相关性假设。2011 年后验地图帮助优先配置第四阶段搜索，WHOI 团队约一周后在约 3,900 米深处、距最后已知点约 6.5 海里处发现残骸；课程保留“成功不验证所有权重、POD 与执行假设”的边界。Industry Apprenticeship 以 Comcast 2024 StreamSaver 解释 Re-aggregation：15 美元组合 Netflix Standard with Ads、Peacock Premium 与 Apple TV+，重新组合折扣、账单、权益与设备入口，但不合并 App、品牌和内容权利；公开资料不识别批发分成、迁移、宽带留存或 cohort LTV。`META.BAYESIAN.UPDATING` 为 L2 candidate，`BUS.MEDIA.REAGGREGATION` 为 L1 candidate，等待 Teach-back。
 

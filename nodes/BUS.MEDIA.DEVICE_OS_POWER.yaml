@@ -1,0 +1,41 @@
+id: "BUS.MEDIA.DEVICE_OS_POWER"
+name_en: "Device and Operating-System Power"
+name_zh: "设备与操作系统权力"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A TV device and operating system can gain distribution power by controlling the home screen, app access, cross-service discovery, identity, billing, advertising surfaces and behavioral data before a viewer chooses a content service."
+why: "Streaming fragments content across apps. The layer that reduces discovery and transaction friction becomes valuable to viewers and content partners even when it does not own the underlying programming or household broadband connection."
+mechanism: "Place the OS in a household through low-priced devices or licensed TV designs; create repeated home-screen and search interactions; help apps acquire, bill and re-engage viewers; monetize UI and video advertising, subscription or transaction revenue shares, and placement; use engagement data to improve discovery while balancing content-partner dependence, user choice, privacy and platform competition."
+example: "Roku ended 2024 with 89.8 million Streaming Households and 127.1 billion Streaming Hours. It reported $3.523 billion of platform revenue and $1.886 billion of platform gross profit, compared with $590 million of devices revenue and an $80 million devices gross loss."
+my_take: "I should treat a television OS as a recurring distribution relationship rather than a menu, then trace who controls the first screen, search, signup, billing, usage data, advertising inventory and the user's ability to switch."
+
+prerequisites:
+  - "BUS.MEDIA.DISTRIBUTION.MODELS"
+  - "BUS.MEDIA.STREAMING.TECH_FOUNDATIONS"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.MEDIA.REAGGREGATION"
+connections:
+  - "BUS.MEDIA.DISTRIBUTION.MODELS"
+  - "BUS.MEDIA.STREAMING.TECH_FOUNDATIONS"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.MEDIA.REAGGREGATION"
+  - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
+  - "BUS.MEDIA.APP_DISTRIBUTION_TERMS"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "CASE.ROKU.DEVICE_OS_POWER.2024"
+questions:
+  - "Which pre-viewing surfaces and transaction layers does the OS control, how does that control change partner acquisition and monetization, and when do alternative devices or strong content brands limit its leverage?"
+cases:
+  - "Roku device and platform model, 2024"
+
+first_seen: "2026-09-24"
+last_reviewed: "2026-09-24"
+next_review: "2026-09-27"
+sources:
+  - "https://www.sec.gov/Archives/edgar/data/1428439/000142843925000013/roku-20241231.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1428439/000162828026008114/roku-20251231.htm"
+notes: "Industry apprenticeship continuation. Roku's aggregate segment economics demonstrate the hardware-to-platform architecture but do not identify device-cohort LTV, home-screen causal effects or confidential partner terms. Mastery remains candidate until Teach-back."

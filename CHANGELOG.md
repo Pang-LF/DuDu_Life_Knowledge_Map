@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-09-24
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 `SENT` 与 `INBOX` 标签
+- 完成 Probability Day 5：新增 `META.PROBABILITY.EXPECTED_VALUE`，以“比较行动发生前的概率加权后果，而非选择最可能结果或用事后输赢评价决策”为唯一主旨
+- 新增 `CASE.CDC.ACIP.MRNA_BENEFIT_RISK.2021`，用 2021 年 ACIP 每百万第二剂、120 天收益—风险模型重建 Expected Value
+- 区分 11,000 病例、560 次住院、138 次 ICU 与 6 例死亡的嵌套关系，说明不同健康结果不能机械相加或与 39–47 例心肌炎一比一相减
+- 用 30 岁以上男性每百万剂 4,598 次住院、700 例死亡与 3–4 例心肌炎作真实对照，并加入疫情发生率降至十分之一的明确假设敏感性测试
+- 将 Calibration 定义为重复概率预测与实际频率的一致性，只记录 exposure，保留到 9 月 28 日 Forecasting 正式点亮
+- 完成 Industry Apprenticeship：新增 `BUS.MEDIA.DEVICE_OS_POWER` 与 `CASE.ROKU.DEVICE_OS_POWER.2024`
+- 以 Roku 2024 年 8,980 万 Streaming Households、1,271 亿 Streaming Hours、35.23 亿美元平台收入、18.86 亿美元平台毛利与 8,032 万美元设备毛亏损解释 OS 权力
+- 明确首页、跨 App 发现、平台账单、数据和广告可以形成分发权力，但 aggregate segment data 不能识别 device-cohort LTV、首页因果效果或合作条款
+- 更新 Probability Foundation、Bayesian Updating、LTV、Distribution Models、Streaming Technology、DTC Customer Relationship、Re-aggregation、行业日志、Question Bank、CURRENT_STATE 与网站地图数据
+- 下一课锁定 2026-09-25 Anchoring 与 App Distribution & Platform Terms
+
 ## 2026-09-23
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件可在账户中检索
