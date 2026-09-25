@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 2026-09-25
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 `SENT`、`INBOX` 与未读标签
+- 完成 Cognitive Bias & Source Evaluation 第一天：新增 `META.COGNITIVE_BIAS.ANCHORING`，以“初始数值对判断的影响超过其证据资格”为唯一主旨
+- 新增 `CASE.JCPENNEY.FAIR_AND_SQUARE.2012`，用 2012 年净销售减少 42.75 亿美元、可比店销售下降 25.2% 与毛利率下降 4.7 个百分点重建现实现场
+- 用 Tversky–Kahneman 1974 年随机锚点 10 / 65 对应估计中位数 25% / 45% 提供受控机制证据，并明确公司前后对比不能识别 Anchoring 的独立因果贡献
+- 将防护落实为暴露前独立建立参照类、低中高范围与证据，并在暴露后只为可说明的新证据移动
+- 完成 Industry Apprenticeship：新增 `BUS.MEDIA.APP_DISTRIBUTION_TERMS` 与 `CASE.ROKU.APP_DISTRIBUTION_TERMS.2024`
+- 沿一次 Roku Pay 订阅拆解上架、认证、付款、续订、退款、标准 80/20 净收入分配、广告库存与数据访问
+- 明确公开标准文档不能外推到所有头部服务或私下协议，平台路径必须按增量 cohort conversion、retention、contribution 与关系控制权判断
+- 更新 Base Rate、Bayesian Updating、Expected Value、Pricing、DTC Customer Relationship、Re-aggregation、Device OS Power、行业日志、Question Bank、CURRENT_STATE 与网站地图数据
+- 下一课锁定 2026-09-26 Source Evaluation Foundation 与 Content Licensing / Windowing / Exclusivity
+
 ## 2026-09-24
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 `SENT` 与 `INBOX` 标签

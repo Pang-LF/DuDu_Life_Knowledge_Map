@@ -26,17 +26,18 @@ connections:
   - "BUS.MEDIA.AGGREGATOR"
   - "BUS.MEDIA.DISTRIBUTION.MODELS"
   - "BUS.MEDIA.DEVICE_OS_POWER"
+  - "BUS.MEDIA.APP_DISTRIBUTION_TERMS"
 questions:
   - "Across direct billing, app-store billing, and wholesale entitlements, which party controls acquisition, payment, behavioral data, cancellation, and the right to re-engage the user?"
 cases:
   - "Disney+ DTC launch and profitability path, 2019-2025"
 
 first_seen: "2026-09-13"
-last_reviewed: "2026-09-24"
-next_review: "2026-09-27"
+last_reviewed: "2026-09-25"
+next_review: "2026-09-28"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1744489/000174448919000225/fy2019q410k.htm"
   - "https://thewaltdisneycompany.com/news/disney-launches-today-and-a-new-era-of-disney-entertainment-begins/"
   - "https://www.sec.gov/Archives/edgar/data/1744489/000174448922000213/dis-20221001.htm"
   - "https://www.sec.gov/Archives/edgar/data/1744489/000174448925000155/dis-20250927.htm"
-notes: "Industry Apprenticeship Day 6. Reviewed on 2026-09-24 by tracing how an app can retain its product while Roku controls discovery, optional platform billing, some behavioral data and advertising surfaces. Mastery remains candidate until Teach-back."
+notes: "Industry Apprenticeship Day 6. Reviewed on 2026-09-25 by tracing how a branded app can retain content and product while Roku Pay controls transaction, renewal and refund layers under platform terms. Mastery remains candidate until Teach-back."

@@ -1,0 +1,42 @@
+id: "BUS.MEDIA.APP_DISTRIBUTION_TERMS"
+name_en: "App Distribution and Platform Terms"
+name_zh: "App 分发与平台条款"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "App distribution and platform terms allocate listing, certification, billing, renewal, refund, revenue share, advertising inventory, data access and customer-contact rights between a streaming service and a device platform."
+why: "A branded DTC app does not automatically control the full customer relationship. Platform convenience can raise conversion while dividing economics, transaction data and operating control."
+mechanism: "The platform supplies device reach, certification, identity and optional low-friction billing; the publisher supplies content and product experience; the agreement specifies which payment path is allowed, how net receipts and ad inventory are divided, which events each party can observe and who handles renewal, cancellation, refund and compliance. Value depends on incremental cohort conversion and retention, not the nominal revenue split alone."
+example: "Roku's public standard documentation describes Roku Pay as managing payment methods, subscriptions, invoices and payouts. It states that publishers receive 80% of net amounts actually collected for standard transactional apps while Roku retains 20%, but private negotiated terms and direct-billed services can differ."
+my_take: "I should replace the binary DTC label with a rights audit across acquisition, identity, billing, entitlement, usage data, cancellation, win-back, advertising inventory and economics, then compare incremental cohort value under each path."
+
+prerequisites:
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.MEDIA.REAGGREGATION"
+  - "BUS.MEDIA.DEVICE_OS_POWER"
+connections:
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.MEDIA.REAGGREGATION"
+  - "BUS.MEDIA.DEVICE_OS_POWER"
+  - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
+  - "BUS.SUBSCRIPTION.CAC_PAYBACK"
+  - "BUS.SUBSCRIPTION.LTV"
+  - "CASE.ROKU.APP_DISTRIBUTION_TERMS.2024"
+questions:
+  - "Which rights and responsibilities does each party control, and does the platform path create incremental retained contribution after revenue share rather than merely migrate direct subscribers?"
+cases:
+  - "Roku app distribution, Roku Pay and advertising-inventory terms, 2024-2026 public documentation"
+
+first_seen: "2026-09-25"
+last_reviewed: "2026-09-25"
+next_review: "2026-09-28"
+sources:
+  - "https://www.sec.gov/Archives/edgar/data/1428439/000142843925000013/roku-20241231.htm"
+  - "https://developer.roku.com/dev/docs/monetization"
+  - "https://developer.roku.com/dev/docs/billing"
+  - "https://developer.roku.com/dev/docs/roku-pay"
+  - "https://developer.roku.com/dev/docs/payouts"
+notes: "Industry apprenticeship continuation. The published 80/20 standard is not generalized to separately negotiated major services. Mastery remains candidate until the user compares direct and platform-billed cohorts and audits customer-relationship rights."

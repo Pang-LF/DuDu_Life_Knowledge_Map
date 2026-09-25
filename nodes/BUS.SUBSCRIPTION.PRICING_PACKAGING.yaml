@@ -22,6 +22,7 @@ connections:
   - "BUS.SUBSCRIPTION.CHURN_RETENTION"
   - "BUS.SUBSCRIPTION.LTV"
   - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
+  - "META.COGNITIVE_BIAS.ANCHORING"
   - "BUS.MEDIA.REAGGREGATION"
   - "BUS.SUBSCRIPTION.BUNDLE"
   - "CASE.DISNEY_PLUS.TIERING.2022_2023"
@@ -31,8 +32,8 @@ cases:
   - "Disney+ U.S. ad-supported and premium tiering, 2022-2023"
 
 first_seen: "2026-09-21"
-last_reviewed: "2026-09-23"
-next_review: "2026-09-26"
+last_reviewed: "2026-09-25"
+next_review: "2026-09-28"
 sources:
   - "https://thewaltdisneycompany.com/app/uploads/2022/08/2022-Domestic-DTC-Pricing-Changes.pdf"
   - "https://thewaltdisneycompany.com/news/ad-supported-disney-plan-launches-with-more-than-100-advertisers/"

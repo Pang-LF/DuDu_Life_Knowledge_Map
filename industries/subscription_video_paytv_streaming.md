@@ -275,3 +275,16 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Evidence boundary: Segment totals do not reveal device-cohort LTV, home-screen causal effects, ranking motives or confidential partner economics.
 - Status: `BUS.MEDIA.DEVICE_OS_POWER` at L1 candidate; Teach-back pending.
 - Next: App Distribution & Platform Terms — how listing, billing, revenue share, advertising inventory and data rights make a DTC relationship partly indirect.
+
+### 2026-09-25 — Platform Terms Split A Branded DTC Relationship
+
+- Question: When a user subscribes to a branded streaming app through Roku Pay, which parts of the direct customer relationship remain with the app and which move to the platform?
+- Minimum unit: One user installs a sports app, chooses a plan, confirms a saved Roku payment method, receives an entitlement, renews and may later cancel or request a refund.
+- Distribution layer: The app supplies content and product; Roku supplies device reach, certification, account-linked payment, renewal and payout services.
+- Standard economics: Roku's public documentation states that publishers receive 80% of net amounts actually collected for standard transactional apps while Roku retains 20%, after applicable taxes, credits, refunds and chargebacks.
+- Relationship split: The platform controls transaction and payment-state data; the app validates entitlement and observes in-product behavior; cancellation, refund, contact and win-back rights depend on the path and agreement.
+- Advertising layer: Roku reports that AVOD distribution agreements typically provide access to some partner video-ad inventory, but access varies substantially by app and may be absent.
+- Decision test: Compare incremental conversion, cohort retention, realized contribution, support and payment costs, migration from direct signup, data access and control rights rather than nominal 100% versus 80% revenue alone.
+- Evidence boundary: Public developer terms do not establish every major service's negotiated economics, data fields, placement commitments or advertising rights.
+- Status: `BUS.MEDIA.APP_DISTRIBUTION_TERMS` at L1 candidate; Teach-back pending.
+- Next: Content Licensing, Windowing & Exclusivity — how territory, term, medium, advertising and exclusivity define what it means for a service to have content.

@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-24
+Last updated: 2026-09-25
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-24
 
 ## Next Immediate Focus（下一步）
 
-2026-09-25：进入 Cognitive Bias & Source Evaluation（认知偏差与信息源评估），以 Anchoring（锚定效应）为当天唯一 Mastery Core；Industry Apprenticeship 进入 App Distribution & Platform Terms（App 分发与平台条款）。
+2026-09-26：继续 Cognitive Bias & Source Evaluation（认知偏差与信息源评估），以 Source Evaluation Foundation（信息源评估基础）为当天唯一 Mastery Core；Industry Apprenticeship 进入 Content Licensing, Windowing & Exclusivity（内容授权、窗口期与独家性）。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-24
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-25：进入 Cognitive Bias & Source Evaluation 新模块，完成 Anchoring（锚定效应）。主课先定义认知偏差为可预测的系统性判断偏移，再用 J.C. Penney 2012 年取消旧促销参照后的真实经营崩塌与 Tversky–Kahneman 1974 年随机锚点实验分层证据：公司净销售从 172.60 亿美元降至 129.85 亿美元、减少 42.75 亿且可比店销售下降 25.2%，但多项业务同时变化，不能识别 Anchoring 的独立因果贡献；受控实验中随机看到 10 与 65 的两组，估计中位数仍为 25% 与 45%，更干净地支持机制。防护被落实为暴露前独立写参照类、低中高范围和证据，再按证据资格更新。Industry Apprenticeship 沿一次 Roku Pay 订阅拆开上架、认证、账单、续订、退款、标准 80/20 净收入分配、广告库存与数据访问，并明确公开标准不能外推到所有私下协议。`META.COGNITIVE_BIAS.ANCHORING` 为 L2 candidate，`BUS.MEDIA.APP_DISTRIBUTION_TERMS` 为 L1 candidate，等待 Teach-back。
 
 2026-09-24：完成 Probability Day 5 — Expected Value（期望值），以 Calibration（概率校准）作为概率输入的质量检验 exposure。主课跟随 CDC/ACIP 2021 年 mRNA 疫苗收益—风险决策，把单位统一为特定年龄性别人群每一百万第二剂与 120 天窗口。对 12–29 岁男性，模型估计避免 11,000 例病例、560 次住院、138 次 ICU 和 6 例死亡，同时出现 39–47 例心肌炎；课程明确这些嵌套且不同价值的结果不能机械相加或一比一相减，并用 30 岁以上男性的 4,598 次住院、700 例死亡与 3–4 例心肌炎作对照。Calibration 只定义为重复概率预测与实际频率的一致性，留待 9 月 28 日正式点亮。Industry Apprenticeship 以 Roku 2024 年 8,980 万 Streaming Households、1,271 亿 Streaming Hours、35.23 亿美元平台收入、18.86 亿美元平台毛利与 8,032 万美元设备毛亏损，解释首页、跨 App 发现、账单、数据和广告怎样让 OS 获得权力。`META.PROBABILITY.EXPECTED_VALUE` 为 L2 candidate，`BUS.MEDIA.DEVICE_OS_POWER` 为 L1 candidate，等待 Teach-back。
 

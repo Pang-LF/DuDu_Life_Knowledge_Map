@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 84,
+    progress: 88,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 68,
+    progress: 72,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -234,7 +234,15 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'Compare actions before uncertainty resolves by multiplying each mutually exclusive outcome probability by its value; one lucky or unlucky realization does not determine decision quality.',
-    connections: ['META.PROBABILITY.FOUNDATION', 'META.BAYESIAN.UPDATING', 'META.FORECASTING.CALIBRATION', 'META.CAUSAL.INTEGRATION', 'BUS.SUBSCRIPTION.LTV', 'BUS.MEDIA.DEVICE_OS_POWER', 'CASE.CDC.ACIP.MRNA_BENEFIT_RISK.2021'],
+    connections: ['META.PROBABILITY.FOUNDATION', 'META.BAYESIAN.UPDATING', 'META.FORECASTING.CALIBRATION', 'META.COGNITIVE_BIAS.ANCHORING', 'META.CAUSAL.INTEGRATION', 'BUS.SUBSCRIPTION.LTV', 'BUS.MEDIA.DEVICE_OS_POWER', 'CASE.CDC.ACIP.MRNA_BENEFIT_RISK.2021'],
+  },
+  {
+    id: 'META.COGNITIVE_BIAS.ANCHORING',
+    label: 'Anchoring（锚定效应）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'An initial number or reference point can pull later estimates toward itself beyond its evidential entitlement; protection begins by recording an independent range and evidence before exposure.',
+    connections: ['META.PROBABILITY.BASE_RATE', 'META.BAYESIAN.UPDATING', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SOURCE_EVALUATION.FOUNDATION', 'META.FORECASTING.CALIBRATION', 'BUS.SUBSCRIPTION.PRICING_PACKAGING', 'CASE.JCPENNEY.FAIR_AND_SQUARE.2012'],
   },
   {
     id: 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004',
@@ -315,6 +323,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'A 120-day per-million-dose model exposed how incidence, effectiveness, age-specific severe outcomes and myocarditis risk jointly shaped an updateable decision rather than a timeless prescription.',
     connections: ['META.PROBABILITY.EXPECTED_VALUE'],
+  },
+  {
+    id: 'CASE.JCPENNEY.FAIR_AND_SQUARE.2012',
+    label: 'J.C. Penney Pricing 2012（简化定价）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'The loss of promotional reference prices coincided with a $4.275 billion sales decline, while simultaneous business changes prevented the real-world case from identifying anchoring alone.',
+    connections: ['META.COGNITIVE_BIAS.ANCHORING'],
   },
   {
     id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
@@ -517,6 +533,14 @@ export const nodes: GraphNode[] = [
     connections: ['BUS.MEDIA.DISTRIBUTION.MODELS', 'BUS.MEDIA.STREAMING.TECH_FOUNDATIONS', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.REAGGREGATION', 'BUS.MEDIA.AD_SUPPORTED_STREAMING', 'BUS.MEDIA.APP_DISTRIBUTION_TERMS', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.ROKU.DEVICE_OS_POWER.2024'],
   },
   {
+    id: 'BUS.MEDIA.APP_DISTRIBUTION_TERMS',
+    label: 'App Distribution Terms（App 分发条款）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Platform agreements allocate certification, billing, renewal, refund, revenue share, advertising inventory, data access and customer-contact rights between the app and device platform.',
+    connections: ['BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.MEDIA.REAGGREGATION', 'BUS.MEDIA.DEVICE_OS_POWER', 'BUS.MEDIA.AD_SUPPORTED_STREAMING', 'BUS.SUBSCRIPTION.LTV', 'CASE.ROKU.APP_DISTRIBUTION_TERMS.2024'],
+  },
+  {
     id: 'CASE.NETFLIX.OPEN_CONNECT',
     label: 'Netflix Open Connect（本地内容交付）',
     domain: 'BUSINESS',
@@ -596,15 +620,23 @@ export const nodes: GraphNode[] = [
     summary: 'Roku paired low- or negative-margin device economics with a much larger profitable platform layer built on home-screen discovery, advertising, billing and distribution relationships.',
     connections: ['BUS.MEDIA.DEVICE_OS_POWER'],
   },
+  {
+    id: 'CASE.ROKU.APP_DISTRIBUTION_TERMS.2024',
+    label: 'Roku Platform Terms（Roku 平台条款）',
+    domain: 'BUSINESS',
+    mastery: 'Case studied',
+    summary: 'Roku Pay can reduce signup friction while splitting transaction economics and control; public standard terms do not establish every major service\'s private agreement.',
+    connections: ['BUS.MEDIA.APP_DISTRIBUTION_TERMS'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-09-24',
-  title: 'Expected Value（期望值）',
-  question: '如果一项行动有少量严重副作用，为什么它仍可能拥有更高的概率加权价值？',
-  reading: '45-60 min：沿 ACIP 每一百万第二剂的决策单位，拆开概率、结果层级、价值与敏感假设。',
-  discussion: '20-30 min：计算工厂安全投资的期望成本，并沿一名观众拆解 Roku OS 权力。',
-  next: '2026-09-25：Anchoring 与 App Distribution / Platform Terms。',
+  date: '2026-09-25',
+  title: 'Anchoring（锚定效应）',
+  question: '为什么更低、更简单的价格可能因为失去参照点而显得不再便宜？',
+  reading: '45-60 min：用 J.C. Penney 真实案例与随机锚点实验，区分现实后果、机制证据和因果边界。',
+  discussion: '20-30 min：先于装修报价建立独立估计范围，再比较官网直付与 Roku Pay 的 cohort 权利和价值。',
+  next: '2026-09-26：Source Evaluation Foundation 与 Content Licensing / Windowing / Exclusivity。',
 }
 
 export const monthlyTrack = [

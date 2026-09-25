@@ -33,9 +33,9 @@ cases:
   - "Roku device and platform model, 2024"
 
 first_seen: "2026-09-24"
-last_reviewed: "2026-09-24"
-next_review: "2026-09-27"
+last_reviewed: "2026-09-25"
+next_review: "2026-09-28"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1428439/000142843925000013/roku-20241231.htm"
   - "https://www.sec.gov/Archives/edgar/data/1428439/000162828026008114/roku-20251231.htm"
-notes: "Industry apprenticeship continuation. Roku's aggregate segment economics demonstrate the hardware-to-platform architecture but do not identify device-cohort LTV, home-screen causal effects or confidential partner terms. Mastery remains candidate until Teach-back."
+notes: "Industry apprenticeship continuation. Reviewed on 2026-09-25 by following OS power into app certification, Roku Pay, standard revenue share, advertising inventory and data terms. Aggregate disclosures still do not identify incremental cohort LTV or confidential partner terms. Mastery remains candidate until Teach-back."

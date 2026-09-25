@@ -1,0 +1,40 @@
+id: "META.COGNITIVE_BIAS.ANCHORING"
+name_en: "Anchoring"
+name_zh: "锚定效应"
+domain: "META"
+module: "Cognitive Bias & Source Evaluation（认知偏差与信息源评估）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "Anchoring is the systematic pull of an initial number or reference point on a later estimate beyond the starting point's evidential entitlement, including when the anchor is arbitrary or supplied by an interested party."
+why: "An anchor can define the range that feels plausible and change which evidence comes to mind before formal probability, valuation or source evaluation begins. Knowing that a number is an anchor does not reliably remove its influence."
+mechanism: "An initial value supplies a starting point; judgment may stop after insufficient adjustment or selectively retrieve anchor-consistent evidence; the final estimate therefore remains too close to the initial value. Reduce exposure by recording an independent reference class, low-mid-high range and reasons before viewing external estimates, then update only for evidence whose relevance and reliability are explicit."
+example: "J.C. Penney's 2012 move away from promotional reference prices coincided with a 24.8% net-sales decline, but simultaneous business changes prevent causal identification. The cleaner mechanism evidence comes from Tversky and Kahneman's 1974 experiment: arbitrary anchors of 10 and 65 produced median estimates of 25% and 45% for the share of African countries in the UN."
+my_take: "Before seeing a quote, consensus or target price, I should write an independent range and its evidence; afterward I should explain every movement by new evidence rather than by distance from the first number."
+
+prerequisites:
+  - "META.PROBABILITY.FOUNDATION"
+  - "META.PROBABILITY.BASE_RATE"
+  - "META.BAYESIAN.UPDATING"
+connections:
+  - "META.PROBABILITY.BASE_RATE"
+  - "META.BAYESIAN.UPDATING"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.SOURCE_EVALUATION.FOUNDATION"
+  - "META.FORECASTING.CALIBRATION"
+  - "BUS.SUBSCRIPTION.PRICING_PACKAGING"
+  - "CASE.JCPENNEY.FAIR_AND_SQUARE.2012"
+questions:
+  - "What independent range and reference class would I write before seeing this number, what evidential entitlement does the anchor have, and which new facts justify moving my estimate?"
+cases:
+  - "J.C. Penney Fair and Square pricing transformation, 2012"
+  - "Tversky and Kahneman arbitrary-anchor experiment, 1974"
+
+first_seen: "2026-09-25"
+last_reviewed: "2026-09-25"
+next_review: "2026-09-28"
+sources:
+  - "https://www.sec.gov/Archives/edgar/data/1166126/000116612613000016/jcp-20130202x10k.htm"
+  - "https://doi.org/10.1126/science.185.4157.1124"
+notes: "First mastery core in Cognitive Bias & Source Evaluation. The J.C. Penney case supplies ecological context but does not isolate anchoring; the randomized arbitrary-anchor experiment supplies mechanism evidence. Mastery remains candidate until the user independently estimates an unfamiliar negotiation case before considering the quoted anchor."
