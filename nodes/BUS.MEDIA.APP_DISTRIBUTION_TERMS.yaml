@@ -22,6 +22,7 @@ connections:
   - "BUS.MEDIA.REAGGREGATION"
   - "BUS.MEDIA.DEVICE_OS_POWER"
   - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
+  - "BUS.MEDIA.CONTENT_LICENSING.WINDOWING"
   - "BUS.SUBSCRIPTION.CAC_PAYBACK"
   - "BUS.SUBSCRIPTION.LTV"
   - "CASE.ROKU.APP_DISTRIBUTION_TERMS.2024"
@@ -31,8 +32,8 @@ cases:
   - "Roku app distribution, Roku Pay and advertising-inventory terms, 2024-2026 public documentation"
 
 first_seen: "2026-09-25"
-last_reviewed: "2026-09-25"
-next_review: "2026-09-28"
+last_reviewed: "2026-09-26"
+next_review: "2026-09-29"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1428439/000142843925000013/roku-20241231.htm"
   - "https://developer.roku.com/dev/docs/monetization"

@@ -1,0 +1,40 @@
+id: "META.SOURCE_EVALUATION.FOUNDATION"
+name_en: "Source Evaluation Foundation"
+name_zh: "信息源评估基础"
+domain: "META"
+module: "Cognitive Bias & Source Evaluation（认知偏差与信息源评估）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "Source evaluation separates the source, exact claim, underlying evidence and inferential bridge, then asks whether what was measured directly supports the claim's strength and scope."
+why: "Authority, peer review and professional presentation can raise prior credibility but cannot repair indirect measurement, a weak comparison or an inference that outruns the evidence."
+mechanism: "Rewrite the claim into testable parts; locate primary evidence; map the chain from observation to conclusion; identify the comparison and strongest alternative explanation; seek independent, more diagnostic checks; update each subclaim separately rather than labeling an entire source true or false."
+example: "The GFAJ-1 paper and NASA communication elevated arsenate tolerance and indirect sample signals into a claim of phosphorus substitution in DNA. Independent 2012 experiments found phosphate dependence, no arsenate-driven growth and no detectable covalently bound arsenate in purified DNA; Science retracted the original paper in 2025."
+my_take: "I should let source reputation determine how quickly I investigate, not how strongly I conclude; conclusion strength must follow the directness, independence and diagnosticity of the evidence."
+
+prerequisites:
+  - "META.COGNITIVE_BIAS.ANCHORING"
+  - "META.PROBABILITY.BASE_RATE"
+  - "META.BAYESIAN.UPDATING"
+connections:
+  - "META.COGNITIVE_BIAS.ANCHORING"
+  - "META.BAYESIAN.UPDATING"
+  - "META.CAUSAL.INTEGRATION"
+  - "META.SOURCE_EVALUATION.INTEGRATION"
+  - "META.FORECASTING.CALIBRATION"
+  - "CASE.GFAJ1.ARSENIC_LIFE.2010_2025"
+questions:
+  - "What exact claim is being made, what was directly measured, what inferential steps remain, and which independent evidence most strongly distinguishes the claim from its alternatives?"
+cases:
+  - "GFAJ-1 arsenic-life claim, replication and retraction, 2010-2025"
+
+first_seen: "2026-09-26"
+last_reviewed: "2026-09-26"
+next_review: "2026-09-29"
+sources:
+  - "https://pubs.usgs.gov/publication/70036548"
+  - "https://pubmed.ncbi.nlm.nih.gov/21127214/"
+  - "https://pmc.ncbi.nlm.nih.gov/articles/PMC3845625/"
+  - "https://pubmed.ncbi.nlm.nih.gov/22773139/"
+notes: "First formal source-evaluation node. Mastery remains candidate until the user can decompose an unfamiliar claim and identify the most diagnostic evidence rather than relying on source prestige."

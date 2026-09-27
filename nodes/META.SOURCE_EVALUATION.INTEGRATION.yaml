@@ -1,0 +1,42 @@
+id: "META.SOURCE_EVALUATION.INTEGRATION"
+name_en: "Source Evaluation Integration"
+name_zh: "信息源评估整合"
+domain: "META"
+module: "Cognitive Bias & Source Evaluation（认知偏差与信息源评估）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "An epistemic audit traces a claim backward through event definition, sampling, instrumentation, calibration, synchronization, processing, statistics and inference, then uses independent diagnostic checks to update belief."
+why: "Large samples and strong statistical significance can precisely reproduce a shared systematic error. Reliability depends on the whole evidence chain and the independence and diagnosticity of follow-up measurements, not source labels or sample size alone."
+mechanism: "Freeze an independent prior; state the exact claim; reconstruct the measurement chain; mark assumptions and error directions; identify the component whose failure could generate the observed magnitude; derive predictions under competing explanations; seek checks that break shared failure paths; update each claim in proportion to the new evidence."
+example: "OPERA's 2011 60.7 ns neutrino anomaly used 15,223 events over about 730 km and reached roughly six-sigma significance, yet a fibre-optic timing connection and oscillator effects biased the shared timing chain. Independent ICARUS timing and four Gran Sasso experiments in 2012 found results consistent with light speed."
+my_take: "When evidence is surprising, I should not choose between institutional trust and reflexive disbelief; I should locate the shared measurement path and ask which independent check most changes the odds among competing explanations."
+
+prerequisites:
+  - "META.COGNITIVE_BIAS.ANCHORING"
+  - "META.SOURCE_EVALUATION.FOUNDATION"
+  - "META.BAYESIAN.UPDATING"
+  - "META.CAUSAL.INTEGRATION"
+connections:
+  - "META.COGNITIVE_BIAS.ANCHORING"
+  - "META.SOURCE_EVALUATION.FOUNDATION"
+  - "META.BAYESIAN.UPDATING"
+  - "META.CAUSAL.INTEGRATION"
+  - "META.FORECASTING.FOUNDATION"
+  - "META.FORECASTING.CALIBRATION"
+  - "CASE.OPERA.NEUTRINO_VELOCITY.2011_2012"
+questions:
+  - "Which shared component could generate the observed result despite a large sample, and what independent measurement would most sharply distinguish that failure from the substantive claim?"
+cases:
+  - "OPERA faster-than-light neutrino anomaly and correction, 2011-2012"
+
+first_seen: "2026-09-27"
+last_reviewed: "2026-09-27"
+next_review: "2026-09-30"
+sources:
+  - "https://home.cern/opera-experiment-reports-anomaly-in-flight-time-of-neutrinos-from-cern-to-gran-sasso/"
+  - "https://arxiv.org/abs/1109.4897v1"
+  - "https://cds.cern.ch/record/1498324"
+  - "https://arxiv.org/abs/1203.3433"
+notes: "Integration node for Anchoring and Source Evaluation. Mastery remains candidate until the user audits an unfamiliar measurement chain and proposes an independent diagnostic test."

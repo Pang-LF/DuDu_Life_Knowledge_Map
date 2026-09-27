@@ -1,0 +1,40 @@
+id: "BUS.MEDIA.SPORTS_RIGHTS"
+name_en: "Sports Media Rights"
+name_zh: "体育媒体版权"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Sports media rights grant bounded live, replay, clip and promotional uses by territory, season, platform, game package and competition stage; the league retains ownership and ungranted rights."
+why: "Live sports concentrate attention at a fixed time, creating advertising, acquisition, retention and cultural-reach value that differs from reusable film libraries and makes package design strategically important."
+mechanism: "The league divides games and stages across partners, balancing rights revenue, broadcast reach, streaming migration, schedule consistency and counterparty risk. Partners monetize through advertising, subscriptions, retention and broader platform engagement while accepting expensive, perishable inventory."
+example: "The NBA's 2024 agreements allocate an 11-year 2025-26 through 2035-36 package across Disney, NBCUniversal and Amazon. Disney receives 80 regular-season games and Finals exclusivity, NBCU up to 100 games, and Amazon 66 games; approximately 75 games reach broadcast TV versus a 15-game prior minimum."
+my_take: "I should value sports rights as a multidimensional package of synchronous attention, reach, subscription effects, ad inventory and risk rather than dividing an undisclosed fee by an unverified game count."
+
+prerequisites:
+  - "BUS.MEDIA.CONTENT_LICENSING.WINDOWING"
+  - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
+  - "BUS.MEDIA.REAGGREGATION"
+  - "BUS.MEDIA.DEVICE_OS_POWER"
+connections:
+  - "BUS.MEDIA.CONTENT_LICENSING.WINDOWING"
+  - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
+  - "BUS.MEDIA.REAGGREGATION"
+  - "BUS.MEDIA.DEVICE_OS_POWER"
+  - "BUS.SUBSCRIPTION.CHURN_RETENTION"
+  - "BUS.SUBSCRIPTION.LTV"
+  - "CASE.NBA.MEDIA_RIGHTS.2024"
+questions:
+  - "How should a league divide rights across territory, season, platform, games and postseason stages to balance revenue, reach, subscriber value, discovery and concentration risk?"
+cases:
+  - "NBA national media-rights agreements, 2024"
+
+first_seen: "2026-09-27"
+last_reviewed: "2026-09-27"
+next_review: "2026-09-30"
+sources:
+  - "https://www.nba.com/news/nba-media-agreements-2024"
+  - "https://thewaltdisneycompany.com/news/disney-and-espn-renew-nba-and-wnba-rights-heres-why-it-matters/"
+notes: "Industry apprenticeship continuation. Official announcements disclose package structure but not full rights fees, title-level profitability or consumer-welfare effects. Mastery remains candidate until Teach-back."

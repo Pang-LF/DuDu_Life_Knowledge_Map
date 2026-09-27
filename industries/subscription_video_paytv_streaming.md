@@ -288,3 +288,27 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Evidence boundary: Public developer terms do not establish every major service's negotiated economics, data fields, placement commitments or advertising rights.
 - Status: `BUS.MEDIA.APP_DISTRIBUTION_TERMS` at L1 candidate; Teach-back pending.
 - Next: Content Licensing, Windowing & Exclusivity — how territory, term, medium, advertising and exclusivity define what it means for a service to have content.
+
+### 2026-09-26 — A Service Licenses Bounded Rights, Not The Content Itself
+
+- Question: What did Netflix actually obtain when Sony announced an exclusive U.S. first-pay-window agreement?
+- Definition: A content license grants specified uses; title scope, territory, term, medium, release window, package and exclusivity determine the real boundary.
+- Historical reason: Studios traditionally monetize one title through sequential theatrical, home-entertainment, pay and later windows rather than selling every right in one transaction.
+- Agreement structure: Beginning with Sony's 2022 theatrical slate, qualifying films moved to Netflix in the United States after theatrical and home-entertainment windows for an exclusive first-pay period.
+- Ownership boundary: Sony retained the underlying IP and rights outside the granted title, territory, medium, period and window; Netflix did not acquire Sony's films outright.
+- Strategic exchange: Netflix bought a predictable post-theatrical slate and differentiation; Sony monetized a valuable window without needing to place every new film in a wholly owned general entertainment service.
+- Evidence boundary: The public announcement does not disclose financial terms, title-level dates, performance, every exclusion or the complete contract.
+- Status: `BUS.MEDIA.CONTENT_LICENSING.WINDOWING` at L1 candidate; Teach-back pending.
+- Next: Sports Media Rights — how live, perishable attention changes the value and design of a rights package.
+
+### 2026-09-27 — Sports Rights Package Synchronous Attention Across Platforms
+
+- Question: Why did the NBA divide an 11-year national package among Disney, NBCUniversal and Amazon rather than treat all games as one interchangeable license?
+- Definition: Sports media rights grant bounded live, replay, clip and promotional uses by territory, season, platform, game package and competition stage; the league retains ownership and ungranted rights.
+- Attention mechanism: A live game concentrates viewers at a fixed time, so one right can simultaneously create advertising inventory, subscriber acquisition, retention, platform engagement and cultural reach.
+- Package structure: The 2025-26 through 2035-36 agreements assign Disney 80 regular-season games and exclusive NBA Finals coverage, NBCU up to 100 regular-season games and Amazon 66 regular-season games, with additional postseason allocations.
+- Reach anchor: The NBA says roughly 75 regular-season games will be on broadcast television each season versus a prior minimum of 15, a fivefold increase in that minimum reach measure.
+- Aggregation layer: Rights are distributed across partners, while the NBA App is intended to act as a universal access point that directs viewers to the appropriate service.
+- Counting boundary: Announced package counts are not necessarily additive unique games; official announcements do not disclose full fees, profitability, incremental subscriber effects or consumer-welfare outcomes.
+- Status: `BUS.MEDIA.SPORTS_RIGHTS` at L1 candidate; Teach-back pending.
+- Next: September Industry Integration — reconstruct the full system from rights owner through platform, distributor, household and advertiser.

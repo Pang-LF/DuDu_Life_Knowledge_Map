@@ -1,0 +1,37 @@
+id: "BUS.MEDIA.CONTENT_LICENSING.WINDOWING"
+name_en: "Content Licensing, Windowing and Exclusivity"
+name_zh: "内容授权、窗口期与独家性"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A content license grants defined use rights rather than ownership; territory, term, medium, release window, title scope, package and exclusivity determine what a distributor can actually show."
+why: "Saying a service 'has' a film hides whether the right is temporary, regional, exclusive, post-theatrical, title-specific or part of an output slate, leading to bad conclusions about control and economics."
+mechanism: "The rights owner divides a title's lifecycle into windows and territories, sells or retains each bundle of rights, and balances early-window revenue against later reach and long-term IP value. The licensee pays for audience value and differentiation while accepting expiry and scope limits."
+example: "Sony's 2021 agreement granted Netflix a multiyear exclusive U.S. first pay window for qualifying theatrically released films beginning with the 2022 slate, after theatrical and home-entertainment windows, while Sony retained ownership and could exploit other territories and later windows."
+my_take: "Whenever a platform has content, I should ask who owns it and list the exact territory, term, medium, window, title set, package and exclusivity before inferring power or value."
+
+prerequisites:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.MEDIA.APP_DISTRIBUTION_TERMS"
+connections:
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.MEDIA.DISTRIBUTION.MODELS"
+  - "BUS.MEDIA.APP_DISTRIBUTION_TERMS"
+  - "BUS.MEDIA.SPORTS_RIGHTS"
+  - "BUS.SUBSCRIPTION.PRICING_PACKAGING"
+  - "CASE.SONY_NETFLIX.PAY_ONE.2021"
+questions:
+  - "Which precise rights were licensed across title, territory, term, medium, window and exclusivity, and what valuable rights remain with the owner or become available later?"
+cases:
+  - "Sony–Netflix U.S. Pay-One licensing agreement, 2021"
+
+first_seen: "2026-09-26"
+last_reviewed: "2026-09-26"
+next_review: "2026-09-29"
+sources:
+  - "https://www.sonypictures.com/corp/press_releases/2021/0408"
+notes: "Industry apprenticeship continuation. Financial terms and title-level performance were not public. Mastery remains candidate until the user can rewrite a vague ownership statement as a bounded license."

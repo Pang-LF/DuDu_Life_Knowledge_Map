@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-25
+Last updated: 2026-09-27
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-25
 
 ## Next Immediate Focus（下一步）
 
-2026-09-26：继续 Cognitive Bias & Source Evaluation（认知偏差与信息源评估），以 Source Evaluation Foundation（信息源评估基础）为当天唯一 Mastery Core；Industry Apprenticeship 进入 Content Licensing, Windowing & Exclusivity（内容授权、窗口期与独家性）。
+2026-09-28：进入 Forecasting Foundation（预测基础），将当前信念转成可解答、有截止时间、预先记录的概率预测；Industry Apprenticeship 进入 September Integration（九月行业整合）。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,10 @@ Last updated: 2026-09-25
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-27：完成 Cognitive Bias & Source Evaluation 整合课 — Epistemic Audit（认知审计）。主课以 OPERA 2011 年中微子超光速异常为现场：15,223 个事件、约 60.7 纳秒提前与约六个标准差并不能覆盖共享计时链上的系统误差；光纤连接与振荡器效应方向相反，独立 ICARUS 检查及 2012 年四个 Gran Sasso 实验将结果拉回到与光速一致。课程把 Anchoring、Claim–Evidence Fit、Bayesian Updating 和 Causal Audit 合成一条可执行的测量链审计方法。Industry Apprenticeship 以 NBA 2024 年 11 年媒体协议解释体育直播权怎样同时承载广告、拉新、留存、覆盖和平台价值。`META.SOURCE_EVALUATION.INTEGRATION` 为 L2 candidate，`BUS.MEDIA.SPORTS_RIGHTS` 为 L1 candidate，等待 Teach-back。
+
+2026-09-26：完成 Source Evaluation Foundation（信息源评估基础）。主课将 Source、Claim、Evidence 和 Inference 分开，用 GFAJ-1 “砷生命”争议解释 Claim–Evidence Fit：培养条件中约 13,333:1 的名义砷磷浓度比不等于砷被纳入 DNA；2012 年独立团队将生长、磷依赖、DNA 稳定性与共价结合拆开测量，支持“耐砷但依赖磷”而非最强的替代主张。Industry Apprenticeship 以 Sony–Netflix 2021 年 Pay-One 协议建立 Content License、Window 与 Exclusivity 的权利边界，区分“拥有电影”与“在特定地区和窗口获得独家使用权”。`META.SOURCE_EVALUATION.FOUNDATION` 为 L2 candidate，`BUS.MEDIA.CONTENT_LICENSING.WINDOWING` 为 L1 candidate，等待 Teach-back。
 
 2026-09-25：进入 Cognitive Bias & Source Evaluation 新模块，完成 Anchoring（锚定效应）。主课先定义认知偏差为可预测的系统性判断偏移，再用 J.C. Penney 2012 年取消旧促销参照后的真实经营崩塌与 Tversky–Kahneman 1974 年随机锚点实验分层证据：公司净销售从 172.60 亿美元降至 129.85 亿美元、减少 42.75 亿且可比店销售下降 25.2%，但多项业务同时变化，不能识别 Anchoring 的独立因果贡献；受控实验中随机看到 10 与 65 的两组，估计中位数仍为 25% 与 45%，更干净地支持机制。防护被落实为暴露前独立写参照类、低中高范围和证据，再按证据资格更新。Industry Apprenticeship 沿一次 Roku Pay 订阅拆开上架、认证、账单、续订、退款、标准 80/20 净收入分配、广告库存与数据访问，并明确公开标准不能外推到所有私下协议。`META.COGNITIVE_BIAS.ANCHORING` 为 L2 candidate，`BUS.MEDIA.APP_DISTRIBUTION_TERMS` 为 L1 candidate，等待 Teach-back。
 

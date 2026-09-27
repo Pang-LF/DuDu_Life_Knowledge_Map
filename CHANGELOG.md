@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-09-27
+
+- 已将 2026-09-26 与 2026-09-27 两封独立易读 HTML 课程发送至当前账户 Gmail，并确认两封邮件均带有 `SENT`、`INBOX` 与未读标签
+- 补齐 2026-09-26 Source Evaluation Foundation：新增 `META.SOURCE_EVALUATION.FOUNDATION` 与 `CASE.GFAJ1.ARSENIC_LIFE.2010_2025`
+- 用 GFAJ-1 “砷生命”争议区分 Source、Claim、Evidence 与 Inference，并将信息源评估落实为 Claim–Evidence Fit
+- 完成 Content Licensing, Windowing & Exclusivity：新增 `BUS.MEDIA.CONTENT_LICENSING.WINDOWING` 与 `CASE.SONY_NETFLIX.PAY_ONE.2021`，用 Sony–Netflix 2021 年 Pay-One 协议区分内容所有权与有边界授权
+- 完成 2026-09-27 Source Evaluation Integration：新增 `META.SOURCE_EVALUATION.INTEGRATION` 与 `CASE.OPERA.NEUTRINO_VELOCITY.2011_2012`
+- 用 OPERA 中微子计时异常整合 Anchoring、Bayesian Updating、Causal Audit 与完整测量链审计，区分统计精度与共享系统误差
+- 完成 Sports Media Rights：新增 `BUS.MEDIA.SPORTS_RIGHTS` 与 `CASE.NBA.MEDIA_RIGHTS.2024`，解释体育直播权的同步注意力、平台切分、广播覆盖和证据边界
+- 新增 `weekly/2026/2026-W39.md`，将 Base Rate 至 Epistemic Audit 串成本周七步判断骨架；所有 mastery 仍为 candidate，等待 Teach-back
+- 更新交叉节点、行业日志、Question Bank、CURRENT_STATE 与网站数据，下一课锁定 Forecasting Foundation 与 September Industry Integration
+
 ## 2026-09-25
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 `SENT`、`INBOX` 与未读标签
