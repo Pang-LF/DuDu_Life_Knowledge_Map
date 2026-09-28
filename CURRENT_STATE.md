@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-27
+Last updated: 2026-09-28
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-27
 
 ## Next Immediate Focus（下一步）
 
-2026-09-28：进入 Forecasting Foundation（预测基础），将当前信念转成可解答、有截止时间、预先记录的概率预测；Industry Apprenticeship 进入 September Integration（九月行业整合）。
+2026-09-29：继续 Forecasting，进入 Scenario Planning（情景规划）与 Calibration（校准），把多个互相区分的未来路径转成可观察信号，并用一组预测而非单次输赢检验概率质量；Industry Apprenticeship 进入 Future Scenarios。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-27
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-28：进入 Forecasting 新模块，完成 Forecasting Foundation（预测基础）。主课以 FiveThirtyEight 2016 年最终模型的 Trump 28.6% 获胜概率为现场，建立事件、截止时间、结算来源、概率和信息截止点五项 Forecast Record；官方 304 对 227 张选举人票只结算事件发生，单项 Brier Score 约 0.510，却不能凭一次结果判定长期校准。课程区分 Forecast、Point Prediction、Scenario 与 Target，并把单次结算、评分和长期质量分开。Industry Apprenticeship 用 Disney 2020 年 FY2024 Disney+ 2.30–2.60 亿订户指引与 2024 年 Core 加 Hotstar 约 1.586 亿实际结果完成行业整合：订户范围明确未实现，但包含 Hulu 的 DTC 1.43 亿美元经营利润不能直接结算 Disney+ 单项盈利，也不能由订户缺口单独判定整体战略价值。META.FORECASTING.FOUNDATION 与 BUS.MEDIA.INDUSTRY_INTEGRATION 均为 L1 candidate，等待 Teach-back。
 
 2026-09-27：完成 Cognitive Bias & Source Evaluation 整合课 — Epistemic Audit（认知审计）。主课以 OPERA 2011 年中微子超光速异常为现场：15,223 个事件、约 60.7 纳秒提前与约六个标准差并不能覆盖共享计时链上的系统误差；光纤连接与振荡器效应方向相反，独立 ICARUS 检查及 2012 年四个 Gran Sasso 实验将结果拉回到与光速一致。课程把 Anchoring、Claim–Evidence Fit、Bayesian Updating 和 Causal Audit 合成一条可执行的测量链审计方法。Industry Apprenticeship 以 NBA 2024 年 11 年媒体协议解释体育直播权怎样同时承载广告、拉新、留存、覆盖和平台价值。`META.SOURCE_EVALUATION.INTEGRATION` 为 L2 candidate，`BUS.MEDIA.SPORTS_RIGHTS` 为 L1 candidate，等待 Teach-back。
 

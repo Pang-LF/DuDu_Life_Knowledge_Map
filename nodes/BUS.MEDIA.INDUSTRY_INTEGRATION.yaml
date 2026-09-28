@@ -1,0 +1,48 @@
+id: "BUS.MEDIA.INDUSTRY_INTEGRATION"
+name_en: "Streaming Industry Integration"
+name_zh: "流媒体行业整合"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Industry integration connects rights, content, distribution, device access, pricing, advertising, billing, acquisition, retention, customer value and profitability into one forecastable system while keeping each claim separately measurable."
+why: "A single subscriber total compresses heterogeneous markets, plans, channels and economics. Scale, profitability and strategic value can move in different directions and must not be settled with one metric."
+mechanism: "Trace the chain from rights owner through content package, distributor and device to the household; separate subscriber stock from acquisition and churn flows; connect price, ads and bundles to ARPU; connect retention and contribution to LTV; state accounting scope and counterfactual before evaluating strategy."
+example: "Disney guided in 2020 to 230-260 million Disney+ paid subscribers by FY2024. FY2024 Disney+ Core plus Hotstar totaled about 158.6 million, while the broader DTC segment reported $143 million operating income. The subscriber range was missed, but the broader profit measure cannot settle Disney+ standalone profitability or total strategic value."
+my_take: "I should settle each industry forecast on its own defined metric and scope, then use a connected operating model rather than subscriber scale alone to judge value."
+
+prerequisites:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION"
+  - "BUS.SUBSCRIPTION.CHURN_RETENTION"
+  - "BUS.SUBSCRIPTION.LTV"
+  - "BUS.MEDIA.DISTRIBUTION.MODELS"
+  - "BUS.MEDIA.CONTENT_LICENSING.WINDOWING"
+connections:
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION"
+  - "BUS.SUBSCRIPTION.CHURN_RETENTION"
+  - "BUS.SUBSCRIPTION.LTV"
+  - "BUS.SUBSCRIPTION.PRICING_PACKAGING"
+  - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
+  - "BUS.MEDIA.DISTRIBUTION.MODELS"
+  - "BUS.MEDIA.DEVICE_OS_POWER"
+  - "BUS.MEDIA.CONTENT_LICENSING.WINDOWING"
+  - "BUS.MEDIA.SPORTS_RIGHTS"
+  - "META.FORECASTING.FOUNDATION"
+  - "BUS.MEDIA.FUTURE_SCENARIOS"
+  - "CASE.DISNEY_PLUS.SUBSCRIBER_GUIDANCE.2020_2024"
+questions:
+  - "Which subscriber, ARPU, churn, content-cost and contribution claims are separately resolvable, and how do they combine into a strategic-value judgment?"
+cases:
+  - "Disney+ subscriber guidance and FY2024 outcome"
+
+first_seen: "2026-09-28"
+last_reviewed: "2026-09-28"
+next_review: "2026-09-30"
+sources:
+  - "https://investors.thewaltdisneycompany.com/files/doc_events/2020/12/Disney_Investor_Day_2020_transcript.pdf"
+  - "https://investors.thewaltdisneycompany.com/files/doc_financials/2024/ar/2024-Annual-Report-1.pdf"
+notes: "September industry integration node. The 2024 DTC operating result includes Hulu and therefore cannot directly resolve Disney+ standalone profitability. Mastery remains candidate until Teach-back."

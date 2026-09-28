@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 2026-09-28
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 SENT、INBOX 与未读标签
+- 进入 Forecasting 新模块，新增 META.FORECASTING.FOUNDATION 与 CASE.US_ELECTION.FORECAST.2016
+- 用 FiveThirtyEight 2016 年 Trump 28.6% 获胜概率建立 Event、Horizon、Resolution Source、Probability 与 Information Cutoff 五项 Forecast Record
+- 区分事件结算、单项 Brier Score 与长期 Calibration，明确低概率事件发生不自动证明概率预测错误
+- 新增 BUS.MEDIA.INDUSTRY_INTEGRATION 与 CASE.DISNEY_PLUS.SUBSCRIBER_GUIDANCE.2020_2024
+- 以 Disney 2020 年 FY2024 的 2.30–2.60 亿订户指引和 2024 年约 1.586 亿实际结果，分开结算规模、利润口径与整体战略价值
+- 更新行业日志、Question Bank、CURRENT_STATE 与网站地图数据，下一课锁定 Scenario Planning、Calibration 与 Streaming Future Scenarios
+
 ## 2026-09-27
 
 - 已将 2026-09-26 与 2026-09-27 两封独立易读 HTML 课程发送至当前账户 Gmail，并确认两封邮件均带有 `SENT`、`INBOX` 与未读标签

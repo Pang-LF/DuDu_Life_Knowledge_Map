@@ -312,3 +312,16 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Counting boundary: Announced package counts are not necessarily additive unique games; official announcements do not disclose full fees, profitability, incremental subscriber effects or consumer-welfare outcomes.
 - Status: `BUS.MEDIA.SPORTS_RIGHTS` at L1 candidate; Teach-back pending.
 - Next: September Industry Integration — reconstruct the full system from rights owner through platform, distributor, household and advertiser.
+
+### 2026-09-28 — Industry Integration Separates Scale, Profit And Strategic Value
+
+- Question: What did Disney's missed FY2024 Disney+ subscriber guidance prove, and what did it leave unresolved?
+- Guidance definition: A public management outlook states a future metric, time horizon, scope and assumptions; it is not a guarantee and remains incomplete as a probability forecast when no probability is attached.
+- Starting point: Disney reported 86.8 million Disney+ subscribers as of December 2, 2020 and raised FY2024 guidance from 60-90 million to 230-260 million.
+- Resolution: FY2024 Disney+ Core had 122.7 million paid subscribers and Hotstar 35.9 million, or about 158.6 million combined.
+- Gap: The result was 71.4 million below the 230 million lower bound, about 31.0%, and 101.4 million below the 260 million upper bound, about 39.0%.
+- Profit scope: DTC reported $143 million operating income versus a $2.496 billion prior-year loss, but the segment included Hulu and cannot directly settle Disney+ standalone profitability.
+- Integration method: Resolve subscriber stock, acquisition, churn, ARPU, advertising, content cost and contribution separately before combining them into a strategic judgment.
+- Evidence boundary: The subscriber miss is clear; it does not identify which operating assumption contributed most or independently determine total strategy value.
+- Status: BUS.MEDIA.INDUSTRY_INTEGRATION at L1 candidate; Teach-back pending.
+- Next: Future Scenarios — distinguish paths created by content cost, advertising demand, bundle return and sports-rights concentration.

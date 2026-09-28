@@ -21,6 +21,7 @@ connections:
   - "META.PROBABILITY.CONDITIONAL"
   - "META.BAYESIAN.UPDATING"
   - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.FORECASTING.FOUNDATION"
   - "META.FORECASTING.CALIBRATION"
   - "BUS.SUBSCRIPTION.LTV"
   - "CASE.APOPHIS.IMPACT_PROBABILITY.2004_2021"
@@ -30,8 +31,8 @@ cases:
   - "Apophis impact-probability updates, 2004-2021"
 
 first_seen: "2026-09-20"
-last_reviewed: "2026-09-24"
-next_review: "2026-09-27"
+last_reviewed: "2026-09-28"
+next_review: "2026-09-30"
 sources:
   - "https://science.nasa.gov/solar-system/asteroids/apophis-facts/"
   - "https://cneos.jpl.nasa.gov/doc/apophis/"
@@ -39,4 +40,4 @@ sources:
   - "https://cneos.jpl.nasa.gov/sentry/notes.html"
   - "https://cneos.jpl.nasa.gov/news/news146.html"
   - "https://www.weather.gov/lmk/pops"
-notes: "Probability Day 1. Reviewed on 2026-09-24 as the probability input to Expected Value: every decision estimate remained attached to a defined population, 120-day horizon, June 2021 information set and model. Mastery remains a candidate until user Teach-back."
+notes: "Probability Day 1. Reviewed on 2026-09-28 through Forecasting Foundation: an exact event, horizon, information cutoff and model became a pre-outcome record that could be resolved without relabeling one realized outcome. Mastery remains a candidate until user Teach-back."

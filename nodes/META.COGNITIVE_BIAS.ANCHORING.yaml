@@ -23,6 +23,7 @@ connections:
   - "META.PROBABILITY.EXPECTED_VALUE"
   - "META.SOURCE_EVALUATION.FOUNDATION"
   - "META.SOURCE_EVALUATION.INTEGRATION"
+  - "META.FORECASTING.FOUNDATION"
   - "META.FORECASTING.CALIBRATION"
   - "BUS.SUBSCRIPTION.PRICING_PACKAGING"
   - "CASE.JCPENNEY.FAIR_AND_SQUARE.2012"
@@ -33,9 +34,9 @@ cases:
   - "Tversky and Kahneman arbitrary-anchor experiment, 1974"
 
 first_seen: "2026-09-25"
-last_reviewed: "2026-09-27"
+last_reviewed: "2026-09-28"
 next_review: "2026-09-30"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1166126/000116612613000016/jcp-20130202x10k.htm"
   - "https://doi.org/10.1126/science.185.4157.1124"
-notes: "First mastery core in Cognitive Bias & Source Evaluation. Reviewed through the GFAJ-1 authority anchor and OPERA anomaly: institutional prestige and six-sigma language can both anchor belief before the claim-specific evidence chain is audited. Mastery remains candidate until the user independently estimates an unfamiliar case before seeing its external anchor."
+notes: "First mastery core in Cognitive Bias & Source Evaluation. Reviewed on 2026-09-28: a pre-outcome forecast record preserves the original estimate and limits hindsight from replacing it with the realized result. Mastery remains candidate until Teach-back."

@@ -1,0 +1,44 @@
+id: "META.FORECASTING.FOUNDATION"
+name_en: "Forecasting Foundation"
+name_zh: "预测基础"
+domain: "META"
+module: "Forecasting（预测）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A forecast is a pre-outcome probability judgment about an exact future event, with a fixed horizon, resolution source and information cutoff."
+why: "Without a frozen record, hindsight can rewrite the event, probability or rationale, making calibration and learning impossible. A low-probability event occurring does not by itself show that the probability was wrong."
+mechanism: "Define a binary or otherwise measurable event; specify the deadline and authoritative resolution source; record the probability and information cutoff before resolution; settle the outcome without changing the definition; score the record; then evaluate calibration across many comparable forecasts."
+example: "FiveThirtyEight's final 2016 model assigned Donald Trump a 28.6% chance of winning. He won 304 electoral votes, so the event resolved true. The outcome gives this record a binary score but cannot alone determine whether 28.6% was calibrated."
+my_take: "I should turn vague future claims into dated forecast records and preserve the original probability, then separate outcome settlement, single-record scoring and long-run calibration."
+
+prerequisites:
+  - "META.PROBABILITY.FOUNDATION"
+  - "META.BAYESIAN.UPDATING"
+  - "META.SOURCE_EVALUATION.INTEGRATION"
+connections:
+  - "META.PROBABILITY.FOUNDATION"
+  - "META.BAYESIAN.UPDATING"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.COGNITIVE_BIAS.ANCHORING"
+  - "META.SOURCE_EVALUATION.INTEGRATION"
+  - "META.FORECASTING.SCENARIO_PLANNING"
+  - "META.FORECASTING.CALIBRATION"
+  - "BUS.MEDIA.INDUSTRY_INTEGRATION"
+  - "CASE.US_ELECTION.FORECAST.2016"
+questions:
+  - "What exact event, horizon, resolution source, probability and information cutoff would make this future claim falsifiable and scoreable?"
+cases:
+  - "FiveThirtyEight 2016 U.S. presidential election forecast"
+
+first_seen: "2026-09-28"
+last_reviewed: "2026-09-28"
+next_review: "2026-09-30"
+sources:
+  - "https://archive.ph/N5onZ"
+  - "https://fivethirtyeight.com/features/final-election-update-theres-a-wide-range-of-outcomes-and-most-of-them-come-up-clinton/"
+  - "https://www.archives.gov/electoral-college/2016"
+  - "https://journals.ametsoc.org/view/journals/mwre/78/1/1520-0493_1950_078_0001_vofeit_2_0_co_2.xml"
+  - "https://www.iarpa.gov/research-programs/ace"
+notes: "New Forecasting module foundation. Brier scoring is introduced only to distinguish settlement from scoring; calibration remains a next-lesson node. Mastery remains candidate until Teach-back."

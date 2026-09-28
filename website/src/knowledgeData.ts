@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 96,
+    progress: 98,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 80,
+    progress: 86,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -261,6 +261,14 @@ export const nodes: GraphNode[] = [
     connections: ['META.COGNITIVE_BIAS.ANCHORING', 'META.SOURCE_EVALUATION.FOUNDATION', 'META.BAYESIAN.UPDATING', 'META.CAUSAL.INTEGRATION', 'META.FORECASTING.FOUNDATION', 'META.FORECASTING.CALIBRATION', 'CASE.OPERA.NEUTRINO_VELOCITY.2011_2012'],
   },
   {
+    id: 'META.FORECASTING.FOUNDATION',
+    label: 'Forecast Record（预测记录）',
+    domain: 'META',
+    mastery: 'L1 candidate',
+    summary: 'Freeze an exact event, horizon, resolution source, probability and information cutoff before the outcome, then keep settlement, scoring and long-run calibration separate.',
+    connections: ['META.PROBABILITY.FOUNDATION', 'META.BAYESIAN.UPDATING', 'META.PROBABILITY.EXPECTED_VALUE', 'META.COGNITIVE_BIAS.ANCHORING', 'META.SOURCE_EVALUATION.INTEGRATION', 'META.FORECASTING.SCENARIO_PLANNING', 'META.FORECASTING.CALIBRATION', 'BUS.MEDIA.INDUSTRY_INTEGRATION', 'CASE.US_ELECTION.FORECAST.2016'],
+  },
+  {
     id: 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004',
     label: 'Smoking & Lung Cancer（吸烟与肺癌）',
     domain: 'META',
@@ -363,6 +371,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'A six-sigma anomaly across 15,223 events was traced to shared timing-chain effects; independent measurements and corrected runs returned the result to consistency with light speed.',
     connections: ['META.SOURCE_EVALUATION.INTEGRATION'],
+  },
+  {
+    id: 'CASE.US_ELECTION.FORECAST.2016',
+    label: 'U.S. Election Forecast 2016（美国大选预测）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'A 28.6% Trump win forecast resolved true; the result settled the event and produced a single-record score but could not by itself establish long-run calibration.',
+    connections: ['META.FORECASTING.FOUNDATION'],
   },
   {
     id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
@@ -589,6 +605,14 @@ export const nodes: GraphNode[] = [
     connections: ['BUS.MEDIA.CONTENT_LICENSING.WINDOWING', 'BUS.MEDIA.AD_SUPPORTED_STREAMING', 'BUS.MEDIA.REAGGREGATION', 'BUS.MEDIA.DEVICE_OS_POWER', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.LTV', 'CASE.NBA.MEDIA_RIGHTS.2024'],
   },
   {
+    id: 'BUS.MEDIA.INDUSTRY_INTEGRATION',
+    label: 'Streaming Industry Integration（流媒体行业整合）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Resolve rights, subscriber stock and flows, price, advertising, retention, content cost and contribution separately before combining them into a bounded strategic-value judgment.',
+    connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.LTV', 'BUS.SUBSCRIPTION.PRICING_PACKAGING', 'BUS.MEDIA.AD_SUPPORTED_STREAMING', 'BUS.MEDIA.DISTRIBUTION.MODELS', 'BUS.MEDIA.DEVICE_OS_POWER', 'BUS.MEDIA.CONTENT_LICENSING.WINDOWING', 'BUS.MEDIA.SPORTS_RIGHTS', 'META.FORECASTING.FOUNDATION', 'CASE.DISNEY_PLUS.SUBSCRIBER_GUIDANCE.2020_2024'],
+  },
+  {
     id: 'CASE.NETFLIX.OPEN_CONNECT',
     label: 'Netflix Open Connect（本地内容交付）',
     domain: 'BUSINESS',
@@ -692,15 +716,23 @@ export const nodes: GraphNode[] = [
     summary: 'An 11-year package split regular season, postseason, Finals and platform rights across Disney, NBCUniversal and Amazon while expanding broadcast reach and preserving league aggregation.',
     connections: ['BUS.MEDIA.SPORTS_RIGHTS'],
   },
+  {
+    id: 'CASE.DISNEY_PLUS.SUBSCRIBER_GUIDANCE.2020_2024',
+    label: 'Disney+ Guidance 2020–24（订户指引）',
+    domain: 'BUSINESS',
+    mastery: 'Case studied',
+    summary: 'Disney+ Core plus Hotstar reached about 158.6 million versus 230-260 million FY2024 guidance, while a profitable broader DTC segment could not settle Disney+ standalone profit or total strategy value.',
+    connections: ['BUS.MEDIA.INDUSTRY_INTEGRATION', 'META.FORECASTING.FOUNDATION'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-09-27',
-  title: 'Epistemic Audit（认知审计）',
-  question: '一个拥有 15,223 个事件和约六个标准差的结果，为什么仍可能只是共享计时链的故障？',
-  reading: '45-60 min：沿 OPERA 中微子异常逆向审计测量链，区分统计误差、系统误差与独立证据。',
-  discussion: '20-30 min：为陌生主张设计一个能切断共享失败路径的检查，再重构 NBA 体育权利包的价值边界。',
-  next: '2026-09-28：Forecasting Foundation 与 September Industry Integration。',
+  date: '2026-09-28',
+  title: 'Forecast Record（预测记录）',
+  question: '一个 28.6% 概率的事件真的发生了，预测就错了吗？',
+  reading: '45-60 min：冻结事件、截止时间、结算来源、概率与信息截止点，分开事件结算、单项评分和长期校准。',
+  discussion: '20-30 min：把医疗 AI 主张改写成完整预测记录，再分开结算 Disney+ 订户、利润口径与战略价值。',
+  next: '2026-09-29：Scenario Planning、Calibration 与 Streaming Future Scenarios。',
 }
 
 export const monthlyTrack = [
