@@ -24,6 +24,7 @@ prerequisites:
 connections:
   - "CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022"
   - "META.CAUSAL.CORRELATION_CAUSATION"
+  - "META.FORECASTING.SCENARIO_PLANNING"
   - "FRONTIER.AI.INFRASTRUCTURE"
   - "SYSTEM.HEALTHCARE.OPERATIONS"
 questions:
@@ -32,10 +33,10 @@ cases:
   - "Global automotive semiconductor shortage, 2020-2022"
 
 first_seen: "2026-09-14"
-last_reviewed: "2026-09-15"
-next_review: "2026-09-18"
+last_reviewed: "2026-09-29"
+next_review: "2026-09-30"
 sources:
   - "https://www.commerce.gov/news/press-releases/2022/01/commerce-semiconductor-data-confirms-urgent-need-congress-pass-us"
   - "https://www.sec.gov/Archives/edgar/data/37996/000003799622000013/f-20211231.htm"
   - "https://www.gao.gov/assets/gao-22-105923.pdf"
-notes: "Systems Thinking Day 7 integration. Reviewed on 2026-09-15 as the mechanism-map prerequisite to Causal Reasoning. Semiconductor supply-chain knowledge is exposure only. Mastery remains candidate until the hospital Teach-back."
+notes: "Systems Thinking Day 7 integration. Reviewed on 2026-09-29 as the mechanism-map prerequisite for building distinct scenario worlds from actors, constraints, feedback, bottlenecks and delays. Mastery remains candidate until Teach-back."

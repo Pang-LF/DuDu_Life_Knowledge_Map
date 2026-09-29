@@ -1,0 +1,46 @@
+id: "META.FORECASTING.SCENARIO_PLANNING"
+name_en: "Scenario Planning"
+name_zh: "情景规划"
+domain: "META"
+module: "Forecasting（预测）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Scenario planning separates predetermined elements from critical uncertainties, then builds a small set of causally coherent possible worlds with distinguishing signals, robust actions and contingent update rules."
+why: "A single forecast can hide structural disagreements about how the future is generated. Scenario planning expands the model space before probability estimates are calibrated and reduces dependence on one official future."
+mechanism: "Frame a decision-specific focal question and horizon; identify high-inertia predetermined elements; choose uncertainties that are both highly consequential and genuinely unresolved; build distinct causal stories; name confirming and disconfirming signals; stress-test options across worlds; act on robust choices and stage contingent choices until signals strengthen."
+example: "Shell's 1971-1973 scenarios explored changes in producer-government behavior, OPEC power and possible Middle East disruption before the 1973 embargo. They did not predict the exact war, timing or $11.65 posted price, but let managers rehearse a world in which the old oil-supply regime failed."
+my_take: "I should use scenarios to expose different causal mechanisms and precommit evidence and actions, not to multiply vague stories or disguise a preferred forecast."
+
+prerequisites:
+  - "META.FORECASTING.FOUNDATION"
+  - "META.SYSTEMS.INTEGRATION"
+  - "META.CAUSAL.INTEGRATION"
+  - "META.BAYESIAN.UPDATING"
+connections:
+  - "META.FORECASTING.FOUNDATION"
+  - "META.FORECASTING.CALIBRATION"
+  - "META.SYSTEMS.INTEGRATION"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.DELAY"
+  - "META.CAUSAL.INTEGRATION"
+  - "META.BAYESIAN.UPDATING"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "BUS.MEDIA.FUTURE_SCENARIOS"
+  - "CASE.SHELL.SCENARIO_PLANNING.1971_1973"
+questions:
+  - "Which uncertainties create genuinely different causal worlds, what observable signals distinguish them, and which actions should be robust or contingent?"
+cases:
+  - "Shell scenario planning and the 1973 oil shock"
+
+first_seen: "2026-09-29"
+last_reviewed: "2026-09-29"
+next_review: "2026-09-30"
+sources:
+  - "https://www.shell.com/news-and-insights/scenarios/what-are-shell-scenarios/_jcr_content/root/main/section_509167378/promo/links/item0.stream/1652289755448/a0e75f042fee5322b72780ee36e5ba17c35a4fc6/shell-scenarios-40yearsbook080213.pdf"
+  - "https://www.shell.com/news-and-insights/scenarios/what-are-the-previous-shell-scenarios/_jcr_content/root/main/section_745060082/promo_copy_1589082568/links/item0.stream/1652289296666/f5b043e97972e369db4382a38434d4dc2b1e8bc4/shell-scenarios-explorersguide.pdf"
+  - "https://history.state.gov/milestones/1969-1976/oil-embargo"
+  - "https://www.elibrary.imf.org/display/book/9781451922684/ch017.xml"
+notes: "Forecasting Day 2. Belief updating is applied through precommitted signals rather than added as a duplicate node. Calibration remains reserved for September Integration. Mastery remains candidate until Teach-back."

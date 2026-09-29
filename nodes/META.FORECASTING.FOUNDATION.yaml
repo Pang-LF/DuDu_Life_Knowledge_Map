@@ -33,7 +33,7 @@ cases:
   - "FiveThirtyEight 2016 U.S. presidential election forecast"
 
 first_seen: "2026-09-28"
-last_reviewed: "2026-09-28"
+last_reviewed: "2026-09-29"
 next_review: "2026-09-30"
 sources:
   - "https://archive.ph/N5onZ"
@@ -41,4 +41,4 @@ sources:
   - "https://www.archives.gov/electoral-college/2016"
   - "https://journals.ametsoc.org/view/journals/mwre/78/1/1520-0493_1950_078_0001_vofeit_2_0_co_2.xml"
   - "https://www.iarpa.gov/research-programs/ace"
-notes: "New Forecasting module foundation. Brier scoring is introduced only to distinguish settlement from scoring; calibration remains a next-lesson node. Mastery remains candidate until Teach-back."
+notes: "Forecasting module foundation. Reviewed on 2026-09-29: scenario planning expands distinct causal worlds, after which key resolvable events can be converted into forecast records. Calibration remains reserved for September Integration. Mastery remains candidate until Teach-back."

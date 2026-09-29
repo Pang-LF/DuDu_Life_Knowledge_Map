@@ -25,6 +25,7 @@ connections:
   - "BUS.MEDIA.REAGGREGATION"
   - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
   - "BUS.MEDIA.APP_DISTRIBUTION_TERMS"
+  - "BUS.MEDIA.FUTURE_SCENARIOS"
   - "META.PROBABILITY.EXPECTED_VALUE"
   - "CASE.ROKU.DEVICE_OS_POWER.2024"
 questions:
@@ -33,9 +34,9 @@ cases:
   - "Roku device and platform model, 2024"
 
 first_seen: "2026-09-24"
-last_reviewed: "2026-09-25"
-next_review: "2026-09-28"
+last_reviewed: "2026-09-29"
+next_review: "2026-09-30"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1428439/000142843925000013/roku-20241231.htm"
   - "https://www.sec.gov/Archives/edgar/data/1428439/000162828026008114/roku-20251231.htm"
-notes: "Industry apprenticeship continuation. Reviewed on 2026-09-25 by following OS power into app certification, Roku Pay, standard revenue share, advertising inventory and data terms. Aggregate disclosures still do not identify incremental cohort LTV or confidential partner terms. Mastery remains candidate until Teach-back."
+notes: "Industry apprenticeship continuation. Reviewed on 2026-09-29 as a future-scenario branch: OS scale can support aggregation power, but only incremental cohort economics and control rights establish durable leverage. Mastery remains candidate until Teach-back."

@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-28
+Last updated: 2026-09-29
 
 ## Current Phase（当前阶段）
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-28
 
 ## Next Immediate Focus（下一步）
 
-2026-09-29：继续 Forecasting，进入 Scenario Planning（情景规划）与 Calibration（校准），把多个互相区分的未来路径转成可观察信号，并用一组预测而非单次输赢检验概率质量；Industry Apprenticeship 进入 Future Scenarios。
+2026-09-30：完成 September Integration（9 月整合），用一个新的真实问题同时调用 Systems Thinking、Causal Reasoning、Probability、Bayesian Updating、Source Evaluation、Forecast Record 与 Scenario Planning，并用 Calibration 检查整组概率表达；Industry Apprenticeship 完成月度整合。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-28
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-29：完成 Forecasting Day 2 — Scenario Planning（情景规划）。主课跟随 1972 年 Shell 管理层面前的一桶油，区分已积累的产油国权力、进口依赖和供给调整延迟，与无法精确预测的战争、禁运和政府协同行为；1973 年沙特轻质原油 posted price 从约 3.01 美元升至 5.12 美元，并在 1974 年 1 月升至 11.65 美元。课程不把这包装成准确预言，而是重建 Focal Question、Predetermined Elements、Critical Uncertainties、Causal Story、Signals、Robust Actions 与 Contingent Actions，并明确 Shell 的财务收益归因为公司事后叙述而非干净反事实。Industry Apprenticeship 用内容差异化和聚合增量价值构造 Fortress Services、New Cable、Utility Shelf 与 Rotation Market 四个 2026–2028 流媒体世界，要求用 direct-versus-partner cohort conversion、retention、contribution、migration 和控制权更新。META.FORECASTING.SCENARIO_PLANNING 与 BUS.MEDIA.FUTURE_SCENARIOS 均为 L1 candidate，等待 Teach-back。
 
 2026-09-28：进入 Forecasting 新模块，完成 Forecasting Foundation（预测基础）。主课以 FiveThirtyEight 2016 年最终模型的 Trump 28.6% 获胜概率为现场，建立事件、截止时间、结算来源、概率和信息截止点五项 Forecast Record；官方 304 对 227 张选举人票只结算事件发生，单项 Brier Score 约 0.510，却不能凭一次结果判定长期校准。课程区分 Forecast、Point Prediction、Scenario 与 Target，并把单次结算、评分和长期质量分开。Industry Apprenticeship 用 Disney 2020 年 FY2024 Disney+ 2.30–2.60 亿订户指引与 2024 年 Core 加 Hotstar 约 1.586 亿实际结果完成行业整合：订户范围明确未实现，但包含 Hulu 的 DTC 1.43 亿美元经营利润不能直接结算 Disney+ 单项盈利，也不能由订户缺口单独判定整体战略价值。META.FORECASTING.FOUNDATION 与 BUS.MEDIA.INDUSTRY_INTEGRATION 均为 L1 candidate，等待 Teach-back。
 

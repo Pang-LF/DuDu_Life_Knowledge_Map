@@ -325,3 +325,17 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Evidence boundary: The subscriber miss is clear; it does not identify which operating assumption contributed most or independently determine total strategy value.
 - Status: BUS.MEDIA.INDUSTRY_INTEGRATION at L1 candidate; Teach-back pending.
 - Next: Future Scenarios — distinguish paths created by content cost, advertising demand, bundle return and sports-rights concentration.
+
+### 2026-09-29 — Four Streaming Worlds From Two Critical Uncertainties
+
+- Focal question: By September 2028, will household video economics be controlled mainly by direct service brands or by broadband, device and package aggregators?
+- Predetermined elements: Long sports-rights contracts, installed OS relationships, existing re-aggregation products and DTC product capabilities will remain in the system.
+- Critical uncertainty one: Whether exclusive content continues to create repeatable acquisition and retention differentiation.
+- Critical uncertainty two: Whether aggregators create incremental cohort conversion, retention and contribution after discounts, shares and migration.
+- Fortress Services: Strong content differentiation and weak aggregation incrementality preserve direct service control.
+- New Cable: Strong content and strong aggregation value create branded apps inside powerful billing, discovery and entitlement bundles.
+- Utility Shelf: Weak differentiation and strong aggregation value shift customer power toward platforms and wholesalers.
+- Rotation Market: Weak differentiation and weak aggregation value produce short subscriptions, cancellation and win-back without durable control.
+- Diagnostic evidence: Direct-versus-partner cohort conversion, twelve-month retention, net contribution, migration and control of billing, cancellation, data and win-back.
+- Status: BUS.MEDIA.FUTURE_SCENARIOS at L1 candidate; Teach-back pending.
+- Next: September Industry Integration — use one strategic judgment to call the complete system and forecasting toolkit.

@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 98,
+    progress: 99,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 86,
+    progress: 93,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -269,6 +269,14 @@ export const nodes: GraphNode[] = [
     connections: ['META.PROBABILITY.FOUNDATION', 'META.BAYESIAN.UPDATING', 'META.PROBABILITY.EXPECTED_VALUE', 'META.COGNITIVE_BIAS.ANCHORING', 'META.SOURCE_EVALUATION.INTEGRATION', 'META.FORECASTING.SCENARIO_PLANNING', 'META.FORECASTING.CALIBRATION', 'BUS.MEDIA.INDUSTRY_INTEGRATION', 'CASE.US_ELECTION.FORECAST.2016'],
   },
   {
+    id: 'META.FORECASTING.SCENARIO_PLANNING',
+    label: 'Scenario Planning（情景规划）',
+    domain: 'META',
+    mastery: 'L1 candidate',
+    summary: 'Separate predetermined elements from critical uncertainties, build causally distinct worlds, and precommit signals, robust actions and contingent updates.',
+    connections: ['META.FORECASTING.FOUNDATION', 'META.FORECASTING.CALIBRATION', 'META.SYSTEMS.INTEGRATION', 'META.CAUSAL.INTEGRATION', 'META.BAYESIAN.UPDATING', 'META.PROBABILITY.EXPECTED_VALUE', 'BUS.MEDIA.FUTURE_SCENARIOS', 'CASE.SHELL.SCENARIO_PLANNING.1971_1973'],
+  },
+  {
     id: 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004',
     label: 'Smoking & Lung Cancer（吸烟与肺癌）',
     domain: 'META',
@@ -379,6 +387,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'A 28.6% Trump win forecast resolved true; the result settled the event and produced a single-record score but could not by itself establish long-run calibration.',
     connections: ['META.FORECASTING.FOUNDATION'],
+  },
+  {
+    id: 'CASE.SHELL.SCENARIO_PLANNING.1971_1973',
+    label: 'Shell Scenarios 1971–73（壳牌石油情景）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'Six branching worlds made producer power and an oil shock thinkable before the 1973 embargo; they did not predict the exact war, date or $11.65 price.',
+    connections: ['META.FORECASTING.SCENARIO_PLANNING'],
   },
   {
     id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
@@ -613,6 +629,14 @@ export const nodes: GraphNode[] = [
     connections: ['BUS.MEDIA.PAYTV.VALUE_CHAIN', 'BUS.SUBSCRIPTION.ECONOMICS.FOUNDATION', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.LTV', 'BUS.SUBSCRIPTION.PRICING_PACKAGING', 'BUS.MEDIA.AD_SUPPORTED_STREAMING', 'BUS.MEDIA.DISTRIBUTION.MODELS', 'BUS.MEDIA.DEVICE_OS_POWER', 'BUS.MEDIA.CONTENT_LICENSING.WINDOWING', 'BUS.MEDIA.SPORTS_RIGHTS', 'META.FORECASTING.FOUNDATION', 'CASE.DISNEY_PLUS.SUBSCRIBER_GUIDANCE.2020_2024'],
   },
   {
+    id: 'BUS.MEDIA.FUTURE_SCENARIOS',
+    label: 'Streaming Future Scenarios（流媒体未来情景）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Branch content differentiation and aggregation incrementality into Fortress Services, New Cable, Utility Shelf and Rotation Market, then update from cohort evidence.',
+    connections: ['BUS.MEDIA.INDUSTRY_INTEGRATION', 'BUS.MEDIA.REAGGREGATION', 'BUS.MEDIA.DEVICE_OS_POWER', 'BUS.MEDIA.SPORTS_RIGHTS', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.LTV', 'META.FORECASTING.SCENARIO_PLANNING', 'CASE.STREAMING.FUTURE_SCENARIOS.2026_2028'],
+  },
+  {
     id: 'CASE.NETFLIX.OPEN_CONNECT',
     label: 'Netflix Open Connect（本地内容交付）',
     domain: 'BUSINESS',
@@ -724,15 +748,23 @@ export const nodes: GraphNode[] = [
     summary: 'Disney+ Core plus Hotstar reached about 158.6 million versus 230-260 million FY2024 guidance, while a profitable broader DTC segment could not settle Disney+ standalone profit or total strategy value.',
     connections: ['BUS.MEDIA.INDUSTRY_INTEGRATION', 'META.FORECASTING.FOUNDATION'],
   },
+  {
+    id: 'CASE.STREAMING.FUTURE_SCENARIOS.2026_2028',
+    label: 'Streaming Futures 2026–28（流媒体未来）',
+    domain: 'BUSINESS',
+    mastery: 'Scenario set',
+    summary: 'Four worlds distinguish whether content remains differentiated and whether aggregators create incremental cohort value, with direct-versus-partner economics as diagnostic evidence.',
+    connections: ['BUS.MEDIA.FUTURE_SCENARIOS', 'META.FORECASTING.SCENARIO_PLANNING'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-09-28',
-  title: 'Forecast Record（预测记录）',
-  question: '一个 28.6% 概率的事件真的发生了，预测就错了吗？',
-  reading: '45-60 min：冻结事件、截止时间、结算来源、概率与信息截止点，分开事件结算、单项评分和长期校准。',
-  discussion: '20-30 min：把医疗 AI 主张改写成完整预测记录，再分开结算 Disney+ 订户、利润口径与战略价值。',
-  next: '2026-09-29：Scenario Planning、Calibration 与 Streaming Future Scenarios。',
+  date: '2026-09-29',
+  title: 'Scenario Planning（情景规划）',
+  question: 'Shell 不知道战争与禁运会怎样发生，为什么仍能比准确预测油价更早做好准备？',
+  reading: '45-60 min：沿 1973 石油冲击区分既定因素、关键不确定性、因果情景、信号与稳健/条件行动。',
+  discussion: '20-30 min：为陌生教育投资构造情景组，再用 cohort 证据区分四个 Streaming worlds。',
+  next: '2026-09-30：September Integration、Calibration 与行业月度整合。',
 }
 
 export const monthlyTrack = [

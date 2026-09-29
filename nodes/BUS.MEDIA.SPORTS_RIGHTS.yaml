@@ -25,6 +25,7 @@ connections:
   - "BUS.MEDIA.DEVICE_OS_POWER"
   - "BUS.SUBSCRIPTION.CHURN_RETENTION"
   - "BUS.SUBSCRIPTION.LTV"
+  - "BUS.MEDIA.FUTURE_SCENARIOS"
   - "CASE.NBA.MEDIA_RIGHTS.2024"
 questions:
   - "How should a league divide rights across territory, season, platform, games and postseason stages to balance revenue, reach, subscriber value, discovery and concentration risk?"
@@ -32,9 +33,9 @@ cases:
   - "NBA national media-rights agreements, 2024"
 
 first_seen: "2026-09-27"
-last_reviewed: "2026-09-27"
+last_reviewed: "2026-09-29"
 next_review: "2026-09-30"
 sources:
   - "https://www.nba.com/news/nba-media-agreements-2024"
   - "https://thewaltdisneycompany.com/news/disney-and-espn-renew-nba-and-wnba-rights-heres-why-it-matters/"
-notes: "Industry apprenticeship continuation. Official announcements disclose package structure but not full rights fees, title-level profitability or consumer-welfare effects. Mastery remains candidate until Teach-back."
+notes: "Industry apprenticeship continuation. Reviewed on 2026-09-29 as a predetermined long-term contract structure and a key input to future content differentiation. Official announcements still do not disclose full fees or cohort effects. Mastery remains candidate until Teach-back."

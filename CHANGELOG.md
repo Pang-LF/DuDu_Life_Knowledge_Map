@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 2026-09-29
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 SENT、INBOX 与未读标签
+- 完成 Forecasting Day 2，新增 META.FORECASTING.SCENARIO_PLANNING 与 CASE.SHELL.SCENARIO_PLANNING.1971_1973
+- 用 Shell 1971–1973 年情景工作区分既定因素、关键不确定性、因果世界、信号、稳健行动与条件行动
+- 以 3.01、5.12 和 11.65 美元沙特轻质原油 posted price 解释 1973 年冲击的数量级，并保留公司事后成功归因的证据边界
+- 新增 BUS.MEDIA.FUTURE_SCENARIOS 与 CASE.STREAMING.FUTURE_SCENARIOS.2026_2028
+- 用内容差异化和聚合增量价值构造 Fortress Services、New Cable、Utility Shelf 与 Rotation Market 四个流媒体世界
+- 更新相关系统、因果、贝叶斯、期望值、行业节点、Question Bank、CURRENT_STATE 与网站数据，下一课锁定 September Integration 与 Calibration
+
 ## 2026-09-28
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 SENT、INBOX 与未读标签

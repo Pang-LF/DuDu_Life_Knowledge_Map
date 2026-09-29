@@ -28,6 +28,7 @@ connections:
   - "BUS.MEDIA.CONTENT_LICENSING.WINDOWING"
   - "BUS.MEDIA.SPORTS_RIGHTS"
   - "BUS.MEDIA.APP_DISTRIBUTION_TERMS"
+  - "BUS.MEDIA.FUTURE_SCENARIOS"
   - "META.BAYESIAN.UPDATING"
   - "CASE.COMCAST.STREAMSAVER.2024"
 questions:
@@ -36,9 +37,9 @@ cases:
   - "Comcast StreamSaver launch, 2024"
 
 first_seen: "2026-09-23"
-last_reviewed: "2026-09-27"
+last_reviewed: "2026-09-29"
 next_review: "2026-09-30"
 sources:
   - "https://corporate.comcast.com/press/releases/comcast-introduces-peacock-netflix-and-apple-tv-streaming-bundle"
   - "https://corporate.comcast.com/press/releases/streamsaver-bundle-netflix-peacock-apple-tv-plus"
-notes: "Industry apprenticeship continuation. Reviewed on 2026-09-24 as Roku recombines cross-app discovery, billing, sports destinations and premium subscriptions at the OS layer. Confidential partner terms and causal retention effects remain unavailable."
+notes: "Industry apprenticeship continuation. Reviewed on 2026-09-29 as a critical uncertainty: public bundle launches show that re-aggregation exists but not whether partner cohorts create incremental retention and contribution. Mastery remains candidate until Teach-back."
