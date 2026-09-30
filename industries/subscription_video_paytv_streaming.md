@@ -339,3 +339,16 @@ Content Owner（内容所有者）、Distributor（分销商）、Platform（平
 - Diagnostic evidence: Direct-versus-partner cohort conversion, twelve-month retention, net contribution, migration and control of billing, cancellation, data and win-back.
 - Status: BUS.MEDIA.FUTURE_SCENARIOS at L1 candidate; Teach-back pending.
 - Next: September Industry Integration — use one strategic judgment to call the complete system and forecasting toolkit.
+
+### 2026-09-30 — September Industry Forecast Register
+
+- Question: How can one month of industry learning become a set of judgments that can later be resolved and improved?
+- Minimum unit: One household-month connects content rights, service, distributor, device, billing, advertising, acquisition, retention and contribution.
+- Register F1: 65% that at least two of Comcast, Charter, Verizon and AT&T offer one U.S. consumer package containing at least three national third-party paid streaming services by 2028-09-30.
+- Register F2: 80% that at least four of Netflix, Disney+, Max, Peacock and Paramount+ still offer standalone direct U.S. paid subscriptions by 2028-09-30.
+- Register F3: 90% that Disney, NBCUniversal and Amazon each still hold and distribute national NBA packages at the start of the 2028-29 season.
+- Register F4: 30% that a named public streamer discloses a direct-versus-partner 12-month retention or net-contribution cohort comparison by 2028-09-30.
+- Resolution rule: Preserve the 2026-09-30 information cutoff and all later probability updates; settle from official product pages, NBA materials, SEC filings and investor materials.
+- Calibration boundary: Four differently priced forecasts cannot establish calibration; the register needs more resolved, not artificially duplicated, records.
+- Status: `BUS.MEDIA.FORECAST_REGISTER` at L1 candidate; Teach-back pending. September's industry structure is complete as a first-pass skeleton, not verified mastery.
+- Next: Maintain F1-F4 as evidence arrives while October moves the primary apprenticeship to Energy.

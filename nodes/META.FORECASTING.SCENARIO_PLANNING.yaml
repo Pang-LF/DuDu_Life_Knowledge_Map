@@ -36,11 +36,11 @@ cases:
   - "Shell scenario planning and the 1973 oil shock"
 
 first_seen: "2026-09-29"
-last_reviewed: "2026-09-29"
-next_review: "2026-09-30"
+last_reviewed: "2026-09-30"
+next_review: "2026-10-07"
 sources:
   - "https://www.shell.com/news-and-insights/scenarios/what-are-shell-scenarios/_jcr_content/root/main/section_509167378/promo/links/item0.stream/1652289755448/a0e75f042fee5322b72780ee36e5ba17c35a4fc6/shell-scenarios-40yearsbook080213.pdf"
   - "https://www.shell.com/news-and-insights/scenarios/what-are-the-previous-shell-scenarios/_jcr_content/root/main/section_745060082/promo_copy_1589082568/links/item0.stream/1652289296666/f5b043e97972e369db4382a38434d4dc2b1e8bc4/shell-scenarios-explorersguide.pdf"
   - "https://history.state.gov/milestones/1969-1976/oil-embargo"
   - "https://www.elibrary.imf.org/display/book/9781451922684/ch017.xml"
-notes: "Forecasting Day 2. Belief updating is applied through precommitted signals rather than added as a duplicate node. Calibration remains reserved for September Integration. Mastery remains candidate until Teach-back."
+notes: "Forecasting Day 2. Reviewed during September Integration: scenario signals become forecast records and update triggers, but scenario plausibility and probability calibration remain separate tests. Mastery remains candidate until Teach-back."

@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ## Current Phase（当前阶段）
 
@@ -10,7 +10,7 @@ Last updated: 2026-09-29
 
 ## Current Month（当前月份）
 
-**September 2026 — Build the Brain（建立认知系统）**
+**September 2026 — Build the Brain（建立认知系统，第一轮骨架完成）**
 
 主线：
 
@@ -65,7 +65,7 @@ Last updated: 2026-09-29
 
 ## Next Immediate Focus（下一步）
 
-2026-09-30：完成 September Integration（9 月整合），用一个新的真实问题同时调用 Systems Thinking、Causal Reasoning、Probability、Bayesian Updating、Source Evaluation、Forecast Record 与 Scenario Planning，并用 Calibration 检查整组概率表达；Industry Apprenticeship 完成月度整合。
+2026-10-01：进入 Energy（能源）新 Domain，先完成 Domain Orientation 与 Energy System Foundation；从一单位能源出发，调用 9 月建立的 Systems Thinking、Causal Reasoning、Probability、Bayesian Updating、Source Evaluation 与 Forecasting 骨架。所有 9 月 mastery 仍是 candidate，等待 Teach-back 和陌生能源案例迁移。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +76,8 @@ Last updated: 2026-09-29
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-09-30：完成 Forecasting Day 3 与 September Integration — Calibration（概率校准）。主课跟随 Good Judgment Project 2011 年一条最初约 20%、随后降低、却在截止前 20 天发生的海上致命冲突预测，区分单项输赢、Brier Score、Calibration 与 Resolution。前两年研究覆盖 199 个结果，第一年 2,246 人、第二年 1,648 人；第一年前 2% 的 60 人进入五个 superforecaster teams。课程说明概率训练、团队协作和追踪总体改善表现，同时保留参与者选择与领域迁移边界；早期 100% 预测约 70% 正确、临近关闭约 90%，显示极端过度自信。行业整合新增四条 2026–2028 可结算预测，覆盖多运营商再聚合、独立 DTC、NBA 三组权利执行和 direct-versus-partner cohort 披露。`META.FORECASTING.CALIBRATION` 为 L2 candidate，`BUS.MEDIA.FORECAST_REGISTER` 为 L1 candidate；9 月第一轮 Thinking Toolkit 与 Streaming 行业骨架完成，但全部等待 Teach-back 或跨域应用。
 
 2026-09-29：完成 Forecasting Day 2 — Scenario Planning（情景规划）。主课跟随 1972 年 Shell 管理层面前的一桶油，区分已积累的产油国权力、进口依赖和供给调整延迟，与无法精确预测的战争、禁运和政府协同行为；1973 年沙特轻质原油 posted price 从约 3.01 美元升至 5.12 美元，并在 1974 年 1 月升至 11.65 美元。课程不把这包装成准确预言，而是重建 Focal Question、Predetermined Elements、Critical Uncertainties、Causal Story、Signals、Robust Actions 与 Contingent Actions，并明确 Shell 的财务收益归因为公司事后叙述而非干净反事实。Industry Apprenticeship 用内容差异化和聚合增量价值构造 Fortress Services、New Cable、Utility Shelf 与 Rotation Market 四个 2026–2028 流媒体世界，要求用 direct-versus-partner cohort conversion、retention、contribution、migration 和控制权更新。META.FORECASTING.SCENARIO_PLANNING 与 BUS.MEDIA.FUTURE_SCENARIOS 均为 L1 candidate，等待 Teach-back。
 

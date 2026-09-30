@@ -1,0 +1,46 @@
+id: "META.FORECASTING.CALIBRATION"
+name_en: "Forecast Calibration"
+name_zh: "概率校准"
+domain: "META"
+module: "Forecasting（预测）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L2"
+
+what: "Calibration measures whether events assigned probability x occur about x of the time across a sufficiently large, frozen and consistently resolved set of forecasts; resolution separately measures whether forecasts discriminate higher-risk from lower-risk events."
+why: "One surprising outcome cannot reveal whether a probability was good, and a forecaster who always says 50% can appear calibrated while adding little information. Long-run records are required to diagnose systematic overconfidence, underconfidence and weak discrimination."
+mechanism: "Freeze forecast records before outcomes; preserve every update; resolve events under original rules; score individual predictions; group comparable resolved forecasts into probability bins; compare stated probabilities with observed frequencies; inspect resolution, selection, dependence and sample size; convert systematic errors into process changes."
+example: "In the 2011-2013 Good Judgment Project study, probability training, team collaboration and tracking improved forecasting performance. Early 100% predictions were correct only about 70% of the time, while late 100% predictions were correct about 90%, exposing persistent overconfidence at the extreme."
+my_take: "I should judge probability skill from a complete record of many forecasts, not from one win or loss, and I should seek both frequency calibration and useful separation of events."
+
+prerequisites:
+  - "META.FORECASTING.FOUNDATION"
+  - "META.FORECASTING.SCENARIO_PLANNING"
+  - "META.PROBABILITY.FOUNDATION"
+  - "META.BAYESIAN.UPDATING"
+connections:
+  - "META.FORECASTING.FOUNDATION"
+  - "META.FORECASTING.SCENARIO_PLANNING"
+  - "META.SYSTEMS.INTEGRATION"
+  - "META.CAUSAL.INTEGRATION"
+  - "META.PROBABILITY.BASE_RATE"
+  - "META.BAYESIAN.UPDATING"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.COGNITIVE_BIAS.ANCHORING"
+  - "META.SOURCE_EVALUATION.INTEGRATION"
+  - "BUS.MEDIA.FORECAST_REGISTER"
+  - "CASE.GOOD_JUDGMENT.PROJECT.CALIBRATION.2011_2015"
+questions:
+  - "Across many frozen predictions, do stated probabilities match observed frequencies, do forecasts discriminate among events, and what selection or dependence could make the apparent calibration misleading?"
+cases:
+  - "Good Judgment Project geopolitical forecasting tournament, 2011-2015"
+
+first_seen: "2026-09-24"
+last_reviewed: "2026-09-30"
+next_review: "2026-10-07"
+sources:
+  - "https://faculty.wharton.upenn.edu/wp-content/uploads/2015/07/2014---psychological-strategies-for-winning-a-tournament.pdf"
+  - "https://www.iarpa.gov/index.php/research-programs/ace"
+  - "https://www.iarpa.gov/newsroom/article/iarpa-announces-publication-of-data-from-the-good-judgment-project"
+  - "https://journals.ametsoc.org/view/journals/mwre/78/1/1520-0493_1950_078_0001_vofeit_2_0_co_2.xml"
+notes: "Formally taught during September Integration after exposure on 2026-09-24. The month's other tools were reviewed but not automatically upgraded. Mastery remains candidate until Teach-back and later Energy-domain application."

@@ -32,11 +32,11 @@ cases:
   - "OPERA faster-than-light neutrino anomaly and correction, 2011-2012"
 
 first_seen: "2026-09-27"
-last_reviewed: "2026-09-28"
-next_review: "2026-09-30"
+last_reviewed: "2026-09-30"
+next_review: "2026-10-07"
 sources:
   - "https://home.cern/opera-experiment-reports-anomaly-in-flight-time-of-neutrinos-from-cern-to-gran-sasso/"
   - "https://arxiv.org/abs/1109.4897v1"
   - "https://cds.cern.ch/record/1498324"
   - "https://arxiv.org/abs/1203.3433"
-notes: "Integration node for Anchoring and Source Evaluation. Reviewed on 2026-09-28 as the input-quality gate before freezing a forecast and information cutoff. Mastery remains candidate until the user audits an unfamiliar measurement chain and proposes an independent diagnostic test."
+notes: "Integration node for Anchoring and Source Evaluation. Reviewed on 2026-09-30: forecast calibration can be misleading when resolution sources, event definitions or question-selection gates share systematic error. Mastery remains candidate until unfamiliar-case audit."

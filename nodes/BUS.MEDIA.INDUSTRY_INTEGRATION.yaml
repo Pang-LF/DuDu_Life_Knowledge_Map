@@ -33,6 +33,7 @@ connections:
   - "BUS.MEDIA.SPORTS_RIGHTS"
   - "META.FORECASTING.FOUNDATION"
   - "BUS.MEDIA.FUTURE_SCENARIOS"
+  - "BUS.MEDIA.FORECAST_REGISTER"
   - "CASE.DISNEY_PLUS.SUBSCRIBER_GUIDANCE.2020_2024"
 questions:
   - "Which subscriber, ARPU, churn, content-cost and contribution claims are separately resolvable, and how do they combine into a strategic-value judgment?"
@@ -40,9 +41,9 @@ cases:
   - "Disney+ subscriber guidance and FY2024 outcome"
 
 first_seen: "2026-09-28"
-last_reviewed: "2026-09-29"
-next_review: "2026-09-30"
+last_reviewed: "2026-09-30"
+next_review: "2026-10-31"
 sources:
   - "https://investors.thewaltdisneycompany.com/files/doc_events/2020/12/Disney_Investor_Day_2020_transcript.pdf"
   - "https://investors.thewaltdisneycompany.com/files/doc_financials/2024/ar/2024-Annual-Report-1.pdf"
-notes: "September industry integration node. Reviewed on 2026-09-29 by branching the connected industry model into four worlds based on content differentiation and aggregation incrementality. Mastery remains candidate until Teach-back."
+notes: "September industry integration node. Reviewed on 2026-09-30 by converting the connected operating model and four future worlds into a dated forecast register. Mastery remains candidate until Teach-back."

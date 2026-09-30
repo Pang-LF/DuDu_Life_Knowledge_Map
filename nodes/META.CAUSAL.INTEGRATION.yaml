@@ -27,6 +27,7 @@ connections:
   - "META.SOURCE_EVALUATION.FOUNDATION"
   - "META.SOURCE_EVALUATION.INTEGRATION"
   - "META.FORECASTING.SCENARIO_PLANNING"
+  - "META.FORECASTING.CALIBRATION"
   - "CASE.SALK.POLIO_VACCINE_FIELD_TRIAL.1954"
 questions:
   - "Why can the proposed comparison group estimate the treated group's missing outcome, and what assignment, observation, or generalization boundary remains?"
@@ -34,11 +35,11 @@ cases:
   - "1954 Salk poliomyelitis vaccine field trial"
 
 first_seen: "2026-09-19"
-last_reviewed: "2026-09-29"
-next_review: "2026-09-30"
+last_reviewed: "2026-09-30"
+next_review: "2026-10-02"
 sources:
   - "https://pubmed.ncbi.nlm.nih.gov/14361811/"
   - "https://jhanley.biostat.mcgill.ca/bios601/Polio/PolioTrial-I-SummaryConclusions.pdf"
   - "https://sph.umich.edu/polio/"
   - "https://pmc.ncbi.nlm.nih.gov/articles/PMC1114166/"
-notes: "Causal Reasoning Day 5 integration. Reviewed on 2026-09-29: a scenario must contain a coherent causal mechanism and distinguish facts, candidates and assumptions rather than merely rename high and low outcomes. Mastery remains candidate until Teach-back."
+notes: "Causal Reasoning Day 5 integration. Reviewed on 2026-09-30: a single forecast outcome does not identify whether a training or decision method caused better judgment; comparison design and calibration answer different questions."

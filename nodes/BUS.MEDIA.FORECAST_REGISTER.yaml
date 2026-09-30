@@ -1,0 +1,47 @@
+id: "BUS.MEDIA.FORECAST_REGISTER"
+name_en: "Streaming Forecast Register"
+name_zh: "流媒体预测登记簿"
+domain: "BUSINESS"
+module: "Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A streaming forecast register converts the connected industry model and scenario signals into dated, probabilistic, resolvable claims with preserved update histories."
+why: "Industry narratives about bundles, DTC, sports and platform power can all sound plausible after the fact. A register makes the event, horizon, source and probability explicit so later evidence can update and eventually score the judgment."
+mechanism: "Start from the value chain and scenario uncertainties; extract observable events about aggregation, direct access, rights execution and cohort disclosure; state exact deadlines and resolution sources; assign baseline probabilities; preserve updates; settle each event separately; evaluate calibration only after enough resolved records accumulate."
+example: "The September 2026 register begins with four forecasts covering multi-provider re-aggregation, continued standalone DTC offers, execution of the NBA's three-group rights structure and disclosure of direct-versus-partner cohort economics."
+my_take: "I should turn claims about streaming's future into separately resolvable records and avoid treating one bundle launch or one subscriber total as proof of an entire scenario."
+
+prerequisites:
+  - "BUS.MEDIA.INDUSTRY_INTEGRATION"
+  - "BUS.MEDIA.FUTURE_SCENARIOS"
+  - "META.FORECASTING.FOUNDATION"
+  - "META.FORECASTING.SCENARIO_PLANNING"
+connections:
+  - "BUS.MEDIA.INDUSTRY_INTEGRATION"
+  - "BUS.MEDIA.FUTURE_SCENARIOS"
+  - "BUS.MEDIA.REAGGREGATION"
+  - "BUS.MEDIA.DEVICE_OS_POWER"
+  - "BUS.MEDIA.SPORTS_RIGHTS"
+  - "BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP"
+  - "BUS.SUBSCRIPTION.CHURN_RETENTION"
+  - "BUS.SUBSCRIPTION.LTV"
+  - "META.FORECASTING.FOUNDATION"
+  - "META.FORECASTING.SCENARIO_PLANNING"
+  - "META.FORECASTING.CALIBRATION"
+  - "CASE.STREAMING.FORECAST_REGISTER.2026_2028"
+questions:
+  - "Which observable industry events would distinguish direct content power, value-creating re-aggregation, aggregator commodity power and rotation, and how should their probabilities change as cohort evidence arrives?"
+cases:
+  - "Streaming forecast register, 2026-2028"
+
+first_seen: "2026-09-30"
+last_reviewed: "2026-09-30"
+next_review: "2026-10-31"
+sources:
+  - "https://corporate.comcast.com/press/releases/comcast-introduces-peacock-netflix-and-apple-tv-streaming-bundle"
+  - "https://www.nba.com/news/nba-media-agreements-2024"
+  - "https://www.sec.gov/Archives/edgar/data/1428439/000142843925000010/roku-20241231.htm"
+  - "https://investors.thewaltdisneycompany.com/files/doc_financials/2024/ar/2024-Annual-Report-1.pdf"
+notes: "September industry integration output. Initial probabilities are course baselines, not user-validated beliefs. Four records are insufficient for calibration and must be expanded and updated without deleting history."

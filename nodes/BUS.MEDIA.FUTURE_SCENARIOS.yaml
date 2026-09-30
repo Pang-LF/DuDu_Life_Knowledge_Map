@@ -32,6 +32,7 @@ connections:
   - "BUS.SUBSCRIPTION.PRICING_PACKAGING"
   - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
   - "META.FORECASTING.SCENARIO_PLANNING"
+  - "BUS.MEDIA.FORECAST_REGISTER"
   - "CASE.STREAMING.FUTURE_SCENARIOS.2026_2028"
 questions:
   - "Which cohort evidence would distinguish content-led direct control, value-creating re-aggregation, aggregator commodity power and high-churn rotation?"
@@ -39,11 +40,11 @@ cases:
   - "Streaming structural scenarios, September 2026 to September 2028"
 
 first_seen: "2026-09-29"
-last_reviewed: "2026-09-29"
-next_review: "2026-09-30"
+last_reviewed: "2026-09-30"
+next_review: "2026-10-31"
 sources:
   - "https://corporate.comcast.com/press/releases/comcast-introduces-peacock-netflix-and-apple-tv-streaming-bundle"
   - "https://www.nba.com/news/nba-media-agreements-2024"
   - "https://www.sec.gov/Archives/edgar/data/1428439/000142843925000010/roku-20241231.htm"
   - "https://investors.thewaltdisneycompany.com/files/doc_financials/2024/ar/2024-Annual-Report-1.pdf"
-notes: "Industry apprenticeship scenario application. The four worlds are analytical constructs, not predictions or mastery of 2028 outcomes. Mastery remains candidate until Teach-back."
+notes: "Industry apprenticeship scenario application. Reviewed on 2026-09-30 by extracting four resolvable forecasts; no single forecast outcome can validate an entire world. Mastery remains candidate until Teach-back."

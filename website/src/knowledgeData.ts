@@ -21,7 +21,7 @@ export const domains: Domain[] = [
     id: 'META',
     nameEn: 'META',
     nameZh: '元能力',
-    progress: 99,
+    progress: 100,
     active: true,
     modules: [
       'Systems Thinking（系统思维）',
@@ -64,7 +64,7 @@ export const domains: Domain[] = [
     id: 'BUSINESS',
     nameEn: 'BUSINESS',
     nameZh: '商业',
-    progress: 93,
+    progress: 100,
     active: true,
     modules: ['Business Fundamentals（商业基础）', 'Industry Atlas（产业图谱）'],
   },
@@ -277,6 +277,14 @@ export const nodes: GraphNode[] = [
     connections: ['META.FORECASTING.FOUNDATION', 'META.FORECASTING.CALIBRATION', 'META.SYSTEMS.INTEGRATION', 'META.CAUSAL.INTEGRATION', 'META.BAYESIAN.UPDATING', 'META.PROBABILITY.EXPECTED_VALUE', 'BUS.MEDIA.FUTURE_SCENARIOS', 'CASE.SHELL.SCENARIO_PLANNING.1971_1973'],
   },
   {
+    id: 'META.FORECASTING.CALIBRATION',
+    label: 'Calibration（概率校准）',
+    domain: 'META',
+    mastery: 'L2 candidate',
+    summary: 'Across many frozen and consistently resolved forecasts, events assigned probability x should occur about x of the time; resolution separately tests whether forecasts distinguish events.',
+    connections: ['META.FORECASTING.FOUNDATION', 'META.FORECASTING.SCENARIO_PLANNING', 'META.SYSTEMS.INTEGRATION', 'META.CAUSAL.INTEGRATION', 'META.BAYESIAN.UPDATING', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SOURCE_EVALUATION.INTEGRATION', 'BUS.MEDIA.FORECAST_REGISTER', 'CASE.GOOD_JUDGMENT.PROJECT.CALIBRATION.2011_2015'],
+  },
+  {
     id: 'CASE.SMOKING_LUNG_CANCER.CAUSAL_INFERENCE_1950_2004',
     label: 'Smoking & Lung Cancer（吸烟与肺癌）',
     domain: 'META',
@@ -395,6 +403,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'Six branching worlds made producer power and an oil shock thinkable before the 1973 embargo; they did not predict the exact war, date or $11.65 price.',
     connections: ['META.FORECASTING.SCENARIO_PLANNING'],
+  },
+  {
+    id: 'CASE.GOOD_JUDGMENT.PROJECT.CALIBRATION.2011_2015',
+    label: 'Good Judgment Project（良好判断项目）',
+    domain: 'META',
+    mastery: 'Case studied',
+    summary: 'A single low-probability maritime event surprised forecasters, while 199 resolved outcomes showed that probability training, teams and top-performer tracking improved calibration and resolution overall.',
+    connections: ['META.FORECASTING.CALIBRATION'],
   },
   {
     id: 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022',
@@ -637,6 +653,14 @@ export const nodes: GraphNode[] = [
     connections: ['BUS.MEDIA.INDUSTRY_INTEGRATION', 'BUS.MEDIA.REAGGREGATION', 'BUS.MEDIA.DEVICE_OS_POWER', 'BUS.MEDIA.SPORTS_RIGHTS', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.LTV', 'META.FORECASTING.SCENARIO_PLANNING', 'CASE.STREAMING.FUTURE_SCENARIOS.2026_2028'],
   },
   {
+    id: 'BUS.MEDIA.FORECAST_REGISTER',
+    label: 'Streaming Forecast Register（流媒体预测登记簿）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Convert the connected industry model into dated, probabilistic and resolvable claims about re-aggregation, direct access, rights execution and cohort evidence, preserving every update.',
+    connections: ['BUS.MEDIA.INDUSTRY_INTEGRATION', 'BUS.MEDIA.FUTURE_SCENARIOS', 'BUS.MEDIA.REAGGREGATION', 'BUS.MEDIA.DEVICE_OS_POWER', 'BUS.MEDIA.SPORTS_RIGHTS', 'BUS.MEDIA.DTC.CUSTOMER_RELATIONSHIP', 'BUS.SUBSCRIPTION.CHURN_RETENTION', 'BUS.SUBSCRIPTION.LTV', 'META.FORECASTING.FOUNDATION', 'META.FORECASTING.SCENARIO_PLANNING', 'META.FORECASTING.CALIBRATION', 'CASE.STREAMING.FORECAST_REGISTER.2026_2028'],
+  },
+  {
     id: 'CASE.NETFLIX.OPEN_CONNECT',
     label: 'Netflix Open Connect（本地内容交付）',
     domain: 'BUSINESS',
@@ -756,15 +780,23 @@ export const nodes: GraphNode[] = [
     summary: 'Four worlds distinguish whether content remains differentiated and whether aggregators create incremental cohort value, with direct-versus-partner economics as diagnostic evidence.',
     connections: ['BUS.MEDIA.FUTURE_SCENARIOS', 'META.FORECASTING.SCENARIO_PLANNING'],
   },
+  {
+    id: 'CASE.STREAMING.FORECAST_REGISTER.2026_2028',
+    label: 'Streaming Forecast Register 2026–28（流媒体预测）',
+    domain: 'BUSINESS',
+    mastery: 'Open forecast set',
+    summary: 'Four course-baseline forecasts cover multi-provider aggregation, standalone DTC, NBA rights execution and direct-versus-partner cohort disclosure; four records are not enough to establish calibration.',
+    connections: ['BUS.MEDIA.FORECAST_REGISTER', 'META.FORECASTING.CALIBRATION'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-09-29',
-  title: 'Scenario Planning（情景规划）',
-  question: 'Shell 不知道战争与禁运会怎样发生，为什么仍能比准确预测油价更早做好准备？',
-  reading: '45-60 min：沿 1973 石油冲击区分既定因素、关键不确定性、因果情景、信号与稳健/条件行动。',
-  discussion: '20-30 min：为陌生教育投资构造情景组，再用 cohort 证据区分四个 Streaming worlds。',
-  next: '2026-09-30：September Integration、Calibration 与行业月度整合。',
+  date: '2026-09-30',
+  title: 'Calibration（概率校准）',
+  question: '最好的预测者把一件事降到低概率，它偏偏发生了，他们到底好不好？',
+  reading: '45-60 min：沿 Good Judgment Project 的一条失败预测，区分单项分数、概率校准、分辨力与整月判断流程。',
+  discussion: '20-30 min：审计一组 80% 预测，并修改一条 2026–2028 Streaming Forecast Record。',
+  next: '2026-10-01：Energy Domain Orientation 与 Energy System Foundation。',
 }
 
 export const monthlyTrack = [

@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 2026-09-30
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 SENT、INBOX 与未读标签
+- 完成 Forecasting Day 3 与 September Integration，正式新增 `META.FORECASTING.CALIBRATION`
+- 用 Good Judgment Project 一条低概率却发生的海上致命冲突预测，区分单项结果、Brier Score、Calibration 与 Resolution
+- 记录前两年 199 个结算结果、第一年 2,246 人、第二年 1,648 人、前 2% 共 60 人以及早期 / 晚期 100% 预测约 70% / 90% 正确的数量级与边界
+- 把 Systems Thinking、Causal Reasoning、Probability、Bayesian Updating、Source Evaluation、Expected Value、Forecast Record 与 Scenario Planning 合成可重复判断流程
+- 新增 `BUS.MEDIA.FORECAST_REGISTER` 与四条 2026–2028 课程基线预测，明确它们不是用户已确认信念且不足以建立 calibration
+- 新增 9 月月度状态，完成 Thinking Toolkit 与 Streaming 行业第一轮骨架；所有 mastery 保持 candidate，等待 Teach-back 与 Energy 跨域迁移
+- 更新相关节点、行业日志、Question Bank、CURRENT_STATE 与网站数据，下一课进入 Energy Domain Orientation
+
 ## 2026-09-29
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 SENT、INBOX 与未读标签

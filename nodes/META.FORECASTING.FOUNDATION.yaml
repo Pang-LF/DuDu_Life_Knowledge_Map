@@ -33,12 +33,12 @@ cases:
   - "FiveThirtyEight 2016 U.S. presidential election forecast"
 
 first_seen: "2026-09-28"
-last_reviewed: "2026-09-29"
-next_review: "2026-09-30"
+last_reviewed: "2026-09-30"
+next_review: "2026-10-07"
 sources:
   - "https://archive.ph/N5onZ"
   - "https://fivethirtyeight.com/features/final-election-update-theres-a-wide-range-of-outcomes-and-most-of-them-come-up-clinton/"
   - "https://www.archives.gov/electoral-college/2016"
   - "https://journals.ametsoc.org/view/journals/mwre/78/1/1520-0493_1950_078_0001_vofeit_2_0_co_2.xml"
   - "https://www.iarpa.gov/research-programs/ace"
-notes: "Forecasting module foundation. Reviewed on 2026-09-29: scenario planning expands distinct causal worlds, after which key resolvable events can be converted into forecast records. Calibration remains reserved for September Integration. Mastery remains candidate until Teach-back."
+notes: "Forecasting module foundation. Reviewed on 2026-09-30: calibration requires a complete set of frozen records and cannot be inferred from one resolved outcome. Mastery remains candidate until Teach-back and Energy-domain transfer."
