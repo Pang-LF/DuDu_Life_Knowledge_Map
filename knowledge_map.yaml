@@ -1,5 +1,5 @@
 version: 0.1
-updated: 2026-09-08
+updated: 2026-10-01
 purpose: "Personal Knowledge Operating System（个人知识操作系统）"
 
 meta:
@@ -53,6 +53,7 @@ domains:
       - Politics（政治）
       - Geopolitics（地缘政治）
       - Law & Institutions（法律与制度）
+      - Energy Systems（能源系统）
   - id: BUSINESS
     name_en: BUSINESS
     name_zh: 商业

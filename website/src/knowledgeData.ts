@@ -57,8 +57,9 @@ export const domains: Domain[] = [
     id: 'SYSTEM',
     nameEn: 'SYSTEM',
     nameZh: '现代社会系统',
-    progress: 0,
-    modules: ['Economics（经济学）', 'Finance（金融）', 'Politics（政治）', 'Geopolitics（地缘政治）'],
+    progress: 5,
+    active: true,
+    modules: ['Energy Systems（能源系统）', 'Economics（经济学）', 'Finance（金融）', 'Politics（政治）', 'Geopolitics（地缘政治）'],
   },
   {
     id: 'BUSINESS',
@@ -788,22 +789,44 @@ export const nodes: GraphNode[] = [
     summary: 'Four course-baseline forecasts cover multi-provider aggregation, standalone DTC, NBA rights execution and direct-versus-partner cohort disclosure; four records are not enough to establish calibration.',
     connections: ['BUS.MEDIA.FORECAST_REGISTER', 'META.FORECASTING.CALIBRATION'],
   },
+  {
+    id: 'SYSTEM.ENERGY.FOUNDATION',
+    label: 'Energy System Foundation（能源系统基础）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Primary energy becomes useful service only through a coordinated chain of conversion, carriers, networks, operating rules, and end-use devices; resource abundance alone does not guarantee availability.',
+    connections: ['META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SOURCE_EVALUATION.INTEGRATION', 'BUS.ENERGY.VALUE_CHAIN', 'CASE.TEXAS.FREEZE.2021'],
+  },
+  {
+    id: 'BUS.ENERGY.VALUE_CHAIN',
+    label: 'Energy Value Chain（能源价值链）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Resource production, midstream, generation, grid operation, network delivery, retail, regulation, and end-use equipment must be mapped through separate physical, money, and control flows.',
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'CASE.TEXAS.FREEZE.2021', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE'],
+  },
+  {
+    id: 'CASE.TEXAS.FREEZE.2021',
+    label: 'Texas Freeze 2021（得州寒潮）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'Extreme cold simultaneously raised heating demand and impaired gas production, fuel delivery, generating units, and grid operations, separating abundant resources from delivered electricity and heat.',
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'BUS.ENERGY.VALUE_CHAIN', 'META.SYSTEMS.INTEGRATION', 'META.SOURCE_EVALUATION.INTEGRATION'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-09-30',
-  title: 'Calibration（概率校准）',
-  question: '最好的预测者把一件事降到低概率，它偏偏发生了，他们到底好不好？',
-  reading: '45-60 min：沿 Good Judgment Project 的一条失败预测，区分单项分数、概率校准、分辨力与整月判断流程。',
-  discussion: '20-30 min：审计一组 80% 预测，并修改一条 2026–2028 Streaming Forecast Record。',
-  next: '2026-10-01：Energy Domain Orientation 与 Energy System Foundation。',
+  date: '2026-10-01',
+  title: 'Energy System Foundation（能源系统基础）',
+  question: '全美最大的能源生产州之一，为什么会让数百万人同时失去电与热？',
+  reading: '45-60 min：沿一户家庭的取暖需求，从一次能源追踪到能源服务，并重建 2021 年得州寒潮的完整转换链。',
+  discussion: '20-30 min：比较资源丰富与服务可靠，并分别画出家庭电费背后的物理流、钱流和控制流。',
+  next: '2026-10-02：Energy Sources & Conversion 与 Energy Accounting Boundaries。',
 }
 
 export const monthlyTrack = [
-  'Systems Thinking（系统思维）',
-  'Causal Reasoning（因果推理）',
-  'Probability（概率）',
-  'Bayesian Thinking（贝叶斯思维）',
-  'Source Evaluation（信息源评估）',
-  'Forecasting（预测）',
+  'Energy System Foundations（能源系统基础）',
+  'Electricity（电力系统）',
+  'Energy Economics（能源经济学）',
+  'Energy × Future（能源 × 未来）',
 ]

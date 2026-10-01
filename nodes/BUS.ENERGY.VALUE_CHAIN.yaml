@@ -1,0 +1,34 @@
+id: "BUS.ENERGY.VALUE_CHAIN"
+name_en: "Energy Value Chain"
+name_zh: "能源价值链"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "The energy value chain separates resource production, processing and transport, conversion, system operation, network delivery, retailing, regulation, and end-use equipment while tracing physical, money, and control flows among them."
+why: "The company that bills a customer does not necessarily produce the fuel, own the generator, operate the grid, or control every reliability decision; industry power and economics depend on the specific layer and rights held."
+mechanism: "Producers supply primary energy, midstream assets process and transport fuels, generators convert energy into electricity, grid operators coordinate real-time balance, network utilities deliver it, retailers manage customer contracts, regulators define obligations, and end-use equipment converts final energy into services."
+example: "A Texas household's heating service could depend on natural gas wellheads, gathering and processing facilities, pipelines, a gas generator, ERCOT dispatch, transmission and distribution networks, a retailer, and an electric heater or heat pump."
+my_take: "I should draw physical flow, money flow, and control flow separately before judging who captures value or controls reliability."
+
+prerequisites:
+  - "SYSTEM.ENERGY.FOUNDATION"
+connections:
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "CASE.TEXAS.FREEZE.2021"
+  - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+questions:
+  - "Which layer controls the scarce asset, customer relationship, dispatch right, or cost-recovery rule under normal conditions and during shortage?"
+cases:
+  - "February 2021 Texas freeze and natural-gas-electric coordination"
+
+first_seen: "2026-10-01"
+last_reviewed: "2026-10-01"
+next_review: "2026-10-08"
+sources:
+  - "https://www.ferc.gov/sites/default/files/2021-12/Cold%20Weather%20Report_%202021_120821.pdf"
+  - "https://www.eia.gov/energyexplained/use-of-energy/"
+notes: "Energy Industry Apprenticeship Day 1. L1 candidate pending the user's reconstruction of physical, money, and control flows."

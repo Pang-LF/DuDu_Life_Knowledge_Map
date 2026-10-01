@@ -45,6 +45,7 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.MEDIA.DISTRIBUTION.MODELS', x: 322, y: 632 },
   { id: 'BUS.MEDIA.STREAMING.TECH_FOUNDATIONS', x: 422, y: 544 },
   { id: 'BUS.MEDIA.INDUSTRY_POWER_SHIFT', x: 474, y: 584 },
+  { id: 'SYSTEM.ENERGY.FOUNDATION', x: 768, y: 626 },
   { id: 'SYSTEM.ECON.INFLATION', x: 800, y: 565, virtual: true },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
@@ -83,8 +84,8 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('META.CAUSAL.CONFOUNDER')
-  const [selectedDomainId, setSelectedDomainId] = useState('META')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ENERGY.FOUNDATION')
+  const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(
     () => atlasNodes.find((node) => node.id === selectedNodeId) ?? atlasNodes[0],
@@ -123,7 +124,7 @@ function App() {
           <p className="today-title">{todayBrief.title}</p>
           <p className="today-question">{todayBrief.question}</p>
           <div className="study-steps">
-            <span><BookOpen size={15} />30-40m 阅读思考</span>
+            <span><BookOpen size={15} />45-60m 阅读思考</span>
             <span><Search size={15} />20-30m 追问讨论</span>
           </div>
         </div>
@@ -131,11 +132,11 @@ function App() {
         <div className="dock-section">
           <div className="dock-title">
             <GitBranch size={17} />
-            <span>9 月主线</span>
+            <span>10 月主线</span>
           </div>
           <ol className="route-list">
             {monthlyTrack.map((item, index) => (
-              <li className={index === 1 ? 'current' : ''} key={item}>
+              <li className={index === 0 ? 'current' : ''} key={item}>
                 <span>{index + 1}</span>
                 {item}
               </li>

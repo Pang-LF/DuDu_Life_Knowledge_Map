@@ -1,0 +1,42 @@
+id: "SYSTEM.ENERGY.FOUNDATION"
+name_en: "Energy System Foundation"
+name_zh: "能源系统基础"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "An energy system is the resources, conversion equipment, transport and network infrastructure, operating rules, markets, institutions, and end-use devices that transform primary energy into useful services at a required time and place."
+why: "Resource abundance, annual production, and installed capacity do not by themselves guarantee heat, motion, light, cooling, or computation; service depends on the complete conversion chain remaining executable."
+mechanism: "Primary energy is converted into carriers such as electricity or refined fuels, delivered through networks, and transformed by end-use devices into services. Physical flow, information and control, and money and rights must remain coordinated across quantity, rate, location, timing, and quality constraints."
+example: "During the February 2021 Texas freeze, abundant energy resources did not prevent more than 4.5 million residents from losing power because cold simultaneously increased demand and impaired natural gas production, fuel delivery, generating units, and grid operations."
+my_take: "When evaluating an energy claim, I should ask which layer the number describes and follow one unit from primary energy to the actual service people need."
+
+prerequisites:
+  - "META.SYSTEMS.SYSTEM"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+connections:
+  - "META.SYSTEMS.INTEGRATION"
+  - "META.SYSTEMS.COUPLING"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.DELAY"
+  - "META.CAUSAL.INTEGRATION"
+  - "META.SOURCE_EVALUATION.INTEGRATION"
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "CASE.TEXAS.FREEZE.2021"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+questions:
+  - "For a specified energy service, which conversion-chain layer is the current constraint and what evidence distinguishes resource abundance from deliverable availability?"
+cases:
+  - "February 2021 Texas freeze and South Central U.S. cold-weather outages"
+
+first_seen: "2026-10-01"
+last_reviewed: "2026-10-01"
+next_review: "2026-10-08"
+sources:
+  - "https://www.eia.gov/energyexplained/what-is-energy/index.php"
+  - "https://www.eia.gov/energyexplained/electricity/"
+  - "https://www.ferc.gov/sites/default/files/2021-12/Cold%20Weather%20Report_%202021_120821.pdf"
+  - "https://www.dshs.texas.gov/sites/default/files/commprep/disasterepi/surveillance/SMOC_FebWinterStorm_MortalitySurvReport_12-30-21.pdf"
+notes: "October Energy Domain Orientation and parent concept. Mastery remains L1 candidate until Teach-back distinguishes stocks, flows, capacity, delivered energy, and useful service in an unfamiliar case."

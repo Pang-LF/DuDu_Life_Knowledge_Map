@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 2026-10-01
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 进入 October Energy 新领域，完成 Domain Orientation 与 `SYSTEM.ENERGY.FOUNDATION`
+- 用 Primary Energy → Conversion → Energy Carrier → Delivery → End-use Device → Energy Service 建立能源系统母概念
+- 新增 `CASE.TEXAS.FREEZE.2021`，以 2021 年得州寒潮说明资源丰富、装机容量和终端服务可靠性属于不同层
+- 记录 1,045 台机组、4,124 次事件、44.2% 冻结、31.4% 燃料、约 21 Bcf/d 区域天然气下降、约 20,000 MW 切负荷与 246 例确认死亡的数量级和证据边界
+- 新增 `BUS.ENERGY.VALUE_CHAIN` 与 `industries/energy.md`，拆分能源行业的物理流、钱流和控制流
+- 将 9 月 Systems Thinking 与 Source Evaluation 节点迁移到陌生能源案例，但不自动升级 mastery
+- 更新知识地图、Question Bank、CURRENT_STATE、网站数据与下一课，锁定 Energy Sources & Conversion 和 Energy Accounting Boundaries
+
 ## 2026-09-30
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 SENT、INBOX 与未读标签

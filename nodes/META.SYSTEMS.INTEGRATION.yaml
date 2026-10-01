@@ -26,6 +26,7 @@ connections:
   - "META.CAUSAL.CORRELATION_CAUSATION"
   - "META.FORECASTING.SCENARIO_PLANNING"
   - "META.FORECASTING.CALIBRATION"
+  - "SYSTEM.ENERGY.FOUNDATION"
   - "FRONTIER.AI.INFRASTRUCTURE"
   - "SYSTEM.HEALTHCARE.OPERATIONS"
 questions:
@@ -34,10 +35,10 @@ cases:
   - "Global automotive semiconductor shortage, 2020-2022"
 
 first_seen: "2026-09-14"
-last_reviewed: "2026-09-30"
-next_review: "2026-10-01"
+last_reviewed: "2026-10-01"
+next_review: "2026-10-08"
 sources:
   - "https://www.commerce.gov/news/press-releases/2022/01/commerce-semiconductor-data-confirms-urgent-need-congress-pass-us"
   - "https://www.sec.gov/Archives/edgar/data/37996/000003799622000013/f-20211231.htm"
   - "https://www.gao.gov/assets/gao-22-105923.pdf"
-notes: "Systems Thinking Day 7 integration. Reviewed on 2026-09-30 as the first stage of an auditable forecast: define the whole-system outcome and mechanism before assigning probability. Next review is the first Energy transfer."
+notes: "Systems Thinking Day 7 integration. Transferred on 2026-10-01 to the Texas energy-system case by following heating service backward through end-use equipment, grid, generation and natural-gas supply. Mastery remains candidate pending user Teach-back."

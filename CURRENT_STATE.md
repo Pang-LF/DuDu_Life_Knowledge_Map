@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-09-30
+Last updated: 2026-10-01
 
 ## Current Phase（当前阶段）
 
@@ -10,16 +10,16 @@ Last updated: 2026-09-30
 
 ## Current Month（当前月份）
 
-**September 2026 — Build the Brain（建立认知系统，第一轮骨架完成）**
+**October 2026 — ENERGY（能源）**
 
 主线：
 
-1. Systems Thinking（系统思维）
-2. Causal Reasoning（因果推理）
-3. Probability（概率）
-4. Bayesian Thinking（贝叶斯思维）
-5. Cognitive Bias & Source Evaluation（认知偏差与信息源评估）
-6. Forecasting（预测）
+1. Where Does Civilization Get Energy?（文明从哪里获得能源？）
+2. How Electricity Actually Works（电力系统如何运行？）
+3. Energy Economics（能源经济学）
+4. Energy × Future（能源 × 未来）
+
+9 月 Thinking Toolkit（思维工具箱）第一轮骨架已经完成，10 月所有课程都要把它迁移到 Energy（能源）真实系统中；出现不等于 mastery 自动升级。
 
 ## Daily Lesson Model（每日课程模型）
 
@@ -36,7 +36,15 @@ Last updated: 2026-09-30
 - 每课采用 Mastery Core → Knowledge Expansion → Connection Preview 三圈结构，但只点亮当天 Anchor Concept
 - 普通核心概念原则上一天完成；现有深度不降低，9月第一轮 Thinking Toolkit 必须在 9 月 30 日完成
 
-## September Industry Window（9月行业窗口）
+## October Industry Window（10月行业窗口）
+
+**Energy（能源）**
+
+从 Primary Energy（一次能源）→ Conversion（转换）→ Energy Carrier（能源载体）→ Network（网络）→ End-use Device（终端设备）→ Energy Service（能源服务）建立产业链，分别追踪 Physical Flow（物理流）、Money Flow（钱流）和 Control Flow（控制流）。
+
+9 月的 Subscription Video / Pay-TV / Streaming 行业骨架与四条 2026–2028 Forecast Register 已冻结保存，后续只在新证据出现时更新。
+
+## September Industry Window（9月行业窗口，已完成第一轮骨架）
 
 **Subscription Video / Pay-TV / Streaming（订阅视频 / 付费电视 / 流媒体）**
 
@@ -65,7 +73,7 @@ Last updated: 2026-09-30
 
 ## Next Immediate Focus（下一步）
 
-2026-10-01：进入 Energy（能源）新 Domain，先完成 Domain Orientation 与 Energy System Foundation；从一单位能源出发，调用 9 月建立的 Systems Thinking、Causal Reasoning、Probability、Bayesian Updating、Source Evaluation 与 Forecasting 骨架。所有 9 月 mastery 仍是 candidate，等待 Teach-back 和陌生能源案例迁移。
+2026-10-02：进入 Energy Sources & Conversion（能源来源与转换），比较煤、石油、天然气、核能、风、太阳与水力提供的能量形式，并解释为什么能源占比会随 Primary Energy、Electricity Generation、Final Energy 与 Useful Service 的统计分母而变化。行业问题固定为 Energy Accounting Boundaries（能源统计边界）。
 
 ## Operating Model（运行模型）
 
@@ -76,6 +84,8 @@ Last updated: 2026-09-30
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-01：进入 Energy 新领域，完成 Domain Orientation 与 Energy System Foundation（能源系统基础）。主课从 2021 年得州寒潮中一户家庭的取暖需求出发，建立 Primary Energy → Conversion → Energy Carrier → Delivery → End-use Device → Energy Service 的完整链条；解释资源储量、流量、装机、可用能力、发电量与终端服务不能互换。FERC/NERC 记录事件区域 1,045 台机组经历 4,124 次停机、降额或无法启动，44.2% 与冻结有关、31.4% 与燃料有关且燃料问题中 87% 来自天然气供应；得州、俄克拉何马和路易斯安那天然气最低点比 1 月平均少约 21 Bcf/d、超过 50%，ERCOT 下令约 20,000 MW 切负荷，超过 450 万居民失去电力。Texas DSHS 确认 246 例风暴相关死亡，其中 158 例低体温症。行业学徒制新增 Energy Value Chain，分别追踪资源生产、midstream、发电、调度、网络、零售、监管和终端设备的物理流、钱流与控制流。`SYSTEM.ENERGY.FOUNDATION` 与 `BUS.ENERGY.VALUE_CHAIN` 均为 L1 candidate，等待 Teach-back；下一课进入 Energy Sources & Conversion 与 Energy Accounting Boundaries。
 
 2026-09-30：完成 Forecasting Day 3 与 September Integration — Calibration（概率校准）。主课跟随 Good Judgment Project 2011 年一条最初约 20%、随后降低、却在截止前 20 天发生的海上致命冲突预测，区分单项输赢、Brier Score、Calibration 与 Resolution。前两年研究覆盖 199 个结果，第一年 2,246 人、第二年 1,648 人；第一年前 2% 的 60 人进入五个 superforecaster teams。课程说明概率训练、团队协作和追踪总体改善表现，同时保留参与者选择与领域迁移边界；早期 100% 预测约 70% 正确、临近关闭约 90%，显示极端过度自信。行业整合新增四条 2026–2028 可结算预测，覆盖多运营商再聚合、独立 DTC、NBA 三组权利执行和 direct-versus-partner cohort 披露。`META.FORECASTING.CALIBRATION` 为 L2 candidate，`BUS.MEDIA.FORECAST_REGISTER` 为 L1 candidate；9 月第一轮 Thinking Toolkit 与 Streaming 行业骨架完成，但全部等待 Teach-back 或跨域应用。
 
