@@ -347,18 +347,35 @@
   fill: #f8fafc;
   font-size: 14px;
   font-weight: 780;
+  opacity: 0;
   paint-order: stroke;
+  pointer-events: none;
   stroke: rgba(2, 6, 23, 0.9);
   stroke-width: 5px;
+  transition: opacity 160ms ease;
 }
 
 .node-id {
   fill: #bae6fd;
   font-family: var(--mono);
   font-size: 10px;
+  opacity: 0;
   paint-order: stroke;
+  pointer-events: none;
   stroke: rgba(2, 6, 23, 0.9);
   stroke-width: 4px;
+  transition: opacity 160ms ease;
+}
+
+.knowledge-node.selected .node-label,
+.knowledge-node.selected .node-id,
+.knowledge-node.related .node-label,
+.knowledge-node.related .node-id,
+.knowledge-node:hover .node-label,
+.knowledge-node:hover .node-id,
+.knowledge-node:focus .node-label,
+.knowledge-node:focus .node-id {
+  opacity: 1;
 }
 
 .inspector {

@@ -17,6 +17,7 @@ prerequisites:
   - "SYSTEM.ENERGY.FOUNDATION"
 connections:
   - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
   - "CASE.TEXAS.FREEZE.2021"
   - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
   - "META.SYSTEMS.INTERDEPENDENCE"
@@ -26,9 +27,9 @@ cases:
   - "February 2021 Texas freeze and natural-gas-electric coordination"
 
 first_seen: "2026-10-01"
-last_reviewed: "2026-10-01"
-next_review: "2026-10-08"
+last_reviewed: "2026-10-02"
+next_review: "2026-10-09"
 sources:
   - "https://www.ferc.gov/sites/default/files/2021-12/Cold%20Weather%20Report_%202021_120821.pdf"
   - "https://www.eia.gov/energyexplained/use-of-energy/"
-notes: "Energy Industry Apprenticeship Day 1. L1 candidate pending the user's reconstruction of physical, money, and control flows."
+notes: "Energy Industry Apprenticeship Day 1. Extended on 2026-10-02 with the Energy Balance as a bridge across value-chain layers. L1 candidate pending the user's reconstruction of physical, money, and control flows."

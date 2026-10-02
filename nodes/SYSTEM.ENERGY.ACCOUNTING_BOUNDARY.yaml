@@ -1,0 +1,38 @@
+id: "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
+name_en: "Energy Accounting Boundary"
+name_zh: "能源统计边界"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "An energy accounting boundary specifies which flows are counted, at which conversion stage, for what geography and time window, and under which conversion convention; every energy-mix share is meaningful only relative to that boundary and denominator."
+why: "Primary energy, electricity generation, final energy, useful energy, capacity, and service outcomes answer different questions. Comparing their percentages without matching boundaries creates apparent contradictions and bad policy or investment conclusions."
+mechanism: "State the numerator and denominator; identify whether the data measure primary input, converted carrier, final delivery, or useful service; fix geography and time; inspect conversion and loss conventions; then compare only like-bounded quantities or explicitly bridge the stages."
+example: "France generated 95% low-carbon electricity in 2024 while fossil fuels still supplied about 57.1% of final energy. The first share uses electricity generation as its denominator; the second uses economy-wide final energy."
+my_take: "Before interpreting any energy percentage, I should rewrite it as a fraction and label its stage, place, time, and accounting method."
+
+prerequisites:
+  - "SYSTEM.ENERGY.FOUNDATION"
+connections:
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "META.PROBABILITY.CONDITIONAL"
+  - "META.SOURCE_EVALUATION.FOUNDATION"
+  - "META.SOURCE_EVALUATION.INTEGRATION"
+  - "META.CAUSAL.INTEGRATION"
+  - "CASE.FRANCE.NUCLEAR_ENERGY_BOUNDARIES.1973_2024"
+questions:
+  - "For a claimed energy share, what exactly is in the numerator and denominator, at which conversion stage, and under which geography, time window, and accounting convention?"
+cases:
+  - "French nuclear expansion and 2024 electricity versus final-energy mix"
+
+first_seen: "2026-10-02"
+last_reviewed: "2026-10-02"
+next_review: "2026-10-09"
+sources:
+  - "https://analysesetdonnees.rte-france.com/en/annual-review-2024/keyfindings"
+  - "https://www.statistiques.developpement-durable.gouv.fr/edition-numerique/chiffres-cles-energie/fr/19-bilan-de-lenergie-en-france"
+  - "https://www.eia.gov/tools/glossary/index.php?id=primary+energy"
+notes: "October Energy Day 2. Mastery remains L1 candidate until the user audits a new energy-mix claim and correctly separates electricity, final-energy, and primary-energy denominators."

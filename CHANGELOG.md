@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 2026-10-02
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 完成 `SYSTEM.ENERGY.ACCOUNTING_BOUNDARY`，要求任何能源占比明确分子、分母、转换阶段、地理、时间与记账规则
+- 新增 `CASE.FRANCE.NUCLEAR_ENERGY_BOUNDARIES.1973_2024`，用法国核电扩张与 2024 年不同统计表重建能源边界
+- 对照法国 539.0 TWh 发电量、361.7 TWh 核电、约 95% 低碳电力，与 1,498.3 TWh 最终能源中约 57.1% 化石能源
+- 将 1973 年石油冲击与 1974 年 Messmer Plan 放入 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 叙事
+- Industry Apprenticeship 新增 Energy Balance 审计方法，但不创建平级行业 mastery 节点
+- 将 Conditional Probability、Source Evaluation、Energy Foundation 与 Energy Value Chain 迁移到法国陌生案例，保持 candidate 状态
+- 更新 Question Bank、CURRENT_STATE 与网站数据，下一课锁定 Energy Density、Power Density 与 Physical Asset Requirements
+
 ## 2026-10-01
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

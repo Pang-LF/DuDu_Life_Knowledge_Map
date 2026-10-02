@@ -795,7 +795,15 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Primary energy becomes useful service only through a coordinated chain of conversion, carriers, networks, operating rules, and end-use devices; resource abundance alone does not guarantee availability.',
-    connections: ['META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SOURCE_EVALUATION.INTEGRATION', 'BUS.ENERGY.VALUE_CHAIN', 'CASE.TEXAS.FREEZE.2021'],
+    connections: ['META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SOURCE_EVALUATION.INTEGRATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'BUS.ENERGY.VALUE_CHAIN', 'CASE.TEXAS.FREEZE.2021'],
+  },
+  {
+    id: 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY',
+    label: 'Energy Accounting Boundary（能源统计边界）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Every energy share needs a named numerator, denominator, conversion stage, geography, time window, and accounting convention before it can support comparison or decision.',
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'BUS.ENERGY.VALUE_CHAIN', 'META.PROBABILITY.CONDITIONAL', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.FRANCE.NUCLEAR_ENERGY_BOUNDARIES.1973_2024'],
   },
   {
     id: 'BUS.ENERGY.VALUE_CHAIN',
@@ -803,7 +811,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Resource production, midstream, generation, grid operation, network delivery, retail, regulation, and end-use equipment must be mapped through separate physical, money, and control flows.',
-    connections: ['SYSTEM.ENERGY.FOUNDATION', 'CASE.TEXAS.FREEZE.2021', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE'],
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'CASE.TEXAS.FREEZE.2021', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -813,15 +821,23 @@ export const nodes: GraphNode[] = [
     summary: 'Extreme cold simultaneously raised heating demand and impaired gas production, fuel delivery, generating units, and grid operations, separating abundant resources from delivered electricity and heat.',
     connections: ['SYSTEM.ENERGY.FOUNDATION', 'BUS.ENERGY.VALUE_CHAIN', 'META.SYSTEMS.INTEGRATION', 'META.SOURCE_EVALUATION.INTEGRATION'],
   },
+  {
+    id: 'CASE.FRANCE.NUCLEAR_ENERGY_BOUNDARIES.1973_2024',
+    label: 'France Nuclear Boundaries 1973–2024（法国核能统计边界）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'France paired 95% low-carbon electricity in 2024 with about 57.1% fossil final energy; the apparent contradiction disappears when electricity generation and economy-wide final energy are kept as different denominators.',
+    connections: ['SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.FOUNDATION', 'META.PROBABILITY.CONDITIONAL', 'META.SOURCE_EVALUATION.INTEGRATION'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-10-01',
-  title: 'Energy System Foundation（能源系统基础）',
-  question: '全美最大的能源生产州之一，为什么会让数百万人同时失去电与热？',
-  reading: '45-60 min：沿一户家庭的取暖需求，从一次能源追踪到能源服务，并重建 2021 年得州寒潮的完整转换链。',
-  discussion: '20-30 min：比较资源丰富与服务可靠，并分别画出家庭电费背后的物理流、钱流和控制流。',
-  next: '2026-10-02：Energy Sources & Conversion 与 Energy Accounting Boundaries。',
+  date: '2026-10-02',
+  title: 'Energy Accounting Boundary（能源统计边界）',
+  question: '法国电力已经约 95% 低碳，为什么整个经济的最终能源仍有约 57.1% 来自化石能源？',
+  reading: '45-60 min：跟随法国从 1973 年石油冲击到 2024 年能源平衡表，拆开电力、最终能源与一次能源的分母。',
+  discussion: '20-30 min：审计一个“80% 清洁能源”主张，并用自己的话解释三张不同能源表为什么都可能正确。',
+  next: '2026-10-03：Energy Density、Power Density 与 Physical Asset Requirements。',
 }
 
 export const monthlyTrack = [

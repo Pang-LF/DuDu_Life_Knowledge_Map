@@ -20,6 +20,7 @@ type NodePoint = {
   x: number
   y: number
   virtual?: boolean
+  labelSide?: 'left' | 'right'
 }
 
 const domainPoints: DomainPoint[] = [
@@ -45,8 +46,9 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.MEDIA.DISTRIBUTION.MODELS', x: 322, y: 632 },
   { id: 'BUS.MEDIA.STREAMING.TECH_FOUNDATIONS', x: 422, y: 544 },
   { id: 'BUS.MEDIA.INDUSTRY_POWER_SHIFT', x: 474, y: 584 },
-  { id: 'SYSTEM.ENERGY.FOUNDATION', x: 768, y: 626 },
-  { id: 'SYSTEM.ECON.INFLATION', x: 800, y: 565, virtual: true },
+  { id: 'SYSTEM.ENERGY.FOUNDATION', x: 772, y: 650 },
+  { id: 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', x: 842, y: 575, labelSide: 'left' },
+  { id: 'SYSTEM.ECON.INFLATION', x: 902, y: 550, virtual: true },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -84,7 +86,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ENERGY.FOUNDATION')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ENERGY.ACCOUNTING_BOUNDARY')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(
@@ -263,6 +265,8 @@ function App() {
               if (!node) return null
               const selected = selectedNodeId === node.id
               const related = relatedIds.has(node.id)
+              const labelLeft = point.labelSide === 'left'
+              const labelX = point.x + (labelLeft ? -16 : 16)
               return (
                 <g
                   className={`knowledge-node ${point.virtual ? 'seed' : 'core'} ${selected ? 'selected' : ''} ${related ? 'related' : ''}`}
@@ -275,8 +279,8 @@ function App() {
                 >
                   <circle className="node-halo" cx={point.x} cy={point.y} r={selected ? 28 : 20} />
                   <circle className="node-dot" cx={point.x} cy={point.y} r={point.virtual ? 7 : 10} />
-                  <text className="node-label" x={point.x + 16} y={point.y - 12}>{node.label}</text>
-                  <text className="node-id" x={point.x + 16} y={point.y + 8}>{node.id}</text>
+                  <text className="node-label" textAnchor={labelLeft ? 'end' : 'start'} x={labelX} y={point.y - 12}>{node.label}</text>
+                  <text className="node-id" textAnchor={labelLeft ? 'end' : 'start'} x={labelX} y={point.y + 8}>{node.id}</text>
                 </g>
               )
             })}

@@ -26,6 +26,7 @@ connections:
   - "META.FORECASTING.FOUNDATION"
   - "META.FORECASTING.CALIBRATION"
   - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
   - "CASE.OPERA.NEUTRINO_VELOCITY.2011_2012"
 questions:
   - "Which shared component could generate the observed result despite a large sample, and what independent measurement would most sharply distinguish that failure from the substantive claim?"
@@ -33,11 +34,11 @@ cases:
   - "OPERA faster-than-light neutrino anomaly and correction, 2011-2012"
 
 first_seen: "2026-09-27"
-last_reviewed: "2026-10-01"
-next_review: "2026-10-08"
+last_reviewed: "2026-10-02"
+next_review: "2026-10-09"
 sources:
   - "https://home.cern/opera-experiment-reports-anomaly-in-flight-time-of-neutrinos-from-cern-to-gran-sasso/"
   - "https://arxiv.org/abs/1109.4897v1"
   - "https://cds.cern.ch/record/1498324"
   - "https://arxiv.org/abs/1203.3433"
-notes: "Integration node for Anchoring and Source Evaluation. Transferred on 2026-10-01 by separating EIA definitions, FERC/NERC equipment and fuel evidence, and Texas DSHS mortality surveillance in an unfamiliar energy case. Mastery remains candidate until user audit."
+notes: "Integration node for Anchoring and Source Evaluation. Transferred on 2026-10-02 by reconciling RTE electricity data with France's economy-wide Energy Balance instead of treating different tables as contradictory. Mastery remains candidate until user audit."

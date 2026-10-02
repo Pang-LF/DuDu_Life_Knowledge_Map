@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-01
+Last updated: 2026-10-02
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-01
 
 ## Next Immediate Focus（下一步）
 
-2026-10-02：进入 Energy Sources & Conversion（能源来源与转换），比较煤、石油、天然气、核能、风、太阳与水力提供的能量形式，并解释为什么能源占比会随 Primary Energy、Electricity Generation、Final Energy 与 Useful Service 的统计分母而变化。行业问题固定为 Energy Accounting Boundaries（能源统计边界）。
+2026-10-03：进入 Energy Density & Power Density（能量密度与功率密度），解释为什么相同的年度能量会对应完全不同的燃料体积、土地、设备、储能和网络要求。行业问题固定为 Physical Asset Requirements（物理资产需求）。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-01
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-02：完成 Energy Accounting Boundary（能源统计边界）。主课从“法国电力 95% 低碳，为什么整个经济仍依赖化石能源”这一表面矛盾出发，先将任何能源占比重写为带标签的分数，再固定转换阶段、地理、时间和记账规则。RTE 记录法国 2024 年发电量 539.0 TWh，其中核电 361.7 TWh、占 67.1%，低碳发电约 95%；法国官方 Energy Balance 则记录最终能源 1,498.3 TWh，其中石油 586.8、天然气 262.0、煤 6.6 TWh，化石能源合计约 57.1%。两组数字不冲突，因为一组以电力生产为分母，另一组以全经济最终能源为分母。法国 1973 年石油冲击与 1974 年核电加速计划被用于解释一个系统为何能深度改变电力层，却尚未完成交通、建筑和工业终端用能的全面转换。`SYSTEM.ENERGY.ACCOUNTING_BOUNDARY` 为 L1 candidate；Energy Industry Apprenticeship 新增 Energy Balance 审计方法但不另设平级行业节点。下一课进入 Energy Density、Power Density 与 Physical Asset Requirements。
 
 2026-10-01：进入 Energy 新领域，完成 Domain Orientation 与 Energy System Foundation（能源系统基础）。主课从 2021 年得州寒潮中一户家庭的取暖需求出发，建立 Primary Energy → Conversion → Energy Carrier → Delivery → End-use Device → Energy Service 的完整链条；解释资源储量、流量、装机、可用能力、发电量与终端服务不能互换。FERC/NERC 记录事件区域 1,045 台机组经历 4,124 次停机、降额或无法启动，44.2% 与冻结有关、31.4% 与燃料有关且燃料问题中 87% 来自天然气供应；得州、俄克拉何马和路易斯安那天然气最低点比 1 月平均少约 21 Bcf/d、超过 50%，ERCOT 下令约 20,000 MW 切负荷，超过 450 万居民失去电力。Texas DSHS 确认 246 例风暴相关死亡，其中 158 例低体温症。行业学徒制新增 Energy Value Chain，分别追踪资源生产、midstream、发电、调度、网络、零售、监管和终端设备的物理流、钱流与控制流。`SYSTEM.ENERGY.FOUNDATION` 与 `BUS.ENERGY.VALUE_CHAIN` 均为 L1 candidate，等待 Teach-back；下一课进入 Energy Sources & Conversion 与 Energy Accounting Boundaries。
 
