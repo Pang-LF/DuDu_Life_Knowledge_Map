@@ -21,15 +21,16 @@ connections:
   - "META.SYSTEMS.FEEDBACK_LOOP"
   - "META.SYSTEMS.INTEGRATION"
   - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
+  - "SYSTEM.ENERGY.DENSITY"
 questions:
   - "How can coupling strength and intervention time be measured in an unfamiliar system?"
 cases:
   - "2003 Northeast blackout"
 
 first_seen: "2026-09-09"
-last_reviewed: "2026-09-14"
-next_review: "2026-09-18"
+last_reviewed: "2026-10-03"
+next_review: "2026-10-10"
 sources:
   - "https://www.energy.gov/oe/august-2003-blackout"
   - "https://www.nerc.com/globalassets/our-work/reports/event-reports/august_2003_blackout_final_report.pdf"
-notes: "Primary One Idea for Systems Thinking Day 2. Mastery remains candidate until user Teach-back."
+notes: "Primary One Idea for Systems Thinking Day 2. Transferred on 2026-10-03 through the tight coupling among X-57 battery mass, wing loading, high-lift propulsion, thermal safety, and certification. Mastery remains candidate until user Teach-back."

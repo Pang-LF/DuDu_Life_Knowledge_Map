@@ -46,9 +46,10 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.MEDIA.DISTRIBUTION.MODELS', x: 322, y: 632 },
   { id: 'BUS.MEDIA.STREAMING.TECH_FOUNDATIONS', x: 422, y: 544 },
   { id: 'BUS.MEDIA.INDUSTRY_POWER_SHIFT', x: 474, y: 584 },
-  { id: 'SYSTEM.ENERGY.FOUNDATION', x: 772, y: 650 },
-  { id: 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', x: 842, y: 575, labelSide: 'left' },
-  { id: 'SYSTEM.ECON.INFLATION', x: 902, y: 550, virtual: true },
+  { id: 'SYSTEM.ENERGY.FOUNDATION', x: 740, y: 670 },
+  { id: 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', x: 770, y: 555, labelSide: 'left' },
+  { id: 'SYSTEM.ENERGY.DENSITY', x: 885, y: 610, labelSide: 'left' },
+  { id: 'SYSTEM.ECON.INFLATION', x: 925, y: 555, virtual: true },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -86,7 +87,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ENERGY.ACCOUNTING_BOUNDARY')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ENERGY.DENSITY')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

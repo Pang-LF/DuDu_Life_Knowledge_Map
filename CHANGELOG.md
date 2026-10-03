@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 2026-10-03
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 完成 `SYSTEM.ENERGY.DENSITY`，区分总能量、交付功率、比能量、功率密度与转换效率
+- 新增 `CASE.NASA.X57.ENERGY_POWER_DENSITY.2015_2024`，以 NASA X-57 Maxwell 的 47 kWh 可用电量、约 145 kW 峰值与约 390 kg 电池重建物理约束
+- 解释约 29% 整机重量被电池占用后，载荷、机翼、低速升力、热管理、安全结构与适航验证如何共同变化
+- 明确 X-57 未完成 Mod II–IV 飞行测试，模型与地面结果不能冒充飞行实证，项目结束也不能归因于能量密度这一单一原因
+- 新增 `BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS`，把 `$ / kWh`、`$ / kW`、Duration 与资产数量分开审计
+- 将 Energy Foundation、Accounting Boundary、Value Chain、Bottleneck、Coupling 与 Source Evaluation 迁移到 X-57 陌生案例，保持 candidate 状态
+- 更新 Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据，下一课锁定 Conversion Efficiency & Losses 和 Conversion Assets
+
 ## 2026-10-02
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-02
+Last updated: 2026-10-03
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-02
 
 ## Next Immediate Focus（下一步）
 
-2026-10-03：进入 Energy Density & Power Density（能量密度与功率密度），解释为什么相同的年度能量会对应完全不同的燃料体积、土地、设备、储能和网络要求。行业问题固定为 Physical Asset Requirements（物理资产需求）。
+2026-10-04：进入 Conversion Efficiency & Losses（转换效率与损失），跟随一份输入能量穿过热机与电动动力链，区分有用输出、废热、部件效率和系统效率。行业问题固定为 Conversion Assets（转换资产）。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-02
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-03：完成 Energy & Power Density（能量与功率密度）。主课跟随 NASA X-57 Maxwell 的 47 kWh 可用电量和约 145 kW 任务峰值，把 Energy、Power、Specific Energy、Power Density 与 Efficiency 分成五张不同答卷。约 390 kg 电池占约 3,000 lb 实验机重量接近 29%，后排座椅被用于电池与控制系统；最终机翼面积从 14.76 m² 减至 6.19 m²，并用 12 个高升力电机弥补低速升力。课程同时保留关键证据边界：X-57 在 Mod II–IV 飞行测试前结束，不能把模型结果当作首飞实证，也不能把项目结束归因于能量密度这一单一原因。`SYSTEM.ENERGY.DENSITY` 与 `BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS` 均为 L1 candidate，等待 Teach-back；`CASE.NASA.X57.ENERGY_POWER_DENSITY.2015_2024` 已归档。下一课进入 Conversion Efficiency & Losses 和 Conversion Assets。
 
 2026-10-02：完成 Energy Accounting Boundary（能源统计边界）。主课从“法国电力 95% 低碳，为什么整个经济仍依赖化石能源”这一表面矛盾出发，先将任何能源占比重写为带标签的分数，再固定转换阶段、地理、时间和记账规则。RTE 记录法国 2024 年发电量 539.0 TWh，其中核电 361.7 TWh、占 67.1%，低碳发电约 95%；法国官方 Energy Balance 则记录最终能源 1,498.3 TWh，其中石油 586.8、天然气 262.0、煤 6.6 TWh，化石能源合计约 57.1%。两组数字不冲突，因为一组以电力生产为分母，另一组以全经济最终能源为分母。法国 1973 年石油冲击与 1974 年核电加速计划被用于解释一个系统为何能深度改变电力层，却尚未完成交通、建筑和工业终端用能的全面转换。`SYSTEM.ENERGY.ACCOUNTING_BOUNDARY` 为 L1 candidate；Energy Industry Apprenticeship 新增 Energy Balance 审计方法但不另设平级行业节点。下一课进入 Energy Density、Power Density 与 Physical Asset Requirements。
 

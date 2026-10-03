@@ -18,6 +18,7 @@ prerequisites:
 connections:
   - "SYSTEM.ENERGY.FOUNDATION"
   - "BUS.ENERGY.VALUE_CHAIN"
+  - "SYSTEM.ENERGY.DENSITY"
   - "META.PROBABILITY.CONDITIONAL"
   - "META.SOURCE_EVALUATION.FOUNDATION"
   - "META.SOURCE_EVALUATION.INTEGRATION"
@@ -29,10 +30,10 @@ cases:
   - "French nuclear expansion and 2024 electricity versus final-energy mix"
 
 first_seen: "2026-10-02"
-last_reviewed: "2026-10-02"
-next_review: "2026-10-09"
+last_reviewed: "2026-10-03"
+next_review: "2026-10-10"
 sources:
   - "https://analysesetdonnees.rte-france.com/en/annual-review-2024/keyfindings"
   - "https://www.statistiques.developpement-durable.gouv.fr/edition-numerique/chiffres-cles-energie/fr/19-bilan-de-lenergie-en-france"
   - "https://www.eia.gov/tools/glossary/index.php?id=primary+energy"
-notes: "October Energy Day 2. Mastery remains L1 candidate until the user audits a new energy-mix claim and correctly separates electricity, final-energy, and primary-energy denominators."
+notes: "October Energy Day 2. Reviewed on 2026-10-03 by keeping X-57 gross capacity, usable capacity, peak power, pack mass, and aircraft mass as separate denominators. Mastery remains L1 candidate until the user audits a new claim."

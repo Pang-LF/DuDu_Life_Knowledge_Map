@@ -24,17 +24,18 @@ connections:
   - "META.SYSTEMS.DELAY"
   - "META.SYSTEMS.INTEGRATION"
   - "BUS.MEDIA.CORD_CUTTING.SYSTEM_EFFECT"
+  - "SYSTEM.ENERGY.DENSITY"
 questions:
   - "What marginal-capacity test distinguishes a true bottleneck from the busiest, slowest, most expensive, or most error-prone local step?"
 cases:
   - "Tesla Model 3 production ramp, 2017-2018"
 
 first_seen: "2026-09-12"
-last_reviewed: "2026-09-14"
-next_review: "2026-09-18"
+last_reviewed: "2026-10-03"
+next_review: "2026-10-10"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1318605/000156459017020822/tsla-ex991_6.htm"
   - "https://www.sec.gov/Archives/edgar/data/1318605/000156459018011086/tsla-10q_20180331.htm"
   - "https://www.sec.gov/Archives/edgar/data/1318605/000156459018024902/tsla-ex991_6.htm"
   - "https://www.sciencedirect.com/science/article/pii/S136757881000009X"
-notes: "Primary One Idea for Systems Thinking Day 5. Manufacturing details are exposure only. Mastery remains candidate until user Teach-back."
+notes: "Primary One Idea for Systems Thinking Day 5. Transferred on 2026-10-03 by separating X-57 total-energy, peak-power, thermal, component-maturity, and certification constraints without declaring every difficult subsystem the bottleneck. Mastery remains candidate until user Teach-back."

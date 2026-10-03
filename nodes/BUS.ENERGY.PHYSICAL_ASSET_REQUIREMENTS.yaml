@@ -1,0 +1,40 @@
+id: "BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS"
+name_en: "Physical Asset Requirements"
+name_zh: "物理资产需求"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Physical asset requirements translate a target energy service into the production, storage, transport, network, thermal-management, redundancy, and end-use assets needed to deliver a specified amount and rate at a required place and time."
+why: "A low energy price or high device efficiency can still produce an expensive service when low density, high peak power, low utilization, safety requirements, or network constraints force the system to buy more assets."
+mechanism: "Define usable energy, peak and continuous power, duration, location, reliability, and utilization; convert laboratory metrics to system-level performance; size storage, conversion, network, cooling, and backup assets; then trace who finances each asset and how costs are recovered."
+example: "X-57's battery was not only a cell purchase: its mass and power requirements changed seating, airframe, wing, motors, controls, cooling, testing, airport charging implications, and certification work."
+my_take: "I should evaluate the complete asset stack required by a service, not infer system economics from fuel price, cell cost, or device efficiency alone."
+
+prerequisites:
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
+  - "SYSTEM.ENERGY.DENSITY"
+connections:
+  - "SYSTEM.ENERGY.DENSITY"
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.COUPLING"
+  - "CASE.NASA.X57.ENERGY_POWER_DENSITY.2015_2024"
+questions:
+  - "For a specified service, which assets must be sized by energy, which by peak power, which by reliability or safety, who finances them, and what utilization allows their cost to be recovered?"
+cases:
+  - "NASA X-57 Maxwell electric aircraft, 2015-2024"
+
+first_seen: "2026-10-03"
+last_reviewed: "2026-10-03"
+next_review: "2026-10-10"
+sources:
+  - "https://ntrs.nasa.gov/api/citations/20180005737/downloads/20180005737.pdf"
+  - "https://ntrs.nasa.gov/api/citations/20240010807/downloads/x57_performance_manuscript-v4.pdf"
+  - "https://afdc.energy.gov/fuels/properties"
+notes: "Energy Industry Apprenticeship Day 3. L1 candidate pending a service-to-assets reconstruction that separates $/kWh, $/kW, duration, utilization, safety, and network capacity."

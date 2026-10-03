@@ -6,6 +6,18 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-10-03 — Density Becomes an Asset Stack
+
+- Question: Why can a cheaper energy unit or more efficient device still require more capital assets to deliver the same service?
+- Parent concept: `SYSTEM.ENERGY.DENSITY` separates usable energy per mass or volume from peak and continuous power per mass, volume, or area.
+- Physical asset rule: A service must specify usable energy, peak and continuous power, duration, location, reliability, and the scarce physical denominator before storage, conversion, network, cooling, and backup assets can be sized.
+- X-57 case: About 390 kg of batteries provided 47 kWh usable energy for a mission with roughly 145 kW peak power. The battery changed seating, wing design, propulsion count, cooling, controls, testing, and certification rather than acting as a drop-in fuel tank.
+- Money flow: Cell makers, pack integrators, aircraft manufacturers, airports, utilities, and operators finance different layers; costs return through equipment prices, network charges, utilization, payload trade-offs, and customer prices.
+- Power and leverage: Certified system-level Wh/kg, high-power electronics, grid connections, thermal safety, and regulatory experience can be scarcer than raw energy and therefore capture bargaining power.
+- Metrics: usable system Wh/kg, continuous and peak W/kg, duration, payload-range trade-off, turnaround power, cycle life, utilization, certification cost, and replacement cost.
+- Status: `BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS` at L1 candidate; Teach-back pending.
+- Next: Conversion Efficiency and Losses — how much energy survives each conversion stage, where waste heat goes, and which assets pay for the losses.
+
 ### 2026-10-02 — Energy Accounting Starts by Fixing the Denominator
 
 - Question: When someone says an energy system is "80% clean," which table and boundary would make that statement auditable?

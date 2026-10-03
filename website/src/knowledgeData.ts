@@ -795,7 +795,7 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Primary energy becomes useful service only through a coordinated chain of conversion, carriers, networks, operating rules, and end-use devices; resource abundance alone does not guarantee availability.',
-    connections: ['META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SOURCE_EVALUATION.INTEGRATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'BUS.ENERGY.VALUE_CHAIN', 'CASE.TEXAS.FREEZE.2021'],
+    connections: ['META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SOURCE_EVALUATION.INTEGRATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'BUS.ENERGY.VALUE_CHAIN', 'CASE.TEXAS.FREEZE.2021'],
   },
   {
     id: 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY',
@@ -803,7 +803,15 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Every energy share needs a named numerator, denominator, conversion stage, geography, time window, and accounting convention before it can support comparison or decision.',
-    connections: ['SYSTEM.ENERGY.FOUNDATION', 'BUS.ENERGY.VALUE_CHAIN', 'META.PROBABILITY.CONDITIONAL', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.FRANCE.NUCLEAR_ENERGY_BOUNDARIES.1973_2024'],
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.DENSITY', 'BUS.ENERGY.VALUE_CHAIN', 'META.PROBABILITY.CONDITIONAL', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.FRANCE.NUCLEAR_ENERGY_BOUNDARIES.1973_2024'],
+  },
+  {
+    id: 'SYSTEM.ENERGY.DENSITY',
+    label: 'Energy & Power Density（能量与功率密度）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Energy density determines how much mass or volume must be carried for a task, while power density determines how quickly that asset can deliver energy; neither can be replaced by efficiency alone.',
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'CASE.NASA.X57.ENERGY_POWER_DENSITY.2015_2024'],
   },
   {
     id: 'BUS.ENERGY.VALUE_CHAIN',
@@ -811,7 +819,15 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Resource production, midstream, generation, grid operation, network delivery, retail, regulation, and end-use equipment must be mapped through separate physical, money, and control flows.',
-    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'CASE.TEXAS.FREEZE.2021', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE'],
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'CASE.TEXAS.FREEZE.2021', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE'],
+  },
+  {
+    id: 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS',
+    label: 'Physical Asset Requirements（物理资产需求）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'An energy service requires separate budgets for stored energy, peak delivery power, duration, safety, land, networks, and redundancy; cheaper energy does not automatically mean fewer physical assets.',
+    connections: ['BUS.ENERGY.VALUE_CHAIN', 'SYSTEM.ENERGY.DENSITY', 'META.SYSTEMS.BOTTLENECK', 'CASE.NASA.X57.ENERGY_POWER_DENSITY.2015_2024'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -829,15 +845,23 @@ export const nodes: GraphNode[] = [
     summary: 'France paired 95% low-carbon electricity in 2024 with about 57.1% fossil final energy; the apparent contradiction disappears when electricity generation and economy-wide final energy are kept as different denominators.',
     connections: ['SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.FOUNDATION', 'META.PROBABILITY.CONDITIONAL', 'META.SOURCE_EVALUATION.INTEGRATION'],
   },
+  {
+    id: 'CASE.NASA.X57.ENERGY_POWER_DENSITY.2015_2024',
+    label: 'NASA X-57 Maxwell 2015–24（电动实验机）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'A 47 kWh usable battery, roughly 145 kW mission peak, and about 390 kg battery mass forced energy, power, payload, wing, cooling, safety, and certification into one system-level tradeoff.',
+    connections: ['SYSTEM.ENERGY.DENSITY', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'META.SYSTEMS.COUPLING', 'META.SOURCE_EVALUATION.INTEGRATION'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-10-02',
-  title: 'Energy Accounting Boundary（能源统计边界）',
-  question: '法国电力已经约 95% 低碳，为什么整个经济的最终能源仍有约 57.1% 来自化石能源？',
-  reading: '45-60 min：跟随法国从 1973 年石油冲击到 2024 年能源平衡表，拆开电力、最终能源与一次能源的分母。',
-  discussion: '20-30 min：审计一个“80% 清洁能源”主张，并用自己的话解释三张不同能源表为什么都可能正确。',
-  next: '2026-10-03：Energy Density、Power Density 与 Physical Asset Requirements。',
+  date: '2026-10-03',
+  title: 'Energy & Power Density（能量与功率密度）',
+  question: 'X-57 的电动动力链效率接近汽油系统三倍，为什么后排座椅仍要让给约 390 kg 电池？',
+  reading: '45-60 min：跟随 47 kWh 可用电量和约 145 kW 峰值穿过电池、载荷、机翼、高升力电机与安全结构。',
+  discussion: '20-30 min：比较两套救援无人机电池，并解释为什么 Wh/kg、kW、效率和任务时长必须分开。',
+  next: '2026-10-04：Conversion Efficiency & Losses 和 Conversion Assets。',
 }
 
 export const monthlyTrack = [

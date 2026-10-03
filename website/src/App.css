@@ -369,8 +369,6 @@
 
 .knowledge-node.selected .node-label,
 .knowledge-node.selected .node-id,
-.knowledge-node.related .node-label,
-.knowledge-node.related .node-id,
 .knowledge-node:hover .node-label,
 .knowledge-node:hover .node-id,
 .knowledge-node:focus .node-label,

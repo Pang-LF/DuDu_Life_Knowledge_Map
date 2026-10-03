@@ -1,0 +1,44 @@
+id: "SYSTEM.ENERGY.DENSITY"
+name_en: "Energy and Power Density"
+name_zh: "能量与功率密度"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Energy density states how much usable energy is stored per unit mass or volume, while power density states how quickly energy can be delivered per unit mass, volume, or area; the denominator must always be explicit."
+why: "Energy services require physical assets. Density determines mass, volume, land, storage, network, and payload burdens that efficiency alone cannot eliminate."
+mechanism: "Start from the service's usable energy and peak or continuous power; divide each by the relevant mass, volume, or area; include safety packaging, conversion losses, redundancy, reserves, and duration; then identify which physical denominator constrains the task."
+example: "NASA's X-57 Maxwell carried about 390 kg of batteries for 47 kWh usable energy and a roughly 145 kW peak mission requirement. The efficient electric powertrain reduced energy demand, but system-level density reshaped seating, wing design, high-lift propulsion, thermal safety, and certification."
+my_take: "I should never rank an energy technology by one laboratory density number; I should name the denominator, use system-level usable performance, and match total energy and delivery rate to the actual service."
+
+prerequisites:
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
+connections:
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS"
+  - "META.SYSTEMS.COUPLING"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "META.SYSTEMS.DELAY"
+  - "META.SOURCE_EVALUATION.INTEGRATION"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.NASA.X57.ENERGY_POWER_DENSITY.2015_2024"
+questions:
+  - "For a specified service, how much usable energy and peak or continuous power are required, which mass, volume, area, or time denominator is scarce, and how do system-level safety and conversion requirements change the laboratory metric?"
+cases:
+  - "NASA X-57 Maxwell electric aircraft, 2015-2024"
+
+first_seen: "2026-10-03"
+last_reviewed: "2026-10-03"
+next_review: "2026-10-10"
+sources:
+  - "https://www.nasa.gov/x-57-maxwell/"
+  - "https://ntrs.nasa.gov/api/citations/20180005737/downloads/20180005737.pdf"
+  - "https://ntrs.nasa.gov/api/citations/20240010807/downloads/x57_performance_manuscript-v4.pdf"
+  - "https://www.energy.gov/sites/prod/files/2020/09/f78/beto-sust-aviation-fuel-sep-2020.pdf"
+notes: "October Energy Day 3. Mastery remains L1 candidate until the user distinguishes energy, power, efficiency, and system-level density in a new mission and rejects a single-metric technology ranking."

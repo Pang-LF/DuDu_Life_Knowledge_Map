@@ -25,6 +25,7 @@ connections:
   - "META.SOURCE_EVALUATION.INTEGRATION"
   - "BUS.ENERGY.VALUE_CHAIN"
   - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
+  - "SYSTEM.ENERGY.DENSITY"
   - "CASE.TEXAS.FREEZE.2021"
   - "FRONTIER.AI.INFRASTRUCTURE"
 questions:
@@ -33,11 +34,11 @@ cases:
   - "February 2021 Texas freeze and South Central U.S. cold-weather outages"
 
 first_seen: "2026-10-01"
-last_reviewed: "2026-10-02"
-next_review: "2026-10-09"
+last_reviewed: "2026-10-03"
+next_review: "2026-10-10"
 sources:
   - "https://www.eia.gov/energyexplained/what-is-energy/index.php"
   - "https://www.eia.gov/energyexplained/electricity/"
   - "https://www.ferc.gov/sites/default/files/2021-12/Cold%20Weather%20Report_%202021_120821.pdf"
   - "https://www.dshs.texas.gov/sites/default/files/commprep/disasterepi/surveillance/SMOC_FebWinterStorm_MortalitySurvReport_12-30-21.pdf"
-notes: "October Energy Domain Orientation and parent concept. Transferred on 2026-10-02 by separating French electricity generation, final energy, and primary-energy accounting; mastery remains L1 candidate until Teach-back distinguishes stocks, flows, capacity, delivered energy, and useful service in an unfamiliar case."
+notes: "October Energy Domain Orientation and parent concept. Transferred on 2026-10-03 by following X-57 from stored electricity through power electronics and motors to propulsion service; mastery remains L1 candidate until Teach-back distinguishes stocks, flows, capacity, delivered energy, and useful service in an unfamiliar case."
