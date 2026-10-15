@@ -1,0 +1,46 @@
+id: "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
+name_en: "Capacity Factor and Utilization"
+name_zh: "容量因子与利用率"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Capacity factor is actual electrical energy generated during a period divided by rated capacity multiplied by the hours in that period; it measures how much theoretical output capability became delivered energy."
+why: "Installed megawatts do not reveal annual megawatt-hours, and a high or low capacity factor does not by itself identify availability, resource limits, dispatch, network constraints, profitability, reliability, or social value."
+mechanism: "Convert rated power into maximum potential energy using the same time window, compare actual generation with that denominator, then separately investigate physical availability, resource availability, economic dispatch, and network or system constraints."
+example: "EIA historical data record Three Mile Island Unit 1 producing 6,633,750 MWh from 805 MW of net summer capacity, about a 94% capacity factor, yet the plant retired in 2019 after financial losses and repeated capacity-auction failures."
+my_take: "I should use capacity factor to measure realized utilization, then ask why the remaining theoretical output was not produced and whether the actual output earned enough to cover the complete asset."
+
+prerequisites:
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
+  - "SYSTEM.ENERGY.DENSITY"
+  - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
+connections:
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
+  - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
+  - "BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS"
+  - "BUS.ENERGY.CONVERSION_ASSETS"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.DELAY"
+  - "META.CAUSAL.CONFOUNDER"
+  - "META.SOURCE_EVALUATION.INTEGRATION"
+  - "CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026"
+questions:
+  - "For a stated capacity factor, what are the rated-power denominator and time window, and which evidence separates outage, resource, dispatch, curtailment, and profitability mechanisms?"
+cases:
+  - "Three Mile Island Unit 1 operation, retirement, and proposed restart, 1974-2026"
+
+first_seen: "2026-10-15"
+last_reviewed: "2026-10-15"
+next_review: "2026-10-22"
+sources:
+  - "https://www.eia.gov/tools/glossary/index.php?id=Capacity_factor"
+  - "https://www.eia.gov/nuclear/reactors/index.html"
+  - "https://www.nrc.gov/facilities-safety/facility-finder/reactors/ccec"
+  - "https://www.sec.gov/Archives/edgar/data/1109357/000162828017006007/exc201705308k.htm"
+notes: "October Energy lesson resumed from 2026-10-12; no lessons were created for 2026-10-13 through 2026-10-14. Mastery remains L1 candidate until the user calculates an unfamiliar asset's capacity factor and distinguishes utilization from availability, dispatch, reliability, and economics."

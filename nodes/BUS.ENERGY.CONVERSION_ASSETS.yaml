@@ -18,6 +18,8 @@ prerequisites:
   - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
   - "SYSTEM.ENERGY.DENSITY"
   - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
+  - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
 connections:
   - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
   - "SYSTEM.ENERGY.DENSITY"
@@ -31,10 +33,10 @@ cases:
   - "Nishi-Nagoya Thermal Power Station Group No. 7, 1970-2018"
 
 first_seen: "2026-10-12"
-last_reviewed: "2026-10-12"
-next_review: "2026-10-19"
+last_reviewed: "2026-10-15"
+next_review: "2026-10-22"
 sources:
   - "https://www.chuden.co.jp/english/corporate/releases/pressreleases/3265903_18939.html"
   - "https://www.eia.gov/todayinenergy/detail.php?id=60984"
   - "https://www.eia.gov/todayinenergy/includes/sparkspread_explain.php"
-notes: "Energy Industry Apprenticeship continuation. L1 candidate pending a new simple-cycle versus combined-cycle decision that combines heat rate, fuel price, operating hours, flexibility, and capital."
+notes: "Energy Industry Apprenticeship continuation. Reviewed on 2026-10-15 by making annual operating hours and revenue products explicit in the asset decision. L1 candidate pending a new simple-cycle versus combined-cycle decision that combines heat rate, fuel price, operating hours, flexibility, and capital."

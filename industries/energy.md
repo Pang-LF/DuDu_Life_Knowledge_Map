@@ -6,6 +6,19 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-10-15 — High Utilization Does Not Guarantee Profitability
+
+- Question: Why can a power plant generate many megawatt-hours and still fail to cover its complete cost?
+- Parent concept: `SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION` measures actual generation divided by rated capacity times period hours; it does not by itself measure availability, reliability, profitability, or social value.
+- TMI-1 case: EIA historical data record 805 MW net summer capacity and 6,633,750 MWh annual generation, about a 94% capacity factor. The plant still retired in 2019 after reported losses and three failed PJM capacity auctions.
+- Market separation: Energy markets pay for generated MWh, capacity markets pay for a future availability commitment, ancillary services pay for short-timescale reliability capabilities, and contracts or policies may pay for longer-term energy and attributes.
+- Revenue rule: Capacity factor scales MWh and therefore variable contribution, but complete economics also require realized price, capacity and ancillary revenue, fixed O&M, required capital, financing, and contract terms.
+- Contrast: A low-capacity-factor peaker may still be valuable because its task is fast power during rare scarcity, while a high-capacity-factor nuclear plant can remain uneconomic when revenue does not cover fixed cost.
+- Aftermath: A 20-year Microsoft PPA supports the proposed Crane Clean Energy Center restart and changes revenue certainty; it does not replace NRC approval, asset restoration, or future operating proof.
+- Status: `BUS.ENERGY.DISPATCH_ECONOMICS` at L1 candidate; Teach-back pending.
+- Continuity: Course resumes from 2026-10-12; no lessons are recorded for 2026-10-13 through 2026-10-14.
+- Next: Real-Time Balance and Grid Operator Dispatch — why electricity supply and demand must match continuously and how operating constraints shape the next unit selected.
+
 ### 2026-10-12 — Efficiency Is a Capital-for-Fuel Trade-off
 
 - Question: Why does a generator sometimes buy more equipment to save fuel, while retaining a less-efficient machine for peak service?

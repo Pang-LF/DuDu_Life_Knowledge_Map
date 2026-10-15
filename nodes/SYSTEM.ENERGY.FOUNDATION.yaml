@@ -27,6 +27,7 @@ connections:
   - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
   - "SYSTEM.ENERGY.DENSITY"
   - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
+  - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
   - "CASE.TEXAS.FREEZE.2021"
   - "FRONTIER.AI.INFRASTRUCTURE"
 questions:
@@ -35,11 +36,11 @@ cases:
   - "February 2021 Texas freeze and South Central U.S. cold-weather outages"
 
 first_seen: "2026-10-01"
-last_reviewed: "2026-10-12"
-next_review: "2026-10-19"
+last_reviewed: "2026-10-15"
+next_review: "2026-10-22"
 sources:
   - "https://www.eia.gov/energyexplained/what-is-energy/index.php"
   - "https://www.eia.gov/energyexplained/electricity/"
   - "https://www.ferc.gov/sites/default/files/2021-12/Cold%20Weather%20Report_%202021_120821.pdf"
   - "https://www.dshs.texas.gov/sites/default/files/commprep/disasterepi/surveillance/SMOC_FebWinterStorm_MortalitySurvReport_12-30-21.pdf"
-notes: "October Energy Domain Orientation and parent concept. Transferred on 2026-10-12 by following LNG through gas and steam conversion assets to delivered electricity at Nishi-Nagoya; mastery remains L1 candidate until Teach-back distinguishes stocks, flows, capacity, delivered energy, and useful service in an unfamiliar case."
+notes: "October Energy Domain Orientation and parent concept. Transferred on 2026-10-15 by separating TMI-1 rated capacity, actual generation, market revenue, and delivered system service; mastery remains L1 candidate until Teach-back distinguishes stocks, flows, capacity, delivered energy, and useful service in an unfamiliar case."

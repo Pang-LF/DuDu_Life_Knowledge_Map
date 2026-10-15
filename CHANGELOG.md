@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-10-15
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 从 2026-10-12 的课程继续，明确不为 2026-10-13 至 2026-10-14 伪造学习记录
+- 完成 `SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION`，以 `Actual MWh / (Rated MW × Hours)` 区分额定容量、实际电量、容量因子与可用率
+- 新增 `CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026`，用 TMI-1 的 805 MW、6,633,750 MWh 与约 94% 容量因子说明高利用率不等于盈利
+- 按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开 2017 退役决定、2019 关停与 2024 长期 PPA 支持的拟议重启
+- 将低容量因子分解为物理不可用、资源不足、经济调度和网络约束，并以低利用率 Peaker 作为有意义反例
+- 新增 `BUS.ENERGY.DISPATCH_ECONOMICS`，分开 Energy、Capacity、Ancillary Services、合同与环境属性收入，以及可变、固定、资本与融资成本
+- 保留运营商关停理由、市场制度主张、PPA 商业前提与 NRC 重启审查之间的证据边界
+- 更新 Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据，下一课锁定 Real-Time Balance 和 Grid Operator Dispatch
+
 ## 2026-10-12
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

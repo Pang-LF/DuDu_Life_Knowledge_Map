@@ -21,6 +21,8 @@ type NodePoint = {
   y: number
   virtual?: boolean
   labelSide?: 'left' | 'right'
+  mapLabel?: string
+  mapId?: string
 }
 
 const domainPoints: DomainPoint[] = [
@@ -50,6 +52,7 @@ const nodePoints: NodePoint[] = [
   { id: 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', x: 770, y: 555, labelSide: 'left' },
   { id: 'SYSTEM.ENERGY.DENSITY', x: 885, y: 610, labelSide: 'left' },
   { id: 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', x: 850, y: 680, labelSide: 'left' },
+  { id: 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', x: 930, y: 672, labelSide: 'right', mapLabel: 'Capacity Factor（容量因子）', mapId: 'SYSTEM.ENERGY.CAPACITY_FACTOR' },
   { id: 'SYSTEM.ECON.INFLATION', x: 925, y: 555, virtual: true },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
@@ -88,7 +91,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ENERGY.CONVERSION_EFFICIENCY')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(
@@ -281,8 +284,8 @@ function App() {
                 >
                   <circle className="node-halo" cx={point.x} cy={point.y} r={selected ? 28 : 20} />
                   <circle className="node-dot" cx={point.x} cy={point.y} r={point.virtual ? 7 : 10} />
-                  <text className="node-label" textAnchor={labelLeft ? 'end' : 'start'} x={labelX} y={point.y - 12}>{node.label}</text>
-                  <text className="node-id" textAnchor={labelLeft ? 'end' : 'start'} x={labelX} y={point.y + 8}>{node.id}</text>
+                  <text className="node-label" textAnchor={labelLeft ? 'end' : 'start'} x={labelX} y={point.y - 12}>{point.mapLabel ?? node.label}</text>
+                  <text className="node-id" textAnchor={labelLeft ? 'end' : 'start'} x={labelX} y={point.y + 8}>{point.mapId ?? node.id}</text>
                 </g>
               )
             })}

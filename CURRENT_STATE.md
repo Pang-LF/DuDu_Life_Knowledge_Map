@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-12
+Last updated: 2026-10-15
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-12
 
 ## Next Immediate Focus（下一步）
 
-2026-10-13：进入 Capacity Factor & Utilization（容量因子与利用率），区分额定功率、可用率、容量因子、实际发电量与运行任务。行业问题固定为 Dispatch Economics（调度经济学）。
+2026-10-16：进入 Real-Time Balance（实时平衡），解释电力供需为什么必须连续匹配、Frequency（频率）怎样暴露失衡，以及 Grid Operator Dispatch（电网运营者调度）如何在成本、速度、位置、网络与可靠性约束下选择资源。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-12
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-15：课程从 10 月 12 日继续，明确不为 10 月 13–14 日伪造学习记录。完成 Capacity Factor & Utilization（容量因子与利用率）：从 1 MW × 8,760 小时重建容量因子公式，再用 TMI-1 历史 805 MW、6,633,750 MWh 与约 94% 容量因子解释 Nameplate Capacity、Actual Generation、Availability、资源条件、Economic Dispatch 与网络约束。主案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：TMI-1 高利用率运行，却在长期低批发价格、单机站成本、五年报告亏损与连续三次 PJM 容量拍卖失败后于 2019 年关停；2024 年 Microsoft 20 年 PPA 改变拟议重启的收入确定性，但不替代约 16 亿美元资本、NRC 审查与未来运行证明。`SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION` 与 `BUS.ENERGY.DISPATCH_ECONOMICS` 均为 L1 candidate；`CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026` 已归档。下一课进入 Real-Time Balance 与 Grid Operator Dispatch。
 
 2026-10-12：课程从 10 月 3 日暂停点继续，未为 10 月 4–11 日伪造学习记录。完成 Conversion Efficiency & Losses（转换效率与损失）：主课跟随西名古屋火力发电站从 1970 年旧燃油机组更新为 LNG 联合循环，解释三台燃气轮机后的高温尾气如何经 HRSG 驱动一台蒸汽轮机继续发电。7-1 于 2017 年商业运行，额定 1,188.2 MW；2018 年运营方与供应商公布 63.08% LHV 发电效率。课程将输入、Useful Output、边界、LHV / HHV、Gross / Net 与设计 / 实际工况逐项分开，并用 EIA 2020 年联合循环 7,146 Btu/kWh 与简单循环约 10,000 Btu/kWh 解释 Heat Rate、Spark Spread 和 Capital-for-Fuel Trade-off。证据边界明确：运营方记录效率不能冒充全年每小时表现，公司预测的 LNG 与 CO₂ 减量不是独立因果识别。`SYSTEM.ENERGY.CONVERSION_EFFICIENCY` 与 `BUS.ENERGY.CONVERSION_ASSETS` 均为 L1 candidate；`CASE.NISHI_NAGOYA.COMBINED_CYCLE.1970_2018` 已归档。下一课进入 Capacity Factor & Utilization 和 Dispatch Economics。
 

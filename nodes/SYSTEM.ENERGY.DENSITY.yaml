@@ -22,6 +22,7 @@ connections:
   - "BUS.ENERGY.VALUE_CHAIN"
   - "BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS"
   - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
+  - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
   - "META.SYSTEMS.COUPLING"
   - "META.SYSTEMS.BOTTLENECK"
   - "META.SYSTEMS.NONLINEARITY"
@@ -35,8 +36,8 @@ cases:
   - "NASA X-57 Maxwell electric aircraft, 2015-2024"
 
 first_seen: "2026-10-03"
-last_reviewed: "2026-10-12"
-next_review: "2026-10-19"
+last_reviewed: "2026-10-15"
+next_review: "2026-10-22"
 sources:
   - "https://www.nasa.gov/x-57-maxwell/"
   - "https://ntrs.nasa.gov/api/citations/20180005737/downloads/20180005737.pdf"

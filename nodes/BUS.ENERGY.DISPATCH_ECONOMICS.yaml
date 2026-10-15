@@ -1,0 +1,44 @@
+id: "BUS.ENERGY.DISPATCH_ECONOMICS"
+name_en: "Dispatch Economics"
+name_zh: "调度经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Dispatch economics explains when a technically available generator is selected to run and how energy, capacity, ancillary-service, contract, and environmental-attribute revenues interact with variable, fixed, capital, and financing costs."
+why: "A generator can run frequently and still lose money, or run rarely while providing valuable peak capacity and flexibility; generation volume alone does not reveal the service sold or whether complete costs are recovered."
+mechanism: "Separate MW capability from MWh output; identify availability, offers, variable cost, start and ramp limits, transmission constraints, and system need; then assemble the revenue stack and compare it with variable, fixed, capital, and contractual obligations."
+example: "TMI-1 maintained high utilization but retired after prolonged low wholesale prices, five years of reported losses, and three failed PJM capacity auctions; a later 20-year Microsoft PPA changed the proposed restart's revenue certainty without replacing engineering and regulatory requirements."
+my_take: "I should ask which electricity product is being sold, at what time scale, under which market or contract, and whether the complete revenue stack covers the complete cost stack."
+
+prerequisites:
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS"
+  - "BUS.ENERGY.CONVERSION_ASSETS"
+  - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
+  - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
+connections:
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS"
+  - "BUS.ENERGY.CONVERSION_ASSETS"
+  - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
+  - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.CAUSAL.CONFOUNDER"
+  - "CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026"
+questions:
+  - "Which revenue products and cost categories explain why a generator runs, remains available, retires, or returns under a long-term contract?"
+cases:
+  - "Three Mile Island Unit 1 operation, retirement, and proposed restart, 1974-2026"
+
+first_seen: "2026-10-15"
+last_reviewed: "2026-10-15"
+next_review: "2026-10-22"
+sources:
+  - "https://www.ferc.gov/introductory-guide-participation-pjm-processes"
+  - "https://www.ferc.gov/wholesale-electricity-markets-overview-and-guide"
+  - "https://www.sec.gov/Archives/edgar/data/1109357/000162828017006007/exc201705308k.htm"
+  - "https://investors.constellationenergy.com/node/8711/pdf"
+notes: "Energy Industry Apprenticeship continuation. L1 candidate pending a new asset decision that separates energy, capacity, ancillary service, contract and attribute revenues from variable, fixed, capital and financing costs."

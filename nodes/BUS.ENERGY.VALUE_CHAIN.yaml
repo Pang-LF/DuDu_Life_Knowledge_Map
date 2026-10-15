@@ -21,6 +21,7 @@ connections:
   - "SYSTEM.ENERGY.DENSITY"
   - "BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS"
   - "BUS.ENERGY.CONVERSION_ASSETS"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
   - "CASE.TEXAS.FREEZE.2021"
   - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
   - "META.SYSTEMS.INTERDEPENDENCE"
@@ -30,9 +31,9 @@ cases:
   - "February 2021 Texas freeze and natural-gas-electric coordination"
 
 first_seen: "2026-10-01"
-last_reviewed: "2026-10-12"
-next_review: "2026-10-19"
+last_reviewed: "2026-10-15"
+next_review: "2026-10-22"
 sources:
   - "https://www.ferc.gov/sites/default/files/2021-12/Cold%20Weather%20Report_%202021_120821.pdf"
   - "https://www.eia.gov/energyexplained/use-of-energy/"
-notes: "Energy Industry Apprenticeship Day 1. Extended on 2026-10-12 by tracing fuel suppliers, plant owners, equipment vendors, grid dispatch, and customers around conversion assets. L1 candidate pending the user's reconstruction of physical, money, and control flows."
+notes: "Energy Industry Apprenticeship Day 1. Extended on 2026-10-15 by separating generator ownership, PJM dispatch and settlement, long-term buyer contracts, and end-customer cost recovery. L1 candidate pending the user's reconstruction of physical, money, and control flows."
