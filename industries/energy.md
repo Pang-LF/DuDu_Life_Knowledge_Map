@@ -6,6 +6,19 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-10-12 — Efficiency Is a Capital-for-Fuel Trade-off
+
+- Question: Why does a generator sometimes buy more equipment to save fuel, while retaining a less-efficient machine for peak service?
+- Parent concept: `SYSTEM.ENERGY.CONVERSION_EFFICIENCY` defines efficiency only after input, useful output, boundary, LHV or HHV basis, gross or net output, and operating condition are fixed.
+- Nishi-Nagoya case: Each 1,188.2 MW block combines three gas turbines with one steam turbine. Heat-recovery steam generators route hot exhaust into a second power cycle; Unit 7-1 reported 63.08% LHV generation efficiency in 2018.
+- Asset rule: Added HRSG, steam-turbine, condenser, cooling, water, and control assets exchange higher fixed capital and coupling for lower fuel use per MWh.
+- Money flow: Heat rate converts gas price into fuel cost per MWh; spark spread is electricity price minus simplified fuel cost, not complete profit.
+- Operating boundary: A high-utilization plant can compound fuel savings across many MWh, while a low-capital simple-cycle turbine can remain rational for rare, fast peak service.
+- Comparison rule: LHV versus HHV, gross versus net, design versus actual, and full-load versus part-load figures must match before ranking efficiencies.
+- Status: `BUS.ENERGY.CONVERSION_ASSETS` at L1 candidate; Teach-back pending.
+- Continuity: Course resumes from 2026-10-03; no lessons are recorded for 2026-10-04 through 2026-10-11.
+- Next: Capacity Factor & Utilization — how operating hours turn rated capability and efficiency into delivered energy, cost recovery, and system value.
+
 ### 2026-10-03 — Density Becomes an Asset Stack
 
 - Question: Why can a cheaper energy unit or more efficient device still require more capital assets to deliver the same service?

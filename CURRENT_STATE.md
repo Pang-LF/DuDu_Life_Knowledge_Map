@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-03
+Last updated: 2026-10-12
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-03
 
 ## Next Immediate Focus（下一步）
 
-2026-10-04：进入 Conversion Efficiency & Losses（转换效率与损失），跟随一份输入能量穿过热机与电动动力链，区分有用输出、废热、部件效率和系统效率。行业问题固定为 Conversion Assets（转换资产）。
+2026-10-13：进入 Capacity Factor & Utilization（容量因子与利用率），区分额定功率、可用率、容量因子、实际发电量与运行任务。行业问题固定为 Dispatch Economics（调度经济学）。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-03
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-12：课程从 10 月 3 日暂停点继续，未为 10 月 4–11 日伪造学习记录。完成 Conversion Efficiency & Losses（转换效率与损失）：主课跟随西名古屋火力发电站从 1970 年旧燃油机组更新为 LNG 联合循环，解释三台燃气轮机后的高温尾气如何经 HRSG 驱动一台蒸汽轮机继续发电。7-1 于 2017 年商业运行，额定 1,188.2 MW；2018 年运营方与供应商公布 63.08% LHV 发电效率。课程将输入、Useful Output、边界、LHV / HHV、Gross / Net 与设计 / 实际工况逐项分开，并用 EIA 2020 年联合循环 7,146 Btu/kWh 与简单循环约 10,000 Btu/kWh 解释 Heat Rate、Spark Spread 和 Capital-for-Fuel Trade-off。证据边界明确：运营方记录效率不能冒充全年每小时表现，公司预测的 LNG 与 CO₂ 减量不是独立因果识别。`SYSTEM.ENERGY.CONVERSION_EFFICIENCY` 与 `BUS.ENERGY.CONVERSION_ASSETS` 均为 L1 candidate；`CASE.NISHI_NAGOYA.COMBINED_CYCLE.1970_2018` 已归档。下一课进入 Capacity Factor & Utilization 和 Dispatch Economics。
 
 2026-10-03：完成 Energy & Power Density（能量与功率密度）。主课跟随 NASA X-57 Maxwell 的 47 kWh 可用电量和约 145 kW 任务峰值，把 Energy、Power、Specific Energy、Power Density 与 Efficiency 分成五张不同答卷。约 390 kg 电池占约 3,000 lb 实验机重量接近 29%，后排座椅被用于电池与控制系统；最终机翼面积从 14.76 m² 减至 6.19 m²，并用 12 个高升力电机弥补低速升力。课程同时保留关键证据边界：X-57 在 Mod II–IV 飞行测试前结束，不能把模型结果当作首飞实证，也不能把项目结束归因于能量密度这一单一原因。`SYSTEM.ENERGY.DENSITY` 与 `BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS` 均为 L1 candidate，等待 Teach-back；`CASE.NASA.X57.ENERGY_POWER_DENSITY.2015_2024` 已归档。下一课进入 Conversion Efficiency & Losses 和 Conversion Assets。
 

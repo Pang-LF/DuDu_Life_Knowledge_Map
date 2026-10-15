@@ -49,6 +49,7 @@ const nodePoints: NodePoint[] = [
   { id: 'SYSTEM.ENERGY.FOUNDATION', x: 740, y: 670 },
   { id: 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', x: 770, y: 555, labelSide: 'left' },
   { id: 'SYSTEM.ENERGY.DENSITY', x: 885, y: 610, labelSide: 'left' },
+  { id: 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', x: 850, y: 680, labelSide: 'left' },
   { id: 'SYSTEM.ECON.INFLATION', x: 925, y: 555, virtual: true },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
@@ -87,7 +88,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ENERGY.DENSITY')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ENERGY.CONVERSION_EFFICIENCY')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

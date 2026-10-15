@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-10-12
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 从 2026-10-03 的暂停点继续课程，明确不为 2026-10-04 至 2026-10-11 伪造学习记录
+- 完成 `SYSTEM.ENERGY.CONVERSION_EFFICIENCY`，要求效率主张明确输入、Useful Output、边界、LHV / HHV、Gross / Net 与运行条件
+- 新增 `CASE.NISHI_NAGOYA.COMBINED_CYCLE.1970_2018`，用西名古屋 7-1 的三台燃气轮机、一台蒸汽轮机、1,188.2 MW 与 63.08% LHV 记录效率重建联合循环机制
+- 区分能量守恒与做功能力，说明尾气能量可以部分回收，但第二定律、真实损失和增量资产阻止无限接近 100%
+- 用 EIA 7,146 与约 10,000 Btu/kWh 的联合 / 简单循环平均 Heat Rate，解释效率怎样进入燃料成本与 Spark Spread
+- 新增 `BUS.ENERGY.CONVERSION_ASSETS`，把高效率写成由运行小时放大的 Capital-for-Fuel Trade-off
+- 保留运营方 record efficiency、公司减排估计、独立 fleet data 与因果推断之间的证据边界
+- 更新 Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据，下一课锁定 Capacity Factor & Utilization 和 Dispatch Economics
+
 ## 2026-10-03
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

@@ -795,7 +795,7 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Primary energy becomes useful service only through a coordinated chain of conversion, carriers, networks, operating rules, and end-use devices; resource abundance alone does not guarantee availability.',
-    connections: ['META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SOURCE_EVALUATION.INTEGRATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'BUS.ENERGY.VALUE_CHAIN', 'CASE.TEXAS.FREEZE.2021'],
+    connections: ['META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SOURCE_EVALUATION.INTEGRATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'BUS.ENERGY.VALUE_CHAIN', 'CASE.TEXAS.FREEZE.2021'],
   },
   {
     id: 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY',
@@ -803,7 +803,7 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Every energy share needs a named numerator, denominator, conversion stage, geography, time window, and accounting convention before it can support comparison or decision.',
-    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.DENSITY', 'BUS.ENERGY.VALUE_CHAIN', 'META.PROBABILITY.CONDITIONAL', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.FRANCE.NUCLEAR_ENERGY_BOUNDARIES.1973_2024'],
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.DENSITY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'BUS.ENERGY.VALUE_CHAIN', 'META.PROBABILITY.CONDITIONAL', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.FRANCE.NUCLEAR_ENERGY_BOUNDARIES.1973_2024'],
   },
   {
     id: 'SYSTEM.ENERGY.DENSITY',
@@ -811,7 +811,15 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Energy density determines how much mass or volume must be carried for a task, while power density determines how quickly that asset can deliver energy; neither can be replaced by efficiency alone.',
-    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'CASE.NASA.X57.ENERGY_POWER_DENSITY.2015_2024'],
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'CASE.NASA.X57.ENERGY_POWER_DENSITY.2015_2024'],
+  },
+  {
+    id: 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY',
+    label: 'Conversion Efficiency & Losses（转换效率与损失）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Efficiency is the share of input energy that becomes a defined useful output inside an explicit boundary; remaining energy is conserved but often leaves as lower-quality heat that is harder to turn into work.',
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'BUS.ENERGY.CONVERSION_ASSETS', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'META.SOURCE_EVALUATION.INTEGRATION', 'CASE.NISHI_NAGOYA.COMBINED_CYCLE.1970_2018'],
   },
   {
     id: 'BUS.ENERGY.VALUE_CHAIN',
@@ -819,7 +827,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Resource production, midstream, generation, grid operation, network delivery, retail, regulation, and end-use equipment must be mapped through separate physical, money, and control flows.',
-    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'CASE.TEXAS.FREEZE.2021', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE'],
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'CASE.TEXAS.FREEZE.2021', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE'],
   },
   {
     id: 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS',
@@ -827,7 +835,15 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'An energy service requires separate budgets for stored energy, peak delivery power, duration, safety, land, networks, and redundancy; cheaper energy does not automatically mean fewer physical assets.',
-    connections: ['BUS.ENERGY.VALUE_CHAIN', 'SYSTEM.ENERGY.DENSITY', 'META.SYSTEMS.BOTTLENECK', 'CASE.NASA.X57.ENERGY_POWER_DENSITY.2015_2024'],
+    connections: ['BUS.ENERGY.VALUE_CHAIN', 'SYSTEM.ENERGY.DENSITY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'BUS.ENERGY.CONVERSION_ASSETS', 'META.SYSTEMS.BOTTLENECK', 'CASE.NASA.X57.ENERGY_POWER_DENSITY.2015_2024'],
+  },
+  {
+    id: 'BUS.ENERGY.CONVERSION_ASSETS',
+    label: 'Conversion Assets（能源转换资产）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Turbines, boilers, generators, inverters, motors, electrolyzers, heat pumps, and heat-recovery systems exchange higher fixed capital and integration for lower input consumption or more valuable output over operating hours.',
+    connections: ['BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'META.SYSTEMS.COUPLING', 'CASE.NISHI_NAGOYA.COMBINED_CYCLE.1970_2018'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -853,15 +869,23 @@ export const nodes: GraphNode[] = [
     summary: 'A 47 kWh usable battery, roughly 145 kW mission peak, and about 390 kg battery mass forced energy, power, payload, wing, cooling, safety, and certification into one system-level tradeoff.',
     connections: ['SYSTEM.ENERGY.DENSITY', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'META.SYSTEMS.COUPLING', 'META.SOURCE_EVALUATION.INTEGRATION'],
   },
+  {
+    id: 'CASE.NISHI_NAGOYA.COMBINED_CYCLE.1970_2018',
+    label: 'Nishi-Nagoya Combined Cycle 1970–2018（西名古屋联合循环）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'Three gas turbines and one steam turbine per block recovered high-temperature exhaust into additional electricity, reaching a reported 63.08% LHV generation efficiency while adding capital, water-steam assets, and operational coupling.',
+    connections: ['SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'BUS.ENERGY.CONVERSION_ASSETS', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'META.SYSTEMS.COUPLING', 'META.SOURCE_EVALUATION.INTEGRATION'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-10-03',
-  title: 'Energy & Power Density（能量与功率密度）',
-  question: 'X-57 的电动动力链效率接近汽油系统三倍，为什么后排座椅仍要让给约 390 kg 电池？',
-  reading: '45-60 min：跟随 47 kWh 可用电量和约 145 kW 峰值穿过电池、载荷、机翼、高升力电机与安全结构。',
-  discussion: '20-30 min：比较两套救援无人机电池，并解释为什么 Wh/kg、kW、效率和任务时长必须分开。',
-  next: '2026-10-04：Conversion Efficiency & Losses 和 Conversion Assets。',
+  date: '2026-10-12',
+  title: 'Conversion Efficiency & Losses（转换效率与损失）',
+  question: '燃气轮机已经发过一次电，为什么尾气还能驱动蒸汽轮机再发一次，又为什么不能一直回收到 100%？',
+  reading: '45-60 min：跟随 100 单位 LNG 能量穿过西名古屋燃气轮机、HRSG、蒸汽轮机、冷凝器与厂用电边界。',
+  discussion: '20-30 min：计算两种燃气机组的燃料成本与 Spark Spread，并审计一条“82% 效率”主张的完整口径。',
+  next: '2026-10-13：Capacity Factor & Utilization 和 Dispatch Economics。',
 }
 
 export const monthlyTrack = [

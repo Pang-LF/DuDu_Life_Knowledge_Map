@@ -1,0 +1,40 @@
+id: "BUS.ENERGY.CONVERSION_ASSETS"
+name_en: "Conversion Assets"
+name_zh: "能源转换资产"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Conversion assets transform energy from one form into a carrier or service, including turbines, boilers, generators, inverters, motors, electrolyzers, heat pumps, and heat-recovery systems."
+why: "Higher efficiency often requires more capital, equipment, integration, and maintenance in exchange for lower fuel or electricity consumption over future operating hours."
+mechanism: "Compare heat rate or input intensity, capital cost, fixed and variable maintenance, start time, ramp rate, availability, capacity factor, fuel price, asset life, and output value; then calculate whether cumulative variable-cost savings repay the incremental fixed asset."
+example: "Nishi-Nagoya added heat-recovery steam generators and a steam cycle behind its gas turbines. The extra assets recovered exhaust heat and reduced fuel per MWh, while simple-cycle turbines remain valuable where fast response and few annual operating hours matter more than fuel efficiency."
+my_take: "I should treat efficiency investment as a capital-for-fuel trade-off whose value is amplified by utilization, not assume the highest design-point efficiency is always the best asset."
+
+prerequisites:
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
+  - "SYSTEM.ENERGY.DENSITY"
+  - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
+connections:
+  - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
+  - "SYSTEM.ENERGY.DENSITY"
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS"
+  - "META.SYSTEMS.COUPLING"
+  - "CASE.NISHI_NAGOYA.COMBINED_CYCLE.1970_2018"
+questions:
+  - "For a conversion investment, how do fuel savings, operating hours, flexibility, availability, financing, maintenance, and output prices determine whether added efficiency repays added assets?"
+cases:
+  - "Nishi-Nagoya Thermal Power Station Group No. 7, 1970-2018"
+
+first_seen: "2026-10-12"
+last_reviewed: "2026-10-12"
+next_review: "2026-10-19"
+sources:
+  - "https://www.chuden.co.jp/english/corporate/releases/pressreleases/3265903_18939.html"
+  - "https://www.eia.gov/todayinenergy/detail.php?id=60984"
+  - "https://www.eia.gov/todayinenergy/includes/sparkspread_explain.php"
+notes: "Energy Industry Apprenticeship continuation. L1 candidate pending a new simple-cycle versus combined-cycle decision that combines heat rate, fuel price, operating hours, flexibility, and capital."

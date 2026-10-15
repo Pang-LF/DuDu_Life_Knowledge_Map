@@ -1,0 +1,44 @@
+id: "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
+name_en: "Conversion Efficiency and Losses"
+name_zh: "转换效率与损失"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Conversion efficiency is the fraction of energy input that becomes a specifically defined useful output inside an explicit boundary; energy outside that numerator is conserved but often exits as lower-quality heat, friction, resistance, auxiliary consumption, or other non-target flows."
+why: "Efficiency percentages are comparable only when input, useful output, system boundary, time and accounting conventions such as LHV versus HHV and gross versus net are aligned."
+mechanism: "Trace one unit of input across every output path; identify which output serves the target; distinguish energy quantity from its ability to do work; multiply sequential efficiencies; and test whether recovering another loss stream is worth the added asset, operation, and complexity."
+example: "Nishi-Nagoya Unit 7-1 combines three gas turbines with one steam turbine. A heat-recovery steam generator uses hot gas-turbine exhaust to raise steam, bringing reported generation efficiency to 63.08 percent on an LHV basis in 2018."
+my_take: "Whenever I see an efficiency claim, I should write the numerator, denominator, physical boundary, LHV or HHV basis, gross or net output, and actual operating condition before comparing it."
+
+prerequisites:
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
+  - "SYSTEM.ENERGY.DENSITY"
+connections:
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
+  - "SYSTEM.ENERGY.DENSITY"
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS"
+  - "BUS.ENERGY.CONVERSION_ASSETS"
+  - "META.SYSTEMS.COUPLING"
+  - "META.SYSTEMS.DELAY"
+  - "META.SOURCE_EVALUATION.INTEGRATION"
+  - "CASE.NISHI_NAGOYA.COMBINED_CYCLE.1970_2018"
+questions:
+  - "For an efficiency claim, what input and useful output define the ratio, where is the boundary, which losses leave it, and are the accounting and operating conditions comparable?"
+cases:
+  - "Nishi-Nagoya Thermal Power Station Group No. 7, 1970-2018"
+
+first_seen: "2026-10-12"
+last_reviewed: "2026-10-12"
+next_review: "2026-10-19"
+sources:
+  - "https://www.chuden.co.jp/english/corporate/releases/pressreleases/3265903_18939.html"
+  - "https://www.chuden.co.jp/publicity/press/3267477_21432.html"
+  - "https://www.eia.gov/todayinenergy/detail.php?id=52158"
+  - "https://www.energy.gov/sites/default/files/2026-04/DOE-HDBK-1012-92_VOL1.pdf"
+notes: "October Energy lesson resumed after a pause. Mastery remains L1 candidate until the user audits a new efficiency claim and correctly explains chain multiplication, energy quality, and the simple-cycle versus combined-cycle trade-off."

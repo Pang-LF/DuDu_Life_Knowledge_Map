@@ -22,6 +22,7 @@ connections:
   - "SYSTEM.ENERGY.FOUNDATION"
   - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
   - "BUS.ENERGY.VALUE_CHAIN"
+  - "BUS.ENERGY.CONVERSION_ASSETS"
   - "META.SYSTEMS.BOTTLENECK"
   - "META.SYSTEMS.COUPLING"
   - "CASE.NASA.X57.ENERGY_POWER_DENSITY.2015_2024"
@@ -31,10 +32,10 @@ cases:
   - "NASA X-57 Maxwell electric aircraft, 2015-2024"
 
 first_seen: "2026-10-03"
-last_reviewed: "2026-10-03"
-next_review: "2026-10-10"
+last_reviewed: "2026-10-12"
+next_review: "2026-10-19"
 sources:
   - "https://ntrs.nasa.gov/api/citations/20180005737/downloads/20180005737.pdf"
   - "https://ntrs.nasa.gov/api/citations/20240010807/downloads/x57_performance_manuscript-v4.pdf"
   - "https://afdc.energy.gov/fuels/properties"
-notes: "Energy Industry Apprenticeship Day 3. L1 candidate pending a service-to-assets reconstruction that separates $/kWh, $/kW, duration, utilization, safety, and network capacity."
+notes: "Energy Industry Apprenticeship Day 3. Reviewed on 2026-10-12 by comparing extra combined-cycle assets with fuel savings and peak-service flexibility. L1 candidate pending a service-to-assets reconstruction that separates $/kWh, $/kW, duration, utilization, safety, and network capacity."
