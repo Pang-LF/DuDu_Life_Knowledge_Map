@@ -1,0 +1,42 @@
+id: "BUS.ENERGY.ANCILLARY_SERVICES"
+name_en: "Ancillary Services"
+name_zh: "辅助服务"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Ancillary services are technically specified reliability capabilities procured by a system operator, including frequency response, restoration, reserve, voltage support, and black start, that are not fully described by ordinary MWh delivery."
+why: "Energy schedules do not guarantee speed, direction, headroom, duration, location, telemetry, or recovery; separate products and obligations make these system-control capabilities visible, testable, and compensable."
+mechanism: "Qualified generators, storage, demand response, industrial loads, and interconnectors reserve capability under performance requirements and may receive availability, activation, or performance payments while bearing opportunity costs and non-performance penalties."
+example: "During the 8 January 2021 Continental Europe split, roughly 1.7 GW of French and Italian industrial load was disconnected under prior contracts, turning foregone consumption into fast upward balancing support for the north-west area."
+my_take: "I should define the reliability outcome, technical specification, payment basis, opportunity cost, performance test, and failure correlation before comparing an ancillary-service offer with ordinary energy."
+
+prerequisites:
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES"
+connections:
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "CASE.CE.SYSTEM_SEPARATION.FREQUENCY_CONTROL.2021"
+questions:
+  - "Which reliability capability is being purchased, who sacrifices what opportunity, how is performance verified, and who ultimately pays and benefits?"
+cases:
+  - "Continental Europe synchronous-area separation, 8 January 2021"
+
+first_seen: "2026-10-17"
+last_reviewed: "2026-10-17"
+next_review: "2026-10-24"
+sources:
+  - "https://eur-lex.europa.eu/eli/reg/2017/1485/oj/eng"
+  - "https://annualreport2020.entsoe.eu/market/"
+  - "https://www.entsoe.eu/news/2021/01/26/system-separation-in-the-continental-europe-synchronous-area-on-8-january-2021-2nd-update/"
+notes: "Energy Industry Apprenticeship continuation. L1 candidate pending a new resource portfolio that separates availability, activation energy, direction, speed, duration, energy state, opportunity cost, testing, penalties, payer, and system beneficiary."

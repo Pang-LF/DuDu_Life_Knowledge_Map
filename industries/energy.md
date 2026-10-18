@@ -6,6 +6,18 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-10-17 — Ancillary Services Buy an Executable Option to Change Power
+
+- Question: Why should a resource be paid for standing ready even when it delivers few or no MWh?
+- Parent concept: `SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES` separates FCR containment, FRR restoration, and RR replacement so a normal frequency reading is not confused with restored resilience.
+- Continental Europe case: A system split removed about 5.8 GW of transfer. The north-west fell to 49.74 Hz while the south-east rose to 50.6 Hz; automatic and manual resources had to move in opposite directions.
+- Demand-side resource: approximately 1.7 GW of contracted French and Italian industrial load disconnected, converting foregone consumption into fast upward balancing support.
+- Cross-system support: Nordic and Great Britain HVDC links supplied up to approximately 595 MW to the north-west without requiring the supporting synchronous areas to share its exact AC frequency.
+- Product rule: reserve MW must specify direction, response time, full activation, duration, energy state, location, trigger, recovery, correlation, payment, and penalty.
+- Money flow: reserve providers may receive availability, activation-energy, or performance payments; users ultimately fund the reliability service, while providers bear headroom, lost production, cycling, fuel, and non-performance costs.
+- Status: `BUS.ENERGY.ANCILLARY_SERVICES` at L1 candidate; Teach-back pending.
+- Next: Transmission Security and N-1 — why sufficient generation and reserve do not prevent a heavily loaded corridor from cascading after one element trips.
+
 ### 2026-10-16 — Grid Dispatch Buys Feasible Response, Not Only Cheap Energy
 
 - Question: Why can a grid operator not dispatch generators by marginal energy cost alone?

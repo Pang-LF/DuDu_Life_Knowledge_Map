@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-16
+Last updated: 2026-10-17
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-16
 
 ## Next Immediate Focus（下一步）
 
-2026-10-17：进入 Frequency Control & Reserves（频率控制与备用），解释 Inertia、Primary Response、Operating Reserve、Storage Duration 与 Redispatch 怎样在不同时间尺度共同恢复平衡和安全余量。
+2026-10-18：进入 Transmission Security & N-1（输电安全与 N-1），解释发电和备用充足时，潮流重分配、热极限、功角稳定与保护动作为什么仍可能形成级联。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-16
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-17：完成 Frequency Control & Reserves（频率控制与备用）。主课跟随 2021 年 1 月 8 日欧洲大陆同步电网分裂：Ernestinovo 400 kV 母线联络器跳闸后，过载与功角失稳使分裂边界约 20 秒内形成，最终报告估计原有约 5.8 GW 东南向西北潮流突然消失。西北区降至 49.74 Hz、东南区升至 50.6 Hz；约 1.7 GW 法国和意大利签约工业负荷自动切除，北欧与英国经 HVDC 最多支援约 595 MW，土耳其保护方案切除约 975 MW 发电。课程将 FCR 的 Contain、FRR 的 Restore 和 RR 的 Replace 分成三棒，解释频率稳定不等于回到目标，回到 50 Hz 也不等于已恢复下一次事故余量；两区最终约 15:08 再同步。`SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES` 与 `BUS.ENERGY.ANCILLARY_SERVICES` 均为 L1 candidate；`CASE.CE.SYSTEM_SEPARATION.FREQUENCY_CONTROL.2021` 已归档。下一课进入 Transmission Security & N-1 和 Transmission Network Economics。
 
 2026-10-16：进入 Electricity（电力系统）模块，完成 Real-Time Balance（实时平衡）。主课从 2019 年 8 月 9 日英国雷击事件出发：线路故障约 70 毫秒清除，但 Hornsea One、Little Barford 与分布式发电损失叠加，政府中期报告概括为约 2,100 MW，超过当时约 1,000 MW 频率响应；系统从 50 Hz 降到 48.8 Hz，自动低频减载影响超过一百万消费者。课程从 1 MW × 1 秒 = 1 MJ 重建功率赤字怎样先取走同步旋转设备动能，使频率下降，再由自动响应、备用、再调度与 LFDD 依次接管；区分 Energy Adequacy、Capacity Adequacy、Real-Time Balance 与 Network Security。最终技术报告约 931 MW 减载、约 581 MW 嵌入式发电同时退出、净需求降低约 350 MW，说明保护动作与分布式资产可见性的系统耦合。`SYSTEM.ELECTRICITY.REAL_TIME_BALANCE` 与 `BUS.ENERGY.GRID_OPERATOR_DISPATCH` 均为 L1 candidate；`CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019` 已归档。下一课进入 Frequency Control & Reserves 和 Ancillary Services。
 

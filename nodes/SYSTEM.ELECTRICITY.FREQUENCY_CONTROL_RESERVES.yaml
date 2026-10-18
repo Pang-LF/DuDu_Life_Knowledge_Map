@@ -1,0 +1,44 @@
+id: "SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES"
+name_en: "Frequency Control and Reserves"
+name_zh: "频率控制与备用"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Frequency control is a staged recovery process in which frequency containment reserves arrest a deviation, frequency restoration reserves return frequency and scheduled area exchanges to target, and replacement reserves restore the available restoration margin for another imbalance."
+why: "A system can stop frequency from worsening yet remain off target, dependent on emergency resources, and unable to survive a second contingency; visible frequency recovery is therefore not equivalent to restored resilience."
+mechanism: "Inertia first slows the initial change; FCR responds automatically to frequency, aFRR or mFRR correct frequency and area control error, and RR or redispatch releases the activated FRR while replenishing headroom, energy state, and operating margin."
+example: "On 8 January 2021, Continental Europe split across a boundary that had carried about 5.8 GW. Automatic generation control, roughly 1.7 GW of contracted industrial load interruption, and up to about 595 MW of HVDC support arrested the north-west frequency decline before coordinated restoration and resynchronisation at 15:08."
+my_take: "I should ask which resource contains, restores, or replaces; then verify direction, response time, full activation, duration, location, energy state, recovery time, and correlated failure rather than treating all reserve MW as interchangeable."
+
+prerequisites:
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
+  - "META.SYSTEMS.DELAY"
+connections:
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.ANCILLARY_SERVICES"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "META.SYSTEMS.COUPLING"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "META.SYSTEMS.DELAY"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SOURCE_EVALUATION.INTEGRATION"
+  - "CASE.CE.SYSTEM_SEPARATION.FREQUENCY_CONTROL.2021"
+questions:
+  - "After a frequency event is arrested, which resources restore the target, replace activated reserves, and rebuild enough headroom and energy to withstand the next contingency?"
+cases:
+  - "Continental Europe synchronous-area separation, 8 January 2021"
+
+first_seen: "2026-10-17"
+last_reviewed: "2026-10-17"
+next_review: "2026-10-24"
+sources:
+  - "https://www.entsoe.eu/Documents/SOC%20documents/SOC%20Reports/Continental_Europe_Synchronous_Area_Separation_on_08_January_2021_-_Executive_Summary_updated.pdf"
+  - "https://eepublicdownloads.entsoe.eu/clean-documents/SOC%20documents/SOC%20Reports/Continental%20Europe%20Synchronous%20Area%20Separation%20on%2008%20January%202021%20-%20Main%20Report_updated.pdf"
+  - "https://eur-lex.europa.eu/eli/reg/2017/1485/oj/eng"
+notes: "October Electricity lesson. Mastery remains L1 candidate until the user can assign unfamiliar resources to containment, restoration, and replacement while auditing direction, response time, duration, location, energy state, and recovery."

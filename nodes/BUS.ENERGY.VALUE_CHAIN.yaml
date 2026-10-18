@@ -23,6 +23,7 @@ connections:
   - "BUS.ENERGY.CONVERSION_ASSETS"
   - "BUS.ENERGY.DISPATCH_ECONOMICS"
   - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.ANCILLARY_SERVICES"
   - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
   - "CASE.TEXAS.FREEZE.2021"
   - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
@@ -33,8 +34,8 @@ cases:
   - "February 2021 Texas freeze and natural-gas-electric coordination"
 
 first_seen: "2026-10-01"
-last_reviewed: "2026-10-16"
-next_review: "2026-10-23"
+last_reviewed: "2026-10-17"
+next_review: "2026-10-24"
 sources:
   - "https://www.ferc.gov/sites/default/files/2021-12/Cold%20Weather%20Report_%202021_120821.pdf"
   - "https://www.eia.gov/energyexplained/use-of-energy/"

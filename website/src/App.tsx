@@ -54,7 +54,7 @@ const nodePoints: NodePoint[] = [
   { id: 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', x: 850, y: 680, labelSide: 'left' },
   { id: 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', x: 930, y: 672, labelSide: 'right', mapLabel: 'Capacity Factor（容量因子）', mapId: 'SYSTEM.ENERGY.CAPACITY_FACTOR' },
   { id: 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', x: 940, y: 555, labelSide: 'right', mapLabel: 'Real-Time Balance（实时平衡）', mapId: 'SYSTEM.ELECTRICITY.BALANCE' },
-  { id: 'SYSTEM.ECON.INFLATION', x: 870, y: 515, virtual: true },
+  { id: 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', x: 850, y: 515, labelSide: 'left', mapLabel: 'Frequency Control（频率控制）', mapId: 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -92,7 +92,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ELECTRICITY.REAL_TIME_BALANCE')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

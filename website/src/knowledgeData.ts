@@ -57,7 +57,7 @@ export const domains: Domain[] = [
     id: 'SYSTEM',
     nameEn: 'SYSTEM',
     nameZh: '现代社会系统',
-    progress: 7,
+    progress: 8,
     active: true,
     modules: ['Energy Systems（能源系统）', 'Economics（经济学）', 'Finance（金融）', 'Politics（政治）', 'Geopolitics（地缘政治）'],
   },
@@ -835,7 +835,15 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Generation and demand must match continuously. A sudden deficit first draws on stored rotational energy and changes frequency, then automatic response, reserves, redispatch, and load shedding act on successive timescales.',
-    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY', 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019'],
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY', 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019'],
+  },
+  {
+    id: 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES',
+    label: 'Frequency Control & Reserves（频率控制与备用）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Frequency recovery is a relay: FCR contains the initial movement, FRR restores frequency and scheduled exchanges, and RR replaces activated FRR so the system regains margin for the next disturbance.',
+    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.ANCILLARY_SERVICES', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'CASE.CE.SYSTEM_SEPARATION.FREQUENCY_CONTROL.2021'],
   },
   {
     id: 'BUS.ENERGY.VALUE_CHAIN',
@@ -867,7 +875,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Generators sell distinct products across different time scales. Dispatch and viability depend on energy, capacity, ancillary, contract and attribute revenue versus variable, fixed, capital and financing costs.',
-    connections: ['BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026'],
+    connections: ['BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026'],
   },
   {
     id: 'BUS.ENERGY.GRID_OPERATOR_DISPATCH',
@@ -875,7 +883,15 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Dispatch chooses feasible generation, storage, demand response, and reserves under startup, ramp, duration, location, congestion, contingency, and recovery constraints before minimizing total cost.',
-    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019'],
+    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.ANCILLARY_SERVICES', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019'],
+  },
+  {
+    id: 'BUS.ENERGY.ANCILLARY_SERVICES',
+    label: 'Ancillary Services（辅助服务）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Ancillary services pay flexible assets to remain available and follow verified instructions for containment, restoration, replacement, voltage support, and system restart; they buy an executable option, not merely another megawatt-hour.',
+    connections: ['BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'CASE.CE.SYSTEM_SEPARATION.FREQUENCY_CONTROL.2021'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -925,15 +941,23 @@ export const nodes: GraphNode[] = [
     summary: 'About 2,100 MW of combined losses exceeded roughly 1,000 MW of held response; frequency fell from 50 to 48.8 Hz and automatic load shedding protected the remaining system while affecting more than one million consumers.',
     connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY', 'META.SOURCE_EVALUATION.INTEGRATION'],
   },
+  {
+    id: 'CASE.CE.SYSTEM_SEPARATION.FREQUENCY_CONTROL.2021',
+    label: 'Continental Europe System Split 2021（欧洲大陆电网分裂）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'A cascading separation divided Continental Europe into a 5.8 GW deficit area and a 5.8 GW surplus area. Primary response, demand disconnection, HVDC support, restoration reserves, and resynchronisation showed that stopping frequency is only the first stage of recovery.',
+    connections: ['SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'BUS.ENERGY.ANCILLARY_SERVICES', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'META.SOURCE_EVALUATION.INTEGRATION'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-10-16',
-  title: 'Real-Time Balance（实时平衡）',
-  question: '一个约 70 毫秒内清除的线路故障，为什么仍会让电网频率跌到 48.8 Hz，并使一百多万人失去电力？',
-  reading: '45-60 min：从 1 MW × 1 秒开始，跟随英国 2019 事件穿过旋转动能、频率响应、备用、低频减载与系统恢复。',
-  discussion: '20-30 min：计算两秒功率缺口，并在速度、持续时间、位置、共同故障与成本约束下组合三种响应资源。',
-  next: '2026-10-17：Frequency Control & Reserves（频率控制与备用）和 Ancillary Services（辅助服务）。',
+  date: '2026-10-17',
+  title: 'Frequency Control & Reserves（频率控制与备用）',
+  question: '法国一家没有故障的工厂，为什么会在欧洲电网分裂时被主动断电，而频率止住以后系统仍未真正恢复？',
+  reading: '45-60 min：跟随 2021 年欧洲大陆电网分裂，理解 FCR 遏止、FRR 恢复、RR 替代与再同步。',
+  discussion: '20-30 min：为 600 MW 机组跳闸安排三棒资源，并审计一块 100 MW / 25 MWh 电池的备用承诺。',
+  next: '2026-10-18：Transmission Security & N-1（输电安全与 N-1）和 Transmission Network Economics（输电网络经济学）。',
 }
 
 export const monthlyTrack = [

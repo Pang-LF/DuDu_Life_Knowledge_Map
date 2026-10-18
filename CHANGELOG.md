@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-10-17
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 完成 `SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES`，将事故恢复拆成 FCR 遏止、FRR 恢复与 RR 替代三棒，明确回到 50 Hz 不等于恢复备用余量
+- 新增 `CASE.CE.SYSTEM_SEPARATION.FREQUENCY_CONTROL.2021`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开欧洲大陆同步区分裂与再同步
+- 记录最终报告约 5.8 GW 分裂潮流、西北 49.74 Hz、东南 50.6 Hz、约 1.7 GW 可中断工业负荷、约 595 MW HVDC 支援与 15:08 再同步
+- 保留早期约 6.3 GW 估计与最终 5.8 GW 重建之间的证据演化，并区分事件成功恢复与未来更低惯量情景下备用仍然充分的反事实
+- 新增 `BUS.ENERGY.ANCILLARY_SERVICES`，把方向、响应、完全激活、持续时间、能量状态、位置、触发、恢复、相关失效、付款和处罚放入产品边界
+- 解释 Generator、Battery、Demand Response、Industrial Load 与 Interconnector 怎样提供辅助服务，以及待命付款、激活电量、机会成本与用户承担之间的关系
+- 更新 Real-Time Balance、Grid Operator Dispatch、Dispatch Economics、Energy Value Chain、Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据
+- 下一课锁定 Transmission Security & N-1 和 Transmission Network Economics
+
 ## 2026-10-16
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
