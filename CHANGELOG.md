@@ -2,6 +2,7 @@
 
 ## 2026-10-16
 
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
 - 完成 `SYSTEM.ELECTRICITY.REAL_TIME_BALANCE`，从 `1 MW × 1 second = 1 MJ` 重建功率赤字、旋转动能、频率下降、自动响应、备用与减载机制
 - 新增 `CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开英国 2019 电力中断
 - 记录约 2,100 MW 发电损失、约 1,000 MW 响应、50 至 48.8 Hz、约 931 MW LFDD、约 581 MW 嵌入式发电退出与约 350 MW 净需求变化
