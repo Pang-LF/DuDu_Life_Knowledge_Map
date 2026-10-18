@@ -476,7 +476,7 @@
   padding: 9px;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1380px) {
   .atlas-shell {
     grid-template-columns: 280px minmax(520px, 1fr);
   }

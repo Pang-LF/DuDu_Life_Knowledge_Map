@@ -1,0 +1,43 @@
+id: "BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS"
+name_en: "Transmission Network Economics"
+name_zh: "输电网络经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Transmission network economics evaluates how a line or grid technology changes reliability, feasible dispatch, congestion, losses, capacity needs, extreme-condition flexibility, and future options, then allocates costs among beneficiaries."
+why: "A transmission asset does not produce MWh and may be lightly used in ordinary hours, yet can create large option value after outages or enable lower-cost generation; average utilization therefore does not measure complete value."
+mechanism: "Transmission owners finance and maintain regulated network assets, system operators coordinate their use, planners compare projects with redispatch, storage, demand response, local generation, topology, and grid-enhancing alternatives, and regulators or tariffs determine cost recovery using estimated beneficiaries and benefits."
+example: "The 2003 Northeast blackout showed that losing network paths can remove the feasible post-contingency state even when aggregate generation exists. Modern FERC long-term planning rules require multiple scenarios and consideration of reliability, production-cost, congestion, loss, extreme-condition, capacity, and replacement benefits."
+my_take: "I should value a transmission project by the network constraint and counterfactual portfolio it changes, identify each beneficiary and settlement metric, and keep owner revenue separate from total system benefit and congestion settlement."
+
+prerequisites:
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
+connections:
+  - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "BUS.ENERGY.ANCILLARY_SERVICES"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.FORECASTING.SCENARIO_PLANNING"
+  - "CASE.NORTHEAST_BLACKOUT.2003"
+questions:
+  - "Which network constraint and counterfactual does a project change, who receives reliability or economic benefits, how are they measured, and how should costs be recovered under uncertainty?"
+cases:
+  - "2003 Northeast blackout"
+
+first_seen: "2026-10-18"
+last_reviewed: "2026-10-18"
+next_review: "2026-10-25"
+sources:
+  - "https://www.ferc.gov/explainer-transmission-planning-and-cost-allocation-final-rule"
+  - "https://www.ferc.gov/electric-transmission/order-no-1000-transmission-planning-and-cost-allocation"
+  - "https://www.eia.gov/energyexplained/electricity/delivery-to-consumers.php"
+notes: "Energy Industry Apprenticeship continuation. L1 candidate pending an unfamiliar project comparison that links constraint, contingency, alternatives, benefit categories, beneficiaries, timing, uncertainty, and cost recovery."

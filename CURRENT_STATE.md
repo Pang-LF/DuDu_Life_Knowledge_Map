@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-17
+Last updated: 2026-10-18
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-17
 
 ## Next Immediate Focus（下一步）
 
-2026-10-18：进入 Transmission Security & N-1（输电安全与 N-1），解释发电和备用充足时，潮流重分配、热极限、功角稳定与保护动作为什么仍可能形成级联。
+2026-10-19：进入 Congestion & Locational Value（拥塞与位置价值），解释同一小时、同一种电力为什么会因边际损耗和输电约束在不同节点出现不同价格。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-17
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-18：完成 Transmission Security & N-1（输电安全与 N-1）。主课重访 2003 年北美东北部大停电，但从 9 月的 Coupling 迁移到事故后可行域：联合调查建立约 43,000 个母线、57,600 条线路的模型，并在 15:05 Harding–Chamberlin 退出前测试 800 多个故障，未发现测试范围内越限；该线退出后，若再失去 Hanna–Juniper 或 1,255 MW Perry 机组，剩余路径会越过应急限额，系统已失去 N-1 安全性。Hanna–Juniper 退出后 Star–South Canton 从约 82% 升到 120% 正常额定值；后续线路退出、低电压与高电流将压力推向 Sammis–Star，16:05:57 保护动作后级联加速。报告记录约 5,000 万人、61,800 MW 负荷受影响，超过 531 台机组与 400 条线路退出。课程把当前负载率与事故后安全裕度分开，并说明 500 MW 到 1,500 MW 减载需求如何暴露延迟成本。Industry Apprenticeship 新增 Transmission Network Economics（输电网络经济学），把可靠性、生产成本、拥塞、损耗、极端状态、容量与替换收益同受益者和成本回收连接。`SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1` 与 `BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS` 均为 L1 candidate；下一课进入 Congestion & Locational Value 和 Wholesale Market Locational Pricing。
 
 2026-10-17：完成 Frequency Control & Reserves（频率控制与备用）。主课跟随 2021 年 1 月 8 日欧洲大陆同步电网分裂：Ernestinovo 400 kV 母线联络器跳闸后，过载与功角失稳使分裂边界约 20 秒内形成，最终报告估计原有约 5.8 GW 东南向西北潮流突然消失。西北区降至 49.74 Hz、东南区升至 50.6 Hz；约 1.7 GW 法国和意大利签约工业负荷自动切除，北欧与英国经 HVDC 最多支援约 595 MW，土耳其保护方案切除约 975 MW 发电。课程将 FCR 的 Contain、FRR 的 Restore 和 RR 的 Replace 分成三棒，解释频率稳定不等于回到目标，回到 50 Hz 也不等于已恢复下一次事故余量；两区最终约 15:08 再同步。`SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES` 与 `BUS.ENERGY.ANCILLARY_SERVICES` 均为 L1 candidate；`CASE.CE.SYSTEM_SEPARATION.FREQUENCY_CONTROL.2021` 已归档。下一课进入 Transmission Security & N-1 和 Transmission Network Economics。
 

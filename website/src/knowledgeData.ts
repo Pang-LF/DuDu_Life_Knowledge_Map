@@ -57,7 +57,7 @@ export const domains: Domain[] = [
     id: 'SYSTEM',
     nameEn: 'SYSTEM',
     nameZh: '现代社会系统',
-    progress: 8,
+    progress: 9,
     active: true,
     modules: ['Energy Systems（能源系统）', 'Economics（经济学）', 'Finance（金融）', 'Politics（政治）', 'Geopolitics（地缘政治）'],
   },
@@ -458,8 +458,8 @@ export const nodes: GraphNode[] = [
     label: '2003 Northeast Blackout（北美东北部大停电）',
     domain: 'META',
     mastery: 'Case studied',
-    summary: 'Line outages redistributed power onto remaining paths while operators lost situational awareness, allowing a local Ohio disturbance to become a regional cascade.',
-    connections: ['META.SYSTEMS.COUPLING'],
+    summary: 'A modeled N-1-secure system before 15:05 became insecure after Harding-Chamberlin tripped; unseen flow redistribution, voltage weakness, delayed correction, and protection turned further outages into a regional cascade.',
+    connections: ['SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY'],
   },
   {
     id: 'CASE.SOUTHWEST.2022_MELTDOWN',
@@ -835,7 +835,7 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Generation and demand must match continuously. A sudden deficit first draws on stored rotational energy and changes frequency, then automatic response, reserves, redispatch, and load shedding act on successive timescales.',
-    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY', 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019'],
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY', 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019'],
   },
   {
     id: 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES',
@@ -843,7 +843,15 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Frequency recovery is a relay: FCR contains the initial movement, FRR restores frequency and scheduled exchanges, and RR replaces activated FRR so the system regains margin for the next disturbance.',
-    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.ANCILLARY_SERVICES', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'CASE.CE.SYSTEM_SEPARATION.FREQUENCY_CONTROL.2021'],
+    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.ANCILLARY_SERVICES', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'CASE.CE.SYSTEM_SEPARATION.FREQUENCY_CONTROL.2021'],
+  },
+  {
+    id: 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1',
+    label: 'Transmission Security & N-1（输电安全与 N-1）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Transmission security tests whether power can redistribute after a credible component outage without violating thermal, voltage, or stability limits; N-1 examines the next state, not only current loading.',
+    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'CASE.NORTHEAST_BLACKOUT.2003'],
   },
   {
     id: 'BUS.ENERGY.VALUE_CHAIN',
@@ -851,7 +859,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Resource production, midstream, generation, grid operation, network delivery, retail, regulation, and end-use equipment must be mapped through separate physical, money, and control flows.',
-    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'CASE.TEXAS.FREEZE.2021', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE'],
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'CASE.TEXAS.FREEZE.2021', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE'],
   },
   {
     id: 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS',
@@ -875,7 +883,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Generators sell distinct products across different time scales. Dispatch and viability depend on energy, capacity, ancillary, contract and attribute revenue versus variable, fixed, capital and financing costs.',
-    connections: ['BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026'],
+    connections: ['BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026'],
   },
   {
     id: 'BUS.ENERGY.GRID_OPERATOR_DISPATCH',
@@ -883,7 +891,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Dispatch chooses feasible generation, storage, demand response, and reserves under startup, ramp, duration, location, congestion, contingency, and recovery constraints before minimizing total cost.',
-    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.ANCILLARY_SERVICES', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019'],
+    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.ANCILLARY_SERVICES', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019', 'CASE.NORTHEAST_BLACKOUT.2003'],
   },
   {
     id: 'BUS.ENERGY.ANCILLARY_SERVICES',
@@ -891,7 +899,15 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Ancillary services pay flexible assets to remain available and follow verified instructions for containment, restoration, replacement, voltage support, and system restart; they buy an executable option, not merely another megawatt-hour.',
-    connections: ['BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'CASE.CE.SYSTEM_SEPARATION.FREQUENCY_CONTROL.2021'],
+    connections: ['BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'CASE.CE.SYSTEM_SEPARATION.FREQUENCY_CONTROL.2021'],
+  },
+  {
+    id: 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS',
+    label: 'Transmission Network Economics（输电网络经济学）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Transmission assets change reliability, feasible dispatch, congestion, losses, capacity needs, and future options; value depends on network counterfactuals and beneficiaries, not average utilization alone.',
+    connections: ['SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'META.PROBABILITY.EXPECTED_VALUE', 'META.FORECASTING.SCENARIO_PLANNING', 'CASE.NORTHEAST_BLACKOUT.2003'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -952,12 +968,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-10-17',
-  title: 'Frequency Control & Reserves（频率控制与备用）',
-  question: '法国一家没有故障的工厂，为什么会在欧洲电网分裂时被主动断电，而频率止住以后系统仍未真正恢复？',
-  reading: '45-60 min：跟随 2021 年欧洲大陆电网分裂，理解 FCR 遏止、FRR 恢复、RR 替代与再同步。',
-  discussion: '20-30 min：为 600 MW 机组跳闸安排三棒资源，并审计一块 100 MW / 25 MWh 电池的备用承诺。',
-  next: '2026-10-18：Transmission Security & N-1（输电安全与 N-1）和 Transmission Network Economics（输电网络经济学）。',
+  date: '2026-10-18',
+  title: 'Transmission Security & N-1（输电安全与 N-1）',
+  question: '一条 345 kV 线路退出后，为什么大停电没有立刻发生，系统却已经失去了抵抗下一次故障的能力？',
+  reading: '45-60 min：跟随 2003 年北美东北部大停电，重建故障后潮流、热极限、电压、稳定与 N-1。',
+  discussion: '20-30 min：为双走廊 1,200 MW 进口设计事故后接力，并为一条低利用率输电线识别受益者与付款规则。',
+  next: '2026-10-19：Congestion & Locational Value（拥塞与位置价值）和 Wholesale Market Locational Pricing（批发市场节点定价）。',
 }
 
 export const monthlyTrack = [

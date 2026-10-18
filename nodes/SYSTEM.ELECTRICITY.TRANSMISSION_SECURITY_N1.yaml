@@ -1,0 +1,45 @@
+id: "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
+name_en: "Transmission Security and N-1"
+name_zh: "输电安全与 N-1"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Transmission security asks whether the network can redistribute power after a credible component outage without violating thermal, voltage, or stability limits; N-1 is the first counterfactual screen for a single component loss."
+why: "Generation and reserve can be sufficient in aggregate yet unable to reach a constrained location, while a line that is within its present rating can overload after another path trips."
+mechanism: "Operators estimate the current network state, simulate credible outages, solve the resulting power flows and dynamic behavior, identify post-contingency violations, and use redispatch, topology, local resources, demand response, load shedding, or network upgrades to restore a feasible state and margin."
+example: "On 14 August 2003, the modeled Eastern Interconnection was within single-contingency limits before the Harding-Chamberlin 345 kV outage at 15:05. After that outage, several next contingencies would violate emergency limits; further line losses shifted flows until Sammis-Star tripped at 16:05:57 and the regional cascade accelerated."
+my_take: "I should judge security in the post-contingency state, separately checking thermal, voltage, and stability limits plus the timing and location of corrective actions, rather than reading current loading percentages as a safety score."
+
+prerequisites:
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "META.SYSTEMS.COUPLING"
+connections:
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.ANCILLARY_SERVICES"
+  - "BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS"
+  - "META.SYSTEMS.COUPLING"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.DELAY"
+  - "META.SOURCE_EVALUATION.INTEGRATION"
+  - "CASE.NORTHEAST_BLACKOUT.2003"
+questions:
+  - "After the next credible component loss, where will power redistribute, which thermal, voltage, or stability limit binds, and which timed corrective action restores a feasible state?"
+cases:
+  - "2003 Northeast blackout"
+
+first_seen: "2026-10-18"
+last_reviewed: "2026-10-18"
+next_review: "2026-10-25"
+sources:
+  - "https://www.energy.gov/sites/default/files/oeprod/DocumentsandMedia/BlackoutFinal-Web.pdf"
+  - "https://www.nerc.com/standards/reliability-standards/tpl"
+  - "https://www.ferc.gov/industries-data/electric/electric-industry-forms/form-no-715-annual-transmission-planning-and-evaluation-report-instructions"
+notes: "October Electricity lesson. Mastery remains L1 candidate until the user can reconstruct an unfamiliar post-contingency state and choose location-specific corrective actions with valid timing and evidence boundaries."

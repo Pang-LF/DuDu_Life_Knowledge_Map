@@ -23,15 +23,16 @@ connections:
   - "BUS.MEDIA.DISTRIBUTOR.DIRECTV"
   - "SYSTEM.ENERGY.DENSITY"
   - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
+  - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
 questions:
   - "How can coupling strength and intervention time be measured in an unfamiliar system?"
 cases:
   - "2003 Northeast blackout"
 
 first_seen: "2026-09-09"
-last_reviewed: "2026-10-12"
-next_review: "2026-10-19"
+last_reviewed: "2026-10-18"
+next_review: "2026-10-25"
 sources:
   - "https://www.energy.gov/oe/august-2003-blackout"
   - "https://www.nerc.com/globalassets/our-work/reports/event-reports/august_2003_blackout_final_report.pdf"
-notes: "Primary One Idea for Systems Thinking Day 2. Transferred on 2026-10-12 through gas turbine, HRSG, steam turbine, condenser, cooling, and control coupling at Nishi-Nagoya. Mastery remains candidate until user Teach-back."
+notes: "Primary One Idea for Systems Thinking Day 2. Transferred on 2026-10-18 by modeling how a line outage redistributes flows and changes the operating conditions of remaining paths. Mastery remains candidate until user Teach-back."

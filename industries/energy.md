@@ -6,6 +6,18 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-10-18 — Transmission Sells Post-Contingency Options, Not MWh
+
+- Question: Why can a lightly used transmission line still justify customer payment?
+- Parent concept: `SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1` evaluates the post-contingency state, not only current loading; thermal, voltage, and stability feasibility must survive credible outages.
+- Northeast blackout case: the reconstructed system passed more than 800 tested contingencies before Harding-Chamberlin tripped at 15:05, but several next contingencies violated emergency limits afterward. The network lost its next-outage margin before widespread load was lost.
+- Network product: transmission changes which generators and loads can remain connected across normal, outage, congestion, and extreme-weather states. It can create reliability option value with modest average utilization.
+- Actor boundary: transmission owners finance and maintain assets, system operators coordinate flows, generators produce electricity, regulators approve applicable planning and rates, and load-serving entities or utilities recover costs from customers.
+- Benefit rule: compare avoided reliability facilities, loss-of-load risk, production cost, losses, outage congestion, extreme-condition flexibility, and capacity or replacement deferral against the no-project portfolio.
+- Cost-allocation rule: owner revenue, congestion settlement, total system benefit, and beneficiary cost responsibility are separate quantities; a benefit must be assigned to a geography, time horizon, metric, and counterfactual.
+- Status: `BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Congestion & Locational Value — why the same MWh can have different prices at different nodes in the same hour.
+
 ### 2026-10-17 — Ancillary Services Buy an Executable Option to Change Power
 
 - Question: Why should a resource be paid for standing ready even when it delivers few or no MWh?

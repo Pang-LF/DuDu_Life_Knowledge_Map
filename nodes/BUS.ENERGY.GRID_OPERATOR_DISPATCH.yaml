@@ -19,6 +19,8 @@ prerequisites:
   - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
   - "SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES"
   - "BUS.ENERGY.ANCILLARY_SERVICES"
+  - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
+  - "BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS"
 connections:
   - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
   - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
@@ -28,16 +30,17 @@ connections:
   - "META.SYSTEMS.COUPLING"
   - "META.PROBABILITY.EXPECTED_VALUE"
   - "CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019"
+  - "CASE.NORTHEAST_BLACKOUT.2003"
 questions:
   - "Which combination of resources can meet a specified power need at the required speed, duration, and location while preserving contingency margin at an acceptable total cost?"
 cases:
   - "Great Britain power disruption, 9 August 2019"
 
 first_seen: "2026-10-16"
-last_reviewed: "2026-10-17"
+last_reviewed: "2026-10-18"
 next_review: "2026-10-24"
 sources:
   - "https://www.neso.energy/document/152346/download"
   - "https://www.ofgem.gov.uk/publications/investigation-9-august-2019-power-outage"
   - "https://www.neso.energy/industry-information/codes/sqss/modifications/gsr027-review-nets-sqss-criteria-frequency-control-drive-reserve-response-and-inertia-holding-gb-electricity-system"
-notes: "Transferred on 2026-10-17 by assigning resources to frequency containment, restoration, replacement, and resynchronisation under regional constraints. L1 candidate pending a constrained dispatch exercise that separates energy cost from speed, duration, location, shared failure risk, response headroom, and reserve restoration."
+notes: "Transferred on 2026-10-18 by requiring dispatch to restore post-contingency thermal, voltage, and stability feasibility rather than only aggregate MW. L1 candidate pending a constrained dispatch exercise that separates energy cost from speed, duration, location, shared failure risk, network reach, and reserve restoration."

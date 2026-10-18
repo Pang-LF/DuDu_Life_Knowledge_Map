@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-10-18
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 完成 `SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1`，把输电安全定义为下一可信故障后的热、电压与稳定可行性，而非当前设备负载率
+- 从 N-0 两条线各 71% 到 N-1 剩余线路 143% 的最小模型重建故障后潮流重分配，并区分 Normal Rating 与 Emergency Rating
+- 以新锚点重访 `CASE.NORTHEAST_BLACKOUT.2003`：保留 9 月 Coupling 视角，新增事故前 800 多个故障测试、Harding–Chamberlin 后 N-1 违规、Hanna–Juniper 与 Star–South Canton 退出、Sammis–Star 级联机制
+- 记录 FirstEnergy 约 12,080 MW 负荷与 2,575 MW 进口、Eastlake 5 的 597 MW、Star–South Canton 约 82% 到 120%、约 5,000 万人和 61,800 MW 中断负荷
+- 保留反事实证据边界：500 MW 与 1,500 MW 本地减载来自重建模型，不能证明任一现代技术单独部署就必然阻止事故
+- 新增 `BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS`，把可靠性、生产成本、拥塞、损耗、极端状态、容量与资产替换收益同受益者和成本回收分开
+- 更新 Real-Time Balance、Frequency Control、Grid Operator Dispatch、Energy Value Chain、Coupling、Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据
+- 下一课锁定 Congestion & Locational Value 和 Wholesale Market Locational Pricing
+
 ## 2026-10-17
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
