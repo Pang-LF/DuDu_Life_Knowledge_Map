@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-15
+Last updated: 2026-10-16
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-15
 
 ## Next Immediate Focus（下一步）
 
-2026-10-16：进入 Real-Time Balance（实时平衡），解释电力供需为什么必须连续匹配、Frequency（频率）怎样暴露失衡，以及 Grid Operator Dispatch（电网运营者调度）如何在成本、速度、位置、网络与可靠性约束下选择资源。
+2026-10-17：进入 Frequency Control & Reserves（频率控制与备用），解释 Inertia、Primary Response、Operating Reserve、Storage Duration 与 Redispatch 怎样在不同时间尺度共同恢复平衡和安全余量。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-15
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-16：进入 Electricity（电力系统）模块，完成 Real-Time Balance（实时平衡）。主课从 2019 年 8 月 9 日英国雷击事件出发：线路故障约 70 毫秒清除，但 Hornsea One、Little Barford 与分布式发电损失叠加，政府中期报告概括为约 2,100 MW，超过当时约 1,000 MW 频率响应；系统从 50 Hz 降到 48.8 Hz，自动低频减载影响超过一百万消费者。课程从 1 MW × 1 秒 = 1 MJ 重建功率赤字怎样先取走同步旋转设备动能，使频率下降，再由自动响应、备用、再调度与 LFDD 依次接管；区分 Energy Adequacy、Capacity Adequacy、Real-Time Balance 与 Network Security。最终技术报告约 931 MW 减载、约 581 MW 嵌入式发电同时退出、净需求降低约 350 MW，说明保护动作与分布式资产可见性的系统耦合。`SYSTEM.ELECTRICITY.REAL_TIME_BALANCE` 与 `BUS.ENERGY.GRID_OPERATOR_DISPATCH` 均为 L1 candidate；`CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019` 已归档。下一课进入 Frequency Control & Reserves 和 Ancillary Services。
 
 2026-10-15：课程从 10 月 12 日继续，明确不为 10 月 13–14 日伪造学习记录。完成 Capacity Factor & Utilization（容量因子与利用率）：从 1 MW × 8,760 小时重建容量因子公式，再用 TMI-1 历史 805 MW、6,633,750 MWh 与约 94% 容量因子解释 Nameplate Capacity、Actual Generation、Availability、资源条件、Economic Dispatch 与网络约束。主案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：TMI-1 高利用率运行，却在长期低批发价格、单机站成本、五年报告亏损与连续三次 PJM 容量拍卖失败后于 2019 年关停；2024 年 Microsoft 20 年 PPA 改变拟议重启的收入确定性，但不替代约 16 亿美元资本、NRC 审查与未来运行证明。`SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION` 与 `BUS.ENERGY.DISPATCH_ECONOMICS` 均为 L1 candidate；`CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026` 已归档。下一课进入 Real-Time Balance 与 Grid Operator Dispatch。
 

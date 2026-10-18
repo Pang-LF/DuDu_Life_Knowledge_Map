@@ -6,6 +6,19 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-10-16 — Grid Dispatch Buys Feasible Response, Not Only Cheap Energy
+
+- Question: Why can a grid operator not dispatch generators by marginal energy cost alone?
+- Parent concept: `SYSTEM.ELECTRICITY.REAL_TIME_BALANCE` requires active-power injections and withdrawals to match continuously; frequency is a system-wide symptom of imbalance, not an inventory meter.
+- Great Britain case: On 9 August 2019, combined generation losses reached about 2,100 MW against roughly 1,000 MW of held response. Frequency fell from 50 Hz to 48.8 Hz and automatic load shedding affected more than one million consumers.
+- Physical sequence: rotational energy and frequency-sensitive load act immediately; automatic frequency response follows in seconds; reserve and redispatch replace the loss over longer intervals; LFDD is a last protective barrier.
+- Actor boundary: generator owners own plants, network companies own wires, the system operator coordinates balance and dispatch, and retailers or load-serving entities face customers and recover costs.
+- Dispatch rule: the feasible set is constrained by availability, startup, ramp, minimum output, duration, state of charge, location, congestion, contingency risk, response headroom, and reserve restoration before cost can be minimized.
+- Ancillary-services rule: energy pays for delivered MWh, while response and reserve pay for readiness and the ability to change MW at the required speed and duration.
+- Evidence boundary: the event supports the imbalance and protection mechanism but does not identify one unique least-cost counterfactual reserve portfolio without dynamic modelling and joint-failure assumptions.
+- Status: `BUS.ENERGY.GRID_OPERATOR_DISPATCH` at L1 candidate; Teach-back pending.
+- Next: Frequency Control & Reserves — how inertia, primary response, operating reserve, storage duration, and redispatch divide the recovery job.
+
 ### 2026-10-15 — High Utilization Does Not Guarantee Profitability
 
 - Question: Why can a power plant generate many megawatt-hours and still fail to cover its complete cost?

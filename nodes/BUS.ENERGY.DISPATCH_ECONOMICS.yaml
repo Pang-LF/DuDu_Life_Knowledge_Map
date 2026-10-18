@@ -19,6 +19,8 @@ prerequisites:
   - "BUS.ENERGY.CONVERSION_ASSETS"
   - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
   - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
 connections:
   - "BUS.ENERGY.VALUE_CHAIN"
   - "BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS"
@@ -34,11 +36,11 @@ cases:
   - "Three Mile Island Unit 1 operation, retirement, and proposed restart, 1974-2026"
 
 first_seen: "2026-10-15"
-last_reviewed: "2026-10-15"
-next_review: "2026-10-22"
+last_reviewed: "2026-10-16"
+next_review: "2026-10-23"
 sources:
   - "https://www.ferc.gov/introductory-guide-participation-pjm-processes"
   - "https://www.ferc.gov/wholesale-electricity-markets-overview-and-guide"
   - "https://www.sec.gov/Archives/edgar/data/1109357/000162828017006007/exc201705308k.htm"
   - "https://investors.constellationenergy.com/node/8711/pdf"
-notes: "Energy Industry Apprenticeship continuation. L1 candidate pending a new asset decision that separates energy, capacity, ancillary service, contract and attribute revenues from variable, fixed, capital and financing costs."
+notes: "Transferred on 2026-10-16 by separating cheap MWh from the paid readiness, response speed, duration, location, and headroom required for reliable dispatch. L1 candidate pending a new asset decision that separates energy, capacity, ancillary service, contract and attribute revenues from variable, fixed, capital and financing costs."

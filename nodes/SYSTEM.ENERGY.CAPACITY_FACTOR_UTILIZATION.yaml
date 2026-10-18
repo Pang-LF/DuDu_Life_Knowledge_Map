@@ -25,6 +25,8 @@ connections:
   - "BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS"
   - "BUS.ENERGY.CONVERSION_ASSETS"
   - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
   - "META.SYSTEMS.BOTTLENECK"
   - "META.SYSTEMS.DELAY"
   - "META.CAUSAL.CONFOUNDER"
@@ -36,11 +38,11 @@ cases:
   - "Three Mile Island Unit 1 operation, retirement, and proposed restart, 1974-2026"
 
 first_seen: "2026-10-15"
-last_reviewed: "2026-10-15"
-next_review: "2026-10-22"
+last_reviewed: "2026-10-16"
+next_review: "2026-10-23"
 sources:
   - "https://www.eia.gov/tools/glossary/index.php?id=Capacity_factor"
   - "https://www.eia.gov/nuclear/reactors/index.html"
   - "https://www.nrc.gov/facilities-safety/facility-finder/reactors/ccec"
   - "https://www.sec.gov/Archives/edgar/data/1109357/000162828017006007/exc201705308k.htm"
-notes: "October Energy lesson resumed from 2026-10-12; no lessons were created for 2026-10-13 through 2026-10-14. Mastery remains L1 candidate until the user calculates an unfamiliar asset's capacity factor and distinguishes utilization from availability, dispatch, reliability, and economics."
+notes: "Transferred on 2026-10-16 by contrasting annual MWh utilization with instantaneous MW balance and response speed. Mastery remains L1 candidate until the user calculates an unfamiliar asset's capacity factor and distinguishes utilization from availability, dispatch, reliability, and economics."

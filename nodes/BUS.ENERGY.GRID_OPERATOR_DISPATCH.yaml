@@ -1,0 +1,41 @@
+id: "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+name_en: "Grid Operator Dispatch"
+name_zh: "电网运营者调度"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Grid operator dispatch selects and directs generation, storage, demand response, imports, and reserves so that active power remains balanced while network, operating, and reliability constraints are satisfied."
+why: "The cheapest resource may start too slowly, sit behind congestion, lack duration, share a failure mode, or consume the upward headroom needed for a contingency; marginal energy cost is only one input after physical feasibility."
+mechanism: "The operator combines forecasts and telemetry with offers, availability, startup time, ramp rate, minimum output, duration, state of charge, transmission limits, contingency criteria, frequency response, and reserve requirements, then redispatches as system conditions change."
+example: "Before the 9 August 2019 Great Britain disruption, the ESO held about 1,000 MW of response; the combined rare losses reached about 2,100 MW, exposing why dispatch must procure speed, headroom, duration, visibility, and correlated-risk protection rather than only cheap MWh."
+my_take: "When choosing the next resource, I should define the needed MW, start time, duration, location, failure correlation, total cost, and the plan to rebuild reserve after activation."
+
+prerequisites:
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+connections:
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.COUPLING"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019"
+questions:
+  - "Which combination of resources can meet a specified power need at the required speed, duration, and location while preserving contingency margin at an acceptable total cost?"
+cases:
+  - "Great Britain power disruption, 9 August 2019"
+
+first_seen: "2026-10-16"
+last_reviewed: "2026-10-16"
+next_review: "2026-10-23"
+sources:
+  - "https://www.neso.energy/document/152346/download"
+  - "https://www.ofgem.gov.uk/publications/investigation-9-august-2019-power-outage"
+  - "https://www.neso.energy/industry-information/codes/sqss/modifications/gsr027-review-nets-sqss-criteria-frequency-control-drive-reserve-response-and-inertia-holding-gb-electricity-system"
+notes: "Energy Industry Apprenticeship continuation. L1 candidate pending a constrained dispatch exercise that separates energy cost from speed, duration, location, shared failure risk, response headroom, and reserve restoration."

@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 2026-10-16
+
+- 完成 `SYSTEM.ELECTRICITY.REAL_TIME_BALANCE`，从 `1 MW × 1 second = 1 MJ` 重建功率赤字、旋转动能、频率下降、自动响应、备用与减载机制
+- 新增 `CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开英国 2019 电力中断
+- 记录约 2,100 MW 发电损失、约 1,000 MW 响应、50 至 48.8 Hz、约 931 MW LFDD、约 581 MW 嵌入式发电退出与约 350 MW 净需求变化
+- 保留最终技术报告约 931 MW 与较早政府中期报告约 973 MW，以及 45 分钟客户恢复与 90 分钟需求恢复之间的统计边界
+- 新增 `BUS.ENERGY.GRID_OPERATOR_DISPATCH`，将成本、启动、爬坡、持续时间、位置、拥塞、共同故障、响应余量与备用重建放入调度约束
+- 区分 Generator Owner、Network Owner、System Operator 与 Retailer / Load-serving Entity 的资产、控制与付款角色
+- 将 Energy Foundation、Capacity Factor、Value Chain、Dispatch Economics、Coupling、Nonlinearity、Delay 与 Source Evaluation 迁移到电网事件，保持 candidate 状态
+- 更新 Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据，下一课锁定 Frequency Control & Reserves 和 Ancillary Services
+
 ## 2026-10-15
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

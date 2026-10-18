@@ -57,7 +57,7 @@ export const domains: Domain[] = [
     id: 'SYSTEM',
     nameEn: 'SYSTEM',
     nameZh: '现代社会系统',
-    progress: 5,
+    progress: 7,
     active: true,
     modules: ['Energy Systems（能源系统）', 'Economics（经济学）', 'Finance（金融）', 'Politics（政治）', 'Geopolitics（地缘政治）'],
   },
@@ -795,7 +795,7 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Primary energy becomes useful service only through a coordinated chain of conversion, carriers, networks, operating rules, and end-use devices; resource abundance alone does not guarantee availability.',
-    connections: ['META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SOURCE_EVALUATION.INTEGRATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'BUS.ENERGY.VALUE_CHAIN', 'CASE.TEXAS.FREEZE.2021'],
+    connections: ['META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SOURCE_EVALUATION.INTEGRATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'BUS.ENERGY.VALUE_CHAIN', 'CASE.TEXAS.FREEZE.2021'],
   },
   {
     id: 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY',
@@ -827,7 +827,15 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Capacity factor compares actual MWh with rated MW multiplied by period hours. It measures realized utilization, not availability, reliability, profitability, or social value.',
-    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026'],
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026'],
+  },
+  {
+    id: 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE',
+    label: 'Real-Time Balance（实时平衡）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Generation and demand must match continuously. A sudden deficit first draws on stored rotational energy and changes frequency, then automatic response, reserves, redispatch, and load shedding act on successive timescales.',
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY', 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019'],
   },
   {
     id: 'BUS.ENERGY.VALUE_CHAIN',
@@ -835,7 +843,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Resource production, midstream, generation, grid operation, network delivery, retail, regulation, and end-use equipment must be mapped through separate physical, money, and control flows.',
-    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'CASE.TEXAS.FREEZE.2021', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE'],
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'CASE.TEXAS.FREEZE.2021', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE'],
   },
   {
     id: 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS',
@@ -859,7 +867,15 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Generators sell distinct products across different time scales. Dispatch and viability depend on energy, capacity, ancillary, contract and attribute revenue versus variable, fixed, capital and financing costs.',
-    connections: ['BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026'],
+    connections: ['BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026'],
+  },
+  {
+    id: 'BUS.ENERGY.GRID_OPERATOR_DISPATCH',
+    label: 'Grid Operator Dispatch（电网运营者调度）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Dispatch chooses feasible generation, storage, demand response, and reserves under startup, ramp, duration, location, congestion, contingency, and recovery constraints before minimizing total cost.',
+    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -901,15 +917,23 @@ export const nodes: GraphNode[] = [
     summary: 'TMI-1 paired about 94% historical capacity factor with 2019 economic retirement; a later 20-year Microsoft PPA changed restart revenue certainty without replacing capital, engineering, or regulatory requirements.',
     connections: ['SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'META.CAUSAL.CONFOUNDER', 'META.SOURCE_EVALUATION.INTEGRATION'],
   },
+  {
+    id: 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019',
+    label: 'GB Power Disruption 2019（英国电力中断）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'About 2,100 MW of combined losses exceeded roughly 1,000 MW of held response; frequency fell from 50 to 48.8 Hz and automatic load shedding protected the remaining system while affecting more than one million consumers.',
+    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY', 'META.SOURCE_EVALUATION.INTEGRATION'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-10-15',
-  title: 'Capacity Factor & Utilization（容量因子与利用率）',
-  question: 'TMI-1 一年把约 94% 的理论能力变成了电量，为什么这样一台高利用率机组仍会因经济原因关停？',
-  reading: '45-60 min：从 1 MW × 8,760 小时开始，跟随 TMI-1 穿过高利用率、容量拍卖失败、关停与长期 PPA 支持的拟议重启。',
-  discussion: '20-30 min：计算两座 500 MW 电站的容量因子，并把利用率、可用率、调度、收入结构与系统价值分开诊断。',
-  next: '2026-10-16：Real-Time Balance（实时平衡）与 Grid Operator Dispatch（电网运营者调度）。',
+  date: '2026-10-16',
+  title: 'Real-Time Balance（实时平衡）',
+  question: '一个约 70 毫秒内清除的线路故障，为什么仍会让电网频率跌到 48.8 Hz，并使一百多万人失去电力？',
+  reading: '45-60 min：从 1 MW × 1 秒开始，跟随英国 2019 事件穿过旋转动能、频率响应、备用、低频减载与系统恢复。',
+  discussion: '20-30 min：计算两秒功率缺口，并在速度、持续时间、位置、共同故障与成本约束下组合三种响应资源。',
+  next: '2026-10-17：Frequency Control & Reserves（频率控制与备用）和 Ancillary Services（辅助服务）。',
 }
 
 export const monthlyTrack = [

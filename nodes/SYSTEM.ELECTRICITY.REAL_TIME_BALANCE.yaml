@@ -1,0 +1,44 @@
+id: "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+name_en: "Real-Time Balance"
+name_zh: "实时平衡"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Real-time balance is the continuous matching of active-power injections with demand, exports, charging, and network losses inside a synchronous electricity system; a sustained mismatch appears as frequency movement."
+why: "Annual energy and installed capacity can be sufficient while a sudden second-scale power deficit still destabilizes the grid; reliability depends on response speed, duration, location, network reach, and recovery margin."
+mechanism: "When electrical load exceeds mechanical or inverter-supplied input, stored rotational energy and frequency-sensitive demand initially cover part of the deficit, so frequency falls; automatic frequency response, operating reserves, redispatch, storage, and ultimately load shedding act on successive timescales to arrest and restore balance."
+example: "On 9 August 2019, generation losses totaling about 2,100 MW exceeded roughly 1,000 MW of held response in Great Britain; frequency fell from 50 Hz to 48.8 Hz and automatic low-frequency demand disconnection affected more than one million consumers."
+my_take: "For any electricity shortage claim, I should separate MW from MWh and ask how fast the imbalance appeared, which stored energy acted first, what response followed, how long it lasted, where it was located, and how reserves were rebuilt."
+
+prerequisites:
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
+  - "META.SYSTEMS.COUPLING"
+connections:
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "META.SYSTEMS.COUPLING"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "META.SYSTEMS.DELAY"
+  - "META.SOURCE_EVALUATION.INTEGRATION"
+  - "CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019"
+questions:
+  - "For a sudden power deficit, which physical energy acts first, what does frequency reveal, and which resources can arrest, replace, and sustain the response at each timescale?"
+cases:
+  - "Great Britain power disruption, 9 August 2019"
+
+first_seen: "2026-10-16"
+last_reviewed: "2026-10-16"
+next_review: "2026-10-23"
+sources:
+  - "https://www.neso.energy/document/152346/download"
+  - "https://www.neso.energy/document/151081/download"
+  - "https://assets.publishing.service.gov.uk/media/5e0e1fa9e5274a0fa7b4d96a/e3c-gb-power-disruption-9-august-2019-final-report.pdf"
+  - "https://www.nerc.com/globalassets/who-we-are/standing-committees/rstc/rs/reference_document_nerc_balancing_and_frequency_control.pdf"
+notes: "October Electricity module entry node. Mastery remains L1 candidate until the user can reconstruct an unfamiliar imbalance from MW and duration through stored energy, frequency, response, reserve, load shedding, and recovery."
