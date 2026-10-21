@@ -1,0 +1,40 @@
+id: "BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING"
+name_en: "Wholesale Market Locational Pricing"
+name_zh: "批发市场位置定价"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Locational marginal pricing settles the marginal value of energy at defined resource, hub, or load settlement points after security-constrained dispatch accounts for transmission congestion and marginal losses."
+why: "One uniform wholesale price would hide the cost of delivering the next MWh through a constrained network and would weaken signals for redispatch, generation, flexible load, storage, and transmission location."
+mechanism: "The ISO or RTO clears offers and bids through a network model; generators are credited at applicable resource-node prices, load is charged at applicable load-zone or settlement-point prices, and congestion differences are allocated through market rules and financial transmission rights rather than automatically becoming transmission-owner profit."
+example: "ERCOT launched its nodal market on 1 December 2010 with locational marginal prices at more than 8,000 nodes, day-ahead co-optimization of energy and ancillary services, reliability unit commitment, and congestion revenue rights."
+my_take: "I should separate physical dispatch, wholesale settlement, hedge allocation, regulated network cost recovery, and the final retail bill instead of treating an LMP spread as one party's simple profit."
+
+prerequisites:
+  - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS"
+connections:
+  - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS"
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014"
+questions:
+  - "Who calculates each settlement-point price, who pays or receives it, who bears the path spread, and which separate tariff or hedge recovers network cost or manages congestion risk?"
+cases:
+  - "Texas nodal market and CREZ transmission buildout, 2010-2014"
+
+first_seen: "2026-10-21"
+last_reviewed: "2026-10-21"
+next_review: "2026-10-28"
+sources:
+  - "https://www.ercot.com/files/docs/2011/04/26/ercot_2010_financial_statements.pdf"
+  - "https://www.ferc.gov/understanding-energy-markets"
+  - "https://ferc.gov/OPP/western-markets-explainer"
+notes: "Energy Industry Apprenticeship continuation. L1 candidate pending a settlement walkthrough that keeps LMP, congestion rent, CRR/FTR hedging, transmission-owner revenue, and retail billing separate."

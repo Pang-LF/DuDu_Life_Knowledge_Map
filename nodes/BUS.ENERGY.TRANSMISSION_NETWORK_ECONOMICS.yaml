@@ -21,23 +21,26 @@ prerequisites:
 connections:
   - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
   - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
   - "BUS.ENERGY.VALUE_CHAIN"
   - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
   - "BUS.ENERGY.DISPATCH_ECONOMICS"
   - "BUS.ENERGY.ANCILLARY_SERVICES"
+  - "BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING"
   - "META.PROBABILITY.EXPECTED_VALUE"
   - "META.FORECASTING.SCENARIO_PLANNING"
   - "CASE.NORTHEAST_BLACKOUT.2003"
+  - "CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014"
 questions:
   - "Which network constraint and counterfactual does a project change, who receives reliability or economic benefits, how are they measured, and how should costs be recovered under uncertainty?"
 cases:
   - "2003 Northeast blackout"
 
 first_seen: "2026-10-18"
-last_reviewed: "2026-10-18"
-next_review: "2026-10-25"
+last_reviewed: "2026-10-21"
+next_review: "2026-10-28"
 sources:
   - "https://www.ferc.gov/explainer-transmission-planning-and-cost-allocation-final-rule"
   - "https://www.ferc.gov/electric-transmission/order-no-1000-transmission-planning-and-cost-allocation"
   - "https://www.eia.gov/energyexplained/electricity/delivery-to-consumers.php"
-notes: "Energy Industry Apprenticeship continuation. L1 candidate pending an unfamiliar project comparison that links constraint, contingency, alternatives, benefit categories, beneficiaries, timing, uncertainty, and cost recovery."
+notes: "Transferred on 2026-10-21 through the CREZ counterfactual and the separation of short-run congestion value from regulated fixed-cost recovery. L1 candidate pending an unfamiliar project comparison that links constraint, contingency, alternatives, benefit categories, beneficiaries, timing, uncertainty, and cost recovery."

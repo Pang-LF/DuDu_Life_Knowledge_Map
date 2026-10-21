@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-18
+Last updated: 2026-10-21
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-18
 
 ## Next Immediate Focus（下一步）
 
-2026-10-19：进入 Congestion & Locational Value（拥塞与位置价值），解释同一小时、同一种电力为什么会因边际损耗和输电约束在不同节点出现不同价格。
+2026-10-22：进入 Day-Ahead versus Real-Time Markets and Two-Settlement System（日前与实时市场及双结算），解释计划、实际偏差、结算价格与风险归属。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-18
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-21：完成 Congestion & Locational Value（拥塞与位置价值）。课程从 10 月 18 日继续，明确不为 10 月 19–20 日伪造学习记录。主课用两节点模型重建位置价值：West 风电报价 -$10/MWh、East 燃气报价 $50/MWh、East 负荷 150 MW、线路上限 100 MW 时，West 与 East LMP 分别为 -$10 与 $50，约束影子价值为 $60/MW-hour。真实案例跟随 West Texas 风电拥塞到 CREZ 建设：2009 年 West-to-North 在 3,121 个十五分钟区间绑定，West Zone 有 700 多个负价小时；ERCOT 2010 年节点市场在 8,000 多个节点显示位置边际成本；CREZ 最终新增超过 3,600 miles 输电、报告成本约 69 亿美元，2013 年可用风电实际利用约 99%，主要 West-to-North 约束不再显著。课程区分 Congestion 与 Scarcity、LMP 与零售账单、拥塞差额与输电所有者收入，并保留 49.3 亿规划估算和 69 亿最终报告的口径边界。`SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE` 与 `BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING` 均为 L1 candidate；下一课进入 Day-Ahead versus Real-Time Markets and Two-Settlement System。
 
 2026-10-18：完成 Transmission Security & N-1（输电安全与 N-1）。主课重访 2003 年北美东北部大停电，但从 9 月的 Coupling 迁移到事故后可行域：联合调查建立约 43,000 个母线、57,600 条线路的模型，并在 15:05 Harding–Chamberlin 退出前测试 800 多个故障，未发现测试范围内越限；该线退出后，若再失去 Hanna–Juniper 或 1,255 MW Perry 机组，剩余路径会越过应急限额，系统已失去 N-1 安全性。Hanna–Juniper 退出后 Star–South Canton 从约 82% 升到 120% 正常额定值；后续线路退出、低电压与高电流将压力推向 Sammis–Star，16:05:57 保护动作后级联加速。报告记录约 5,000 万人、61,800 MW 负荷受影响，超过 531 台机组与 400 条线路退出。课程把当前负载率与事故后安全裕度分开，并说明 500 MW 到 1,500 MW 减载需求如何暴露延迟成本。Industry Apprenticeship 新增 Transmission Network Economics（输电网络经济学），把可靠性、生产成本、拥塞、损耗、极端状态、容量与替换收益同受益者和成本回收连接。`SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1` 与 `BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS` 均为 L1 candidate；下一课进入 Congestion & Locational Value 和 Wholesale Market Locational Pricing。
 

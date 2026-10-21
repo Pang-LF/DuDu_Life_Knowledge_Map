@@ -6,6 +6,20 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-10-21 — Wholesale Electricity Has a Location
+
+- Continuity: resumed from 2026-10-18; no completion records were invented for 2026-10-19 or 2026-10-20.
+- Question: Who calculates LMP, who settles against it, and does a nodal price spread become transmission-owner profit?
+- Parent concept: `SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE` explains why a binding network constraint makes the next MWh change different generators at different nodes.
+- Minimal model: with West wind at `-$10/MWh`, East gas at `$50/MWh`, 150 MW East demand, and a 100 MW line, West LMP is -$10, East LMP is $50, and one extra MW of line capacity has a $60 hourly shadow value.
+- Texas case: West-to-North bound in 3,121 fifteen-minute intervals in 2009; West-zone hourly average prices were negative for more than 700 hours while wind curtailment occurred under both zonal and local definitions.
+- Market design: ERCOT's nodal market began on 1 December 2010 with LMPs at more than 8,000 nodes; the market exposed physical marginal cost differences rather than creating the constraint.
+- CREZ outcome: Texas selected a plan expected to accommodate 18,456 MW of renewable capacity; final upgrades completed in early 2014 added more than 3,600 miles at a reported $6.9 billion. Available wind utilization reached about 99% in 2013 and the major West-to-North constraint ceased to be significant.
+- Settlement boundary: generators, load, CRR holders, transmission owners, and retail customers face different settlement or cost-recovery rules; congestion revenue is not automatically transmission-owner profit.
+- Evidence boundary: the $4.93 billion planning estimate and $6.9 billion final report are not a clean overrun comparison; negative-price hours are zonal averages; CREZ was a major contributor but not the only changing condition.
+- Status: `BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING` at L1 candidate; Teach-back pending.
+- Next: Day-Ahead versus Real-Time Markets and Two-Settlement System — who bears forecast and deviation risk.
+
 ### 2026-10-18 — Transmission Sells Post-Contingency Options, Not MWh
 
 - Question: Why can a lightly used transmission line still justify customer payment?

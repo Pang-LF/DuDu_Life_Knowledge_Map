@@ -1,0 +1,43 @@
+id: "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+name_en: "Congestion and Locational Value"
+name_zh: "拥塞与位置价值"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Congestion occurs when a network constraint prevents the least-cost unconstrained dispatch from serving one more unit of demand; locational value is the change in total system cost caused by one additional MWh injected or withdrawn at a specific node under those constraints."
+why: "Electricity cannot be routed freely or stored at scale inside the market interval, so the same-hour marginal value can differ across nodes even when the physical system remains interconnected."
+mechanism: "The operator solves a security-constrained dispatch. When a transmission limit binds, an extra MWh at the importing node may require expensive local generation while an extra MWh at the exporting node may be curtailed; the resulting locational marginal price combines marginal energy, congestion, and loss components."
+example: "Before Texas completed the CREZ buildout, West Texas wind frequently faced export congestion and negative prices while other zones did not. More than 3,600 miles of transmission completed by early 2014 expanded transfer capability, and ERCOT's market monitor reported available wind utilization near 99% in 2013 as the major West-to-North constraint ceased to be significant."
+my_take: "I should ask where the next MWh is injected or consumed, which constraint binds, which generator changes output, and how losses and contingencies alter that marginal action before interpreting a price spread."
+
+prerequisites:
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+connections:
+  - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
+  - "BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.COUPLING"
+  - "CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014"
+questions:
+  - "At which node does the next MWh appear, which security constraint binds, which resource changes output, and what part of the price difference is energy, congestion, or loss?"
+cases:
+  - "Texas CREZ transmission buildout and West Texas wind congestion, 2005-2014"
+
+first_seen: "2026-10-21"
+last_reviewed: "2026-10-21"
+next_review: "2026-10-28"
+sources:
+  - "https://www.ferc.gov/understanding-energy-markets"
+  - "https://ferc.gov/OPP/western-markets-explainer"
+  - "https://www.ercot.com/files/docs/2011/04/26/ercot_2010_financial_statements.pdf"
+  - "https://www.potomaceconomics.com/wp-content/uploads/2017/01/2013_ERCOT-SOM-REPORT.pdf"
+notes: "October Electricity lesson. L1 candidate pending user reconstruction of a new two-node constrained dispatch, including marginal prices, shadow value, and the difference between congestion and system-wide scarcity."

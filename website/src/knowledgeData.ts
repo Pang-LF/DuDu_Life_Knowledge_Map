@@ -57,7 +57,7 @@ export const domains: Domain[] = [
     id: 'SYSTEM',
     nameEn: 'SYSTEM',
     nameZh: '现代社会系统',
-    progress: 9,
+    progress: 10,
     active: true,
     modules: ['Energy Systems（能源系统）', 'Economics（经济学）', 'Finance（金融）', 'Politics（政治）', 'Geopolitics（地缘政治）'],
   },
@@ -851,7 +851,15 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Transmission security tests whether power can redistribute after a credible component outage without violating thermal, voltage, or stability limits; N-1 examines the next state, not only current loading.',
-    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'CASE.NORTHEAST_BLACKOUT.2003'],
+    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'CASE.NORTHEAST_BLACKOUT.2003', 'CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014'],
+  },
+  {
+    id: 'SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE',
+    label: 'Congestion & Locational Value（拥塞与位置价值）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'When a transmission constraint binds, the next MWh at different nodes changes different generators. Locational marginal price exposes that marginal operating cost through energy, congestion, and loss components.',
+    connections: ['SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014'],
   },
   {
     id: 'BUS.ENERGY.VALUE_CHAIN',
@@ -859,7 +867,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Resource production, midstream, generation, grid operation, network delivery, retail, regulation, and end-use equipment must be mapped through separate physical, money, and control flows.',
-    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'CASE.TEXAS.FREEZE.2021', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE'],
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.ACCOUNTING_BOUNDARY', 'SYSTEM.ENERGY.DENSITY', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING', 'CASE.TEXAS.FREEZE.2021', 'BUS.MEDIA.PAYTV.VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE'],
   },
   {
     id: 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS',
@@ -883,7 +891,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Generators sell distinct products across different time scales. Dispatch and viability depend on energy, capacity, ancillary, contract and attribute revenue versus variable, fixed, capital and financing costs.',
-    connections: ['BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026'],
+    connections: ['BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS', 'BUS.ENERGY.CONVERSION_ASSETS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING', 'SYSTEM.ENERGY.CONVERSION_EFFICIENCY', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026', 'CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014'],
   },
   {
     id: 'BUS.ENERGY.GRID_OPERATOR_DISPATCH',
@@ -891,7 +899,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Dispatch chooses feasible generation, storage, demand response, and reserves under startup, ramp, duration, location, congestion, contingency, and recovery constraints before minimizing total cost.',
-    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.ANCILLARY_SERVICES', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019', 'CASE.NORTHEAST_BLACKOUT.2003'],
+    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.ANCILLARY_SERVICES', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019', 'CASE.NORTHEAST_BLACKOUT.2003', 'CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014'],
   },
   {
     id: 'BUS.ENERGY.ANCILLARY_SERVICES',
@@ -907,7 +915,15 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Transmission assets change reliability, feasible dispatch, congestion, losses, capacity needs, and future options; value depends on network counterfactuals and beneficiaries, not average utilization alone.',
-    connections: ['SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'META.PROBABILITY.EXPECTED_VALUE', 'META.FORECASTING.SCENARIO_PLANNING', 'CASE.NORTHEAST_BLACKOUT.2003'],
+    connections: ['SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING', 'META.PROBABILITY.EXPECTED_VALUE', 'META.FORECASTING.SCENARIO_PLANNING', 'CASE.NORTHEAST_BLACKOUT.2003', 'CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014'],
+  },
+  {
+    id: 'BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING',
+    label: 'Wholesale Market Locational Pricing（批发市场位置定价）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'ISO/RTO network optimization turns location-specific marginal energy, congestion, and losses into settlement-point prices; congestion settlements, financial hedges, regulated network recovery, and retail bills remain distinct.',
+    connections: ['SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'BUS.ENERGY.VALUE_CHAIN', 'CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -965,15 +981,23 @@ export const nodes: GraphNode[] = [
     summary: 'A cascading separation divided Continental Europe into a 5.8 GW deficit area and a 5.8 GW surplus area. Primary response, demand disconnection, HVDC support, restoration reserves, and resynchronisation showed that stopping frequency is only the first stage of recovery.',
     connections: ['SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'BUS.ENERGY.ANCILLARY_SERVICES', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'META.SOURCE_EVALUATION.INTEGRATION'],
   },
+  {
+    id: 'CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014',
+    label: 'Texas CREZ 2005–14（得州风电输电）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'West Texas wind growth outran export capacity, producing curtailment and negative zonal prices. Nodal pricing exposed the location-specific marginal cost, while more than 3,600 miles of CREZ transmission relieved the major West-to-North constraint.',
+    connections: ['SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING'],
+  },
 ]
 
 export const todayBrief = {
-  date: '2026-10-18',
-  title: 'Transmission Security & N-1（输电安全与 N-1）',
-  question: '一条 345 kV 线路退出后，为什么大停电没有立刻发生，系统却已经失去了抵抗下一次故障的能力？',
-  reading: '45-60 min：跟随 2003 年北美东北部大停电，重建故障后潮流、热极限、电压、稳定与 N-1。',
-  discussion: '20-30 min：为双走廊 1,200 MW 进口设计事故后接力，并为一条低利用率输电线识别受益者与付款规则。',
-  next: '2026-10-19：Congestion & Locational Value（拥塞与位置价值）和 Wholesale Market Locational Pricing（批发市场节点定价）。',
+  date: '2026-10-21',
+  title: 'Congestion & Locational Value（拥塞与位置价值）',
+  question: '西得州的风已经多到价格为负，为什么东部负荷中心仍可能由正价甚至昂贵的机组供电？',
+  reading: '45-60 min：从两节点模型推导 LMP，再跟随 ERCOT 节点市场与 CREZ 输电建设。',
+  discussion: '20-30 min：计算线路影子价值，并比较数据中心位于低价出口节点或高价负荷中心的条件。',
+  next: '2026-10-22：Day-Ahead versus Real-Time Markets and Two-Settlement System（日前与实时市场及双结算）。',
 }
 
 export const monthlyTrack = [

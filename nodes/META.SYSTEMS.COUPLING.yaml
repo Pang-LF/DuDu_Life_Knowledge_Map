@@ -24,15 +24,17 @@ connections:
   - "SYSTEM.ENERGY.DENSITY"
   - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
   - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
+  - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+  - "CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014"
 questions:
   - "How can coupling strength and intervention time be measured in an unfamiliar system?"
 cases:
   - "2003 Northeast blackout"
 
 first_seen: "2026-09-09"
-last_reviewed: "2026-10-18"
-next_review: "2026-10-25"
+last_reviewed: "2026-10-21"
+next_review: "2026-10-28"
 sources:
   - "https://www.energy.gov/oe/august-2003-blackout"
   - "https://www.nerc.com/globalassets/our-work/reports/event-reports/august_2003_blackout_final_report.pdf"
-notes: "Primary One Idea for Systems Thinking Day 2. Transferred on 2026-10-18 by modeling how a line outage redistributes flows and changes the operating conditions of remaining paths. Mastery remains candidate until user Teach-back."
+notes: "Primary One Idea for Systems Thinking Day 2. Transferred on 2026-10-21 by showing how a binding transmission path couples one node's marginal demand to a different generator and price. Mastery remains candidate until user Teach-back."

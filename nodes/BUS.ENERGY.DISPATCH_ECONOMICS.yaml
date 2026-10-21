@@ -31,17 +31,20 @@ connections:
   - "META.SYSTEMS.BOTTLENECK"
   - "META.CAUSAL.CONFOUNDER"
   - "CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026"
+  - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+  - "BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING"
+  - "CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014"
 questions:
   - "Which revenue products and cost categories explain why a generator runs, remains available, retires, or returns under a long-term contract?"
 cases:
   - "Three Mile Island Unit 1 operation, retirement, and proposed restart, 1974-2026"
 
 first_seen: "2026-10-15"
-last_reviewed: "2026-10-17"
-next_review: "2026-10-24"
+last_reviewed: "2026-10-21"
+next_review: "2026-10-28"
 sources:
   - "https://www.ferc.gov/introductory-guide-participation-pjm-processes"
   - "https://www.ferc.gov/wholesale-electricity-markets-overview-and-guide"
   - "https://www.sec.gov/Archives/edgar/data/1109357/000162828017006007/exc201705308k.htm"
   - "https://investors.constellationenergy.com/node/8711/pdf"
-notes: "Transferred on 2026-10-17 by separating availability and activation payments from energy revenue and by identifying the opportunity cost of reserved headroom. L1 candidate pending a new asset decision that separates energy, capacity, ancillary service, contract and attribute revenues from variable, fixed, capital and financing costs."
+notes: "Transferred on 2026-10-21 by showing how a binding line changes dispatch, realized node price, curtailment, and revenue without changing a generator's engineering efficiency. L1 candidate pending a new asset decision that separates energy, capacity, ancillary service, contract and attribute revenues from variable, fixed, capital and financing costs."

@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 2026-10-21
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 从 2026-10-18 的课程继续，明确不为 2026-10-19 至 2026-10-20 伪造学习记录
+- 完成 `SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE`，用两节点受限调度从边际机组变化推导位置价值、LMP 与约束影子价格
+- 在 West 风电 -$10/MWh、East 燃气 $50/MWh、150 MW 负荷与 100 MW 线路模型中，重建 -$10 / $50 节点价格和 $60/MW-hour 扩容价值
+- 新增 `CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开 West Texas 风电拥塞、节点市场与 CREZ 建设
+- 记录 2009 年 West-to-North 约束 3,121 个十五分钟区间、West Zone 700 多个负价小时、ERCOT 8,000 多节点、CREZ 超过 3,600 miles 与约 69 亿美元、2013 年约 99% 可用风电利用
+- 保留 49.3 亿规划估算与 69 亿最终成本口径、分区平均负价、不同弃风定义和多重因果之间的证据边界
+- 新增 `BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING`，区分 LMP、拥塞结算、CRR/FTR、输电资产费率与零售电费
+- 更新 Transmission Security、Transmission Economics、Grid Operator Dispatch、Dispatch Economics、Bottleneck、Coupling、Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据
+- 下一课锁定 Day-Ahead versus Real-Time Markets and Two-Settlement System
+
 ## 2026-10-18
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
