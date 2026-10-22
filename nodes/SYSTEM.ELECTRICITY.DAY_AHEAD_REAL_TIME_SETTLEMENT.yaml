@@ -1,0 +1,44 @@
+id: "SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT"
+name_en: "Day-Ahead, Real-Time and Two-Settlement"
+name_zh: "日前、实时与双结算"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A two-settlement electricity market prices a scheduled day-ahead quantity at the day-ahead price and settles only the difference between actual and scheduled quantity at the real-time price."
+why: "The power system must prepare before demand, weather, outages, and network conditions are fully known, yet actual injections and withdrawals must still balance in real time."
+mechanism: "For each settlement point and interval, total settlement equals Q_DA times P_DA plus the deviation Q_RT minus Q_DA times P_RT; the day-ahead position hedges a defined quantity while real-time prices assign the marginal cost of forecast and performance deviations."
+example: "A load-serving entity buying 100 MWh day-ahead at $40/MWh but consuming 110 MWh when real-time price is $500/MWh pays $4,000 day-ahead plus $5,000 for the 10 MWh deviation, not 110 MWh twice."
+my_take: "Before calling a position hedged, I should specify quantity, interval, settlement point, counterparty, physical performance, and collateral, then calculate only the deviation at the real-time price."
+
+prerequisites:
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING"
+connections:
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING"
+  - "BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.FORECASTING.SCENARIO_PLANNING"
+  - "CASE.ERCOT.URI.TWO_SETTLEMENT_MARKET_RISK.2021"
+questions:
+  - "What day-ahead quantity was scheduled, what physical quantity occurred, at which settlement point, and who buys or sells the deviation at the real-time price?"
+cases:
+  - "ERCOT Winter Storm Uri market and settlement stress, 2021"
+
+first_seen: "2026-10-22"
+last_reviewed: "2026-10-22"
+next_review: "2026-10-29"
+sources:
+  - "https://www.ferc.gov/understanding-energy-markets"
+  - "https://www.ferc.gov/sites/default/files/2020-04/energy-primer_0.pdf"
+  - "https://www.ercot.com/mktinfo/dam/index.html"
+  - "https://ftp.puc.texas.gov/public/puct-info/industry/electric/reports/ERCOT_annual_reports/2021annualreport.pdf"
+notes: "October Electricity lesson. L1 candidate pending user reconstruction of both a load and generator settlement, including quantity, spread, location, performance, and credit boundaries."

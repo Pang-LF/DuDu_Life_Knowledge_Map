@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-21
+Last updated: 2026-10-22
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-21
 
 ## Next Immediate Focus（下一步）
 
-2026-10-22：进入 Day-Ahead versus Real-Time Markets and Two-Settlement System（日前与实时市场及双结算），解释计划、实际偏差、结算价格与风险归属。
+2026-10-23：进入 Ramping, Flexibility & Storage（爬坡、灵活性与储能），解释偏差出现后哪些资产能及时修正功率，以及跨时段价差怎样转化为收入与风险。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-21
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-22：完成 Day-Ahead, Real-Time & Two-Settlement（日前、实时与双结算）。课程跟随一个 100 MWh 日前头寸重建公式 `Q_DA × P_DA + (Q_RT − Q_DA) × P_RT`：零售商以 $40/MWh 买入 100 MWh、实际使用 110 MWh、实时价 $500/MWh 时，总能量成本为 $4,000 + $5,000 = $9,000，而不是把 110 MWh 重买一次；发电商卖出 100 MWh 却只交付 90 MWh 时，须以实时价买回 10 MWh，净能量结算为 -$1,000。ERCOT Uri 案例记录事件高峰超过 52 GW 发电不可用、2021 年实时均价 $167.88/MWh 而剔除 Uri 后 $40.73/MWh、超过 $1,000/MWh 共 166 小时以及超过 $3 billion 结算短付。课程区分 Volume、Spread、Basis、Performance、Collateral 与 Default Allocation，说明年度 DAM 与 RTM 均价接近不能证明个体安全；也明确违约不能单独归因于预测误差。`SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT` 与 `BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK` 均为 L1 candidate；下一课进入 Ramping, Flexibility & Storage。
 
 2026-10-21：完成 Congestion & Locational Value（拥塞与位置价值）。课程从 10 月 18 日继续，明确不为 10 月 19–20 日伪造学习记录。主课用两节点模型重建位置价值：West 风电报价 -$10/MWh、East 燃气报价 $50/MWh、East 负荷 150 MW、线路上限 100 MW 时，West 与 East LMP 分别为 -$10 与 $50，约束影子价值为 $60/MW-hour。真实案例跟随 West Texas 风电拥塞到 CREZ 建设：2009 年 West-to-North 在 3,121 个十五分钟区间绑定，West Zone 有 700 多个负价小时；ERCOT 2010 年节点市场在 8,000 多个节点显示位置边际成本；CREZ 最终新增超过 3,600 miles 输电、报告成本约 69 亿美元，2013 年可用风电实际利用约 99%，主要 West-to-North 约束不再显著。课程区分 Congestion 与 Scarcity、LMP 与零售账单、拥塞差额与输电所有者收入，并保留 49.3 亿规划估算和 69 亿最终报告的口径边界。`SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE` 与 `BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING` 均为 L1 candidate；下一课进入 Day-Ahead versus Real-Time Markets and Two-Settlement System。
 

@@ -16,6 +16,7 @@ my_take: "I should ask where the next MWh is injected or consumed, which constra
 prerequisites:
   - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
   - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
+  - "SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT"
   - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
   - "BUS.ENERGY.DISPATCH_ECONOMICS"
 connections:
@@ -33,7 +34,7 @@ cases:
   - "Texas CREZ transmission buildout and West Texas wind congestion, 2005-2014"
 
 first_seen: "2026-10-21"
-last_reviewed: "2026-10-21"
+last_reviewed: "2026-10-22"
 next_review: "2026-10-28"
 sources:
   - "https://www.ferc.gov/understanding-energy-markets"

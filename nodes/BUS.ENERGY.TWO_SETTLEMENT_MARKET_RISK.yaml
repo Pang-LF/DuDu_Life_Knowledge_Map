@@ -1,0 +1,42 @@
+id: "BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK"
+name_en: "Two-Settlement Market Risk"
+name_zh: "双结算市场风险"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Two-settlement market risk is the cash-flow and credit exposure created when actual load or generation differs from a day-ahead position and the deviation is settled at a potentially extreme real-time locational price."
+why: "Similar annual day-ahead and real-time average prices can hide severe participant-level losses concentrated in a few intervals, locations, quantities, or failed physical hedges."
+mechanism: "Participants combine day-ahead purchases or sales, bilateral contracts, owned assets, demand response, and financial hedges; residual volume, price spread, location basis, performance, collateral, and counterparty default determine who bears the realized loss."
+example: "During Winter Storm Uri, ERCOT's 2021 market monitor reported more than 52 GW unavailable at the event peak, real-time prices above $1,000/MWh for 166 hours, annual average real-time price of $167.88/MWh versus $40.73 excluding Uri, and short payments exceeding $3 billion."
+my_take: "I should never infer safety from average DAM and RTM prices; I need the participant's interval-level volume, basis, contract performance, collateral calls, and default waterfall."
+
+prerequisites:
+  - "SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT"
+  - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+  - "BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING"
+connections:
+  - "SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT"
+  - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+  - "BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "BUS.ENERGY.VALUE_CHAIN"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.FORECASTING.SCENARIO_PLANNING"
+  - "CASE.ERCOT.URI.TWO_SETTLEMENT_MARKET_RISK.2021"
+questions:
+  - "Which participant carries the deviation, price spread, locational basis, physical performance, collateral, and counterparty-default exposure in each interval?"
+cases:
+  - "ERCOT Winter Storm Uri market and settlement stress, 2021"
+
+first_seen: "2026-10-22"
+last_reviewed: "2026-10-22"
+next_review: "2026-10-29"
+sources:
+  - "https://www.ercot.com/mktinfo/dam/index.html"
+  - "https://ftp.puc.texas.gov/public/puct-info/industry/electric/reports/ERCOT_annual_reports/2021annualreport.pdf"
+  - "https://www.ferc.gov/sites/default/files/2020-04/energy-primer_0.pdf"
+notes: "Energy Industry Apprenticeship continuation. L1 candidate pending an interval-level settlement walkthrough that keeps energy, basis, performance, collateral, and default allocation separate."

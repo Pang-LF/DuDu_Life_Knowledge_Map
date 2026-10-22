@@ -29,13 +29,15 @@ connections:
   - "BUS.SUBSCRIPTION.LTV"
   - "BUS.MEDIA.DEVICE_OS_POWER"
   - "CASE.CDC.ACIP.MRNA_BENEFIT_RISK.2021"
+  - "SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT"
+  - "BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK"
 questions:
   - "What are the available actions, mutually exclusive outcomes, conditional probabilities, value scale, constraints and sensitive assumptions, and would the decision remain the same across plausible ranges?"
 cases:
   - "CDC ACIP mRNA vaccine benefit-risk assessment, June 2021"
 
 first_seen: "2026-09-24"
-last_reviewed: "2026-09-30"
+last_reviewed: "2026-10-22"
 next_review: "2026-10-07"
 sources:
   - "https://www.cdc.gov/mmwr/volumes/70/wr/mm7027e2.htm"

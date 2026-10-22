@@ -33,6 +33,7 @@ connections:
   - "CASE.TMI1.CAPACITY_FACTOR_ECONOMICS.1974_2026"
   - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
   - "BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING"
+  - "BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK"
   - "CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014"
 questions:
   - "Which revenue products and cost categories explain why a generator runs, remains available, retires, or returns under a long-term contract?"
@@ -40,7 +41,7 @@ cases:
   - "Three Mile Island Unit 1 operation, retirement, and proposed restart, 1974-2026"
 
 first_seen: "2026-10-15"
-last_reviewed: "2026-10-21"
+last_reviewed: "2026-10-22"
 next_review: "2026-10-28"
 sources:
   - "https://www.ferc.gov/introductory-guide-participation-pjm-processes"

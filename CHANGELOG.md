@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-10-22
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 完成 `SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT`，用 `Q_DA × P_DA + (Q_RT − Q_DA) × P_RT` 重建日前头寸与实时偏差结算
+- 用负荷方 100/110 MWh 和发电方 100/90 MWh 两个镜像算例，证明双结算不是把同一电量收费两次
+- 新增 `CASE.ERCOT.URI.TWO_SETTLEMENT_MARKET_RISK.2021`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开极端事件中的结算风险
+- 记录事件高峰超过 52 GW 发电不可用、实时价超过 $1,000/MWh 共 166 小时、2021 实时均价 $167.88/MWh 与剔除 Uri 后 $40.73/MWh、短付超过 $3 billion
+- 保留预测误差、发电与燃料故障、紧急定价、合同、地点、辅助服务、抵押品与违约分摊之间的证据边界
+- 新增 `BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK`，将市场风险拆为 Volume、Spread、Basis、Performance、Collateral 与 Default Allocation
+- 更新 Real-Time Balance、Locational Value、Grid Operator Dispatch、Dispatch Economics、Wholesale Locational Pricing、Expected Value、Scenario Planning、Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据
+- 下一课锁定 Ramping, Flexibility & Storage 和 Flexibility Asset Economics
+
 ## 2026-10-21
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

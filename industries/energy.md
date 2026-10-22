@@ -6,6 +6,18 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-10-22 — Two Settlement Prices the Plan, Then the Deviation
+
+- Question: Who pays for one forecast-error MWh, and why can firms fail even when annual DAM and RTM average prices look close?
+- Parent concept: `SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT` settles the day-ahead quantity at the day-ahead price and only the actual-minus-scheduled deviation at the real-time price.
+- Minimal model: a retailer buying 100 MWh at $40/MWh and consuming 110 MWh at a $500/MWh real-time price pays $4,000 day-ahead plus $5,000 for the 10 MWh deviation, for $9,000 total or $81.82/MWh effective cost.
+- Generator mirror: a generator selling 100 MWh day-ahead but producing 90 MWh buys back the 10 MWh shortfall at the real-time price; at the same prices its $4,000 day-ahead revenue becomes a negative $1,000 total energy settlement.
+- Risk rule: exposure is not simply a high real-time price; it combines volume deviation, day-ahead/real-time spread, locational basis, physical or counterparty performance, and collateral.
+- ERCOT case: more than 52 GW was unavailable at the Uri event peak; 2021 real-time prices exceeded $1,000/MWh for 166 hours, averaged $167.88/MWh versus $40.73 excluding Uri, and short payments exceeded $3 billion.
+- Evidence boundary: forecast error did not independently cause the defaults; outages, fuel, emergency-pricing duration, contracts, ancillary services, collateral, and default allocation also contributed.
+- Status: `BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK` at L1 candidate; Teach-back pending.
+- Next: Ramping, Flexibility & Storage — which physical assets can correct the deviation and earn from intertemporal scarcity.
+
 ### 2026-10-21 — Wholesale Electricity Has a Location
 
 - Continuity: resumed from 2026-10-18; no completion records were invented for 2026-10-19 or 2026-10-20.

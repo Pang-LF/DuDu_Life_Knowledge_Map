@@ -57,7 +57,7 @@ export const domains: Domain[] = [
     id: 'SYSTEM',
     nameEn: 'SYSTEM',
     nameZh: '现代社会系统',
-    progress: 10,
+    progress: 11,
     active: true,
     modules: ['Energy Systems（能源系统）', 'Economics（经济学）', 'Finance（金融）', 'Politics（政治）', 'Geopolitics（地缘政治）'],
   },
@@ -835,7 +835,7 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Generation and demand must match continuously. A sudden deficit first draws on stored rotational energy and changes frequency, then automatic response, reserves, redispatch, and load shedding act on successive timescales.',
-    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY', 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019'],
+    connections: ['SYSTEM.ENERGY.FOUNDATION', 'SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION', 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT', 'BUS.ENERGY.VALUE_CHAIN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.ANCILLARY_SERVICES', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY', 'CASE.GB.POWER_DISRUPTION.REAL_TIME_BALANCE.2019'],
   },
   {
     id: 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES',
@@ -859,7 +859,15 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'When a transmission constraint binds, the next MWh at different nodes changes different generators. Locational marginal price exposes that marginal operating cost through energy, congestion, and loss components.',
-    connections: ['SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014'],
+    connections: ['SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT', 'BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014'],
+  },
+  {
+    id: 'SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT',
+    label: 'Day-Ahead, Real-Time & Two-Settlement（日前、实时与双结算）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'A two-settlement market prices the scheduled quantity day-ahead and only the actual-minus-scheduled deviation in real time, assigning forecast and performance risk to the position carrying the deviation.',
+    connections: ['SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING', 'BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK', 'META.PROBABILITY.EXPECTED_VALUE', 'META.FORECASTING.SCENARIO_PLANNING', 'CASE.ERCOT.URI.TWO_SETTLEMENT_MARKET_RISK.2021'],
   },
   {
     id: 'BUS.ENERGY.VALUE_CHAIN',
@@ -923,7 +931,15 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'ISO/RTO network optimization turns location-specific marginal energy, congestion, and losses into settlement-point prices; congestion settlements, financial hedges, regulated network recovery, and retail bills remain distinct.',
-    connections: ['SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'BUS.ENERGY.VALUE_CHAIN', 'CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014'],
+    connections: ['SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS', 'BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK', 'BUS.ENERGY.VALUE_CHAIN', 'CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014'],
+  },
+  {
+    id: 'BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK',
+    label: 'Two-Settlement Market Risk（双结算市场风险）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Participant-level risk combines quantity deviation, day-ahead/real-time spread, locational basis, asset or counterparty performance, collateral, and default allocation; similar annual averages can conceal insolvency.',
+    connections: ['SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT', 'SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING', 'BUS.ENERGY.GRID_OPERATOR_DISPATCH', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.VALUE_CHAIN', 'META.PROBABILITY.EXPECTED_VALUE', 'META.FORECASTING.SCENARIO_PLANNING', 'CASE.ERCOT.URI.TWO_SETTLEMENT_MARKET_RISK.2021'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -932,6 +948,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'Extreme cold simultaneously raised heating demand and impaired gas production, fuel delivery, generating units, and grid operations, separating abundant resources from delivered electricity and heat.',
     connections: ['SYSTEM.ENERGY.FOUNDATION', 'BUS.ENERGY.VALUE_CHAIN', 'META.SYSTEMS.INTEGRATION', 'META.SOURCE_EVALUATION.INTEGRATION'],
+  },
+  {
+    id: 'CASE.ERCOT.URI.TWO_SETTLEMENT_MARKET_RISK.2021',
+    label: 'ERCOT Uri Settlement Risk 2021（得州寒潮结算风险）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'More than 52 GW was unavailable at the event peak while extreme prices magnified participant deviations. Annual DAM and RTM averages concealed interval-level volume, basis, performance, collateral, and default stress.',
+    connections: ['SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT', 'BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK', 'SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING', 'META.PROBABILITY.EXPECTED_VALUE', 'META.FORECASTING.SCENARIO_PLANNING'],
   },
   {
     id: 'CASE.FRANCE.NUCLEAR_ENERGY_BOUNDARIES.1973_2024',
@@ -992,12 +1016,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-10-21',
-  title: 'Congestion & Locational Value（拥塞与位置价值）',
-  question: '西得州的风已经多到价格为负，为什么东部负荷中心仍可能由正价甚至昂贵的机组供电？',
-  reading: '45-60 min：从两节点模型推导 LMP，再跟随 ERCOT 节点市场与 CREZ 输电建设。',
-  discussion: '20-30 min：计算线路影子价值，并比较数据中心位于低价出口节点或高价负荷中心的条件。',
-  next: '2026-10-22：Day-Ahead versus Real-Time Markets and Two-Settlement System（日前与实时市场及双结算）。',
+  date: '2026-10-22',
+  title: 'Day-Ahead, Real-Time & Two-Settlement（日前、实时与双结算）',
+  question: '已经买了 100 MWh 日前电，为什么实际多用 10 MWh 就可能让总成本从 4,000 美元升到 9,000 美元？',
+  reading: '45-60 min：跟随 100 MWh 头寸推导双结算，再进入 ERCOT Uri 的偏差、履约与信用风险。',
+  discussion: '20-30 min：计算负荷方和发电方的镜像偏差，并决定零售商应买多少日前电。',
+  next: '2026-10-23：Ramping, Flexibility & Storage（爬坡、灵活性与储能）。',
 }
 
 export const monthlyTrack = [

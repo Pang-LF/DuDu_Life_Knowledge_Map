@@ -30,13 +30,15 @@ connections:
   - "META.PROBABILITY.EXPECTED_VALUE"
   - "BUS.MEDIA.FUTURE_SCENARIOS"
   - "CASE.SHELL.SCENARIO_PLANNING.1971_1973"
+  - "SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT"
+  - "BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK"
 questions:
   - "Which uncertainties create genuinely different causal worlds, what observable signals distinguish them, and which actions should be robust or contingent?"
 cases:
   - "Shell scenario planning and the 1973 oil shock"
 
 first_seen: "2026-09-29"
-last_reviewed: "2026-09-30"
+last_reviewed: "2026-10-22"
 next_review: "2026-10-07"
 sources:
   - "https://www.shell.com/news-and-insights/scenarios/what-are-shell-scenarios/_jcr_content/root/main/section_509167378/promo/links/item0.stream/1652289755448/a0e75f042fee5322b72780ee36e5ba17c35a4fc6/shell-scenarios-40yearsbook080213.pdf"

@@ -22,6 +22,8 @@ prerequisites:
   - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
   - "BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS"
   - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+  - "SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT"
+  - "BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK"
   - "BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING"
 connections:
   - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
@@ -42,7 +44,7 @@ cases:
   - "Great Britain power disruption, 9 August 2019"
 
 first_seen: "2026-10-16"
-last_reviewed: "2026-10-21"
+last_reviewed: "2026-10-22"
 next_review: "2026-10-28"
 sources:
   - "https://www.neso.energy/document/152346/download"
