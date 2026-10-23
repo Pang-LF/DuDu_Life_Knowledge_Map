@@ -26,6 +26,7 @@ connections:
   - "SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES"
   - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
   - "SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
   - "BUS.ENERGY.ANCILLARY_SERVICES"
   - "META.SYSTEMS.COUPLING"
   - "META.SYSTEMS.NONLINEARITY"
@@ -38,11 +39,11 @@ cases:
   - "Great Britain power disruption, 9 August 2019"
 
 first_seen: "2026-10-16"
-last_reviewed: "2026-10-18"
+last_reviewed: "2026-10-23"
 next_review: "2026-10-24"
 sources:
   - "https://www.neso.energy/document/152346/download"
   - "https://www.neso.energy/document/151081/download"
   - "https://assets.publishing.service.gov.uk/media/5e0e1fa9e5274a0fa7b4d96a/e3c-gb-power-disruption-9-august-2019-final-report.pdf"
   - "https://www.nerc.com/globalassets/who-we-are/standing-committees/rstc/rs/reference_document_nerc_balancing_and_frequency_control.pdf"
-notes: "Transferred on 2026-10-18 by separating aggregate balance from the location-specific network path that must deliver power after a contingency. Mastery remains L1 candidate until the user can reconstruct an unfamiliar imbalance from MW and duration through stored energy, frequency, response, network reach, load shedding, and recovery."
+notes: "Transferred on 2026-10-23 by asking which asset can change net MW quickly enough, sustain it long enough, and recover before the next deviation. Mastery remains L1 candidate until the user can reconstruct an unfamiliar imbalance from MW and duration through stored energy, frequency, response, network reach, load shedding, and recovery."

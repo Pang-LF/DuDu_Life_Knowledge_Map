@@ -1,0 +1,43 @@
+id: "BUS.ENERGY.FLEXIBILITY_ASSET_ECONOMICS"
+name_en: "Flexibility Asset Economics"
+name_zh: "灵活性资产经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Flexibility-asset economics allocates a physically limited power, energy, network, cycling, and recovery budget across energy arbitrage, ancillary services, capacity, network support, and contracts without double-counting the same capability."
+why: "An asset can create value in several markets, but each commitment changes headroom, footroom, state of charge, degradation, and opportunity cost; adding standalone maximum revenues produces an infeasible business case."
+mechanism: "Co-optimise each interval's charge, discharge, reserve enablement, state of charge, efficiency, network limit, duration obligation, degradation, penalties, and recovery while separating asset revenue from total consumer savings."
+example: "In Q1 2018 Hornsdale charged 11 GWh and discharged 8.9 GWh, was enabled for regulation FCAS 71% and contingency FCAS 99% of the time, and added competition to markets whose total quarterly cost fell 57%; AEMO also identified demand response, fewer binding constraints, and changed incumbent offers as contributors."
+my_take: "I should test whether the combined dispatch and service commitments are physically feasible in every interval, then compare the complete revenue stack with capital, losses, degradation, fixed cost, and risk."
+
+prerequisites:
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
+  - "BUS.ENERGY.ANCILLARY_SERVICES"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT"
+connections:
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
+  - "BUS.ENERGY.ANCILLARY_SERVICES"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK"
+  - "SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT"
+  - "SYSTEM.ENERGY.DENSITY"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "CASE.HORNSDALE.FLEXIBILITY_STORAGE.2017_2020"
+questions:
+  - "Can the proposed energy and service commitments coexist under interval-level power, state-of-charge, duration, network, degradation, penalty, and recovery constraints?"
+cases:
+  - "Hornsdale Power Reserve initial operation and expansion, 2017-2020"
+
+first_seen: "2026-10-23"
+last_reviewed: "2026-10-23"
+next_review: "2026-10-30"
+sources:
+  - "https://aemo.com.au/-/media/Files/Media_Centre/2018/Initial-operation-of-the-Hornsdale-Power-Reserve.pdf"
+  - "https://www.aemo.com.au/-/media/files/major-publications/qed/2018/qed-q1-2018.pdf"
+  - "https://arena.gov.au/projects/hornsdale-power-reserve-upgrade/"
+notes: "Energy Industry Apprenticeship continuation. L1 candidate pending a jointly feasible 24-hour dispatch and service stack that distinguishes asset revenue, consumer savings, opportunity cost, degradation, and risk."

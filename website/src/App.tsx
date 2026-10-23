@@ -57,6 +57,7 @@ const nodePoints: NodePoint[] = [
   { id: 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES', x: 850, y: 515, labelSide: 'left', mapLabel: 'Frequency Control（频率控制）', mapId: 'SYSTEM.ELECTRICITY.FREQUENCY_CONTROL' },
   { id: 'SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', x: 885, y: 565, labelSide: 'left', mapLabel: 'Locational Value（位置价值）', mapId: 'SYSTEM.ELECTRICITY.LOCATIONAL_VALUE' },
   { id: 'SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT', x: 875, y: 642, labelSide: 'left', mapLabel: 'Two-Settlement（双结算）', mapId: 'SYSTEM.ELECTRICITY.TWO_SETTLEMENT' },
+  { id: 'SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE', x: 960, y: 610, labelSide: 'right', mapLabel: 'Flexibility（灵活性）', mapId: 'SYSTEM.ELECTRICITY.FLEXIBILITY' },
   { id: 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', x: 790, y: 650, labelSide: 'left', mapLabel: 'N-1 Security（N-1 安全）', mapId: 'SYSTEM.ELECTRICITY.N1_SECURITY' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
@@ -95,7 +96,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

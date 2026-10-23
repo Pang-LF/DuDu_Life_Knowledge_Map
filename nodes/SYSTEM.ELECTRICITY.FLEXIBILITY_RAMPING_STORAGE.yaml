@@ -1,0 +1,46 @@
+id: "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
+name_en: "Flexibility, Ramping and Storage"
+name_zh: "灵活性、爬坡与储能"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Electricity-system flexibility is the ability of a resource or portfolio to change net injection or withdrawal in a specified direction, location and time, at the required ramp rate and duration, while remaining able to recover for the next need."
+why: "A scheduled or priced deviation is not corrected unless a physically reachable resource can change MW quickly enough and sustain the change; MW, MWh, ramp rate, duration, and state are not interchangeable."
+mechanism: "Generators, storage, demand response, and interconnectors move from a current operating point along technology-specific ramp and energy-state constraints; fast resources contain the deviation, sustained resources carry it, and replacement actions rebuild headroom, fuel, or state of charge."
+example: "Hornsdale Power Reserve began with 100 MW discharge, 80 MW charge, and 129 MWh storage, roughly 75 minutes at full output. It responded as expected to a 689 MW generation trip in December 2017 while also following AGC set-points and participating in energy and all eight NEM FCAS markets."
+my_take: "I should specify direction, baseline, MW, start time, ramp rate, duration, location, state of charge or fuel, recovery, and correlated failure before calling any resource flexible."
+
+prerequisites:
+  - "SYSTEM.ENERGY.DENSITY"
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES"
+  - "SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT"
+connections:
+  - "SYSTEM.ENERGY.DENSITY"
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ELECTRICITY.FREQUENCY_CONTROL_RESERVES"
+  - "SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.ANCILLARY_SERVICES"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "BUS.ENERGY.FLEXIBILITY_ASSET_ECONOMICS"
+  - "META.SYSTEMS.DELAY"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "CASE.HORNSDALE.FLEXIBILITY_STORAGE.2017_2020"
+questions:
+  - "What direction, baseline, MW, response time, ramp rate, duration, location, energy state, recovery time, and failure correlation define the required flexibility service?"
+cases:
+  - "Hornsdale Power Reserve initial operation and expansion, 2017-2020"
+
+first_seen: "2026-10-23"
+last_reviewed: "2026-10-23"
+next_review: "2026-10-30"
+sources:
+  - "https://aemo.com.au/-/media/Files/Media_Centre/2018/Initial-operation-of-the-Hornsdale-Power-Reserve.pdf"
+  - "https://www.aemo.com.au/-/media/files/major-publications/qed/2018/qed-q1-2018.pdf"
+  - "https://arena.gov.au/assets/2024/09/Neoen-HPRX-Final-Project-Report_2024.pdf"
+notes: "October Electricity lesson. L1 candidate pending user design of a feasible resource relay across seconds, minutes, and hours with explicit MW, MWh, state, network, and recovery constraints."

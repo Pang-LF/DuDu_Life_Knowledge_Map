@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 2026-10-23
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 完成 `SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE`，把灵活性定义为在指定方向、地点与时间改变 MW，并明确 Ramp Rate、Duration、State of Charge 与 Recovery
+- 用 100 MW 持续 15 秒仅需约 0.417 MWh、持续 4 小时需 400 MWh 的最小模型分开功率、能量与时长
+- 新增 `CASE.HORNSDALE.FLEXIBILITY_STORAGE.2017_2020`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开 Hornsdale 初期运行与扩建
+- 记录原始 100 MW 放电、80 MW 充电、129 MWh、约 75 分钟时长，以及 70 MW 可靠性容量与 30 MW / 119 MWh 商业能量配置
+- 记录 689 MW 机组跳闸响应、最快约四秒 AGC 设定点、2018 Q1 充电 11 GWh、放电 8.9 GWh、Regulation FCAS 71% 与 Contingency FCAS 99% 启用率
+- 保留 FCAS 成本季度下降 57% 的多重原因边界，不把需求响应、约束减少和既有报价变化错误归为 Hornsdale 单因果效果
+- 新增 `BUS.ENERGY.FLEXIBILITY_ASSET_ECONOMICS`，要求逐时共同优化能量套利、辅助服务、荷电状态、效率、退化、机会成本、处罚与恢复
+- 更新 Density、Real-Time Balance、Frequency Control、Two-Settlement、Dispatch、Ancillary Services、Expected Value、Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据
+- 下一课锁定 Resource Adequacy & Capacity 和 Capacity Adequacy Economics
+
 ## 2026-10-22
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

@@ -27,17 +27,18 @@ connections:
   - "SYSTEM.ENERGY.DENSITY"
   - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
   - "CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
 questions:
   - "What marginal-capacity test distinguishes a true bottleneck from the busiest, slowest, most expensive, or most error-prone local step?"
 cases:
   - "Tesla Model 3 production ramp, 2017-2018"
 
 first_seen: "2026-09-12"
-last_reviewed: "2026-10-21"
+last_reviewed: "2026-10-23"
 next_review: "2026-10-28"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1318605/000156459017020822/tsla-ex991_6.htm"
   - "https://www.sec.gov/Archives/edgar/data/1318605/000156459018011086/tsla-10q_20180331.htm"
   - "https://www.sec.gov/Archives/edgar/data/1318605/000156459018024902/tsla-ex991_6.htm"
   - "https://www.sciencedirect.com/science/article/pii/S136757881000009X"
-notes: "Primary One Idea for Systems Thinking Day 5. Transferred on 2026-10-21 by showing how West Texas transmission expansion relieved one export bottleneck while later local constraints emerged. Mastery remains candidate until user Teach-back."
+notes: "Primary One Idea for Systems Thinking Day 5. Transferred on 2026-10-23 by showing that the binding flexibility dimension can move among ramp rate, MW, MWh duration, location, and recovery. Mastery remains candidate until user Teach-back."

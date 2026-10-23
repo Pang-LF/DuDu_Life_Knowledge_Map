@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-22
+Last updated: 2026-10-23
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-22
 
 ## Next Immediate Focus（下一步）
 
-2026-10-23：进入 Ramping, Flexibility & Storage（爬坡、灵活性与储能），解释偏差出现后哪些资产能及时修正功率，以及跨时段价差怎样转化为收入与风险。
+2026-10-24：进入 Resource Adequacy & Capacity（资源充裕度与容量），解释为什么“装机很多”不等于未来稀缺时段有足够可交付能力，以及容量承诺如何定价、验证和追责。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-22
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-23：完成 Flexibility, Ramping & Storage（灵活性、爬坡与储能）。课程从同一块 100 MW 电池出发，证明 100 MW 持续 15 秒只需要约 0.417 MWh，而持续 4 小时需要 400 MWh；因此 Ramp Rate、MW、MWh、Duration、Location、State of Charge 与 Recovery 不能互换。Hornsdale 原始配置为 100 MW 放电、80 MW 充电、129 MWh，满功率约 75 分钟；其中 70 MW 放电能力用于可靠性，30 MW / 119 MWh 用于商业能量运行，并能按最快约四秒的 AGC 设定点行动。2017 年 12 月 18 日 689 MW 发电跳闸时，其响应与预期一致。AEMO 记录 2018 Q1 Hornsdale 充电 11 GWh、放电 8.9 GWh，Regulation FCAS 启用率 71%、Contingency FCAS 99%；同期 FCAS 成本下降 57%，但 AEMO 同时列出需求响应、约束减少和既有参与者报价变化，因此不能把全部下降单独归因于电池。`SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE` 与 `BUS.ENERGY.FLEXIBILITY_ASSET_ECONOMICS` 均为 L1 candidate；下一课进入 Resource Adequacy & Capacity。
 
 2026-10-22：完成 Day-Ahead, Real-Time & Two-Settlement（日前、实时与双结算）。课程跟随一个 100 MWh 日前头寸重建公式 `Q_DA × P_DA + (Q_RT − Q_DA) × P_RT`：零售商以 $40/MWh 买入 100 MWh、实际使用 110 MWh、实时价 $500/MWh 时，总能量成本为 $4,000 + $5,000 = $9,000，而不是把 110 MWh 重买一次；发电商卖出 100 MWh 却只交付 90 MWh 时，须以实时价买回 10 MWh，净能量结算为 -$1,000。ERCOT Uri 案例记录事件高峰超过 52 GW 发电不可用、2021 年实时均价 $167.88/MWh 而剔除 Uri 后 $40.73/MWh、超过 $1,000/MWh 共 166 小时以及超过 $3 billion 结算短付。课程区分 Volume、Spread、Basis、Performance、Collateral 与 Default Allocation，说明年度 DAM 与 RTM 均价接近不能证明个体安全；也明确违约不能单独归因于预测误差。`SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT` 与 `BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK` 均为 L1 candidate；下一课进入 Ramping, Flexibility & Storage。
 

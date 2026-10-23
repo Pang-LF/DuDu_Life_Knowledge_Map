@@ -23,6 +23,7 @@ connections:
   - "BUS.ENERGY.PHYSICAL_ASSET_REQUIREMENTS"
   - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
   - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
   - "META.SYSTEMS.COUPLING"
   - "META.SYSTEMS.BOTTLENECK"
   - "META.SYSTEMS.NONLINEARITY"
@@ -36,11 +37,11 @@ cases:
   - "NASA X-57 Maxwell electric aircraft, 2015-2024"
 
 first_seen: "2026-10-03"
-last_reviewed: "2026-10-15"
+last_reviewed: "2026-10-23"
 next_review: "2026-10-22"
 sources:
   - "https://www.nasa.gov/x-57-maxwell/"
   - "https://ntrs.nasa.gov/api/citations/20180005737/downloads/20180005737.pdf"
   - "https://ntrs.nasa.gov/api/citations/20240010807/downloads/x57_performance_manuscript-v4.pdf"
   - "https://www.energy.gov/sites/prod/files/2020/09/f78/beto-sust-aviation-fuel-sep-2020.pdf"
-notes: "October Energy Day 3. Reviewed on 2026-10-12 by separating physical asset sizing from conversion efficiency in a combined-cycle plant. Mastery remains L1 candidate until the user distinguishes energy, power, efficiency, and system-level density in a new mission."
+notes: "October Energy Day 3. Transferred on 2026-10-23 by separating a battery's MW response and ramp rate from its MWh duration. Mastery remains L1 candidate until the user distinguishes energy, power, efficiency, and system-level density in a new mission."

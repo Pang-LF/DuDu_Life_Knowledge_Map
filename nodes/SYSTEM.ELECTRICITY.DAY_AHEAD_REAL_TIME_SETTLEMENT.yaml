@@ -25,6 +25,8 @@ connections:
   - "BUS.ENERGY.DISPATCH_ECONOMICS"
   - "BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING"
   - "BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
+  - "BUS.ENERGY.FLEXIBILITY_ASSET_ECONOMICS"
   - "META.PROBABILITY.EXPECTED_VALUE"
   - "META.FORECASTING.SCENARIO_PLANNING"
   - "CASE.ERCOT.URI.TWO_SETTLEMENT_MARKET_RISK.2021"
@@ -34,11 +36,11 @@ cases:
   - "ERCOT Winter Storm Uri market and settlement stress, 2021"
 
 first_seen: "2026-10-22"
-last_reviewed: "2026-10-22"
+last_reviewed: "2026-10-23"
 next_review: "2026-10-29"
 sources:
   - "https://www.ferc.gov/understanding-energy-markets"
   - "https://www.ferc.gov/sites/default/files/2020-04/energy-primer_0.pdf"
   - "https://www.ercot.com/mktinfo/dam/index.html"
   - "https://ftp.puc.texas.gov/public/puct-info/industry/electric/reports/ERCOT_annual_reports/2021annualreport.pdf"
-notes: "October Electricity lesson. L1 candidate pending user reconstruction of both a load and generator settlement, including quantity, spread, location, performance, and credit boundaries."
+notes: "Transferred on 2026-10-23 by showing how a flexible asset can monetize real-time deviations without making the spread or dispatch certain. L1 candidate pending user reconstruction of both a load and generator settlement, including quantity, spread, location, performance, and credit boundaries."

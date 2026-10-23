@@ -17,6 +17,7 @@ prerequisites:
   - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
   - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
   - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
   - "META.SYSTEMS.DELAY"
 connections:
   - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
@@ -36,10 +37,10 @@ cases:
   - "Continental Europe synchronous-area separation, 8 January 2021"
 
 first_seen: "2026-10-17"
-last_reviewed: "2026-10-18"
+last_reviewed: "2026-10-23"
 next_review: "2026-10-24"
 sources:
   - "https://www.entsoe.eu/Documents/SOC%20documents/SOC%20Reports/Continental_Europe_Synchronous_Area_Separation_on_08_January_2021_-_Executive_Summary_updated.pdf"
   - "https://eepublicdownloads.entsoe.eu/clean-documents/SOC%20documents/SOC%20Reports/Continental%20Europe%20Synchronous%20Area%20Separation%20on%2008%20January%202021%20-%20Main%20Report_updated.pdf"
   - "https://eur-lex.europa.eu/eli/reg/2017/1485/oj/eng"
-notes: "Transferred on 2026-10-18 by testing whether reserve can physically reach a constrained location after a transmission outage. Mastery remains L1 candidate until the user can assign unfamiliar resources to containment, restoration, and replacement while auditing direction, response time, duration, network reach, energy state, and recovery."
+notes: "Transferred on 2026-10-23 by separating fast response from sustained energy and reserve recovery in the Hornsdale battery case. Mastery remains L1 candidate until the user can assign unfamiliar resources to containment, restoration, and replacement while auditing direction, response time, duration, network reach, energy state, and recovery."

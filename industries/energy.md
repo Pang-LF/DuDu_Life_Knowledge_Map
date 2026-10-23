@@ -6,6 +6,18 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-10-23 — Flexibility Is a Deliverable Change in MW, Not a Pile of MWh
+
+- Question: How can one battery earn from energy arbitrage and ancillary services without selling the same MW twice?
+- Parent concept: `SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE` defines flexibility by direction, baseline, MW, response time, ramp rate, duration, location, energy state, recovery, and failure correlation.
+- Minimal model: 100 MW for 15 seconds uses only 0.417 MWh, about 0.32% of 129 MWh, while 100 MW for four hours requires 400 MWh. Fast response and sustained energy are different products.
+- Hornsdale case: the original battery provided 100 MW discharge, 80 MW charge and 129 MWh, about 75 minutes at full output; 70 MW was reserved for reliability and 30 MW / 119 MWh was available for commercial energy operation.
+- Operational evidence: Hornsdale followed AGC set-points as often as every four seconds and responded consistently with expectations when 689 MW of generation tripped on 18 December 2017.
+- Market evidence: in Q1 2018 it charged 11 GWh, discharged 8.9 GWh, was enabled for regulation FCAS 71% and contingency FCAS 99% of the time; total FCAS costs fell 57%, with demand response, fewer constraints and changed incumbent offers also contributing.
+- Revenue rule: co-optimise charge, discharge, reserve enablement, state of charge, efficiency, degradation, network limits, penalties and recovery. Standalone maximum revenues cannot simply be added.
+- Status: `BUS.ENERGY.FLEXIBILITY_ASSET_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Resource Adequacy & Capacity — how a system buys confidence that enough deliverable capability will exist during future scarcity.
+
 ### 2026-10-22 — Two Settlement Prices the Plan, Then the Deviation
 
 - Question: Who pays for one forecast-error MWh, and why can firms fail even when annual DAM and RTM average prices look close?

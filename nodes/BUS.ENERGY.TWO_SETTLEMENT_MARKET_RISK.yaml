@@ -23,6 +23,8 @@ connections:
   - "BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING"
   - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
   - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
+  - "BUS.ENERGY.FLEXIBILITY_ASSET_ECONOMICS"
   - "BUS.ENERGY.VALUE_CHAIN"
   - "META.PROBABILITY.EXPECTED_VALUE"
   - "META.FORECASTING.SCENARIO_PLANNING"
@@ -33,10 +35,10 @@ cases:
   - "ERCOT Winter Storm Uri market and settlement stress, 2021"
 
 first_seen: "2026-10-22"
-last_reviewed: "2026-10-22"
+last_reviewed: "2026-10-23"
 next_review: "2026-10-29"
 sources:
   - "https://www.ercot.com/mktinfo/dam/index.html"
   - "https://ftp.puc.texas.gov/public/puct-info/industry/electric/reports/ERCOT_annual_reports/2021annualreport.pdf"
   - "https://www.ferc.gov/sites/default/files/2020-04/energy-primer_0.pdf"
-notes: "Energy Industry Apprenticeship continuation. L1 candidate pending an interval-level settlement walkthrough that keeps energy, basis, performance, collateral, and default allocation separate."
+notes: "Transferred on 2026-10-23 by showing that storage can alter residual deviation exposure while retaining dispatch, price-spread, location, efficiency, degradation, and state-of-charge risk. L1 candidate pending an interval-level settlement walkthrough that keeps energy, basis, performance, collateral, and default allocation separate."

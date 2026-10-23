@@ -23,17 +23,18 @@ connections:
   - "META.SYSTEMS.BOTTLENECK"
   - "META.SYSTEMS.INTEGRATION"
   - "SYSTEM.ENERGY.CONVERSION_EFFICIENCY"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
 questions:
   - "Which leading and intermediate indicators can distinguish a delayed effect from an intervention that never touched the causal mechanism?"
 cases:
   - "Montreal Protocol and delayed ozone recovery"
 
 first_seen: "2026-09-13"
-last_reviewed: "2026-10-12"
+last_reviewed: "2026-10-23"
 next_review: "2026-10-19"
 sources:
   - "https://csl.noaa.gov/assessments/ozone/2022/executivesummary/"
   - "https://csl.noaa.gov/assessments/ozone/2022/twentyquestions/"
   - "https://ozone.unep.org/treaties/montreal-protocol"
   - "https://www.epa.gov/ozone-layer-protection/ozone-depleting-substances"
-notes: "Primary One Idea for Systems Thinking Day 6. Transferred on 2026-10-12 through startup, steam-cycle readiness, operating-hour accumulation, and capital payback delays in conversion assets. Mastery remains candidate until user Teach-back."
+notes: "Primary One Idea for Systems Thinking Day 6. Transferred on 2026-10-23 through response time, activation duration, and state-of-charge recovery in flexible assets. Mastery remains candidate until user Teach-back."
