@@ -25,16 +25,19 @@ connections:
   - "BUS.MEDIA.ESPN.BUNDLE_POWER"
   - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
   - "CASE.CALIFORNIA.RESOURCE_ADEQUACY.2020"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+  - "BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS"
+  - "CASE.PJM.ELCC_ACCREDITATION.2020_2026"
 questions:
   - "What evidence distinguishes a true threshold from an ordinary steep but continuous relationship?"
 cases:
   - "Space Shuttle Challenger STS-51L accident"
 
 first_seen: "2026-09-11"
-last_reviewed: "2026-10-24"
+last_reviewed: "2026-10-27"
 next_review: "2026-09-18"
 sources:
   - "https://www.nasa.gov/history/rogersrep/v1ch4.htm"
   - "https://www.nasa.gov/history/rogersrep/v1ch5.htm"
   - "https://www.nasa.gov/history/rogersrep/v1ch6.htm"
-notes: "Transferred on 2026-10-24 through the reliability threshold: reserve erosion can leave all load served until one additional MW or outage changes the outcome category. Mastery remains candidate until user Teach-back."
+notes: "Transferred on 2026-10-27 through marginal accreditation: equal nameplate additions can produce unequal EUE reductions as prior additions move the scarcity window and create saturation. Mastery remains candidate until user Teach-back."

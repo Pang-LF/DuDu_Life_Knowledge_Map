@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-10-27
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 从 2026-10-24 的最后真实记录继续，明确不为 2026-10-25 至 2026-10-26 伪造课程完成状态
+- 完成 `SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC`，把认证容量定义为资源在特定组合和稀缺分布中相对于完美容量减少的边际可靠性风险
+- 用 PJM 14 MWh / 20 MWh = 70% 的方法例子分开 Nameplate、Capacity Factor、Availability、Accredited UCAP 与 Capacity Revenue
+- 新增 `CASE.PJM.ELCC_ACCREDITATION.2020_2026`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开 Elliott 与全资源 ELCC 改革
+- 记录 PJM 预期 155,700 MW 可用、接近 47,000 MW 停机、92% 短通知、燃气占停机 70%、负荷预测约低 8% 与约 57,000 MW 综合缺失能力
+- 记录最终 2026/27 fixed solar 10%、onshore wind 38%、4-hour storage 54%、10-hour storage 73%、gas CC 77%、coal 85%、nuclear 95% 与 demand resource 72%
+- 明确旧 2024/25、最终 2026/27 与初步 2027/28-2035/36 数值不构成同一设备的物理性能时间序列，后者明确为非约束性指示值
+- 新增 `BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS`，分开认证 UCAP 数量、容量清算价格、资源收入、LSE 义务、客户成本和模型治理
+- 更新 Resource Adequacy、Capacity Adequacy Economics、Capacity Factor、Flexibility、Dispatch Economics、Conditional Probability、Expected Value、Interdependence、Nonlinearity、Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据
+- 下一课锁定 Reliability Metrics — LOLE & EUE 和 Reliability Standard Economics
+
 ## 2026-10-24
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

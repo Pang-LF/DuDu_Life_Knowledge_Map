@@ -20,15 +20,18 @@ connections:
   - "META.SYSTEMS.COUPLING"
   - "META.SYSTEMS.INTEGRATION"
   - "BUS.MEDIA.PAYTV.VALUE_CHAIN"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+  - "BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS"
+  - "CASE.PJM.ELCC_ACCREDITATION.2020_2026"
 questions:
   - "How can an organization measure the health of relationships rather than only the health of components?"
 cases:
   - "Southwest Airlines 2022 holiday operational meltdown"
 
 first_seen: "2026-09-08"
-last_reviewed: "2026-09-14"
+last_reviewed: "2026-10-27"
 next_review: "2026-09-18"
 sources:
   - "https://investors.southwest.com/sec-filings/all-sec-filings/content/0000092380-23-000010/luv-20221231.htm"
   - "https://www.transportation.gov/briefing-room/air-travel-consumer-report-december-2022-full-year-2022-numbers"
-notes: "Primary One Idea for Day 1. Mastery remains candidate until user Teach-back."
+notes: "Primary One Idea for Day 1. Transferred on 2026-10-27: a resource's accredited MW depends on the timing, duration, correlation and complementary shape of the rest of the portfolio. Mastery remains candidate until user Teach-back."

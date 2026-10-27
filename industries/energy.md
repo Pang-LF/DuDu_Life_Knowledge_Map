@@ -6,6 +6,21 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-10-27 — Accreditation Prices Portfolio Risk Reduction, Not Nameplate MW
+
+- Continuity: resumed from 2026-10-24; no completion records were invented for 2026-10-25 or 2026-10-26.
+- Question: if a plant does not physically change but its accreditation falls from 90% to 50%, who loses revenue, who pays more, and what reliability protection is being purchased?
+- Parent concept: `SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC` converts nameplate MW into reliable MW by comparing a resource class's marginal EUE reduction with equally sized perfect capacity.
+- Minimal model: if 100 MW perfect capacity reduces EUE by 20 MWh and the resource class reduces it by 14 MWh, the class rating is 70%; this is not a 70% capacity factor or a 30% outage probability.
+- Elliott evidence: PJM expected about 155,700 MW available on 24 December 2022, but forced outages approached 47,000 MW; 92% gave no more than one hour notice, gas represented 70% of outage capacity, and peak-load forecasts were about 8% low.
+- Final 2026/27 comparison: fixed solar 10%, onshore wind 38%, four-hour storage 54%, ten-hour storage 73%, gas combined cycle 77%, coal 85%, nuclear 95%, and demand resources 72%.
+- Revenue boundary: accreditation sets saleable UCAP quantity; auction or contract rules set price. At a hypothetical constant $100/MW-day, 10, 54, and 95 UCAP MW imply $365,000, $1.971 million, and $3.4675 million of annual gross capacity revenue.
+- Portfolio rule: marginal credit changes as prior additions move the scarcity window. A lower marginal ELCC does not mean an existing resource never contributed or has physically degraded.
+- Governance boundary: weather, outage data, projected entry and exit, resource classification, transmission representation, and model versions can change economic outcomes; complexity is not proof of error, but it increases the need for transparency and sensitivity testing.
+- Evidence boundary: old 2024/25, final 2026/27, and preliminary 2027/28-2035/36 ratings differ in method, portfolio, and status; they are not a clean physical-performance time series.
+- Status: `BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Reliability Metrics and Reliability Standard Economics — what LOLE and EUE count, and how much reliability customers are buying.
+
 ### 2026-10-24 — Capacity Is a Conditional Promise, Not a Nameplate Sum
 
 - Question: What does a capacity contract buy, and why can a rarely dispatched resource still deserve payment?

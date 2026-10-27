@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-24
+Last updated: 2026-10-27
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-24
 
 ## Next Immediate Focus（下一步）
 
-2026-10-25：进入 Capacity Accreditation & ELCC（容量认证与有效负荷承载能力），解释为什么不同资源的 100 MW 不能按相同可靠性贡献计入，以及新增资源的边际容量价值为什么会随组合变化。
+2026-10-28：进入 Reliability Metrics — LOLE & EUE（可靠性指标：失负荷期望与预期未供电量），解释 ELCC 分子究竟怎样衡量风险，为什么“发生短缺的次数”和“短缺电量”不能互换，并连接 Reliability Standard Economics（可靠性标准经济学）。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-24
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-27：从 10 月 24 日真实进度继续；10 月 25–26 日没有完成日志，未补造课程。完成 Capacity Accreditation & ELCC（容量认证与有效负荷承载能力）：将容量认证定义为下一单位资源在特定组合和稀缺分布中相对于完美容量减少的可靠性风险，而不是设备永久属性。PJM 教学方法中，100 MW 完美容量降低 20 MWh EUE、资源类别降低 14 MWh，对应 70% class rating。Winter Storm Elliott 案例记录 PJM 预期 2022 年 12 月 24 日约 155,700 MW 可用，但强迫停机接近 47,000 MW，92% 停机通知不超过一小时，燃气占当日停机容量 70%，峰值负荷预测约低 8%；事件推动 all-hours、all-resource marginal ELCC 改革。最终 2026/27 表中 fixed solar 10%、onshore wind 38%、4-hour storage 54%、10-hour storage 73%、gas combined cycle 77%、coal 85%、nuclear 95%、demand resource 72%。课程明确旧 2024/25、最终 2026/27 与初步非约束性长期值不是干净物理性能时间序列。Industry Apprenticeship 分开认证 UCAP 数量、容量清算价格、资源收入、LSE 成本和客户风险，并把模型透明度纳入市场治理。`SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC` 与 `BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS` 均为 L1 candidate；下一课进入 LOLE、EUE 与 Reliability Standard Economics。
 
 2026-10-24：完成 Resource Adequacy & Capacity（资源充裕度与容量）。课程从 100 MW 太阳能与 100 MW / 100 MWh 电池出发，证明额定 MW 必须经过风险时段、可用率、天气相关性、持续时间、位置、燃料、进口与网络条件重新解释。California 2020 年 8 月经调整负荷预测为 44,740 MW，14.9% 综合裕度形成 51,413 MW 义务，并由 48,926 MW shown RA、290 MW RMR 与 2,197 MW credits 表面填满；但 8 月 14 日含需求响应回加的负荷比预测高约 4.8%，强迫停机约 4.8%，事故备用约 6.3%，加上 514 MW 未替换计划停机后需求约为预测的 17.0%。同日风光从总负荷峰到净需求峰下降 5,438 MW，系统最终受控切除约 1,000 MW。课程区分历史 15% 与当前 17% PRM，并把客户、LSE、供应方、CPUC 与 CAISO 的钱流、所有权和运营权分开；官方证据只支持极端天气、规划过程和市场实践共同贡献，不支持单一技术或规则的独立因果归因。`SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY` 与 `BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS` 均为 L1 candidate；下一课进入 Capacity Accreditation & ELCC。
 

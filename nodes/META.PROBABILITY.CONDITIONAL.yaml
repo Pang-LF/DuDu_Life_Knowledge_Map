@@ -25,6 +25,7 @@ connections:
   - "META.FORECASTING.CALIBRATION"
   - "BUS.MEDIA.AD_SUPPORTED_STREAMING"
   - "SYSTEM.ENERGY.ACCOUNTING_BOUNDARY"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
   - "CASE.UC_BERKELEY.ADMISSIONS.1973"
 questions:
   - "What event is in the numerator, which stated condition defines the denominator, and would reversing or adding a condition answer a different question?"
@@ -32,10 +33,10 @@ cases:
   - "UC Berkeley graduate admissions, 1973"
 
 first_seen: "2026-09-22"
-last_reviewed: "2026-10-02"
+last_reviewed: "2026-10-27"
 next_review: "2026-10-09"
 sources:
   - "https://faculty.ucmerced.edu/jvevea/classes/Spark/readings/Bickel-Berkeley.pdf"
   - "https://pubmed.ncbi.nlm.nih.gov/17835295/"
   - "https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/UCBAdmissions.html"
-notes: "Probability Day 3. Transferred on 2026-10-02 by auditing the different denominators behind French electricity, final-energy, and primary-energy shares. Mastery remains a candidate until the user correctly selects and reverses denominators in an unfamiliar case."
+notes: "Probability Day 3. Transferred on 2026-10-27 by treating capacity credit as conditional on a particular portfolio, scarcity distribution, weather and outage sample, and reliability metric. Mastery remains a candidate until the user correctly selects conditions and denominators in an unfamiliar case."

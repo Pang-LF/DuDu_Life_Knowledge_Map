@@ -60,6 +60,7 @@ const nodePoints: NodePoint[] = [
   { id: 'SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE', x: 960, y: 610, labelSide: 'right', mapLabel: 'Flexibility（灵活性）', mapId: 'SYSTEM.ELECTRICITY.FLEXIBILITY' },
   { id: 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', x: 790, y: 650, labelSide: 'left', mapLabel: 'N-1 Security（N-1 安全）', mapId: 'SYSTEM.ELECTRICITY.N1_SECURITY' },
   { id: 'SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY', x: 790, y: 595, labelSide: 'left', mapLabel: 'Resource Adequacy（资源充裕度）', mapId: 'SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY' },
+  { id: 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', x: 835, y: 560, labelSide: 'left', mapLabel: 'Capacity Accreditation（容量认证）', mapId: 'SYSTEM.ELECTRICITY.ELCC' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -97,7 +98,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

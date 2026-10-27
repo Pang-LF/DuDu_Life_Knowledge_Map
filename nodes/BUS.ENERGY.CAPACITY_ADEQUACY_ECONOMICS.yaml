@@ -15,6 +15,7 @@ my_take: "I should trace customer-to-LSE-to-provider money separately from CAISO
 
 prerequisites:
   - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
   - "BUS.ENERGY.DISPATCH_ECONOMICS"
   - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
 connections:
@@ -25,19 +26,21 @@ connections:
   - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
   - "BUS.ENERGY.ANCILLARY_SERVICES"
   - "BUS.ENERGY.FLEXIBILITY_ASSET_ECONOMICS"
+  - "BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS"
   - "META.PROBABILITY.EXPECTED_VALUE"
   - "CASE.CALIFORNIA.RESOURCE_ADEQUACY.2020"
+  - "CASE.PJM.ELCC_ACCREDITATION.2020_2026"
 questions:
   - "Who pays whom for which accredited capability, what availability and performance duties follow, how are non-performance and substitution handled, and does the arrangement reduce reliability risk enough to justify customer cost?"
 cases:
   - "California mid-August rotating outages and resource adequacy, 2020"
 
 first_seen: "2026-10-24"
-last_reviewed: "2026-10-24"
+last_reviewed: "2026-10-27"
 next_review: "2026-10-31"
 sources:
   - "https://www.cpuc.ca.gov/ra"
   - "https://www.caiso.com/generation-transmission/resource-adequacy"
   - "https://www.caiso.com/documents/business-practice-manual-for-reliability-requirements-version-dame.pdf"
   - "https://www.cpuc.ca.gov/-/media/cpuc-website/files/uploadedfiles/cpucwebsite/content/about_us/organization/divisions/office_of_governmental_affairs/legislation/2018/california-electric-and-gas-utility-cost-report.pdf"
-notes: "Energy Industry Apprenticeship continuation. L1 candidate pending user reconstruction of a capacity contract's payer, provider, accredited MW, availability duty, opportunity cost, penalty, common benefit, market power, and cost-allocation boundary."
+notes: "Reviewed on 2026-10-27 as the market parent: accreditation sets saleable quantity, while auction or contract rules set price and performance duties. L1 candidate pending user reconstruction of payer, provider, accredited MW, price, availability duty, opportunity cost, penalty, common benefit, model risk, and cost allocation."

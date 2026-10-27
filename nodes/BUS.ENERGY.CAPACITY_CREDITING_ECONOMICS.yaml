@@ -1,0 +1,45 @@
+id: "BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS"
+name_en: "Capacity Crediting Economics"
+name_zh: "容量认证经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Capacity crediting economics translates a resource's modeled reliability contribution into saleable UCAP quantity, capacity revenue, procurement cost, investment incentives, and disputes over model governance."
+why: "A change in accreditation can materially change asset revenue and customer procurement needs even when the plant has not physically changed; treating credit and clearing price as the same variable hides who gains, who pays, and why."
+mechanism: "Accredit nameplate MW into UCAP, offer eligible UCAP into a capacity auction or contract, clear quantity and price under regional constraints, allocate costs to load-serving entities and customers, impose performance duties, and revise model inputs and classifications as the portfolio and risk distribution change."
+example: "At a purely hypothetical $100/MW-day, 100 MW accredited at 10%, 54%, and 95% would earn $365,000, $1.971 million, and $3.4675 million of annual gross capacity revenue respectively before unit adjustments, locational prices, costs, or other revenues."
+my_take: "I should separate accredited quantity from auction price, then trace resource owner revenue, LSE obligation, customer cost, performance duty, portfolio complementarity, model uncertainty, transparency, and the reliability counterfactual."
+
+prerequisites:
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+  - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+connections:
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
+  - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "BUS.ENERGY.FLEXIBILITY_ASSET_ECONOMICS"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "CASE.PJM.ELCC_ACCREDITATION.2020_2026"
+questions:
+  - "Which accreditation determines saleable UCAP, which auction or contract determines price, who bears the procurement cost, what performance duty follows, and how sensitive are incentives to model assumptions and portfolio change?"
+cases:
+  - "PJM capacity accreditation reform, Winter Storm Elliott, and all-resource marginal ELCC, 2020-2026"
+
+first_seen: "2026-10-27"
+last_reviewed: "2026-10-27"
+next_review: "2026-11-03"
+sources:
+  - "https://www.pjm.com/planning/resource-adequacy-planning/effective-load-carrying-capability"
+  - "https://www.pjm.com/-/media/DotCom/planning/res-adeq/elcc/2026-27-3ia-elcc-class-ratings.pdf"
+  - "https://pjm.com/directory/etariff/FercOrders/7145/20240130-er24-99-000.pdf"
+  - "https://www.ferc.gov/news-events/news/commissioner-christies-concurrence-pjms-capacity-market-reform-filing-docket-no"
+notes: "Energy Industry Apprenticeship continuation. L1 candidate pending user separation of accreditation quantity, clearing price, asset revenue, LSE cost, customer risk reduction, performance obligation, and model-governance uncertainty in an unfamiliar market."
