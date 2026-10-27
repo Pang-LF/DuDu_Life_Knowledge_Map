@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-23
+Last updated: 2026-10-24
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-23
 
 ## Next Immediate Focus（下一步）
 
-2026-10-24：进入 Resource Adequacy & Capacity（资源充裕度与容量），解释为什么“装机很多”不等于未来稀缺时段有足够可交付能力，以及容量承诺如何定价、验证和追责。
+2026-10-25：进入 Capacity Accreditation & ELCC（容量认证与有效负荷承载能力），解释为什么不同资源的 100 MW 不能按相同可靠性贡献计入，以及新增资源的边际容量价值为什么会随组合变化。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-23
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-24：完成 Resource Adequacy & Capacity（资源充裕度与容量）。课程从 100 MW 太阳能与 100 MW / 100 MWh 电池出发，证明额定 MW 必须经过风险时段、可用率、天气相关性、持续时间、位置、燃料、进口与网络条件重新解释。California 2020 年 8 月经调整负荷预测为 44,740 MW，14.9% 综合裕度形成 51,413 MW 义务，并由 48,926 MW shown RA、290 MW RMR 与 2,197 MW credits 表面填满；但 8 月 14 日含需求响应回加的负荷比预测高约 4.8%，强迫停机约 4.8%，事故备用约 6.3%，加上 514 MW 未替换计划停机后需求约为预测的 17.0%。同日风光从总负荷峰到净需求峰下降 5,438 MW，系统最终受控切除约 1,000 MW。课程区分历史 15% 与当前 17% PRM，并把客户、LSE、供应方、CPUC 与 CAISO 的钱流、所有权和运营权分开；官方证据只支持极端天气、规划过程和市场实践共同贡献，不支持单一技术或规则的独立因果归因。`SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY` 与 `BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS` 均为 L1 candidate；下一课进入 Capacity Accreditation & ELCC。
 
 2026-10-23：完成 Flexibility, Ramping & Storage（灵活性、爬坡与储能）。课程从同一块 100 MW 电池出发，证明 100 MW 持续 15 秒只需要约 0.417 MWh，而持续 4 小时需要 400 MWh；因此 Ramp Rate、MW、MWh、Duration、Location、State of Charge 与 Recovery 不能互换。Hornsdale 原始配置为 100 MW 放电、80 MW 充电、129 MWh，满功率约 75 分钟；其中 70 MW 放电能力用于可靠性，30 MW / 119 MWh 用于商业能量运行，并能按最快约四秒的 AGC 设定点行动。2017 年 12 月 18 日 689 MW 发电跳闸时，其响应与预期一致。AEMO 记录 2018 Q1 Hornsdale 充电 11 GWh、放电 8.9 GWh，Regulation FCAS 启用率 71%、Contingency FCAS 99%；同期 FCAS 成本下降 57%，但 AEMO 同时列出需求响应、约束减少和既有参与者报价变化，因此不能把全部下降单独归因于电池。`SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE` 与 `BUS.ENERGY.FLEXIBILITY_ASSET_ECONOMICS` 均为 L1 candidate；下一课进入 Resource Adequacy & Capacity。
 

@@ -24,20 +24,23 @@ connections:
   - "BUS.ENERGY.DISPATCH_ECONOMICS"
   - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
   - "BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK"
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
   - "SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT"
   - "SYSTEM.ENERGY.DENSITY"
   - "META.PROBABILITY.EXPECTED_VALUE"
   - "CASE.HORNSDALE.FLEXIBILITY_STORAGE.2017_2020"
+  - "CASE.CALIFORNIA.RESOURCE_ADEQUACY.2020"
 questions:
   - "Can the proposed energy and service commitments coexist under interval-level power, state-of-charge, duration, network, degradation, penalty, and recovery constraints?"
 cases:
   - "Hornsdale Power Reserve initial operation and expansion, 2017-2020"
 
 first_seen: "2026-10-23"
-last_reviewed: "2026-10-23"
+last_reviewed: "2026-10-24"
 next_review: "2026-10-30"
 sources:
   - "https://aemo.com.au/-/media/Files/Media_Centre/2018/Initial-operation-of-the-Hornsdale-Power-Reserve.pdf"
   - "https://www.aemo.com.au/-/media/files/major-publications/qed/2018/qed-q1-2018.pdf"
   - "https://arena.gov.au/projects/hornsdale-power-reserve-upgrade/"
-notes: "Energy Industry Apprenticeship continuation. L1 candidate pending a jointly feasible 24-hour dispatch and service stack that distinguishes asset revenue, consumer savings, opportunity cost, degradation, and risk."
+notes: "Reviewed on 2026-10-24 to separate a flexibility service's speed and duration from its accredited contribution to a future stress period. L1 candidate pending a jointly feasible 24-hour dispatch and service stack that distinguishes asset revenue, consumer savings, opportunity cost, degradation, and risk."

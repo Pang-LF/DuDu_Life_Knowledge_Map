@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-10-24
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 完成 `SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY`，把资源充裕度定义为风险时段可交付组合能力，而不是额定 MW 相加
+- 用 100 MW 太阳能与 100 MW / 100 MWh 电池分开 Nameplate、风险时段贡献、MW、MWh 与 Duration
+- 新增 `CASE.CALIFORNIA.RESOURCE_ADEQUACY.2020`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开加州 2020 年 8 月轮流停电
+- 记录 44,740 MW 预测、51,413 MW 义务、14.9% 综合裕度，以及 48,926 MW shown RA、290 MW RMR 与 2,197 MW credits 的构成
+- 记录 8 月 14 日约 4.8% 负荷预测偏差、4.8% 强迫停机、6.3% 事故备用需求、加计划停机后约 17.0% 运营需求，以及风光下降 5,438 MW
+- 保留极端天气、规划过程与市场实践共同贡献的证据边界，不把轮流停电错误归因于单一技术、资源或规则
+- 新增 `BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS`，分开客户、LSE、容量供应方、CPUC 与 CAISO 的付款、所有权、采购与运营职责
+- 区分 2020 年历史 15% PRM 与 2024 年起当前 17% PRM，并解释 System、Local 与 Flexible RA 的不同问题
+- 更新 Capacity Factor、Real-Time Balance、Flexibility、N-1、Dispatch、Expected Value、Nonlinearity、Delay、Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据
+- 下一课锁定 Capacity Accreditation & ELCC 和 Capacity Crediting Economics
+
 ## 2026-10-23
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

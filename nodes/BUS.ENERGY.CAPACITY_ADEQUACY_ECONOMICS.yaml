@@ -1,0 +1,43 @@
+id: "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
+name_en: "Capacity and Adequacy Economics"
+name_zh: "容量与充裕度经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Capacity and adequacy economics allocates the cost and performance obligation of keeping accredited capability available for future scarcity, separately from payment for the MWh actually generated."
+why: "Resources needed for rare stress hours may not recover fixed costs from ordinary energy sales, while under-procurement by one load-serving entity can impose outage risk on all users."
+mechanism: "Regulators or system rules assign obligations to load-serving entities; LSEs self-supply or contract bilaterally with qualified resources; supply plans create must-offer and availability obligations; customer-funded capacity payments support fixed cost while penalties, substitution, testing, and accreditation limit paper-only commitments."
+example: "California's framework requires system, local, and flexible RA procurement. The 2020 event exposed that credits with limited CAISO visibility and a peak-focused counting framework could satisfy a paper obligation without fully representing evening deliverability."
+my_take: "I should trace customer-to-LSE-to-provider money separately from CAISO operational control, then test accreditation, duration, location, availability, opportunity cost, penalties, market power, and the no-contract reliability counterfactual."
+
+prerequisites:
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
+connections:
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
+  - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.ANCILLARY_SERVICES"
+  - "BUS.ENERGY.FLEXIBILITY_ASSET_ECONOMICS"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "CASE.CALIFORNIA.RESOURCE_ADEQUACY.2020"
+questions:
+  - "Who pays whom for which accredited capability, what availability and performance duties follow, how are non-performance and substitution handled, and does the arrangement reduce reliability risk enough to justify customer cost?"
+cases:
+  - "California mid-August rotating outages and resource adequacy, 2020"
+
+first_seen: "2026-10-24"
+last_reviewed: "2026-10-24"
+next_review: "2026-10-31"
+sources:
+  - "https://www.cpuc.ca.gov/ra"
+  - "https://www.caiso.com/generation-transmission/resource-adequacy"
+  - "https://www.caiso.com/documents/business-practice-manual-for-reliability-requirements-version-dame.pdf"
+  - "https://www.cpuc.ca.gov/-/media/cpuc-website/files/uploadedfiles/cpucwebsite/content/about_us/organization/divisions/office_of_governmental_affairs/legislation/2018/california-electric-and-gas-utility-cost-report.pdf"
+notes: "Energy Industry Apprenticeship continuation. L1 candidate pending user reconstruction of a capacity contract's payer, provider, accredited MW, availability duty, opportunity cost, penalty, common benefit, market power, and cost-allocation boundary."

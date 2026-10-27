@@ -59,6 +59,7 @@ const nodePoints: NodePoint[] = [
   { id: 'SYSTEM.ELECTRICITY.DAY_AHEAD_REAL_TIME_SETTLEMENT', x: 875, y: 642, labelSide: 'left', mapLabel: 'Two-Settlement（双结算）', mapId: 'SYSTEM.ELECTRICITY.TWO_SETTLEMENT' },
   { id: 'SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE', x: 960, y: 610, labelSide: 'right', mapLabel: 'Flexibility（灵活性）', mapId: 'SYSTEM.ELECTRICITY.FLEXIBILITY' },
   { id: 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', x: 790, y: 650, labelSide: 'left', mapLabel: 'N-1 Security（N-1 安全）', mapId: 'SYSTEM.ELECTRICITY.N1_SECURITY' },
+  { id: 'SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY', x: 790, y: 595, labelSide: 'left', mapLabel: 'Resource Adequacy（资源充裕度）', mapId: 'SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -96,7 +97,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

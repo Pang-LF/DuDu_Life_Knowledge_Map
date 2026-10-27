@@ -1,0 +1,45 @@
+id: "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+name_en: "Resource Adequacy and Capacity"
+name_zh: "资源充裕度与容量"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Resource adequacy is the ex-ante probability that a portfolio can serve load and required reserves across critical periods after accounting for demand uncertainty, outages, weather correlation, duration, location, fuel, imports, and network deliverability."
+why: "Installed nameplate MW can be abundant while too little capability is available in the actual risk hour; reliability requires a portfolio whose time, location, duration, and failure modes match the stress."
+mechanism: "Forecast critical load shapes, add a planning reserve for uncertainty, accredit each resource by its dependable contribution, test correlated weather and outage states across hours and locations, procure remaining needs, and impose availability and performance obligations."
+example: "California's August 2020 obligation totaled 51,413 MW and was fully represented by shown RA, RMR, and credits, yet rotating outages occurred near evening net-demand peaks when heat, outages, declining solar, import scarcity, and market scheduling jointly tightened deliverable supply."
+my_take: "I should replace every capacity total with a conditional question: available when, for how long, where, under which weather and outage state, through which network, and with what probability?"
+
+prerequisites:
+  - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
+  - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
+connections:
+  - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
+  - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
+  - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "META.SYSTEMS.DELAY"
+  - "CASE.CALIFORNIA.RESOURCE_ADEQUACY.2020"
+questions:
+  - "Which critical period and reliability standard define the need, and how do outages, weather correlation, duration, location, fuel, imports, and network deliverability change the portfolio's dependable capacity?"
+cases:
+  - "California mid-August rotating outages and resource adequacy, 2020"
+
+first_seen: "2026-10-24"
+last_reviewed: "2026-10-24"
+next_review: "2026-10-31"
+sources:
+  - "https://www.caiso.com/documents/final-root-cause-analysis-mid-august-2020-extreme-heat-wave.pdf"
+  - "https://www.caiso.com/library/analysis-of-august-2020-outages"
+  - "https://www.cpuc.ca.gov/ra"
+notes: "October Electricity lesson. L1 candidate pending user conversion of an unfamiliar nameplate portfolio into risk-hour deliverable capability with explicit uncertainty, duration, location, network, and reserve assumptions."

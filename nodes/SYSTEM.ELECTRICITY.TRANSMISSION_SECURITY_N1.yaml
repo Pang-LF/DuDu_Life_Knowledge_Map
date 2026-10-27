@@ -25,6 +25,8 @@ connections:
   - "BUS.ENERGY.ANCILLARY_SERVICES"
   - "BUS.ENERGY.TRANSMISSION_NETWORK_ECONOMICS"
   - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
   - "META.SYSTEMS.COUPLING"
   - "META.SYSTEMS.NONLINEARITY"
   - "META.SYSTEMS.BOTTLENECK"
@@ -38,10 +40,10 @@ cases:
   - "2003 Northeast blackout"
 
 first_seen: "2026-10-18"
-last_reviewed: "2026-10-21"
+last_reviewed: "2026-10-24"
 next_review: "2026-10-28"
 sources:
   - "https://www.energy.gov/sites/default/files/oeprod/DocumentsandMedia/BlackoutFinal-Web.pdf"
   - "https://www.nerc.com/standards/reliability-standards/tpl"
   - "https://www.ferc.gov/industries-data/electric/electric-industry-forms/form-no-715-annual-transmission-planning-and-evaluation-report-instructions"
-notes: "Reviewed on 2026-10-21 as the physical prerequisite for security-constrained dispatch and locational prices. Mastery remains L1 candidate until the user can reconstruct an unfamiliar post-contingency state and choose location-specific corrective actions with valid timing and evidence boundaries."
+notes: "Reviewed on 2026-10-24 to show why system-wide capacity cannot replace local and network-deliverable capability. Mastery remains L1 candidate until the user can reconstruct an unfamiliar post-contingency state and choose location-specific corrective actions with valid timing and evidence boundaries."

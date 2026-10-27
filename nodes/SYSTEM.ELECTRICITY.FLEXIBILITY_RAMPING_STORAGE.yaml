@@ -27,6 +27,8 @@ connections:
   - "BUS.ENERGY.ANCILLARY_SERVICES"
   - "BUS.ENERGY.DISPATCH_ECONOMICS"
   - "BUS.ENERGY.FLEXIBILITY_ASSET_ECONOMICS"
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
   - "META.SYSTEMS.DELAY"
   - "META.SYSTEMS.BOTTLENECK"
   - "META.PROBABILITY.EXPECTED_VALUE"
@@ -37,10 +39,10 @@ cases:
   - "Hornsdale Power Reserve initial operation and expansion, 2017-2020"
 
 first_seen: "2026-10-23"
-last_reviewed: "2026-10-23"
+last_reviewed: "2026-10-24"
 next_review: "2026-10-30"
 sources:
   - "https://aemo.com.au/-/media/Files/Media_Centre/2018/Initial-operation-of-the-Hornsdale-Power-Reserve.pdf"
   - "https://www.aemo.com.au/-/media/files/major-publications/qed/2018/qed-q1-2018.pdf"
   - "https://arena.gov.au/assets/2024/09/Neoen-HPRX-Final-Project-Report_2024.pdf"
-notes: "October Electricity lesson. L1 candidate pending user design of a feasible resource relay across seconds, minutes, and hours with explicit MW, MWh, state, network, and recovery constraints."
+notes: "Reviewed on 2026-10-24 as one input to resource adequacy: speed, direction, duration, and recovery determine whether nameplate MW contributes in the stress period. L1 candidate pending user design of a feasible resource relay across seconds, minutes, and hours with explicit MW, MWh, state, network, and recovery constraints."

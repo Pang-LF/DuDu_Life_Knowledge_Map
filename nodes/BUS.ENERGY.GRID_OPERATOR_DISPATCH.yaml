@@ -27,6 +27,8 @@ prerequisites:
   - "BUS.ENERGY.WHOLESALE_MARKET_LOCATIONAL_PRICING"
   - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
   - "BUS.ENERGY.FLEXIBILITY_ASSET_ECONOMICS"
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
 connections:
   - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
   - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
@@ -41,16 +43,17 @@ connections:
   - "CASE.NORTHEAST_BLACKOUT.2003"
   - "CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014"
   - "CASE.HORNSDALE.FLEXIBILITY_STORAGE.2017_2020"
+  - "CASE.CALIFORNIA.RESOURCE_ADEQUACY.2020"
 questions:
   - "Which combination of resources can meet a specified power need at the required speed, duration, and location while preserving contingency margin at an acceptable total cost?"
 cases:
   - "Great Britain power disruption, 9 August 2019"
 
 first_seen: "2026-10-16"
-last_reviewed: "2026-10-23"
+last_reviewed: "2026-10-24"
 next_review: "2026-10-28"
 sources:
   - "https://www.neso.energy/document/152346/download"
   - "https://www.ofgem.gov.uk/publications/investigation-9-august-2019-power-outage"
   - "https://www.neso.energy/industry-information/codes/sqss/modifications/gsr027-review-nets-sqss-criteria-frequency-control-drive-reserve-response-and-inertia-holding-gb-electricity-system"
-notes: "Transferred on 2026-10-23 by comparing flexible resources across speed, direction, duration, state of charge, location, recovery, and cost. L1 candidate pending a constrained dispatch exercise that separates energy cost from speed, duration, location, shared failure risk, network reach, and reserve restoration."
+notes: "Transferred on 2026-10-24 by treating resource adequacy as the ex-ante portfolio handed to real-time dispatch, while preserving the distinction between procurement and operation. L1 candidate pending a constrained dispatch exercise that separates energy cost from speed, duration, location, shared failure risk, network reach, and reserve restoration."

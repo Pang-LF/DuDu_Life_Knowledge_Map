@@ -36,7 +36,10 @@ connections:
   - "BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK"
   - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
   - "BUS.ENERGY.FLEXIBILITY_ASSET_ECONOMICS"
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
   - "CASE.HORNSDALE.FLEXIBILITY_STORAGE.2017_2020"
+  - "CASE.CALIFORNIA.RESOURCE_ADEQUACY.2020"
   - "CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014"
 questions:
   - "Which revenue products and cost categories explain why a generator runs, remains available, retires, or returns under a long-term contract?"
@@ -44,11 +47,11 @@ cases:
   - "Three Mile Island Unit 1 operation, retirement, and proposed restart, 1974-2026"
 
 first_seen: "2026-10-15"
-last_reviewed: "2026-10-23"
+last_reviewed: "2026-10-24"
 next_review: "2026-10-28"
 sources:
   - "https://www.ferc.gov/introductory-guide-participation-pjm-processes"
   - "https://www.ferc.gov/wholesale-electricity-markets-overview-and-guide"
   - "https://www.sec.gov/Archives/edgar/data/1109357/000162828017006007/exc201705308k.htm"
   - "https://investors.constellationenergy.com/node/8711/pdf"
-notes: "Transferred on 2026-10-23 by separating storage energy arbitrage, FCAS availability and activation, opportunity cost, efficiency losses, degradation, and recovery needs. L1 candidate pending a new asset decision that separates energy, capacity, ancillary service, contract and attribute revenues from variable, fixed, capital and financing costs."
+notes: "Transferred on 2026-10-24 by separating payment for accredited future availability from payment for delivered MWh. L1 candidate pending a new asset decision that separates energy, capacity, ancillary service, contract and attribute revenues from variable, fixed, capital and financing costs."

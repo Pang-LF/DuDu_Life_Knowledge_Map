@@ -6,6 +6,20 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-10-24 — Capacity Is a Conditional Promise, Not a Nameplate Sum
+
+- Question: What does a capacity contract buy, and why can a rarely dispatched resource still deserve payment?
+- Parent concept: `SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY` asks whether a portfolio can deliver load plus reserves in the actual risk periods after outages, weather correlation, duration, location, fuel, imports, and network limits.
+- Minimal model: a 100 MW solar plant can contribute near 100 MW at noon and near zero after sunset; a 100 MW / 100 MWh battery can move that power for about one hour, not a four-hour stress event.
+- California obligation: the August 2020 adjusted forecast was 44,740 MW and the 14.9% blended reserve requirement produced a 51,413 MW obligation, represented by 48,926 MW shown RA, 290 MW RMR, and 2,197 MW credits.
+- Stress evidence: on 14 August, load with demand-response add-back was about 4.8% above forecast, forced outages about 4.8%, and contingency need about 6.3%; including 514 MW of unreplaced planned outages raised operational need to about 17.0% of forecast load.
+- Timing evidence: wind and solar output fell 5,438 MW between gross and net-demand peaks on 14 August, so a peak-focused nameplate total did not fully describe evening deliverability.
+- Money and control: customers fund LSE procurement from providers; CPUC or other local authorities define obligations; CAISO receives supply plans, must-offer commitments, and operational visibility without owning the plants.
+- Product boundary: System RA, Local RA, and Flexible RA answer different adequacy questions. Capacity payment buys accredited availability and duties, not the MWh later produced.
+- Evidence boundary: the official analysis identifies extreme weather, planning processes, and market practices as joint contributors; it does not establish one technology or rule as the sole cause.
+- Status: `BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Capacity Accreditation & ELCC — how many dependable MW should each resource receive in the portfolio's risk hours?
+
 ### 2026-10-23 — Flexibility Is a Deliverable Change in MW, Not a Pile of MWh
 
 - Question: How can one battery earn from energy arbitrage and ancillary services without selling the same MW twice?
