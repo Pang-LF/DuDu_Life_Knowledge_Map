@@ -1,0 +1,47 @@
+id: "SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE"
+name_en: "Reliability Metrics: LOLE and EUE"
+name_zh: "可靠性指标：失负荷期望与预期未供电量"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "LOLE is the probability-weighted expected duration of modeled periods in which available supply is insufficient for demand, while EUE is the probability-weighted expected MWh of the resulting shortfall. LOLE measures boundary crossings in time; EUE measures the energy below the boundary."
+why: "Two portfolios can have the same expected shortage duration but radically different shortage depth, or the same expected unserved energy with radically different duration and event shape. Neither metric alone describes customer outage experience, location, sequence, or distribution."
+mechanism: "For each simulated hour and system state, calculate shortfall as max(load minus available supply, zero). Sum the probability of positive shortfall across hours for LOLE, and sum probability times shortfall MW times interval duration for EUE. Preserve the weather, outage, demand, network, location, and intervention assumptions that generated the distribution."
+example: "Great Britain's 2014 reliability standard adopted 3 hours LOLE per capacity year after the central 2013 economic assumptions produced 2.78 hours. The standard governs capacity procurement but does not promise three customer-outage hours or reveal the size of any modeled shortfall."
+my_take: "I should ask whether a reliability claim measures expected duration, expected MWh, event frequency, customers interrupted, location, or tail severity, then inspect the probability model and operational boundary before comparing systems."
+
+prerequisites:
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+  - "META.PROBABILITY.FOUNDATION"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+connections:
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+  - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
+  - "SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1"
+  - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
+  - "BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS"
+  - "BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS"
+  - "META.PROBABILITY.FOUNDATION"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.PROBABILITY.CONDITIONAL"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "CASE.GB.RELIABILITY_STANDARD.CAPACITY_MARKET.2013_2018"
+questions:
+  - "Does the stated reliability metric count expected shortfall hours, expected unserved MWh, events, customers, or tail severity, and what probability model and operational boundary produced it?"
+cases:
+  - "Great Britain reliability standard and first Capacity Market auction, 2013-2018"
+
+first_seen: "2026-10-28"
+last_reviewed: "2026-10-28"
+next_review: "2026-11-04"
+sources:
+  - "https://www.legislation.gov.uk/uksi/2014/2043/regulation/6/2026-07-17"
+  - "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/267613/Annex_C_-_reliability_standard_methodology.pdf"
+  - "https://assets.publishing.service.gov.uk/media/65e3a3323f694514a3035fbe/5-exploring-reliability-standard-metrics-in-net-zero-transition.pdf"
+  - "https://www.gov.uk/government/publications/statutory-security-of-supply-report-2025/statutory-security-of-supply-report-2025"
+notes: "October Electricity lesson. L1 candidate pending user reconstruction of LOLE and EUE from an unfamiliar shortage distribution, including why equal LOLE can conceal different EUE and why neither metric equals individual customer outage experience."

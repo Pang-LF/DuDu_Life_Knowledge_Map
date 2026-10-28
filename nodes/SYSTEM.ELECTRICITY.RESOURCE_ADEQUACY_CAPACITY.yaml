@@ -28,21 +28,24 @@ connections:
   - "BUS.ENERGY.GRID_OPERATOR_DISPATCH"
   - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
   - "BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS"
+  - "SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE"
+  - "BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS"
   - "META.PROBABILITY.EXPECTED_VALUE"
   - "META.SYSTEMS.NONLINEARITY"
   - "META.SYSTEMS.DELAY"
   - "CASE.CALIFORNIA.RESOURCE_ADEQUACY.2020"
   - "CASE.PJM.ELCC_ACCREDITATION.2020_2026"
+  - "CASE.GB.RELIABILITY_STANDARD.CAPACITY_MARKET.2013_2018"
 questions:
   - "Which critical period and reliability standard define the need, and how do outages, weather correlation, duration, location, fuel, imports, and network deliverability change the portfolio's dependable capacity?"
 cases:
   - "California mid-August rotating outages and resource adequacy, 2020"
 
 first_seen: "2026-10-24"
-last_reviewed: "2026-10-27"
+last_reviewed: "2026-10-28"
 next_review: "2026-10-31"
 sources:
   - "https://www.caiso.com/documents/final-root-cause-analysis-mid-august-2020-extreme-heat-wave.pdf"
   - "https://www.caiso.com/library/analysis-of-august-2020-outages"
   - "https://www.cpuc.ca.gov/ra"
-notes: "Reviewed on 2026-10-27 as the parent concept for accreditation: resource adequacy defines the portfolio reliability objective, while ELCC translates each next resource increment into comparable risk-reducing MW. L1 candidate pending user conversion of an unfamiliar nameplate portfolio into risk-hour deliverable capability."
+notes: "Reviewed on 2026-10-28 as the parent concept for reliability metrics: resource adequacy defines the portfolio objective, ELCC measures a resource's marginal risk reduction, and LOLE/EUE describe different dimensions of the remaining portfolio risk. L1 candidate pending user conversion of an unfamiliar nameplate portfolio into risk-hour deliverable capability."

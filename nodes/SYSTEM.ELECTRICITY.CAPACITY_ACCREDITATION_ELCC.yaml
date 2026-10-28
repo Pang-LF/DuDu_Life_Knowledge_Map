@@ -15,6 +15,7 @@ my_take: "I should treat every capacity credit as a versioned model output: whic
 
 prerequisites:
   - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE"
   - "SYSTEM.ENERGY.CAPACITY_FACTOR_UTILIZATION"
   - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
   - "META.PROBABILITY.CONDITIONAL"
@@ -26,19 +27,21 @@ connections:
   - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
   - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
   - "BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS"
+  - "BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS"
   - "BUS.ENERGY.DISPATCH_ECONOMICS"
   - "META.PROBABILITY.CONDITIONAL"
   - "META.PROBABILITY.EXPECTED_VALUE"
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "META.SYSTEMS.NONLINEARITY"
   - "CASE.PJM.ELCC_ACCREDITATION.2020_2026"
+  - "CASE.GB.RELIABILITY_STANDARD.CAPACITY_MARKET.2013_2018"
 questions:
   - "What reliability metric, portfolio, scarcity distribution, weather and outage sample, resource duration, performance adjustment, and marginal-versus-average definition produced this accredited MW value?"
 cases:
   - "PJM capacity accreditation reform, Winter Storm Elliott, and all-resource marginal ELCC, 2020-2026"
 
 first_seen: "2026-10-27"
-last_reviewed: "2026-10-27"
+last_reviewed: "2026-10-28"
 next_review: "2026-11-03"
 sources:
   - "https://www.pjm.com/-/media/DotCom/planning/res-adeq/elcc/2026-27-3ia-elcc-class-ratings.pdf"
@@ -46,4 +49,4 @@ sources:
   - "https://www.pjm.com/-/media/DotCom/committees-groups/cifp-ra/2023/20230614/20230614-item-02---pjm-cifp-stage-3-proposal.pdf"
   - "https://www.pjm.com/-/media/DotCom/library/reports-notices/special-reports/2023/20230717-winter-storm-elliott-event-analysis-and-recommendation-report.pdf"
   - "https://pjm.com/directory/etariff/FercOrders/7145/20240130-er24-99-000.pdf"
-notes: "October Electricity lesson. L1 candidate pending user explanation of why the same resource receives different marginal capacity credit in two unfamiliar portfolios and reconstruction of the perfect-resource risk-reduction comparison."
+notes: "Reviewed on 2026-10-28 to unpack its risk metric: marginal ELCC may compare EUE reductions, while LOLE would preserve shortage duration but discard depth. L1 candidate pending user explanation of why the same resource receives different marginal capacity credit in two unfamiliar portfolios and reconstruction of the perfect-resource risk-reduction comparison."

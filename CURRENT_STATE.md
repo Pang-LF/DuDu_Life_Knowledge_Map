@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-27
+Last updated: 2026-10-28
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-27
 
 ## Next Immediate Focus（下一步）
 
-2026-10-28：进入 Reliability Metrics — LOLE & EUE（可靠性指标：失负荷期望与预期未供电量），解释 ELCC 分子究竟怎样衡量风险，为什么“发生短缺的次数”和“短缺电量”不能互换，并连接 Reliability Standard Economics（可靠性标准经济学）。
+2026-10-29：进入 Capacity Market & Missing Money（容量市场与缺失收入），解释为什么只按 MWh 结算可能无法维持罕见压力时段所需的可靠容量，并比较集中容量市场、双边义务、长期合同与能量稀缺定价的激励和风险分配。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-27
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-28：完成 Reliability Metrics — LOLE & EUE（可靠性指标：失负荷期望与预期未供电量）。课程从同样 `LOLE = 3 hours/year` 却分别只有 3 MWh 与 3,000 MWh EUE 的两个组合出发，证明 LOLE 只汇总跨过供给不足边界的概率加权时长，EUE 才把缺口 MW 与时长乘回去；同 EUE 仍可能隐藏完全不同的事件形状、地点和客户分布。英国案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：2013 年中央 VoLL 与长期 Net CONE 假设得到 2.78 小时 LOLE，2014 年法规采用 3 小时标准；第一次 T-4 容量拍卖目标 48.6 GW、65.7 GW 预资格、采购 49.3 GW，清算价 £19.40/kW-year，对应约 £956 million 简单年度协议总值。课程明确 3 小时不是每户停电三小时，且网络故障不自动纳入该充裕度边界；澳大利亚 0.002% USE 作为指标选择对照。`SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE` 与 `BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS` 均为 L1 candidate；下一课进入 Capacity Market & Missing Money。
 
 2026-10-27：从 10 月 24 日真实进度继续；10 月 25–26 日没有完成日志，未补造课程。完成 Capacity Accreditation & ELCC（容量认证与有效负荷承载能力）：将容量认证定义为下一单位资源在特定组合和稀缺分布中相对于完美容量减少的可靠性风险，而不是设备永久属性。PJM 教学方法中，100 MW 完美容量降低 20 MWh EUE、资源类别降低 14 MWh，对应 70% class rating。Winter Storm Elliott 案例记录 PJM 预期 2022 年 12 月 24 日约 155,700 MW 可用，但强迫停机接近 47,000 MW，92% 停机通知不超过一小时，燃气占当日停机容量 70%，峰值负荷预测约低 8%；事件推动 all-hours、all-resource marginal ELCC 改革。最终 2026/27 表中 fixed solar 10%、onshore wind 38%、4-hour storage 54%、10-hour storage 73%、gas combined cycle 77%、coal 85%、nuclear 95%、demand resource 72%。课程明确旧 2024/25、最终 2026/27 与初步非约束性长期值不是干净物理性能时间序列。Industry Apprenticeship 分开认证 UCAP 数量、容量清算价格、资源收入、LSE 成本和客户风险，并把模型透明度纳入市场治理。`SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC` 与 `BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS` 均为 L1 candidate；下一课进入 LOLE、EUE 与 Reliability Standard Economics。
 

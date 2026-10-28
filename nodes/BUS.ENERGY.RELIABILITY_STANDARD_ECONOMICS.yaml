@@ -1,0 +1,46 @@
+id: "BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS"
+name_en: "Reliability Standard Economics"
+name_zh: "可靠性标准经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Reliability standard economics chooses how much system adequacy customers should collectively fund by comparing the marginal cost of dependable capacity with the probability-weighted customer cost of unserved energy."
+why: "Zero modeled shortage risk is not free, while under-procurement shifts outage risk onto customers who cannot individually contract around a shared grid. The chosen metric, Value of Lost Load, Cost of New Entry, and allocation rule determine both procurement volume and who bears cost and risk."
+mechanism: "Estimate customer Value of Lost Load, the annualized net Cost of New Entry for marginal dependable capacity, and the reliability distribution; set a standard near the point where another MW costs as much as the expected outage harm it avoids; translate the standard into a capacity target; procure de-rated capacity; charge load; and impose availability and performance obligations."
+example: "Great Britain's central 2013 assumptions implied 2.78 hours LOLE and policy adopted 3 hours. The first 2014 T-4 auction procured 49.3 GW of de-rated capacity at GBP 19.40/kW-year, implying about GBP 956 million per delivery year in simple gross agreement value before adjustments."
+my_take: "I should separate the reliability target, capacity quantity, auction price, gross customer-funded payment, performance duty, expected risk reduction, and distribution of outage harm instead of treating 'more reliability' as an unpriced engineering good."
+
+prerequisites:
+  - "SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE"
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+  - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+connections:
+  - "SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE"
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+  - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
+  - "BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.FORECASTING.SCENARIO_PLANNING"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "CASE.GB.RELIABILITY_STANDARD.CAPACITY_MARKET.2013_2018"
+questions:
+  - "Which reliability metric and target are being purchased, what VoLL and net CONE assumptions justify them, who pays, who receives capacity revenue, what duty follows, and whose outage harm is hidden by the average?"
+cases:
+  - "Great Britain reliability standard and first Capacity Market auction, 2013-2018"
+
+first_seen: "2026-10-28"
+last_reviewed: "2026-10-28"
+next_review: "2026-11-04"
+sources:
+  - "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/267613/Annex_C_-_reliability_standard_methodology.pdf"
+  - "https://www.ofgem.gov.uk/sites/default/files/docs/2015/06/annual_report_on_the_operation_of_the_cm_final_0.pdf"
+  - "https://www.gov.uk/government/news/first-capacity-market-auction-begins-today"
+  - "https://www.legislation.gov.uk/uksi/2014/2043/regulation/6/2026-07-17"
+notes: "Energy Industry Apprenticeship continuation. L1 candidate pending user explanation of how VoLL, net CONE, LOLE/EUE, procurement quantity, auction price, provider obligation, customer payment, and heterogeneous outage harm fit into one reliability decision."

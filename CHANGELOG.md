@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 2026-10-28
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 完成 `SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE`，把 LOLE 的期望短缺时长与 EUE 的概率加权未供电 MWh 分开
+- 用相同 3 小时 LOLE、不同 3 MWh / 3,000 MWh EUE 的最小模型证明短缺时长与缺口规模不能互换
+- 新增 `CASE.GB.RELIABILITY_STANDARD.CAPACITY_MARKET.2013_2018`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开英国可靠性标准与首次容量拍卖
+- 记录中央假设下 2.78 小时 LOLE、法规采用 3 小时、48.6 GW 目标、65.7 GW 预资格、49.3 GW 采购与 £19.40/kW-year 清算价
+- 解释约 £956 million 是容量与价格相乘的简单年度协议总值，不是总电费或每户账单
+- 明确 LOLE 不等于客户停电小时，EUE 也不包含事件频率、形状、地点和客户分布；网络故障不自动属于该充裕度边界
+- 新增 `BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS`，把 VoLL、Net CONE、可靠性目标、容量数量、清算价格、履约义务和客户付款连成一条决策链
+- 更新 Resource Adequacy、ELCC、Capacity Adequacy、Capacity Crediting、Expected Value、Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据
+- 下一课锁定 Capacity Market & Missing Money
+
 ## 2026-10-27
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

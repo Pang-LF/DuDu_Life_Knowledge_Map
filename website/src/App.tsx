@@ -61,6 +61,7 @@ const nodePoints: NodePoint[] = [
   { id: 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', x: 790, y: 650, labelSide: 'left', mapLabel: 'N-1 Security（N-1 安全）', mapId: 'SYSTEM.ELECTRICITY.N1_SECURITY' },
   { id: 'SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY', x: 790, y: 595, labelSide: 'left', mapLabel: 'Resource Adequacy（资源充裕度）', mapId: 'SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY' },
   { id: 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', x: 835, y: 560, labelSide: 'left', mapLabel: 'Capacity Accreditation（容量认证）', mapId: 'SYSTEM.ELECTRICITY.ELCC' },
+  { id: 'SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE', x: 840, y: 615, labelSide: 'left', mapLabel: 'LOLE & EUE（可靠性指标）', mapId: 'SYSTEM.ELECTRICITY.RELIABILITY_METRICS' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 

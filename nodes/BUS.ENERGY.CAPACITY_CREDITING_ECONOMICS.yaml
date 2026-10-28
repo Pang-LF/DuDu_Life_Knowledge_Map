@@ -16,7 +16,9 @@ my_take: "I should separate accredited quantity from auction price, then trace r
 prerequisites:
   - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
   - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+  - "SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE"
   - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
+  - "BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS"
   - "BUS.ENERGY.DISPATCH_ECONOMICS"
 connections:
   - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
@@ -29,17 +31,18 @@ connections:
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "META.SYSTEMS.NONLINEARITY"
   - "CASE.PJM.ELCC_ACCREDITATION.2020_2026"
+  - "CASE.GB.RELIABILITY_STANDARD.CAPACITY_MARKET.2013_2018"
 questions:
   - "Which accreditation determines saleable UCAP, which auction or contract determines price, who bears the procurement cost, what performance duty follows, and how sensitive are incentives to model assumptions and portfolio change?"
 cases:
   - "PJM capacity accreditation reform, Winter Storm Elliott, and all-resource marginal ELCC, 2020-2026"
 
 first_seen: "2026-10-27"
-last_reviewed: "2026-10-27"
+last_reviewed: "2026-10-28"
 next_review: "2026-11-03"
 sources:
   - "https://www.pjm.com/planning/resource-adequacy-planning/effective-load-carrying-capability"
   - "https://www.pjm.com/-/media/DotCom/planning/res-adeq/elcc/2026-27-3ia-elcc-class-ratings.pdf"
   - "https://pjm.com/directory/etariff/FercOrders/7145/20240130-er24-99-000.pdf"
   - "https://www.ferc.gov/news-events/news/commissioner-christies-concurrence-pjms-capacity-market-reform-filing-docket-no"
-notes: "Energy Industry Apprenticeship continuation. L1 candidate pending user separation of accreditation quantity, clearing price, asset revenue, LSE cost, customer risk reduction, performance obligation, and model-governance uncertainty in an unfamiliar market."
+notes: "Reviewed on 2026-10-28 to place accreditation inside the larger chain from reliability metric and standard to procurement quantity, clearing price, revenue, and customer risk. L1 candidate pending user separation of accreditation quantity, clearing price, asset revenue, LSE cost, customer risk reduction, performance obligation, and model-governance uncertainty in an unfamiliar market."

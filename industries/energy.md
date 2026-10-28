@@ -6,6 +6,19 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-10-28 — Reliability Is a Customer-Funded Risk Target, Not a Promise of Zero Outages
+
+- Question: how much system adequacy should customers collectively buy, and which metric shows what they receive?
+- Parent concept: `SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE` separates expected duration above the shortfall boundary from probability-weighted unserved MWh below it.
+- Minimal model: two portfolios can both have 3 hours LOLE while one has 3 MWh EUE and the other 3,000 MWh; the metric choice changes what remains visible.
+- GB standard: the 2013 central VoLL and long-term net-CONE assumptions produced 2.78 hours LOLE; the 2014 regulations adopted 3 hours expected loss of load per capacity year.
+- Boundary: three hours LOLE is not three customer-outage hours. It concerns modeled adequacy states and specified emergency actions, excluding events caused solely by transmission or distribution faults.
+- First auction: 48.6 GW target, 65.7 GW prequalified, 49.3 GW procured at GBP 19.40/kW-year, implying about GBP 956 million in simple gross annual agreement value before adjustments.
+- Money flow: government sets the target, the delivery framework converts it into de-rated capacity demand, providers receive capacity payments and duties, load ultimately funds the product, and energy revenues remain separate.
+- Distribution boundary: average VoLL hides differences among homes, hospitals, factories and data centers; equal national LOLE does not imply equal customer risk.
+- Status: `BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Capacity Market and Missing Money — why energy-only revenue may not retain enough dependable capacity and how procurement design changes incentives.
+
 ### 2026-10-27 — Accreditation Prices Portfolio Risk Reduction, Not Nameplate MW
 
 - Continuity: resumed from 2026-10-24; no completion records were invented for 2026-10-25 or 2026-10-26.
