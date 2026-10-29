@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-28
+Last updated: 2026-10-29
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-28
 
 ## Next Immediate Focus（下一步）
 
-2026-10-29：进入 Capacity Market & Missing Money（容量市场与缺失收入），解释为什么只按 MWh 结算可能无法维持罕见压力时段所需的可靠容量，并比较集中容量市场、双边义务、长期合同与能量稀缺定价的激励和风险分配。
+2026-10-30：进入 Long-term Contracts & Cost of Capital（长期合同与资本成本），解释为什么同样的预期收入在合同期限、波动、信用和风险承担者不同时，会支持不同融资规模与客户总成本。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-28
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-29：完成 Capacity Market & Missing Money（容量市场与缺失收入）。课程从一台 100 MW 尖峰机组出发，把 `$120/kW-year` 年度要求减去 `$45/kW-year` 能量与辅助服务净利润，得到 `$75/kW-year`、即每年 `$7.5 million` Missing Money；若只运行 20 小时，需约 `$3,750/MWh` 额外稀缺利润才能补足。课程区分价格形成造成的缺失收入与政策选择更高可靠性目标造成的缺失收入。PJM 案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：2024/25 容量价 `$28.92/MW-day`、负荷成本约 `$2.2 billion`，2025/26 升至 `$269.92/MW-day` 与 `$14.7 billion`；2026/27 在 `$329.17/MW-day` 上限清算并只高出可靠性要求 139 MW；2027/28 总采购 `145,777.1 MW UCAP`，仍比要求少 `6,517 MW`，IRM 为 14.4% 对目标 20%。课程比较集中容量市场、双边义务、长期合同和 ORDC 稀缺定价，强调价格信号无法追回许可、设备与建设延迟。`BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY` 与 `SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN` 均为 L1 candidate；下一课进入 Long-term Contracts & Cost of Capital。
 
 2026-10-28：完成 Reliability Metrics — LOLE & EUE（可靠性指标：失负荷期望与预期未供电量）。课程从同样 `LOLE = 3 hours/year` 却分别只有 3 MWh 与 3,000 MWh EUE 的两个组合出发，证明 LOLE 只汇总跨过供给不足边界的概率加权时长，EUE 才把缺口 MW 与时长乘回去；同 EUE 仍可能隐藏完全不同的事件形状、地点和客户分布。英国案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：2013 年中央 VoLL 与长期 Net CONE 假设得到 2.78 小时 LOLE，2014 年法规采用 3 小时标准；第一次 T-4 容量拍卖目标 48.6 GW、65.7 GW 预资格、采购 49.3 GW，清算价 £19.40/kW-year，对应约 £956 million 简单年度协议总值。课程明确 3 小时不是每户停电三小时，且网络故障不自动纳入该充裕度边界；澳大利亚 0.002% USE 作为指标选择对照。`SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE` 与 `BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS` 均为 L1 candidate；下一课进入 Capacity Market & Missing Money。
 

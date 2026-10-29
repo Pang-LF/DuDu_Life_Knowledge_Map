@@ -6,6 +6,20 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-10-29 — Capacity Revenue Covers a Reliability Cost Gap; It Does Not Create Steel Overnight
+
+- Question: why can payment only for generated MWh fail to retain the dependable capability needed in rare stress periods?
+- Parent concept: `BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY` is the annualized entry or avoidable-retention cost of marginal dependable capability minus expected net energy and ancillary-service margins.
+- Minimal model: a 100 MW peaker with a $120/kW-year requirement and $45/kW-year net market margin has $75/kW-year, or $7.5 million/year, of missing money; across only 20 operating hours that equals $3,750/MWh of additional scarcity margin.
+- Two causes: suppressed or incomplete scarcity prices create price-formation missing money; a policy-selected reserve margin above the energy-only economic equilibrium creates reliability-target missing money.
+- PJM repricing: 2024/25 cleared at $28.92/MW-day and about $2.2 billion load cost; 2025/26 at $269.92/MW-day and about $14.7 billion; 2026/27 reached the $329.17 cap.
+- Delivery boundary: 2027/28 procured 145,777.1 MW UCAP including FRR, 6,517 MW below the reliability requirement, with 14.4% cleared IRM against a 20% target.
+- Delay mechanism: gas turbines and generator step-up transformers approached three-to-four-year lead times while large loads could appear in 12-18 months; a current price cannot recover elapsed construction time.
+- Design comparison: centralized auction, bilateral RA, long-term contract, and ORDC scarcity pricing move demand, price, construction, performance, policy, and stranded-cost risk among customers, LSEs, providers, and investors.
+- Evidence boundary: auction results changed with forecasts, accreditation, zones, portfolios, offer rules, and caps; no single rule change independently explains the observed shortfall.
+- Status: `BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY` and `SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN` at L1 candidate; Teach-back pending.
+- Next: Long-term Contracts & Cost of Capital — why revenue duration and risk allocation change financeability and total customer cost.
+
 ### 2026-10-28 — Reliability Is a Customer-Funded Risk Target, Not a Promise of Zero Outages
 
 - Question: how much system adequacy should customers collectively buy, and which metric shows what they receive?

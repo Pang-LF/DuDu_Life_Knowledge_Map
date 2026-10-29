@@ -1,0 +1,45 @@
+id: "SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN"
+name_en: "Capacity Procurement Design"
+name_zh: "容量采购设计"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Capacity procurement design converts a probabilistic reliability target into accredited MW commitments, prices, contract terms, performance duties, and cost allocation across centralized auctions, bilateral obligations, long-term contracts, scarcity pricing, or hybrids."
+why: "The same physical reliability target can produce different investment timing, financing cost, performance incentives, customer volatility, transparency, market-power exposure, and stranded-cost risk depending on how quantity, price, duration, and obligation are specified."
+mechanism: "Set the reliability requirement; forecast load; accredit resource contribution; define a demand curve or LSE obligation; accept audited net-cost and opportunity-cost offers or bilateral contracts; clear quantity and price; verify deliverability and performance; apply penalties; allocate cost to load; and update the design when physical lead times or risk distributions change."
+example: "For PJM 2027/28, 134,478.1 MW UCAP cleared in RPM and 11,299 MW was committed through FRR, but total procurement remained 6,517 MW below the reliability requirement because supply, load, accreditation, price-collar, permitting, equipment, and construction conditions did not align."
+my_take: "I should evaluate a procurement mechanism by the reliable product delivered, timing, duration, performance verification, alternatives, and allocation of forecast and delivery risk rather than by whether it is labeled a market or a contract."
+
+prerequisites:
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+  - "SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE"
+  - "BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY"
+connections:
+  - "BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY"
+  - "BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS"
+  - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
+  - "BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+  - "SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE"
+  - "META.SYSTEMS.DELAY"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "CASE.PJM.CAPACITY_MARKET.TRANSITION_GAP.2024_2027"
+questions:
+  - "Which reliability target, accredited MW, demand curve or obligation, offer rule, contract term, performance test, penalty, price cap, and physical delivery lead time determine whether procurement produces executable capacity?"
+cases:
+  - "PJM capacity repricing and transition gap, 2024-2027"
+
+first_seen: "2026-10-29"
+last_reviewed: "2026-10-29"
+next_review: "2026-11-05"
+sources:
+  - "https://learn.pjm.com/three-priorities/buying-and-selling-energy/capacity-markets.aspx"
+  - "https://www.pjm.com/-/media/DotCom/about-pjm/newsroom/2025-releases/20250722-pjm-auction-procures-134311-mw-of-generation-resources-supply-responds-to-price-signal.pdf"
+  - "https://www.pjm.com/-/media/DotCom/committees-groups/committees/mrc/2026/20260219/20260219-item-05---2027-2028-base-residual-auction-reserve-target-shortfall-report.pdf"
+notes: "October Electricity Economics application. L1 candidate pending user design of a hybrid procurement for a delayed 1,000 MW need, with explicit allocation of forecast, construction, performance, price, policy, and stranded-cost risk."

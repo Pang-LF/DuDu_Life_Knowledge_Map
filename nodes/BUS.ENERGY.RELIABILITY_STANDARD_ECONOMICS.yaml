@@ -25,6 +25,8 @@ connections:
   - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
   - "BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS"
   - "BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS"
+  - "BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY"
+  - "SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN"
   - "BUS.ENERGY.DISPATCH_ECONOMICS"
   - "META.PROBABILITY.EXPECTED_VALUE"
   - "META.FORECASTING.SCENARIO_PLANNING"
@@ -36,7 +38,7 @@ cases:
   - "Great Britain reliability standard and first Capacity Market auction, 2013-2018"
 
 first_seen: "2026-10-28"
-last_reviewed: "2026-10-28"
+last_reviewed: "2026-10-29"
 next_review: "2026-11-04"
 sources:
   - "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/267613/Annex_C_-_reliability_standard_methodology.pdf"

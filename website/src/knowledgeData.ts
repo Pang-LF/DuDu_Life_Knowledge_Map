@@ -899,7 +899,15 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'LOLE measures the probability-weighted duration of modeled supply shortfalls; EUE measures their probability-weighted MWh. Equal duration can conceal radically different depth, and neither metric equals individual customer outage experience.',
-    connections: ['SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS', 'BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS', 'BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS', 'META.PROBABILITY.FOUNDATION', 'META.PROBABILITY.EXPECTED_VALUE', 'META.PROBABILITY.CONDITIONAL', 'META.SYSTEMS.NONLINEARITY', 'CASE.GB.RELIABILITY_STANDARD.CAPACITY_MARKET.2013_2018'],
+    connections: ['SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'SYSTEM.ELECTRICITY.REAL_TIME_BALANCE', 'SYSTEM.ELECTRICITY.TRANSMISSION_SECURITY_N1', 'BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS', 'BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS', 'BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS', 'BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', 'META.PROBABILITY.FOUNDATION', 'META.PROBABILITY.EXPECTED_VALUE', 'META.PROBABILITY.CONDITIONAL', 'META.SYSTEMS.NONLINEARITY', 'CASE.GB.RELIABILITY_STANDARD.CAPACITY_MARKET.2013_2018', 'CASE.PJM.CAPACITY_MARKET.TRANSITION_GAP.2024_2027'],
+  },
+  {
+    id: 'SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN',
+    label: 'Capacity Procurement Design（容量采购设计）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Capacity procurement converts a probabilistic reliability target into accredited MW, demand curves or LSE obligations, prices, contract terms, performance duties, penalties, and customer cost allocation.',
+    connections: ['SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE', 'BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', 'BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS', 'BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS', 'BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'META.SYSTEMS.DELAY', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.PJM.CAPACITY_MARKET.TRANSITION_GAP.2024_2027'],
   },
   {
     id: 'BUS.ENERGY.VALUE_CHAIN',
@@ -1003,7 +1011,15 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'A reliability standard compares the annualized marginal cost of dependable capacity with probability-weighted customer harm from unserved energy, then converts the selected risk target into customer-funded procurement and provider obligations.',
-    connections: ['SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE', 'SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS', 'BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.FORECASTING.SCENARIO_PLANNING', 'META.SYSTEMS.NONLINEARITY', 'CASE.GB.RELIABILITY_STANDARD.CAPACITY_MARKET.2013_2018'],
+    connections: ['SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE', 'SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS', 'BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS', 'BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.FORECASTING.SCENARIO_PLANNING', 'META.SYSTEMS.NONLINEARITY', 'CASE.GB.RELIABILITY_STANDARD.CAPACITY_MARKET.2013_2018', 'CASE.PJM.CAPACITY_MARKET.TRANSITION_GAP.2024_2027'],
+  },
+  {
+    id: 'BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY',
+    label: 'Capacity Market & Missing Money（容量市场与缺失收入）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Missing money is the annual net entry or retention cost of the marginal dependable capability needed for a chosen reliability target minus expected net energy and ancillary-service margins.',
+    connections: ['SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE', 'BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS', 'BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS', 'BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY', 'CASE.PJM.CAPACITY_MARKET.TRANSITION_GAP.2024_2027'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -1052,6 +1068,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'Great Britain converted a VoLL-versus-net-CONE trade-off into a 3-hour LOLE standard, then procured 49.3 GW at GBP 19.40/kW-year in the first T-4 auction, while leaving shortage magnitude implicit.',
     connections: ['SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE', 'SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS', 'BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS', 'BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.NONLINEARITY'],
+  },
+  {
+    id: 'CASE.PJM.CAPACITY_MARKET.TRANSITION_GAP.2024_2027',
+    label: 'PJM Capacity Transition Gap 2024–27（PJM 容量转型缺口）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'PJM capacity prices moved from $28.92 to above $300/MW-day as reserve margins tightened, yet 2027/28 procurement remained 6,517 MW below requirement because pricing, load growth, accreditation, permitting, equipment, construction, and contract timing did not align.',
+    connections: ['BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', 'SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE', 'BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY'],
   },
   {
     id: 'CASE.FRANCE.NUCLEAR_ENERGY_BOUNDARIES.1973_2024',
@@ -1112,12 +1136,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-10-28',
-  title: 'Reliability Metrics: LOLE & EUE（可靠性指标）',
-  question: '两个系统都写着 LOLE 3 小时，为什么一个可能只有 3 MWh EUE，另一个却有 3,000 MWh？',
-  reading: '45-60 min：从单个风险小时进入 LOLE、EUE、英国 3 小时标准与首次容量拍卖。',
-  discussion: '20-30 min：重建同 LOLE 异 EUE 的两个组合，并解释 VoLL 与 Net CONE 怎样决定客户购买的可靠性。',
-  next: '2026-10-29：Capacity Market & Missing Money（容量市场与缺失收入）。',
+  date: '2026-10-29',
+  title: 'Capacity Market & Missing Money（容量市场与缺失收入）',
+  question: '一台只在罕见压力小时有价值的机组，为什么不能假设它靠正常 MWh 收入自然活到那一天？',
+  reading: '45-60 min：从 100 MW 尖峰机组的年度成本缺口进入 PJM 容量重新定价、交付延迟与四种采购设计。',
+  discussion: '20-30 min：计算一个陌生资源的 Missing Money，并设计集中拍卖、双边义务、长期合同与稀缺定价的风险分工。',
+  next: '2026-10-30：Long-term Contracts & Cost of Capital（长期合同与资本成本）。',
 }
 
 export const monthlyTrack = [

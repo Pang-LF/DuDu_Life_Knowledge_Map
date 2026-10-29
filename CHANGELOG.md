@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-10-29
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 完成 `BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY`，把 Missing Money 定义为目标可靠容量的年度净成本减去预期能量与辅助服务净利润后的正差额
+- 用 100 MW、`$120/kW-year` 年度要求与 `$45/kW-year` 净市场利润重建 `$7.5 million/year` 差额，并解释 20 个运行小时对应约 `$3,750/MWh` 额外稀缺利润
+- 区分 Price-formation Missing Money 与 Reliability-target Missing Money，避免把价格形成缺陷和政策选择的额外储备混成一个问题
+- 新增 `CASE.PJM.CAPACITY_MARKET.TRANSITION_GAP.2024_2027`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开 PJM 容量重新定价与交付延迟
+- 记录 2024/25 至 2027/28 的 `$28.92`、`$269.92`、`$329.17` 与 `$333.44/MW-day` 关键价格边界，以及 `$2.2B` / `$14.7B` 负荷成本口径
+- 记录 2027/28 共 `145,777.1 MW UCAP`、短缺 `6,517 MW`、14.4% 清算 IRM 与 20% 目标，并说明高价不能缩短三至四年的关键设备交付期
+- 新增 `SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN`，比较集中容量拍卖、双边义务、长期合同与 ORDC 稀缺定价的产品、期限和风险分配
+- 明确跨拍卖数字不是干净时间序列，PJM shortfall report 是运营者解释，不能证明取消价格护栏单独即可补齐容量
+- 更新 Reliability Standard、Reliability Metrics、Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据
+- 下一课锁定 Long-term Contracts & Cost of Capital
+
 ## 2026-10-28
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
