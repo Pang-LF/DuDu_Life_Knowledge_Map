@@ -1019,7 +1019,23 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Missing money is the annual net entry or retention cost of the marginal dependable capability needed for a chosen reliability target minus expected net energy and ancillary-service margins.',
-    connections: ['SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE', 'BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS', 'BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS', 'BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY', 'CASE.PJM.CAPACITY_MARKET.TRANSITION_GAP.2024_2027'],
+    connections: ['SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE', 'BUS.ENERGY.CAPACITY_ADEQUACY_ECONOMICS', 'BUS.ENERGY.CAPACITY_CREDITING_ECONOMICS', 'BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK', 'BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY', 'CASE.PJM.CAPACITY_MARKET.TRANSITION_GAP.2024_2027'],
+  },
+  {
+    id: 'BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL',
+    label: 'Long-term Contracts & Cost of Capital（长期合同与资本成本）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Long-term contracts can lower required returns or increase debt capacity by reallocating specified cash-flow risks, but corresponding price, demand, credit, construction, performance or stranded-cost exposure moves to another party rather than disappearing.',
+    connections: ['SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION', 'BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', 'SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK', 'BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.DELAY', 'META.FORECASTING.SCENARIO_PLANNING', 'CASE.HINKLEY_POINT_C.CFD.RISK_ALLOCATION.2013_2026'],
+  },
+  {
+    id: 'SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION',
+    label: 'Energy Investment Risk Allocation（能源投资风险分配）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Energy finance assigns price, volume, construction, performance, counterparty, policy and stranded-asset states among developers, lenders, shareholders, governments and customers according to control, loss capacity and contract priority.',
+    connections: ['BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL', 'BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', 'SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.DELAY', 'META.FORECASTING.SCENARIO_PLANNING', 'CASE.HINKLEY_POINT_C.CFD.RISK_ALLOCATION.2013_2026'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -1076,6 +1092,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'PJM capacity prices moved from $28.92 to above $300/MW-day as reserve margins tightened, yet 2027/28 procurement remained 6,517 MW below requirement because pricing, load growth, accreditation, permitting, equipment, construction, and contract timing did not align.',
     connections: ['BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', 'SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'SYSTEM.ELECTRICITY.RESOURCE_ADEQUACY_CAPACITY', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE', 'BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.DELAY'],
+  },
+  {
+    id: 'CASE.HINKLEY_POINT_C.CFD.RISK_ALLOCATION.2013_2026',
+    label: 'Hinkley Point C CfD 2013–26（欣克利角C差价合同）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'A 35-year two-way CfD narrowed post-commissioning wholesale-price risk, while EDF retained principal construction and delay exposure; the 2030 schedule, GBP 35 billion completion-cost estimate and additional financing needs reveal the risks left outside the contract.',
+    connections: ['BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL', 'SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION', 'BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', 'SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.DELAY'],
   },
   {
     id: 'CASE.FRANCE.NUCLEAR_ENERGY_BOUNDARIES.1973_2024',
@@ -1136,12 +1160,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-10-29',
-  title: 'Capacity Market & Missing Money（容量市场与缺失收入）',
-  question: '一台只在罕见压力小时有价值的机组，为什么不能假设它靠正常 MWh 收入自然活到那一天？',
-  reading: '45-60 min：从 100 MW 尖峰机组的年度成本缺口进入 PJM 容量重新定价、交付延迟与四种采购设计。',
-  discussion: '20-30 min：计算一个陌生资源的 Missing Money，并设计集中拍卖、双边义务、长期合同与稀缺定价的风险分工。',
-  next: '2026-10-30：Long-term Contracts & Cost of Capital（长期合同与资本成本）。',
+  date: '2026-10-31',
+  title: 'Long-term Contracts & Cost of Capital（长期合同与资本成本）',
+  question: '同样的预期收入，为什么合同期限、波动、信用和风险承担者会改变可融资规模与客户总成本？',
+  reading: '45-60 min：从一笔未来现金流进入折现率、债股顺序、Hinkley Point C 35 年 CfD 与合同外建设风险。',
+  discussion: '20-30 min：比较不同折现率下的现值，并为一份数据中心低碳电力合同逐项分配八类风险。',
+  next: '2026-11-01：Levelized Cost & System Value（平准化成本与系统价值）。',
 }
 
 export const monthlyTrack = [

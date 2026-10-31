@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-10-31
+
+- 从 2026-10-29 最后真实记录继续，明确记录 2026-10-30 断点且未补造课程完成状态
+- 完成 `BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL`，把长期合同定义为指定风险的重新分配，而非风险消失或利润保证
+- 用 35 年每年 GBP 100 million 的年金算例比较 5% 与 9% 折现率下约 GBP 1.637 billion / GBP 1.057 billion 现值，并解释同样名义收入为何支持不同融资
+- 新增 `SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION`，逐项分开市场价格、数量、建设、履约、交易对手、基差、政策和搁浅成本风险
+- 新增 `CASE.HINKLEY_POINT_C.CFD.RISK_ALLOCATION.2013_2026`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开 35 年 CfD 与剩余建设风险
+- 记录 HPC 执行价从 GBP 92.50/MWh 降至 GBP 89.50/MWh 的合同条件、EDF 2030 年 Unit 1 目标、GBP 35 billion 完成成本口径与最高 GBP 4.5 billion Apollo 债务安排
+- 明确历史建设成本采用不同价格基年、利息和范围口径，不计算虚假的精确超支百分比；公开证据也不能识别 CfD 对 WACC 的独立因果影响
+- 更新 Missing Money、Capacity Procurement、Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据
+- 下一课锁定 Levelized Cost & System Value
+
 ## 2026-10-29
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

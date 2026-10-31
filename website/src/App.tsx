@@ -63,6 +63,8 @@ const nodePoints: NodePoint[] = [
   { id: 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', x: 835, y: 560, labelSide: 'left', mapLabel: 'Capacity Accreditation（容量认证）', mapId: 'SYSTEM.ELECTRICITY.ELCC' },
   { id: 'SYSTEM.ELECTRICITY.RELIABILITY_METRICS_LOLE_EUE', x: 840, y: 615, labelSide: 'left', mapLabel: 'LOLE & EUE（可靠性指标）', mapId: 'SYSTEM.ELECTRICITY.RELIABILITY_METRICS' },
   { id: 'BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', x: 900, y: 520, labelSide: 'right', mapLabel: 'Missing Money（缺失收入）', mapId: 'BUS.ENERGY.MISSING_MONEY' },
+  { id: 'BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL', x: 455, y: 525, labelSide: 'right', mapLabel: 'Contracts & Capital（合同与资本）', mapId: 'BUS.ENERGY.CONTRACTS_CAPITAL' },
+  { id: 'SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION', x: 755, y: 625, labelSide: 'left', mapLabel: 'Risk Allocation（风险分配）', mapId: 'SYSTEM.ENERGY.RISK_ALLOCATION' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 

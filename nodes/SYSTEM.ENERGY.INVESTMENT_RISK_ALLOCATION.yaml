@@ -1,0 +1,43 @@
+id: "SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION"
+name_en: "Energy Investment Risk Allocation"
+name_zh: "能源投资风险分配"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Energy investment risk allocation assigns market-price, quantity, construction, performance, input-cost, counterparty, policy, and stranded-asset states among developers, lenders, shareholders, utilities, governments, and customers through ownership, contracts, regulation, and financing priority."
+why: "The same physical asset can require different customer payments and support different financing depending on who controls each risk, who can diversify it, who absorbs first loss, and whether contract duration matches construction and debt repayment."
+mechanism: "Start with an uncontracted project cash-flow distribution; identify each actor's control and loss-bearing capacity; assign risks through PPA, CfD, tolling, capacity, guarantee, or regulated-asset clauses; preserve incentives for controllable performance; stress delays and correlated downside states; and compare total customer and investor outcomes against explicit alternatives."
+example: "The Hinkley Point C CfD transferred much of post-operation wholesale-price risk to electricity customers while leaving principal construction overrun and delay exposure with investors. Observed schedule and financing changes show that reducing market risk did not remove construction or funding risk."
+my_take: "I should evaluate risk placement by control, diversification, tail-loss capacity, incentive effects, and counterfactual cost, not by whether the arrangement is labeled public, private, market, or regulated."
+
+prerequisites:
+  - "BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL"
+  - "BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+connections:
+  - "BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL"
+  - "BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY"
+  - "SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN"
+  - "BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.DELAY"
+  - "META.FORECASTING.SCENARIO_PLANNING"
+  - "CASE.HINKLEY_POINT_C.CFD.RISK_ALLOCATION.2013_2026"
+questions:
+  - "For each downside state, who controls its probability, who absorbs the first and tail losses, what incentive does the allocation create, and how does the arrangement compare with a feasible alternative?"
+cases:
+  - "Hinkley Point C CfD and risk allocation, 2013-2026"
+
+first_seen: "2026-10-31"
+last_reviewed: "2026-10-31"
+next_review: "2026-11-07"
+sources:
+  - "https://www.gov.uk/government/publications/hinkley-point-c-documents"
+  - "https://www.nao.org.uk/wp-content/uploads/2017/06/Hinkley-Point-C.pdf"
+  - "https://www.edf.fr/en/2025-annual-results"
+notes: "Industry application at L1 candidate. Validation requires the user to allocate at least eight risks in an unfamiliar project, explain each incentive and financing effect, and identify a contract that looks long-term but remains unbankable."

@@ -30,6 +30,8 @@ connections:
   - "META.SYSTEMS.DELAY"
   - "META.PROBABILITY.EXPECTED_VALUE"
   - "CASE.PJM.CAPACITY_MARKET.TRANSITION_GAP.2024_2027"
+  - "BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL"
+  - "SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION"
 questions:
   - "Which reliability target, accredited MW, demand curve or obligation, offer rule, contract term, performance test, penalty, price cap, and physical delivery lead time determine whether procurement produces executable capacity?"
 cases:

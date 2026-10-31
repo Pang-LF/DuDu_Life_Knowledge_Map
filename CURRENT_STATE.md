@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-29
+Last updated: 2026-10-31
 
 ## Current Phase（当前阶段）
 
@@ -73,7 +73,7 @@ Last updated: 2026-10-29
 
 ## Next Immediate Focus（下一步）
 
-2026-10-30：进入 Long-term Contracts & Cost of Capital（长期合同与资本成本），解释为什么同样的预期收入在合同期限、波动、信用和风险承担者不同时，会支持不同融资规模与客户总成本。
+2026-11-01：进入 Levelized Cost & System Value（平准化成本与系统价值），解释资本成本怎样进入单位成本，以及为什么低 LCOE 仍不保证在需要的时间、地点和可靠性状态具有高系统价值。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +84,8 @@ Last updated: 2026-10-29
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-10-31：从 10 月 29 日最后真实进度继续，明确 10 月 30 日无完成日志。完成 Long-term Contracts & Cost of Capital（长期合同与资本成本）：将投资定义为当前确定资本换取未来不确定现金流，将资本成本定义为资金提供者为时间与风险要求的回报。透明年金算例中，35 年每年 GBP 100 million 在 5% 与 9% 下现值约为 GBP 1.637 billion 与 GBP 1.057 billion；融资 GBP 20 billion 的简化年度要求约为 GBP 1.221 billion 与 GBP 1.893 billion。Hinkley Point C 案例说明 35 年双向 CfD 把投产后的批发价风险重新分配给客户，却没有自动转移建设、工期和追加融资风险；执行价因 Sizewell C 条件从 GBP 92.50/MWh 降至 GBP 89.50/MWh（2012 年价格），EDF 2026 年材料按 Unit 1 2030 年投产组织并估计 GBP 35 billion 完成成本（2015 年价格、特定口径），同时披露额外股权与最高 GBP 4.5 billion Apollo 债务安排。`BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL` 与 `SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION` 为 L1 candidate；下一课进入 Levelized Cost & System Value。
 
 2026-10-29：完成 Capacity Market & Missing Money（容量市场与缺失收入）。课程从一台 100 MW 尖峰机组出发，把 `$120/kW-year` 年度要求减去 `$45/kW-year` 能量与辅助服务净利润，得到 `$75/kW-year`、即每年 `$7.5 million` Missing Money；若只运行 20 小时，需约 `$3,750/MWh` 额外稀缺利润才能补足。课程区分价格形成造成的缺失收入与政策选择更高可靠性目标造成的缺失收入。PJM 案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：2024/25 容量价 `$28.92/MW-day`、负荷成本约 `$2.2 billion`，2025/26 升至 `$269.92/MW-day` 与 `$14.7 billion`；2026/27 在 `$329.17/MW-day` 上限清算并只高出可靠性要求 139 MW；2027/28 总采购 `145,777.1 MW UCAP`，仍比要求少 `6,517 MW`，IRM 为 14.4% 对目标 20%。课程比较集中容量市场、双边义务、长期合同和 ORDC 稀缺定价，强调价格信号无法追回许可、设备与建设延迟。`BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY` 与 `SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN` 均为 L1 candidate；下一课进入 Long-term Contracts & Cost of Capital。
 

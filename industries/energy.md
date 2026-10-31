@@ -6,6 +6,20 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-10-31 — A Contract Lowers Only the Risk It Actually Reassigns
+
+- Continuity: resumed from the last verified lesson on 2026-10-29; no completion record was fabricated for 2026-10-30.
+- Question: why can the same expected revenue support different financing and customer cost when term, volatility, credit, and risk bearer change?
+- Parent concept: `BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL` treats investment as present capital exchanged for uncertain future cash flow and the cost of capital as the required return for time and risk.
+- Minimal model: GBP 100 million paid annually for 35 years has a teaching present value of about GBP 1.637 billion at 5% versus GBP 1.057 billion at 9%; the same GBP 3.5 billion nominal total supports about 35% less present investment at the higher rate.
+- Revenue requirement: financing GBP 20 billion over 35 years requires about GBP 1.221 billion/year at 5% versus GBP 1.893 billion/year at 9% in the simplified annuity model, a roughly 55% increase.
+- Contract rule: PPA and CfD terms can reduce specified market-price or quantity risks, but construction, performance, counterparty, basis, policy, and stranded-cost risks remain unless explicitly reassigned.
+- Hinkley design: the 35-year two-way CfD originally used GBP 92.50/MWh in 2012 prices; the Sizewell C condition later reduced it by GBP 3/MWh to GBP 89.50/MWh.
+- Residual risk: EDF's 2026 update targeted Unit 1 for 2030, estimated GBP 35 billion completion cost in 2015 sterling under the stated convention, and disclosed additional equity plus an Apollo debt arrangement of up to GBP 4.5 billion.
+- Evidence boundary: the case shows price-risk transfer and realized construction risk, but it does not identify the causal WACC reduction or prove the customer-cost outcome of an alternative financing model.
+- Status: `BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL` and `SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION` at L1 candidate; Teach-back pending.
+- Next: Levelized Cost & System Value — how financing enters unit cost and why a low unit cost need not imply high value at the needed time, place, and reliability state.
+
 ### 2026-10-29 — Capacity Revenue Covers a Reliability Cost Gap; It Does Not Create Steel Overnight
 
 - Question: why can payment only for generated MWh fail to retain the dependable capability needed in rare stress periods?

@@ -33,6 +33,7 @@ connections:
   - "META.SYSTEMS.NONLINEARITY"
   - "META.SYSTEMS.DELAY"
   - "CASE.PJM.CAPACITY_MARKET.TRANSITION_GAP.2024_2027"
+  - "BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL"
 questions:
   - "What annual cost gap remains after expected net energy and ancillary margins, which accredited capability closes the reliability need, and who bears demand, price, construction, performance, policy, and stranded-cost risk under each procurement design?"
 cases:

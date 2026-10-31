@@ -1,0 +1,46 @@
+id: "BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL"
+name_en: "Long-term Contracts and Cost of Capital"
+name_zh: "长期合同与资本成本"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A long-term energy contract reallocates specified future price, volume, credit, construction, performance, policy, and stranded-cost risks. By narrowing the states in which project cash flow falls short, a credible contract can reduce required returns or increase debt capacity, but it transfers corresponding risk to the buyer or customers rather than eliminating it."
+why: "Capital-intensive energy assets pay most costs before receiving decades of uncertain revenue. Small changes in financing rates can materially change present value and annual revenue requirements, so contract risk allocation can be as economically important as equipment and operating performance."
+mechanism: "Define the no-contract counterfactual; map every cash flow and risk; test contract term, price index, quantity, curtailment, completion, performance, termination, counterparty, legal-change, and gain-share clauses; stress project cash flow and debt service; estimate the resulting debt-equity mix and required returns; then add the buyer's expected and tail costs before judging total value."
+example: "Hinkley Point C's 35-year two-way CfD reduced post-commissioning wholesale-price risk. It did not reimburse construction overruns automatically: EDF's 2026 update targeted Unit 1 for 2030, estimated GBP 35 billion completion cost in 2015 sterling under its stated convention, and disclosed additional equity and up to GBP 4.5 billion of Apollo debt financing."
+my_take: "I should never describe a contract as simply de-risking a project. I should name the exact risk reduced, the party receiving it, the residual risks, the lower-cost-of-capital claim, and the customer-cost counterfactual."
+
+prerequisites:
+  - "BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY"
+  - "SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+connections:
+  - "SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION"
+  - "BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY"
+  - "SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK"
+  - "BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.SYSTEMS.DELAY"
+  - "META.FORECASTING.SCENARIO_PLANNING"
+  - "CASE.HINKLEY_POINT_C.CFD.RISK_ALLOCATION.2013_2026"
+questions:
+  - "Which cash-flow risk does the contract reduce, who receives that risk, how does it change debt capacity and required returns, and what expected or tail cost does the buyer assume relative to a named no-contract alternative?"
+cases:
+  - "Hinkley Point C CfD and risk allocation, 2013-2026"
+
+first_seen: "2026-10-31"
+last_reviewed: "2026-10-31"
+next_review: "2026-11-07"
+sources:
+  - "https://www.gov.uk/government/publications/hinkley-point-c-documents"
+  - "https://www.gov.uk/government/publications/civil-nuclear-roadmap-to-2050/civil-nuclear-roadmap-to-2050-accessible-webpage"
+  - "https://www.nao.org.uk/wp-content/uploads/2017/06/Hinkley-Point-C.pdf"
+  - "https://www.edf.fr/en/2025-annual-results"
+  - "https://www.edf.fr/sites/groupe/files/2026-04/2026-04-02-urd-edf-2025-en.pdf"
+notes: "Energy Economics continuation. L1 candidate pending user reconstruction of the present-value effect and explicit allocation of market-price, volume, curtailment, construction, performance, counterparty, policy, and stranded-cost risk in an unfamiliar long-term contract."
