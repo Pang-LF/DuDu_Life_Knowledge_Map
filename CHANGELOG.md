@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 2026-11-01
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 从 2026-10-31 真实进度直接继续，没有缺失课程日志；完成 Energy Economics 第一轮收束
+- 完成 `BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE`，把生命周期平均成本与特定时间、地点和系统状态下的边际价值分开
+- 用 `$30/MWh` 午间项目与 `$55/MWh` 晚间项目建立最小模型，并解释实际接纳电量怎样改变每个可用 MWh 承担的成本
+- 新增 `SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION`，把 Energy、Capacity、Flexibility、Network、Environmental 与 Portfolio Value 放入同一反事实边界
+- 新增 `CASE.CALIFORNIA.SOLAR.DUCK_CURVE.SYSTEM_VALUE.2013_2024`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开加州鸭子曲线、弃电、储能与晚间爬坡
+- 记录 CAISO 风光弃电从 2014 年约 `51,129 MWh` 增至 2024 年约 `3,423,376 MWh`，以及 2024 年 8 月最大太阳能 `19,650 MW`、弃电约 `71,570 MWh`、最大三小时净负荷爬坡 `18,119 MW`
+- 明确绝对弃电 MWh 不是弃电率，MW 爬坡不是 MWh；EIA LCOE / LACE 也受融资、利用率、政策、区域和反事实模型约束
+- 更新 Energy 行业日志、Question Bank、CURRENT_STATE 与网站数据，并将 11 月主线切换到 Semiconductor + Compute
+- 下一课锁定 Semiconductor + Compute Foundation 与完整价值链
+
 ## 2026-10-31
 
 - 从 2026-10-29 最后真实记录继续，明确记录 2026-10-30 断点且未补造课程完成状态

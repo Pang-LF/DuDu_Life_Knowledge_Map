@@ -1,0 +1,46 @@
+id: "BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE"
+name_en: "Levelized Cost and System Value"
+name_zh: "平准化成本与系统价值"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Levelized cost converts a resource's discounted lifecycle costs and output into an average cost-recovery requirement per MWh, while system value estimates what the resource avoids or provides at its specific time, location and system state."
+why: "A low-cost resource can arrive when the system already has abundant supply, while a more expensive resource can displace high-cost energy or reduce scarcity; cost ranking alone therefore cannot choose the best portfolio."
+mechanism: "Define consistent cost, output, discount-rate and policy boundaries for LCOE or LCOS; estimate marginal energy, capacity, flexibility, network, environmental and portfolio value against a stated counterfactual; then compare value with cost without double counting products."
+example: "California's wind-and-solar curtailment rose from about 51,129 MWh in 2014 to 3,423,376 MWh in 2024, while CAISO recorded an 18,119 MW maximum three-hour net-load ramp in August 2024. Cheap midday MWh and valuable evening capability were therefore not interchangeable."
+my_take: "I should calculate what a project costs per usable unit and separately ask what that unit changes in this system before treating a technology cost table as an investment ranking."
+
+prerequisites:
+  - "BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+connections:
+  - "SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION"
+  - "BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL"
+  - "SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "CASE.CALIFORNIA.SOLAR.DUCK_CURVE.SYSTEM_VALUE.2013_2024"
+questions:
+  - "For a new resource, what is the lifecycle cost per accepted unit, what does that unit displace at its time and location, and which capacity, network, environmental or risk values remain outside the first calculation?"
+cases:
+  - "California solar duck curve, curtailment and storage response, 2013-2024"
+
+first_seen: "2026-11-01"
+last_reviewed: "2026-11-01"
+next_review: "2026-11-08"
+sources:
+  - "https://www.eia.gov/outlooks/aeo/electricity_generation/pdf/AEO2025_LCOE_report.pdf"
+  - "https://www.caiso.com/about/our-business/managing-the-evolving-grid"
+  - "https://www.caiso.com/content/charts/curtailments-monthly.csv"
+  - "https://www.caiso.com/documents/monthly-renewables-performance-report-august-2024.html"
+notes: "L1 candidate pending a teach-back that separates lifecycle cost, accepted output and marginal system value for an unfamiliar portfolio without double counting."

@@ -65,6 +65,8 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', x: 900, y: 520, labelSide: 'right', mapLabel: 'Missing Money（缺失收入）', mapId: 'BUS.ENERGY.MISSING_MONEY' },
   { id: 'BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL', x: 455, y: 525, labelSide: 'right', mapLabel: 'Contracts & Capital（合同与资本）', mapId: 'BUS.ENERGY.CONTRACTS_CAPITAL' },
   { id: 'SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION', x: 755, y: 625, labelSide: 'left', mapLabel: 'Risk Allocation（风险分配）', mapId: 'SYSTEM.ENERGY.RISK_ALLOCATION' },
+  { id: 'BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE', x: 455, y: 665, labelSide: 'left', mapLabel: 'Cost & Value（成本与价值）', mapId: 'BUS.ENERGY.COST_VALUE' },
+  { id: 'SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION', x: 735, y: 555, labelSide: 'left', mapLabel: 'Time & Location（时间与地点）', mapId: 'SYSTEM.ENERGY.TIME_LOCATION' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -150,7 +152,7 @@ function App() {
         <div className="dock-section">
           <div className="dock-title">
             <GitBranch size={17} />
-            <span>10 月主线</span>
+            <span>11 月主线</span>
           </div>
           <ol className="route-list">
             {monthlyTrack.map((item, index) => (

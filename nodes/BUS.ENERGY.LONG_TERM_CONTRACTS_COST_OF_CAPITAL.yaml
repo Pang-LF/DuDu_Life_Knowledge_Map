@@ -29,14 +29,15 @@ connections:
   - "META.SYSTEMS.DELAY"
   - "META.FORECASTING.SCENARIO_PLANNING"
   - "CASE.HINKLEY_POINT_C.CFD.RISK_ALLOCATION.2013_2026"
+  - "BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE"
 questions:
   - "Which cash-flow risk does the contract reduce, who receives that risk, how does it change debt capacity and required returns, and what expected or tail cost does the buyer assume relative to a named no-contract alternative?"
 cases:
   - "Hinkley Point C CfD and risk allocation, 2013-2026"
 
 first_seen: "2026-10-31"
-last_reviewed: "2026-10-31"
-next_review: "2026-11-07"
+last_reviewed: "2026-11-01"
+next_review: "2026-11-08"
 sources:
   - "https://www.gov.uk/government/publications/hinkley-point-c-documents"
   - "https://www.gov.uk/government/publications/civil-nuclear-roadmap-to-2050/civil-nuclear-roadmap-to-2050-accessible-webpage"

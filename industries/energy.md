@@ -6,6 +6,18 @@ October 2026 studies how primary energy becomes useful service through resources
 
 ## Progress
 
+### 2026-11-01 — Low Cost Is Not the Same as High System Value
+
+- Continuity: continued directly from the verified 2026-10-31 contract-and-capital lesson; no completion gap was present.
+- Question: why can a `$30/MWh` midday project be less worth building than a `$55/MWh` evening project?
+- Parent concept: LCOE divides discounted lifecycle cost by discounted lifecycle output; System Value asks what an accepted MWh avoids or provides at its time, location and system state.
+- Minimal model: curtailing 20 of 100 expected MWh raises a `$3,000 / 100 MWh = $30/MWh` simple cost to `$3,000 / 80 MWh = $37.50` per accepted MWh before value is considered.
+- California case: CAISO wind-and-solar curtailment rose from about `51,129 MWh` in 2014 to `3,423,376 MWh` in 2024; August 2024 recorded a maximum three-hour net-load ramp of `18,119 MW`.
+- Measurement boundary: absolute curtailed MWh is not a curtailment rate, and an MW ramp is power change rather than MWh; capacity, load, storage, transmission, imports and reporting conditions also changed.
+- Value method: EIA's LCOE / LACE comparison keeps cost and avoided value separate, but financing, utilization, tax policy, region, portfolio and counterfactual assumptions remain model boundaries.
+- Status: `BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE` and `SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION` at L1 candidate; Teach-back pending.
+- Next: Semiconductor + Compute Foundation — establish the complete physical, money and control flows before learning properties of wafers, lithography, packaging, HBM or GPUs.
+
 ### 2026-10-31 — A Contract Lowers Only the Risk It Actually Reassigns
 
 - Continuity: resumed from the last verified lesson on 2026-10-29; no completion record was fabricated for 2026-10-30.

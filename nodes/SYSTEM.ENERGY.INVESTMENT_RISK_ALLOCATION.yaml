@@ -28,14 +28,16 @@ connections:
   - "META.SYSTEMS.DELAY"
   - "META.FORECASTING.SCENARIO_PLANNING"
   - "CASE.HINKLEY_POINT_C.CFD.RISK_ALLOCATION.2013_2026"
+  - "BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE"
+  - "SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION"
 questions:
   - "For each downside state, who controls its probability, who absorbs the first and tail losses, what incentive does the allocation create, and how does the arrangement compare with a feasible alternative?"
 cases:
   - "Hinkley Point C CfD and risk allocation, 2013-2026"
 
 first_seen: "2026-10-31"
-last_reviewed: "2026-10-31"
-next_review: "2026-11-07"
+last_reviewed: "2026-11-01"
+next_review: "2026-11-08"
 sources:
   - "https://www.gov.uk/government/publications/hinkley-point-c-documents"
   - "https://www.nao.org.uk/wp-content/uploads/2017/06/Hinkley-Point-C.pdf"

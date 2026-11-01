@@ -1027,7 +1027,7 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Long-term contracts can lower required returns or increase debt capacity by reallocating specified cash-flow risks, but corresponding price, demand, credit, construction, performance or stranded-cost exposure moves to another party rather than disappearing.',
-    connections: ['SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION', 'BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', 'SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK', 'BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.DELAY', 'META.FORECASTING.SCENARIO_PLANNING', 'CASE.HINKLEY_POINT_C.CFD.RISK_ALLOCATION.2013_2026'],
+    connections: ['SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION', 'BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE', 'BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', 'SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK', 'BUS.ENERGY.RELIABILITY_STANDARD_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.DELAY', 'META.FORECASTING.SCENARIO_PLANNING', 'CASE.HINKLEY_POINT_C.CFD.RISK_ALLOCATION.2013_2026'],
   },
   {
     id: 'SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION',
@@ -1035,7 +1035,23 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Energy finance assigns price, volume, construction, performance, counterparty, policy and stranded-asset states among developers, lenders, shareholders, governments and customers according to control, loss capacity and contract priority.',
-    connections: ['BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL', 'BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', 'SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.DELAY', 'META.FORECASTING.SCENARIO_PLANNING', 'CASE.HINKLEY_POINT_C.CFD.RISK_ALLOCATION.2013_2026'],
+    connections: ['BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL', 'BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE', 'SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION', 'BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', 'SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'BUS.ENERGY.TWO_SETTLEMENT_MARKET_RISK', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.DELAY', 'META.FORECASTING.SCENARIO_PLANNING', 'CASE.HINKLEY_POINT_C.CFD.RISK_ALLOCATION.2013_2026'],
+  },
+  {
+    id: 'BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE',
+    label: 'Levelized Cost & System Value（平准化成本与系统价值）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'LCOE estimates discounted lifecycle cost per MWh; investment choice must separately estimate what each accepted MWh avoids or provides at its time, location and system state, then compare value with cost.',
+    connections: ['SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION', 'BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL', 'SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.NONLINEARITY', 'CASE.CALIFORNIA.SOLAR.DUCK_CURVE.SYSTEM_VALUE.2013_2024'],
+  },
+  {
+    id: 'SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION',
+    label: 'Cost, Value, Time & Location（成本、价值、时间与地点）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'System value is the marginal change a resource causes relative to a stated counterfactual, conditional on when and where it is deliverable and on the portfolio already present.',
+    connections: ['BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION', 'META.SYSTEMS.NONLINEARITY', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.CALIFORNIA.SOLAR.DUCK_CURVE.SYSTEM_VALUE.2013_2024'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -1102,6 +1118,14 @@ export const nodes: GraphNode[] = [
     connections: ['BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL', 'SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION', 'BUS.ENERGY.CAPACITY_MARKET_MISSING_MONEY', 'SYSTEM.ELECTRICITY.CAPACITY_PROCUREMENT_DESIGN', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.DELAY'],
   },
   {
+    id: 'CASE.CALIFORNIA.SOLAR.DUCK_CURVE.SYSTEM_VALUE.2013_2024',
+    label: 'California Duck Curve 2013–24（加州鸭子曲线）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'Wind-and-solar curtailment rose from about 51,129 MWh in 2014 to 3,423,376 MWh in 2024, while a maximum 18,119 MW three-hour ramp in August 2024 showed that surplus midday MWh and dependable evening MW were not interchangeable.',
+    connections: ['BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE', 'SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION', 'SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE', 'SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'META.SYSTEMS.NONLINEARITY', 'META.PROBABILITY.EXPECTED_VALUE'],
+  },
+  {
     id: 'CASE.FRANCE.NUCLEAR_ENERGY_BOUNDARIES.1973_2024',
     label: 'France Nuclear Boundaries 1973–2024（法国核能统计边界）',
     domain: 'SYSTEM',
@@ -1160,17 +1184,17 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-10-31',
-  title: 'Long-term Contracts & Cost of Capital（长期合同与资本成本）',
-  question: '同样的预期收入，为什么合同期限、波动、信用和风险承担者会改变可融资规模与客户总成本？',
-  reading: '45-60 min：从一笔未来现金流进入折现率、债股顺序、Hinkley Point C 35 年 CfD 与合同外建设风险。',
-  discussion: '20-30 min：比较不同折现率下的现值，并为一份数据中心低碳电力合同逐项分配八类风险。',
-  next: '2026-11-01：Levelized Cost & System Value（平准化成本与系统价值）。',
+  date: '2026-11-01',
+  title: 'Levelized Cost & System Value（平准化成本与系统价值）',
+  question: '为什么一项每 MWh 成本更低的资源，在具体时间、地点与系统状态下反而可能不如更贵的资源值得建设？',
+  reading: '45-60 min：从一 MWh 的成本与反事实价值出发，进入加州鸭子曲线、弃电、晚间爬坡与 LCOE / LACE。',
+  discussion: '20-30 min：比较两个候选项目，并说明哪些容量、网络、排放、灵活性与组合因素会使选择翻转。',
+  next: '2026-11-02：Semiconductor + Compute Foundation（半导体与计算基础）。',
 }
 
 export const monthlyTrack = [
-  'Energy System Foundations（能源系统基础）',
-  'Electricity（电力系统）',
-  'Energy Economics（能源经济学）',
-  'Energy × Future（能源 × 未来）',
+  'Silicon & Wafer（硅与晶圆）',
+  'Chip Design & Fabrication（芯片设计与制造）',
+  'Packaging, Memory & Accelerators（封装、存储与加速器）',
+  'Server, Data Center & Cloud（服务器、数据中心与云）',
 ]

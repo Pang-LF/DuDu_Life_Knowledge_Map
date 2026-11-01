@@ -28,14 +28,16 @@ connections:
   - "META.SYSTEMS.BOTTLENECK"
   - "META.SYSTEMS.COUPLING"
   - "CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014"
+  - "BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE"
+  - "SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION"
 questions:
   - "At which node does the next MWh appear, which security constraint binds, which resource changes output, and what part of the price difference is energy, congestion, or loss?"
 cases:
   - "Texas CREZ transmission buildout and West Texas wind congestion, 2005-2014"
 
 first_seen: "2026-10-21"
-last_reviewed: "2026-10-22"
-next_review: "2026-10-28"
+last_reviewed: "2026-11-01"
+next_review: "2026-11-08"
 sources:
   - "https://www.ferc.gov/understanding-energy-markets"
   - "https://ferc.gov/OPP/western-markets-explainer"

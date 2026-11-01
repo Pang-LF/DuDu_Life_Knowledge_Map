@@ -1,0 +1,44 @@
+id: "SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION"
+name_en: "Energy Cost, Value, Time and Location"
+name_zh: "能源成本、价值、时间与地点"
+domain: "SYSTEM"
+module: "Energy Systems（能源系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A resource's system value is the marginal change it causes relative to a specified no-resource counterfactual, conditional on when and where it is deliverable and on the portfolio already present."
+why: "Electricity demand, network constraints, reliability risk and renewable output vary by hour and node, so equal MWh can avoid very different costs or provide no incremental service at all."
+mechanism: "Use chronological and locational system states to identify the marginal resource displaced, accepted output, scarcity contribution, flexibility, congestion relief, emissions effect and portfolio interaction; recalculate as penetration and the surrounding portfolio change."
+example: "CAISO can curtail solar during low-net-load spring afternoons yet require rapid evening replacement as solar falls. Storage, transmission and flexible demand can raise the value of midday output by moving or absorbing it, but each brings its own cost and constraints."
+my_take: "Value is not a permanent sticker on a technology; it is a marginal relationship between one resource and a changing system."
+
+prerequisites:
+  - "BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE"
+  - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+connections:
+  - "BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE"
+  - "BUS.ENERGY.DISPATCH_ECONOMICS"
+  - "SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE"
+  - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
+  - "SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC"
+  - "SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "CASE.CALIFORNIA.SOLAR.DUCK_CURVE.SYSTEM_VALUE.2013_2024"
+questions:
+  - "Which hours and nodes create the resource's value, what counterfactual resource changes, and how would more of the same output shape change the next unit's value?"
+cases:
+  - "California solar duck curve, curtailment and storage response, 2013-2024"
+
+first_seen: "2026-11-01"
+last_reviewed: "2026-11-01"
+next_review: "2026-11-08"
+sources:
+  - "https://www.eia.gov/outlooks/aeo/electricity_generation/pdf/AEO2025_LCOE_report.pdf"
+  - "https://www.caiso.com/about/our-business/managing-the-evolving-grid"
+  - "https://www.caiso.com/content/charts/curtailments-monthly.csv"
+  - "https://www.caiso.com/documents/monthly-renewables-performance-report-august-2024.html"
+notes: "Industry-application L1 candidate pending a new hourly and locational comparison that identifies accepted output, the displaced marginal resource and the portfolio effect."

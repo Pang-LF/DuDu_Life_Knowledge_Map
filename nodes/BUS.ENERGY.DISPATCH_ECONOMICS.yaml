@@ -44,14 +44,16 @@ connections:
   - "CASE.CALIFORNIA.RESOURCE_ADEQUACY.2020"
   - "CASE.PJM.ELCC_ACCREDITATION.2020_2026"
   - "CASE.TEXAS.CREZ.CONGESTION_LOCATIONAL_VALUE.2005_2014"
+  - "BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE"
+  - "SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION"
 questions:
   - "Which revenue products and cost categories explain why a generator runs, remains available, retires, or returns under a long-term contract?"
 cases:
   - "Three Mile Island Unit 1 operation, retirement, and proposed restart, 1974-2026"
 
 first_seen: "2026-10-15"
-last_reviewed: "2026-10-27"
-next_review: "2026-10-28"
+last_reviewed: "2026-11-01"
+next_review: "2026-11-08"
 sources:
   - "https://www.ferc.gov/introductory-guide-participation-pjm-processes"
   - "https://www.ferc.gov/wholesale-electricity-markets-overview-and-guide"

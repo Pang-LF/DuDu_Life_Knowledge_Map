@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-10-31
+Last updated: 2026-11-01
 
 ## Current Phase（当前阶段）
 
@@ -10,16 +10,16 @@ Last updated: 2026-10-31
 
 ## Current Month（当前月份）
 
-**October 2026 — ENERGY（能源）**
+**November 2026 — SEMICONDUCTOR + COMPUTE（半导体 + 计算）**
 
 主线：
 
-1. Where Does Civilization Get Energy?（文明从哪里获得能源？）
-2. How Electricity Actually Works（电力系统如何运行？）
-3. Energy Economics（能源经济学）
-4. Energy × Future（能源 × 未来）
+1. Silicon & Wafer（硅与晶圆）
+2. Chip Design & Fabrication（芯片设计与制造）
+3. Packaging, Memory & Accelerators（封装、存储与加速器）
+4. Server, Data Center & Cloud（服务器、数据中心与云）
 
-9 月 Thinking Toolkit（思维工具箱）第一轮骨架已经完成，10 月所有课程都要把它迁移到 Energy（能源）真实系统中；出现不等于 mastery 自动升级。
+9 月 Thinking Toolkit（思维工具箱）与 10 月 Energy（能源）第一轮骨架已经完成。11 月从完整价值链开始建立 Semiconductor + Compute（半导体 + 计算）骨架；旧节点再次出现只记录 review / transfer，不自动升级 mastery。
 
 ## Daily Lesson Model（每日课程模型）
 
@@ -36,7 +36,13 @@ Last updated: 2026-10-31
 - 每课采用 Mastery Core → Knowledge Expansion → Connection Preview 三圈结构，但只点亮当天 Anchor Concept
 - 普通核心概念原则上一天完成；现有深度不降低，9月第一轮 Thinking Toolkit 必须在 9 月 30 日完成
 
-## October Industry Window（10月行业窗口）
+## November Industry Window（11月行业窗口）
+
+**Semiconductor + Compute（半导体 + 计算）**
+
+从 Silicon（硅）→ Wafer（晶圆）→ Chip Design（芯片设计）→ Fabrication（制造）→ Lithography（光刻）→ Packaging（封装）→ HBM（高带宽存储）→ GPU（图形处理器）→ Server（服务器）→ Data Center（数据中心）→ Cloud（云）建立完整价值链，分别追踪 Physical Flow（物理流）、Money Flow（钱流）、Control Flow（控制流）和 Bottleneck（瓶颈）。
+
+## October Industry Window（10月行业窗口，已完成第一轮骨架）
 
 **Energy（能源）**
 
@@ -73,7 +79,7 @@ Last updated: 2026-10-31
 
 ## Next Immediate Focus（下一步）
 
-2026-11-01：进入 Levelized Cost & System Value（平准化成本与系统价值），解释资本成本怎样进入单位成本，以及为什么低 LCOE 仍不保证在需要的时间、地点和可靠性状态具有高系统价值。
+2026-11-02：进入 Semiconductor + Compute Foundation（半导体与计算基础），先定义从 Silicon 到 Compute Service 的完整物理流、钱流与控制流，再学习 Wafer、Lithography、Packaging、HBM 或 GPU 的性质。
 
 ## Operating Model（运行模型）
 
@@ -84,6 +90,8 @@ Last updated: 2026-10-31
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-01：从 10 月 31 日真实完成的 Long-term Contracts & Cost of Capital 直接继续，没有缺失课程日志。完成 Levelized Cost & System Value（平准化成本与系统价值）：把 LCOE 定义为生命周期折现成本除以生命周期折现电量，并与一 MWh 在特定时间、地点和系统状态下避免的边际能量、容量、灵活性、网络、环境与组合成本分开。最小模型比较 `$30/MWh` 午间项目与 `$55/MWh` 晚间项目，说明成本最低不等于价值最高。California Duck Curve 案例记录 CAISO 风光弃电从 2014 年约 `51,129 MWh` 增至 2024 年约 `3,423,376 MWh`，2024 年 8 月最大太阳能出力 `19,650 MW`、风光弃电约 `71,570 MWh`、最大三小时净负荷爬坡 `18,119 MW`；同时明确绝对弃电 MWh 不是弃电率，功率爬坡也不是电量。EIA AEO 2025 的 LCOE / LACE 与价值成本比作为方法对照，保留融资、利用率、政策、地区和反事实模型边界。`BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE` 与 `SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION` 为 L1 candidate；Energy 第一轮骨架在此闭环，下一课进入 Semiconductor + Compute Foundation。
 
 2026-10-31：从 10 月 29 日最后真实进度继续，明确 10 月 30 日无完成日志。完成 Long-term Contracts & Cost of Capital（长期合同与资本成本）：将投资定义为当前确定资本换取未来不确定现金流，将资本成本定义为资金提供者为时间与风险要求的回报。透明年金算例中，35 年每年 GBP 100 million 在 5% 与 9% 下现值约为 GBP 1.637 billion 与 GBP 1.057 billion；融资 GBP 20 billion 的简化年度要求约为 GBP 1.221 billion 与 GBP 1.893 billion。Hinkley Point C 案例说明 35 年双向 CfD 把投产后的批发价风险重新分配给客户，却没有自动转移建设、工期和追加融资风险；执行价因 Sizewell C 条件从 GBP 92.50/MWh 降至 GBP 89.50/MWh（2012 年价格），EDF 2026 年材料按 Unit 1 2030 年投产组织并估计 GBP 35 billion 完成成本（2015 年价格、特定口径），同时披露额外股权与最高 GBP 4.5 billion Apollo 债务安排。`BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL` 与 `SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION` 为 L1 candidate；下一课进入 Levelized Cost & System Value。
 
