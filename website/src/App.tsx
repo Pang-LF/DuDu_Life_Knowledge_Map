@@ -67,6 +67,8 @@ const nodePoints: NodePoint[] = [
   { id: 'SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION', x: 755, y: 625, labelSide: 'left', mapLabel: 'Risk Allocation（风险分配）', mapId: 'SYSTEM.ENERGY.RISK_ALLOCATION' },
   { id: 'BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE', x: 455, y: 665, labelSide: 'left', mapLabel: 'Cost & Value（成本与价值）', mapId: 'BUS.ENERGY.COST_VALUE' },
   { id: 'SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION', x: 735, y: 555, labelSide: 'left', mapLabel: 'Time & Location（时间与地点）', mapId: 'SYSTEM.ENERGY.TIME_LOCATION' },
+  { id: 'SYSTEM.COMPUTE.FOUNDATION', x: 995, y: 705, labelSide: 'left', mapLabel: 'Compute Foundation（计算基础）', mapId: 'SYSTEM.COMPUTE.FOUNDATION' },
+  { id: 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', x: 260, y: 520, labelSide: 'right', mapLabel: 'Compute Value Chain（计算价值链）', mapId: 'BUS.SEMICONDUCTOR.VALUE_CHAIN' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -104,7 +106,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.COMPUTE.FOUNDATION')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

@@ -1,8 +1,8 @@
 # Global Automotive Semiconductor Shortage, 2020-2022
 
 - Case ID: `CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022`
-- Domain: META / Systems Thinking; exposure to Semiconductor and Automotive Supply Chains
-- Primary concept: Systems Thinking Integration
+- Domain: META / Systems Thinking and SYSTEM / Compute Systems
+- Primary concepts: Systems Thinking Integration; Compute System Foundation
 - Status: Studied; Teach-back pending
 
 ## Puzzle
@@ -40,8 +40,17 @@ The most expensive or advanced chip is not necessarily the constraint. A cheaper
 ## Three-Ring Attribution
 
 - Mastery Core: `META.SYSTEMS.INTEGRATION`
+- Transfer on 2026-11-02: `SYSTEM.COMPUTE.FOUNDATION`; `BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN`
 - Knowledge Expansion: Semiconductor design, wafer production, packaging, automotive modules, qualification, buffers, and capacity lead times
 - Connection Preview: Healthcare Operations, AI Infrastructure, Personal Learning
+
+## 2026-11-02 Compute-Chain Revisit
+
+The case was revisited without upgrading the September Systems Thinking mastery candidate. The new lens separates the objects handed off across the compute chain: design information, processed wafer, die, packaged and tested chip, electronic module, validated vehicle function, and delivered vehicle. Generic chip supply or leading-edge capacity is not an immediate substitute when process compatibility, packaging, firmware, interfaces and automotive qualification do not align.
+
+GAO's 2026 supply-chain report defines three core production stages—design, wafer/chip manufacturing, and assembly/testing/packaging—and notes that new facilities can require two to five years to become operational. This reinforces the lesson's delay boundary: construction can change future capacity but cannot repair the next week's qualified-component schedule.
+
+Ford's April 2021 filing expected about 1.1 million units of lost production and about USD 2.5 billion of adverse adjusted EBIT effect. These are company forecasts at that date, not audited causal totals. Commerce RFI figures describe respondents and their hardest-to-source products, not every semiconductor buyer or product.
 
 ## Sources
 
@@ -52,3 +61,4 @@ The most expensive or advanced chip is not necessarily the constraint. A cheaper
 - https://www.sec.gov/Archives/edgar/data/37996/000003799622000013/f-20211231.htm
 - https://www.gao.gov/assets/gao-22-105923.pdf
 - https://www.nist.gov/system/files/documents/2022/09/06/CHIPS-for-America-Strategy.pdf
+- https://files.gao.gov/reports/GAO-26-107882/index.html

@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 2026-11-02
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 从 2026-11-01 能源经济学闭环直接进入 11 月 Semiconductor + Compute 新模块，没有缺失课程日志
+- 完成 `SYSTEM.COMPUTE.FOUNDATION`，把可用计算定义为设计、匹配制造、封装测试、系统集成、能源冷却网络和软件共同交付的端到端服务
+- 新增 `BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN`，追踪 Materials / Equipment、Design、Foundry、OSAT、System、Data Center 与 Cloud 的物理流、钱流和控制权
+- 重访 `CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022`，从 Compute Chain 视角分开设计信息、晶圆、裸片、封装芯片、ECU、车辆功能与最终交付
+- 记录 Commerce RFI 的 40 天至不足 5 天库存、最高 17% 需求增长和 90% 以上 Fab 利用率，以及 Ford 约 110 万辆与约 25 亿美元当时预测
+- 加入 GAO 2026 的设计、晶圆制造、ATP 三阶段框架与新设施 2 至 5 年投运边界，并明确通用或先进产能不能立即替代特定产品资格
+- 区分 Fact、Interpretation、Inference 与 Hypothesis，不把防御性下单占比或任意新 Fab 的防短缺效果写成已证实因果
+- 新增 Semiconductor + Compute 行业日志、Questions、CURRENT_STATE 与网站数据
+- 下一课锁定 Silicon, Crystal & Wafer 与 Wafer Supply Economics
+
 ## 2026-11-01
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

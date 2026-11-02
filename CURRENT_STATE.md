@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-01
+Last updated: 2026-11-02
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-01
 
 ## Next Immediate Focus（下一步）
 
-2026-11-02：进入 Semiconductor + Compute Foundation（半导体与计算基础），先定义从 Silicon 到 Compute Service 的完整物理流、钱流与控制流，再学习 Wafer、Lithography、Packaging、HBM 或 GPU 的性质。
+2026-11-03：进入 Silicon, Crystal & Wafer（硅、晶体与晶圆），解释为什么普通硅原料还不是可制造晶圆，以及纯度、单晶、直径、缺陷和表面怎样约束后续制造与供应经济性。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-01
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-02：进入 Semiconductor + Compute（半导体与计算）新模块，先定义母概念 Compute System（计算系统）：硬件、软件、网络、能源、冷却与运营共同把编码输入变成满足性能、可靠性和成本条件的有用输出。课程跟随一颗合格汽车 MCU，依次区分设计信息、加工晶圆、裸片、封装测试芯片、ECU 模块、验证后的整车功能与最终车辆，说明每层交付对象不同，先进或通用产能不能自动替代缺失的特定工艺与合格能力。重访 2020-2022 汽车芯片短缺：Commerce RFI 记录难采购产品库存中位数从 2019 年 40 天降到 2021 年不足 5 天、需求相对 2019 年最多增长 17%、多数 Fab 利用率达到或超过 90%；Ford 2021 年 4 月预计当年约减少 110 万辆产量并产生约 25 亿美元 Adjusted EBIT 不利影响，明确这些是当时预测而非审计后的单因果总额。GAO 2026 将生产分为设计、晶圆制造和 ATP，并指出新设施通常需 2 至 5 年投运。Industry Apprenticeship 新增 Fabless、Foundry、IDM、OSAT 与 Hyperscaler 的交付物、钱流和议价权。`SYSTEM.COMPUTE.FOUNDATION` 与 `BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN` 为 L1 candidate；下一课进入 Silicon, Crystal & Wafer。
 
 2026-11-01：从 10 月 31 日真实完成的 Long-term Contracts & Cost of Capital 直接继续，没有缺失课程日志。完成 Levelized Cost & System Value（平准化成本与系统价值）：把 LCOE 定义为生命周期折现成本除以生命周期折现电量，并与一 MWh 在特定时间、地点和系统状态下避免的边际能量、容量、灵活性、网络、环境与组合成本分开。最小模型比较 `$30/MWh` 午间项目与 `$55/MWh` 晚间项目，说明成本最低不等于价值最高。California Duck Curve 案例记录 CAISO 风光弃电从 2014 年约 `51,129 MWh` 增至 2024 年约 `3,423,376 MWh`，2024 年 8 月最大太阳能出力 `19,650 MW`、风光弃电约 `71,570 MWh`、最大三小时净负荷爬坡 `18,119 MW`；同时明确绝对弃电 MWh 不是弃电率，功率爬坡也不是电量。EIA AEO 2025 的 LCOE / LACE 与价值成本比作为方法对照，保留融资、利用率、政策、地区和反事实模型边界。`BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE` 与 `SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION` 为 L1 candidate；Energy 第一轮骨架在此闭环，下一课进入 Semiconductor + Compute Foundation。
 

@@ -59,7 +59,7 @@ export const domains: Domain[] = [
     nameZh: '现代社会系统',
     progress: 15,
     active: true,
-    modules: ['Energy Systems（能源系统）', 'Economics（经济学）', 'Finance（金融）', 'Politics（政治）', 'Geopolitics（地缘政治）'],
+    modules: ['Energy Systems（能源系统）', 'Compute Systems（计算系统）', 'Economics（经济学）', 'Finance（金融）', 'Politics（政治）', 'Geopolitics（地缘政治）'],
   },
   {
     id: 'BUSINESS',
@@ -155,7 +155,7 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'L2 candidate',
     summary: 'Start with a whole-system outcome, then follow one necessary unit through dependencies, propagation, returning effects, boundaries, constraints, and delays to locate a real lever.',
-    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'META.CAUSAL.CORRELATION_CAUSATION', 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022'],
+    connections: ['META.SYSTEMS.SYSTEM', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.NONLINEARITY', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'META.CAUSAL.CORRELATION_CAUSATION', 'SYSTEM.COMPUTE.FOUNDATION', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022'],
   },
   {
     id: 'META.CAUSAL.CORRELATION_CAUSATION',
@@ -419,7 +419,7 @@ export const nodes: GraphNode[] = [
     domain: 'META',
     mastery: 'Case studied',
     summary: 'A missing qualified chip blocked complete vehicles while depleted buffers, constrained wafer capacity, multi-tier signals, and production delays turned a component shortage into an industry-wide output constraint.',
-    connections: ['META.SYSTEMS.INTEGRATION'],
+    connections: ['META.SYSTEMS.INTEGRATION', 'SYSTEM.COMPUTE.FOUNDATION', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN'],
   },
   {
     id: 'CASE.MONTREAL_PROTOCOL.OZONE_RECOVERY',
@@ -1054,6 +1054,22 @@ export const nodes: GraphNode[] = [
     connections: ['BUS.ENERGY.LEVELIZED_COST_SYSTEM_VALUE', 'BUS.ENERGY.DISPATCH_ECONOMICS', 'SYSTEM.ELECTRICITY.CONGESTION_LOCATIONAL_VALUE', 'SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE', 'SYSTEM.ELECTRICITY.CAPACITY_ACCREDITATION_ELCC', 'SYSTEM.ENERGY.INVESTMENT_RISK_ALLOCATION', 'META.SYSTEMS.NONLINEARITY', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.CALIFORNIA.SOLAR.DUCK_CURVE.SYSTEM_VALUE.2013_2024'],
   },
   {
+    id: 'SYSTEM.COMPUTE.FOUNDATION',
+    label: 'Compute System Foundation（计算系统基础）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Usable compute is an end-to-end service produced by aligned design, compatible fabrication, assembly and test, system integration, energy, cooling, networking and software; layer capacity is not automatically interchangeable.',
+    connections: ['BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'SYSTEM.ENERGY.FOUNDATION', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022'],
+  },
+  {
+    id: 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN',
+    label: 'Semiconductor & Compute Value Chain（半导体与计算价值链）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Materials and equipment, design, wafer fabrication, assembly/test/packaging, system integration, data-center operation and cloud service carry different physical, information, money and control flows.',
+    connections: ['SYSTEM.COMPUTE.FOUNDATION', 'META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'SYSTEM.ENERGY.FOUNDATION', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022'],
+  },
+  {
     id: 'CASE.TEXAS.FREEZE.2021',
     label: 'Texas Freeze 2021（得州寒潮）',
     domain: 'SYSTEM',
@@ -1184,12 +1200,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-01',
-  title: 'Levelized Cost & System Value（平准化成本与系统价值）',
-  question: '为什么一项每 MWh 成本更低的资源，在具体时间、地点与系统状态下反而可能不如更贵的资源值得建设？',
-  reading: '45-60 min：从一 MWh 的成本与反事实价值出发，进入加州鸭子曲线、弃电、晚间爬坡与 LCOE / LACE。',
-  discussion: '20-30 min：比较两个候选项目，并说明哪些容量、网络、排放、灵活性与组合因素会使选择翻转。',
-  next: '2026-11-02：Semiconductor + Compute Foundation（半导体与计算基础）。',
+  date: '2026-11-02',
+  title: 'Compute System Foundation（计算系统基础）',
+  question: '为什么一颗不先进、价格不高的合格芯片，能让一辆昂贵汽车无法交付，而更多通用或先进芯片也不能立即替代？',
+  reading: '45-60 min：跟随一颗汽车 MCU 从设计、晶圆、封装测试进入模块和整车，再拉远到服务器、数据中心与云。',
+  discussion: '20-30 min：重建缺失芯片的短中长期对策，并追踪一美元云收入如何沿价值链回流。',
+  next: '2026-11-03：Silicon, Crystal & Wafer（硅、晶体与晶圆）。',
 }
 
 export const monthlyTrack = [

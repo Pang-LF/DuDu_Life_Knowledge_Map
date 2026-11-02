@@ -1,0 +1,39 @@
+id: "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+name_en: "Semiconductor and Compute Value Chain"
+name_zh: "半导体与计算价值链"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "The semiconductor and compute value chain links materials and equipment, chip design, wafer fabrication, assembly/test/packaging, system integration, data-center operation and cloud service into distinct physical, information, money and control flows."
+why: "A customer pays for a usable service, while revenue, capital risk and bargaining power are distributed across firms that own different designs, factories, equipment, qualification records, capacity, software and customer relationships."
+mechanism: "Trace the user's payment upstream and each layer's deliverable downstream; identify whether the firm is fabless, a foundry, IDM, OSAT, system integrator or cloud operator; then locate scarce qualified capability, switching cost, contract term, customer ownership and recovery delay."
+example: "The automotive shortage showed that a low-cost mature-node component can govern the delivery of a high-value vehicle when the design, process, packaging and qualification path cannot be changed quickly, even while other chip capacity exists."
+my_take: "I should not rank semiconductor firms only by chip price or technical node; I should ask which indispensable layer they control, who pays them, how substitutable that layer is and where the end-customer relationship sits."
+
+prerequisites:
+  - "SYSTEM.COMPUTE.FOUNDATION"
+  - "META.SYSTEMS.INTEGRATION"
+connections:
+  - "SYSTEM.COMPUTE.FOUNDATION"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.DELAY"
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022"
+questions:
+  - "Starting from one dollar of cloud or device revenue, what does each participant deliver, who pays whom, and which qualified capability, contract or customer relationship creates bargaining power?"
+cases:
+  - "Global automotive semiconductor shortage, 2020-2022"
+
+first_seen: "2026-11-02"
+last_reviewed: "2026-11-02"
+next_review: "2026-11-09"
+sources:
+  - "https://files.gao.gov/reports/GAO-26-107882/index.html"
+  - "https://www.nist.gov/system/files/documents/2022/09/06/CHIPS-for-America-Strategy.pdf"
+  - "https://www.commerce.gov/news/blog/2022/01/results-semiconductor-supply-chain-request-information"
+notes: "Industry-application L1 candidate pending a teach-back that follows physical output downstream, money upstream and control rights across a new compute product."

@@ -1,0 +1,41 @@
+id: "SYSTEM.COMPUTE.FOUNDATION"
+name_en: "Compute System Foundation"
+name_zh: "计算系统基础"
+domain: "SYSTEM"
+module: "Compute Systems（计算系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A compute system is an end-to-end arrangement of hardware, software, networking, energy, cooling and operations that transforms encoded inputs into useful outputs under required performance, reliability and cost conditions."
+why: "A designed circuit, fabricated die, packaged chip, server and cloud service are different deliverables; treating them all as interchangeable compute hides the layer whose missing qualified capability actually limits service."
+mechanism: "Start with the useful output, then trace design information into compatible wafer fabrication and assembly/test, physical chips into modules and servers, and servers into powered, cooled, networked and software-orchestrated service; specify the interface and qualification gate at every handoff."
+example: "During the automotive semiconductor shortage, generic or leading-edge chip capacity could not immediately replace a qualified mature-node component. Median inventories for difficult products fell from 40 days to under five, allowing one missing chip to stop a complete vehicle."
+my_take: "I should define the final compute service and each layer's distinct deliverable, interface, qualification condition and recovery time before calling capacity abundant or scarce."
+
+prerequisites:
+  - "META.SYSTEMS.SYSTEM"
+  - "META.SYSTEMS.INTEGRATION"
+connections:
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.SYSTEMS.INTEGRATION"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.DELAY"
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022"
+questions:
+  - "For a requested compute service, what distinct object does each layer deliver, which interface and qualification gate connects it to the next layer, and where is the current non-substitutable constraint?"
+cases:
+  - "Global automotive semiconductor shortage, 2020-2022"
+
+first_seen: "2026-11-02"
+last_reviewed: "2026-11-02"
+next_review: "2026-11-09"
+sources:
+  - "https://files.gao.gov/reports/GAO-26-107882/index.html"
+  - "https://www.commerce.gov/news/blog/2022/01/results-semiconductor-supply-chain-request-information"
+  - "https://www.nist.gov/system/files/documents/2022/09/06/CHIPS-for-America-Strategy.pdf"
+  - "https://www.sec.gov/Archives/edgar/data/38009/000003800921000038/exhibit99toapril282021fm.htm"
+notes: "L1 candidate pending a teach-back that reconstructs an unfamiliar compute service from user output to software, system, chip, fabrication, equipment and materials without treating layer capacity as interchangeable."
