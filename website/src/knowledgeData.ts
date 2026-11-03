@@ -57,7 +57,7 @@ export const domains: Domain[] = [
     id: 'SYSTEM',
     nameEn: 'SYSTEM',
     nameZh: '现代社会系统',
-    progress: 15,
+    progress: 16,
     active: true,
     modules: ['Energy Systems（能源系统）', 'Compute Systems（计算系统）', 'Economics（经济学）', 'Finance（金融）', 'Politics（政治）', 'Geopolitics（地缘政治）'],
   },
@@ -1059,7 +1059,7 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Usable compute is an end-to-end service produced by aligned design, compatible fabrication, assembly and test, system integration, energy, cooling, networking and software; layer capacity is not automatically interchangeable.',
-    connections: ['BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'SYSTEM.ENERGY.FOUNDATION', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022'],
+    connections: ['BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER', 'META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'SYSTEM.ENERGY.FOUNDATION', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022'],
   },
   {
     id: 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN',
@@ -1067,7 +1067,31 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Materials and equipment, design, wafer fabrication, assembly/test/packaging, system integration, data-center operation and cloud service carry different physical, information, money and control flows.',
-    connections: ['SYSTEM.COMPUTE.FOUNDATION', 'META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'SYSTEM.ENERGY.FOUNDATION', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022'],
+    connections: ['SYSTEM.COMPUTE.FOUNDATION', 'SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER', 'BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS', 'META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'SYSTEM.ENERGY.FOUNDATION', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022'],
+  },
+  {
+    id: 'SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER',
+    label: 'Silicon, Crystal & Qualified Wafer（硅、晶体与合格晶圆）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'A fab-ready wafer is an engineered process interface whose crystal structure, controlled doping, resistivity, diameter, geometry, surface, defect distribution and customer qualification are jointly specified.',
+    connections: ['SYSTEM.COMPUTE.FOUNDATION', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'SYSTEM.ENERGY.FOUNDATION', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026'],
+  },
+  {
+    id: 'BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS',
+    label: 'Wafer Supply Economics（晶圆供应经济学）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Wafer suppliers sell qualified process performance and yield predictability, while capital, utilization, product mix, qualification and long-term contracts allocate supply assurance and demand risk.',
+    connections: ['SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'SYSTEM.COMPUTE.FOUNDATION', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.DELAY', 'BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL', 'CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026'],
+  },
+  {
+    id: 'CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026',
+    label: 'GlobalWafers Sherman 300mm（环球晶圆谢尔曼工厂）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'A fully integrated U.S. 300mm wafer facility paired milestone public funding with proposed customer financing and long-term demand, while qualification, ramp and utilization remained separate from opening.',
+    connections: ['SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER', 'BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS', 'SYSTEM.COMPUTE.FOUNDATION', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -1200,12 +1224,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-02',
-  title: 'Compute System Foundation（计算系统基础）',
-  question: '为什么一颗不先进、价格不高的合格芯片，能让一辆昂贵汽车无法交付，而更多通用或先进芯片也不能立即替代？',
-  reading: '45-60 min：跟随一颗汽车 MCU 从设计、晶圆、封装测试进入模块和整车，再拉远到服务器、数据中心与云。',
-  discussion: '20-30 min：重建缺失芯片的短中长期对策，并追踪一美元云收入如何沿价值链回流。',
-  next: '2026-11-03：Silicon, Crystal & Wafer（硅、晶体与晶圆）。',
+  date: '2026-11-03',
+  title: 'Silicon, Crystal & Qualified Wafer（硅、晶体与合格晶圆）',
+  question: '硅资源如此丰富，为什么一片合格 300 mm 晶圆仍需要多年工艺、客户资格化、巨额资本和十年需求承诺？',
+  reading: '45-60 min：跟随硅从石英、纯化、多晶、单晶、切片和镜面加工，最终成为特定 Fab 可重复使用的制造基底。',
+  discussion: '20-30 min：解释错误晶圆为什么不能替代，并重建长期协议怎样在供应保障与采购灵活性之间分配风险。',
+  next: '2026-11-04：Chip Fabrication Foundation（芯片制造基础）。',
 }
 
 export const monthlyTrack = [

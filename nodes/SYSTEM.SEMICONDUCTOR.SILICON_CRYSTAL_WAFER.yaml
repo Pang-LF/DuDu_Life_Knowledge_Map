@@ -1,0 +1,42 @@
+id: "SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER"
+name_en: "Silicon, Crystal and Qualified Wafer"
+name_zh: "硅、晶体与合格晶圆"
+domain: "SYSTEM"
+module: "Compute Systems（计算系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A semiconductor wafer is a qualified manufacturing substrate made by purifying silicon, growing a controlled single crystal, slicing and shaping the ingot, removing mechanical damage, polishing and cleaning the surface, and verifying electrical, geometric and defect specifications for a particular fab process."
+why: "Abundant silicon resources do not imply interchangeable wafer capacity because diameter, crystal orientation, doping and resistivity, surface type, flatness, contamination, defect distribution and customer qualification determine whether a wafer can enter a specific process."
+mechanism: "Chemical purification suppresses uncontrolled impurities; crystal growth extends one lattice from a seed while controlling dopants and defects; slicing, lapping, etching, polishing and cleaning create a flat clean surface; metrology and customer qualification convert that surface into a repeatable process interface."
+example: "GlobalWafers opened a fully integrated 300mm silicon wafer facility in Sherman in 2025 after a CHIPS final award covering Texas and Missouri. Micron announced proposed strategic financing and a ten-year supply agreement in 2026, showing that qualified capacity requires capital and credible long-term demand as well as silicon feedstock."
+my_take: "I should evaluate wafer supply by exact diameter, wafer structure, electrical and defect specifications, customer qualification, available output and ramp stage rather than by silicon abundance or total wafer count."
+
+prerequisites:
+  - "SYSTEM.COMPUTE.FOUNDATION"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+connections:
+  - "SYSTEM.COMPUTE.FOUNDATION"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.DELAY"
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026"
+questions:
+  - "Starting from silica, what distinct transformations create a qualified wafer, and which specification or validation gate prevents an apparently similar wafer from substituting?"
+cases:
+  - "GlobalWafers Sherman 300mm wafer facility, 2022-2026"
+
+first_seen: "2026-11-03"
+last_reviewed: "2026-11-03"
+next_review: "2026-11-10"
+sources:
+  - "https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir4414.pdf"
+  - "https://www.sumcosi.com/english/products/process/"
+  - "https://www.gw-semi.com/technology/"
+  - "https://www.commerce.gov/news/press-releases/2024/12/biden-harris-administration-announces-chips-incentives-awards"
+  - "https://investors.micron.com/news/press-release/2026/Micron-Announces-Up-to-3-Billion-Strategic-Investment-to-Strengthen-U-S--Semiconductor-Ecosystem/default.aspx"
+notes: "L1 candidate pending a teach-back that distinguishes resource abundance from product-specific qualified capacity and explains purity, single crystallinity, orientation, diameter, surface, defectivity and customer validation without collapsing them into one quality score."

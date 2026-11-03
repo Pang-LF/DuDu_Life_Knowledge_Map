@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-02
+Last updated: 2026-11-03
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-02
 
 ## Next Immediate Focus（下一步）
 
-2026-11-03：进入 Silicon, Crystal & Wafer（硅、晶体与晶圆），解释为什么普通硅原料还不是可制造晶圆，以及纯度、单晶、直径、缺陷和表面怎样约束后续制造与供应经济性。
+2026-11-04：进入 Chip Fabrication Foundation（芯片制造基础），从一片合格晶圆出发，解释氧化、薄膜沉积、光刻、刻蚀与掺杂为什么必须反复循环才能形成器件，并追踪 Fab（晶圆厂）实际出售什么。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-02
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-03：从 11 月 2 日 Compute System Foundation（计算系统基础）直接下钻到第一种实体交付物，没有缺失课程日志。完成 Silicon, Crystal & Qualified Wafer（硅、晶体与合格晶圆）：把 Silica、Silicon Metal、Electronic-grade Polysilicon、Single-crystal Ingot、Polished / Epitaxial / SOI Wafer 与 Processed Wafer 分开，解释化学纯化、CZ 单晶生长、受控掺杂与电阻率、晶向、直径、切片、研磨、刻蚀、抛光、清洗、缺陷测量和客户资格化各自解决什么问题。300 mm 圆片面积在忽略边缘时是 200 mm 的 2.25 倍，但设备平台、产品类型和资格化使两种产能不可直接替换；简化 Poisson 模型只用于说明同一缺陷密度对大裸片良率影响更强。GlobalWafers Sherman 案例记录 Commerce 2024 年五家主要企业掌握超过 80% 的 300 mm 市场、约 90% 晶圆来源于东亚的当时估计，最高 4.06 亿美元 CHIPS 资助支持约 40 亿美元 Texas / Missouri 资本开支，GlobalWafers 2025 年 5 月宣布工厂开业，以及 Micron 2026 年 7 月宣布拟议 5 亿美元融资与十年供货协议；明确开业、样品、资格化、爬坡、满产不同，拟议交易仍受正式协议和审批条件约束。`SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER` 与 `BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS` 为 L1 candidate；下一课进入 Chip Fabrication Foundation。
 
 2026-11-02：进入 Semiconductor + Compute（半导体与计算）新模块，先定义母概念 Compute System（计算系统）：硬件、软件、网络、能源、冷却与运营共同把编码输入变成满足性能、可靠性和成本条件的有用输出。课程跟随一颗合格汽车 MCU，依次区分设计信息、加工晶圆、裸片、封装测试芯片、ECU 模块、验证后的整车功能与最终车辆，说明每层交付对象不同，先进或通用产能不能自动替代缺失的特定工艺与合格能力。重访 2020-2022 汽车芯片短缺：Commerce RFI 记录难采购产品库存中位数从 2019 年 40 天降到 2021 年不足 5 天、需求相对 2019 年最多增长 17%、多数 Fab 利用率达到或超过 90%；Ford 2021 年 4 月预计当年约减少 110 万辆产量并产生约 25 亿美元 Adjusted EBIT 不利影响，明确这些是当时预测而非审计后的单因果总额。GAO 2026 将生产分为设计、晶圆制造和 ATP，并指出新设施通常需 2 至 5 年投运。Industry Apprenticeship 新增 Fabless、Foundry、IDM、OSAT 与 Hyperscaler 的交付物、钱流和议价权。`SYSTEM.COMPUTE.FOUNDATION` 与 `BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN` 为 L1 candidate；下一课进入 Silicon, Crystal & Wafer。
 

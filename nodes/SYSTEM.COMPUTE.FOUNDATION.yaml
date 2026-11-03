@@ -18,6 +18,7 @@ prerequisites:
   - "META.SYSTEMS.INTEGRATION"
 connections:
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER"
   - "META.SYSTEMS.INTEGRATION"
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "META.SYSTEMS.BOTTLENECK"
@@ -31,11 +32,11 @@ cases:
   - "Global automotive semiconductor shortage, 2020-2022"
 
 first_seen: "2026-11-02"
-last_reviewed: "2026-11-02"
-next_review: "2026-11-09"
+last_reviewed: "2026-11-03"
+next_review: "2026-11-10"
 sources:
   - "https://files.gao.gov/reports/GAO-26-107882/index.html"
   - "https://www.commerce.gov/news/blog/2022/01/results-semiconductor-supply-chain-request-information"
   - "https://www.nist.gov/system/files/documents/2022/09/06/CHIPS-for-America-Strategy.pdf"
   - "https://www.sec.gov/Archives/edgar/data/38009/000003800921000038/exhibit99toapril282021fm.htm"
-notes: "L1 candidate pending a teach-back that reconstructs an unfamiliar compute service from user output to software, system, chip, fabrication, equipment and materials without treating layer capacity as interchangeable."
+notes: "L1 candidate pending a teach-back that reconstructs an unfamiliar compute service from user output to software, system, chip, fabrication, equipment and materials without treating layer capacity as interchangeable. Reviewed through the qualified-wafer transfer on 2026-11-03; no automatic mastery upgrade."

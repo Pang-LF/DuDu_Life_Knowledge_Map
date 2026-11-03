@@ -69,6 +69,8 @@ const nodePoints: NodePoint[] = [
   { id: 'SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION', x: 735, y: 555, labelSide: 'left', mapLabel: 'Time & Location（时间与地点）', mapId: 'SYSTEM.ENERGY.TIME_LOCATION' },
   { id: 'SYSTEM.COMPUTE.FOUNDATION', x: 995, y: 705, labelSide: 'left', mapLabel: 'Compute Foundation（计算基础）', mapId: 'SYSTEM.COMPUTE.FOUNDATION' },
   { id: 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', x: 260, y: 520, labelSide: 'right', mapLabel: 'Compute Value Chain（计算价值链）', mapId: 'BUS.SEMICONDUCTOR.VALUE_CHAIN' },
+  { id: 'SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER', x: 1000, y: 535, labelSide: 'left', mapLabel: 'Silicon & Wafer（硅与晶圆）', mapId: 'SYSTEM.SEMICONDUCTOR.WAFER' },
+  { id: 'BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS', x: 250, y: 650, labelSide: 'right', mapLabel: 'Wafer Economics（晶圆经济学）', mapId: 'BUS.SEMICONDUCTOR.WAFER_ECON' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -106,7 +108,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.COMPUTE.FOUNDATION')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

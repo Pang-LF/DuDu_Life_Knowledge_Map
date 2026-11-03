@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-11-03
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 从 2026-11-02 Compute Foundation 直接继续进入 Silicon, Crystal & Wafer，没有缺失课程日志
+- 完成 `SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER`，把晶圆定义为纯度、单晶、掺杂、电阻率、晶向、直径、几何、表面、缺陷与客户资格共同形成的制造接口
+- 分开 Silica、Silicon Metal、Polysilicon、Single-crystal Ingot、Polished / Epitaxial / SOI Wafer 与 Processed Wafer
+- 用 300 mm 对 200 mm 的 2.25 倍面积与简化 Poisson 缺陷模型解释直径经济性和大裸片良率敏感性，同时保留设备平台、边缘损失和真实缺陷分布边界
+- 新增 `BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS`，追踪晶圆供应商、Fab、政府和长期客户之间的资本、规格、资格化、钱流与风险分配
+- 新增 `CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开美国 300 mm 晶圆能力重建
+- 记录 Commerce 2024 年市场集中与地区来源估计、最高 4.06 亿美元 CHIPS 资助与约 40 亿美元预期资本开支、2025 年工厂开业和 Micron 2026 年拟议 5 亿美元融资及十年协议
+- 明确开业、样品、资格化、爬坡与满产不同；120 万片/月是分阶段完全建成计划，Micron 交易仍受正式协议和审批条件约束
+- 更新 Compute Foundation、Value Chain、行业日志、Questions、CURRENT_STATE 与网站数据，不因迁移自动升级旧节点
+- 下一课锁定 Chip Fabrication Foundation 与 Fab Economics
+
 ## 2026-11-02
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

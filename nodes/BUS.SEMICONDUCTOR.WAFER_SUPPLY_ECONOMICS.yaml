@@ -1,0 +1,40 @@
+id: "BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS"
+name_en: "Semiconductor Wafer Supply Economics"
+name_zh: "半导体晶圆供应经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Wafer supply economics concern the capital, process know-how, qualification, product mix, utilization and contracts required to deliver fab-ready substrates of a specified diameter, structure, electrical range, geometry and defect level."
+why: "A fab pays for predictable process performance and yield rather than kilograms of silicon; therefore qualified capacity, switching cost and long investment cycles can create concentration and bargaining power even when the underlying element is abundant."
+mechanism: "Wafer suppliers commit capital and operate crystal growth, slicing, polishing, cleaning, specialty processing and metrology; customers qualify exact products and may provide long-term demand or financing; price and power reflect product-specific scarcity, yield impact, switching time, utilization and contract risk."
+example: "Commerce supported roughly USD 4 billion of GlobalWafers projects with up to USD 406 million in milestone-based funding. After the Sherman facility opened, Micron announced proposed USD 500 million strategic financing and a ten-year supply agreement for access to 300mm capacity."
+my_take: "I should separate theoretical wafer equipment capacity from customer-qualified capacity and ask who funds expansion, who bears underutilization or demand risk, what product is reserved and what physical or contractual event proves supply."
+
+prerequisites:
+  - "SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+connections:
+  - "SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "SYSTEM.COMPUTE.FOUNDATION"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.DELAY"
+  - "BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL"
+  - "CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026"
+questions:
+  - "What exact wafer product is qualified, who pays for the capacity before demand arrives, which metrics prove performance, and how does a long-term agreement trade supply assurance for flexibility?"
+cases:
+  - "GlobalWafers Sherman 300mm wafer facility, 2022-2026"
+
+first_seen: "2026-11-03"
+last_reviewed: "2026-11-03"
+next_review: "2026-11-10"
+sources:
+  - "https://www.commerce.gov/news/press-releases/2024/07/biden-harris-administration-announces-preliminary-terms-globalwafers"
+  - "https://www.nist.gov/chips/globalwafers-texas-sherman"
+  - "https://www.sas-globalwafers.com/en/gwc_news_en_20250516/"
+  - "https://investors.micron.com/news/press-release/2026/Micron-Announces-Up-to-3-Billion-Strategic-Investment-to-Strengthen-U-S--Semiconductor-Ecosystem/default.aspx"
+notes: "Industry-application L1 candidate pending a teach-back that follows money and risk across supplier capex, customer qualification, milestone funding and long-term offtake without treating announced capacity or contracts as completed supply."
