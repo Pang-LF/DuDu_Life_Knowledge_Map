@@ -20,18 +20,21 @@ connections:
   - "SYSTEM.COMPUTE.FOUNDATION"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
   - "BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS"
+  - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
+  - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
   - "META.SYSTEMS.BOTTLENECK"
   - "META.SYSTEMS.DELAY"
   - "SYSTEM.ENERGY.FOUNDATION"
   - "FRONTIER.AI.INFRASTRUCTURE"
   - "CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026"
+  - "CASE.FAIRCHILD.PLANAR_PROCESS.1957_1961"
 questions:
   - "Starting from silica, what distinct transformations create a qualified wafer, and which specification or validation gate prevents an apparently similar wafer from substituting?"
 cases:
   - "GlobalWafers Sherman 300mm wafer facility, 2022-2026"
 
 first_seen: "2026-11-03"
-last_reviewed: "2026-11-03"
+last_reviewed: "2026-11-04"
 next_review: "2026-11-10"
 sources:
   - "https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir4414.pdf"
@@ -39,4 +42,4 @@ sources:
   - "https://www.gw-semi.com/technology/"
   - "https://www.commerce.gov/news/press-releases/2024/12/biden-harris-administration-announces-chips-incentives-awards"
   - "https://investors.micron.com/news/press-release/2026/Micron-Announces-Up-to-3-Billion-Strategic-Investment-to-Strengthen-U-S--Semiconductor-Ecosystem/default.aspx"
-notes: "L1 candidate pending a teach-back that distinguishes resource abundance from product-specific qualified capacity and explains purity, single crystallinity, orientation, diameter, surface, defectivity and customer validation without collapsing them into one quality score."
+notes: "L1 candidate pending a teach-back that distinguishes resource abundance from product-specific qualified capacity and explains purity, single crystallinity, orientation, diameter, surface, defectivity and customer validation without collapsing them into one quality score. Reviewed as the starting interface for fabrication on 2026-11-04; no automatic mastery upgrade."

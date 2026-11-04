@@ -36,3 +36,19 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Evidence boundary: 2024 concentration figures are dated estimates; the 1.2 million wafers/month number was a staged full-build plan, not opening output; public sources do not disclose current qualification, yield, utilization or contract economics.
 - Status: `SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER` and `BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS` at L1 candidate; Teach-back pending.
 - Next: Chip Fabrication Foundation — how repeated oxidation, deposition, lithography, etch and doping transform a qualified wafer into many working devices.
+
+### 2026-11-04 — A Fab Sells Repeatable Design-to-Good-Die Conversion, Not One Printing Step
+
+- Continuity: continued directly from the 2026-11-03 qualified-wafer lesson; no missing completion log.
+- Question: how do repeated film formation, lithographic selection, etch, doping, anneal, planarization, cleaning and metrology turn a qualified wafer into processed wafers, and what does a foundry actually sell?
+- Parent concept: `SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION` defines fabrication as repeated temporary pattern selection followed by permanent material or electrical modification inside one integrated process window.
+- Minimum unit: one patterned opening in a film selects where later etch, implantation, diffusion, contact or interconnect formation occurs.
+- Deep case: Jean Hoerni's Fairchild planar process retained silicon dioxide over sensitive junctions while opening controlled windows for diffusion and contacts, improving surface stability and enabling repeated same-side processing foundational to monolithic ICs.
+- Modern scale: NIST describes modern fabrication at the order of 40-100 repeated pattern cycles, 40-70 masks and up to roughly 2,000 total steps; these are order-of-magnitude descriptions, not a universal route.
+- Foundry product: the customer buys a qualified design-to-good-die conversion platform—design rules, process technology, wafer starts, cycle time, process control, yield learning and delivery—not bare wafer area or lithography exposure alone.
+- TSMC scale: 2025 disclosures reported more than 17 million 12-inch-equivalent wafers of annual capacity, about 15.022 million shipments, US$40.895 billion of capital expenditure and 59.9% gross margin; utilization, price, cost improvement, product mix, exchange rates and new-technology ramps all affect economics.
+- Revenue boundary: TSMC's 3Q26 79% advanced-technology wafer-revenue share is not wafer-volume share, transistor share or a generic foundry margin.
+- Risk allocation: Fabless customers fund design, masks, engineering lots and demand commitments; foundries fund facilities, tools, process R&D and depreciation; both remain exposed to interface, forecast, qualification and disruption risk.
+- Evidence boundary: the toy repeated-opportunity yield calculation is not a fab forecast; public TSMC data do not disclose universal per-wafer pricing, contract allocation or product-level yield.
+- Status: `SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION` and `BUS.SEMICONDUCTOR.FAB_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Chip Design, PDK & Tape-out — how abstract circuits become manufacturable layouts and mask data through the foundry interface.

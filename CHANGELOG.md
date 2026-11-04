@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-11-04
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 从 2026-11-03 合格晶圆直接继续进入 Chip Fabrication Foundation，没有缺失课程日志
+- 完成 `SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION`，把制造定义为反复创建临时图形边界，再选择性增加、移除或电性修改材料的逐层累积过程
+- 分开 Circuit Design、Photomask、Photoresist、Lithography、Etch / Implant / Deposition 与 Process Integration，明确光刻不会独自制造完整芯片
+- 用 Fairchild 1957–1961 Planar Process 案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开氧化层怎样从扩散掩膜变成永久保护层与同侧加工平台
+- 记录 NIST 的 40–100 次重复、40–70 张光罩、最高约 2,000 步数量级，并明确不是所有产品的通用配方
+- 用 100 次独立机会的简化模型比较 99.9% 与 99.5% 单点成功率，明确它只解释重复流程放大稳定性差异，不是实际 Fab 良率预测
+- 新增 `BUS.SEMICONDUCTOR.FAB_ECONOMICS`，把 Foundry 产品定义为从设计到 Good Die 的已验证转换能力，并追踪设计、光罩、投片、周期、良率、利用率、资本和切换风险
+- 记录 TSMC 2025 年超过 1,700 万片 12 英寸等效产能、约 1,502.2 万片出货、约 408.95 亿美元资本开支与 59.9% 毛利率，以及 3Q26 先进技术占晶圆收入 79%；明确收入占比不是片数占比
+- 新增 `CASE.FAIRCHILD.PLANAR_PROCESS.1957_1961`，更新前置节点、行业日志、Questions、CURRENT_STATE 与网站数据，不因迁移自动升级旧节点
+- 下一课锁定 Chip Design, PDK & Tape-out 与 Foundry Customer Interface
+
 ## 2026-11-03
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

@@ -71,6 +71,8 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', x: 260, y: 520, labelSide: 'right', mapLabel: 'Compute Value Chain（计算价值链）', mapId: 'BUS.SEMICONDUCTOR.VALUE_CHAIN' },
   { id: 'SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER', x: 1000, y: 535, labelSide: 'left', mapLabel: 'Silicon & Wafer（硅与晶圆）', mapId: 'SYSTEM.SEMICONDUCTOR.WAFER' },
   { id: 'BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS', x: 250, y: 650, labelSide: 'right', mapLabel: 'Wafer Economics（晶圆经济学）', mapId: 'BUS.SEMICONDUCTOR.WAFER_ECON' },
+  { id: 'SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION', x: 955, y: 485, labelSide: 'left', mapLabel: 'Fabrication（芯片制造）', mapId: 'SYSTEM.SEMICONDUCTOR.FABRICATION' },
+  { id: 'BUS.SEMICONDUCTOR.FAB_ECONOMICS', x: 340, y: 685, labelSide: 'right', mapLabel: 'Fab Economics（晶圆厂经济学）', mapId: 'BUS.SEMICONDUCTOR.FAB_ECON' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -108,7 +110,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(
@@ -160,7 +162,7 @@ function App() {
           </div>
           <ol className="route-list">
             {monthlyTrack.map((item, index) => (
-              <li className={index === 0 ? 'current' : ''} key={item}>
+              <li className={index === 1 ? 'current' : ''} key={item}>
                 <span>{index + 1}</span>
                 {item}
               </li>

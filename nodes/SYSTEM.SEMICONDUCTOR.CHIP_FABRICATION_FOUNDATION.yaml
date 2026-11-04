@@ -1,0 +1,40 @@
+id: "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
+name_en: "Chip Fabrication Foundation"
+name_zh: "芯片制造基础"
+domain: "SYSTEM"
+module: "Compute Systems（计算系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Chip fabrication repeatedly creates temporary pattern boundaries and uses them to control where films are added, materials are removed, electrical properties are modified, surfaces are flattened and results are measured, accumulating many aligned layers into devices and interconnects."
+why: "A circuit layout, mask, exposed resist, processed wafer, die and good die are different objects; treating fabrication as one printing step hides process integration, overlay, defect, yield and cycle-time constraints."
+mechanism: "Form or deposit a film; coat, align, expose and develop photoresist; transfer the temporary pattern through etch, implantation or selective material formation; strip, anneal, planarize, clean and measure; then repeat within a shared coordinate system and process window."
+example: "Jean Hoerni's 1959 planar process retained silicon dioxide over sensitive junctions while opening controlled windows for diffusion and contacts, improving surface stability and enabling repeated same-side processing that became foundational to monolithic integrated circuits."
+my_take: "I should reconstruct a fabricated feature by asking which temporary mask selected its position, which operation made the permanent change, how the result was measured and how its output constrained the next layer."
+
+prerequisites:
+  - "SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER"
+  - "SYSTEM.COMPUTE.FOUNDATION"
+connections:
+  - "SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER"
+  - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.DELAY"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "CASE.FAIRCHILD.PLANAR_PROCESS.1957_1961"
+questions:
+  - "For one fabricated feature, what temporary pattern selected its location, what operation made the permanent material or electrical change, how was it measured and what had to remain compatible with the next layer?"
+cases:
+  - "Fairchild planar process, 1957-1961"
+
+first_seen: "2026-11-04"
+last_reviewed: "2026-11-04"
+next_review: "2026-11-11"
+sources:
+  - "https://patents.google.com/patent/US3025589A/en"
+  - "https://www.computerhistory.org/siliconengine/invention-of-the-planar-manufacturing-process/"
+  - "https://nvlpubs.nist.gov/nistpubs/CHIPS/NIST.CHIPS.1000.pdf"
+  - "https://www.nist.gov/system/files/documents/2024/06/28/Final%20PEA%20for%20Modernization%20and%20Expansion%20of%20Semiconductor%20Fabs%206-28-2024%20-%20OGC-508C.pdf"
+notes: "L1 candidate pending a teach-back that separates temporary patterning from permanent material change and reconstructs a multilayer flow without collapsing lithography, etch, deposition, doping, planarization and metrology into one step."

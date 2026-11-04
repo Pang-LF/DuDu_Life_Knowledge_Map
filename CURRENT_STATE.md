@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-03
+Last updated: 2026-11-04
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-03
 
 ## Next Immediate Focus（下一步）
 
-2026-11-04：进入 Chip Fabrication Foundation（芯片制造基础），从一片合格晶圆出发，解释氧化、薄膜沉积、光刻、刻蚀与掺杂为什么必须反复循环才能形成器件，并追踪 Fab（晶圆厂）实际出售什么。
+2026-11-05：进入 Chip Design, PDK & Tape-out（芯片设计、工艺设计套件与设计定稿），解释抽象电路怎样被 Foundry 工艺规则约束、验证并冻结成可制造的版图和光罩数据，同时追踪设计公司与 Foundry 各自拥有和负责什么。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-03
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-04：从 11 月 3 日合格 Wafer（晶圆）直接进入 Front-end Fabrication（前道制造），没有缺失课程日志。完成 Chip Fabrication Foundation（芯片制造基础）：把 Lithography（光刻）定义为临时位置选择，把 Deposition / Oxidation（沉积 / 氧化）、Etch（刻蚀）和 Doping（掺杂）定义为永久材料或电性修改，并解释 Anneal（退火）、CMP（化学机械平坦化）、Cleaning（清洗）与 Metrology（计量）怎样使下一层仍拥有可靠坐标。Fairchild Planar Process（仙童平面工艺）案例从 Mesa Transistor（台面晶体管）的表面污染与漏电问题展开：Jean Hoerni 在 1959 年保留 Silicon Dioxide（氧化硅）覆盖敏感结，只在受控窗口扩散和接触；同侧反复加工随后为 Noyce 的单片集成电路互连提供平台。NIST 给出的现代数量级为 40–100 次重复、40–70 张光罩、最高约 2,000 步，明确不是通用配方。Industry Apprenticeship 将 Foundry 产品定义为 Design-to-Good-Die Conversion（从设计到良品裸片的转换能力），并记录 TSMC 2025 年超过 1,700 万片 12 英寸等效产能、约 1,502.2 万片出货、约 408.95 亿美元资本开支与 59.9% 毛利率；3Q26 的 79% 先进技术晶圆收入是收入占比，不是片数或晶体管占比。`SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION` 与 `BUS.SEMICONDUCTOR.FAB_ECONOMICS` 为 L1 candidate；下一课进入 Chip Design, PDK & Tape-out。
 
 2026-11-03：从 11 月 2 日 Compute System Foundation（计算系统基础）直接下钻到第一种实体交付物，没有缺失课程日志。完成 Silicon, Crystal & Qualified Wafer（硅、晶体与合格晶圆）：把 Silica、Silicon Metal、Electronic-grade Polysilicon、Single-crystal Ingot、Polished / Epitaxial / SOI Wafer 与 Processed Wafer 分开，解释化学纯化、CZ 单晶生长、受控掺杂与电阻率、晶向、直径、切片、研磨、刻蚀、抛光、清洗、缺陷测量和客户资格化各自解决什么问题。300 mm 圆片面积在忽略边缘时是 200 mm 的 2.25 倍，但设备平台、产品类型和资格化使两种产能不可直接替换；简化 Poisson 模型只用于说明同一缺陷密度对大裸片良率影响更强。GlobalWafers Sherman 案例记录 Commerce 2024 年五家主要企业掌握超过 80% 的 300 mm 市场、约 90% 晶圆来源于东亚的当时估计，最高 4.06 亿美元 CHIPS 资助支持约 40 亿美元 Texas / Missouri 资本开支，GlobalWafers 2025 年 5 月宣布工厂开业，以及 Micron 2026 年 7 月宣布拟议 5 亿美元融资与十年供货协议；明确开业、样品、资格化、爬坡、满产不同，拟议交易仍受正式协议和审批条件约束。`SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER` 与 `BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS` 为 L1 candidate；下一课进入 Chip Fabrication Foundation。
 
