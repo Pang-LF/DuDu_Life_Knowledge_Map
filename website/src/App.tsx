@@ -73,6 +73,8 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS', x: 250, y: 650, labelSide: 'right', mapLabel: 'Wafer Economics（晶圆经济学）', mapId: 'BUS.SEMICONDUCTOR.WAFER_ECON' },
   { id: 'SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION', x: 955, y: 485, labelSide: 'left', mapLabel: 'Fabrication（芯片制造）', mapId: 'SYSTEM.SEMICONDUCTOR.FABRICATION' },
   { id: 'BUS.SEMICONDUCTOR.FAB_ECONOMICS', x: 340, y: 685, labelSide: 'right', mapLabel: 'Fab Economics（晶圆厂经济学）', mapId: 'BUS.SEMICONDUCTOR.FAB_ECON' },
+  { id: 'SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT', x: 900, y: 535, labelSide: 'left', mapLabel: 'PDK / Tape-out（设计定稿）', mapId: 'SYS.PDK.TAPEOUT' },
+  { id: 'BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE', x: 300, y: 590, labelSide: 'right', mapLabel: 'Foundry Interface（代工接口）', mapId: 'BUS.SEMICONDUCTOR.FOUNDRY_INTERFACE' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -110,7 +112,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

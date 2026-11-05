@@ -1,0 +1,43 @@
+id: "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
+name_en: "Fabless-Foundry Design and Responsibility Interface"
+name_zh: "无晶圆厂设计公司与晶圆代工厂的设计及责任接口"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "The fabless-foundry interface allocates product design, licensed IP, EDA tools, process technology, PDK versions, signoff evidence, masks, manufacturing execution, yield diagnosis, change control, payment and liability among customers, foundries and ecosystem partners."
+why: "A foundry does not merely print customer drawings, and a customer does not acquire the process recipe by receiving a PDK; successful silicon requires coherent technical baselines, contract-specific ownership and disciplined attribution when design, data, process, mask, packaging or test failures occur."
+mechanism: "The customer funds design, verification, EDA, IP, masks or NRE, engineering lots and production demand; the foundry funds process R&D, facilities, equipment, control and manufacturing. Each party verifies the objects it controls, while interface data, waivers, revisions, yield attribution, mask rights, respins and remedies are governed by acceptance procedures and contracts."
+example: "The open SKY130 program separated roles visibly: SkyWater supplied process and foundry support, Google sponsored the program, Efabless supplied submission and RTL-to-GDS infrastructure, and designers supplied open projects that had to pass license, integrity and DRC gates before sharing a 40-slot shuttle."
+my_take: "I should trace who owns or licenses each design and process artifact, who can change it, who verifies it, who pays before and after tape-out, and which evidence distinguishes a design bug from process nonconformance or ambiguous yield loss."
+
+prerequisites:
+  - "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
+  - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+connections:
+  - "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
+  - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
+  - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.DELAY"
+  - "BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL"
+  - "CASE.SKYWATER.GOOGLE.OPEN_PDK_MPW.2020_2023"
+questions:
+  - "For a tape-out failure, which party owned, licensed, changed and verified each artifact; what acceptance or contract boundary applies; and what evidence separates design error, interface mismatch, process nonconformance, random defect, packaging and test?"
+cases:
+  - "Google, SkyWater and Efabless open SKY130 PDK and MPW program, 2020-2023"
+
+first_seen: "2026-11-05"
+last_reviewed: "2026-11-05"
+next_review: "2026-11-12"
+sources:
+  - "https://www.skywatertechnology.com/google-partners-with-skywater-and-efabless-to-enable-open-source-manufacturing-of-custom-asics/"
+  - "https://opensource.googleblog.com/2023/11/open-source-pdks-joining-linux-foundation-chips-alliance.html"
+  - "https://www.tsmc.com/english/dedicatedFoundry/oip"
+  - "https://www.cld.tsmc.com/english/dedicatedFoundry/oip/eda_alliance"
+  - "https://www.synopsys.com/articles/guidelines-for-integration.html"
+notes: "Industry-application L1 candidate pending a teach-back that traces ownership, licenses, money, version control, signoff, masks, manufacturing, yield diagnosis and respin risk without inventing confidential liability or compensation terms."

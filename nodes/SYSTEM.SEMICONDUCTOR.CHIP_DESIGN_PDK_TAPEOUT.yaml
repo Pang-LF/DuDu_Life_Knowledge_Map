@@ -1,0 +1,43 @@
+id: "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
+name_en: "Chip Design, PDK and Tape-out"
+name_zh: "芯片设计、工艺设计套件与设计定稿"
+domain: "SYSTEM"
+module: "Compute Systems（计算系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A foundry PDK translates a specific manufacturing process into executable device models, layer definitions, design and extraction rules, verification decks and supported design structures; tape-out freezes and transfers one version-controlled design database after complementary functional, electrical and physical signoff."
+why: "RTL, a netlist, a layout, GDS or OASIS data, accepted tape-out data, masks, first silicon and qualified production are different states; clean DRC or LVS does not prove product intent, timing, power, yield or field reliability."
+mechanism: "Convert specifications into RTL or schematics; verify function; map the design into process-characterized cells and devices; floorplan, place, clock and route the physical implementation; extract parasitics and sign off timing, power, integrity, DRC and LVS against coherent PDK, IP and tool versions; then freeze and stream out the manufacturing database."
+example: "Google, SkyWater and Efabless paired the open SKY130 PDK with OpenLane, a submission platform, standardized harness and sponsored multi-project wafer runs. By 2023 Google reported 360 manufactured designs from more than 600 submissions across 19 countries, while the PDK repository still preserved an experimental-preview production boundary."
+my_take: "I should ask what exact PDK, library, IP, tool, rule-deck and design versions were signed off; which proposition each check proved; what data was frozen; and which later manufacturing, bring-up and qualification gates remain."
+
+prerequisites:
+  - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
+  - "SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER"
+  - "SYSTEM.COMPUTE.FOUNDATION"
+connections:
+  - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
+  - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
+  - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.DELAY"
+  - "CASE.SKYWATER.GOOGLE.OPEN_PDK_MPW.2020_2023"
+questions:
+  - "For one tape-out, which specification, RTL or schematic, netlist, layout, PDK, library, IP, tool and signoff versions form the manufacturing baseline, and what does each verification result fail to guarantee?"
+cases:
+  - "Google, SkyWater and Efabless open SKY130 PDK and MPW program, 2020-2023"
+
+first_seen: "2026-11-05"
+last_reviewed: "2026-11-05"
+next_review: "2026-11-12"
+sources:
+  - "https://opensource.googleblog.com/2023/11/open-source-pdks-joining-linux-foundation-chips-alliance.html"
+  - "https://www.skywatertechnology.com/google-partners-with-skywater-and-efabless-to-enable-open-source-manufacturing-of-custom-asics/"
+  - "https://github.com/google/skywater-pdk"
+  - "https://openlane2.readthedocs.io/en/latest/getting_started/newcomers/index.html"
+  - "https://community.cadence.com/cadence_blogs_8/b/cic/posts/what-s-all-the-hoopla-with-pdks"
+  - "https://www.synopsys.com/articles/guidelines-for-integration.html"
+notes: "L1 candidate pending a teach-back that reconstructs an unfamiliar design from product intent to a version-controlled tape-out and correctly distinguishes functional verification, DRC, LVS, electrical signoff, accepted data, first silicon and production qualification."

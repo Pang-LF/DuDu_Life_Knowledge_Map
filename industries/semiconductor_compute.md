@@ -52,3 +52,20 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Evidence boundary: the toy repeated-opportunity yield calculation is not a fab forecast; public TSMC data do not disclose universal per-wafer pricing, contract allocation or product-level yield.
 - Status: `SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION` and `BUS.SEMICONDUCTOR.FAB_ECONOMICS` at L1 candidate; Teach-back pending.
 - Next: Chip Design, PDK & Tape-out — how abstract circuits become manufacturable layouts and mask data through the foundry interface.
+
+### 2026-11-05 — PDK and Tape-out Form a Versioned Design-to-Manufacturing Interface
+
+- Continuity: continued directly from the 2026-11-04 fabrication foundation; no missing completion log.
+- Question: how does abstract product intent become a foundry-accepted manufacturing database, and how do Fabless, Foundry, EDA, IP and mask partners divide ownership, payment, verification and failure risk?
+- Parent concept: `SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT` defines a PDK as executable process models, layer definitions and verification rules, while tape-out freezes one coherent design, PDK, IP, tool and signoff baseline for manufacturing transfer.
+- Object map: specification, RTL or schematic, gate-level netlist, physical layout, GDS / OASIS, accepted tape-out data, mask data, first silicon and qualified production are distinct states.
+- Verification boundary: DRC checks encoded geometric rules; LVS checks extracted devices and connectivity against a reference; functional, timing, power, integrity and reliability checks answer different questions. No single clean report proves the complete product.
+- Deep case: Google, SkyWater and Efabless paired the open SKY130 PDK with OpenLane, a standardized harness, submission gates and sponsored MPW manufacturing rather than assuming a downloadable file alone could create silicon.
+- Program scale: SkyWater reported more than 1,700 PDK downloads in the first two weeks of the November 2020 program; each shuttle offered 40 slots. Google reported in 2023 that 360 designs had been manufactured from more than 600 submissions across 19 countries.
+- Cost mechanism: MPW shares fixed mask and shuttle preparation across designs; the 1/40 or 2.5% calculation is a toy equal-slot allocation, not an actual price or mask-cost estimate.
+- Production boundary: the open SKY130 repository explicitly labeled the PDK an experimental preview and not production-ready at the cited stage, even though the underlying commercial process had manufactured many designs.
+- Money and responsibility: customers fund design, EDA, IP, masks / NRE, engineering lots and production; foundries fund process R&D, facilities, tools and manufacturing control. Design bugs, process nonconformance and ambiguous yield loss require artifact history, failure analysis and contract-specific boundaries.
+- Power: foundry leverage comes from scarce process, accurate PDK, certified EDA / IP ecosystem, manufacturing performance and switching time; customer leverage comes from volume, engineering capability, predictable demand and credible alternatives.
+- Evidence boundary: cumulative program figures are not a single-run acceptance rate or causal estimate; commercial mask rights, yield guarantees, respin remedies and liability terms are usually confidential and contract-specific.
+- Status: `SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT` and `BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE` at L1 candidate; Teach-back pending.
+- Next: Lithography, Resolution & Overlay — how signed-off geometry becomes aligned resist patterns and which actors control the equipment, masks, materials and process integration.

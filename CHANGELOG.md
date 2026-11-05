@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 2026-11-05
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 从 2026-11-04 Chip Fabrication Foundation 直接继续进入 Chip Design, PDK & Tape-out，没有缺失课程日志
+- 完成 `SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT`，把 PDK 定义为 Foundry 工艺的可执行模型、层、提取与验证接口，把 Tape-out 定义为版本受控的制造数据承诺点而非正确 silicon 保证
+- 跟随一个 AND Gate 从规格、RTL、功能验证、综合和门级网表进入平面规划、布局、时钟树、布线、寄生提取、签核与 GDS / OASIS stream-out
+- 分开 Functional Verification、DRC、LVS、Timing / Power / Integrity Signoff、Tape-out、First Silicon 与 Production Qualification，明确每一步证明和没有证明什么
+- 新增 `CASE.SKYWATER.GOOGLE.OPEN_PDK_MPW.2020_2023`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开开放 PDK 为什么仍需工具、提交门、标准 harness、MPW 与真实 Foundry
+- 记录 SKY130 发布后两周超过 1,700 次下载、每次 shuttle 40 个名额，以及 Google 2023 年累计 360 个制造设计、600 多个提交与 19 个国家；明确这些不是单轮录取率或生产保证
+- 用 40-slot MPW 做 `1 / 40 = 2.5%` 的简化固定成本分摊，明确不代表真实 mask、shuttle、封装或测试价格
+- 新增 `BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE`，追踪 Fabless、Foundry、EDA、IP 和 Mask 伙伴的所有权、许可、钱流、版本、签核、失效归因与 respin 风险
+- 保留开放 SKY130 PDK 当时的 Experimental Preview 边界，以及商业 mask rights、yield guarantees、respin remedies 与赔偿条款的合同保密边界
+- 更新前置节点、行业日志、Questions、CURRENT_STATE 与网站数据，不因迁移自动升级旧节点
+- 下一课锁定 Lithography, Resolution & Overlay 与 Lithography Ecosystem
+
 ## 2026-11-04
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

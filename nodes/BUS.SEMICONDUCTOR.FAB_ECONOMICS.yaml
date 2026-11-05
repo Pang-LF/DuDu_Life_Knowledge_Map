@@ -21,6 +21,8 @@ connections:
   - "SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
   - "BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS"
+  - "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
+  - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
   - "META.SYSTEMS.BOTTLENECK"
   - "META.SYSTEMS.DELAY"
   - "BUS.ENERGY.CAPACITY_FACTOR_UTILIZATION"
@@ -31,10 +33,10 @@ cases:
   - "Fairchild planar process, 1957-1961"
 
 first_seen: "2026-11-04"
-last_reviewed: "2026-11-04"
+last_reviewed: "2026-11-05"
 next_review: "2026-11-11"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm"
   - "https://investor.tsmc.com/english/encrypt/files/encrypt_file/qr/phase4_reports/2026-10/cb1c588cc3b2009f97afa57a6d7c146ae1e27808/3Q26%20EarningsRelease_WoG.pdf"
   - "https://www.tsmc.com/english/dedicatedFoundry/services"
-notes: "Industry-application L1 candidate pending a teach-back that follows money and risk across customer design, masks, wafer starts, fab capex, process ramp, yield, utilization, cycle time and qualified good-die delivery without inferring undisclosed per-wafer prices."
+notes: "Industry-application L1 candidate pending a teach-back that follows money and risk across customer design, masks, wafer starts, fab capex, process ramp, yield, utilization, cycle time and qualified good-die delivery without inferring undisclosed per-wafer prices. Reviewed through PDK governance, signoff and tape-out responsibility on 2026-11-05; no automatic mastery upgrade."

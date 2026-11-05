@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-04
+Last updated: 2026-11-05
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-04
 
 ## Next Immediate Focus（下一步）
 
-2026-11-05：进入 Chip Design, PDK & Tape-out（芯片设计、工艺设计套件与设计定稿），解释抽象电路怎样被 Foundry 工艺规则约束、验证并冻结成可制造的版图和光罩数据，同时追踪设计公司与 Foundry 各自拥有和负责什么。
+2026-11-06：进入 Lithography, Resolution & Overlay（光刻、分辨率与套刻），解释已签核版图怎样通过光罩、光源、光学系统、光刻胶与工艺控制形成晶圆图形，并追踪设备、光罩、材料、Foundry 与客户之间的控制权和瓶颈。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-04
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-05：从 11 月 4 日 Chip Fabrication Foundation（芯片制造基础）直接进入设计—制造接口，没有缺失课程日志。完成 Chip Design, PDK & Tape-out（芯片设计、工艺设计套件与设计定稿）：把 PDK 定义为 Foundry 将真实工艺能力和边界翻译成器件模型、层定义、设计规则、提取与 LVS / DRC 规则集等可执行接口；把 Tape-out 定义为在一致的设计、PDK、IP、EDA 和签核版本下冻结制造数据库，而不是正确 silicon 的保证。课程跟随一个 AND Gate 从规格、RTL、功能验证、综合、门级网表、平面规划、布局、时钟树和布线进入寄生提取与签核，分开 Functional Verification、DRC、LVS、Timing / Power / Integrity Signoff、accepted data、mask、first silicon 与量产资格。Google、SkyWater 与 Efabless 的 2020–2023 Open SKY130 PDK / MPW 案例说明开放文件仍需 OpenLane、标准 harness、许可 / 数据完整性 / DRC 门、40-slot 共享制造和真实 Foundry；Google 2023 年累计记录 360 个制造设计、600 多个提交与 19 个国家，明确不是单轮录取率或因果估计。开放仓库当时明确标记为 experimental preview，不可把底层商业工艺已有量产经验误写为开放 PDK 的生产保证。Industry Apprenticeship 分开 Fabless、Foundry、EDA、IP 与 Mask 伙伴的所有权、许可、钱流、签核、工艺执行、失效归因与 respin 风险，并保留具体 mask rights、yield guarantees 和赔偿条款的合同边界。`SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT` 与 `BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE` 为 L1 candidate；下一课进入 Lithography, Resolution & Overlay。
 
 2026-11-04：从 11 月 3 日合格 Wafer（晶圆）直接进入 Front-end Fabrication（前道制造），没有缺失课程日志。完成 Chip Fabrication Foundation（芯片制造基础）：把 Lithography（光刻）定义为临时位置选择，把 Deposition / Oxidation（沉积 / 氧化）、Etch（刻蚀）和 Doping（掺杂）定义为永久材料或电性修改，并解释 Anneal（退火）、CMP（化学机械平坦化）、Cleaning（清洗）与 Metrology（计量）怎样使下一层仍拥有可靠坐标。Fairchild Planar Process（仙童平面工艺）案例从 Mesa Transistor（台面晶体管）的表面污染与漏电问题展开：Jean Hoerni 在 1959 年保留 Silicon Dioxide（氧化硅）覆盖敏感结，只在受控窗口扩散和接触；同侧反复加工随后为 Noyce 的单片集成电路互连提供平台。NIST 给出的现代数量级为 40–100 次重复、40–70 张光罩、最高约 2,000 步，明确不是通用配方。Industry Apprenticeship 将 Foundry 产品定义为 Design-to-Good-Die Conversion（从设计到良品裸片的转换能力），并记录 TSMC 2025 年超过 1,700 万片 12 英寸等效产能、约 1,502.2 万片出货、约 408.95 亿美元资本开支与 59.9% 毛利率；3Q26 的 79% 先进技术晶圆收入是收入占比，不是片数或晶体管占比。`SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION` 与 `BUS.SEMICONDUCTOR.FAB_ECONOMICS` 为 L1 candidate；下一课进入 Chip Design, PDK & Tape-out。
 

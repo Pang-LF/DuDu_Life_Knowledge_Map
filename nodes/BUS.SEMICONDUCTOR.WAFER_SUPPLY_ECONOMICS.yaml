@@ -18,6 +18,7 @@ prerequisites:
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
   - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
   - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
 connections:
   - "SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
@@ -32,11 +33,11 @@ cases:
   - "GlobalWafers Sherman 300mm wafer facility, 2022-2026"
 
 first_seen: "2026-11-03"
-last_reviewed: "2026-11-04"
+last_reviewed: "2026-11-05"
 next_review: "2026-11-10"
 sources:
   - "https://www.commerce.gov/news/press-releases/2024/07/biden-harris-administration-announces-preliminary-terms-globalwafers"
   - "https://www.nist.gov/chips/globalwafers-texas-sherman"
   - "https://www.sas-globalwafers.com/en/gwc_news_en_20250516/"
   - "https://investors.micron.com/news/press-release/2026/Micron-Announces-Up-to-3-Billion-Strategic-Investment-to-Strengthen-U-S--Semiconductor-Ecosystem/default.aspx"
-notes: "Industry-application L1 candidate pending a teach-back that follows money and risk across supplier capex, customer qualification, milestone funding and long-term offtake without treating announced capacity or contracts as completed supply. Reviewed at the raw-wafer-to-processed-wafer handoff on 2026-11-04; no automatic mastery upgrade."
+notes: "Industry-application L1 candidate pending a teach-back that follows money and risk across supplier capex, customer qualification, milestone funding and long-term offtake without treating announced capacity or contracts as completed supply. Reviewed through the customer-foundry design interface on 2026-11-05; no automatic mastery upgrade."
