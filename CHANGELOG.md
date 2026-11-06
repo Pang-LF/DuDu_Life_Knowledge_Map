@@ -2,6 +2,7 @@
 
 ## 2026-11-06
 
+- GitHub 旧式 Pages 构建器连续未能发布已验证的静态产物；新增官方 Pages Actions 工作流，改由 `main` 自动构建并部署网站
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
 - 从 2026-11-05 PDK 与 Tape-out 接口直接继续进入 Lithography, Resolution & Overlay，没有缺失课程日志
 - 完成 `SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY`，分开 Resolution、CD、Overlay、EPE、Process Window、Throughput 与 Yield
