@@ -75,6 +75,8 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.SEMICONDUCTOR.FAB_ECONOMICS', x: 340, y: 685, labelSide: 'right', mapLabel: 'Fab Economics（晶圆厂经济学）', mapId: 'BUS.SEMICONDUCTOR.FAB_ECON' },
   { id: 'SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT', x: 900, y: 535, labelSide: 'left', mapLabel: 'PDK / Tape-out（设计定稿）', mapId: 'SYS.PDK.TAPEOUT' },
   { id: 'BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE', x: 300, y: 590, labelSide: 'right', mapLabel: 'Foundry Interface（代工接口）', mapId: 'BUS.SEMICONDUCTOR.FOUNDRY_INTERFACE' },
+  { id: 'SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY', x: 855, y: 492, labelSide: 'left', mapLabel: 'Lithography（光刻与套刻）', mapId: 'SYS.LITHO.OVERLAY' },
+  { id: 'BUS.SEMICONDUCTOR.LITHOGRAPHY_ECOSYSTEM', x: 400, y: 505, labelSide: 'right', mapLabel: 'Lithography Ecosystem（光刻生态）', mapId: 'BUS.LITHO.ECOSYSTEM' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -112,7 +114,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

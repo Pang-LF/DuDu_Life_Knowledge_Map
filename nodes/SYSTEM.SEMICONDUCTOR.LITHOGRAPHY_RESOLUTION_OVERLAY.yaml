@@ -1,0 +1,46 @@
+id: "SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY"
+name_en: "Lithography, Resolution and Overlay"
+name_zh: "光刻、分辨率与套刻"
+domain: "SYSTEM"
+module: "Compute Systems（计算系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Lithography converts one layer of reticle geometry into a temporary photoresist pattern while resolution separates fine features, critical-dimension control determines their printed size, and overlay places them relative to existing layers; their combined edge placement determines whether later pattern transfer forms the intended device."
+why: "A sharp current-layer image can still fail when it is misaligned to prior layers, while accurate alignment cannot rescue unresolved or incorrectly sized features; separating these constraints is necessary for understanding process windows, defects, yield and lithography economics."
+mechanism: "Coat and condition resist; measure wafer height and alignment marks; synchronize reticle and wafer stages; expose through a wavelength, numerical aperture and illumination system; develop the latent image; measure CD, focus, overlay and defects; feed corrections into later exposures; then transfer the accepted resist pattern into material."
+example: "ASML's EUV program moved from a 2010 pre-production system and a 2013 production system toward 250 W source power, roughly 125 wafers per hour and the first EUV-enabled commercial products in 2019, requiring source, vacuum, mirrors, reticle, resist, stages, metrology and customer process learning to mature together."
+my_take: "For a failed patterned feature, I should ask separately whether the image resolved, printed to the intended CD, aligned to the correct prior layer, retained edge-placement margin, survived pattern transfer and did so across the wafer at production throughput."
+
+prerequisites:
+  - "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
+  - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
+connections:
+  - "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
+  - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
+  - "BUS.SEMICONDUCTOR.LITHOGRAPHY_ECOSYSTEM"
+  - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.DELAY"
+  - "CASE.ASML.EUV.LAB_TO_FAB.1997_2019"
+questions:
+  - "For one failed via or line, did resolution, CD, overlay, edge placement, resist, mask, metrology or pattern transfer leave the permitted process window, and what measurement can distinguish them?"
+cases:
+  - "ASML EUV from laboratory concept to high-volume manufacturing, 1997-2019"
+
+first_seen: "2026-11-06"
+last_reviewed: "2026-11-06"
+next_review: "2026-11-13"
+sources:
+  - "https://www.asml.com/en/technology/lithography-principles/rayleigh-criterion"
+  - "https://www.asml.com/en/technology/lithography-principles"
+  - "https://www.asml.com/technology/lithography-principles/measuring-accuracy"
+  - "https://www.asml.com/en/company/stories/2022/making-euv-lab-to-fab"
+  - "https://www.asml.com/news/press-releases/2011/asml-announces-2011-fourth-quarter-and-full-year-results-asml-achieves-record-2011-sales"
+  - "https://www.asml.com/en/products/euv-lithography-systems/twinscan-nxe3400b"
+  - "https://www.zeiss.com/semiconductor-manufacturing-technology/inspiring-technology/euv-lithography.html"
+notes: "L1 candidate pending a teach-back that diagnoses an unfamiliar patterned feature by separating resolution, CD, overlay, EPE, process window and pattern-transfer evidence."

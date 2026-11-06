@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 2026-11-06
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 从 2026-11-05 PDK 与 Tape-out 接口直接继续进入 Lithography, Resolution & Overlay，没有缺失课程日志
+- 完成 `SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY`，分开 Resolution、CD、Overlay、EPE、Process Window、Throughput 与 Yield
+- 跟随一个 Via 解释为什么边缘清晰仍可能因层间错位而开路，并沿 Reticle、光源、光学、光刻胶、平台、对准、量测与 Pattern Transfer 重建机制
+- 用 `CD = k1 × λ / NA` 和保持 k1 相同的 193 nm / 1.35 DUV 对 13.5 nm / 0.33 EUV 简化比较建立数量级直觉，明确 29% 比值不是实际产品 CD 预测
+- 新增 `CASE.ASML.EUV.LAB_TO_FAB.1997_2019`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开 EUV 为什么必须由整个生态共同成熟
+- 分开 2010 年预生产系统、2013 年生产系统、250 W 与约 125 wafers/hour、2018 年客户投资和 2019 年商业产品等不同成熟状态
+- 新增 `BUS.SEMICONDUCTOR.LITHOGRAPHY_ECOSYSTEM`，追踪 ASML、ZEISS、TRUMPF、光罩、光刻胶、计量、Foundry / IDM 与 Fabless 客户的资产、钱流、资格化、服务和切换延迟
+- 用 ASML 2025 年 48 台 EUV 与 279 台 DUV 系统说明技术共存，明确系统台数不等于曝光份额、晶圆产能或客户经济性
+- 保留公司里程碑、设备规格、完整因果归属、客户良率和单层成本之间的证据边界
+- 更新前置节点、行业日志、Questions、CURRENT_STATE 与网站数据，不因迁移自动升级旧节点
+- 下一课锁定 Process Node, Defect & Yield Learning 与 Yield Learning Economics
+
 ## 2026-11-05
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

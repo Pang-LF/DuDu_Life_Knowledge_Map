@@ -69,3 +69,20 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Evidence boundary: cumulative program figures are not a single-run acceptance rate or causal estimate; commercial mask rights, yield guarantees, respin remedies and liability terms are usually confidential and contract-specific.
 - Status: `SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT` and `BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE` at L1 candidate; Teach-back pending.
 - Next: Lithography, Resolution & Overlay — how signed-off geometry becomes aligned resist patterns and which actors control the equipment, masks, materials and process integration.
+
+### 2026-11-06 — Lithography Must Resolve One Layer and Align It to Every Layer Below
+
+- Continuity: continued directly from the 2026-11-05 PDK and tape-out interface; no missing completion log.
+- Question: how does signed-off geometry become an aligned resist pattern, and which equipment, mask, material, metrology, foundry and customer interfaces control the result?
+- Parent concept: `SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY` separates resolution, printed critical dimension, overlay, edge placement, process window, throughput and final yield.
+- Minimum unit: one via can be sharply resolved yet electrically open when its printed hole is too small or misaligned to the underlying metal landing pad.
+- Optical mechanism: Rayleigh's simplified relationship `CD = k1 × wavelength / NA` explains why shorter wavelength and larger numerical aperture help, while process, mask, resist and stochastic limits prevent the equation from being a product-CD forecast.
+- Toy comparison: with equal k1, `193 / 1.35 ≈ 143 nm` for immersion DUV and `13.5 / 0.33 ≈ 41 nm` for EUV, making the EUV optical scale about 29% of the DUV value; multiple patterning and full process integration remain outside this calculation.
+- Deep case: ASML's EUV path moved from work begun in 1997 to a 2010 pre-production system, a 2013 production system, 250 W source power associated with roughly 125 wafers per hour and the first EUV-enabled commercial products in 2019.
+- System mechanism: tin-plasma source, vacuum, multilayer mirrors, reflective reticle, resist, synchronized stages, alignment sensors and metrology had to mature together; first light was not high-volume manufacturing.
+- Coexistence: ASML reported 48 EUV and 279 DUV systems sold in 2025. Unit counts are not exposure share or wafer capacity, but they show that EUV did not eliminate DUV across all layers.
+- Money and control: foundries and IDMs purchase tools, masks, materials, services and process learning; fabless customers fund design, NRE and wafer orders; ASML integrates EUV systems while ZEISS, TRUMPF and other specialized suppliers control critical interfaces.
+- Power: bargaining power comes from scarce integrated capability, qualification and switching delay. The active bottleneck can move among scanners, optics, sources, masks, resists, metrology and foundry learning.
+- Evidence boundary: throughput and overlay figures are company specifications or milestones under stated conditions; ASML's history does not allocate complete causal credit or disclose customer layer economics and yield.
+- Status: `SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY` and `BUS.SEMICONDUCTOR.LITHOGRAPHY_ECOSYSTEM` at L1 candidate; Teach-back pending.
+- Next: Process Node, Defect & Yield Learning — what a node name does and does not describe, and how variation becomes good-die economics.

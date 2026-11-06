@@ -17,6 +17,8 @@ prerequisites:
   - "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
   - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY"
+  - "BUS.SEMICONDUCTOR.LITHOGRAPHY_ECOSYSTEM"
 connections:
   - "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
   - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
@@ -32,7 +34,7 @@ cases:
   - "Google, SkyWater and Efabless open SKY130 PDK and MPW program, 2020-2023"
 
 first_seen: "2026-11-05"
-last_reviewed: "2026-11-05"
+last_reviewed: "2026-11-06"
 next_review: "2026-11-12"
 sources:
   - "https://www.skywatertechnology.com/google-partners-with-skywater-and-efabless-to-enable-open-source-manufacturing-of-custom-asics/"
@@ -40,4 +42,4 @@ sources:
   - "https://www.tsmc.com/english/dedicatedFoundry/oip"
   - "https://www.cld.tsmc.com/english/dedicatedFoundry/oip/eda_alliance"
   - "https://www.synopsys.com/articles/guidelines-for-integration.html"
-notes: "Industry-application L1 candidate pending a teach-back that traces ownership, licenses, money, version control, signoff, masks, manufacturing, yield diagnosis and respin risk without inventing confidential liability or compensation terms."
+notes: "Industry-application L1 candidate pending a teach-back that traces ownership, licenses, money, version control, signoff, masks, manufacturing, yield diagnosis and respin risk without inventing confidential liability or compensation terms. Reviewed through the division between customer layout, foundry recipe and equipment or materials capability on 2026-11-06; no automatic mastery upgrade."

@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-05
+Last updated: 2026-11-06
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-05
 
 ## Next Immediate Focus（下一步）
 
-2026-11-06：进入 Lithography, Resolution & Overlay（光刻、分辨率与套刻），解释已签核版图怎样通过光罩、光源、光学系统、光刻胶与工艺控制形成晶圆图形，并追踪设备、光罩、材料、Foundry 与客户之间的控制权和瓶颈。
+2026-11-07：进入 Process Node, Defect & Yield Learning（制程节点、缺陷与良率学习），解释节点名称描述和没有描述什么，局部缺陷与参数波动怎样变成 Good Die（良品裸片）、成本与学习曲线，并追踪 Foundry、设备材料商与客户怎样分配爬坡风险。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-05
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-06：从 11 月 5 日 PDK 与 Tape-out 接口直接进入实际图形成像与层间定位，没有缺失课程日志。完成 Lithography, Resolution & Overlay（光刻、分辨率与套刻）：把 Lithography 定义为在光刻胶中形成临时位置图形，把 Resolution、Critical Dimension / CD、Overlay 与 Edge Placement Error / EPE 分开，跟随一个 Via 解释为什么“边缘清晰”仍可能因错位而完全不导电。课程用 `CD = k1 × λ / NA` 建立光学直觉，并用保持 k1 相同的简化计算比较 193 nm / 1.35 DUV 与 13.5 nm / 0.33 EUV 的 `λ / NA`，明确 29% 比值不是实际产品 CD 预测。ASML EUV 1997–2019 案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：2010 年预生产系统、2013 年生产系统、250 W 光源与约 125 wafers/hour、2019 年首款商业产品是不同成熟状态；一滴锡必须经过激光等离子体、真空、多层镜、反射光罩、光刻胶、精密平台与量测闭环，才可能成为量产图形。Industry Apprenticeship 追踪 ASML、ZEISS、TRUMPF、光罩、光刻胶、计量、Foundry / IDM 与 Fabless 客户之间的资产、钱流、资格化、服务和切换延迟，并用 ASML 2025 年 48 台 EUV 与 279 台 DUV 系统说明共存而非立即替代；系统台数不等于曝光份额或晶圆产能。`SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY` 与 `BUS.SEMICONDUCTOR.LITHOGRAPHY_ECOSYSTEM` 为 L1 candidate；下一课进入 Process Node, Defect & Yield Learning。
 
 2026-11-05：从 11 月 4 日 Chip Fabrication Foundation（芯片制造基础）直接进入设计—制造接口，没有缺失课程日志。完成 Chip Design, PDK & Tape-out（芯片设计、工艺设计套件与设计定稿）：把 PDK 定义为 Foundry 将真实工艺能力和边界翻译成器件模型、层定义、设计规则、提取与 LVS / DRC 规则集等可执行接口；把 Tape-out 定义为在一致的设计、PDK、IP、EDA 和签核版本下冻结制造数据库，而不是正确 silicon 的保证。课程跟随一个 AND Gate 从规格、RTL、功能验证、综合、门级网表、平面规划、布局、时钟树和布线进入寄生提取与签核，分开 Functional Verification、DRC、LVS、Timing / Power / Integrity Signoff、accepted data、mask、first silicon 与量产资格。Google、SkyWater 与 Efabless 的 2020–2023 Open SKY130 PDK / MPW 案例说明开放文件仍需 OpenLane、标准 harness、许可 / 数据完整性 / DRC 门、40-slot 共享制造和真实 Foundry；Google 2023 年累计记录 360 个制造设计、600 多个提交与 19 个国家，明确不是单轮录取率或因果估计。开放仓库当时明确标记为 experimental preview，不可把底层商业工艺已有量产经验误写为开放 PDK 的生产保证。Industry Apprenticeship 分开 Fabless、Foundry、EDA、IP 与 Mask 伙伴的所有权、许可、钱流、签核、工艺执行、失效归因与 respin 风险，并保留具体 mask rights、yield guarantees 和赔偿条款的合同边界。`SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT` 与 `BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE` 为 L1 candidate；下一课进入 Lithography, Resolution & Overlay。
 

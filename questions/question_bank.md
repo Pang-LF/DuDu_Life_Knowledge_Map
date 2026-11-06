@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-06 — 对一个失败的 Via 或 Line，Resolution、CD、Overlay、EPE、光刻胶、光罩、量测与后续 Pattern Transfer 中哪项离开了 Process Window，什么测量能把它们区分开？
+- 2026-11-06 — 对一层 Lithography，设备、光学、光源、光罩、光刻胶、量测、Foundry 与 Fabless 参与者分别拥有和控制什么，谁承担资本与经常性成本，当前瓶颈的证据是什么？
+
 - 2026-11-05 — 对一次 Tape-out，哪些规格、RTL / 电路、网表、版图、PDK、Library、IP、EDA Tool 与 Signoff Deck 版本共同构成制造基线，每项验证又没有证明什么？
 - 2026-11-05 — 一次流片失败时，Fabless、Foundry、EDA、IP 与 Mask 伙伴分别拥有、许可、修改、验证和支付哪些对象，什么证据能区分设计错误、接口不一致、工艺偏离、随机缺陷、封装与测试？
 

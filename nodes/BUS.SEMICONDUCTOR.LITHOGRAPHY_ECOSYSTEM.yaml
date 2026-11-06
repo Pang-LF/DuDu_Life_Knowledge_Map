@@ -1,0 +1,44 @@
+id: "BUS.SEMICONDUCTOR.LITHOGRAPHY_ECOSYSTEM"
+name_en: "Lithography Equipment and Process Ecosystem"
+name_zh: "光刻设备与工艺生态"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "The lithography ecosystem allocates scanner integration, optics, light sources, masks, pellicles, photoresists, process chemicals, metrology, maintenance, process recipes, design constraints, capital and qualification among specialized suppliers, foundries or IDMs and fabless customers."
+why: "No actor independently delivers patterned good die: scarce equipment must be integrated with qualified materials, masks, measurements and foundry process control, while switching delay and co-development determine bargaining power and capacity."
+mechanism: "Foundries and IDMs fund tools, facilities, masks, materials, service and process learning; equipment integrators coordinate critical subsystem suppliers; fabless customers fund design, NRE and wafer orders; recurring service, upgrades and consumables sustain the installed base; process data and qualification tie the ecosystem together."
+example: "ASML integrates EUV scanners, ZEISS supplies critical optics and TRUMPF lasers help drive the tin-plasma source, while foundries integrate masks, resists, metrology and etch. ASML reported 48 EUV and 279 DUV system sales in 2025, illustrating coexistence rather than immediate replacement."
+my_take: "I should trace who owns each artifact and process capability, who pays capital versus recurring costs, which interfaces are jointly qualified, how long switching takes and whether the active bottleneck is scanner supply, optics, source, mask, resist, metrology or process learning."
+
+prerequisites:
+  - "SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY"
+  - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
+connections:
+  - "SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY"
+  - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
+  - "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
+  - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.DELAY"
+  - "CASE.ASML.EUV.LAB_TO_FAB.1997_2019"
+questions:
+  - "For one lithography layer, which firm supplies and controls each scanner, optical, source, mask, resist, metrology and recipe interface; who pays capital and recurring cost; and what evidence identifies the current bottleneck?"
+cases:
+  - "ASML EUV from laboratory concept to high-volume manufacturing, 1997-2019"
+
+first_seen: "2026-11-06"
+last_reviewed: "2026-11-06"
+next_review: "2026-11-13"
+sources:
+  - "https://www.asml.com/en/company/stories/2022/making-euv-lab-to-fab"
+  - "https://www.asml.com/investors/annual-report/2025"
+  - "https://www.asml.com/en/technology/lithography-principles/lenses-and-mirrors"
+  - "https://www.zeiss.com/semiconductor-manufacturing-technology/inspiring-technology/euv-lithography.html"
+notes: "Industry-application L1 candidate pending a teach-back that follows capital, recurring money, control rights, qualification and switching delays across the lithography ecosystem without treating equipment unit counts as wafer capacity or exposure share."
