@@ -24,6 +24,8 @@ connections:
   - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
   - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD"
+  - "BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS"
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "META.SYSTEMS.BOTTLENECK"
   - "META.SYSTEMS.DELAY"
@@ -34,11 +36,11 @@ cases:
   - "ASML EUV from laboratory concept to high-volume manufacturing, 1997-2019"
 
 first_seen: "2026-11-06"
-last_reviewed: "2026-11-06"
+last_reviewed: "2026-11-07"
 next_review: "2026-11-13"
 sources:
   - "https://www.asml.com/en/company/stories/2022/making-euv-lab-to-fab"
   - "https://www.asml.com/investors/annual-report/2025"
   - "https://www.asml.com/en/technology/lithography-principles/lenses-and-mirrors"
   - "https://www.zeiss.com/semiconductor-manufacturing-technology/inspiring-technology/euv-lithography.html"
-notes: "Industry-application L1 candidate pending a teach-back that follows capital, recurring money, control rights, qualification and switching delays across the lithography ecosystem without treating equipment unit counts as wafer capacity or exposure share."
+notes: "Industry-application L1 candidate pending a teach-back that follows capital, recurring money, control rights, qualification and switching delays across the lithography ecosystem without treating equipment unit counts as wafer capacity or exposure share. Reviewed through the distinction between equipment capability and product-level defect, parameter and yield learning on 2026-11-07; no automatic mastery upgrade."

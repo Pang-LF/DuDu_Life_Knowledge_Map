@@ -24,17 +24,20 @@ connections:
   - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
   - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD"
+  - "BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS"
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "META.SYSTEMS.DELAY"
   - "BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL"
   - "CASE.SKYWATER.GOOGLE.OPEN_PDK_MPW.2020_2023"
+  - "CASE.INTEL.10NM.YIELD_RAMP.2017_2021"
 questions:
   - "For a tape-out failure, which party owned, licensed, changed and verified each artifact; what acceptance or contract boundary applies; and what evidence separates design error, interface mismatch, process nonconformance, random defect, packaging and test?"
 cases:
   - "Google, SkyWater and Efabless open SKY130 PDK and MPW program, 2020-2023"
 
 first_seen: "2026-11-05"
-last_reviewed: "2026-11-06"
+last_reviewed: "2026-11-07"
 next_review: "2026-11-12"
 sources:
   - "https://www.skywatertechnology.com/google-partners-with-skywater-and-efabless-to-enable-open-source-manufacturing-of-custom-asics/"
@@ -42,4 +45,4 @@ sources:
   - "https://www.tsmc.com/english/dedicatedFoundry/oip"
   - "https://www.cld.tsmc.com/english/dedicatedFoundry/oip/eda_alliance"
   - "https://www.synopsys.com/articles/guidelines-for-integration.html"
-notes: "Industry-application L1 candidate pending a teach-back that traces ownership, licenses, money, version control, signoff, masks, manufacturing, yield diagnosis and respin risk without inventing confidential liability or compensation terms. Reviewed through the division between customer layout, foundry recipe and equipment or materials capability on 2026-11-06; no automatic mastery upgrade."
+notes: "Industry-application L1 candidate pending a teach-back that traces ownership, licenses, money, version control, signoff, masks, manufacturing, yield diagnosis and respin risk without inventing confidential liability or compensation terms. Reviewed through the division between customer layout, foundry recipe and supplier capability on 2026-11-06, then through learning-data, low-yield, delay and contract allocation on 2026-11-07; no automatic mastery upgrade."

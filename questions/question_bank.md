@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-07 — 对一个新节点上的大 Die，Node 标签、Gross Dies、致命缺陷、参数分布、Bin Mix、Wafer Starts、Cycle Time 与 Good Die 分别怎样影响交付，什么证据能把它们区分开？
+- 2026-11-07 — Foundry、Fabless 客户与设备材料商分别支付哪些爬坡成本、拥有和共享哪些学习数据，合同中的定价、优先权、良率保证与救济怎样改变风险分配？
+
 - 2026-11-06 — 对一个失败的 Via 或 Line，Resolution、CD、Overlay、EPE、光刻胶、光罩、量测与后续 Pattern Transfer 中哪项离开了 Process Window，什么测量能把它们区分开？
 - 2026-11-06 — 对一层 Lithography，设备、光学、光源、光罩、光刻胶、量测、Foundry 与 Fabless 参与者分别拥有和控制什么，谁承担资本与经常性成本，当前瓶颈的证据是什么？
 

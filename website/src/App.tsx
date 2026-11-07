@@ -77,6 +77,8 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE', x: 300, y: 590, labelSide: 'right', mapLabel: 'Foundry Interface（代工接口）', mapId: 'BUS.SEMICONDUCTOR.FOUNDRY_INTERFACE' },
   { id: 'SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY', x: 855, y: 492, labelSide: 'left', mapLabel: 'Lithography（光刻与套刻）', mapId: 'SYS.LITHO.OVERLAY' },
   { id: 'BUS.SEMICONDUCTOR.LITHOGRAPHY_ECOSYSTEM', x: 400, y: 505, labelSide: 'right', mapLabel: 'Lithography Ecosystem（光刻生态）', mapId: 'BUS.LITHO.ECOSYSTEM' },
+  { id: 'SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD', x: 795, y: 465, labelSide: 'left', mapLabel: 'Node & Yield（节点与良率）', mapId: 'SYS.NODE.YIELD' },
+  { id: 'BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS', x: 455, y: 475, labelSide: 'right', mapLabel: 'Yield Learning（良率学习）', mapId: 'BUS.YIELD.LEARNING' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -114,7 +116,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

@@ -23,6 +23,8 @@ connections:
   - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
   - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD"
+  - "BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS"
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "META.SYSTEMS.BOTTLENECK"
   - "META.SYSTEMS.DELAY"
@@ -33,7 +35,7 @@ cases:
   - "ASML EUV from laboratory concept to high-volume manufacturing, 1997-2019"
 
 first_seen: "2026-11-06"
-last_reviewed: "2026-11-06"
+last_reviewed: "2026-11-07"
 next_review: "2026-11-13"
 sources:
   - "https://www.asml.com/en/technology/lithography-principles/rayleigh-criterion"
@@ -43,4 +45,4 @@ sources:
   - "https://www.asml.com/news/press-releases/2011/asml-announces-2011-fourth-quarter-and-full-year-results-asml-achieves-record-2011-sales"
   - "https://www.asml.com/en/products/euv-lithography-systems/twinscan-nxe3400b"
   - "https://www.zeiss.com/semiconductor-manufacturing-technology/inspiring-technology/euv-lithography.html"
-notes: "L1 candidate pending a teach-back that diagnoses an unfamiliar patterned feature by separating resolution, CD, overlay, EPE, process window and pattern-transfer evidence."
+notes: "L1 candidate pending a teach-back that diagnoses an unfamiliar patterned feature by separating resolution, CD, overlay, EPE, process window and pattern-transfer evidence. Reviewed through the downstream distinction between local pattern defects, parametric variation and good-die yield on 2026-11-07; no automatic mastery upgrade."

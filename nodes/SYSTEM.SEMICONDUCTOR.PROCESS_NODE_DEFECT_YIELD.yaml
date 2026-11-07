@@ -1,0 +1,46 @@
+id: "SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD"
+name_en: "Process Node, Defect and Yield Learning"
+name_zh: "制程节点、缺陷与良率学习"
+domain: "SYSTEM"
+module: "Compute Systems（计算系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A process node is a qualified process generation spanning transistor, interconnect, materials, design rules, libraries, PDK and manufacturing conditions; defects and parameter variation determine how much wafer area becomes functional, in-spec good die, while yield learning uses linked production evidence to shift that distribution."
+why: "Node names do not directly reveal product dimensions, maturity, yield, cost or capacity; separating gross die, functional yield, parametric yield and bin mix is necessary for understanding semiconductor supply, cost, ramp timing and competitive power."
+mechanism: "Fabricate repeated structures across a wafer; inspect local defects and measure process parameters; electrically test die; classify spatial and tool signatures; correlate failures with chambers, recipes, materials, masks and design patterns; test root-cause hypotheses through controlled changes; then update process control and design rules so fewer die fail and more land in valuable bins."
+example: "Intel disclosed that 10nm volume production moved from the second half of 2018 into 2019, entered full production in 2019, and still had lower yield than mature 14nm in 2020 while a higher 10nm product mix increased unit cost and pressured gross margin."
+my_take: "When I see a node or yield claim, I should identify the process family, product and maturity state; define the yield denominator; separate fatal defects from parametric distribution; calculate good die rather than wafer starts; and ask what linked evidence validates the claimed learning mechanism."
+
+prerequisites:
+  - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
+  - "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
+  - "SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY"
+connections:
+  - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
+  - "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
+  - "SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY"
+  - "BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.SYSTEMS.FEEDBACK_LOOP"
+  - "META.SYSTEMS.DELAY"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "CASE.INTEL.10NM.YIELD_RAMP.2017_2021"
+questions:
+  - "For a new-node product with high wafer starts but poor delivery, how much loss comes from gross die geometry, fatal defects, parameter-bin distribution, cycle time, test coverage or packaging, and what evidence separates them?"
+cases:
+  - "Intel 10nm delay, production ramp and manufacturing economics, 2017-2021"
+
+first_seen: "2026-11-07"
+last_reviewed: "2026-11-07"
+next_review: "2026-11-14"
+sources:
+  - "https://www.intc.com/filings-reports/all-sec-filings/content/0000050863-19-000007/a12292018q4-10kdocument.htm"
+  - "https://www.intc.com/filings-reports/all-sec-filings/content/0000050863-20-000011/a12282019q4-10kdocument.htm"
+  - "https://www.intc.com/filings-reports/annual-reports/content/0000050863-21-000010/0000050863-21-000010.pdf"
+  - "https://www.intel.com/content/www/us/en/support/articles/000097598.html"
+  - "https://download.intel.com/newsroom/2021/client-computing/accelerating-process-innovation.pdf"
+notes: "L1 candidate pending a teach-back that defines the process and product boundary, distinguishes defect-limited and parametric yield, reconstructs good-die economics, and identifies evidence needed to validate a yield-learning cause."

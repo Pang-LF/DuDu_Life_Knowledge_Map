@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-06
+Last updated: 2026-11-07
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-06
 
 ## Next Immediate Focus（下一步）
 
-2026-11-07：进入 Process Node, Defect & Yield Learning（制程节点、缺陷与良率学习），解释节点名称描述和没有描述什么，局部缺陷与参数波动怎样变成 Good Die（良品裸片）、成本与学习曲线，并追踪 Foundry、设备材料商与客户怎样分配爬坡风险。
+2026-11-08：进入 Wafer Sort, Binning & Known Good Die（晶圆测试、分档与已知良品裸片），解释晶圆探针与生产测试怎样从不确定的 Die 分布中识别功能合格、参数档位与可继续封装的裸片，并追踪测试覆盖、时间、误杀、漏检、封装成本和客户风险。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-06
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-07：从 11 月 6 日 Lithography, Resolution & Overlay 直接继续进入 Process Node, Defect & Yield Learning，没有缺失课程日志。完成 Process Node, Defect & Yield Learning（制程节点、缺陷与良率学习）：把 Process Node 定义为晶体管、互连、材料、设计规则、库、PDK 与制造条件共同组成的工艺代际，而不是一条可跨厂商直接比较的物理长度；把 Gross Dies、Functional Yield、Parametric Yield、Bin Mix 与 Good Die 分开。课程跟随一个局部颗粒如何按位置、尺寸、设计敏感度和冗余成为或不成为 Killer Defect，并用 300 mm 晶圆、100 / 600 mm² Die 与 `Y = e^(-D0 × A)` 建立透明教学模型：`D0 = 0.10 defects/cm²` 时简化 Yield 约 90.5% / 54.9%，减半后约 95.1% / 74.1%；明确这不是任何 Foundry 的产品数据。Intel 10nm 2017–2021 案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：2018 年文件记录量产从 2018 年下半年推迟至 2019 年，2019 年进入 Full Production，2020 年良率仍低于成熟 14nm 且较高 10nm mix 拖累单位成本与毛利，证明产品出货、量产爬坡和成熟经济性是不同状态。Industry Apprenticeship 追踪 Foundry / IDM、Fabless 客户与设备材料商怎样分配工程晶圆、报废、Mask / NRE、Respin、延迟和数据权利，并保留客户定价、良率保证与救济条款的合同边界。`SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD` 与 `BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS` 为 L1 candidate；下一课进入 Wafer Sort, Binning & Known Good Die。
 
 2026-11-06：从 11 月 5 日 PDK 与 Tape-out 接口直接进入实际图形成像与层间定位，没有缺失课程日志。完成 Lithography, Resolution & Overlay（光刻、分辨率与套刻）：把 Lithography 定义为在光刻胶中形成临时位置图形，把 Resolution、Critical Dimension / CD、Overlay 与 Edge Placement Error / EPE 分开，跟随一个 Via 解释为什么“边缘清晰”仍可能因错位而完全不导电。课程用 `CD = k1 × λ / NA` 建立光学直觉，并用保持 k1 相同的简化计算比较 193 nm / 1.35 DUV 与 13.5 nm / 0.33 EUV 的 `λ / NA`，明确 29% 比值不是实际产品 CD 预测。ASML EUV 1997–2019 案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：2010 年预生产系统、2013 年生产系统、250 W 光源与约 125 wafers/hour、2019 年首款商业产品是不同成熟状态；一滴锡必须经过激光等离子体、真空、多层镜、反射光罩、光刻胶、精密平台与量测闭环，才可能成为量产图形。Industry Apprenticeship 追踪 ASML、ZEISS、TRUMPF、光罩、光刻胶、计量、Foundry / IDM 与 Fabless 客户之间的资产、钱流、资格化、服务和切换延迟，并用 ASML 2025 年 48 台 EUV 与 279 台 DUV 系统说明共存而非立即替代；系统台数不等于曝光份额或晶圆产能。`SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY` 与 `BUS.SEMICONDUCTOR.LITHOGRAPHY_ECOSYSTEM` 为 L1 candidate；下一课进入 Process Node, Defect & Yield Learning。
 

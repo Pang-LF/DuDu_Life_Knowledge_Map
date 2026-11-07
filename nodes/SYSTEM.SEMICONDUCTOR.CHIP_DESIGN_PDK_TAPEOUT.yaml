@@ -24,6 +24,8 @@ connections:
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
   - "SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY"
   - "BUS.SEMICONDUCTOR.LITHOGRAPHY_ECOSYSTEM"
+  - "SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD"
+  - "BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS"
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "META.SYSTEMS.DELAY"
   - "CASE.SKYWATER.GOOGLE.OPEN_PDK_MPW.2020_2023"
@@ -33,7 +35,7 @@ cases:
   - "Google, SkyWater and Efabless open SKY130 PDK and MPW program, 2020-2023"
 
 first_seen: "2026-11-05"
-last_reviewed: "2026-11-06"
+last_reviewed: "2026-11-07"
 next_review: "2026-11-12"
 sources:
   - "https://opensource.googleblog.com/2023/11/open-source-pdks-joining-linux-foundation-chips-alliance.html"
@@ -42,4 +44,4 @@ sources:
   - "https://openlane2.readthedocs.io/en/latest/getting_started/newcomers/index.html"
   - "https://community.cadence.com/cadence_blogs_8/b/cic/posts/what-s-all-the-hoopla-with-pdks"
   - "https://www.synopsys.com/articles/guidelines-for-integration.html"
-notes: "L1 candidate pending a teach-back that reconstructs an unfamiliar design from product intent to a version-controlled tape-out and correctly distinguishes functional verification, DRC, LVS, electrical signoff, accepted data, first silicon and production qualification. Reviewed as the design input to reticles, exposure and overlay control on 2026-11-06; no automatic mastery upgrade."
+notes: "L1 candidate pending a teach-back that reconstructs an unfamiliar design from product intent to a version-controlled tape-out and correctly distinguishes functional verification, DRC, LVS, electrical signoff, accepted data, first silicon and production qualification. Reviewed as the design input to lithography on 2026-11-06 and to product-specific defect sensitivity and parameter distributions on 2026-11-07; no automatic mastery upgrade."

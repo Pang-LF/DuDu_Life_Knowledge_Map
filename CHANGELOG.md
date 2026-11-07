@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 2026-11-07
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 从 2026-11-06 Lithography, Resolution & Overlay 直接继续进入 Process Node, Defect & Yield Learning，没有缺失课程日志
+- 完成 `SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD`，把 Process Node 定义为完整工艺代际与设计—制造接口，而非可跨厂商直接比较的一条物理长度
+- 分开 Gross Dies、Wafer Yield、Functional Yield、Parametric Yield、Bin Mix 与 Good Die，明确任何良率声明都必须给出产品、阶段、规格和分母
+- 跟随一个局部颗粒解释位置、尺寸、结构、设计敏感度与冗余怎样决定它是否成为 Killer Defect
+- 用 300 mm 晶圆、100 / 600 mm² Die 和 `Y = e^(-D0 × A)` 建立透明教学模型，明确随机独立缺陷假设与 Foundry 真实产品数据之间的边界
+- 新增 `CASE.INTEL.10NM.YIELD_RAMP.2017_2021`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开延期、量产爬坡与成熟经济性的差别
+- 记录 Intel 2018 文件中的量产延期、2019 Full Production 以及 2020 年仍低于成熟 14nm 良率并拖累单位成本与毛利的公开边界
+- 新增 `BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS`，追踪 Foundry / IDM、Fabless 客户与设备材料商之间的工程晶圆、报废、Mask / NRE、Respin、延迟、数据和合同风险
+- 明确客户级 Wafer Price、Yield Guarantee、Data Rights 与 Remedy 通常保密，不从公开公司文件推造具体条款
+- 更新前置节点、行业日志、Questions、CURRENT_STATE 与网站数据，不因迁移自动升级旧节点
+- 下一课锁定 Wafer Sort, Binning & Known Good Die 与 Test / Binning Economics
+
 ## 2026-11-06
 
 - GitHub 旧式 Pages 构建器连续未能发布已验证的静态产物；新增官方 Pages Actions 工作流，改由 `main` 自动构建并部署网站

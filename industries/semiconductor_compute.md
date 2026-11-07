@@ -86,3 +86,20 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Evidence boundary: throughput and overlay figures are company specifications or milestones under stated conditions; ASML's history does not allocate complete causal credit or disclose customer layer economics and yield.
 - Status: `SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY` and `BUS.SEMICONDUCTOR.LITHOGRAPHY_ECOSYSTEM` at L1 candidate; Teach-back pending.
 - Next: Process Node, Defect & Yield Learning — what a node name does and does not describe, and how variation becomes good-die economics.
+
+### 2026-11-07 — A Node Name Becomes Commercial Only Through Good-Die Learning
+
+- Continuity: continued directly from the 2026-11-06 lithography lesson; no missing completion log.
+- Question: what does a process-node name describe, how do local defects and parameter variation become good die, and who pays for and controls early yield learning?
+- Parent concept: `SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD` defines a node as a qualified process generation across devices, interconnects, materials, design rules, libraries, PDK and manufacturing conditions rather than one literal dimension.
+- Minimum unit: one local particle can be harmless in a scribe lane, repairable in redundant memory or fatal on a critical clock or power path; location, size, structure, design sensitivity and repair determine its product effect.
+- Yield boundary: gross dies, wafer yield, functional die yield, parametric yield, bin mix and final known-good die use different denominators and cannot be exchanged.
+- Toy model: a 300mm wafer contains roughly 640 gross 100mm² positions or 91 gross 600mm² positions under a stated geometric approximation. At 0.10 defects/cm², independent Poisson yields are about 90.5% and 54.9%; at 0.05 they are about 95.1% and 74.1%.
+- Model boundary: random independent defects, edge geometry, repair, clustering, pattern sensitivity, parametric variation, test coverage and package yield make the calculation a mechanism model, not foundry product data.
+- Deep case: Intel disclosed that 10nm volume production moved from the second half of 2018 into 2019, reached full production in 2019, and still yielded below mature 14nm in 2020 while increased 10nm mix raised unit cost and pressured gross margin.
+- State distinction: process definition, working sample, first shipment, volume production and mature economics are separate states; a node name does not reveal product maturity, yield, cost, capacity or cycle time.
+- Learning mechanism: connect inspection, metrology and electrical failures to wafer position, tool chamber, recipe, material lot, reticle and design pattern; test root-cause candidates through controlled changes; then update process control and design rules.
+- Money and control: foundries fund fabs, process experiments, scrap and much of ramp; customers fund design, IP, masks / NRE, engineering wafers and orders while bearing respin and launch-window risk; equipment and material suppliers co-debug qualified interfaces.
+- Evidence boundary: Intel filings identify timing, relative yield and economic direction but not product-level yield percentages, defect density, confidential process details or one complete root cause. Customer-specific prices, guarantees, data rights and remedies remain private.
+- Status: `SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD` and `BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Wafer Sort, Binning & Known Good Die — how test converts an uncertain die population into accepted units and sellable grades before expensive packaging.

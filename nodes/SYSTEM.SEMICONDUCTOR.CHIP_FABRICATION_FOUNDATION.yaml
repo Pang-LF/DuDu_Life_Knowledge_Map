@@ -23,6 +23,8 @@ connections:
   - "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
   - "SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY"
   - "BUS.SEMICONDUCTOR.LITHOGRAPHY_ECOSYSTEM"
+  - "SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD"
+  - "BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS"
   - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "META.SYSTEMS.DELAY"
@@ -34,11 +36,11 @@ cases:
   - "Fairchild planar process, 1957-1961"
 
 first_seen: "2026-11-04"
-last_reviewed: "2026-11-06"
+last_reviewed: "2026-11-07"
 next_review: "2026-11-11"
 sources:
   - "https://patents.google.com/patent/US3025589A/en"
   - "https://www.computerhistory.org/siliconengine/invention-of-the-planar-manufacturing-process/"
   - "https://nvlpubs.nist.gov/nistpubs/CHIPS/NIST.CHIPS.1000.pdf"
   - "https://www.nist.gov/system/files/documents/2024/06/28/Final%20PEA%20for%20Modernization%20and%20Expansion%20of%20Semiconductor%20Fabs%206-28-2024%20-%20OGC-508C.pdf"
-notes: "L1 candidate pending a teach-back that separates temporary patterning from permanent material change and reconstructs a multilayer flow without collapsing lithography, etch, deposition, doping, planarization and metrology into one step. Reviewed through lithographic imaging, alignment and pattern-transfer boundaries on 2026-11-06; no automatic mastery upgrade."
+notes: "L1 candidate pending a teach-back that separates temporary patterning from permanent material change and reconstructs a multilayer flow without collapsing lithography, etch, deposition, doping, planarization and metrology into one step. Reviewed through lithographic imaging on 2026-11-06 and defect-to-good-die learning on 2026-11-07; no automatic mastery upgrade."
