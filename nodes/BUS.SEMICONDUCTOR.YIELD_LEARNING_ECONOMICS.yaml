@@ -24,6 +24,8 @@ connections:
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
   - "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
   - "SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY"
+  - "SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD"
+  - "BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS"
   - "META.SYSTEMS.FEEDBACK_LOOP"
   - "META.SYSTEMS.DELAY"
   - "META.SYSTEMS.BOTTLENECK"
@@ -34,10 +36,10 @@ cases:
   - "Intel 10nm delay, production ramp and manufacturing economics, 2017-2021"
 
 first_seen: "2026-11-07"
-last_reviewed: "2026-11-07"
+last_reviewed: "2026-11-08"
 next_review: "2026-11-14"
 sources:
   - "https://www.intc.com/filings-reports/all-sec-filings/content/0000050863-19-000007/a12292018q4-10kdocument.htm"
   - "https://www.intc.com/filings-reports/all-sec-filings/content/0000050863-20-000011/a12282019q4-10kdocument.htm"
   - "https://www.intc.com/filings-reports/annual-reports/content/0000050863-21-000010/0000050863-21-000010.pdf"
-notes: "Industry-application L1 candidate pending a teach-back that allocates technical artifacts, cash, delay, learning-data rights and risk across foundry, customer and suppliers without inventing confidential pricing, guarantees or remedies."
+notes: "Industry-application L1 candidate pending a teach-back that allocates technical artifacts, cash, delay, learning-data rights and risk across foundry, customer and suppliers without inventing confidential pricing, guarantees or remedies. Reviewed on 2026-11-08 through test data, false reject, escape and downstream-loss allocation; no automatic mastery upgrade."

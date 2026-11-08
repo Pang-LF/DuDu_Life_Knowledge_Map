@@ -1,0 +1,44 @@
+id: "SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD"
+name_en: "Wafer Sort, Binning and Known Good Die"
+name_zh: "晶圆测试、分档与已知良品裸片"
+domain: "SYSTEM"
+module: "Compute Systems（计算系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Wafer sort applies a versioned test program, electrical conditions and decision limits to each die before packaging, then records pass, fail and parametric bins; a known-good die is accepted under that bounded evidence rather than proven universally reliable."
+why: "Testing determines which fabricated die deserve further packaging investment, which sellable specification each accepted die can support, and how much defect and reliability risk moves downstream into packages, systems and customers."
+mechanism: "Use probe cards and automated test equipment to contact die; apply structural, functional, memory and parametric patterns; compare observations with limits; classify true rejects, accepted die, performance bins and retest candidates; record a wafer map; then use final test, reliability sampling and field feedback to find coverage gaps and update the test flow."
+example: "NVIDIA disclosed that certain previously shipped notebook MCP and GPU configurations failed in the field at higher than normal rates despite having reached customers; candidate contributors included a weak die-package material combination, system thermal design and use patterns, showing that production-test pass and lifetime system reliability are different claims."
+my_take: "When I see a test-yield or KGD claim, I should identify the physical stage, test program, conditions, limits, fault model and denominator; separate false rejects from escapes; inspect bin mix and retest; and ask how a late failure multiplies downstream value loss."
+
+prerequisites:
+  - "SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD"
+  - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
+  - "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
+connections:
+  - "SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD"
+  - "BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.PROBABILITY.CONDITIONAL"
+  - "META.BAYESIAN.UPDATING"
+  - "CASE.NVIDIA.NOTEBOOK_GPU_MCP.FIELD_FAILURES.2008_2012"
+questions:
+  - "For a multi-die product, which failures can each test insertion detect, what false rejects and test time does it add, and what downstream value does an escape put at risk?"
+cases:
+  - "NVIDIA notebook GPU and MCP field failures, 2008-2012"
+
+first_seen: "2026-11-08"
+last_reviewed: "2026-11-08"
+next_review: "2026-11-15"
+sources:
+  - "https://www.sec.gov/Archives/edgar/data/1045810/000104581008000018/q209form8kpressrelease.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1045810/000104581008000020/q209form10q.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1045810/000104581008000030/q309form10q.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1045810/000104581012000013/nvda-2012x10k.htm"
+  - "https://www.semi.org/sites/semi.org/files/2024-02/MRHIEP-Final-report-for-publication.pdf"
+  - "https://www.semi.org/en/semi-university/onsite-training-course-catalog"
+notes: "L1 candidate pending a Teach-back that reconstructs a staged test flow, distinguishes actual state from test decision, explains false rejects versus escapes, and preserves the conditional evidence boundary of known-good die."

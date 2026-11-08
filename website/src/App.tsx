@@ -79,6 +79,8 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.SEMICONDUCTOR.LITHOGRAPHY_ECOSYSTEM', x: 400, y: 505, labelSide: 'right', mapLabel: 'Lithography Ecosystem（光刻生态）', mapId: 'BUS.LITHO.ECOSYSTEM' },
   { id: 'SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD', x: 795, y: 465, labelSide: 'left', mapLabel: 'Node & Yield（节点与良率）', mapId: 'SYS.NODE.YIELD' },
   { id: 'BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS', x: 455, y: 475, labelSide: 'right', mapLabel: 'Yield Learning（良率学习）', mapId: 'BUS.YIELD.LEARNING' },
+  { id: 'SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD', x: 745, y: 505, labelSide: 'left', mapLabel: 'Wafer Sort & KGD（晶圆测试）', mapId: 'SYS.TEST.KGD' },
+  { id: 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', x: 505, y: 515, labelSide: 'right', mapLabel: 'Test Economics（测试经济学）', mapId: 'BUS.TEST.ECON' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -116,7 +118,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

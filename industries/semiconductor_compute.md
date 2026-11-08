@@ -103,3 +103,19 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Evidence boundary: Intel filings identify timing, relative yield and economic direction but not product-level yield percentages, defect density, confidential process details or one complete root cause. Customer-specific prices, guarantees, data rights and remedies remain private.
 - Status: `SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD` and `BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS` at L1 candidate; Teach-back pending.
 - Next: Wafer Sort, Binning & Known Good Die — how test converts an uncertain die population into accepted units and sellable grades before expensive packaging.
+
+### 2026-11-08 — Test Creates a Conditional Quality Gate, Not Absolute Knowledge
+
+- Continuity: continued directly from the 2026-11-07 node, defect and yield lesson; no missing completion log.
+- Question: how do wafer probe and production test classify an uncertain die population, and who pays for test time, false rejects and escapes?
+- Parent concept: `SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD` defines wafer sort as a bounded decision process using a test program, conditions and limits; known-good die means accepted under that evidence, not universally reliable.
+- Object map: wafer acceptance / parametric test, wafer sort, binning, known-good die and final test answer different questions at different physical stages.
+- Decision matrix: true accept, true reject, false reject and test escape separate actual specification status from the test decision.
+- Toy model: among 10,000 hypothetical die with 500 target bad units, 98% detection and 0.5% false reject leaves about 10 escapes among 9,462.5 accepted units, or roughly 1,057 DPPM. Raising detection to 99.8% while false rejects rise to 1.5% lowers the model to about 107 DPPM but sacrifices about 95 additional good die.
+- Deep case: NVIDIA recorded a USD 196.0 million FY2009 Q2 charge related to previously shipped notebook MCP / GPU field failures; quarterly revenue was USD 892.7 million, making the charge about 22% of revenue as a scale comparison, not a profit ratio.
+- Evidence boundary: NVIDIA said it had not determined one root cause; testing suggested a weak die-package material set, system thermal design and use patterns as contributors. Public evidence cannot prove that a specific wafer-sort pattern would have prevented the failures.
+- Outcome scale: cumulative net charges reached USD 475.9 million by January 2012, showing how package, system, warranty, repair and customer value can accumulate behind one late escape.
+- Money and control: fabless teams define specifications, DFT and test programs; foundries, IDMs or OSATs run probe and final test; ATE, probe-card, socket and handler vendors provide equipment and contact interfaces. Private contracts allocate test charges, retest, scrap, guarantees and remedies.
+- Multi-die implication: the SEMI heterogeneous-integration roadmap notes that an escaped bad chiplet can put the package and other good chiplets at risk; KGD therefore becomes more valuable as downstream assembly value increases.
+- Status: `SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD` and `BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Advanced Packaging, Chiplets & Compound Yield — how multiple accepted components, interposers, substrates, bonding and HBM become one package and create new yield and bargaining constraints.

@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-11-08
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 从 2026-11-07 Process Node, Defect & Yield Learning 直接继续进入 Wafer Sort, Binning & Known Good Die，没有缺失课程日志
+- 完成 `SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD`，把测试定义为在指定程序、条件、规格与覆盖下的分类决策，而不是发现裸片的绝对真相
+- 分开 Wafer Acceptance / Parametric Test、Wafer Sort / Probe、Binning、Known Good Die 与 Final Test，并说明每个阶段增加和仍缺少什么信息
+- 用 10,000 颗 Die 的透明假设模型比较 98% 与 99.8% 目标缺陷检出率，解释 False Reject、Test Escape、Test Yield 和 DPPM 之间的权衡
+- 新增 `CASE.NVIDIA.NOTEBOOK_GPU_MCP.FIELD_FAILURES.2008_2012`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开已出货器件为什么仍会在特定系统和使用条件下失效
+- 记录 NVIDIA 2008 年第二财季 1.96 亿美元费用、8.927 亿美元季度收入与截至 2012 年 1 月累计 4.759 亿美元净费用，并保留不同会计口径和未确定唯一根因的边界
+- 新增 `BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS`，追踪 Fabless、Foundry、OSAT、ATE / Probe 供应商与客户之间的测试时间、并行度、误杀、漏检、分档和下游损失
+- 用四颗与八颗 Chiplet 的简化组合概率说明 KGD 为什么在先进封装中更重要，明确假设数字不是产品数据
+- 更新前置节点、行业日志、Questions、CURRENT_STATE 与网站数据，不因概率工具迁移自动升级旧节点
+- 下一课锁定 Advanced Packaging, Chiplets & Compound Yield 与 Advanced Packaging Economics
+
 ## 2026-11-07
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

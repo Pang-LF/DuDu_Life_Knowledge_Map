@@ -1,0 +1,43 @@
+id: "BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS"
+name_en: "Semiconductor Test and Binning Economics"
+name_zh: "半导体测试与分档经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Test and binning economics choose where and how deeply to test semiconductor die by balancing tester time, parallelism, engineering development, false rejects and bin recovery against package scrap, warranty, field failure and customer risk from escapes."
+why: "A physically fabricated die does not become commercial output until test accepts and grades it; the same test decision can destroy a usable die, preserve package value, recover a lower sellable bin or transfer hidden risk downstream."
+mechanism: "Fabless product teams define specifications, DFT and test programs; foundries, IDMs or OSATs run probe, handlers and final test using ATE and contact hardware; contracts and yield attribution allocate test charges, retest, scrap, quality guarantees and remedies; field and downstream data update guardbands and test insertions over the product lifecycle."
+example: "NVIDIA's initial USD 196 million charge for notebook MCP and GPU field failures equaled roughly 22% of that quarter's USD 892.7 million revenue, and cumulative net charges reached USD 475.9 million by January 2012, illustrating how a late escape can bind repair, replacement, litigation and customer costs far beyond bare-die value."
+my_take: "I should compare the marginal cost and information gained at each test insertion with the expected value at risk downstream, while separating manufacturing yield from test yield, false rejects, escapes, retest and performance-bin mix."
+
+prerequisites:
+  - "SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD"
+  - "SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD"
+  - "BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS"
+connections:
+  - "SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD"
+  - "SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD"
+  - "BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.PROBABILITY.CONDITIONAL"
+  - "META.BAYESIAN.UPDATING"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "CASE.NVIDIA.NOTEBOOK_GPU_MCP.FIELD_FAILURES.2008_2012"
+questions:
+  - "Who pays for longer test time, contact-induced retest, false rejects, package scrap, field returns and warranty, and what data are required to assign each loss to design, wafer process, test, package or system conditions?"
+cases:
+  - "NVIDIA notebook GPU and MCP field failures, 2008-2012"
+
+first_seen: "2026-11-08"
+last_reviewed: "2026-11-08"
+next_review: "2026-11-15"
+sources:
+  - "https://www.sec.gov/Archives/edgar/data/1045810/000104581008000020/q209form10q.htm"
+  - "https://www.sec.gov/Archives/edgar/data/1045810/000104581012000013/nvda-2012x10k.htm"
+  - "https://www.semi.org/sites/semi.org/files/2024-02/MRHIEP-Final-report-for-publication.pdf"
+  - "https://www.teradyne.com/2023/01/03/emerging-technologies-drive-system-level-test-adoption/"
+notes: "Industry-application L1 candidate pending a Teach-back that allocates test assets, time, false rejects, escapes and downstream loss across fabless, foundry, OSAT, equipment suppliers and customers without inventing confidential prices or guarantees."

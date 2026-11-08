@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-07
+Last updated: 2026-11-08
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-07
 
 ## Next Immediate Focus（下一步）
 
-2026-11-08：进入 Wafer Sort, Binning & Known Good Die（晶圆测试、分档与已知良品裸片），解释晶圆探针与生产测试怎样从不确定的 Die 分布中识别功能合格、参数档位与可继续封装的裸片，并追踪测试覆盖、时间、误杀、漏检、封装成本和客户风险。
+2026-11-09：进入 Advanced Packaging, Chiplets & Compound Yield（先进封装、芯粒与组合良率），解释多颗已接受 Die、Interposer（中介层）、Substrate（封装基板）、Bonding（键合）与 HBM 怎样组成一个可交付封装，并追踪 Assembly Yield（组装良率）、Compound Yield（组合良率）、返工边界、封装成本与议价权。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-07
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-08：从 11 月 7 日 Process Node, Defect & Yield Learning 直接继续进入 Wafer Sort, Binning & Known Good Die，没有缺失课程日志。完成 Wafer Sort, Binning & Known Good Die（晶圆测试、分档与已知良品裸片）：把 Wafer Sort 定义为依据指定 Test Program、条件、规格与覆盖作出的分类决策，而不是发现裸片的绝对真相；分开 Wafer Acceptance / Parametric Test、Wafer Sort / Probe、Binning、Known Good Die 与 Final Test。课程用实际状态 × 测试决定的四格表区分 True Accept、True Reject、False Reject 与 Test Escape，并用 10,000 颗 Die 的透明假设模型说明 98% 目标缺陷检出率仍可能留下约 1,057 DPPM；把检出率提高到 99.8% 可将模型降至约 107 DPPM，却因更高 Guardband 多误杀约 95 颗真实良品。NVIDIA 2008–2012 笔记本 MCP / GPU 案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：公司 2008 年第二财季记录 1.96 亿美元费用，相当于 8.927 亿美元季度收入的约 22% 数量级；截至 2012 年 1 月累计净费用达到 4.759 亿美元。公司文件只确认特定笔记本配置现场失效率偏高，并把裸片 / 封装材料组合、系统热管理和使用模式列为候选贡献因素，明确当时未确定唯一根因，不能反推某项 Wafer Sort 测试必然可以预防。Industry Apprenticeship 追踪 Fabless、Foundry、OSAT、ATE / Probe 供应商与客户怎样分配测试程序、设备、时间、并行度、误杀、漏检、档位和下游损失；用 4 / 8 颗 Chiplet 与单颗 0.1% Escape 概率的简化模型说明组合风险，但明确不是产品数据。`SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD` 与 `BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS` 为 L1 candidate；下一课进入 Advanced Packaging, Chiplets & Compound Yield。
 
 2026-11-07：从 11 月 6 日 Lithography, Resolution & Overlay 直接继续进入 Process Node, Defect & Yield Learning，没有缺失课程日志。完成 Process Node, Defect & Yield Learning（制程节点、缺陷与良率学习）：把 Process Node 定义为晶体管、互连、材料、设计规则、库、PDK 与制造条件共同组成的工艺代际，而不是一条可跨厂商直接比较的物理长度；把 Gross Dies、Functional Yield、Parametric Yield、Bin Mix 与 Good Die 分开。课程跟随一个局部颗粒如何按位置、尺寸、设计敏感度和冗余成为或不成为 Killer Defect，并用 300 mm 晶圆、100 / 600 mm² Die 与 `Y = e^(-D0 × A)` 建立透明教学模型：`D0 = 0.10 defects/cm²` 时简化 Yield 约 90.5% / 54.9%，减半后约 95.1% / 74.1%；明确这不是任何 Foundry 的产品数据。Intel 10nm 2017–2021 案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：2018 年文件记录量产从 2018 年下半年推迟至 2019 年，2019 年进入 Full Production，2020 年良率仍低于成熟 14nm 且较高 10nm mix 拖累单位成本与毛利，证明产品出货、量产爬坡和成熟经济性是不同状态。Industry Apprenticeship 追踪 Foundry / IDM、Fabless 客户与设备材料商怎样分配工程晶圆、报废、Mask / NRE、Respin、延迟和数据权利，并保留客户定价、良率保证与救济条款的合同边界。`SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD` 与 `BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS` 为 L1 candidate；下一课进入 Wafer Sort, Binning & Known Good Die。
 

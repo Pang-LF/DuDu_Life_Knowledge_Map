@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-08 — 对一个多 Die 产品，Wafer Sort、Final Test、Burn-in 与 System-level Test 分别能发现什么，新增多少测试时间和误杀，又保护多少下游封装与客户价值？
+- 2026-11-08 — Fabless、Foundry、OSAT 与设备供应商需要共享哪些 Die、Wafer Map、接触、封装、系统和现场数据，才能区分制造缺陷、测试接触错误、封装失效与使用条件交互？
+
 - 2026-11-07 — 对一个新节点上的大 Die，Node 标签、Gross Dies、致命缺陷、参数分布、Bin Mix、Wafer Starts、Cycle Time 与 Good Die 分别怎样影响交付，什么证据能把它们区分开？
 - 2026-11-07 — Foundry、Fabless 客户与设备材料商分别支付哪些爬坡成本、拥有和共享哪些学习数据，合同中的定价、优先权、良率保证与救济怎样改变风险分配？
 
