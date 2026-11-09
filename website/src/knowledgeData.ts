@@ -1139,7 +1139,7 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'A node is a qualified process generation, not one literal dimension; defect and parameter distributions determine functional and in-spec good die, while linked production evidence turns repeated failure into yield learning.',
-    connections: ['SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION', 'SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT', 'SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY', 'BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS', 'SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD', 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', 'BUS.SEMICONDUCTOR.FAB_ECONOMICS', 'BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.DELAY', 'META.SYSTEMS.BOTTLENECK', 'CASE.INTEL.10NM.YIELD_RAMP.2017_2021'],
+    connections: ['SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION', 'SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT', 'SYSTEM.SEMICONDUCTOR.LITHOGRAPHY_RESOLUTION_OVERLAY', 'BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS', 'SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD', 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.FAB_ECONOMICS', 'BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.DELAY', 'META.SYSTEMS.BOTTLENECK', 'CASE.INTEL.10NM.YIELD_RAMP.2017_2021'],
   },
   {
     id: 'BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS',
@@ -1155,7 +1155,7 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'Wafer sort applies a bounded test program and decision limits before packaging; known-good die means accepted under that evidence, while false rejects and escapes expose the cost of incomplete classification.',
-    connections: ['SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD', 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', 'BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS', 'BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.PROBABILITY.CONDITIONAL', 'META.BAYESIAN.UPDATING', 'CASE.NVIDIA.NOTEBOOK_GPU_MCP.FIELD_FAILURES.2008_2012'],
+    connections: ['SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD', 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS', 'BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.PROBABILITY.CONDITIONAL', 'META.BAYESIAN.UPDATING', 'CASE.NVIDIA.NOTEBOOK_GPU_MCP.FIELD_FAILURES.2008_2012'],
   },
   {
     id: 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS',
@@ -1163,7 +1163,23 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Fabless, foundry, IDM, OSAT and test-equipment actors balance test time, parallelism, false rejects and bin recovery against package scrap, warranty and customer loss from escapes.',
-    connections: ['SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD', 'SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD', 'BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS', 'BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.PROBABILITY.CONDITIONAL', 'META.BAYESIAN.UPDATING', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.NVIDIA.NOTEBOOK_GPU_MCP.FIELD_FAILURES.2008_2012'],
+    connections: ['SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD', 'SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD', 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS', 'BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.PROBABILITY.CONDITIONAL', 'META.BAYESIAN.UPDATING', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.NVIDIA.NOTEBOOK_GPU_MCP.FIELD_FAILURES.2008_2012'],
+  },
+  {
+    id: 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD',
+    label: 'Advanced Packaging, Chiplets & Compound Yield（先进封装、芯粒与组合良率）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Chiplets do not erase area-related defects: they move the yield boundary to tested components plus package interfaces, creating value when harvesting, process mixing and reuse outweigh interconnect, thermal and compound-yield costs.',
+    connections: ['SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD', 'SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'CASE.AMD.EPYC_ROME.CHIPLET_ARCHITECTURE.2018_2019'],
+  },
+  {
+    id: 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS',
+    label: 'Advanced Packaging & Chiplet Economics（先进封装与芯粒经济学）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Fabless, foundry, OSAT, substrate, interposer, bonding and test actors divide known-good components, assembly capacity, qualification, scrap, rework and liability across a multi-die product.',
+    connections: ['SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD', 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'CASE.AMD.EPYC_ROME.CHIPLET_ARCHITECTURE.2018_2019'],
   },
   {
     id: 'CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026',
@@ -1212,6 +1228,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'Previously shipped notebook chips failed in certain configurations at above-normal rates; bounded production tests, package materials, thermal design and use conditions exposed the difference between test pass and lifetime system reliability.',
     connections: ['SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD', 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', 'SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD', 'BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS'],
+  },
+  {
+    id: 'CASE.AMD.EPYC_ROME.CHIPLET_ARCHITECTURE.2018_2019',
+    label: 'AMD EPYC Rome Chiplets 2018–19（EPYC Rome 芯粒架构）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'AMD combined 7nm CPU chiplets with a mature 14nm I/O die and Infinity Fabric, scaling to as many as eight CCDs and 64 cores while shifting design obligations into package links, topology, power, thermal and compound yield.',
+    connections: ['SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD', 'SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -1344,12 +1368,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-08',
-  title: 'Wafer Sort, Binning & Known Good Die（晶圆测试、分档与已知良品裸片）',
-  question: '一颗已经通过生产测试并大量出货的芯片，为什么仍可能在真实系统中失效？',
-  reading: '45-60 min：从一颗 Die 进入 Wafer Sort、Binning、KGD、False Reject、Test Escape 与 NVIDIA 现场失效案例。',
-  discussion: '20-30 min：为八颗 Chiplet 设计分阶段测试，并权衡测试时间、误杀、漏检与下游封装风险。',
-  next: '2026-11-09：Advanced Packaging, Chiplets & Compound Yield（先进封装、芯粒与组合良率）。',
+  date: '2026-11-09',
+  title: 'Advanced Packaging, Chiplets & Compound Yield（先进封装、芯粒与组合良率）',
+  question: '把一颗 600 mm² 大 Die 切成八颗 75 mm² Chiplet，为什么不会自动产生良率魔法，却仍可能创造巨大经济价值？',
+  reading: '45-60 min：从一个多 Die 封装进入 KGD Harvesting、Interposer、Substrate、Assembly Yield、Compound Yield 与 AMD EPYC Rome 案例。',
+  discussion: '20-30 min：重建等总面积概率模型，并判断 Chiplet 的收益是否足以覆盖接口、封装、散热、测试和供应链成本。',
+  next: '2026-11-10：HBM, TSV & Memory Bandwidth（高带宽存储、硅通孔与存储带宽）。',
 }
 
 export const monthlyTrack = [

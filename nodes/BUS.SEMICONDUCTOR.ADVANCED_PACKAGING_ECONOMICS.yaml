@@ -1,0 +1,42 @@
+id: "BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS"
+name_en: "Advanced Packaging and Chiplet Economics"
+name_zh: "先进封装与芯粒经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Advanced-packaging economics allocates design, wafer, known-good die, HBM, interposer, substrate, bonding, assembly, test, scrap, cycle-time and warranty costs across fabless or IDM integrators, foundries, OSATs, memory suppliers, substrate-interposer firms, equipment vendors and customers."
+why: "A product can have abundant logic wafer starts yet remain constrained by one qualified package input or interface; the actor that controls scarce high-yield integration, data and switching time can capture power even without owning the end customer."
+mechanism: "The product integrator partitions functions and contracts for components; suppliers deliver qualified die, memory and package structures; assembly and test combine them; contracts define pricing units, acceptance, scrap, rework, guarantees and remedies; final cost per good package spreads every upstream input and failed assembly across units that pass final qualification."
+example: "AMD Rome used reusable 7nm compute chiplets around a mature-process I/O die, allowing architecture and manufacturing to specialize, while the sellable processor still depended on all die, Infinity Fabric links, package routing, power, thermal paths and final test."
+my_take: "I should trace each component's owner, qualification gate, pricing unit, cycle time and failure consequence, then identify whether logic die, I/O die, HBM, interposer, substrate, bonding or test is the marginal constraint on good-package output."
+
+prerequisites:
+  - "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
+  - "SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD"
+  - "BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS"
+connections:
+  - "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
+  - "SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD"
+  - "BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "CASE.AMD.EPYC_ROME.CHIPLET_ARCHITECTURE.2018_2019"
+questions:
+  - "Which participant funds and controls each die, interposer, substrate, assembly and test gate; who loses value when a late failure occurs; and which private contract terms would change the allocation?"
+cases:
+  - "AMD EPYC Rome chiplet architecture and product transition, 2018-2019"
+
+first_seen: "2026-11-09"
+last_reviewed: "2026-11-09"
+next_review: "2026-11-16"
+sources:
+  - "https://ir.amd.com/news-events/press-releases/detail/860/amd-takes-high-performance-datacenter-computing-to-the-next-horizon"
+  - "https://ieeexplore.ieee.org/document/9499852"
+  - "https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/cowos.htm"
+  - "https://www.semi.org/sites/semi.org/files/2024-02/MRHIEP-Final-report-for-publication.pdf"
+notes: "Industry-application L1 candidate pending a Teach-back that follows physical inputs, money, qualification, scrap and bargaining power through a multi-die package without inventing customer-specific price, yield, allocation or liability terms."

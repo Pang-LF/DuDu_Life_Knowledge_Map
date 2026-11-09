@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-09 — 在总硅面积相同的前提下，Chiplet 的收益究竟来自哪些可测试、可筛选、可重组、可分档、可复用或可混合工艺的边界，哪些缺陷概率并没有消失？
+- 2026-11-09 — Fabless、Foundry、OSAT、Substrate / Interposer、Bonding、Test 与客户怎样分配 KGD、组装良率、返工、报废、资格化、容量和现场失效风险，什么数据能把责任从相关性推进到归因？
+
 - 2026-11-08 — 对一个多 Die 产品，Wafer Sort、Final Test、Burn-in 与 System-level Test 分别能发现什么，新增多少测试时间和误杀，又保护多少下游封装与客户价值？
 - 2026-11-08 — Fabless、Foundry、OSAT 与设备供应商需要共享哪些 Die、Wafer Map、接触、封装、系统和现场数据，才能区分制造缺陷、测试接触错误、封装失效与使用条件交互？
 

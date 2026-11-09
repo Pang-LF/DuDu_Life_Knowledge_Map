@@ -81,6 +81,8 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS', x: 455, y: 475, labelSide: 'right', mapLabel: 'Yield Learning（良率学习）', mapId: 'BUS.YIELD.LEARNING' },
   { id: 'SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD', x: 745, y: 505, labelSide: 'left', mapLabel: 'Wafer Sort & KGD（晶圆测试）', mapId: 'SYS.TEST.KGD' },
   { id: 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', x: 505, y: 515, labelSide: 'right', mapLabel: 'Test Economics（测试经济学）', mapId: 'BUS.TEST.ECON' },
+  { id: 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', x: 700, y: 545, labelSide: 'left', mapLabel: 'Chiplets & Packaging（芯粒封装）', mapId: 'SYS.CHIPLET.PKG' },
+  { id: 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', x: 550, y: 560, labelSide: 'right', mapLabel: 'Packaging Economics（封装经济学）', mapId: 'BUS.PKG.ECON' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -118,7 +120,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

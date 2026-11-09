@@ -28,6 +28,8 @@ connections:
   - "BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS"
   - "SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD"
   - "BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS"
+  - "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
+  - "BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS"
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "META.SYSTEMS.DELAY"
   - "BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL"
@@ -39,7 +41,7 @@ cases:
   - "Google, SkyWater and Efabless open SKY130 PDK and MPW program, 2020-2023"
 
 first_seen: "2026-11-05"
-last_reviewed: "2026-11-08"
+last_reviewed: "2026-11-09"
 next_review: "2026-11-12"
 sources:
   - "https://www.skywatertechnology.com/google-partners-with-skywater-and-efabless-to-enable-open-source-manufacturing-of-custom-asics/"
@@ -47,4 +49,4 @@ sources:
   - "https://www.tsmc.com/english/dedicatedFoundry/oip"
   - "https://www.cld.tsmc.com/english/dedicatedFoundry/oip/eda_alliance"
   - "https://www.synopsys.com/articles/guidelines-for-integration.html"
-notes: "Industry-application L1 candidate pending a teach-back that traces ownership, licenses, money, version control, signoff, masks, manufacturing, yield diagnosis and respin risk without inventing confidential liability or compensation terms. Reviewed through lithography interfaces on 2026-11-06, yield-learning allocation on 2026-11-07, and test-program, OSAT, escape and failure-attribution boundaries on 2026-11-08; no automatic mastery upgrade."
+notes: "Industry-application L1 candidate pending a teach-back that traces ownership, licenses, money, version control, signoff, masks, manufacturing, yield diagnosis and respin risk without inventing confidential liability or compensation terms. Reviewed through test-program boundaries on 2026-11-08 and chiplet / package interface qualification on 2026-11-09; no automatic mastery upgrade."

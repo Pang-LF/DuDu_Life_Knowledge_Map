@@ -27,6 +27,7 @@ connections:
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
   - "SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD"
   - "BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS"
+  - "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
   - "META.SYSTEMS.FEEDBACK_LOOP"
   - "META.SYSTEMS.DELAY"
   - "META.SYSTEMS.BOTTLENECK"
@@ -37,7 +38,7 @@ cases:
   - "Intel 10nm delay, production ramp and manufacturing economics, 2017-2021"
 
 first_seen: "2026-11-07"
-last_reviewed: "2026-11-08"
+last_reviewed: "2026-11-09"
 next_review: "2026-11-14"
 sources:
   - "https://www.intc.com/filings-reports/all-sec-filings/content/0000050863-19-000007/a12292018q4-10kdocument.htm"
@@ -45,4 +46,4 @@ sources:
   - "https://www.intc.com/filings-reports/annual-reports/content/0000050863-21-000010/0000050863-21-000010.pdf"
   - "https://www.intel.com/content/www/us/en/support/articles/000097598.html"
   - "https://download.intel.com/newsroom/2021/client-computing/accelerating-process-innovation.pdf"
-notes: "L1 candidate pending a teach-back that defines the process and product boundary, distinguishes defect-limited and parametric yield, reconstructs good-die economics, and identifies evidence needed to validate a yield-learning cause. Reviewed on 2026-11-08 through the distinction between physical yield, test decision, bin mix, false rejects and escapes; no automatic mastery upgrade."
+notes: "L1 candidate pending a teach-back that defines the process and product boundary, distinguishes defect-limited and parametric yield, reconstructs good-die economics, and identifies evidence needed to validate a yield-learning cause. Reviewed on 2026-11-08 through test decisions and on 2026-11-09 through equal-total-area chiplet probability and harvesting; no automatic mastery upgrade."

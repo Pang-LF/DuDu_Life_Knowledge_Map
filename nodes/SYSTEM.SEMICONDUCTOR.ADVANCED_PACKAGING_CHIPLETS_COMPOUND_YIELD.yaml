@@ -1,0 +1,43 @@
+id: "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
+name_en: "Advanced Packaging, Chiplets and Compound Yield"
+name_zh: "先进封装、芯粒与组合良率"
+domain: "SYSTEM"
+module: "Compute Systems（计算系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Advanced packaging makes multiple known-good die, interconnect structures, power and thermal paths behave as one product; chiplets change yield economics by allowing good small die to be harvested and recombined, while compound yield requires every necessary component and assembly interface to succeed."
+why: "Modern CPUs, GPUs and AI accelerators increasingly exceed the economic or physical convenience of one monolithic die, so final compute supply depends on good-die availability, package integration, HBM, substrates, bonding, test and cooling rather than wafer fabrication alone."
+mechanism: "Partition functions into chiplets; fabricate them on suitable processes; test and bin die before assembly; match known-good components; place and connect them through substrate, interposer, RDL, micro-bumps or hybrid bonds; provide power and thermal paths; then run package and system test so component yield, assembly yield and interface yield become final good-package output."
+example: "AMD's EPYC Rome architecture combined up to eight 7nm core-complex die with one mature-process I/O die through Infinity Fabric, reaching up to 64 cores while moving manufacturing risk into known-good-die supply, package assembly and die-to-die integration."
+my_take: "I should not assume chiplets create yield for free; I should compare equal total silicon area, identify what can be tested and salvaged, model every required component and assembly step, include interconnect-power-thermal penalties, and calculate cost per good package rather than single-die yield."
+
+prerequisites:
+  - "SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD"
+  - "SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD"
+  - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
+connections:
+  - "SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD"
+  - "BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS"
+  - "SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD"
+  - "BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "CASE.AMD.EPYC_ROME.CHIPLET_ARCHITECTURE.2018_2019"
+questions:
+  - "For a proposed chiplet partition, which good-die harvesting and process-mixing benefits exceed die-to-die, package, test, power, thermal, matching and compound-yield costs?"
+cases:
+  - "AMD EPYC Rome chiplet architecture and product transition, 2018-2019"
+
+first_seen: "2026-11-09"
+last_reviewed: "2026-11-09"
+next_review: "2026-11-16"
+sources:
+  - "https://ir.amd.com/news-events/press-releases/detail/860/amd-takes-high-performance-datacenter-computing-to-the-next-horizon"
+  - "https://ir.amd.com/news-events/press-releases/detail/904/2nd-gen-amd-epyc-processors-set-new-standard-for-the-modern-datacenter-with-record-breaking-performance-and-significant-tco-savings"
+  - "https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/tuning-guides/amd-epyc-7002-tg-hpc-56827.pdf"
+  - "https://ieeexplore.ieee.org/document/9499852"
+  - "https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/cowos.htm"
+notes: "L1 candidate pending a Teach-back that reconstructs why random chiplet composition does not erase area-related defects, how KGD harvesting changes salvage value, and how assembly and interface yield determine final good-package economics."

@@ -23,6 +23,8 @@ connections:
   - "BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS"
   - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
+  - "BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS"
   - "META.PROBABILITY.CONDITIONAL"
   - "META.BAYESIAN.UPDATING"
   - "CASE.NVIDIA.NOTEBOOK_GPU_MCP.FIELD_FAILURES.2008_2012"
@@ -32,7 +34,7 @@ cases:
   - "NVIDIA notebook GPU and MCP field failures, 2008-2012"
 
 first_seen: "2026-11-08"
-last_reviewed: "2026-11-08"
+last_reviewed: "2026-11-09"
 next_review: "2026-11-15"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1045810/000104581008000018/q209form8kpressrelease.htm"
@@ -41,4 +43,4 @@ sources:
   - "https://www.sec.gov/Archives/edgar/data/1045810/000104581012000013/nvda-2012x10k.htm"
   - "https://www.semi.org/sites/semi.org/files/2024-02/MRHIEP-Final-report-for-publication.pdf"
   - "https://www.semi.org/en/semi-university/onsite-training-course-catalog"
-notes: "L1 candidate pending a Teach-back that reconstructs a staged test flow, distinguishes actual state from test decision, explains false rejects versus escapes, and preserves the conditional evidence boundary of known-good die."
+notes: "L1 candidate pending a Teach-back that reconstructs a staged test flow, distinguishes actual state from test decision, explains false rejects versus escapes, and preserves the conditional evidence boundary of known-good die. Reviewed on 2026-11-09 as the prerequisite for harvesting chiplets before expensive assembly; no automatic mastery upgrade."

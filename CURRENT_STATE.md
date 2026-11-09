@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-08
+Last updated: 2026-11-09
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-08
 
 ## Next Immediate Focus（下一步）
 
-2026-11-09：进入 Advanced Packaging, Chiplets & Compound Yield（先进封装、芯粒与组合良率），解释多颗已接受 Die、Interposer（中介层）、Substrate（封装基板）、Bonding（键合）与 HBM 怎样组成一个可交付封装，并追踪 Assembly Yield（组装良率）、Compound Yield（组合良率）、返工边界、封装成本与议价权。
+2026-11-10：进入 HBM, TSV & Memory Bandwidth（高带宽存储、硅通孔与存储带宽），解释多层 DRAM Die 怎样通过 TSV 和超宽接口向加速器供数，以及 Stack Yield、散热、封装耦合与集中供应怎样形成新的系统和经济瓶颈。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-08
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-09：从 11 月 8 日 Wafer Sort, Binning & Known Good Die 直接继续进入 Advanced Packaging, Chiplets & Compound Yield，没有缺失课程日志。课程纠正“把大 Die 切小就自动提高整颗产品良率”的直觉错误：在相同总面积和独立 Poisson 缺陷假设下，八颗 75 mm² Chiplet 随机组合全部良好的概率仍与一颗 600 mm² Monolithic Die 相同，约为 54.9%；Chiplet 的经济价值来自先测试后 Harvesting、重组已知良品、混合不同工艺、复用设计与分档，而不是概率魔法。透明模型进一步用 800 颗小 Die 约得到 742 颗良品、可凑成约 92 组八颗组件，并在九个 99.5% 放置 / 互连步骤和一个 99% Package Step 下得到约 94.6% 的假设 Assembly Yield、约 87 个最终良品封装；所有数字均为机制模型而非 AMD 或 TSMC 产品数据。AMD EPYC Rome 2018–2019 案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：AMD 公开了 7nm CPU Chiplet、成熟 14nm I/O Die、Infinity Fabric、最多八颗 CCD 与 64 核产品结构，但未公开产品级 Die Yield、Package Yield、单位成本或 Monolithic 反事实，不能推造精确节省。Industry Apprenticeship 追踪 Fabless、Foundry、OSAT、Substrate / Interposer、Bonding、Test 与客户如何分配 KGD、组装、返工、容量、资格化、报废和责任，并以 TSMC CoWoS 说明先进封装是整合逻辑与 HBM 的制造平台而非普通外壳。`SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD` 与 `BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS` 为 L1 candidate；下一课进入 HBM, TSV & Memory Bandwidth。
 
 2026-11-08：从 11 月 7 日 Process Node, Defect & Yield Learning 直接继续进入 Wafer Sort, Binning & Known Good Die，没有缺失课程日志。完成 Wafer Sort, Binning & Known Good Die（晶圆测试、分档与已知良品裸片）：把 Wafer Sort 定义为依据指定 Test Program、条件、规格与覆盖作出的分类决策，而不是发现裸片的绝对真相；分开 Wafer Acceptance / Parametric Test、Wafer Sort / Probe、Binning、Known Good Die 与 Final Test。课程用实际状态 × 测试决定的四格表区分 True Accept、True Reject、False Reject 与 Test Escape，并用 10,000 颗 Die 的透明假设模型说明 98% 目标缺陷检出率仍可能留下约 1,057 DPPM；把检出率提高到 99.8% 可将模型降至约 107 DPPM，却因更高 Guardband 多误杀约 95 颗真实良品。NVIDIA 2008–2012 笔记本 MCP / GPU 案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：公司 2008 年第二财季记录 1.96 亿美元费用，相当于 8.927 亿美元季度收入的约 22% 数量级；截至 2012 年 1 月累计净费用达到 4.759 亿美元。公司文件只确认特定笔记本配置现场失效率偏高，并把裸片 / 封装材料组合、系统热管理和使用模式列为候选贡献因素，明确当时未确定唯一根因，不能反推某项 Wafer Sort 测试必然可以预防。Industry Apprenticeship 追踪 Fabless、Foundry、OSAT、ATE / Probe 供应商与客户怎样分配测试程序、设备、时间、并行度、误杀、漏检、档位和下游损失；用 4 / 8 颗 Chiplet 与单颗 0.1% Escape 概率的简化模型说明组合风险，但明确不是产品数据。`SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD` 与 `BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS` 为 L1 candidate；下一课进入 Advanced Packaging, Chiplets & Compound Yield。
 

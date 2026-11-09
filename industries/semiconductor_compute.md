@@ -119,3 +119,19 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Multi-die implication: the SEMI heterogeneous-integration roadmap notes that an escaped bad chiplet can put the package and other good chiplets at risk; KGD therefore becomes more valuable as downstream assembly value increases.
 - Status: `SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD` and `BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS` at L1 candidate; Teach-back pending.
 - Next: Advanced Packaging, Chiplets & Compound Yield — how multiple accepted components, interposers, substrates, bonding and HBM become one package and create new yield and bargaining constraints.
+
+### 2026-11-09 — Chiplets Move the Yield Boundary; They Do Not Erase Defects
+
+- Continuity: continued directly from the 2026-11-08 wafer-sort and KGD lesson; no missing completion log.
+- Question: when does splitting a large die into chiplets create real yield and economic value, and where do new package and interface risks appear?
+- Parent concept: `SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD` defines a chiplet as a functional die designed, tested and combined through specified package interfaces; advanced packaging turns accepted components into one qualified deliverable.
+- Probability correction: under the same total area and an independent Poisson model, eight random 75 mm² die all being good has the same 54.9% probability as one 600 mm² die being good at `D0 = 0.10 defects/cm²`; merely cutting area does not repeal defect probability.
+- Harvesting value: 800 hypothetical small die yield about 742 accepted units and can form about 92 complete eight-die sets, compared with about 55 good 600 mm² monoliths from 100 positions; the value comes from testing, salvaging and recombining good pieces, subject to wafer-edge and model caveats.
+- Compound-yield model: nine hypothetical placement / interface steps at 99.5% and one package step at 99% produce about 94.6% assembly yield; 92 component sets therefore become roughly 87 good packages before final-test, reliability and field losses. This is a mechanism model, not product data.
+- Deep case: AMD announced Rome in 2018 with 7nm CPU chiplets, a mature 14nm I/O die and Infinity Fabric, and launched EPYC 7002 in 2019 with up to 64 cores. AMD technical material describes one I/O die and up to eight CCDs.
+- Decision logic: compute cores and cache could use the advanced node while I/O stayed on a mature process; reusable CCDs supported product scaling, but coherence, latency, power delivery, thermal design, substrate routing, test and package yield became system-level obligations.
+- Evidence boundary: AMD public sources support topology, node split, product timing, core count and a qualitative cost-effectiveness claim, but not product-level die yield, package yield, unit cost, exact savings or a controlled monolithic counterfactual.
+- Packaging platform: TSMC describes CoWoS as integrating logic die and HBM through a silicon interposer and package substrate. Platform capability does not reveal any customer's confidential yield, price, capacity allocation or liability terms.
+- Money and control: fabless firms own architecture and product demand; foundries make die and sometimes packaging platforms; OSATs and packaging partners assemble and test; substrate, interposer, bonding and equipment suppliers govern qualified interfaces; contracts allocate scrap, rework, guarantees and remedies.
+- Status: `SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD` and `BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: HBM, TSV & Memory Bandwidth — how stacked DRAM, through-silicon vias and wide interfaces relieve accelerator bandwidth pressure while creating stack-yield, thermal and supply constraints.

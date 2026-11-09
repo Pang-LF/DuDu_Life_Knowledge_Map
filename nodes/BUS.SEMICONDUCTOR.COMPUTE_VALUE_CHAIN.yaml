@@ -30,6 +30,8 @@ connections:
   - "BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS"
   - "SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD"
   - "BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS"
+  - "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
+  - "BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS"
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "META.SYSTEMS.BOTTLENECK"
   - "META.SYSTEMS.DELAY"
@@ -42,10 +44,10 @@ cases:
   - "Global automotive semiconductor shortage, 2020-2022"
 
 first_seen: "2026-11-02"
-last_reviewed: "2026-11-08"
+last_reviewed: "2026-11-09"
 next_review: "2026-11-10"
 sources:
   - "https://files.gao.gov/reports/GAO-26-107882/index.html"
   - "https://www.nist.gov/system/files/documents/2022/09/06/CHIPS-for-America-Strategy.pdf"
   - "https://www.commerce.gov/news/blog/2022/01/results-semiconductor-supply-chain-request-information"
-notes: "Industry-application L1 candidate pending a teach-back that follows physical output downstream, money upstream and control rights across a new compute product. Reviewed through lithography integration on 2026-11-06, node ramp and good-die learning on 2026-11-07, and fabless-foundry-OSAT test gates on 2026-11-08; no automatic mastery upgrade."
+notes: "Industry-application L1 candidate pending a teach-back that follows physical output downstream, money upstream and control rights across a new compute product. Reviewed through test gates on 2026-11-08 and the fabless-foundry-OSAT-packaging interface on 2026-11-09; no automatic mastery upgrade."

@@ -23,6 +23,8 @@ connections:
   - "BUS.SEMICONDUCTOR.YIELD_LEARNING_ECONOMICS"
   - "BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
+  - "BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS"
   - "META.PROBABILITY.CONDITIONAL"
   - "META.BAYESIAN.UPDATING"
   - "META.PROBABILITY.EXPECTED_VALUE"
@@ -33,11 +35,11 @@ cases:
   - "NVIDIA notebook GPU and MCP field failures, 2008-2012"
 
 first_seen: "2026-11-08"
-last_reviewed: "2026-11-08"
+last_reviewed: "2026-11-09"
 next_review: "2026-11-15"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1045810/000104581008000020/q209form10q.htm"
   - "https://www.sec.gov/Archives/edgar/data/1045810/000104581012000013/nvda-2012x10k.htm"
   - "https://www.semi.org/sites/semi.org/files/2024-02/MRHIEP-Final-report-for-publication.pdf"
   - "https://www.teradyne.com/2023/01/03/emerging-technologies-drive-system-level-test-adoption/"
-notes: "Industry-application L1 candidate pending a Teach-back that allocates test assets, time, false rejects, escapes and downstream loss across fabless, foundry, OSAT, equipment suppliers and customers without inventing confidential prices or guarantees."
+notes: "Industry-application L1 candidate pending a Teach-back that allocates test assets, time, false rejects, escapes and downstream loss across fabless, foundry, OSAT, equipment suppliers and customers without inventing confidential prices or guarantees. Reviewed on 2026-11-09 through KGD harvesting and downstream package value-at-risk; no automatic mastery upgrade."

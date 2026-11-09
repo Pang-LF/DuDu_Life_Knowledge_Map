@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-11-09
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 从 2026-11-08 Wafer Sort, Binning & Known Good Die 直接继续进入 Advanced Packaging, Chiplets & Compound Yield，没有缺失课程日志
+- 新增 `SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD`，把 Chiplet 定义为经过接口设计、测试、筛选并在封装内组合的功能裸片，而不是任意切小的芯片碎片
+- 用相同总面积的透明 Poisson 模型证明随机组合八颗 Chiplet 不会凭空改善全部良好的概率；价值来自 KGD Harvesting、重组、分档、工艺混合和设计复用
+- 用 800 颗 75 mm² Die、约 742 颗假设良品、92 组八颗组件与约 94.6% 假设 Assembly Yield，重建从 Die Yield 到 Compound Yield 的分母变化；明确不是产品数据
+- 新增 `CASE.AMD.EPYC_ROME.CHIPLET_ARCHITECTURE.2018_2019`，按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开 7nm Compute Chiplet、成熟 14nm I/O Die、Infinity Fabric 与最多 64 核的架构决策
+- 保留 AMD 未公开产品级 Die Yield、Package Yield、单位成本与 Monolithic 反事实的证据边界，不把“更具成本效益”的公司表述扩写成精确节省
+- 新增 `BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS`，追踪 Fabless、Foundry、OSAT、Substrate / Interposer、Bonding、Test 与客户之间的 KGD、组装、资格化、报废、容量和责任
+- 以 TSMC CoWoS 作为 Knowledge Expansion，说明先进封装怎样把逻辑与 HBM 置于同一高密度互连平台，但不把平台能力等同于任一客户产品良率
+- 更新前置节点、行业日志、Questions、CURRENT_STATE 与网站数据，不因 Systems Thinking 或 KGD 迁移自动升级旧节点
+- 下一课锁定 HBM, TSV & Memory Bandwidth 与 HBM Supply Economics
+
 ## 2026-11-08
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
