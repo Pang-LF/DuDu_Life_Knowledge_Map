@@ -22,6 +22,8 @@ connections:
   - "BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS"
   - "SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD"
   - "BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS"
+  - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
+  - "BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "META.SYSTEMS.BOTTLENECK"
@@ -32,7 +34,7 @@ cases:
   - "AMD EPYC Rome chiplet architecture and product transition, 2018-2019"
 
 first_seen: "2026-11-09"
-last_reviewed: "2026-11-09"
+last_reviewed: "2026-11-10"
 next_review: "2026-11-16"
 sources:
   - "https://ir.amd.com/news-events/press-releases/detail/860/amd-takes-high-performance-datacenter-computing-to-the-next-horizon"

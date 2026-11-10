@@ -135,3 +135,19 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Money and control: fabless firms own architecture and product demand; foundries make die and sometimes packaging platforms; OSATs and packaging partners assemble and test; substrate, interposer, bonding and equipment suppliers govern qualified interfaces; contracts allocate scrap, rework, guarantees and remedies.
 - Status: `SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD` and `BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS` at L1 candidate; Teach-back pending.
 - Next: HBM, TSV & Memory Bandwidth — how stacked DRAM, through-silicon vias and wide interfaces relieve accelerator bandwidth pressure while creating stack-yield, thermal and supply constraints.
+
+### 2026-11-10 — HBM Buys Bandwidth with Width and Proximity, Then Moves the Bottleneck
+
+- Continuity: continued directly from the 2026-11-09 advanced-packaging lesson; no missing completion log.
+- Question: how do stacked DRAM, TSVs and a wide in-package interface feed an accelerator, and why can raw DRAM growth fail to raise good-accelerator output?
+- Parent concept: `SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH` separates stored capacity, bytes-per-second bandwidth and access latency, then follows one data block from DRAM cells through banks, TSVs, stack interfaces, interposer routes and the accelerator controller.
+- Bandwidth mechanism: peak bandwidth is approximately I/O width times per-pin transfers per second divided by eight. A toy 256-bit × 8 Gbit/s interface and a 1024-bit × 2 Gbit/s interface both equal 256 GB/s, illustrating speed-versus-width rather than predicting a product.
+- Published calculation: SK hynix describes HBM2E with 1,024 I/O at 3.6 Gbit/s, or 460.8 GB/s per stack. Effective workload bandwidth remains below or otherwise distinct from peak according to access pattern, parallelism, banks, cache and controller scheduling.
+- Deep case: SK hynix began HBM development in 2009; AMD launched the first HBM-powered Radeon family in 2015. Fury X shipped with 4 GB HBM, a 4096-bit interface and up to 512 GB/s.
+- Company-claim boundary: AMD compared 512 GB/s with the R9 290X's 320 GB/s, reported 60% more bandwidth, 94% less PCB memory area and more than three times bandwidth per watt. These establish AMD's design case, not an independent estimate of HBM's isolated contribution to total board performance.
+- Aftermath scale: NVIDIA lists H100 SXM at 80 GB / 3.35 TB/s and H200 at 141 GB / 4.8 TB/s. Relative to Fury X, the public specifications show about 9.4 times bandwidth and 35 times capacity across generations, not an apples-to-apples product comparison.
+- Supply model: 1,000 hypothetical good logic die, 5,500 qualified HBM stacks at six per package and 900 package slots cap input at 900 packages; a hypothetical 95% final yield produces about 855. Adding HBM alone cannot help while packaging remains fixed.
+- Money and power: memory IDMs deliver customer-qualified stacks; accelerator designers define interfaces and configurations; foundry / packaging providers integrate logic, HBM, interposer and substrate; equipment and material firms enable TSV, thinning, bonding, metrology and test; customers pay for the complete accelerator or service.
+- Evidence boundary: customer-specific stack yield, package yield, price, allocation, qualification, scrap liability and switching cost are generally confidential; wafer starts and vendor capacity claims do not directly measure good accelerators.
+- Status: `SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH` and `BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: GPU Parallelism — how many arithmetic units turn delivered data into throughput and why occupancy, control divergence, data movement and software determine realized performance.

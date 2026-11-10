@@ -1179,7 +1179,23 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Fabless, foundry, OSAT, substrate, interposer, bonding and test actors divide known-good components, assembly capacity, qualification, scrap, rework and liability across a multi-die product.',
-    connections: ['SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD', 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'CASE.AMD.EPYC_ROME.CHIPLET_ARCHITECTURE.2018_2019'],
+    connections: ['SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', 'SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD', 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'BUS.SEMICONDUCTOR.FOUNDRY_CUSTOMER_INTERFACE', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'CASE.AMD.EPYC_ROME.CHIPLET_ARCHITECTURE.2018_2019', 'CASE.AMD_SKHYNIX.FIJI_HBM1.2009_2015'],
+  },
+  {
+    id: 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH',
+    label: 'HBM, TSV & Memory Bandwidth（高带宽存储、硅通孔与存储带宽）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'HBM moves stacked DRAM beside an accelerator and uses TSVs plus thousands of short package-level I/O paths to gain aggregate bandwidth, while moving constraints into stack yield, thermal design, packaging and effective workload utilization.',
+    connections: ['SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'SYSTEM.COMPUTE.FOUNDATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AMD_SKHYNIX.FIJI_HBM1.2009_2015'],
+  },
+  {
+    id: 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS',
+    label: 'HBM Supply Economics（高带宽存储供应经济学）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Deliverable accelerator supply depends on matched customer-qualified HBM stacks, logic die, interposers, package slots, thermal qualification and final yield rather than raw DRAM wafer volume alone.',
+    connections: ['SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AMD_SKHYNIX.FIJI_HBM1.2009_2015'],
   },
   {
     id: 'CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026',
@@ -1236,6 +1252,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'AMD combined 7nm CPU chiplets with a mature 14nm I/O die and Infinity Fabric, scaling to as many as eight CCDs and 64 cores while shifting design obligations into package links, topology, power, thermal and compound yield.',
     connections: ['SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD', 'SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD'],
+  },
+  {
+    id: 'CASE.AMD_SKHYNIX.FIJI_HBM1.2009_2015',
+    label: 'AMD + SK hynix Fiji HBM1 2009–15（首个商业 HBM GPU）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'AMD and SK hynix moved stacked DRAM beside the Fiji GPU through TSVs and a silicon interposer, shipping Fury X with 4 GB HBM, a 4096-bit interface and up to 512 GB/s while accepting new capacity, package, thermal and yield constraints.',
+    connections: ['SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'FRONTIER.AI.INFRASTRUCTURE'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -1368,12 +1392,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-09',
-  title: 'Advanced Packaging, Chiplets & Compound Yield（先进封装、芯粒与组合良率）',
-  question: '把一颗 600 mm² 大 Die 切成八颗 75 mm² Chiplet，为什么不会自动产生良率魔法，却仍可能创造巨大经济价值？',
-  reading: '45-60 min：从一个多 Die 封装进入 KGD Harvesting、Interposer、Substrate、Assembly Yield、Compound Yield 与 AMD EPYC Rome 案例。',
-  discussion: '20-30 min：重建等总面积概率模型，并判断 Chiplet 的收益是否足以覆盖接口、封装、散热、测试和供应链成本。',
-  next: '2026-11-10：HBM, TSV & Memory Bandwidth（高带宽存储、硅通孔与存储带宽）。',
+  date: '2026-11-10',
+  title: 'HBM, TSV & Memory Bandwidth（高带宽存储、硅通孔与存储带宽）',
+  question: '为什么 HBM 的核心是把内存移近并把接口做宽，而增加 DRAM 或峰值带宽仍不保证更多有效计算？',
+  reading: '45-60 min：跟随一个 64-byte 数据块穿过 DRAM、TSV、Stack、Interposer 与 Accelerator，并进入 AMD + SK hynix Fiji HBM1 案例。',
+  discussion: '20-30 min：区分 Capacity、Peak / Effective Bandwidth 与 Latency，再判断 Qualified HBM、Logic、Package、Thermal 或 Final Yield 中谁是交付瓶颈。',
+  next: '2026-11-11：GPU Parallelism（GPU 并行计算）。',
 }
 
 export const monthlyTrack = [

@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-10 — 一个 64-byte 数据块怎样从 DRAM Cell 经过 Bank、TSV、Stack、Interposer 和 Memory Controller 到达 Accelerator，各阶段分别怎样影响容量、带宽、延迟、功耗、温度和良率？
+- 2026-11-10 — 当 HBM 产能上升却没有同比增加 Accelerator 出货时，Qualified Stack、每包 Stack 数、Logic Die、Package Slot、Final Yield、Thermal Qualification 和客户需求中哪项是真正约束，什么证据能区分？
+
 - 2026-11-09 — 在总硅面积相同的前提下，Chiplet 的收益究竟来自哪些可测试、可筛选、可重组、可分档、可复用或可混合工艺的边界，哪些缺陷概率并没有消失？
 - 2026-11-09 — Fabless、Foundry、OSAT、Substrate / Interposer、Bonding、Test 与客户怎样分配 KGD、组装良率、返工、报废、资格化、容量和现场失效风险，什么数据能把责任从相关性推进到归因？
 

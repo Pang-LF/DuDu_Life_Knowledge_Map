@@ -1,0 +1,44 @@
+id: "BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS"
+name_en: "HBM Supply Economics"
+name_zh: "高带宽存储供应经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "HBM supply economics concerns the matched delivery of customer-qualified memory stacks, logic die, interposers, substrates, advanced-package capacity, thermal design and final test rather than raw DRAM wafer volume alone."
+why: "An accelerator needs a fixed configuration of qualified HBM stacks and package interfaces, so one scarce component, qualification path or integration slot can cap good-package output and give its controller bargaining power."
+mechanism: "Memory IDMs design and manufacture HBM die, TSVs, stacks and test flows; accelerator firms specify interfaces, stack counts, capacity and thermals; foundries and packaging providers integrate logic and memory; equipment and material vendors enable thinning, bonding, metrology and test; contracts and qualification determine accepted output, pricing, allocation, scrap and switching time; final output is bounded by the minimum matched input times final package yield."
+example: "A transparent teaching model with 1,000 good logic die, 5,500 qualified stacks at six per package and 900 package slots produces at most 900 packages before a hypothetical 95% final yield, or about 855 good accelerators; adding memory alone does not raise output while package slots remain fixed."
+my_take: "I should translate every capacity announcement into qualified stacks of a named generation and customer, divide by stacks per package, compare logic and package capacity, include cycle time and final yield, and avoid inventing confidential price, allocation, yield or liability terms."
+
+prerequisites:
+  - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
+  - "BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+connections:
+  - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
+  - "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
+  - "BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.AMD_SKHYNIX.FIJI_HBM1.2009_2015"
+questions:
+  - "Which matched constraint—qualified HBM stacks, logic die, package slots, thermal design, test or final yield—limits accelerator output, who controls it, and what evidence distinguishes it from raw capacity?"
+cases:
+  - "AMD and SK hynix Fiji / Radeon R9 Fury X HBM1 commercialization, 2009-2015"
+
+first_seen: "2026-11-10"
+last_reviewed: "2026-11-10"
+next_review: "2026-11-17"
+sources:
+  - "https://ir.amd.com/news-events/press-releases/detail/619/amd-ushers-in-a-new-era-of-pc-gaming-with-radeontm-r9-and-r7-300-series-graphics-line-up-including-worlds-first-graphics-family-with-revolutionary-hbm-technology"
+  - "https://news.skhynix.com/en/the-story-of-sk-hynixs-hbm-development/"
+  - "https://news.samsung.com/global/samsung-develops-industry-first-36gb-hbm3e-12h-dram"
+  - "https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/cowos.htm"
+notes: "Industry-application L1 candidate pending a Teach-back that follows qualified stack supply, memory-to-package ratios, advanced packaging, final yield, money and switching time without equating wafer starts or vendor claims with good accelerator output."

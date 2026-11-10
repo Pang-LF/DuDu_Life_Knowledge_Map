@@ -83,6 +83,8 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', x: 505, y: 515, labelSide: 'right', mapLabel: 'Test Economics（测试经济学）', mapId: 'BUS.TEST.ECON' },
   { id: 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', x: 700, y: 545, labelSide: 'left', mapLabel: 'Chiplets & Packaging（芯粒封装）', mapId: 'SYS.CHIPLET.PKG' },
   { id: 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', x: 550, y: 560, labelSide: 'right', mapLabel: 'Packaging Economics（封装经济学）', mapId: 'BUS.PKG.ECON' },
+  { id: 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', x: 655, y: 505, labelSide: 'left', mapLabel: 'HBM & TSV（高带宽存储）', mapId: 'SYS.HBM.BANDWIDTH' },
+  { id: 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', x: 600, y: 600, labelSide: 'right', mapLabel: 'HBM Supply（HBM 供应）', mapId: 'BUS.HBM.SUPPLY' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -120,7 +122,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

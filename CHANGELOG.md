@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-11-10
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签
+- 从 2026-11-09 Advanced Packaging, Chiplets & Compound Yield 直接继续进入 HBM, TSV & Memory Bandwidth，没有缺失课程日志
+- 新增 `SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH`，分开 Capacity、Peak / Effective Bandwidth 与 Latency，并跟随一个数据块重建 DRAM、TSV、Stack、Interposer 与 Accelerator 路径
+- 用两组等带宽接口与 SK hynix HBM2E 的 1024 I/O × 3.6 Gbit/s = 460.8 GB/s 解释宽度和单线速率，明确透明模型与产品规格的边界
+- 新增 `CASE.AMD_SKHYNIX.FIJI_HBM1.2009_2015`，按七段叙事展开首个商业 HBM GPU 路径、4096-bit 接口、4 GB 与 512 GB/s 的设计交换
+- 把 AMD 的 60% 带宽、94% PCB 内存面积和超过三倍每瓦带宽按公司主张处理，不把产品比较扩写成 HBM 对整卡性能的独立因果证明
+- 用 H100 与 H200 公开规格展示 HBM 跨代数量级，明确不是同代价格、性能或效率比较
+- 新增 `BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS`，追踪 Memory IDM、Accelerator Designer、Foundry / Packager、设备材料商与客户之间的合格 Stack、资格化、钱流和匹配约束
+- 用 Good Logic Die、每包 HBM Stack 数、Package Slot 与 Final Yield 的透明最小值模型解释为什么原始 DRAM 或 HBM 增量不自动变成 Good Accelerator
+- 更新前置节点、行业日志、Questions、CURRENT_STATE 与网站数据，不因 Advanced Packaging 或 Systems Thinking 迁移自动升级旧节点
+- 下一课锁定 GPU Parallelism 与 Accelerator Platform Economics
+
 ## 2026-11-09
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

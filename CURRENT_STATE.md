@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-09
+Last updated: 2026-11-10
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-09
 
 ## Next Immediate Focus（下一步）
 
-2026-11-10：进入 HBM, TSV & Memory Bandwidth（高带宽存储、硅通孔与存储带宽），解释多层 DRAM Die 怎样通过 TSV 和超宽接口向加速器供数，以及 Stack Yield、散热、封装耦合与集中供应怎样形成新的系统和经济瓶颈。
+2026-11-11：进入 GPU Parallelism（GPU 并行计算），解释大量计算单元怎样把 HBM 送达的数据转成吞吐，为什么 Occupancy、Memory Access、Control Divergence 与同步会让理论算力和实际性能分离，以及架构与软件生态怎样形成平台议价权。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-09
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-10：从 11 月 9 日 Advanced Packaging, Chiplets & Compound Yield 直接继续进入 HBM, TSV & Memory Bandwidth，没有缺失课程日志。课程先分开 Capacity、Bandwidth 与 Latency，再跟随一个 64-byte 数据块从 DRAM Cell、Bank、TSV、Stack、Interposer 到 Accelerator Memory Controller；把 TSV 定义为垂直导电通道而非存储单元，把 HBM 的核心机制归结为“更近、更宽、更多并行通道”。用 `Peak Bandwidth = I/O × per-pin rate ÷ 8` 比较 256-bit × 8 Gbit/s 与 1024-bit × 2 Gbit/s 的等带宽路径，并使用 SK hynix 公开的 1024 I/O × 3.6 Gbit/s = 460.8 GB/s 说明规格计算，同时明确 Peak 与 Effective Bandwidth 的差别。AMD + SK hynix Fiji / Fury X 2009–2015 案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：Fury X 公开规格为 4 GB HBM、4096-bit 与 512 GB/s；AMD 的 60% 带宽、94% PCB 面积和超过三倍每瓦带宽均按公司主张处理，不推造成独立因果证明。用 NVIDIA H100 80 GB / 3.35 TB/s 与 H200 141 GB / 4.8 TB/s 只展示跨代数量级，不做公平性能比较。Industry Apprenticeship 用 1,000 Good Logic Die、5,500 Qualified Stack、每包 6 组、900 Package Slot 与 95% 假设 Final Yield 得到约 855 包的透明模型，说明增加 DRAM Wafer 或 HBM 仍可能受封装、资格化、Logic、热与终测限制；所有数字明确不是产品数据。`SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH` 与 `BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS` 为 L1 candidate；下一课进入 GPU Parallelism。
 
 2026-11-09：从 11 月 8 日 Wafer Sort, Binning & Known Good Die 直接继续进入 Advanced Packaging, Chiplets & Compound Yield，没有缺失课程日志。课程纠正“把大 Die 切小就自动提高整颗产品良率”的直觉错误：在相同总面积和独立 Poisson 缺陷假设下，八颗 75 mm² Chiplet 随机组合全部良好的概率仍与一颗 600 mm² Monolithic Die 相同，约为 54.9%；Chiplet 的经济价值来自先测试后 Harvesting、重组已知良品、混合不同工艺、复用设计与分档，而不是概率魔法。透明模型进一步用 800 颗小 Die 约得到 742 颗良品、可凑成约 92 组八颗组件，并在九个 99.5% 放置 / 互连步骤和一个 99% Package Step 下得到约 94.6% 的假设 Assembly Yield、约 87 个最终良品封装；所有数字均为机制模型而非 AMD 或 TSMC 产品数据。AMD EPYC Rome 2018–2019 案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：AMD 公开了 7nm CPU Chiplet、成熟 14nm I/O Die、Infinity Fabric、最多八颗 CCD 与 64 核产品结构，但未公开产品级 Die Yield、Package Yield、单位成本或 Monolithic 反事实，不能推造精确节省。Industry Apprenticeship 追踪 Fabless、Foundry、OSAT、Substrate / Interposer、Bonding、Test 与客户如何分配 KGD、组装、返工、容量、资格化、报废和责任，并以 TSMC CoWoS 说明先进封装是整合逻辑与 HBM 的制造平台而非普通外壳。`SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD` 与 `BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS` 为 L1 candidate；下一课进入 HBM, TSV & Memory Bandwidth。
 

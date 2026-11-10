@@ -1,0 +1,45 @@
+id: "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
+name_en: "HBM, TSV and Memory Bandwidth"
+name_zh: "高带宽存储、硅通孔与存储带宽"
+domain: "SYSTEM"
+module: "Compute Systems（计算系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "High Bandwidth Memory places vertically stacked DRAM beside an accelerator and connects it through TSVs, die bonds and thousands of short package-level I/O paths, trading package complexity for high aggregate bandwidth, compact footprint and improved data-movement efficiency."
+why: "Parallel accelerators can leave arithmetic units idle when external memory cannot supply data fast enough, so useful compute depends on capacity, bandwidth, latency, access pattern and effective utilization rather than peak operations alone."
+mechanism: "DRAM arrays serve requested data through banks and channels; signals move vertically through TSVs across thinned die; the stack exposes a very wide interface through a base or interface die; an interposer or dense package route connects multiple stacks to accelerator memory controllers; peak bandwidth equals I/O width times per-pin transfer rate divided by eight, while effective bandwidth depends on software locality, concurrency, bank behavior, cache reuse and controller scheduling."
+example: "AMD and SK hynix commercialized first-generation HBM in the 2015 Radeon R9 Fury X, combining 4 GB HBM with a 4096-bit interface and up to 512 GB/s, while later H100 and H200 accelerators show the subsequent growth of HBM capacity and bandwidth."
+my_take: "I should distinguish capacity, peak bandwidth, effective bandwidth and latency; follow one data block through cells, TSVs, stack, interposer and controller; then include stack yield, thermal margin, package yield and matched supply before concluding that more HBM creates more useful compute."
+
+prerequisites:
+  - "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
+  - "SYSTEM.SEMICONDUCTOR.WAFER_SORT_BINNING_KGD"
+  - "SYSTEM.SEMICONDUCTOR.PROCESS_NODE_DEFECT_YIELD"
+connections:
+  - "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
+  - "BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "SYSTEM.COMPUTE.FOUNDATION"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.AMD_SKHYNIX.FIJI_HBM1.2009_2015"
+questions:
+  - "How does one data block move from DRAM cells through TSVs, a stack and an interposer to an accelerator, and which boundary controls capacity, peak bandwidth, effective bandwidth, latency, power and yield?"
+cases:
+  - "AMD and SK hynix Fiji / Radeon R9 Fury X HBM1 commercialization, 2009-2015"
+
+first_seen: "2026-11-10"
+last_reviewed: "2026-11-10"
+next_review: "2026-11-17"
+sources:
+  - "https://ir.amd.com/news-events/press-releases/detail/619/amd-ushers-in-a-new-era-of-pc-gaming-with-radeontm-r9-and-r7-300-series-graphics-line-up-including-worlds-first-graphics-family-with-revolutionary-hbm-technology"
+  - "https://www.amd.com/en/support/downloads/drivers.html/graphics/radeon-r9-r7-r5/radeon-r9-fury-series/amd-radeon-r9-fury-x.html"
+  - "https://news.skhynix.com/en/the-story-of-sk-hynixs-hbm-development/"
+  - "https://news.skhynix.com/en/sk-hynix-starts-mass-production-of-high-speed-dram-hbm2e/"
+  - "https://news.skhynix.com/en/creating-new-values-in-dram-using-through-silicon-via-technology-for-continued-scaling-in-memory-system-performance-and-capacity/"
+  - "https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory-h100-h200-b200/latest/components.html"
+notes: "L1 candidate pending a Teach-back that reconstructs the complete data path and distinguishes width, per-pin rate, capacity, latency and application-effective bandwidth without treating HBM as a universal performance or latency solution."
