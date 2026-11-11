@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-10
+Last updated: 2026-11-11
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-10
 
 ## Next Immediate Focus（下一步）
 
-2026-11-11：进入 GPU Parallelism（GPU 并行计算），解释大量计算单元怎样把 HBM 送达的数据转成吞吐，为什么 Occupancy、Memory Access、Control Divergence 与同步会让理论算力和实际性能分离，以及架构与软件生态怎样形成平台议价权。
+2026-11-12：进入 Roofline & Arithmetic Intensity（屋顶线模型与算术强度），把 HBM Memory Bandwidth 与 GPU Peak Compute 放进同一性能模型，判断 Kernel 何时受供数、计算或软件利用率约束，并区分规格屋顶与实测性能。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-10
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-11：从 11 月 10 日 HBM, TSV & Memory Bandwidth 直接继续进入 GPU Parallelism & Useful Throughput，没有缺失课程日志。课程先分开 Latency 与 Throughput，再跟随一个 Pixel 从 Memory、Thread、32-thread Warp、SM Scheduler 到算术通道，说明 GPU 的计算单元只是潜在并行能力。用 16 / 16 分支的透明例子解释 Warp 内 Control Divergence 在等长路径下只产生约 50% 有效 Lane；用 CUDA Guide 的 32 线程 × 4 Byte 例子比较连续地址的 128 B / 4 个事务与大跨度地址的 128 B 有效载荷 / 1,024 B 传输，说明 Memory Coalescing 如何把接口规格转成或浪费 Effective Bandwidth；把 Occupancy 定义为可驻留 Active Warp 相对硬件上限，明确它提供 Latency Hiding 候选工作而非性能分数。AlexNet 2012 案例按七段叙事展开：约 120 万图片、1,000 类、约 6,000 万参数、两张 3 GB GTX 580、Batch 128 与 5–6 天训练；单模型 Top-5 Error 为 18.2%，15.3% 是七模型 Ensemble，第二名 26.2%，不把 10.9 个百分点差距归因于 GPU 单一因素。双 GPU 与单 GPU 网络容量不同，也不作为纯硬件加速实验。Industry Apprenticeship 追踪 NVIDIA、Cloud / OEM、Framework、Application Team 与客户之间的硬件、驱动、编译器、Library、工具、钱流和迁移成本，并把 NVIDIA 10-K 的平台与生态陈述保留为公司主张。`SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM` 与 `BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS` 为 L1 candidate；下一课进入 Roofline & Arithmetic Intensity。
 
 2026-11-10：从 11 月 9 日 Advanced Packaging, Chiplets & Compound Yield 直接继续进入 HBM, TSV & Memory Bandwidth，没有缺失课程日志。课程先分开 Capacity、Bandwidth 与 Latency，再跟随一个 64-byte 数据块从 DRAM Cell、Bank、TSV、Stack、Interposer 到 Accelerator Memory Controller；把 TSV 定义为垂直导电通道而非存储单元，把 HBM 的核心机制归结为“更近、更宽、更多并行通道”。用 `Peak Bandwidth = I/O × per-pin rate ÷ 8` 比较 256-bit × 8 Gbit/s 与 1024-bit × 2 Gbit/s 的等带宽路径，并使用 SK hynix 公开的 1024 I/O × 3.6 Gbit/s = 460.8 GB/s 说明规格计算，同时明确 Peak 与 Effective Bandwidth 的差别。AMD + SK hynix Fiji / Fury X 2009–2015 案例按 Before、Pressure Builds、Turning Point、Cascade、Decision、Outcome、Aftermath 展开：Fury X 公开规格为 4 GB HBM、4096-bit 与 512 GB/s；AMD 的 60% 带宽、94% PCB 面积和超过三倍每瓦带宽均按公司主张处理，不推造成独立因果证明。用 NVIDIA H100 80 GB / 3.35 TB/s 与 H200 141 GB / 4.8 TB/s 只展示跨代数量级，不做公平性能比较。Industry Apprenticeship 用 1,000 Good Logic Die、5,500 Qualified Stack、每包 6 组、900 Package Slot 与 95% 假设 Final Yield 得到约 855 包的透明模型，说明增加 DRAM Wafer 或 HBM 仍可能受封装、资格化、Logic、热与终测限制；所有数字明确不是产品数据。`SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH` 与 `BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS` 为 L1 candidate；下一课进入 GPU Parallelism。
 

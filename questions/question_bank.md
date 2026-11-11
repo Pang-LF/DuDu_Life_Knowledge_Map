@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-11 — 一个 Pixel / Data Element 怎样从 Memory 进入 Thread、Warp、SM 与算术通道，Occupancy、Divergence、Coalescing、Dependency 和 Synchronization 分别在哪一步降低有效吞吐？
+- 2026-11-11 — 两款 GPU 的 Peak FLOPS 与真实模型吞吐排序不一致时，需要哪些 Kernel、Memory、Warp、Library、Precision、Power、Communication 与 Porting 数据，才能区分硬件、软件、工作负载映射和平台切换成本？
+
 - 2026-11-10 — 一个 64-byte 数据块怎样从 DRAM Cell 经过 Bank、TSV、Stack、Interposer 和 Memory Controller 到达 Accelerator，各阶段分别怎样影响容量、带宽、延迟、功耗、温度和良率？
 - 2026-11-10 — 当 HBM 产能上升却没有同比增加 Accelerator 出货时，Qualified Stack、每包 Stack 数、Logic Die、Package Slot、Final Yield、Thermal Qualification 和客户需求中哪项是真正约束，什么证据能区分？
 

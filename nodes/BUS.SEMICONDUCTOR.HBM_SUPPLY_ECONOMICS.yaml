@@ -17,6 +17,7 @@ prerequisites:
   - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
   - "BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS"
 connections:
   - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
   - "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
@@ -34,7 +35,7 @@ cases:
   - "AMD and SK hynix Fiji / Radeon R9 Fury X HBM1 commercialization, 2009-2015"
 
 first_seen: "2026-11-10"
-last_reviewed: "2026-11-10"
+last_reviewed: "2026-11-11"
 next_review: "2026-11-17"
 sources:
   - "https://ir.amd.com/news-events/press-releases/detail/619/amd-ushers-in-a-new-era-of-pc-gaming-with-radeontm-r9-and-r7-300-series-graphics-line-up-including-worlds-first-graphics-family-with-revolutionary-hbm-technology"

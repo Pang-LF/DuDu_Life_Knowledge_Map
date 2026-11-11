@@ -1,0 +1,42 @@
+id: "BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS"
+name_en: "Accelerator Platform Economics"
+name_zh: "加速器平台经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Accelerator platform economics concerns how hardware, drivers, compilers, runtimes, optimized libraries, frameworks, developer skills and installed applications combine into usable compute and create switching costs beyond a chip purchase."
+why: "Customers buy time-to-solution and reliable workload deployment, so platform coverage, porting effort, qualification, availability and developer productivity can carry more economic weight than isolated peak specifications."
+mechanism: "A vendor invests in processor architecture and a software stack; cloud, OEM and system partners distribute hardware and instances; framework and application teams build against platform interfaces; optimized libraries shorten deployment and improve utilization; accumulated code, tools, skills and validation raise migration time and risk, while competing hardware and open or portable software constrain platform power."
+example: "NVIDIA introduced CUDA in 2006 and describes its current platform as GPUs plus CUDA, hundreds of libraries, frameworks, SDKs and APIs; AlexNet demonstrates how optimized GPU software, selective communication and hardware capacity jointly expanded feasible model training."
+my_take: "I should evaluate accelerator power through workload coverage, time-to-solution, throughput per dollar and watt, library maturity, porting and qualification time, installed base and credible alternatives, not infer lock-in or pricing power from CUDA usage alone."
+
+prerequisites:
+  - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+connections:
+  - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
+  - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS"
+  - "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "BUS.MEDIA.DEVICE_OS_POWER"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.ALEXNET.GPU_PARALLEL_TRAINING.2012"
+questions:
+  - "Which hardware, software, library, developer and validation layers convert an accelerator into a platform, who pays and benefits, and what customer-level evidence would identify switching cost or bargaining power?"
+cases:
+  - "AlexNet GPU parallel training and CUDA platform development"
+
+first_seen: "2026-11-11"
+last_reviewed: "2026-11-11"
+next_review: "2026-11-18"
+sources:
+  - "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm"
+  - "https://docs.nvidia.com/cuda/archive/13.1.1/cuda-programming-guide/01-introduction/introduction.html"
+  - "https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf"
+notes: "Industry-application L1 candidate pending a Teach-back that separates hardware capability, software enablement, customer workflow, payment, switching cost and competitive alternatives without converting NVIDIA's platform statements into independent causal proof."

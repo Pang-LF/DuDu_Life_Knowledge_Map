@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## 2026-11-11
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件进入收件箱
+- 从 2026-11-10 HBM, TSV & Memory Bandwidth 直接继续进入 GPU Parallelism & Useful Throughput，没有缺失课程日志
+- 新增 `SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM`，从 Processor、Latency 与 Throughput 开始，跟随一个 Pixel 进入 Thread、32-thread Warp、SM 与 Warp Scheduler
+- 用 16 / 16 分支的透明模型解释 Control Divergence，并明确 50% Lane 利用率只适用于两条等长路径的教学条件
+- 用 CUDA Guide 的 128 useful B / 128 transferred B 与 128 useful B / 1,024 transferred B 对照解释 Coalescing，不把当前事务示例当成 GTX 580 的精确周期数据
+- 把 Occupancy 定义为隐藏等待所需的候选工作供给，明确最大 Occupancy 不等于最大性能，Register、Shared Memory、Dependency 与同源等待仍会限制吞吐
+- 新增 `CASE.ALEXNET.GPU_PARALLEL_TRAINING.2012`，按七段叙事展开约 120 万图片、约 6,000 万参数、两张 3 GB GTX 580、Batch 128、选择性跨 GPU 通信与 CPU–GPU 重叠
+- 区分 AlexNet 单模型 18.2% Top-5 Error、七模型 Ensemble 15.3% 与第二名 26.2%，不把 10.9 个百分点差距归因于 GPU 单一因素
+- 保留双 GPU 与较小单 GPU 网络容量不同、没有同模型 CPU 反事实、架构与正则化共同贡献等证据边界
+- 新增 `BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS`，追踪 GPU、CUDA Driver / Compiler / Runtime / Library / Tooling、Cloud / OEM、Framework、Application Team 与客户之间的钱流和切换成本
+- 把 NVIDIA 2026 Form 10-K 的全栈平台和生态陈述按公司主张处理，不推造成客户级锁定、价格或份额的独立因果证明
+- 更新 HBM review、行业日志、Questions、CURRENT_STATE 与网站数据，不因复习自动升级旧节点
+- 下一课锁定 Roofline & Arithmetic Intensity
+
 ## 2026-11-10
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 UNREAD、SENT 与 INBOX 标签

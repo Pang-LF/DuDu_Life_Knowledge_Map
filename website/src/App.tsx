@@ -85,6 +85,8 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', x: 550, y: 560, labelSide: 'right', mapLabel: 'Packaging Economics（封装经济学）', mapId: 'BUS.PKG.ECON' },
   { id: 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', x: 655, y: 505, labelSide: 'left', mapLabel: 'HBM & TSV（高带宽存储）', mapId: 'SYS.HBM.BANDWIDTH' },
   { id: 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', x: 600, y: 600, labelSide: 'right', mapLabel: 'HBM Supply（HBM 供应）', mapId: 'BUS.HBM.SUPPLY' },
+  { id: 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', x: 665, y: 465, labelSide: 'left', mapLabel: 'GPU Parallelism（GPU 并行计算）', mapId: 'SYS.GPU.PARALLEL' },
+  { id: 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', x: 625, y: 640, labelSide: 'right', mapLabel: 'Accelerator Platform（加速器平台）', mapId: 'BUS.ACCEL.PLATFORM' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -122,7 +124,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

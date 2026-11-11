@@ -57,7 +57,7 @@ export const domains: Domain[] = [
     id: 'SYSTEM',
     nameEn: 'SYSTEM',
     nameZh: '现代社会系统',
-    progress: 19,
+    progress: 20,
     active: true,
     modules: ['Energy Systems（能源系统）', 'Compute Systems（计算系统）', 'Economics（经济学）', 'Finance（金融）', 'Politics（政治）', 'Geopolitics（地缘政治）'],
   },
@@ -1187,7 +1187,7 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'HBM moves stacked DRAM beside an accelerator and uses TSVs plus thousands of short package-level I/O paths to gain aggregate bandwidth, while moving constraints into stack yield, thermal design, packaging and effective workload utilization.',
-    connections: ['SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'SYSTEM.COMPUTE.FOUNDATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AMD_SKHYNIX.FIJI_HBM1.2009_2015'],
+    connections: ['SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'SYSTEM.COMPUTE.FOUNDATION', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AMD_SKHYNIX.FIJI_HBM1.2009_2015'],
   },
   {
     id: 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS',
@@ -1195,7 +1195,23 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Deliverable accelerator supply depends on matched customer-qualified HBM stacks, logic die, interposers, package slots, thermal qualification and final yield rather than raw DRAM wafer volume alone.',
-    connections: ['SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AMD_SKHYNIX.FIJI_HBM1.2009_2015'],
+    connections: ['SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'BUS.SEMICONDUCTOR.TEST_BINNING_ECONOMICS', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'BUS.ENERGY.LONG_TERM_CONTRACTS_COST_OF_CAPITAL', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AMD_SKHYNIX.FIJI_HBM1.2009_2015'],
+  },
+  {
+    id: 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM',
+    label: 'GPU Parallelism & Useful Throughput（GPU并行计算与有效吞吐）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'GPU arithmetic units become useful throughput only when software exposes enough similar independent work, supplies coalesced data, keeps ready warps resident and limits control divergence, dependencies and synchronization.',
+    connections: ['SYSTEM.COMPUTE.FOUNDATION', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.ALEXNET.GPU_PARALLEL_TRAINING.2012'],
+  },
+  {
+    id: 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS',
+    label: 'Accelerator Platform Economics（加速器平台经济学）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Accelerator value emerges from hardware plus drivers, compilers, runtimes, optimized libraries, frameworks, tools, developer skills and validated applications, creating migration time and risk beyond a chip comparison.',
+    connections: ['SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'BUS.MEDIA.DEVICE_OS_POWER', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.ALEXNET.GPU_PARALLEL_TRAINING.2012'],
   },
   {
     id: 'CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026',
@@ -1260,6 +1276,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'AMD and SK hynix moved stacked DRAM beside the Fiji GPU through TSVs and a silicon interposer, shipping Fury X with 4 GB HBM, a 4096-bit interface and up to 512 GB/s while accepting new capacity, package, thermal and yield constraints.',
     connections: ['SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'FRONTIER.AI.INFRASTRUCTURE'],
+  },
+  {
+    id: 'CASE.ALEXNET.GPU_PARALLEL_TRAINING.2012',
+    label: 'AlexNet GPU Training 2012（AlexNet GPU并行训练）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'AlexNet combined about 1.2 million images, a roughly 60-million-parameter CNN, optimized convolution, two 3 GB GTX 580 GPUs, selective communication and pipeline overlap; its single model reached 18.2% top-5 error while a seven-model ensemble reached 15.3%.',
+    connections: ['SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'SYSTEM.COMPUTE.FOUNDATION', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'FRONTIER.AI.INFRASTRUCTURE'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -1392,12 +1416,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-10',
-  title: 'HBM, TSV & Memory Bandwidth（高带宽存储、硅通孔与存储带宽）',
-  question: '为什么 HBM 的核心是把内存移近并把接口做宽，而增加 DRAM 或峰值带宽仍不保证更多有效计算？',
-  reading: '45-60 min：跟随一个 64-byte 数据块穿过 DRAM、TSV、Stack、Interposer 与 Accelerator，并进入 AMD + SK hynix Fiji HBM1 案例。',
-  discussion: '20-30 min：区分 Capacity、Peak / Effective Bandwidth 与 Latency，再判断 Qualified HBM、Logic、Package、Thermal 或 Final Yield 中谁是交付瓶颈。',
-  next: '2026-11-11：GPU Parallelism（GPU 并行计算）。',
+  date: '2026-11-11',
+  title: 'GPU Parallelism & Useful Throughput（GPU并行计算与有效吞吐）',
+  question: '为什么拥有大量计算单元、很高的理论 FLOPS 和充足带宽，仍不保证程序获得同样高的有效吞吐？',
+  reading: '45-60 min：跟随一个 Pixel 进入 Thread、Warp、SM、Memory Transaction 与 AlexNet 双 GPU 训练系统。',
+  discussion: '20-30 min：用 Occupancy、Divergence、Coalescing、Synchronization 和 CUDA Platform 解释性能与平台权力。',
+  next: '2026-11-12：Roofline & Arithmetic Intensity（屋顶线模型与算术强度）。',
 }
 
 export const monthlyTrack = [

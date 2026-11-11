@@ -151,3 +151,19 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Evidence boundary: customer-specific stack yield, package yield, price, allocation, qualification, scrap liability and switching cost are generally confidential; wafer starts and vendor capacity claims do not directly measure good accelerators.
 - Status: `SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH` and `BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS` at L1 candidate; Teach-back pending.
 - Next: GPU Parallelism — how many arithmetic units turn delivered data into throughput and why occupancy, control divergence, data movement and software determine realized performance.
+
+### 2026-11-11 — GPU Parallel Hardware Becomes Throughput Only Through Workload Mapping
+
+- Continuity: continued directly from the 2026-11-10 HBM lesson; no missing completion log.
+- Question: how do threads, warps, memory access and scheduling turn delivered data into useful throughput, and why can a software ecosystem create platform power beyond the chip?
+- Parent concept: `SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM` separates latency from throughput, maps kernels into blocks, 32-thread warps and SMs, and treats arithmetic units as potential capacity rather than application performance.
+- Divergence model: a hypothetical warp split evenly across two equal-length branches has 16 of 32 lanes useful on each path, or 50% average lane utilization; real cost depends on branch length, compiler and reconvergence.
+- Coalescing model: 32 threads requesting adjacent 4-byte values use 128 useful bytes and four 32-byte transactions; a large-stride guide example can transfer 1,024 bytes for the same 128 useful bytes, or 12.5% utilization.
+- Occupancy boundary: more resident warps can give the scheduler ready alternatives while others wait, but register use, shared memory, dependencies and common memory stalls mean maximum occupancy does not guarantee maximum performance.
+- Deep case: AlexNet trained about 60 million parameters on roughly 1.2 million images using two 3 GB GTX 580 GPUs, batch size 128, optimized convolution, selective cross-GPU communication and overlapping CPU augmentation, completing about 90 passes in five to six days.
+- Result boundary: the described single CNN produced 18.2% top-5 error; the 15.3% ILSVRC submission was a seven-CNN ensemble versus 26.2% for second place. The result cannot be assigned to GPU hardware alone.
+- Platform map: NVIDIA supplies GPU architecture plus CUDA drivers, compiler, runtime, libraries and tools; cloud and OEM partners distribute systems and instances; framework and application teams invest code and validation; end customers pay for usable systems, cloud time, software or outcomes.
+- Power mechanism: optimized library coverage, compatibility, tooling, trained developers, installed code and qualification raise porting time and risk, while CPUs, AMD ROCm, other accelerators, custom ASICs and portable frameworks constrain power.
+- Evidence boundary: NVIDIA's FY2026 Form 10-K explicitly describes a full-stack platform and ecosystem effect, but this is the company's strategic statement and does not identify any customer's causal switching cost, contract price or lack of alternatives.
+- Status: `SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM` and `BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Roofline & Arithmetic Intensity — place memory bandwidth and compute throughput in one model to identify the active performance ceiling.
