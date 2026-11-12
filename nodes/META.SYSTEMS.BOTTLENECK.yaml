@@ -30,17 +30,19 @@ connections:
   - "SYSTEM.ELECTRICITY.FLEXIBILITY_RAMPING_STORAGE"
   - "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
   - "BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS"
+  - "SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY"
+  - "BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS"
 questions:
   - "What marginal-capacity test distinguishes a true bottleneck from the busiest, slowest, most expensive, or most error-prone local step?"
 cases:
   - "Tesla Model 3 production ramp, 2017-2018"
 
 first_seen: "2026-09-12"
-last_reviewed: "2026-11-09"
+last_reviewed: "2026-11-12"
 next_review: "2026-10-28"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1318605/000156459017020822/tsla-ex991_6.htm"
   - "https://www.sec.gov/Archives/edgar/data/1318605/000156459018011086/tsla-10q_20180331.htm"
   - "https://www.sec.gov/Archives/edgar/data/1318605/000156459018024902/tsla-ex991_6.htm"
   - "https://www.sciencedirect.com/science/article/pii/S136757881000009X"
-notes: "Primary One Idea for Systems Thinking Day 5. Transferred on 2026-10-23 through flexibility dimensions and on 2026-11-09 through the moving constraint among die yield, KGD supply, substrate, bonding, interconnect, thermal design, test and package capacity. No automatic mastery upgrade; Teach-back remains pending."
+notes: "Primary One Idea for Systems Thinking Day 5. Transferred on 2026-11-12 through the lower-of-two-ceilings Roofline model and the distinction between active resource roof and utilization distance below it. No automatic mastery upgrade; Teach-back remains pending."

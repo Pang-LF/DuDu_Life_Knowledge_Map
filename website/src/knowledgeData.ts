@@ -1187,7 +1187,7 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'HBM moves stacked DRAM beside an accelerator and uses TSVs plus thousands of short package-level I/O paths to gain aggregate bandwidth, while moving constraints into stack yield, thermal design, packaging and effective workload utilization.',
-    connections: ['SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'SYSTEM.COMPUTE.FOUNDATION', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AMD_SKHYNIX.FIJI_HBM1.2009_2015'],
+    connections: ['SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'SYSTEM.COMPUTE.FOUNDATION', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AMD_SKHYNIX.FIJI_HBM1.2009_2015', 'CASE.GOOGLE.TPU_V1.ROOFLINE_INFERENCE.2013_2017'],
   },
   {
     id: 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS',
@@ -1203,7 +1203,7 @@ export const nodes: GraphNode[] = [
     domain: 'SYSTEM',
     mastery: 'L1 candidate',
     summary: 'GPU arithmetic units become useful throughput only when software exposes enough similar independent work, supplies coalesced data, keeps ready warps resident and limits control divergence, dependencies and synchronization.',
-    connections: ['SYSTEM.COMPUTE.FOUNDATION', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.ALEXNET.GPU_PARALLEL_TRAINING.2012'],
+    connections: ['SYSTEM.COMPUTE.FOUNDATION', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.ALEXNET.GPU_PARALLEL_TRAINING.2012', 'CASE.GOOGLE.TPU_V1.ROOFLINE_INFERENCE.2013_2017'],
   },
   {
     id: 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS',
@@ -1211,7 +1211,23 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Accelerator value emerges from hardware plus drivers, compilers, runtimes, optimized libraries, frameworks, tools, developer skills and validated applications, creating migration time and risk beyond a chip comparison.',
-    connections: ['SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'BUS.MEDIA.DEVICE_OS_POWER', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.ALEXNET.GPU_PARALLEL_TRAINING.2012'],
+    connections: ['SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY', 'BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'BUS.MEDIA.DEVICE_OS_POWER', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.ALEXNET.GPU_PARALLEL_TRAINING.2012', 'CASE.GOOGLE.TPU_V1.ROOFLINE_INFERENCE.2013_2017'],
+  },
+  {
+    id: 'SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY',
+    label: 'Roofline & Arithmetic Intensity（屋顶线与算术强度）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Attainable workload performance is bounded by the lower of sustainable compute and effective memory bandwidth multiplied by useful operations per byte across a named boundary; the ridge point separates the first-order memory and compute regimes.',
+    connections: ['SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'SYSTEM.COMPUTE.FOUNDATION', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.INTERDEPENDENCE', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.GOOGLE.TPU_V1.ROOFLINE_INFERENCE.2013_2017'],
+  },
+  {
+    id: 'BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS',
+    label: 'Accelerator Performance Economics（加速器性能经济学）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Accelerators and cloud instances must be compared by equivalent-workload time, tail latency, useful utilization, cost per successful output and porting burden rather than peak TOPS or hourly price alone.',
+    connections: ['SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.BOTTLENECK', 'META.PROBABILITY.EXPECTED_VALUE', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.GOOGLE.TPU_V1.ROOFLINE_INFERENCE.2013_2017'],
   },
   {
     id: 'CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026',
@@ -1284,6 +1300,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'AlexNet combined about 1.2 million images, a roughly 60-million-parameter CNN, optimized convolution, two 3 GB GTX 580 GPUs, selective communication and pipeline overlap; its single model reached 18.2% top-5 error while a seven-model ensemble reached 15.3%.',
     connections: ['SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'SYSTEM.COMPUTE.FOUNDATION', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'FRONTIER.AI.INFRASTRUCTURE'],
+  },
+  {
+    id: 'CASE.GOOGLE.TPU_V1.ROOFLINE_INFERENCE.2013_2017',
+    label: 'Google TPU v1 Roofline 2013–17（第一代 TPU 屋顶线）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'One 92-TOPS TPU delivered 2.8–86 TOPS across production inference workloads: low-intensity MLP/LSTM models hit the weight-memory slope, CNN0 approached compute peak, and CNN1 exposed shape and utilization distance below the roof.',
+    connections: ['SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY', 'BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -1416,12 +1440,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-11',
-  title: 'GPU Parallelism & Useful Throughput（GPU并行计算与有效吞吐）',
-  question: '为什么拥有大量计算单元、很高的理论 FLOPS 和充足带宽，仍不保证程序获得同样高的有效吞吐？',
-  reading: '45-60 min：跟随一个 Pixel 进入 Thread、Warp、SM、Memory Transaction 与 AlexNet 双 GPU 训练系统。',
-  discussion: '20-30 min：用 Occupancy、Divergence、Coalescing、Synchronization 和 CUDA Platform 解释性能与平台权力。',
-  next: '2026-11-12：Roofline & Arithmetic Intensity（屋顶线模型与算术强度）。',
+  date: '2026-11-12',
+  title: 'Roofline & Arithmetic Intensity（屋顶线模型与算术强度）',
+  question: '为什么峰值算力翻倍，有些程序接近翻倍，另一些程序几乎不变？',
+  reading: '45-60 min：跟随一个字节进入 HBM、计算屋顶与 Google TPU v1 的六种生产推理工作负载。',
+  discussion: '20-30 min：计算 Ridge Point，并区分活动屋顶、屋顶下利用率与每单位有效产出成本。',
+  next: '2026-11-13：Server Node Architecture & Interconnect（服务器节点架构与互连）。',
 }
 
 export const monthlyTrack = [

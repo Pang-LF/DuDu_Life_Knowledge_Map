@@ -21,6 +21,8 @@ connections:
   - "SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER"
   - "SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION"
   - "SYSTEM.SEMICONDUCTOR.CHIP_DESIGN_PDK_TAPEOUT"
+  - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
+  - "SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY"
   - "META.SYSTEMS.INTEGRATION"
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "META.SYSTEMS.BOTTLENECK"
@@ -28,17 +30,18 @@ connections:
   - "SYSTEM.ENERGY.FOUNDATION"
   - "FRONTIER.AI.INFRASTRUCTURE"
   - "CASE.AUTOMOTIVE_SEMICONDUCTOR_SHORTAGE.2020_2022"
+  - "CASE.GOOGLE.TPU_V1.ROOFLINE_INFERENCE.2013_2017"
 questions:
   - "For a requested compute service, what distinct object does each layer deliver, which interface and qualification gate connects it to the next layer, and where is the current non-substitutable constraint?"
 cases:
   - "Global automotive semiconductor shortage, 2020-2022"
 
 first_seen: "2026-11-02"
-last_reviewed: "2026-11-05"
+last_reviewed: "2026-11-12"
 next_review: "2026-11-10"
 sources:
   - "https://files.gao.gov/reports/GAO-26-107882/index.html"
   - "https://www.commerce.gov/news/blog/2022/01/results-semiconductor-supply-chain-request-information"
   - "https://www.nist.gov/system/files/documents/2022/09/06/CHIPS-for-America-Strategy.pdf"
   - "https://www.sec.gov/Archives/edgar/data/38009/000003800921000038/exhibit99toapril282021fm.htm"
-notes: "L1 candidate pending a teach-back that reconstructs an unfamiliar compute service from user output to software, system, chip, fabrication, equipment and materials without treating layer capacity as interchangeable. Reviewed through the qualified-wafer, fabrication and PDK-governed tape-out transfers on 2026-11-05; no automatic mastery upgrade."
+notes: "L1 candidate pending a teach-back that reconstructs an unfamiliar compute service from user output to software, system, chip, fabrication, equipment and materials without treating layer capacity as interchangeable. Reviewed through the accelerator Roofline and workload-service boundary on 2026-11-12; no automatic mastery upgrade."

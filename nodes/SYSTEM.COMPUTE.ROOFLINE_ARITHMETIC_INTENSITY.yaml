@@ -1,0 +1,43 @@
+id: "SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY"
+name_en: "Roofline Model and Arithmetic Intensity"
+name_zh: "屋顶线模型与算术强度"
+domain: "SYSTEM"
+module: "Compute Systems（计算系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "The Roofline model bounds attainable workload performance by the lower of sustainable compute throughput and effective memory bandwidth multiplied by useful operations per byte moved across a named memory boundary."
+why: "Peak operations and peak bandwidth are separate ceilings; without arithmetic intensity and a consistent byte boundary, neither specification predicts whether additional compute, memory bandwidth or software reuse can improve a workload."
+mechanism: "Compute the ridge point as sustainable compute divided by effective bandwidth; workloads below it are first constrained by the sloped memory roof, while workloads above it face the flat compute roof; then use profiler evidence to explain distance below the active roof through utilization, shape, dependencies, synchronization, latency targets or communication."
+example: "Google's first TPU combined about 92 TOPS with 34 GB/s weight-memory bandwidth and a reported ridge point of 1,350 operations per weight byte: CNN0 reached about 86 TOPS above the ridge, while lower-intensity MLP and LSTM workloads achieved 2.8-12.3 TOPS and CNN1 remained far below the compute roof because of shape, stalls and underutilized matrix positions."
+my_take: "I should name the useful operation, memory boundary, measured compute and bandwidth roofs, ridge point, workload point and distance below the active roof before recommending more compute, more bandwidth or software optimization."
+
+prerequisites:
+  - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
+  - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
+connections:
+  - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
+  - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
+  - "BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "SYSTEM.COMPUTE.FOUNDATION"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.GOOGLE.TPU_V1.ROOFLINE_INFERENCE.2013_2017"
+questions:
+  - "For a named memory boundary, what are the useful operations, actual bytes moved, sustainable compute roof, effective bandwidth roof, ridge point and measured distance below the active ceiling?"
+cases:
+  - "Google TPU v1 production inference Roofline analysis, 2013-2017"
+
+first_seen: "2026-11-12"
+last_reviewed: "2026-11-12"
+next_review: "2026-11-19"
+sources:
+  - "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/Archive/EECS-2008-134.pdf"
+  - "https://www.cs.cmu.edu/afs/cs/academic/class/15740-f18/www/papers/isca17-jouppi-tpu.pdf"
+  - "https://docs.nvidia.com/nsight-compute/ProfilingGuide/"
+  - "https://openxla.org/xprof/roofline_model"
+notes: "L1 candidate pending a Teach-back that calculates a ridge point, diagnoses memory- and compute-side kernels, and distinguishes an active Roofline ceiling from exact realized performance under workload, shape, software and SLA constraints."

@@ -19,6 +19,8 @@ prerequisites:
 connections:
   - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
   - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
+  - "SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY"
+  - "BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
   - "BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS"
   - "SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD"
@@ -27,16 +29,17 @@ connections:
   - "BUS.MEDIA.DEVICE_OS_POWER"
   - "FRONTIER.AI.INFRASTRUCTURE"
   - "CASE.ALEXNET.GPU_PARALLEL_TRAINING.2012"
+  - "CASE.GOOGLE.TPU_V1.ROOFLINE_INFERENCE.2013_2017"
 questions:
   - "Which hardware, software, library, developer and validation layers convert an accelerator into a platform, who pays and benefits, and what customer-level evidence would identify switching cost or bargaining power?"
 cases:
   - "AlexNet GPU parallel training and CUDA platform development"
 
 first_seen: "2026-11-11"
-last_reviewed: "2026-11-11"
+last_reviewed: "2026-11-12"
 next_review: "2026-11-18"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm"
   - "https://docs.nvidia.com/cuda/archive/13.1.1/cuda-programming-guide/01-introduction/introduction.html"
   - "https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf"
-notes: "Industry-application L1 candidate pending a Teach-back that separates hardware capability, software enablement, customer workflow, payment, switching cost and competitive alternatives without converting NVIDIA's platform statements into independent causal proof."
+notes: "Industry-application L1 candidate pending a Teach-back that separates hardware capability, software enablement, customer workflow, payment, switching cost and competitive alternatives without converting NVIDIA's platform statements into independent causal proof. Reviewed through workload-equivalent Roofline and cost-per-output comparison on 2026-11-12; no automatic mastery upgrade."

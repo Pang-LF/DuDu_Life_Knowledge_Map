@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-11-12
+
+- 从 2026-11-11 GPU Parallelism & Useful Throughput 直接继续进入 Roofline & Arithmetic Intensity，没有缺失课程日志
+- 新增 `SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY`，用 `min(Compute Roof, Effective Bandwidth × Arithmetic Intensity)` 和 Ridge Point 把 HBM 与 GPU 计算上限放进同一模型
+- 用 100 TFLOP/s、2 TB/s 与 5 / 100 FLOP/byte 的透明模型区分 Memory-bound、Compute-bound 与资源翻倍的不同结果
+- 明确原始论文的 Operational Intensity、现代 Arithmetic Intensity、命名 Memory Boundary 与实测可持续屋顶之间的口径边界
+- 新增 `CASE.GOOGLE.TPU_V1.ROOFLINE_INFERENCE.2013_2017`，按七段叙事展开 92 TOPS、34 GB/s、1,350 operations/weight-byte 与六种生产工作负载
+- 用 CNN0 的 86 TOPS、CNN1 的 14.1 TOPS 和 MLP / LSTM 的 2.8–12.3 TOPS 区分活动屋顶、形状利用率、等待与 SLA 约束
+- 记录四倍权重带宽约带来三倍平均性能、四倍时钟对 MLP / LSTM 几乎无效的论文模型，同时标记为特定工作负载与反事实估计
+- 新增 `BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS`，把 Time-to-Solution、Tail Latency、Cost per Useful Output、Porting 与资格化纳入云加速器比较
+- 明确 TPU v1 属于 2015 年 8-bit 推理、operations per weight byte 边界，且 Google 未公开实际芯片价格，Performance per Watt 只是 TCO 代理
+- 更新 HBM、GPU、Accelerator Platform、Compute Foundation、Value Chain 与 Bottleneck review，不因迁移自动升级旧节点
+- 更新行业日志、Questions、CURRENT_STATE 与网站数据；下一课锁定 Server Node Architecture & Interconnect
+
 ## 2026-11-11
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件进入收件箱

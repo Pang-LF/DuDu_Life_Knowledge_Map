@@ -167,3 +167,18 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Evidence boundary: NVIDIA's FY2026 Form 10-K explicitly describes a full-stack platform and ecosystem effect, but this is the company's strategic statement and does not identify any customer's causal switching cost, contract price or lack of alternatives.
 - Status: `SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM` and `BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS` at L1 candidate; Teach-back pending.
 - Next: Roofline & Arithmetic Intensity — place memory bandwidth and compute throughput in one model to identify the active performance ceiling.
+
+### 2026-11-12 — Performance Is Limited by the Lower Roof, Not the Largest Specification
+
+- Continuity: continued directly from the 2026-11-11 GPU parallelism lesson; no missing completion log.
+- Question: how should a cloud buyer compare accelerators when peak TOPS and hourly price disagree with useful workload output?
+- Parent concept: `SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY` bounds performance by the lower of sustainable compute and effective bandwidth multiplied by useful operations per byte across a named memory boundary.
+- Toy model: a 100 TFLOP/s, 2 TB/s machine has a 50 FLOP/byte ridge point; a 5 FLOP/byte kernel faces a 10 TFLOP/s memory roof, while a 100 FLOP/byte kernel reaches the 100 TFLOP/s compute roof.
+- Deep case: Google TPU v1 combined about 92 TOPS with 34 GB/s weight bandwidth and a reported 1,350 operations/weight-byte ridge. Low-intensity MLP/LSTM applications achieved 2.8–12.3 TOPS, CNN0 reached 86 TOPS, and CNN1 reached only 14.1 TOPS despite lying on the compute side.
+- Model boundary: Roofline identifies the active resource class and optimization direction; shape, idle matrix positions, dependencies, stalls, host interaction and response-time targets explain distance below the roof.
+- Counterfactual: the paper's model found four times weight bandwidth improved average performance about three times; four times clock did little for MLP/LSTM but about doubled CNN performance.
+- Industry metric: compare identical model, precision, batch, software, correctness and SLA using time-to-solution, tail latency, utilization and cost per useful output rather than peak TOPS or hourly price alone.
+- Money and control: cloud providers own capital, energy, operations and idle-capacity risk; customers pay for time or service; hardware and software vendors shape achievable roofs and porting cost.
+- Evidence boundary: TPU v1 describes 2015-era 8-bit inference and weight-memory traffic; actual chip prices were confidential and performance per watt was only a TCO proxy.
+- Status: `SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY` and `BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Server Node Architecture & Interconnect — how CPU hosts, memory, accelerators, PCIe / NVLink, NICs, power and cooling create the next system boundary.

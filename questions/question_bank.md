@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-12 — 对一个指定 Memory Boundary，完成同一有用输出需要多少运算、实际搬多少字节、实测 Compute / Bandwidth Roof 和 Ridge Point 分别是多少，工作点离当前屋顶还有多远？
+- 2026-11-12 — 在 Model、Precision、Batch、Software、Correctness 与 SLA 相同的条件下，哪款 Accelerator 的 Time-to-Solution 与 Cost per Useful Output 更低，哪些未公开采购和迁移成本可能翻转结论？
+
 - 2026-11-11 — 一个 Pixel / Data Element 怎样从 Memory 进入 Thread、Warp、SM 与算术通道，Occupancy、Divergence、Coalescing、Dependency 和 Synchronization 分别在哪一步降低有效吞吐？
 - 2026-11-11 — 两款 GPU 的 Peak FLOPS 与真实模型吞吐排序不一致时，需要哪些 Kernel、Memory、Warp、Library、Precision、Power、Communication 与 Porting 数据，才能区分硬件、软件、工作负载映射和平台切换成本？
 

@@ -1,0 +1,40 @@
+id: "BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS"
+name_en: "Accelerator Performance Economics"
+name_zh: "加速器性能经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Accelerator performance economics compares devices and cloud services by time, cost, energy and service quality per useful output under an equivalent workload rather than by peak operations or hourly price alone."
+why: "A high hourly price can yield a lower completed-job cost when a workload reaches the device's raised ceiling, while a peak-compute premium can be wasted when memory, communication, shape, software or latency remains limiting."
+mechanism: "Fix model, precision, batch, input shape, software, correctness and SLA; measure end-to-end time and resource utilization; multiply billed time by rate; add porting, validation, idle-capacity, power, network and operational costs; then compare cost per successful output and the risk of missing service objectives."
+example: "Google's TPU v1 paper used performance per watt as a TCO proxy because negotiated processor prices were not publishable, while its production workloads showed that the same 92-TOPS device delivered from 2.8 to 86 TOPS depending on intensity, shape and response-time conditions."
+my_take: "I should treat TOPS, bandwidth and hourly rate as inputs, then compare equivalent workload time-to-solution, tail latency, useful utilization, cost per output, engineering burden and capacity risk before drawing a purchase conclusion."
+
+prerequisites:
+  - "SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY"
+  - "BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS"
+connections:
+  - "SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY"
+  - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
+  - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
+  - "BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.GOOGLE.TPU_V1.ROOFLINE_INFERENCE.2013_2017"
+questions:
+  - "Under identical model, precision, batch, software, correctness and SLA, which accelerator minimizes time and total cost per useful output, and which unpriced engineering or capacity risks could reverse the result?"
+cases:
+  - "Google TPU v1 production inference Roofline and data-center TCO proxy, 2013-2017"
+
+first_seen: "2026-11-12"
+last_reviewed: "2026-11-12"
+next_review: "2026-11-19"
+sources:
+  - "https://www.cs.cmu.edu/afs/cs/academic/class/15740-f18/www/papers/isca17-jouppi-tpu.pdf"
+  - "https://research.google/pubs/in-datacenter-performance-analysis-of-a-tensor-processing-unit/"
+notes: "Industry-application L1 candidate pending a Teach-back that separates equivalent-workload performance, hourly price, time-to-solution, tail latency, porting cost and confidential procurement terms without inferring TCO from peak specifications."

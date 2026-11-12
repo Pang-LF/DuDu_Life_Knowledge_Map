@@ -16,6 +16,7 @@ my_take: "I should treat GPU cores as potential throughput, then inspect workloa
 prerequisites:
   - "SYSTEM.COMPUTE.FOUNDATION"
   - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
+  - "SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY"
 connections:
   - "SYSTEM.COMPUTE.FOUNDATION"
   - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
@@ -26,16 +27,17 @@ connections:
   - "META.SYSTEMS.BOTTLENECK"
   - "FRONTIER.AI.INFRASTRUCTURE"
   - "CASE.ALEXNET.GPU_PARALLEL_TRAINING.2012"
+  - "CASE.GOOGLE.TPU_V1.ROOFLINE_INFERENCE.2013_2017"
 questions:
   - "How does one data element move from memory into a thread and warp, and where do occupancy, divergence, coalescing, dependencies and synchronization turn peak resources into or away from useful throughput?"
 cases:
   - "AlexNet GPU parallel training and ImageNet result, 2012"
 
 first_seen: "2026-11-11"
-last_reviewed: "2026-11-11"
+last_reviewed: "2026-11-12"
 next_review: "2026-11-18"
 sources:
   - "https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf"
   - "https://docs.nvidia.com/cuda/cuda-programming-guide/03-advanced/advanced-kernel-programming.html"
   - "https://docs.nvidia.com/cuda/cuda-programming-guide/02-basics/writing-cuda-kernels.html"
-notes: "L1 candidate pending a Teach-back that follows one data element through memory, thread, warp and execution resources, then distinguishes peak FLOPS from useful throughput without treating maximum occupancy or GPU count as guaranteed performance."
+notes: "L1 candidate pending a Teach-back that follows one data element through memory, thread, warp and execution resources, then distinguishes peak FLOPS from useful throughput without treating maximum occupancy or GPU count as guaranteed performance. Reviewed through the Roofline transfer on 2026-11-12; no automatic mastery upgrade."

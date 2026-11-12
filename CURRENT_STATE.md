@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-11
+Last updated: 2026-11-12
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-11
 
 ## Next Immediate Focus（下一步）
 
-2026-11-12：进入 Roofline & Arithmetic Intensity（屋顶线模型与算术强度），把 HBM Memory Bandwidth 与 GPU Peak Compute 放进同一性能模型，判断 Kernel 何时受供数、计算或软件利用率约束，并区分规格屋顶与实测性能。
+2026-11-13：进入 Server Node Architecture & Interconnect（服务器节点架构与互连），跟随一份数据跨越 CPU Host、System Memory、PCIe / NVLink、Accelerator、NIC、Power 与 Cooling，判断单芯片屋顶怎样变成服务器级通信和集成约束。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-11
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-12：从 11 月 11 日 GPU Parallelism & Useful Throughput 直接继续进入 Roofline & Arithmetic Intensity，没有缺失课程日志。课程把 HBM 的字节供给与 Accelerator 的运算供给合并为 `Attainable Performance ≤ min(Sustainable Compute, Effective Bandwidth × Arithmetic Intensity)`，并要求命名有用运算、实际字节与 Memory Boundary。用 100 TFLOP/s、2 TB/s 的透明模型得到 50 FLOP/byte Ridge Point：5 FLOP/byte Kernel 先受 10 TFLOP/s Memory Roof 限制，100 FLOP/byte Kernel 先受 100 TFLOP/s Compute Roof 限制；带宽或计算翻倍只帮助撞到对应屋顶的工作负载。Google TPU v1 案例按七段叙事展开：92 TOPS、34 GB/s 权重带宽与论文报告的 1,350 operations per weight byte 脊点；MLP / LSTM 只有 64–200 强度并获得 2.8–12.3 TOPS，CNN0 以 2,888 强度达到 86 TOPS，而 CNN1 虽在计算侧却只有 14.1 TOPS，说明 Roofline 识别活动资源但不能替代形状、等待、依赖和 SLA 的实测。论文模型中四倍权重带宽约带来三倍平均性能，四倍时钟对 MLP / LSTM 几乎无效；这些只适用于当时 8-bit 推理与权重内存边界。Industry Apprenticeship 新增 Time-to-Solution、Tail Latency、Cost per Useful Output、Porting 与资格化，并保留芯片价格保密、Performance per Watt 仅为 TCO 代理的边界。`SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY` 与 `BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS` 为 L1 candidate；下一课进入 Server Node Architecture & Interconnect。
 
 2026-11-11：从 11 月 10 日 HBM, TSV & Memory Bandwidth 直接继续进入 GPU Parallelism & Useful Throughput，没有缺失课程日志。课程先分开 Latency 与 Throughput，再跟随一个 Pixel 从 Memory、Thread、32-thread Warp、SM Scheduler 到算术通道，说明 GPU 的计算单元只是潜在并行能力。用 16 / 16 分支的透明例子解释 Warp 内 Control Divergence 在等长路径下只产生约 50% 有效 Lane；用 CUDA Guide 的 32 线程 × 4 Byte 例子比较连续地址的 128 B / 4 个事务与大跨度地址的 128 B 有效载荷 / 1,024 B 传输，说明 Memory Coalescing 如何把接口规格转成或浪费 Effective Bandwidth；把 Occupancy 定义为可驻留 Active Warp 相对硬件上限，明确它提供 Latency Hiding 候选工作而非性能分数。AlexNet 2012 案例按七段叙事展开：约 120 万图片、1,000 类、约 6,000 万参数、两张 3 GB GTX 580、Batch 128 与 5–6 天训练；单模型 Top-5 Error 为 18.2%，15.3% 是七模型 Ensemble，第二名 26.2%，不把 10.9 个百分点差距归因于 GPU 单一因素。双 GPU 与单 GPU 网络容量不同，也不作为纯硬件加速实验。Industry Apprenticeship 追踪 NVIDIA、Cloud / OEM、Framework、Application Team 与客户之间的硬件、驱动、编译器、Library、工具、钱流和迁移成本，并把 NVIDIA 10-K 的平台与生态陈述保留为公司主张。`SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM` 与 `BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS` 为 L1 candidate；下一课进入 Roofline & Arithmetic Intensity。
 
