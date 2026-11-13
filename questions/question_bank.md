@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-13 — 一份指定数据当前位于哪一级 Memory / Storage，下一计算阶段在哪里，它必须跨过哪些 CPU–Memory、Host–Device、P2P、NIC 或 Storage 路径，各路径的 Bandwidth、Latency、Topology、Software、Power 与 Cooling 证据是什么？
+- 2026-11-13 — CPU、GPU、Memory、NIC、Storage、电源、冷却与软件由谁集成为一个可验收节点，客户支付什么、各供应商交付什么，哪些 Support、Warranty、Qualification 与 Liability 边界仍属合同机密？
+
 - 2026-11-12 — 对一个指定 Memory Boundary，完成同一有用输出需要多少运算、实际搬多少字节、实测 Compute / Bandwidth Roof 和 Ridge Point 分别是多少，工作点离当前屋顶还有多远？
 - 2026-11-12 — 在 Model、Precision、Batch、Software、Correctness 与 SLA 相同的条件下，哪款 Accelerator 的 Time-to-Solution 与 Cost per Useful Output 更低，哪些未公开采购和迁移成本可能翻转结论？
 

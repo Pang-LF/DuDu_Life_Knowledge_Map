@@ -89,6 +89,8 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', x: 625, y: 640, labelSide: 'right', mapLabel: 'Accelerator Platform（加速器平台）', mapId: 'BUS.ACCEL.PLATFORM' },
   { id: 'SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY', x: 720, y: 445, labelSide: 'left', mapLabel: 'Roofline（屋顶线）', mapId: 'SYS.COMPUTE.ROOFLINE' },
   { id: 'BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS', x: 680, y: 650, labelSide: 'right', mapLabel: 'Performance Economics（性能经济学）', mapId: 'BUS.ACCEL.PERF' },
+  { id: 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', x: 775, y: 430, labelSide: 'left', mapLabel: 'Server Node（服务器节点）', mapId: 'SYS.SERVER.NODE' },
+  { id: 'BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS', x: 735, y: 675, labelSide: 'right', mapLabel: 'System Integration（系统集成）', mapId: 'BUS.SERVER.INTEGRATION' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -126,7 +128,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(
@@ -178,7 +180,7 @@ function App() {
           </div>
           <ol className="route-list">
             {monthlyTrack.map((item, index) => (
-              <li className={index === 2 ? 'current' : ''} key={item}>
+              <li className={index === 3 ? 'current' : ''} key={item}>
                 <span>{index + 1}</span>
                 {item}
               </li>

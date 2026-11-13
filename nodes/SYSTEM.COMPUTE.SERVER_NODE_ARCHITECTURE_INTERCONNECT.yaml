@@ -1,0 +1,47 @@
+id: "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
+name_en: "Server Node Architecture and Interconnect"
+name_zh: "服务器节点架构与互连"
+domain: "SYSTEM"
+module: "Compute Systems（计算系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A server node is a schedulable compute unit whose CPUs, system memory, accelerators, local accelerator memory, NICs, storage, power, cooling, firmware and software are organized by unequal interconnect paths and data-locality boundaries."
+why: "Local chip roofs do not add into one universal server roof: a workload can use a resource only after its data reaches that resource through the actual topology, protocol, permissions and sustainable power-and-cooling envelope."
+mechanism: "Place every important dataset in a named memory or storage location; trace CPU-memory, host-device, peer-to-peer, NIC and storage paths; measure bandwidth, latency and contention for the actual route; verify P2P, NUMA placement, driver and runtime enablement; then include synchronization, power caps and thermal throttling in end-to-end performance."
+example: "Each Summit node paired two POWER9 CPUs, six V100 GPUs, 512 GB DDR4, 96 GB HBM2, 1.6 TB NVMe, NVLink and dual-rail EDR InfiniBand; deployment tests found that a cgroups configuration could block direct GPU-to-GPU communication despite the physical NVLink hardware."
+my_take: "I should treat a server as a map of data locations and paths, not a sum of component peaks, and require topology plus software, telemetry and end-to-end evidence before calling any link or accelerator usable capacity."
+
+prerequisites:
+  - "SYSTEM.COMPUTE.FOUNDATION"
+  - "SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY"
+  - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
+  - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
+connections:
+  - "SYSTEM.COMPUTE.FOUNDATION"
+  - "SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY"
+  - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
+  - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
+  - "BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.COUPLING"
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.OLCF.SUMMIT.NODE_ARCHITECTURE_DEPLOYMENT.2012_2019"
+questions:
+  - "Where does each dataset live, which exact links must it cross, and what measured bandwidth, latency, topology, software, power and cooling evidence describes those paths?"
+cases:
+  - "OLCF Summit node architecture, deployment and acceptance, 2012-2019"
+
+first_seen: "2026-11-13"
+last_reviewed: "2026-11-13"
+next_review: "2026-11-20"
+sources:
+  - "https://docs.olcf.ornl.gov/systems/summit_user_guide.html"
+  - "https://www.osti.gov/servlets/purl/1561654"
+  - "https://www.olcf.ornl.gov/wp-content/uploads/2019/05/Summit_System_Overview_20190520.pdf"
+notes: "L1 candidate pending a Teach-back that reconstructs a tensor path across host memory, accelerators and NIC, calculates ideal transfer lower bounds, distinguishes aggregate local bandwidth from one object's end-to-end path, and names the topology, software, power and cooling evidence still required."

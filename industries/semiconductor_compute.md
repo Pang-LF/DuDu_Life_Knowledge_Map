@@ -182,3 +182,21 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Evidence boundary: TPU v1 describes 2015-era 8-bit inference and weight-memory traffic; actual chip prices were confidential and performance per watt was only a TCO proxy.
 - Status: `SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY` and `BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS` at L1 candidate; Teach-back pending.
 - Next: Server Node Architecture & Interconnect — how CPU hosts, memory, accelerators, PCIe / NVLink, NICs, power and cooling create the next system boundary.
+
+### 2026-11-13 — A Server Is a Qualified Data-Path System, Not a Bag of Fast Chips
+
+- Continuity: continued directly from the 2026-11-12 Roofline lesson; the latest seven actual daily logs are consecutive and no completion gap was invented.
+- Module orientation: entered Server, Data Center & Cloud, where processors, memory, interconnect, networking, storage, power, cooling and software become one sustained compute service.
+- Question: who turns CPUs, GPUs, memory, NICs, storage, power, cooling and software into a server whose complete data paths are accepted and supportable?
+- Parent concept: `SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT` defines a node as a schedulable hierarchy of data locations connected by unequal paths, not the sum of component peaks.
+- Minimum unit: one 1 GB tensor moves from CPU system memory to GPU HBM, peer GPU, NIC, remote node or NVMe; each boundary changes the available bandwidth, latency, topology and software path.
+- Summit hierarchy: one V100 exposed 900 GB/s local HBM2, representative NVLink paths about 50 GB/s, node network injection about 23 GB/s, and local NVMe about 5.5 GB/s read / 2.1 GB/s write.
+- Transparent lower bounds: ideal decimal 1 GB serialization is about 1.1 ms at 900 GB/s, 20 ms at 50 GB/s, 43 ms at 23 GB/s, 182 ms at 5.5 GB/s and 476 ms at 2.1 GB/s; these exclude protocol, startup, contention, topology, synchronization and software overhead.
+- Deep case: Summit combined 4,608 IBM AC922 nodes, each with two POWER9 CPUs, six V100s, 512 GB DDR4, 96 GB HBM2 and 1.6 TB NVMe, plus NVLink and dual-rail EDR InfiniBand.
+- Acceptance evidence: full-system stability testing lasted 336 hours with job-success, correctness and resource-availability requirements; more than 29,000 tests ran from October 25 to November 8, 2018, with 97.77% reported successful completion.
+- Counterexample: cgroups configuration blocked direct device-to-device use despite physical NVLink; corrected P2P tests reached about 46 GB/s per direction and found slow GPU/HBM, misconfigured P2P and stray-process problems.
+- Money and responsibility: DOE / ORNL procured and accepted the capability; IBM integrated the AC922 system; NVIDIA, Mellanox and other component, storage, power, cooling and software suppliers contributed qualified interfaces. Public sources do not reveal complete component prices, integrator margins or liability terms.
+- System-integrator value: topology design, board and thermal engineering, firmware, drivers, management, validation, support and a single accountability boundary convert components into accepted-node capacity.
+- Evidence boundary: Summit is a 2018 scientific-computing system; published peaks and official system comparisons do not predict every modern cloud or AI workload or isolate one component's causal contribution.
+- Status: `SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT` and `BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Cluster Network, Topology & Collective Communication — how message size, network injection, path topology, synchronization and collective algorithms govern multi-node scaling.

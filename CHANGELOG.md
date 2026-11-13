@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-11-13
+
+- 从 2026-11-12 Roofline & Arithmetic Intensity 直接进入 Server Node Architecture & Interconnect，并开始 Server, Data Center & Cloud 模块；最近 7 个实际日志连续
+- 新增 `SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT`，把服务器节点定义为 CPU、System Memory、Accelerator、HBM、NIC、Storage、Power、Cooling、Firmware 与 Runtime 共同组成的数据位置和路径层级
+- 跟随十进制 1 GB Tensor 跨越本地 HBM、NVLink、节点网络与 NVMe，用 Summit 公开带宽计算约 1.1 / 20 / 43 / 182 / 476 ms 理想序列化下限
+- 明确聚合本地带宽不能当作单个对象任意端点间的传输速度，且理想下限不包含协议、启动延迟、拓扑、争用、同步和软件开销
+- 新增 `CASE.OLCF.SUMMIT.NODE_ARCHITECTURE_DEPLOYMENT.2012_2019`，按七段叙事展开 4,608 节点、每节点 2 POWER9 + 6 V100、512 GB DDR4、96 GB HBM2、1.6 TB NVMe、NVLink 与双路 EDR InfiniBand
+- 记录 Summit 336 小时满系统稳定性测试、超过 29,000 项测试与 97.77% 成功完成，并区分验收结果、长期生产可用率和应用性能
+- 用 cgroups 阻断 Device-to-Device 直连的部署反例证明物理 NVLink 不等于软件实际使用快路；修正后的 P2P 基准约 46 GB/s 每方向
+- 新增 `BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS`，把拓扑、板级与热设计、固件驱动、监控、验收、支持和责任边界纳入系统集成商价值
+- 保留组件价格、系统利润、Warranty、Liability 与供应商合同条款的公开证据边界
+- 更新 Compute Foundation、Roofline、GPU、HBM、Compute Value Chain、行业日志、Questions、CURRENT_STATE 与网站数据；旧节点只记录 review / transfer
+- 下一课锁定 Cluster Network, Topology & Collective Communication
+
 ## 2026-11-12
 
 - 从 2026-11-11 GPU Parallelism & Useful Throughput 直接继续进入 Roofline & Arithmetic Intensity，没有缺失课程日志

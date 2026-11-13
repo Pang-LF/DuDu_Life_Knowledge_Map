@@ -1,0 +1,43 @@
+id: "BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS"
+name_en: "Server System Integration Economics"
+name_zh: "服务器系统集成经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Server system integration turns processors, memory, accelerators, NICs, storage, power, cooling, firmware and software from separately specified components into a qualified, supportable and contractually accountable compute system."
+why: "Individually compliant parts can still fail through topology imbalance, signal and power integrity, driver conflict, disabled peer paths, thermal throttling or long-duration instability, so customers pay for an accepted system and responsibility boundary rather than a bill of materials alone."
+mechanism: "The integrator selects and designs component interfaces, board topology, mechanical and thermal systems, firmware, drivers, management and monitoring; validates real workloads under power, temperature and failure conditions; supports deployment; and converts multi-vendor interface risk into an acceptance and service obligation priced into the system."
+example: "For Summit, DOE and ORNL procured and accepted an IBM AC922 system combining POWER9 CPUs, NVIDIA V100 GPUs and NVLink, Mellanox InfiniBand, storage, power, cooling and software; full-system acceptance included 336 hours of stability testing, correctness, job-success and resource-availability requirements."
+my_take: "I should compare accepted-node cost, time-to-solution, communication efficiency, availability, power, cooling, porting and support obligations, while treating private component prices, margins and liability terms as contract-specific unknowns."
+
+prerequisites:
+  - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+connections:
+  - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS"
+  - "SYSTEM.COMPUTE.FOUNDATION"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.COUPLING"
+  - "META.SYSTEMS.DELAY"
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.OLCF.SUMMIT.NODE_ARCHITECTURE_DEPLOYMENT.2012_2019"
+questions:
+  - "Who integrates the server, who pays whom, and which acceptance, support and liability boundary turns components into usable capacity under real workloads?"
+cases:
+  - "OLCF Summit procurement, integration, deployment and acceptance, 2012-2019"
+
+first_seen: "2026-11-13"
+last_reviewed: "2026-11-13"
+next_review: "2026-11-20"
+sources:
+  - "https://www.osti.gov/servlets/purl/1561654"
+  - "https://docs.olcf.ornl.gov/systems/summit_user_guide.html"
+notes: "Industry-application L1 candidate pending a Teach-back that separates component procurement from accepted-node capability, maps OEM, component vendor, operator and customer money and responsibility flows, and preserves confidential pricing, margin, warranty and liability boundaries."

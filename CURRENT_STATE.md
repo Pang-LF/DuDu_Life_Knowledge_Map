@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-12
+Last updated: 2026-11-13
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-12
 
 ## Next Immediate Focus（下一步）
 
-2026-11-13：进入 Server Node Architecture & Interconnect（服务器节点架构与互连），跟随一份数据跨越 CPU Host、System Memory、PCIe / NVLink、Accelerator、NIC、Power 与 Cooling，判断单芯片屋顶怎样变成服务器级通信和集成约束。
+2026-11-14：进入 Cluster Network, Topology & Collective Communication（集群网络、拓扑与集合通信），跟随一份跨节点 Gradient / Tensor，区分 Point-to-Point、All-Reduce、Network Injection、Bisection、Message Size、Synchronization 与 Overlap 怎样决定多节点扩展效率。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-12
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-13：从 11 月 12 日 Roofline & Arithmetic Intensity 直接继续进入 Server Node Architecture & Interconnect，并进入 11 月第四个模块 Server, Data Center & Cloud；最近 7 个实际日志连续，没有补造断点。课程把 Server Node 定义为由 CPU、System Memory、Accelerator、HBM、NIC、Storage、Power、Cooling、Firmware 与 Runtime 组成、可独立调度和验收的数据位置层级，而不是芯片峰值之和。跟随十进制 1 GB Tensor 依次跨 CPU Memory、NVLink、GPU HBM、NIC 与 NVMe，并用 Summit 公开规格得到理想序列化下限：900 GB/s 约 1.1 ms、50 GB/s 约 20 ms、23 GB/s 约 43 ms、5.5 GB/s 约 182 ms、2.1 GB/s 约 476 ms；明确这些不包含协议、启动、争用、拓扑、同步和软件。Summit 案例按七段叙事展开：4,608 个节点，每节点 2 颗 POWER9、6 颗 V100、512 GB DDR4、96 GB HBM2 与 1.6 TB NVMe，通过 NVLink 和双路 EDR InfiniBand 组成；满系统稳定性测试持续 336 小时，超过 29,000 项测试中 97.77% 成功完成。cgroups 配置曾阻断 Device-to-Device 直连，证明物理 Link 不等于应用可用路径。Industry Apprenticeship 新增 System Integrator：客户支付的是经过拓扑、固件、驱动、功热、稳定性和支持验证的可验收节点，而非物料清单；具体组件价格、利润、Warranty 与 Liability 条款保持保密边界。`SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT` 与 `BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS` 为 L1 candidate；下一课进入 Cluster Network, Topology & Collective Communication。
 
 2026-11-12：从 11 月 11 日 GPU Parallelism & Useful Throughput 直接继续进入 Roofline & Arithmetic Intensity，没有缺失课程日志。课程把 HBM 的字节供给与 Accelerator 的运算供给合并为 `Attainable Performance ≤ min(Sustainable Compute, Effective Bandwidth × Arithmetic Intensity)`，并要求命名有用运算、实际字节与 Memory Boundary。用 100 TFLOP/s、2 TB/s 的透明模型得到 50 FLOP/byte Ridge Point：5 FLOP/byte Kernel 先受 10 TFLOP/s Memory Roof 限制，100 FLOP/byte Kernel 先受 100 TFLOP/s Compute Roof 限制；带宽或计算翻倍只帮助撞到对应屋顶的工作负载。Google TPU v1 案例按七段叙事展开：92 TOPS、34 GB/s 权重带宽与论文报告的 1,350 operations per weight byte 脊点；MLP / LSTM 只有 64–200 强度并获得 2.8–12.3 TOPS，CNN0 以 2,888 强度达到 86 TOPS，而 CNN1 虽在计算侧却只有 14.1 TOPS，说明 Roofline 识别活动资源但不能替代形状、等待、依赖和 SLA 的实测。论文模型中四倍权重带宽约带来三倍平均性能，四倍时钟对 MLP / LSTM 几乎无效；这些只适用于当时 8-bit 推理与权重内存边界。Industry Apprenticeship 新增 Time-to-Solution、Tail Latency、Cost per Useful Output、Porting 与资格化，并保留芯片价格保密、Performance per Watt 仅为 TCO 代理的边界。`SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY` 与 `BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS` 为 L1 candidate；下一课进入 Server Node Architecture & Interconnect。
 

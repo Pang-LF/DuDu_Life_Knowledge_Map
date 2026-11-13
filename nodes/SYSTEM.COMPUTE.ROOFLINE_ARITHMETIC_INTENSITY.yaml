@@ -23,21 +23,23 @@ connections:
   - "BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
   - "SYSTEM.COMPUTE.FOUNDATION"
+  - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
   - "META.SYSTEMS.BOTTLENECK"
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "FRONTIER.AI.INFRASTRUCTURE"
   - "CASE.GOOGLE.TPU_V1.ROOFLINE_INFERENCE.2013_2017"
+  - "CASE.OLCF.SUMMIT.NODE_ARCHITECTURE_DEPLOYMENT.2012_2019"
 questions:
   - "For a named memory boundary, what are the useful operations, actual bytes moved, sustainable compute roof, effective bandwidth roof, ridge point and measured distance below the active ceiling?"
 cases:
   - "Google TPU v1 production inference Roofline analysis, 2013-2017"
 
 first_seen: "2026-11-12"
-last_reviewed: "2026-11-12"
+last_reviewed: "2026-11-13"
 next_review: "2026-11-19"
 sources:
   - "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/Archive/EECS-2008-134.pdf"
   - "https://www.cs.cmu.edu/afs/cs/academic/class/15740-f18/www/papers/isca17-jouppi-tpu.pdf"
   - "https://docs.nvidia.com/nsight-compute/ProfilingGuide/"
   - "https://openxla.org/xprof/roofline_model"
-notes: "L1 candidate pending a Teach-back that calculates a ridge point, diagnoses memory- and compute-side kernels, and distinguishes an active Roofline ceiling from exact realized performance under workload, shape, software and SLA constraints."
+notes: "L1 candidate pending a Teach-back that calculates a ridge point, diagnoses memory- and compute-side kernels, and distinguishes an active Roofline ceiling from exact realized performance under workload, shape, software and SLA constraints. Reviewed as a local-chip prerequisite for server-level communication roofs on 2026-11-13; no automatic mastery upgrade."
