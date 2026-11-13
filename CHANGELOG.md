@@ -2,6 +2,7 @@
 
 ## 2026-11-13
 
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 `UNREAD`、`SENT` 与 `INBOX` 标签
 - 从 2026-11-12 Roofline & Arithmetic Intensity 直接进入 Server Node Architecture & Interconnect，并开始 Server, Data Center & Cloud 模块；最近 7 个实际日志连续
 - 新增 `SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT`，把服务器节点定义为 CPU、System Memory、Accelerator、HBM、NIC、Storage、Power、Cooling、Firmware 与 Runtime 共同组成的数据位置和路径层级
 - 跟随十进制 1 GB Tensor 跨越本地 HBM、NVLink、节点网络与 NVMe，用 Summit 公开带宽计算约 1.1 / 20 / 43 / 182 / 476 ms 理想序列化下限
