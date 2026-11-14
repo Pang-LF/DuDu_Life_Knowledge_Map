@@ -18,6 +18,7 @@ prerequisites:
   - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
   - "SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY"
   - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
+  - "SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION"
 connections:
   - "SYSTEM.COMPUTE.FOUNDATION"
   - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
@@ -36,10 +37,10 @@ cases:
   - "AlexNet GPU parallel training and ImageNet result, 2012"
 
 first_seen: "2026-11-11"
-last_reviewed: "2026-11-13"
+last_reviewed: "2026-11-14"
 next_review: "2026-11-18"
 sources:
   - "https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf"
   - "https://docs.nvidia.com/cuda/cuda-programming-guide/03-advanced/advanced-kernel-programming.html"
   - "https://docs.nvidia.com/cuda/cuda-programming-guide/02-basics/writing-cuda-kernels.html"
-notes: "L1 candidate pending a Teach-back that follows one data element through memory, thread, warp and execution resources, then distinguishes peak FLOPS from useful throughput without treating maximum occupancy or GPU count as guaranteed performance. Reviewed through multi-GPU data placement and peer paths on 2026-11-13; no automatic mastery upgrade."
+notes: "L1 candidate pending a Teach-back that follows one data element through memory, thread, warp and execution resources, then distinguishes peak FLOPS from useful throughput without treating maximum occupancy or GPU count as guaranteed performance. Reviewed through multi-GPU data placement on 2026-11-13 and rank synchronization / overlap on 2026-11-14; no automatic mastery upgrade."

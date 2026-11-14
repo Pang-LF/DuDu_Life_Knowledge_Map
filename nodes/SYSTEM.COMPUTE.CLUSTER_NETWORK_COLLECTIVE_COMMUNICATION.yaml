@@ -1,0 +1,46 @@
+id: "SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION"
+name_en: "Cluster Network, Topology and Collective Communication"
+name_zh: "集群网络、拓扑与集合通信"
+domain: "SYSTEM"
+module: "Compute Systems（计算系统）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Collective communication coordinates a group of ranks to produce a shared result such as a reduction or gathered tensor; its completion depends on message semantics, algorithm rounds, per-node injection, physical topology and bisection, message-size overhead, the slowest participant and the communication that cannot overlap with useful work."
+why: "Adding accelerators reduces local compute only if the shared gradient, activation or parameter movement does not become the new critical path; endpoint link peaks alone do not describe simultaneous group communication."
+mechanism: "Name the collective and each rank's input and output; derive per-rank bytes and rounds for the selected ring, tree or hierarchical algorithm; map logical ranks onto intra-node links, NICs, racks and fabric cuts; measure small- and large-message latency, algorithm and bus bandwidth, contention and stragglers; then determine which communication is exposed rather than overlapped with independent compute."
+example: "Horovod replaced TensorFlow parameter-server aggregation with ring-allreduce and Tensor Fusion. Its paper reported 88% scaling efficiency for Inception V3 and ResNet-101, only a further 3-4% improvement from RDMA for those models, but about 30% for the more communication-bound VGG-16."
+my_take: "I should reconstruct the collective result and data movement before discussing network speed, and distinguish endpoint injection, shared topology cuts, message startup, rank readiness and overlap with evidence from the actual job."
+
+prerequisites:
+  - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
+  - "SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY"
+  - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
+connections:
+  - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
+  - "SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY"
+  - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
+  - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
+  - "BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.COUPLING"
+  - "META.SYSTEMS.DELAY"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.UBER.HOROVOD.DISTRIBUTED_TRAINING.2017_2018"
+questions:
+  - "For a named collective, what result must every rank receive, how many bytes and rounds does the algorithm require, and which injection, topology cut, message-size, straggler and overlap evidence controls completion time?"
+cases:
+  - "Uber Horovod distributed training, ring-allreduce and Tensor Fusion, 2017-2018"
+
+first_seen: "2026-11-14"
+last_reviewed: "2026-11-14"
+next_review: "2026-11-21"
+sources:
+  - "https://arxiv.org/abs/1802.05799"
+  - "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/usage/collectives.html"
+  - "https://github.com/NVIDIA/nccl-tests/blob/master/doc/PERFORMANCE.md"
+notes: "L1 candidate pending a Teach-back that reconstructs reduce-scatter plus all-gather for an unfamiliar gradient, calculates a ring lower bound and distinguishes rank mapping, injection, bisection, oversubscription, message startup, stragglers and overlap without treating endpoint peak bandwidth as collective performance."

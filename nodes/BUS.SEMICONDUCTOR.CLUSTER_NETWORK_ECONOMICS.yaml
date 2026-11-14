@@ -1,0 +1,47 @@
+id: "BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS"
+name_en: "Cluster Network Economics"
+name_zh: "集群网络经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Cluster network economics connects NICs and DPUs, switch ASICs, optics and cabling, fabric topology, routing, telemetry, collective libraries, scheduling and operations to job completion time, accelerator idle cost, failure headroom and customer service obligations."
+why: "A cheaper oversubscribed fabric can be efficient for dispersed traffic yet strand expensive synchronized compute, while a non-blocking fabric can waste capital and power if workloads do not consume its headroom; value therefore depends on named communication patterns and failure states."
+mechanism: "Trace capital and service payments from cloud or data-center buyers through server, network, optical, software and operations suppliers; compare normal and degraded injection, bisection, latency and collective performance; translate exposed communication into idle accelerator hours and cost per useful output; then include qualification, migration, support and private contract boundaries."
+example: "Meta described starting its modular data-center fabric at 4:1 rack-to-rack oversubscription and adding spines toward 2:1 or 1:1 as demand grew, while AWS describes cluster placement groups and EFA as service boundaries for tightly coupled workloads requiring non-oversubscribed full-bisection connectivity and lower, more consistent latency."
+my_take: "I should value a fabric by the workload and failure states in which its headroom shortens jobs or prevents stranded accelerators, while keeping confidential prices, discounts, margins and liability terms separate from public technical capability."
+
+prerequisites:
+  - "SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION"
+  - "BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+connections:
+  - "SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION"
+  - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
+  - "BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.COUPLING"
+  - "META.SYSTEMS.DELAY"
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.UBER.HOROVOD.DISTRIBUTED_TRAINING.2017_2018"
+questions:
+  - "Who pays for fabric headroom, which workload and failure state consumes it, how many accelerator idle hours does it avoid, and which price, support and liability terms remain private?"
+cases:
+  - "Uber Horovod communication scaling, Meta data-center fabric and AWS tightly coupled cluster networking"
+
+first_seen: "2026-11-14"
+last_reviewed: "2026-11-14"
+next_review: "2026-11-21"
+sources:
+  - "https://arxiv.org/abs/1802.05799"
+  - "https://engineering.fb.com/2014/11/14/production-engineering/introducing-data-center-fabric-the-next-generation-facebook-data-center-network/"
+  - "https://docs.aws.amazon.com/wellarchitected/latest/high-performance-computing-lens/network-architecture.html"
+  - "https://research.google.com/pubs/archive/43837.pdf"
+notes: "Industry-application L1 candidate pending a Teach-back that maps component and service money flows, compares oversubscribed and non-blocking headroom under a named collective and failure state, and translates exposed communication into idle-compute cost without inventing confidential customer prices, discounts, margins or remedies."

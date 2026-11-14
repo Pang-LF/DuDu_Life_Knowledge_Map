@@ -24,6 +24,8 @@ connections:
   - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
   - "SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH"
   - "BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS"
+  - "SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION"
+  - "BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
   - "BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS"
   - "META.SYSTEMS.INTERDEPENDENCE"
@@ -32,16 +34,17 @@ connections:
   - "SYSTEM.ENERGY.FOUNDATION"
   - "FRONTIER.AI.INFRASTRUCTURE"
   - "CASE.OLCF.SUMMIT.NODE_ARCHITECTURE_DEPLOYMENT.2012_2019"
+  - "CASE.UBER.HOROVOD.DISTRIBUTED_TRAINING.2017_2018"
 questions:
   - "Where does each dataset live, which exact links must it cross, and what measured bandwidth, latency, topology, software, power and cooling evidence describes those paths?"
 cases:
   - "OLCF Summit node architecture, deployment and acceptance, 2012-2019"
 
 first_seen: "2026-11-13"
-last_reviewed: "2026-11-13"
+last_reviewed: "2026-11-14"
 next_review: "2026-11-20"
 sources:
   - "https://docs.olcf.ornl.gov/systems/summit_user_guide.html"
   - "https://www.osti.gov/servlets/purl/1561654"
   - "https://www.olcf.ornl.gov/wp-content/uploads/2019/05/Summit_System_Overview_20190520.pdf"
-notes: "L1 candidate pending a Teach-back that reconstructs a tensor path across host memory, accelerators and NIC, calculates ideal transfer lower bounds, distinguishes aggregate local bandwidth from one object's end-to-end path, and names the topology, software, power and cooling evidence still required."
+notes: "L1 candidate pending a Teach-back that reconstructs a tensor path across host memory, accelerators and NIC, calculates ideal transfer lower bounds, distinguishes aggregate local bandwidth from one object's end-to-end path, and names the topology, software, power and cooling evidence still required. Reviewed as the node-level prerequisite for multi-node collective communication on 2026-11-14; no automatic mastery upgrade."

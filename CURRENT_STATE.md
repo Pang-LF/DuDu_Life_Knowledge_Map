@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-13
+Last updated: 2026-11-14
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-13
 
 ## Next Immediate Focus（下一步）
 
-2026-11-14：进入 Cluster Network, Topology & Collective Communication（集群网络、拓扑与集合通信），跟随一份跨节点 Gradient / Tensor，区分 Point-to-Point、All-Reduce、Network Injection、Bisection、Message Size、Synchronization 与 Overlap 怎样决定多节点扩展效率。
+2026-11-15：进入 Data Center Power, Cooling & Rack Capacity（数据中心供电、冷却与机架容量），跟随一瓦输入电力和一份芯片热量，区分 IT Load、Power Delivery、Heat Removal、Rack Density、Redundancy 与 Stranded Capacity 怎样决定可持续计算服务。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-13
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-14：从 11 月 13 日 Server Node Architecture & Interconnect 直接继续进入 Cluster Network, Topology & Collective Communication；最近 7 个实际日志连续，没有补造断点。课程把 Point-to-Point 与 Collective Result Semantics 分开，跟随 8 个 Rank 各自产生的一份 1 GB Gradient 重建 Reduce-Scatter 与 All-Gather；用 `2(N−1)/N` 得到每 Rank 1.75 GB 理想流量，并在假设有效注入 25 GB/s 下算出 70 ms 大消息带宽下限，明确不含启动、拓扑、争用、归约、同步与软件。课程区分 Network Injection、Bisection、Oversubscription、Message Size、Straggler 与 Overlap，并用 400 ms 单卡计算、50 ms 八卡理想计算、70 ms 通信和 10 ms 残余的透明模型得到 3.08× Speedup / 38.5% Efficiency；隐藏 40 ms 通信后为 4.44× / 55.6%。Horovod 案例按七段叙事展开：标准 TensorFlow 在 128 张 Pascal GPU 上近一半资源未被有效利用；Ring All-Reduce、NCCL 与 Tensor Fusion 使 Inception V3 / ResNet-101 达到 88% Scaling Efficiency，RDMA 只再提高约 3–4%，但对通信更重的 VGG-16 提高约 30%；最高 65% Fusion 改善保留为特定未优化 TCP 实验。Industry Apprenticeship 追踪 NIC / DPU、Switch、Optic、Fabric、Collective Software、Cloud Operator 与租户的钱流，把 Oversubscription 定义为资本和同时通信容量的交换，并保留价格、利润、ROI 与 Liability 的私有边界。`SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION` 与 `BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS` 为 L1 candidate；下一课进入 Data Center Power, Cooling & Rack Capacity。
 
 2026-11-13：从 11 月 12 日 Roofline & Arithmetic Intensity 直接继续进入 Server Node Architecture & Interconnect，并进入 11 月第四个模块 Server, Data Center & Cloud；最近 7 个实际日志连续，没有补造断点。课程把 Server Node 定义为由 CPU、System Memory、Accelerator、HBM、NIC、Storage、Power、Cooling、Firmware 与 Runtime 组成、可独立调度和验收的数据位置层级，而不是芯片峰值之和。跟随十进制 1 GB Tensor 依次跨 CPU Memory、NVLink、GPU HBM、NIC 与 NVMe，并用 Summit 公开规格得到理想序列化下限：900 GB/s 约 1.1 ms、50 GB/s 约 20 ms、23 GB/s 约 43 ms、5.5 GB/s 约 182 ms、2.1 GB/s 约 476 ms；明确这些不包含协议、启动、争用、拓扑、同步和软件。Summit 案例按七段叙事展开：4,608 个节点，每节点 2 颗 POWER9、6 颗 V100、512 GB DDR4、96 GB HBM2 与 1.6 TB NVMe，通过 NVLink 和双路 EDR InfiniBand 组成；满系统稳定性测试持续 336 小时，超过 29,000 项测试中 97.77% 成功完成。cgroups 配置曾阻断 Device-to-Device 直连，证明物理 Link 不等于应用可用路径。Industry Apprenticeship 新增 System Integrator：客户支付的是经过拓扑、固件、驱动、功热、稳定性和支持验证的可验收节点，而非物料清单；具体组件价格、利润、Warranty 与 Liability 条款保持保密边界。`SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT` 与 `BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS` 为 L1 candidate；下一课进入 Cluster Network, Topology & Collective Communication。
 

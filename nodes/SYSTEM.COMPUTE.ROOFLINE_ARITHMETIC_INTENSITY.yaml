@@ -24,6 +24,7 @@ connections:
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
   - "SYSTEM.COMPUTE.FOUNDATION"
   - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
+  - "SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION"
   - "META.SYSTEMS.BOTTLENECK"
   - "META.SYSTEMS.INTERDEPENDENCE"
   - "FRONTIER.AI.INFRASTRUCTURE"
@@ -35,11 +36,11 @@ cases:
   - "Google TPU v1 production inference Roofline analysis, 2013-2017"
 
 first_seen: "2026-11-12"
-last_reviewed: "2026-11-13"
+last_reviewed: "2026-11-14"
 next_review: "2026-11-19"
 sources:
   - "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/Archive/EECS-2008-134.pdf"
   - "https://www.cs.cmu.edu/afs/cs/academic/class/15740-f18/www/papers/isca17-jouppi-tpu.pdf"
   - "https://docs.nvidia.com/nsight-compute/ProfilingGuide/"
   - "https://openxla.org/xprof/roofline_model"
-notes: "L1 candidate pending a Teach-back that calculates a ridge point, diagnoses memory- and compute-side kernels, and distinguishes an active Roofline ceiling from exact realized performance under workload, shape, software and SLA constraints. Reviewed as a local-chip prerequisite for server-level communication roofs on 2026-11-13; no automatic mastery upgrade."
+notes: "L1 candidate pending a Teach-back that calculates a ridge point, diagnoses memory- and compute-side kernels, and distinguishes an active Roofline ceiling from exact realized performance under workload, shape, software and SLA constraints. Reviewed as a local-chip prerequisite for server paths on 2026-11-13 and exposed collective communication on 2026-11-14; no automatic mastery upgrade."

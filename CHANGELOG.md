@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 2026-11-14
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 `UNREAD`、`SENT` 与 `INBOX` 标签
+- 从 2026-11-13 Server Node Architecture & Interconnect 直接进入 Cluster Network, Topology & Collective Communication；最近 7 个实际日志连续
+- 新增 `SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION`，把 Collective 定义为由结果语义、消息大小、算法轮次、节点注入、拓扑切面、最慢 Rank 与暴露通信共同决定的协同数据运动
+- 跟随 8 个 Rank 各自产生的 1 GB Gradient 重建 Reduce-Scatter 与 All-Gather，用 `2(N−1)/N` 算出每 Rank 1.75 GB 流量与假设 25 GB/s 下 70 ms 带宽下限
+- 区分 Point-to-Point、Injection、Bisection、Oversubscription、Latency、Bandwidth、Synchronization 与 Overlap，不把端口峰值当作 Collective Performance
+- 用透明 Step 模型得到 8 GPU 的 3.08× / 38.5% 扩展效率，并说明隐藏 40 ms 通信后为什么仍只有 4.44× / 55.6%
+- 新增 `CASE.UBER.HOROVOD.DISTRIBUTED_TRAINING.2017_2018`，按七段叙事展开 Parameter Server、Ring All-Reduce、NCCL、Tensor Fusion、TCP 与 RDMA
+- 记录 Horovod 的 88% Inception V3 / ResNet-101 Scaling Efficiency、RDMA 的 3–4% 与 VGG-16 的约 30% 差异，并把最高 65% Fusion 改善限定在特定未优化 TCP 实验
+- 新增 `BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS`，追踪 NIC / DPU、Switch、Optic、Fabric、Collective Software、Cloud Operator 与租户的钱流、Headroom 和闲置加速器成本
+- 使用 Meta 4:1→2:1→1:1 Fabric 扩容和 AWS Cluster Placement Group / EFA 作为行业机制资料，保留客户价格、折扣、利润、ROI 与责任条款边界
+- 更新 Server Node、Roofline、GPU、Compute Foundation、Compute Value Chain、行业日志、Questions、CURRENT_STATE 与网站数据；旧节点只记录 review / transfer
+- 下一课锁定 Data Center Power, Cooling & Rack Capacity
+
 ## 2026-11-13
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 `UNREAD`、`SENT` 与 `INBOX` 标签

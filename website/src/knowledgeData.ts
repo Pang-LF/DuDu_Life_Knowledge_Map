@@ -1246,6 +1246,22 @@ export const nodes: GraphNode[] = [
     connections: ['SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS', 'SYSTEM.COMPUTE.FOUNDATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'SYSTEM.ENERGY.FOUNDATION', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.OLCF.SUMMIT.NODE_ARCHITECTURE_DEPLOYMENT.2012_2019'],
   },
   {
+    id: 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION',
+    label: 'Cluster Network, Topology & Collective Communication（集群网络、拓扑与集合通信）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Collective completion is governed by result semantics, per-rank bytes and rounds, node injection, physical topology and bisection, message-size overhead, the slowest rank and exposed communication rather than the sum of endpoint link peaks.',
+    connections: ['SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', 'BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.UBER.HOROVOD.DISTRIBUTED_TRAINING.2017_2018'],
+  },
+  {
+    id: 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS',
+    label: 'Cluster Network Economics（集群网络经济学）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Cluster-network value comes from how NICs, switches, optics, topology, collective software and failure headroom reduce job time and accelerator idle cost relative to fabric capital, power, operations and migration burden.',
+    connections: ['SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS', 'BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'SYSTEM.ENERGY.FOUNDATION', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.UBER.HOROVOD.DISTRIBUTED_TRAINING.2017_2018'],
+  },
+  {
     id: 'CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026',
     label: 'GlobalWafers Sherman 300mm（环球晶圆谢尔曼工厂）',
     domain: 'SYSTEM',
@@ -1332,6 +1348,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'Summit integrated 4,608 nodes with two POWER9 CPUs, six V100 GPUs, DDR4, HBM2, NVMe, NVLink and dual-rail InfiniBand; acceptance tests and a cgroups-blocked P2P path showed that physical links become capacity only through software and system validation.',
     connections: ['SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS', 'SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.INTERDEPENDENCE', 'SYSTEM.ENERGY.FOUNDATION', 'FRONTIER.AI.INFRASTRUCTURE'],
+  },
+  {
+    id: 'CASE.UBER.HOROVOD.DISTRIBUTED_TRAINING.2017_2018',
+    label: 'Uber Horovod 2017–18（分布式训练与 Ring All-Reduce）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'Horovod replaced parameter-server aggregation with NCCL ring-allreduce and Tensor Fusion, reaching 88% scaling efficiency on two models while model-dependent RDMA gains of 3–4% versus about 30% exposed the role of the communication critical path.',
+    connections: ['SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'FRONTIER.AI.INFRASTRUCTURE'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -1464,12 +1488,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-13',
-  title: 'Server Node Architecture & Interconnect（服务器节点架构与互连）',
-  question: '六颗 GPU 各有 900 GB/s HBM，为什么一份数据仍可能卡在几十 GB/s？',
-  reading: '45-60 min：跟随 1 GB Tensor 穿过 CPU Memory、NVLink、HBM、NIC 与 NVMe，并重建 Summit 节点。',
-  discussion: '20-30 min：计算各边界理想下限，并诊断八卡服务器扩展不佳的拓扑、软件与功热机制。',
-  next: '2026-11-14：Cluster Network, Topology & Collective Communication（集群网络、拓扑与集合通信）。',
+  date: '2026-11-14',
+  title: 'Cluster Network, Topology & Collective Communication（集群网络、拓扑与集合通信）',
+  question: '每张 GPU 的网卡都很快，为什么 GPU 数翻倍后一步训练只快 1.3 倍？',
+  reading: '45-60 min：跟随 1 GB Gradient 重建 Ring All-Reduce、Injection、Bisection、Message Size、Synchronization 与 Overlap。',
+  discussion: '20-30 min：计算 8 Rank 的流量下限，并用可证伪测量诊断两个同端口速率集群的扩展效率差异。',
+  next: '2026-11-15：Data Center Power, Cooling & Rack Capacity（数据中心供电、冷却与机架容量）。',
 }
 
 export const monthlyTrack = [

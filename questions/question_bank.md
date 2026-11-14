@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-14 — 对一个指定 Collective，每个 Rank 必须得到什么结果，算法要求多少轮与多少字节，哪项 Injection、Bisection、Message Size、Straggler 与 Overlap 证据真正控制完成时间？
+- 2026-11-14 — 集群网络的 Headroom 由谁付款、在哪种工作负载与故障状态下被使用，它减少的 Accelerator Idle Cost 是否超过 Switch、Optic、Power 与运维成本？
+
 - 2026-11-13 — 一份指定数据当前位于哪一级 Memory / Storage，下一计算阶段在哪里，它必须跨过哪些 CPU–Memory、Host–Device、P2P、NIC 或 Storage 路径，各路径的 Bandwidth、Latency、Topology、Software、Power 与 Cooling 证据是什么？
 - 2026-11-13 — CPU、GPU、Memory、NIC、Storage、电源、冷却与软件由谁集成为一个可验收节点，客户支付什么、各供应商交付什么，哪些 Support、Warranty、Qualification 与 Liability 边界仍属合同机密？
 

@@ -15,6 +15,8 @@ my_take: "I should compare accepted-node cost, time-to-solution, communication e
 
 prerequisites:
   - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
+  - "SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION"
+  - "BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
 connections:
   - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
@@ -35,9 +37,9 @@ cases:
   - "OLCF Summit procurement, integration, deployment and acceptance, 2012-2019"
 
 first_seen: "2026-11-13"
-last_reviewed: "2026-11-13"
+last_reviewed: "2026-11-14"
 next_review: "2026-11-20"
 sources:
   - "https://www.osti.gov/servlets/purl/1561654"
   - "https://docs.olcf.ornl.gov/systems/summit_user_guide.html"
-notes: "Industry-application L1 candidate pending a Teach-back that separates component procurement from accepted-node capability, maps OEM, component vendor, operator and customer money and responsibility flows, and preserves confidential pricing, margin, warranty and liability boundaries."
+notes: "Industry-application L1 candidate pending a Teach-back that separates component procurement from accepted-node capability, maps OEM, component vendor, operator and customer money and responsibility flows, and preserves confidential pricing, margin, warranty and liability boundaries. Reviewed as a prerequisite for cluster-fabric purchasing and support boundaries on 2026-11-14; no automatic mastery upgrade."
