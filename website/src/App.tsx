@@ -93,6 +93,8 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS', x: 735, y: 675, labelSide: 'right', mapLabel: 'System Integration（系统集成）', mapId: 'BUS.SERVER.INTEGRATION' },
   { id: 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', x: 825, y: 420, labelSide: 'left', mapLabel: 'Cluster Collective（集群集合通信）', mapId: 'SYS.CLUSTER.COLLECTIVE' },
   { id: 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', x: 790, y: 690, labelSide: 'right', mapLabel: 'Network Economics（集群网络经济学）', mapId: 'BUS.CLUSTER.NETWORK' },
+  { id: 'SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY', x: 875, y: 430, labelSide: 'left', mapLabel: 'Data Center Capacity（数据中心容量）', mapId: 'SYS.DC.CAPACITY' },
+  { id: 'BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS', x: 845, y: 680, labelSide: 'right', mapLabel: 'Infrastructure Economics（基础设施经济学）', mapId: 'BUS.DC.INFRA' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -130,7 +132,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

@@ -31,17 +31,20 @@ connections:
   - "SYSTEM.ELECTRICITY.REAL_TIME_BALANCE"
   - "CASE.TEXAS.FREEZE.2021"
   - "FRONTIER.AI.INFRASTRUCTURE"
+  - "SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY"
+  - "BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS"
+  - "CASE.OLCF.FRONTIER.DATA_CENTER_POWER_COOLING.2019_2026"
 questions:
   - "For a specified energy service, which conversion-chain layer is the current constraint and what evidence distinguishes resource abundance from deliverable availability?"
 cases:
   - "February 2021 Texas freeze and South Central U.S. cold-weather outages"
 
 first_seen: "2026-10-01"
-last_reviewed: "2026-10-16"
+last_reviewed: "2026-11-15"
 next_review: "2026-10-23"
 sources:
   - "https://www.eia.gov/energyexplained/what-is-energy/index.php"
   - "https://www.eia.gov/energyexplained/electricity/"
   - "https://www.ferc.gov/sites/default/files/2021-12/Cold%20Weather%20Report_%202021_120821.pdf"
   - "https://www.dshs.texas.gov/sites/default/files/commprep/disasterepi/surveillance/SMOC_FebWinterStorm_MortalitySurvReport_12-30-21.pdf"
-notes: "October Energy Domain Orientation and parent concept. Transferred on 2026-10-16 by separating annual energy and capacity from second-scale power balance in the Great Britain event; mastery remains L1 candidate until Teach-back distinguishes stocks, flows, capacity, delivered energy, and useful service in an unfamiliar case."
+notes: "October Energy Domain Orientation and parent concept. Transferred on 2026-10-16 by separating annual energy and capacity from second-scale power balance, and on 2026-11-15 by following electrical input through a data center into compute service and waste heat; mastery remains L1 candidate until Teach-back distinguishes stocks, flows, capacity, delivered energy, and useful service in an unfamiliar case."

@@ -29,6 +29,8 @@ connections:
   - "META.SYSTEMS.COUPLING"
   - "META.SYSTEMS.DELAY"
   - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY"
+  - "BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS"
   - "FRONTIER.AI.INFRASTRUCTURE"
   - "CASE.UBER.HOROVOD.DISTRIBUTED_TRAINING.2017_2018"
 questions:
@@ -37,11 +39,11 @@ cases:
   - "Uber Horovod communication scaling, Meta data-center fabric and AWS tightly coupled cluster networking"
 
 first_seen: "2026-11-14"
-last_reviewed: "2026-11-14"
+last_reviewed: "2026-11-15"
 next_review: "2026-11-21"
 sources:
   - "https://arxiv.org/abs/1802.05799"
   - "https://engineering.fb.com/2014/11/14/production-engineering/introducing-data-center-fabric-the-next-generation-facebook-data-center-network/"
   - "https://docs.aws.amazon.com/wellarchitected/latest/high-performance-computing-lens/network-architecture.html"
   - "https://research.google.com/pubs/archive/43837.pdf"
-notes: "Industry-application L1 candidate pending a Teach-back that maps component and service money flows, compares oversubscribed and non-blocking headroom under a named collective and failure state, and translates exposed communication into idle-compute cost without inventing confidential customer prices, discounts, margins or remedies."
+notes: "Industry-application L1 candidate pending a Teach-back that maps component and service money flows, compares oversubscribed and non-blocking headroom under a named collective and failure state, and translates exposed communication into idle-compute cost without inventing confidential customer prices, discounts, margins or remedies. Reviewed on 2026-11-15 as one contributor to rack power, heat and lifecycle infrastructure cost; no automatic mastery upgrade."

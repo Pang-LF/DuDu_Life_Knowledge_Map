@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-15 — 对下一柜指定负载，哪条供电路径与排热路径必须在要求的冗余状态下保持可行，哪项位置级测量能识别第一个绑定的容量？
+- 2026-11-15 — 运营者实际承诺的是哪种 Critical IT kW、Rack Density、Cooling Condition 与 Availability，谁为各层资本付款，Intentional Reserve 与 Stranded Capacity 又怎样改变生命周期价值？
+
 - 2026-11-14 — 对一个指定 Collective，每个 Rank 必须得到什么结果，算法要求多少轮与多少字节，哪项 Injection、Bisection、Message Size、Straggler 与 Overlap 证据真正控制完成时间？
 - 2026-11-14 — 集群网络的 Headroom 由谁付款、在哪种工作负载与故障状态下被使用，它减少的 Accelerator Idle Cost 是否超过 Switch、Optic、Power 与运维成本？
 

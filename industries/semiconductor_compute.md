@@ -218,3 +218,20 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Evidence boundary: Horovod describes 2017–2018 TensorFlow, Pascal and 25GbE / RDMA tests; public vendor and cloud sources do not disclose customer-specific prices, margins, ROI, discounts or liability.
 - Status: `SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION` and `BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS` at L1 candidate; Teach-back pending.
 - Next: Data Center Power, Cooling & Rack Capacity — how electrical delivery, heat removal, density and redundancy convert installed hardware into sustainable capacity.
+
+### 2026-11-15 — Sustainable Capacity Is the Minimum Aligned Electrical and Thermal Path
+
+- Continuity: continued directly from the 2026-11-14 collective-communication lesson; the latest seven actual logs remain consecutive and no completion gap was invented.
+- Question: when a facility advertises megawatts, who pays for power, cooling, redundancy and stranded headroom, and what critical IT capacity can actually be committed at the rack?
+- Parent concept: `SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY` defines sustainable IT capacity as the minimum locally aligned power-delivery, heat-removal, rack-density and commissioned capacity under a named redundancy state.
+- One-watt path: utility / transformer / switchgear / UPS or alternate source / PDU or busway / rack PDU / PSU / voltage regulator / chip; almost all IT electrical energy ultimately becomes heat that must exit through air or cold plate, CDU, facility loop and heat rejection.
+- Redundancy boundary: N+1 reserves one additional required unit and reduces firm sellable capacity relative to nameplate; intentional reliability reserve is not automatically stranded capacity.
+- Rack-density boundary: campus MW and plant cooling cannot replace local busway, branch, pipe, flow, temperature or CDU capacity at the target cabinet.
+- PUE boundary: `PUE = Total Facility Energy / IT Equipment Energy`; a PUE of 1.20 means 0.20 support-energy unit per 1.00 IT-energy unit under the same boundary, not useful-compute efficiency, local rack capacity, carbon, water or reliability.
+- Transparent alignment model: 12 MW utility, 9 MW firm N+1 electrical, 8 MW cooling, 8 MW rack envelope and 8.5 MW commissioned IT produce 8 MW sustainable capacity; the remaining differences include both reliability reserve and physically stranded capacity.
+- Deep case: OLCF stripped and rebuilt Titan's former room for Frontier, added a 2.5-mile power line, a 28 MW electrical room, upgraded structural support and roughly 40 MW of planned warm-water cooling capacity.
+- Frontier evidence: OLCF reported peak PUE around 1.03, about 90°F water and 7–8 MW idle load in 2024; the current TOP500 24.607 MW benchmark-system power uses a separate measurement boundary and is not full facility power.
+- Money and control: utility, developer / owner, colocation or cloud provider, electrical and cooling vendors, system vendors and tenants finance and control different layers. Public records do not disclose customer-specific committed-kW prices, discounts, margins, SLA remedies or liability.
+- Value metrics: commissioned firm IT MW, deliverable kW / rack, normal and failure state, PUE, deployment time, stranded / trapped share, lifecycle cost and cost per useful compute output—not connected utility MW alone.
+- Status: `SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY` and `BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Cloud Resource Abstraction, Virtualization & Scheduling — how heterogeneous physical servers become sellable instances, quotas and placed workloads, and why reservation or fragmentation can leave capacity idle.

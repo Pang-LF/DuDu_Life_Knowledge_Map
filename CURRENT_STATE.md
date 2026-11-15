@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-14
+Last updated: 2026-11-15
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-14
 
 ## Next Immediate Focus（下一步）
 
-2026-11-15：进入 Data Center Power, Cooling & Rack Capacity（数据中心供电、冷却与机架容量），跟随一瓦输入电力和一份芯片热量，区分 IT Load、Power Delivery、Heat Removal、Rack Density、Redundancy 与 Stranded Capacity 怎样决定可持续计算服务。
+2026-11-16：进入 Cloud Resource Abstraction, Virtualization & Scheduling（云资源抽象、虚拟化与调度），跟随一份物理服务器能力怎样成为 Instance、Quota 与已放置 Workload，区分 Reservation、Overcommit、Placement、Failure Domain、Fragmentation 与 Utilization 怎样决定可售云容量。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-14
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-15：从 11 月 14 日 Cluster Network, Topology & Collective Communication 直接继续进入 Data Center Power, Cooling & Rack Capacity；最近 7 个实际日志连续，没有补造断点。课程先定义 Data Center 为把电力、散热、空间、网络、控制、可靠性和运维组合成持续计算服务的设施系统，再跟随一瓦从 Utility、Transformer、Switchgear、UPS、PDU / Busway、Rack PSU 与 Voltage Regulator 到芯片，并跟随几乎同一瓦热量经过 Cold Plate / Air、CDU、Facility Loop 与 Heat Rejection。课程区分 Facility Power、IT Load、Firm Electrical Capacity、Cooling Capacity、Rack Density、PUE、Reliability Reserve、Stranded 与 Trapped Capacity；用 12 MW Utility、9 MW N+1 Firm Electrical、8 MW Cooling、8 MW Rack Envelope 与 8.5 MW Commissioned IT 的透明模型得到 8 MW 可持续容量。Frontier 案例按七段叙事展开：OLCF 拆除并重建 Titan 原机房，铺设约 2.5 英里电力线路、建设 28 MW Electrical Room、升级地板并配置约 40 MW Warm-water Cooling；2024 年资料报告峰值 PUE 约 1.03、约 90°F 水温和 7–8 MW Idle Load。当前 TOP500 24.607 MW 是 Benchmark System Power，不与设施电表混用。Industry Apprenticeship 追踪 Utility、Developer / Owner、Colocation / Cloud、基础设施供应商与 Tenant 的钱流，把 Critical IT kW 与园区 MW 分开，并保留价格、利润、SLA 和 Liability 的私有边界。`SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY` 与 `BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS` 为 L1 candidate；下一课进入 Cloud Resource Abstraction, Virtualization & Scheduling。
 
 2026-11-14：从 11 月 13 日 Server Node Architecture & Interconnect 直接继续进入 Cluster Network, Topology & Collective Communication；最近 7 个实际日志连续，没有补造断点。课程把 Point-to-Point 与 Collective Result Semantics 分开，跟随 8 个 Rank 各自产生的一份 1 GB Gradient 重建 Reduce-Scatter 与 All-Gather；用 `2(N−1)/N` 得到每 Rank 1.75 GB 理想流量，并在假设有效注入 25 GB/s 下算出 70 ms 大消息带宽下限，明确不含启动、拓扑、争用、归约、同步与软件。课程区分 Network Injection、Bisection、Oversubscription、Message Size、Straggler 与 Overlap，并用 400 ms 单卡计算、50 ms 八卡理想计算、70 ms 通信和 10 ms 残余的透明模型得到 3.08× Speedup / 38.5% Efficiency；隐藏 40 ms 通信后为 4.44× / 55.6%。Horovod 案例按七段叙事展开：标准 TensorFlow 在 128 张 Pascal GPU 上近一半资源未被有效利用；Ring All-Reduce、NCCL 与 Tensor Fusion 使 Inception V3 / ResNet-101 达到 88% Scaling Efficiency，RDMA 只再提高约 3–4%，但对通信更重的 VGG-16 提高约 30%；最高 65% Fusion 改善保留为特定未优化 TCP 实验。Industry Apprenticeship 追踪 NIC / DPU、Switch、Optic、Fabric、Collective Software、Cloud Operator 与租户的钱流，把 Oversubscription 定义为资本和同时通信容量的交换，并保留价格、利润、ROI 与 Liability 的私有边界。`SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION` 与 `BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS` 为 L1 candidate；下一课进入 Data Center Power, Cooling & Rack Capacity。
 

@@ -57,7 +57,7 @@ export const domains: Domain[] = [
     id: 'SYSTEM',
     nameEn: 'SYSTEM',
     nameZh: '现代社会系统',
-    progress: 20,
+    progress: 22,
     active: true,
     modules: ['Energy Systems（能源系统）', 'Compute Systems（计算系统）', 'Economics（经济学）', 'Finance（金融）', 'Politics（政治）', 'Geopolitics（地缘政治）'],
   },
@@ -1262,6 +1262,22 @@ export const nodes: GraphNode[] = [
     connections: ['SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS', 'BUS.SEMICONDUCTOR.ACCELERATOR_PERFORMANCE_ECONOMICS', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'SYSTEM.ENERGY.FOUNDATION', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.UBER.HOROVOD.DISTRIBUTED_TRAINING.2017_2018'],
   },
   {
+    id: 'SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY',
+    label: 'Data Center Power, Cooling & Rack Capacity（数据中心供电、冷却与机架容量）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Sustainable data-center capacity is the minimum power-delivery, heat-removal, rack-density and commissioned IT capability aligned at the same location under a named redundancy state—not any single campus nameplate number.',
+    connections: ['SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'SYSTEM.COMPUTE.FOUNDATION', 'SYSTEM.ENERGY.FOUNDATION', 'BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS', 'BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS', 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.OLCF.FRONTIER.DATA_CENTER_POWER_COOLING.2019_2026'],
+  },
+  {
+    id: 'BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS',
+    label: 'Data Center Infrastructure Economics（数据中心基础设施经济学）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Infrastructure value comes from commissioned, locally deliverable critical IT kW under a stated failure condition, balanced against electrical and thermal capital, energy, reserve, deployment time and stranded capacity.',
+    connections: ['SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS', 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'SYSTEM.ENERGY.FOUNDATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.OLCF.FRONTIER.DATA_CENTER_POWER_COOLING.2019_2026'],
+  },
+  {
     id: 'CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026',
     label: 'GlobalWafers Sherman 300mm（环球晶圆谢尔曼工厂）',
     domain: 'SYSTEM',
@@ -1356,6 +1372,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'Horovod replaced parameter-server aggregation with NCCL ring-allreduce and Tensor Fusion, reaching 88% scaling efficiency on two models while model-dependent RDMA gains of 3–4% versus about 30% exposed the role of the communication critical path.',
     connections: ['SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'FRONTIER.AI.INFRASTRUCTURE'],
+  },
+  {
+    id: 'CASE.OLCF.FRONTIER.DATA_CENTER_POWER_COOLING.2019_2026',
+    label: 'OLCF Frontier Data Center 2019–26（Frontier 供电与冷却）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'OLCF rebuilt Titan’s former room with a new electrical path, structural support and warm-water direct liquid cooling, showing that campus MW becomes exascale service only when rack-level power, heat removal, controls and redundancy align.',
+    connections: ['SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY', 'BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'SYSTEM.ENERGY.FOUNDATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'FRONTIER.AI.INFRASTRUCTURE'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -1488,12 +1512,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-14',
-  title: 'Cluster Network, Topology & Collective Communication（集群网络、拓扑与集合通信）',
-  question: '每张 GPU 的网卡都很快，为什么 GPU 数翻倍后一步训练只快 1.3 倍？',
-  reading: '45-60 min：跟随 1 GB Gradient 重建 Ring All-Reduce、Injection、Bisection、Message Size、Synchronization 与 Overlap。',
-  discussion: '20-30 min：计算 8 Rank 的流量下限，并用可证伪测量诊断两个同端口速率集群的扩展效率差异。',
-  next: '2026-11-15：Data Center Power, Cooling & Rack Capacity（数据中心供电、冷却与机架容量）。',
+  date: '2026-11-15',
+  title: 'Data Center Power, Cooling & Rack Capacity（数据中心供电、冷却与机架容量）',
+  question: '园区明明还有 4 MW，为什么一柜 120 kW GPU 仍可能放不下？',
+  reading: '45-60 min：跟随一瓦的供电路径与排热路径，区分 Rack Density、Redundancy、PUE 与 Stranded Capacity。',
+  discussion: '20-30 min：计算 12 MW 教学设施的对齐容量，并用位置级测量诊断两座同为 20 MW 的数据中心。',
+  next: '2026-11-16：Cloud Resource Abstraction, Virtualization & Scheduling（云资源抽象、虚拟化与调度）。',
 }
 
 export const monthlyTrack = [

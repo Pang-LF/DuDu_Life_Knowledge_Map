@@ -29,6 +29,8 @@ connections:
   - "META.SYSTEMS.COUPLING"
   - "META.SYSTEMS.DELAY"
   - "SYSTEM.ENERGY.FOUNDATION"
+  - "SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY"
+  - "BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS"
   - "FRONTIER.AI.INFRASTRUCTURE"
   - "CASE.OLCF.SUMMIT.NODE_ARCHITECTURE_DEPLOYMENT.2012_2019"
 questions:
@@ -37,9 +39,9 @@ cases:
   - "OLCF Summit procurement, integration, deployment and acceptance, 2012-2019"
 
 first_seen: "2026-11-13"
-last_reviewed: "2026-11-14"
+last_reviewed: "2026-11-15"
 next_review: "2026-11-20"
 sources:
   - "https://www.osti.gov/servlets/purl/1561654"
   - "https://docs.olcf.ornl.gov/systems/summit_user_guide.html"
-notes: "Industry-application L1 candidate pending a Teach-back that separates component procurement from accepted-node capability, maps OEM, component vendor, operator and customer money and responsibility flows, and preserves confidential pricing, margin, warranty and liability boundaries. Reviewed as a prerequisite for cluster-fabric purchasing and support boundaries on 2026-11-14; no automatic mastery upgrade."
+notes: "Industry-application L1 candidate pending a Teach-back that separates component procurement from accepted-node capability, maps OEM, component vendor, operator and customer money and responsibility flows, and preserves confidential pricing, margin, warranty and liability boundaries. Reviewed as a prerequisite for cluster-fabric purchasing on 2026-11-14 and facility power / cooling qualification on 2026-11-15; no automatic mastery upgrade."

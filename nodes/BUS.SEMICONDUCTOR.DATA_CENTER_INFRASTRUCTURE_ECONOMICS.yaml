@@ -1,0 +1,47 @@
+id: "BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS"
+name_en: "Data Center Infrastructure Economics"
+name_zh: "数据中心基础设施经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Data-center infrastructure economics allocates capital, energy, reliability reserve and stranded capacity across utility interconnection, substations, transformers, switchgear, UPS or generators, busways, racks, cooling plants, CDUs, controls, buildings and compute customers."
+why: "A provider can own large nameplate MW yet sell fewer usable IT kW because electrical, thermal, spatial and redundancy limits are misaligned; maximizing utilization can also consume the reserve that protects service during faults or maintenance."
+mechanism: "Identify what the operator actually commits—space, critical IT power, density, cooling conditions, availability or compute service—then trace who finances and operates each electrical and thermal layer. Compare commissioned firm IT kW, rack-level deliverability, failure-state headroom, PUE and utilization with lifecycle capital, energy, water, maintenance, commissioning, migration and outage exposure; keep confidential price, discount, margin and remedy terms separate from public engineering capability."
+example: "OLCF converted Titan's former room for Frontier by rebuilding electrical, cooling and structural infrastructure rather than merely installing cabinets; the project included a new 28 MW electrical room, warm-water cooling plant and roughly 40 MW of planned cooling capacity."
+my_take: "I should value data-center capacity by commissioned, locally deliverable IT kW under a named reliability state and by cost per useful compute output, while treating unused reserve and accidental stranded capacity as different economic objects."
+
+prerequisites:
+  - "SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "SYSTEM.ENERGY.FOUNDATION"
+connections:
+  - "SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY"
+  - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
+  - "SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION"
+  - "BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "SYSTEM.ENERGY.FOUNDATION"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.COUPLING"
+  - "META.SYSTEMS.DELAY"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.OLCF.FRONTIER.DATA_CENTER_POWER_COOLING.2019_2026"
+questions:
+  - "What critical IT kW, rack density, cooling condition and availability state is actually committed, who finances each layer, and which intentional reserve versus accidental stranded capacity determines lifecycle value?"
+cases:
+  - "OLCF Frontier data-center conversion, warm-water cooling and facility-efficiency operations, 2019-2026"
+
+first_seen: "2026-11-15"
+last_reviewed: "2026-11-15"
+next_review: "2026-11-22"
+sources:
+  - "https://www.olcf.ornl.gov/2020/12/14/building-an-exascale-class-data-center/"
+  - "https://www.olcf.ornl.gov/2020/09/23/powering-frontier/"
+  - "https://www.olcf.ornl.gov/2024/09/10/olcf-pioneers-approaches-to-energy-efficient-supercomputing/"
+  - "https://datacenters.lbl.gov/sites/default/files/EE%20HPC%20WG%20Liquid%20Cooling%20Controls%20Team%20Whitepaper.pdf"
+notes: "Industry-application L1 candidate pending a Teach-back that maps utility, owner, colocation or cloud operator, infrastructure suppliers and tenants; distinguishes commissioned firm IT kW from nameplate MW; and values redundancy, local density and stranded capacity without inventing private prices, margins or service remedies."

@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-11-15
+
+- 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 `UNREAD`、`SENT` 与 `INBOX` 标签
+- 从 2026-11-14 Cluster Network, Topology & Collective Communication 直接进入 Data Center Power, Cooling & Rack Capacity；最近 7 个实际日志连续
+- 新增 `SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY`，把可持续容量定义为同地、同时、同一冗余状态下供电、排热、机架密度与已验收 IT 的最小对齐能力
+- 跟随一瓦经过 Utility、Transformer、Switchgear、UPS、PDU / Busway、Rack PSU 与芯片，再跟随几乎同一瓦热量经过 Air / Cold Plate、CDU、Facility Loop 与 Heat Rejection
+- 区分 Facility Power、IT Load、Firm Electrical Capacity、Cooling Capacity、Rack Density、PUE、Reliability Reserve、Stranded Capacity 与 Trapped Capacity
+- 用 12 MW Utility、9 MW N+1 Firm Electrical、8 MW Cooling、8 MW Rack Envelope 与 8.5 MW Commissioned IT 得到 8 MW 持续容量的透明模型
+- 新增 `CASE.OLCF.FRONTIER.DATA_CENTER_POWER_COOLING.2019_2026`，按七段叙事记录旧机房重建、2.5 英里电力线路、28 MW Electrical Room、约 40 MW Warm-water Cooling 与 74 Cabinets
+- 将 Frontier 峰值 PUE 约 1.03、约 90°F 水温、7–8 MW Idle Load 与 TOP500 24.607 MW Benchmark System Power 分开，不混用测量边界
+- 新增 `BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS`，追踪 Utility、Owner、Colocation / Cloud、基础设施供应商与 Tenant 的资本、运行成本、Critical IT kW 与可靠性责任
+- 更新行业日志、Question Bank、复习连接、CURRENT_STATE 与网站地图数据
+- 下一课锁定 Cloud Resource Abstraction, Virtualization & Scheduling
+
 ## 2026-11-14
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 `UNREAD`、`SENT` 与 `INBOX` 标签
