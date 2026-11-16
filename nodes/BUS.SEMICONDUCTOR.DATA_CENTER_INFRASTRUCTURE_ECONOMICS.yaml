@@ -31,17 +31,19 @@ connections:
   - "META.SYSTEMS.DELAY"
   - "FRONTIER.AI.INFRASTRUCTURE"
   - "CASE.OLCF.FRONTIER.DATA_CENTER_POWER_COOLING.2019_2026"
+  - "SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING"
+  - "BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS"
 questions:
   - "What critical IT kW, rack density, cooling condition and availability state is actually committed, who finances each layer, and which intentional reserve versus accidental stranded capacity determines lifecycle value?"
 cases:
   - "OLCF Frontier data-center conversion, warm-water cooling and facility-efficiency operations, 2019-2026"
 
 first_seen: "2026-11-15"
-last_reviewed: "2026-11-15"
+last_reviewed: "2026-11-16"
 next_review: "2026-11-22"
 sources:
   - "https://www.olcf.ornl.gov/2020/12/14/building-an-exascale-class-data-center/"
   - "https://www.olcf.ornl.gov/2020/09/23/powering-frontier/"
   - "https://www.olcf.ornl.gov/2024/09/10/olcf-pioneers-approaches-to-energy-efficient-supercomputing/"
   - "https://datacenters.lbl.gov/sites/default/files/EE%20HPC%20WG%20Liquid%20Cooling%20Controls%20Team%20Whitepaper.pdf"
-notes: "Industry-application L1 candidate pending a Teach-back that maps utility, owner, colocation or cloud operator, infrastructure suppliers and tenants; distinguishes commissioned firm IT kW from nameplate MW; and values redundancy, local density and stranded capacity without inventing private prices, margins or service remedies."
+notes: "Industry-application L1 candidate pending a Teach-back that maps utility, owner, colocation or cloud operator, infrastructure suppliers and tenants; distinguishes commissioned firm IT kW from nameplate MW; and values redundancy, local density and stranded capacity without inventing private prices, margins or service remedies. Reviewed on 2026-11-16 as the capital and operating base whose usable capacity is productized and risk-allocated by cloud scheduling; no automatic mastery upgrade."

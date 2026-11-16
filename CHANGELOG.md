@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-11-16
+
+- 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a1e4f5b425c967c`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签
+- 从 2026-11-15 Data Center Power, Cooling & Rack Capacity 直接继续，最近 7 个实际日志连续，没有补造断点
+- 新增 `SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING`，把 Cloud Capacity 定义为完整 Request 在资源、位置、拓扑、故障域、策略与 Reservation 条件下的 Feasible Placement，而不是 Fleet 空闲总数
+- 用三 Host 合计 48 vCPU、448 GiB 与 1 GPU 却无法同址放置 `16 vCPU + 128 GiB + 1 GPU` 的透明模型解释 Multi-resource Fragmentation
+- 分开 Request / Limit、Quota、Reservation、Allocation 与 Utilization，并用 64 Thread / 128 vCPU Overcommit 与 512 GiB Host 内存承诺模型解释统计共享和相关突发风险
+- 新增 `CASE.GOOGLE.BORG.CLUSTER_SCHEDULING.2003_2015`；记录生产 / 非生产分池中位需多 20–30% 机器、固定规格桶中位需多 30–50% 资源，并保留 Google 内部 Cell 与模拟边界
+- 新增 `BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS`，用 AWS 公开语义区分 Quota、On-Demand Capacity、Capacity Reservation 与定价承诺，并说明未用 Reservation 的客户付费边界
+- 更新 Data Center、Server、Cluster、Compute Foundation、Compute Value Chain、行业日志、Questions、CURRENT_STATE 与网站数据；旧节点只记录 review / transfer
+- 下一课锁定 Cloud Reliability, Regions & Failure Domains
+
 ## 2026-11-15
 
 - 已将易读 HTML 课程发送至当前账户 Gmail，并确认邮件带有 `UNREAD`、`SENT` 与 `INBOX` 标签

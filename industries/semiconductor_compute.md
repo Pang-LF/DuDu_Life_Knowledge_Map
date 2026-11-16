@@ -235,3 +235,19 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Value metrics: commissioned firm IT MW, deliverable kW / rack, normal and failure state, PUE, deployment time, stranded / trapped share, lifecycle cost and cost per useful compute output—not connected utility MW alone.
 - Status: `SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY` and `BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS` at L1 candidate; Teach-back pending.
 - Next: Cloud Resource Abstraction, Virtualization & Scheduling — how heterogeneous physical servers become sellable instances, quotas and placed workloads, and why reservation or fragmentation can leave capacity idle.
+
+### 2026-11-16 — Cloud Capacity Is a Feasible Placement, Not Spare Fleet Totals
+
+- Continuity: continued directly from the 2026-11-15 data-center capacity lesson; the latest seven actual logs remain consecutive and no completion gap was invented.
+- Question: who pays for idle servers, fragmented resources and assured capacity when customers buy on-demand instances, commitments or location-specific capacity reservations?
+- Parent concept: `SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING` defines sellable capacity as complete requests that can be placed on eligible hosts under resource, topology, policy, reservation and failure-domain constraints.
+- Minimum unit: one request moves from account identity and quota through instance shape, host filters, scoring and placement into hypervisor-created vCPU, memory and virtual-device mappings, then into runtime telemetry.
+- Fragmentation model: three hosts can total 48 free vCPU, 448 GiB RAM and one GPU yet fail a 16-vCPU / 128-GiB / one-GPU request when those resources do not coexist on one eligible host.
+- Overcommit model: allocating 128 vCPU over 64 physical threads works while non-coincident average demand remains below 64, but a correlated 128-vCPU burst creates contention and tail latency.
+- Deep case: Google's Borg paper describes cells with up to tens of thousands of machines, shared production and non-production work, quota-based admission, priority, packing and resource reclamation.
+- Quantitative boundary: separating production from non-production required 20-30% more machines in the median sampled cell; rounding fine-grained CPU and memory requests to fixed power-of-two buckets required 30-50% more resources in the median simulated case.
+- Product distinction: quota authorizes request volume; on-demand capacity remains subject to current supply; a capacity reservation holds matching location-specific capacity and is billed even when unused; discount commitments and physical capacity promises are different objects.
+- Money and risk: providers finance physical and software pools and ordinarily bear forecast, idle and fragmentation risk; customers pay for usage or commitments and can take back idle risk by purchasing assured capacity.
+- Evidence boundary: Borg describes internal container workloads and 2014-era production checkpoints; AWS documents public product semantics but not host inventory, scheduler policy, overcommit, discounts, costs or margins.
+- Status: `SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING` and `BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Cloud Reliability, Regions & Failure Domains — how replicas and location boundaries turn placed instances into a service and allocate redundant-capacity and correlated-failure risk.

@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-15
+Last updated: 2026-11-16
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-15
 
 ## Next Immediate Focus（下一步）
 
-2026-11-16：进入 Cloud Resource Abstraction, Virtualization & Scheduling（云资源抽象、虚拟化与调度），跟随一份物理服务器能力怎样成为 Instance、Quota 与已放置 Workload，区分 Reservation、Overcommit、Placement、Failure Domain、Fragmentation 与 Utilization 怎样决定可售云容量。
+2026-11-17：进入 Cloud Reliability, Regions & Failure Domains（云可靠性、区域与故障域），跟随一个服务副本怎样跨 Host、Rack 与 Availability Zone 形成可承诺服务，区分 Replica、Region、Zone、Correlated Failure、Failover、SLA 与 Shared Responsibility 怎样决定冗余价值和风险归属。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-15
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-16：从 11 月 15 日 Data Center Power, Cooling & Rack Capacity 直接继续进入 Cloud Resource Abstraction, Virtualization & Scheduling；最近 7 个实际日志连续，没有补造断点。课程先用 NIST 的 Resource Pooling、Rapid Elasticity 与 Measured Service 定义 Cloud 母概念，再跟随一份 Instance Request 经过 Identity / Quota Admission、Host Filter、Placement Score、Hypervisor Allocation 与 Runtime Telemetry。三 Host 透明模型中，池内合计 48 vCPU、448 GiB RAM 与 1 GPU，却因 GPU、内存和 CPU 不在同一 Host 而无法放置 `16 vCPU + 128 GiB + 1 GPU`，把 Cloud Capacity 从空闲总数重建为 Feasible Placement。课程分开 Request / Limit、Quota、Reservation、Allocation 与 Utilization，用 64 物理 Thread 上 128 vCPU 的 2:1 Overcommit 和 512 GiB Host 的内存承诺模型解释非同时峰值带来的共享收益与相关突发造成的 Tail Contention。Google Borg 案例按七段叙事展开：共享生产与非生产 Workload，分池在中位 Cell 需多 20–30% 机器；把细粒度 CPU / Memory Request 向固定的 2 的幂规格桶取整，在中位模拟中需多 30–50% 资源；两组数字只适用于论文的 Google Cell 与模拟边界。Industry Apprenticeship 用 AWS 文档区分 Region Quota、当下 On-Demand Capacity、Capacity Reservation 与定价承诺；预留 20 台但运行 15 台时，客户仍为 5 台 Unused Reservation 付费，说明确定性会把部分 Idle Risk 从 Provider 转给 Customer。公开资料不披露内部 Host Inventory、Scheduler、Overcommit、折扣、成本与利润。`SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING` 与 `BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS` 为 L1 candidate；下一课进入 Cloud Reliability, Regions & Failure Domains。
 
 2026-11-15：从 11 月 14 日 Cluster Network, Topology & Collective Communication 直接继续进入 Data Center Power, Cooling & Rack Capacity；最近 7 个实际日志连续，没有补造断点。课程先定义 Data Center 为把电力、散热、空间、网络、控制、可靠性和运维组合成持续计算服务的设施系统，再跟随一瓦从 Utility、Transformer、Switchgear、UPS、PDU / Busway、Rack PSU 与 Voltage Regulator 到芯片，并跟随几乎同一瓦热量经过 Cold Plate / Air、CDU、Facility Loop 与 Heat Rejection。课程区分 Facility Power、IT Load、Firm Electrical Capacity、Cooling Capacity、Rack Density、PUE、Reliability Reserve、Stranded 与 Trapped Capacity；用 12 MW Utility、9 MW N+1 Firm Electrical、8 MW Cooling、8 MW Rack Envelope 与 8.5 MW Commissioned IT 的透明模型得到 8 MW 可持续容量。Frontier 案例按七段叙事展开：OLCF 拆除并重建 Titan 原机房，铺设约 2.5 英里电力线路、建设 28 MW Electrical Room、升级地板并配置约 40 MW Warm-water Cooling；2024 年资料报告峰值 PUE 约 1.03、约 90°F 水温和 7–8 MW Idle Load。当前 TOP500 24.607 MW 是 Benchmark System Power，不与设施电表混用。Industry Apprenticeship 追踪 Utility、Developer / Owner、Colocation / Cloud、基础设施供应商与 Tenant 的钱流，把 Critical IT kW 与园区 MW 分开，并保留价格、利润、SLA 和 Liability 的私有边界。`SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY` 与 `BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS` 为 L1 candidate；下一课进入 Cloud Resource Abstraction, Virtualization & Scheduling。
 

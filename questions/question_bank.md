@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-16 — 对一份指定 Instance / Workload Request，哪项 Admission、Resource、Topology、Failure Domain、Reservation 或 Policy 条件使 Feasible Host Set 变为空，哪项 Host-level Evidence 能把它与总容量不足区分开？
+- 2026-11-16 — 在 On-Demand、Commitment 与 Capacity Reservation 下，谁为 Idle 与 Fragmented Capacity 付款，哪些 Placement、Utilization、Tail Latency 与 Reliability 证据能说明更高 Packing 在创造价值还是转移风险？
+
 - 2026-11-15 — 对下一柜指定负载，哪条供电路径与排热路径必须在要求的冗余状态下保持可行，哪项位置级测量能识别第一个绑定的容量？
 - 2026-11-15 — 运营者实际承诺的是哪种 Critical IT kW、Rack Density、Cooling Condition 与 Availability，谁为各层资本付款，Intentional Reserve 与 Stranded Capacity 又怎样改变生命周期价值？
 

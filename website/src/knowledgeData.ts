@@ -1278,6 +1278,22 @@ export const nodes: GraphNode[] = [
     connections: ['SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS', 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'SYSTEM.ENERGY.FOUNDATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.OLCF.FRONTIER.DATA_CENTER_POWER_COOLING.2019_2026'],
   },
   {
+    id: 'SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING',
+    label: 'Cloud Resource Abstraction, Virtualization & Scheduling（云资源抽象、虚拟化与调度）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Cloud capacity is a set of feasible placements: one complete request becomes sellable only when CPU, memory, accelerators, network, storage, location, topology, policy, reservation and failure-domain constraints align on an eligible host.',
+    connections: ['SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'SYSTEM.COMPUTE.FOUNDATION', 'BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS', 'BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS', 'BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS', 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.GOOGLE.BORG.CLUSTER_SCHEDULING.2003_2015'],
+  },
+  {
+    id: 'BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS',
+    label: 'Cloud Capacity Economics（云容量经济学）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'On-demand usage, commitments and location-specific capacity reservations distribute idle, fragmentation, demand, contention and availability risk differently between provider and customer.',
+    connections: ['SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING', 'SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS', 'BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS', 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.GOOGLE.BORG.CLUSTER_SCHEDULING.2003_2015'],
+  },
+  {
     id: 'CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026',
     label: 'GlobalWafers Sherman 300mm（环球晶圆谢尔曼工厂）',
     domain: 'SYSTEM',
@@ -1380,6 +1396,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'OLCF rebuilt Titan’s former room with a new electrical path, structural support and warm-water direct liquid cooling, showing that campus MW becomes exascale service only when rack-level power, heat removal, controls and redundancy align.',
     connections: ['SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY', 'BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'SYSTEM.ENERGY.FOUNDATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'FRONTIER.AI.INFRASTRUCTURE'],
+  },
+  {
+    id: 'CASE.GOOGLE.BORG.CLUSTER_SCHEDULING.2003_2015',
+    label: 'Google Borg Cluster Scheduling 2003–15（Borg 集群调度）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'Borg pooled production and batch work with quota, priority, fine-grained requests, packing and resource reclamation; simulations showed how isolated pools and fixed-size buckets increase machines or resource requirements.',
+    connections: ['SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING', 'BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS', 'SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'SYSTEM.COMPUTE.FOUNDATION', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.COUPLING', 'FRONTIER.AI.INFRASTRUCTURE'],
   },
   {
     id: 'CASE.TEXAS.FREEZE.2021',
@@ -1512,12 +1536,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-15',
-  title: 'Data Center Power, Cooling & Rack Capacity（数据中心供电、冷却与机架容量）',
-  question: '园区明明还有 4 MW，为什么一柜 120 kW GPU 仍可能放不下？',
-  reading: '45-60 min：跟随一瓦的供电路径与排热路径，区分 Rack Density、Redundancy、PUE 与 Stranded Capacity。',
-  discussion: '20-30 min：计算 12 MW 教学设施的对齐容量，并用位置级测量诊断两座同为 20 MW 的数据中心。',
-  next: '2026-11-16：Cloud Resource Abstraction, Virtualization & Scheduling（云资源抽象、虚拟化与调度）。',
+  date: '2026-11-16',
+  title: 'Cloud Resource Abstraction, Virtualization & Scheduling（云资源抽象、虚拟化与调度）',
+  question: 'CPU、内存和 GPU 总量都够，为什么下一台 Instance 仍可能无法启动？',
+  reading: '45-60 min：跟随一份 Request 经过 Quota、Filter、Placement、Hypervisor 与 Runtime，区分 Reservation、Overcommit、Fragmentation 与 Utilization。',
+  discussion: '20-30 min：诊断三台 Host 的多资源碎片，并分配 Provider 与 Customer 的空置、突发和容量保证风险。',
+  next: '2026-11-17：Cloud Reliability, Regions & Failure Domains（云可靠性、区域与故障域）。',
 }
 
 export const monthlyTrack = [
