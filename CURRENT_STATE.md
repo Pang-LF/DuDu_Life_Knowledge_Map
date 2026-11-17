@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-16
+Last updated: 2026-11-17
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-16
 
 ## Next Immediate Focus（下一步）
 
-2026-11-17：进入 Cloud Reliability, Regions & Failure Domains（云可靠性、区域与故障域），跟随一个服务副本怎样跨 Host、Rack 与 Availability Zone 形成可承诺服务，区分 Replica、Region、Zone、Correlated Failure、Failover、SLA 与 Shared Responsibility 怎样决定冗余价值和风险归属。
+2026-11-18：进入 Cloud Storage Durability, Replication & Consistency（云存储持久性、复制与一致性），跟随一个 Object 怎样跨 Device 与 Failure Domain 写入、确认、读取、修复和恢复，区分 Durability、Availability、Consistency、Replication Lag、RPO、Storage Class 与 Egress 怎样决定数据承诺和经济边界。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-16
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-17：从 11 月 16 日 Cloud Resource Abstraction, Virtualization & Scheduling 直接继续进入 Cloud Reliability, Regions & Failure Domains；最近 7 个实际日志连续，没有补造断点。课程先把 Reliability 定义为完整用户请求持续完成约定功能的能力，再跟随一个请求经过 Reachability、Compute、State 与 Coordination，说明三个仍在运行的 VM 也可能共享 Rack、Database、DNS、Identity、Region Control Plane、Deployment 或 Operator Failure。透明模型中，四个独立 99.9% 硬依赖串联后约为 99.6006%；三个独立 1% 副本共同失败为 0.0001%，但加入假设 0.5% 共同故障后约为 0.5000995%，显示相关项可以压倒副本数学。Failover 被拆成 Detect、Decide、Route 与 State / Capacity 四步，RTO、RPO、SLO、Error Budget 与 SLA 分开解释。Amazon S3 2017 US-EAST-1 案例按七段叙事展开：9:37 PST 错误输入移除过多 Index / Placement 容量；GET / LIST / DELETE 在 169 分钟后开始恢复，PUT 到 257 分钟后恢复；对象跨设备与 AZ 冗余并未绕过区域 Metadata 和 Placement 硬依赖。AWS 后续增加容量 Guardrail、加速 Cell 化并让 Service Health Dashboard 管理控制台跨 Region。Industry Apprenticeship 追踪 Provider、Customer、Managed Service 与 End User 的冗余钱流，用当前 EC2 单实例 99.5% 与跨两 AZ Region-level 99.99% SLA 说明合同承诺和 Service Credit 不等于业务中断保险。当前 AWS 文档可能不同于 2017 条款，公开复盘不披露完整架构、独立故障率或客户损失。`SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS` 与 `BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS` 为 L1 candidate；下一课进入 Cloud Storage Durability, Replication & Consistency。
 
 2026-11-16：从 11 月 15 日 Data Center Power, Cooling & Rack Capacity 直接继续进入 Cloud Resource Abstraction, Virtualization & Scheduling；最近 7 个实际日志连续，没有补造断点。课程先用 NIST 的 Resource Pooling、Rapid Elasticity 与 Measured Service 定义 Cloud 母概念，再跟随一份 Instance Request 经过 Identity / Quota Admission、Host Filter、Placement Score、Hypervisor Allocation 与 Runtime Telemetry。三 Host 透明模型中，池内合计 48 vCPU、448 GiB RAM 与 1 GPU，却因 GPU、内存和 CPU 不在同一 Host 而无法放置 `16 vCPU + 128 GiB + 1 GPU`，把 Cloud Capacity 从空闲总数重建为 Feasible Placement。课程分开 Request / Limit、Quota、Reservation、Allocation 与 Utilization，用 64 物理 Thread 上 128 vCPU 的 2:1 Overcommit 和 512 GiB Host 的内存承诺模型解释非同时峰值带来的共享收益与相关突发造成的 Tail Contention。Google Borg 案例按七段叙事展开：共享生产与非生产 Workload，分池在中位 Cell 需多 20–30% 机器；把细粒度 CPU / Memory Request 向固定的 2 的幂规格桶取整，在中位模拟中需多 30–50% 资源；两组数字只适用于论文的 Google Cell 与模拟边界。Industry Apprenticeship 用 AWS 文档区分 Region Quota、当下 On-Demand Capacity、Capacity Reservation 与定价承诺；预留 20 台但运行 15 台时，客户仍为 5 台 Unused Reservation 付费，说明确定性会把部分 Idle Risk 从 Provider 转给 Customer。公开资料不披露内部 Host Inventory、Scheduler、Overcommit、折扣、成本与利润。`SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING` 与 `BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS` 为 L1 candidate；下一课进入 Cloud Reliability, Regions & Failure Domains。
 

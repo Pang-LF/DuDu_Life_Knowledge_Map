@@ -24,6 +24,8 @@ connections:
   - "SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION"
   - "SYSTEM.COMPUTE.FOUNDATION"
   - "BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS"
+  - "SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS"
+  - "BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS"
   - "BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS"
   - "BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS"
   - "BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS"
@@ -34,13 +36,14 @@ connections:
   - "META.SYSTEMS.DELAY"
   - "FRONTIER.AI.INFRASTRUCTURE"
   - "CASE.GOOGLE.BORG.CLUSTER_SCHEDULING.2003_2015"
+  - "CASE.AWS.S3.US_EAST_1.REGIONAL_DISRUPTION.2017"
 questions:
   - "For a named request, which admission, resource, topology, failure-domain, reservation or policy condition empties the feasible host set, and what host-level evidence distinguishes it from low aggregate capacity?"
 cases:
   - "Google Borg cluster scheduling, resource pooling and reclamation, 2003-2015"
 
 first_seen: "2026-11-16"
-last_reviewed: "2026-11-16"
+last_reviewed: "2026-11-17"
 next_review: "2026-11-23"
 sources:
   - "https://csrc.nist.gov/pubs/sp/800/145/final"

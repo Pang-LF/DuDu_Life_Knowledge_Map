@@ -15,6 +15,8 @@ my_take: "I should identify the exact capacity promise and risk owner before com
 
 prerequisites:
   - "SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING"
+  - "SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS"
+  - "BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS"
   - "BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
 connections:
@@ -32,13 +34,14 @@ connections:
   - "META.SYSTEMS.DELAY"
   - "FRONTIER.AI.INFRASTRUCTURE"
   - "CASE.GOOGLE.BORG.CLUSTER_SCHEDULING.2003_2015"
+  - "CASE.AWS.S3.US_EAST_1.REGIONAL_DISRUPTION.2017"
 questions:
   - "Who pays for idle and fragmented cloud capacity under on-demand, commitment and capacity reservation, and which utilization, placement, latency and reliability evidence shows whether higher packing creates value or transfers risk?"
 cases:
   - "Google Borg shared-cell scheduling and AWS public capacity-reservation semantics"
 
 first_seen: "2026-11-16"
-last_reviewed: "2026-11-16"
+last_reviewed: "2026-11-17"
 next_review: "2026-11-23"
 sources:
   - "https://research.google/pubs/large-scale-cluster-management-at-google-with-borg/"

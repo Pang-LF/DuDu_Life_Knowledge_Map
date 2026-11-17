@@ -251,3 +251,22 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Evidence boundary: Borg describes internal container workloads and 2014-era production checkpoints; AWS documents public product semantics but not host inventory, scheduler policy, overcommit, discounts, costs or margins.
 - Status: `SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING` and `BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS` at L1 candidate; Teach-back pending.
 - Next: Cloud Reliability, Regions & Failure Domains — how replicas and location boundaries turn placed instances into a service and allocate redundant-capacity and correlated-failure risk.
+
+### 2026-11-17 — Redundancy Works Only Across the Failure Mechanism That Matters
+
+- Continuity: continued directly from the 2026-11-16 cloud-placement lesson; the latest seven actual logs remain consecutive and no completion gap was invented.
+- Question: who pays for cloud redundancy, what does an SLA actually remedy, and which application, data and business-interruption risks remain with the customer?
+- Parent concept: `SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS` defines reliability at the complete user-request path; replicas help only when they do not share the active failure mechanism and full failover completes within recovery objectives.
+- Minimum unit: one request crosses reachability, application compute, state and coordination; three live VMs do not protect a shared database, DNS, identity system, regional metadata service, deployment or operator action.
+- Failure-domain ladder: Host, Rack, Availability Zone, Region, shared software / control plane and organizational operation isolate different causes; geography is one boundary, not the complete dependency map.
+- Transparent series model: four independent hard dependencies at 99.9% each yield about 99.6006% end-to-end availability; the calculation is a teaching direction, not a product guarantee.
+- Correlation model: three independent 1% replica failures produce 0.0001% joint failure, but a hypothetical 0.5% common-mode event raises total failure to about 0.5000995%, roughly 5,000 times the independent term.
+- Failover mechanism: detection, scope decision, routing, valid state and sufficient spare capacity must all work; a standby VM that cannot receive traffic or current data is not protected service capacity.
+- Deep case: in the 2017 Amazon S3 US-EAST-1 event, one incorrect command input removed excessive regional index and placement capacity. GET / LIST / DELETE began returning after 169 minutes and PUT recovered after 257 minutes.
+- Case lesson: current S3 Standard data is stored across at least three Availability Zones, yet regional metadata and placement dependencies remained necessary to serve requests; data durability and API availability are different promises.
+- Aftermath: AWS slowed capacity removal, added minimum-capacity safeguards, accelerated cell partitioning and moved the Service Health Dashboard administration console across Regions, targeting shared operational and dependency boundaries rather than adding an ordinary object replica.
+- Contract boundary: AWS currently distinguishes a 99.5% single-instance EC2 SLA from a 99.99% Region-level SLA for concurrent deployment across two or more AZs; remedies are eligible future service credits, not general business-loss insurance.
+- Money and responsibility: providers finance physical fault isolation and service operation; customers pay for active / standby instances, storage, replication, traffic and tests, while responsibilities vary by service abstraction and contract.
+- Evidence boundary: the AWS-authored postmortem supports the public trigger, dependencies, recovery sequence and stated remediations, but not full architecture, independent failure rates or customer loss. Current service and SLA documents may differ from 2017 terms.
+- Status: `SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS` and `BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Cloud Storage Durability, Replication & Consistency — how one object is replicated across failure domains, why durability differs from availability and consistency, and who pays for storage, transfer and recovery.

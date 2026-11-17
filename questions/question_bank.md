@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-17 — 对一项指定用户请求与故障，哪些 Replica 与硬依赖仍然真正独立，Detection、Routing、State 与 Capacity 能否在 RTO / RPO 内完成 Failover？
+- 2026-11-17 — 谁为 Standby Capacity 与 Replication 付费，Provider SLA 实际补救什么，哪些应用、数据和 Business Interruption 风险仍留给 Customer？
+
 - 2026-11-16 — 对一份指定 Instance / Workload Request，哪项 Admission、Resource、Topology、Failure Domain、Reservation 或 Policy 条件使 Feasible Host Set 变为空，哪项 Host-level Evidence 能把它与总容量不足区分开？
 - 2026-11-16 — 在 On-Demand、Commitment 与 Capacity Reservation 下，谁为 Idle 与 Fragmented Capacity 付款，哪些 Placement、Utilization、Tail Latency 与 Reliability 证据能说明更高 Packing 在创造价值还是转移风险？
 

@@ -1,0 +1,48 @@
+id: "BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS"
+name_en: "Cloud Service Reliability Economics"
+name_zh: "云服务可靠性经济学"
+domain: "BUSINESS"
+module: "Industry Atlas（产业图谱）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Cloud service reliability economics allocates the cost and residual risk of redundant infrastructure, standby workload capacity, replication, cross-zone or cross-region traffic, managed operations, failover testing and service interruption among provider, customer, managed-service operator and end user."
+why: "A provider can supply Regions and Availability Zones while a customer still deploys a single-zone application; an SLA can grant future service credits without compensating complete business loss; and high utilization can consume the spare capacity required for static recovery."
+mechanism: "Name the service function and failure set, trace who owns and pays for each active and standby layer, separate provider infrastructure and service obligations from customer workload architecture and data duties, compare incremental protection cost with business-impact reduction, and read SLA measurement, exclusions and remedies rather than treating the headline availability percentage as insurance."
+example: "AWS currently distinguishes a 99.5% single-EC2-instance SLA from a 99.99% Region-level SLA for running instances deployed concurrently across two or more Availability Zones, with eligible remedies expressed as future service credits rather than broad business-loss reimbursement."
+my_take: "I should identify what exact failure-state capability the customer is buying, whether standby capacity and data are already usable, and which downtime, data, revenue and liability losses remain outside the provider SLA."
+
+prerequisites:
+  - "SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS"
+  - "BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+connections:
+  - "SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS"
+  - "SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING"
+  - "SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY"
+  - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
+  - "BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.COUPLING"
+  - "META.PROBABILITY.FOUNDATION"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.AWS.S3.US_EAST_1.REGIONAL_DISRUPTION.2017"
+questions:
+  - "Who pays for standby capacity and replication, what does the provider SLA actually remedy, and which application, data and business-interruption risks remain with the customer?"
+cases:
+  - "Amazon S3 US-EAST-1 disruption and AWS public shared-responsibility / compute-SLA boundaries"
+
+first_seen: "2026-11-17"
+last_reviewed: "2026-11-17"
+next_review: "2026-11-24"
+sources:
+  - "https://aws.amazon.com/message/41926/"
+  - "https://aws.amazon.com/compliance/shared-responsibility-model/"
+  - "https://aws.amazon.com/compute/sla/"
+  - "https://docs.aws.amazon.com/wellarchitected/latest/framework/rel-availability-and-recovery-objectives.html"
+  - "https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/static-stability.html"
+notes: "Industry-application L1 candidate pending a Teach-back that traces provider and customer spending across multi-AZ or multi-region protection, distinguishes SLA, SLO, RTO, RPO and business loss, and evaluates pre-provisioned spare capacity, managed-service scope, service credits and residual risk without inventing private prices, margins or liability terms."

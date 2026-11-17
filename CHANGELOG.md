@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-11-17
+
+- 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a1e937b068256bb`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签
+- 从 2026-11-16 Cloud Resource Abstraction, Virtualization & Scheduling 直接继续进入 Cloud Reliability, Regions & Failure Domains；最近 7 个实际日志连续，没有补造断点
+- 新增 `SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS`，把可靠性定义为完整用户请求在指定故障下仍有独立、可达、带状态且有容量的替代路径，而不是副本数量
+- 跟随一个请求经过 Reachability、Compute、State 与 Coordination，区分 Reliability、Availability、Resilience、Durability、Fault Tolerance 与 Disaster Recovery
+- 用四个独立 99.9% 硬依赖串联得到约 99.6006%，并用三个 1% 副本与 0.5% 共同故障的透明模型说明 Correlated Failure 怎样压倒独立副本数学
+- 把 Failover 拆成 Detect、Decide、Route 与 State / Capacity，分开 RTO、RPO、SLO、Error Budget 与 SLA
+- 新增 `CASE.AWS.S3.US_EAST_1.REGIONAL_DISRUPTION.2017`；记录错误命令输入、Index / Placement 共同依赖、169 分钟部分恢复、257 分钟 PUT 恢复与 Service Health Dashboard 依赖
+- 记录 AWS 的 Tool Guardrail、Cell 化与跨 Region 状态页改进，并明确对象跨 AZ 冗余解决的故障集合不同于区域 Metadata / Control Dependency
+- 新增 `BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS`，追踪 Provider、Customer、Managed Service 与 End User 的冗余成本、Shared Responsibility、SLA Service Credit 与剩余业务风险
+- 更新 Cloud Placement / Capacity、行业日志、Question Bank、CURRENT_STATE 与网站数据；旧 Thinking Toolkit 与 Compute 节点只记录 review / transfer
+- 下一课锁定 Cloud Storage Durability, Replication & Consistency
+
 ## 2026-11-16
 
 - 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a1e4f5b425c967c`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签
