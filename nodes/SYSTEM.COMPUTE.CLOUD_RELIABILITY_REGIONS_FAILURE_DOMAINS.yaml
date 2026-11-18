@@ -25,6 +25,8 @@ connections:
   - "SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION"
   - "SYSTEM.COMPUTE.FOUNDATION"
   - "BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS"
+  - "SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY"
+  - "BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS"
   - "BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS"
   - "BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
@@ -35,13 +37,14 @@ connections:
   - "META.PROBABILITY.FOUNDATION"
   - "FRONTIER.AI.INFRASTRUCTURE"
   - "CASE.AWS.S3.US_EAST_1.REGIONAL_DISRUPTION.2017"
+  - "CASE.AWS.S3.STRONG_CONSISTENCY_TRANSITION.2006_2020"
 questions:
   - "For a named user request and failure, which replicas and dependencies remain genuinely independent, and can detection, routing, state and capacity complete failover inside RTO and RPO?"
 cases:
   - "Amazon S3 US-EAST-1 regional service disruption, 2017"
 
 first_seen: "2026-11-17"
-last_reviewed: "2026-11-17"
+last_reviewed: "2026-11-18"
 next_review: "2026-11-24"
 sources:
   - "https://aws.amazon.com/message/41926/"

@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-11-18
+
+- 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a1ef76d7fa43e4d`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签
+- 从 2026-11-17 Cloud Reliability, Regions & Failure Domains 直接继续进入 Cloud Storage Durability, Replication & Consistency；最近 7 个实际日志连续，没有补造断点
+- 新增 `SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY`，把存储承诺定义为写入确认、故障域放置、读取可见性、完整性修复与恢复延迟的组合，而不是副本数量
+- 跟随一个 Object 经过 Receive、Checksum / Encode、Place、Persist、Acknowledge、Read、Scrub / Repair 与 Cross-region Replication
+- 分开 Durability、Availability、Consistency 与 Disaster-recovery RPO，用当前 S3 Standard 十一位九、99.99% 与至少三个 AZ 说明不同分母不能互换
+- 用 10 亿对象 × `10^-11` = 每年 0.01 个期望损失对象、100 GB × 30 完整 Version = 约 3 TB 建立透明数量级，明确不是产品保证或内部实现
+- 新增 `CASE.AWS.S3.STRONG_CONSISTENCY_TRANSITION.2006_2020`；按七段叙事展开 Eventual Visibility、Data Lake 旁路元数据、Dropbox 34 PB 公司陈述与 2020-12-01 强读后写一致性转变
+- 区分 S3 RTC 的 99.99% / 15 分钟设计目标与 99.9% / 15 分钟 SLA 门槛，并用 2 GB/min × 15 min = 30 GB 透明模型解释复制延迟与 RPO
+- 新增 `BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS`，追踪 Storage Class、Source / Destination Storage、Request、Retrieval、Version、Replication、Egress 与 Recovery 钱流
+- 更新 Cloud Reliability / Placement / Capacity、行业日志、Question Bank、CURRENT_STATE 与网站数据；旧节点只记录 review / transfer
+- 下一课锁定 Cloud Network, DNS & Data Movement
+
 ## 2026-11-17
 
 - 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a1e937b068256bb`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签

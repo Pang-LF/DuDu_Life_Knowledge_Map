@@ -1,0 +1,47 @@
+id: "BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS"
+name_en: "Cloud Storage Economics"
+name_zh: "云存储经济学"
+domain: "BUSINESS"
+module: "Industry Atlas — Semiconductor + Compute"
+importance: "Applied"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Cloud storage economics packages source and redundant capacity, request processing, access latency, retrieval, version retention, replication, inter-region transfer, integrity operations and recovery capability into storage classes and separately metered features."
+why: "The lowest price per stored gigabyte can be a poor comparison when an application requires multi-AZ protection, frequent requests, fast retrieval, retained versions, low replication lag or tested regional recovery, because each requirement changes both provider resources and customer lifecycle cost."
+mechanism: "Trace who pays for source and destination bytes, PUT and GET requests, minimum storage duration, minimum billable object size, retrieval, early deletion, cross-zone or cross-region transfer, monitoring and replication time control; compare cost per recoverable object under a named failure, RPO, RTO and access pattern rather than storage price alone."
+example: "AWS documents that S3 cross-region replication customers pay for destination storage, replication PUT requests and applicable inter-region transfer, while versioning stores each version as a full object and infrequent-access or archive classes add different minimum-duration and retrieval conditions."
+my_take: "I should identify which reliability and access promises are included in the base storage class, which are separately purchased, and whether lifecycle, version and egress costs make the complete recoverable-data design more expensive than its headline per-GB rate suggests."
+
+prerequisites:
+  - "SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY"
+  - "BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+connections:
+  - "SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY"
+  - "SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS"
+  - "BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SYSTEMS.COUPLING"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.AWS.S3.STRONG_CONSISTENCY_TRANSITION.2006_2020"
+questions:
+  - "Who pays for source and destination storage, requests, retrieval, egress, retained versions and recovery, and which durability, availability, consistency or replication promise is included versus separately purchased?"
+cases:
+  - "Amazon S3 storage classes, versioning, replication pricing and strong-consistency transition"
+
+first_seen: "2026-11-18"
+last_reviewed: "2026-11-18"
+next_review: "2026-11-25"
+sources:
+  - "https://aws.amazon.com/s3/pricing/"
+  - "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html"
+  - "https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html"
+  - "https://aws.amazon.com/s3/faqs/"
+  - "https://aws.amazon.com/s3/sla-rtc/"
+notes: "Industry-application L1 candidate pending a Teach-back that compares two storage designs under the same object value, access pattern, failure domain, RPO and RTO, then traces storage, request, retrieval, version, transfer, monitoring and recovery costs without inventing private discounts, provider costs or margins."

@@ -270,3 +270,20 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Evidence boundary: the AWS-authored postmortem supports the public trigger, dependencies, recovery sequence and stated remediations, but not full architecture, independent failure rates or customer loss. Current service and SLA documents may differ from 2017 terms.
 - Status: `SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS` and `BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS` at L1 candidate; Teach-back pending.
 - Next: Cloud Storage Durability, Replication & Consistency — how one object is replicated across failure domains, why durability differs from availability and consistency, and who pays for storage, transfer and recovery.
+
+### 2026-11-18 — A Storage Promise Is More Than Replica Count
+
+- Continuity: continued directly from the 2026-11-17 cloud-reliability lesson; the latest seven actual logs from 2026-11-11 through 2026-11-17 are continuous.
+- Question: who pays for source and redundant storage, requests, retrieval, egress, retained versions and recovery, and which promise is included versus separately purchased?
+- Parent concept: `SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY` defines a storage promise through write acknowledgement, failure-domain placement, read visibility, integrity repair and recovery lag.
+- Minimum unit: one object moves through identity and checksum checks, placement, persistence, acknowledgement, metadata lookup, version selection, scrubbing, repair and optional cross-region replication.
+- Contract boundary: durability asks whether correct bytes survive; availability whether a request succeeds now; consistency which version a read may observe; RPO how far disaster recovery may roll back.
+- Explained scale: current S3 Standard design targets are eleven nines object durability and 99.99% availability with data stored across at least three Availability Zones; the percentages use different denominators and are not interchangeable.
+- Transparent models: one billion objects at a `10^-11` annual loss probability gives 0.01 expected object per year; 100 GB retained across 30 full versions is about 3 TB; neither model describes a customer guarantee or S3 internals.
+- Deep case: S3 moved from eventual visibility for some operations to strong read-after-write consistency for GET, PUT and LIST on December 1, 2020, removing consistency side systems used by data-lake teams.
+- Data-lake scale: AWS cited Dropbox's 34 PB analytics migration as one context; it is a company statement, not an independent benchmark or evidence that all bytes were rewritten together.
+- Replication boundary: S3 RTC is designed for 99.99% of new objects within 15 minutes, while the contractual SLA threshold is 99.9% per Region pair per month; product target, SLA remedy and business RPO are different objects.
+- Money and risk: storage classes package different location, access, minimum-duration and retrieval terms; cross-region replication adds destination storage, requests and applicable transfer, while versioning retains full object versions.
+- Evidence boundary: public AWS documents support product semantics, design targets and billing categories but not replica count, consensus protocol, independent loss rate, private discounts, provider costs or customer-specific recovery outcomes.
+- Status: `SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY` and `BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Cloud Network, DNS & Data Movement — how requests and bytes traverse paths, caches and routing boundaries, and who pays for ingress, egress, inter-zone movement and resilience.

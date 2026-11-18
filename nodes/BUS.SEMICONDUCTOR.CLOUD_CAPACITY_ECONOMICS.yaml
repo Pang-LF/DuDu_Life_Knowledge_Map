@@ -17,6 +17,7 @@ prerequisites:
   - "SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING"
   - "SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS"
   - "BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS"
   - "BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
 connections:
@@ -41,7 +42,7 @@ cases:
   - "Google Borg shared-cell scheduling and AWS public capacity-reservation semantics"
 
 first_seen: "2026-11-16"
-last_reviewed: "2026-11-17"
+last_reviewed: "2026-11-18"
 next_review: "2026-11-23"
 sources:
   - "https://research.google/pubs/large-scale-cluster-management-at-google-with-borg/"

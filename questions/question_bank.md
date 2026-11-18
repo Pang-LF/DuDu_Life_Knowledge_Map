@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-18 — 对一次成功 Object Write，哪些持久放置已经被确认，哪些 Read 必须看见哪个 Version，Corruption、Deletion 与 Replication Lag 又怎样被发现和修复？
+- 2026-11-18 — 谁为 Source / Destination Storage、Request、Retrieval、Egress、Retained Version 与 Recovery 付款，哪些 Durability、Availability、Consistency 或 Replication 承诺已包含，哪些需要另购？
+
 - 2026-11-17 — 对一项指定用户请求与故障，哪些 Replica 与硬依赖仍然真正独立，Detection、Routing、State 与 Capacity 能否在 RTO / RPO 内完成 Failover？
 - 2026-11-17 — 谁为 Standby Capacity 与 Replication 付费，Provider SLA 实际补救什么，哪些应用、数据和 Business Interruption 风险仍留给 Customer？
 
