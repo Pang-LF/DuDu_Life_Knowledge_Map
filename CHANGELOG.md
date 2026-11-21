@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## 2026-11-19
+
+- 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a1ffee5359fd4e7`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签
+- 从 2026-11-18 Cloud Storage Durability, Replication & Consistency 直接继续进入 Cloud Network, DNS & Data Movement；最近 7 个实际日志连续，没有补造断点
+- 新增 `SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT`，把云网络定义为 Name Resolution、Route Reachability、Endpoint Selection、Byte Transport 与 Return Path 的完整决策链
+- 跟随 `photo.example.com` 请求经过 Stub / Recursive Resolver、Authoritative DNS、BGP / VPC Route、TCP / TLS、Load Balancer、Backend 与返回路径
+- 分开 Reachability、Latency、Bandwidth 与 Availability，并用 1 GB / 1 Gbit/s = 8 秒、1 Gbit/s × 80 ms = 10 MB 的透明模型说明吞吐与时延边界
+- 解释 DNS TTL 在 Cache Stability、Query Cost、Latency 与 Failover Responsiveness 之间的交换，明确降低新 TTL 不会追溯清除旧缓存
+- 新增 `CASE.META.GLOBAL_OUTAGE.BGP_DNS.2021`；按七段叙事记录 Backbone 维护命令、Audit Tool Bug、BGP 撤回、运行中 DNS 不可达、内部工具受损与现场恢复
+- 使用 Cloudflare 外部观测限定约 15:50–21:20 UTC、约 5 小时 30 分钟的 DNS 可见性窗口，不把它写成每项服务或每位用户的精确停机时长
+- 记录 Meta 恢复时个别 Data Center 数十兆瓦负载回升风险，说明重连不仅需要 Route，还要管理 Cache 与 Compute Surge
+- 新增 `BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS`，追踪 DNS、Load Balancer LCU、NAT / Transit、Cross-AZ、Cross-region、CDN 与 Internet Egress 钱流
+- 用 10,000 GB × `$0.09 / GB` = `$900` 建立透明 Egress 数量级，明确忽略免费额度、分层价格、税、附加产品与私有合同
+- 更新 Cloud Storage / Reliability、Cluster Network、Compute Foundation、行业日志、Question Bank、CURRENT_STATE 与网站数据；旧节点只记录 review / transfer
+- 下一课锁定 Cloud Architecture Integration & Disaster Recovery
+
 ## 2026-11-18
 
 - 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a1ef76d7fa43e4d`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签

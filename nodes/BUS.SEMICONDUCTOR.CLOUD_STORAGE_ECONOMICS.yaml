@@ -19,6 +19,8 @@ prerequisites:
   - "BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
 connections:
+  - "BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS"
+  - "SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT"
   - "SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY"
   - "SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS"
   - "BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS"
@@ -36,7 +38,7 @@ cases:
   - "Amazon S3 storage classes, versioning, replication pricing and strong-consistency transition"
 
 first_seen: "2026-11-18"
-last_reviewed: "2026-11-18"
+last_reviewed: "2026-11-19"
 next_review: "2026-11-25"
 sources:
   - "https://aws.amazon.com/s3/pricing/"
@@ -44,4 +46,4 @@ sources:
   - "https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html"
   - "https://aws.amazon.com/s3/faqs/"
   - "https://aws.amazon.com/s3/sla-rtc/"
-notes: "Industry-application L1 candidate pending a Teach-back that compares two storage designs under the same object value, access pattern, failure domain, RPO and RTO, then traces storage, request, retrieval, version, transfer, monitoring and recovery costs without inventing private discounts, provider costs or margins."
+notes: "Industry-application L1 candidate pending a Teach-back that compares two storage designs under the same object value, access pattern, failure domain, RPO and RTO, then traces storage, request, retrieval, version, transfer, monitoring and recovery costs without inventing private discounts, provider costs or margins. Reviewed on 2026-11-19 as stored bytes crossing zone, region and internet boundaries; no automatic mastery upgrade."

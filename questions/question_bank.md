@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-19 — 对一个 Client Name 与 Request，哪份 Cached Record、Advertised Route、Load-balancer Decision、Target Path 与 Return Path 必须同时有效，服务才真正存在？
+- 2026-11-19 — Byte 跨过 Load Balancer、AZ、Region、CDN 或 Internet 边界时谁付款，哪些 Availability、Latency 与 Transfer-cost 风险仍由 Customer 承担？
+
 - 2026-11-18 — 对一次成功 Object Write，哪些持久放置已经被确认，哪些 Read 必须看见哪个 Version，Corruption、Deletion 与 Replication Lag 又怎样被发现和修复？
 - 2026-11-18 — 谁为 Source / Destination Storage、Request、Retrieval、Egress、Retained Version 与 Recovery 付款，哪些 Durability、Availability、Consistency 或 Replication 承诺已包含，哪些需要另购？
 

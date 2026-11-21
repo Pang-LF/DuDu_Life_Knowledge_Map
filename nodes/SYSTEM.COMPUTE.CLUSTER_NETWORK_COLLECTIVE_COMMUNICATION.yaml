@@ -18,6 +18,7 @@ prerequisites:
   - "SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY"
   - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
 connections:
+  - "SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT"
   - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
   - "SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY"
   - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
@@ -42,10 +43,10 @@ cases:
   - "Uber Horovod distributed training, ring-allreduce and Tensor Fusion, 2017-2018"
 
 first_seen: "2026-11-14"
-last_reviewed: "2026-11-16"
+last_reviewed: "2026-11-19"
 next_review: "2026-11-21"
 sources:
   - "https://arxiv.org/abs/1802.05799"
   - "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/usage/collectives.html"
   - "https://github.com/NVIDIA/nccl-tests/blob/master/doc/PERFORMANCE.md"
-notes: "L1 candidate pending a Teach-back that reconstructs reduce-scatter plus all-gather for an unfamiliar gradient, calculates a ring lower bound and distinguishes rank mapping, injection, bisection, oversubscription, message startup, stragglers and overlap without treating endpoint peak bandwidth as collective performance. Reviewed on 2026-11-15 as a heat and power source whose synchronized load can create rack and cooling transients and on 2026-11-16 as a topology constraint on workload placement; no automatic mastery upgrade."
+notes: "L1 candidate pending a Teach-back that reconstructs reduce-scatter plus all-gather for an unfamiliar gradient, calculates a ring lower bound and distinguishes rank mapping, injection, bisection, oversubscription, message startup, stragglers and overlap without treating endpoint peak bandwidth as collective performance. Reviewed on 2026-11-15 as a heat and power source, on 2026-11-16 as a placement constraint and on 2026-11-19 as a contrast between internal collective throughput and end-user cloud reachability; no automatic mastery upgrade."

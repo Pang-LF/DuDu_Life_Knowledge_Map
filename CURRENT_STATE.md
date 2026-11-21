@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-18
+Last updated: 2026-11-19
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-18
 
 ## Next Immediate Focus（下一步）
 
-2026-11-19：进入 Cloud Network, DNS & Data Movement（云网络、DNS 与数据移动），跟随一个 Request / Byte 经过 Name Resolution、Routing、Load Balancing、Inter-zone Path 与 Egress，区分 Bandwidth、Latency、Reachability、DNS Cache、Path Failure 与 Data Transfer Cost 怎样共同决定云服务行为。
+2026-11-20：进入 Cloud Architecture Integration & Disaster Recovery（云架构整合与灾难恢复），把 Compute Placement、Failure Domain、Storage State、Network Reachability、Identity 与 Operations 组合成一套可演练的 Multi-region Recovery System，并追踪 Idle Capacity、Replication、Transfer 与 Game Day 成本。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-18
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-19：从 11 月 18 日 Cloud Storage Durability, Replication & Consistency 直接继续进入 Cloud Network, DNS & Data Movement；最近 7 个实际日志为 11 月 12 日至 18 日，连续且没有补造断点。课程先把 Network System 定义为 Naming、Addressing、Routing / Forwarding、Endpoint Selection 与 Transport 的组合，再跟随 `photo.example.com` 请求经过 Stub / Recursive Resolver、Authoritative DNS、BGP / VPC Route、TCP / TLS、Load Balancer、Backend 与 Return Path。Reachability、Latency、Bandwidth 与 Availability 被分开；十进制 1 GB 在 1 Gbit/s 上的理想序列化下限为 8 秒，1 Gbit/s × 80 ms 的 Bandwidth–Delay Product 为 10 MB，均不含协议、丢包、拥塞、软件或存储。Meta 2021-10-04 全球中断按七段叙事展开：例行 Backbone 容量命令因 Audit Tool Bug 未被阻止，全球 Data Center 连接断开，边缘 DNS 因无法联系 Data Center 而撤回 BGP Advertisement；DNS Server 仍运行却不可达，内部工具与远程恢复路径也受影响。Cloudflare 外部观测到 `facebook.com` DNS 约 15:50–21:20 UTC 不可用，即约 5 小时 30 分钟；这是外部 Resolver 窗口，不是每位用户的精确停机时长。Meta 报告恢复时个别 Data Center 用电回升涉及数十兆瓦，因此必须分阶段恢复流量和 Cache。Industry Apprenticeship 用 AWS 当前公开页面区分 DNS Query、Load Balancer LCU、Cross-AZ、Internet Ingress / Egress 与 CDN / NAT 等计量；10,000 GB × `$0.09 / GB` = `$900` 只是忽略免费额度、分层、税与附加产品的透明模型。公开资料不披露 Meta 完整拓扑与财务损失，也不披露 AWS Provider Cost、私有折扣、Margin 或策略动机。`SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT` 与 `BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS` 为 L1 candidate；下一课进入 Cloud Architecture Integration & Disaster Recovery。
 
 2026-11-18：从 11 月 17 日 Cloud Reliability, Regions & Failure Domains 直接继续进入 Cloud Storage Durability, Replication & Consistency；最近 7 个实际日志为 11 月 11 日至 17 日，连续且没有补造断点。课程先把 Storage System 定义为管理 Identity、Bytes、Metadata、Placement 与 Read / Write Semantics 的持久状态系统，再跟随一个 Object 经过 Receive、Checksum / Encode、Place、Persist、Acknowledge、Read、Scrub / Repair 与 Cross-region Replication。Durability、Availability、Consistency 与 Disaster-recovery RPO 被拆成四个不同承诺；用当前 S3 Standard 十一位九 Durability、99.99% Availability 与至少三个 AZ 说明分母不能互换。透明模型中，10 亿对象乘以 `10^-11` 得到每年 0.01 个期望损失对象，100 GB 对象保留 30 个完整 Version 约占 3 TB；都不是 S3 实测或保证。S3 2006–2020 一致性演进按七段叙事展开：成功 PUT 后的 Eventual Visibility 迫使 Data Lake 使用 EMRFS Consistent View / S3Guard 等旁路元数据；AWS 于 2020-12-01 为 GET、PUT、LIST 等提供 Strong Read-after-write Consistency，并以 Dropbox 34 PB 分析平台迁移说明规模，但该数字是公司陈述而非独立审计。课程严格区分 RTC 设计目标 99.99% / 15 分钟与 SLA 门槛 99.9% / 15 分钟，并用 2 GB/min × 15 min = 30 GB 的透明模型解释复制延迟怎样转化为 RPO 暴露。Industry Apprenticeship 追踪 Storage Class、Source / Destination Storage、Request、Retrieval、Version、Replication、Egress 与 Recovery 钱流；公开资料不披露内部副本数、共识协议、私有折扣、成本或客户恢复结果。`SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY` 与 `BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS` 为 L1 candidate；下一课进入 Cloud Network, DNS & Data Movement。
 

@@ -18,6 +18,7 @@ prerequisites:
   - "SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING"
   - "SYSTEM.COMPUTE.FOUNDATION"
 connections:
+  - "SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT"
   - "SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS"
   - "BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS"
   - "BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS"
@@ -39,7 +40,7 @@ cases:
   - "Amazon S3 strong-consistency transition and data-lake architecture simplification, 2006-2020"
 
 first_seen: "2026-11-18"
-last_reviewed: "2026-11-18"
+last_reviewed: "2026-11-19"
 next_review: "2026-11-25"
 sources:
   - "https://aws.amazon.com/blogs/aws/amazon-s3-update-strong-read-after-write-consistency/"
@@ -48,4 +49,4 @@ sources:
   - "https://docs.aws.amazon.com/AmazonS3/latest/userguide/DataDurability.html"
   - "https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html"
   - "https://aws.amazon.com/s3/sla-rtc/"
-notes: "L1 candidate pending a Teach-back that reconstructs write acknowledgement, failure-domain placement, version visibility, integrity checking and repair, version retention and cross-region lag for an unfamiliar object, while keeping durability, availability, consistency and RPO separate."
+notes: "L1 candidate pending a Teach-back that reconstructs write acknowledgement, failure-domain placement, version visibility, integrity checking and repair, version retention and cross-region lag for an unfamiliar object, while keeping durability, availability, consistency and RPO separate. Reviewed on 2026-11-19 as state whose usefulness still depends on DNS, route, endpoint and return-path reachability; no automatic mastery upgrade."

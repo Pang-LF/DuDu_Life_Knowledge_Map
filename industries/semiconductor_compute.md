@@ -287,3 +287,22 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Evidence boundary: public AWS documents support product semantics, design targets and billing categories but not replica count, consensus protocol, independent loss rate, private discounts, provider costs or customer-specific recovery outcomes.
 - Status: `SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY` and `BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS` at L1 candidate; Teach-back pending.
 - Next: Cloud Network, DNS & Data Movement — how requests and bytes traverse paths, caches and routing boundaries, and who pays for ingress, egress, inter-zone movement and resilience.
+
+### 2026-11-19 — Healthy Servers Do Not Exist to Users Without a Reachable Path
+
+- Continuity: continued directly from the 2026-11-18 cloud-storage lesson; the latest seven actual logs from 2026-11-12 through 2026-11-18 are continuous and no completion gap was invented.
+- Question: when a byte crosses a load balancer, Availability Zone, Region, CDN or internet boundary, who pays, who controls the path and who bears failure?
+- Parent concept: `SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT` defines reachability as a complete chain of name resolution, route advertisement and forwarding, endpoint selection, byte transport and a valid return path.
+- Minimum unit: one request for `photo.example.com` moves through local and recursive DNS cache, authoritative records, public BGP and cloud route tables, TCP / TLS, load-balancer health and target selection, backend data, and the response path.
+- Semantic boundary: DNS returns records but does not create reachability; routing chooses a next hop but does not verify application health; load balancing chooses an eligible target but does not repair a shared database or identity dependency.
+- Performance model: decimal 1 GB contains 8 Gbit, so an ideal 1 Gbit/s serialization floor is 8 seconds; a 1 Gbit/s path with 80 ms RTT has a 10 MB bandwidth-delay product. Both are transparent limits that omit protocol, loss, congestion, software and storage.
+- Cache trade-off: Route 53 documents TTL as a trade-off among change responsiveness, query volume, cost, latency and reliability; lowering TTL at the moment of a cutover does not invalidate longer answers already cached.
+- Deep case: on October 4, 2021, Meta said a routine backbone-capacity command unintentionally disconnected its data centers after an audit-tool bug failed to stop it. Edge DNS sites then withdrew BGP advertisements because they could not reach data centers.
+- Key contradiction: Meta's DNS servers remained operational but became unreachable, so external resolvers could not find services; the same backbone and DNS loss also impaired normal remote access and internal recovery tools.
+- External scale: Cloudflare observed DNS unavailability for `facebook.com` from roughly 15:50 to 21:20 UTC, about 5 hours 30 minutes. This is an external resolver window, not every user's exact downtime.
+- Recovery constraint: Meta reported individual data-center power-demand dips in the tens of megawatts, so restoration had to control traffic and cache refill rather than reconnect every workload at once.
+- Money and metering: current AWS public pages distinguish internet ingress, internet egress and cross-AZ transfer; Application Load Balancer LCU usage depends on the maximum of new connections, active connections, processed bytes and rule evaluations, not bytes alone.
+- Transparent cost model: 10,000 GB of assumed internet egress at a simplified `$0.09 / GB` gives `$900 / month` before free allowance, tiering, tax, CDN, NAT, load-balancer and private-contract effects; it is not a customer invoice.
+- Evidence boundary: Meta supports its public internal sequence but not complete topology or financial loss; Cloudflare sees external routing and DNS but not internal state; AWS list prices do not reveal provider cost, private discounts, margin or strategic motive.
+- Status: `SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT` and `BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Cloud Architecture Integration & Disaster Recovery — how compute, failure domains, storage, network, identity and operations become an exercised multi-region recovery system.

@@ -57,7 +57,7 @@ export const domains: Domain[] = [
     id: 'SYSTEM',
     nameEn: 'SYSTEM',
     nameZh: '现代社会系统',
-    progress: 24,
+    progress: 25,
     active: true,
     modules: ['Energy Systems（能源系统）', 'Compute Systems（计算系统）', 'Economics（经济学）', 'Finance（金融）', 'Politics（政治）', 'Geopolitics（地缘政治）'],
   },
@@ -1326,6 +1326,22 @@ export const nodes: GraphNode[] = [
     connections: ['SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY', 'SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS', 'BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS', 'BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.PROBABILITY.EXPECTED_VALUE', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.AWS.S3.STRONG_CONSISTENCY_TRANSITION.2006_2020'],
   },
   {
+    id: 'SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT',
+    label: 'Cloud Network, DNS & Data Movement（云网络、DNS 与数据移动）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Cloud reachability is a chain of name resolution, route advertisement and forwarding, endpoint selection, byte transport and a valid return path; a healthy server can be effectively nonexistent when any decision fails.',
+    connections: ['BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS', 'SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY', 'SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS', 'SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.FOUNDATION', 'BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS', 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'META.PROBABILITY.FOUNDATION', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.META.GLOBAL_OUTAGE.BGP_DNS.2021'],
+  },
+  {
+    id: 'BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS',
+    label: 'Cloud Network & Egress Economics（云网络与出站传输经济学）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Managed naming, routing, load balancing, gateways, cross-zone and cross-region movement, CDN delivery and internet egress distribute performance, resilience, byte-processing cost and residual risk across provider, customer and network partners.',
+    connections: ['SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT', 'SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY', 'SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS', 'BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS', 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', 'BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'META.PROBABILITY.EXPECTED_VALUE', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.META.GLOBAL_OUTAGE.BGP_DNS.2021'],
+  },
+  {
     id: 'CASE.AWS.S3.STRONG_CONSISTENCY_TRANSITION.2006_2020',
     label: 'Amazon S3 Strong-consistency Transition 2006–20（S3 强一致性转变）',
     domain: 'SYSTEM',
@@ -1340,6 +1356,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'An incorrect operational input removed excessive regional index and placement capacity, showing that multi-AZ object redundancy did not eliminate shared metadata, recovery and operational dependencies required for API availability.',
     connections: ['SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS', 'BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS', 'SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING', 'BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'META.PROBABILITY.FOUNDATION'],
+  },
+  {
+    id: 'CASE.META.GLOBAL_OUTAGE.BGP_DNS.2021',
+    label: 'Meta Global BGP / DNS Outage 2021（Meta 全球网络中断）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'A backbone maintenance command disconnected data centers, edge DNS sites withdrew BGP advertisements and operating name servers became unreachable, showing that server health, DNS process health and end-user reachability are different states.',
+    connections: ['SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT', 'BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS', 'SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS', 'SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY'],
   },
   {
     id: 'CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026',
@@ -1584,12 +1608,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-18',
-  title: 'Cloud Storage Durability, Replication & Consistency（云存储持久性、复制与一致性）',
-  question: '系统说“对象写入成功”，它究竟承诺了字节、可见版本、请求可用性还是灾难恢复点？',
-  reading: '45-60 min：跟随一个 Object 经过确认、故障域放置、读取、Checksum、Repair、Versioning 与跨区域复制，用 S3 一致性演进拆开四种承诺。',
-  discussion: '20-30 min：为不可重建原图和可重建 Thumbnail 分别设计 Storage Class、Versioning、Replication 与 RPO，并审计“跨区复制等于零损失”的说法。',
-  next: '2026-11-19：Cloud Network, DNS & Data Movement（云网络、DNS 与数据移动）。',
+  date: '2026-11-19',
+  title: 'Cloud Network, DNS & Data Movement（云网络、DNS 与数据移动）',
+  question: '服务器、数据库和对象都还健康时，为什么一个服务仍会像从 Internet 消失？',
+  reading: '45-60 min：跟随一个 Name / Request 经过 DNS Cache、BGP / Route、Load Balancer、Target 与 Return Path，用 Meta 2021 全球中断重建 Reachability。',
+  discussion: '20-30 min：画出一个常用 App 的完整路径，并为双 Region、TTL 300 秒和异步复制设计可验证的故障切换。',
+  next: '2026-11-20：Cloud Architecture Integration & Disaster Recovery（云架构整合与灾难恢复）。',
 }
 
 export const monthlyTrack = [
