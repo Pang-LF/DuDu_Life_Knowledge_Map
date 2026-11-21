@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-21 — 对一项指定业务功能与 Disaster，Compute、State、Identity、Dependency、Routing 与 Operations 能否在实测 RTO / RPO 内重新组成有效服务？
+- 2026-11-21 — 谁为 Idle Recovery Capacity、Replication、Transfer、Game Day 与运维复杂度付款，哪些 Business Interruption 与 Data-loss 风险仍留给 Customer？
+
 - 2026-11-19 — 对一个 Client Name 与 Request，哪份 Cached Record、Advertised Route、Load-balancer Decision、Target Path 与 Return Path 必须同时有效，服务才真正存在？
 - 2026-11-19 — Byte 跨过 Load Balancer、AZ、Region、CDN 或 Internet 边界时谁付款，哪些 Availability、Latency 与 Transfer-cost 风险仍由 Customer 承担？
 

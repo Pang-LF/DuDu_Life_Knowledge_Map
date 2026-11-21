@@ -19,6 +19,7 @@ prerequisites:
   - "SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING"
   - "SYSTEM.COMPUTE.FOUNDATION"
 connections:
+  - "SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY"
   - "BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS"
   - "SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY"
   - "SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS"
@@ -43,7 +44,7 @@ cases:
   - "Meta global backbone, BGP and DNS outage, October 4, 2021"
 
 first_seen: "2026-11-19"
-last_reviewed: "2026-11-19"
+last_reviewed: "2026-11-21"
 next_review: "2026-11-26"
 sources:
   - "https://engineering.fb.com/2021/10/05/networking-traffic/outage-details/"
@@ -52,4 +53,4 @@ sources:
   - "https://www.rfc-editor.org/rfc/rfc4271.html"
   - "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/best-practices-dns.html"
   - "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/how-elastic-load-balancing-works.html"
-notes: "L1 candidate pending a Teach-back that reconstructs a complete name-to-byte path for an unfamiliar service, distinguishes reachability, latency, bandwidth and availability, identifies cache and shared-control failure modes, and verifies a complete return and recovery path rather than treating server health or link speed as service evidence."
+notes: "L1 candidate pending a Teach-back that reconstructs a complete name-to-byte path for an unfamiliar service, distinguishes reachability, latency, bandwidth and availability, identifies cache and shared-control failure modes, and verifies a complete return and recovery path rather than treating server health or link speed as service evidence. Reviewed on 2026-11-21 as the routing, identity and validation leg of multi-region recovery; no automatic mastery upgrade."

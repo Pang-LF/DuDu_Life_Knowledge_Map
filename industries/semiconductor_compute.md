@@ -306,3 +306,21 @@ November 2026 studies how materials, equipment and design become fabricated wafe
 - Evidence boundary: Meta supports its public internal sequence but not complete topology or financial loss; Cloudflare sees external routing and DNS but not internal state; AWS list prices do not reveal provider cost, private discounts, margin or strategic motive.
 - Status: `SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT` and `BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS` at L1 candidate; Teach-back pending.
 - Next: Cloud Architecture Integration & Disaster Recovery — how compute, failure domains, storage, network, identity and operations become an exercised multi-region recovery system.
+
+### 2026-11-21 — Recovery Is an Exercised Business State, Not a Second Region
+
+- Continuity: the previous actual lesson is 2026-11-19; no 2026-11-20 completion log exists, so the missing date is recorded and no course is backfilled.
+- Question: how do compute placement, failure domains, storage state, network reachability, identity and operations become an exercised multi-region recovery system, and who pays for idle capacity, replication, transfer and game days?
+- Parent concept: `SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY` defines recovery as Detect, Scope, Decide, Prepare State, Prepare Service, Route and Validate for one named business function under one named disaster.
+- Minimum unit: one order crosses identity, application compute, database, payment side effects, queue, object storage and user routing; a copied order row alone is not a recovered order service.
+- Objective boundary: RTO limits business interruption time; RPO limits acceptable state rollback; replica count, backup age and DNS TTL do not substitute for either measured outcome.
+- Strategy comparison: backup-and-restore, pilot light, warm standby and active-active differ by which state, dependencies and capacity are completed before failure; cost and complexity generally rise as remaining recovery work falls.
+- Transparent exposure: 100 orders per minute across a five-minute replication lag creates up to 500 orders of state exposure if the primary is irrecoverable and lag reaches the bound; this is not a measured workload.
+- Runbook model: a serial 3-minute detection, 4-minute decision, 6-minute state preparation, 12-minute scale-up and 5-minute routing window totals 30 minutes, showing that TTL optimization cannot repair a capacity or state critical path.
+- Deep case: GitLab.com's 2017 primary deletion occurred while the standby was being rebuilt; logical backups had silently failed, database disk snapshots were absent and only a six-hour-old staging LVM snapshot remained.
+- Recovery scale: GitLab reported roughly 300 GB removed, storage near 60 Mbit/s, about 18 hours to copy from staging, about 18 hours of service outage and estimated impact of at least 5,000 projects, 5,000 comments and roughly 700 users.
+- Cost model: 30 assumed warm-standby compute units at `$0.10 / hour` over 730 hours equal about `$2,190 / month`; reserving all 100 would be about `$7,300 / month` before storage, database, network, software, discount and tax.
+- Money and risk: providers finance regional infrastructure and managed-service internals; customers still pay for standing or reserved recovery capacity, destination storage, replication, transfer, routing, observability, automation, on-call and exercises, while residual interruption risk follows architecture and contract boundaries.
+- Evidence boundary: GitLab is a company-authored primary source rather than an independent audit; AWS guidance gives strategy semantics and typical ranges rather than workload guarantees; transparent models are not invoices or incident measurements.
+- Status: `SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY` and `BUS.SEMICONDUCTOR.CLOUD_RESILIENCE_TCO_ECONOMICS` at L1 candidate; Teach-back pending.
+- Next: Cloud Economics & Shared Responsibility Integration — when infrastructure is productized, which costs and risks move to the provider, which remain with the customer, and when cloud changes total cost rather than only bill shape.

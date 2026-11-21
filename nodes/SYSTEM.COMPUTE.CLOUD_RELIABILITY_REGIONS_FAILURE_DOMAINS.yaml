@@ -19,6 +19,7 @@ prerequisites:
   - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
   - "SYSTEM.COMPUTE.FOUNDATION"
 connections:
+  - "SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY"
   - "SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT"
   - "SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING"
   - "SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY"
@@ -45,7 +46,7 @@ cases:
   - "Amazon S3 US-EAST-1 regional service disruption, 2017"
 
 first_seen: "2026-11-17"
-last_reviewed: "2026-11-19"
+last_reviewed: "2026-11-21"
 next_review: "2026-11-24"
 sources:
   - "https://aws.amazon.com/message/41926/"
@@ -54,4 +55,4 @@ sources:
   - "https://docs.aws.amazon.com/wellarchitected/latest/framework/rel-availability-and-recovery-objectives.html"
   - "https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/static-stability.html"
   - "https://sre.google/sre-book/availability-table/"
-notes: "L1 candidate pending a Teach-back that reconstructs a complete request path, distinguishes availability from durability, identifies physical and logical common-mode failures, challenges replica-independence assumptions, and verifies Detect / Decide / Route / State-Capacity failover against RTO and RPO. Reviewed on 2026-11-19 through Meta's backbone, BGP, DNS and operational-access common-mode failure; no automatic mastery upgrade."
+notes: "L1 candidate pending a Teach-back that reconstructs a complete request path, distinguishes availability from durability, identifies physical and logical common-mode failures, challenges replica-independence assumptions, and verifies Detect / Decide / Route / State-Capacity failover against RTO and RPO. Reviewed on 2026-11-21 through GitLab's primary, standby, backup, ownership and restore-path common-mode failures; no automatic mastery upgrade."

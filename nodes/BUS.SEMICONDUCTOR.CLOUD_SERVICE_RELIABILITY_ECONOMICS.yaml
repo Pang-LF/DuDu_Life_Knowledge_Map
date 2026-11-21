@@ -21,6 +21,7 @@ prerequisites:
   - "BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
 connections:
+  - "BUS.SEMICONDUCTOR.CLOUD_RESILIENCE_TCO_ECONOMICS"
   - "BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS"
   - "SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT"
   - "SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS"
@@ -42,7 +43,7 @@ cases:
   - "Amazon S3 US-EAST-1 disruption and AWS public shared-responsibility / compute-SLA boundaries"
 
 first_seen: "2026-11-17"
-last_reviewed: "2026-11-19"
+last_reviewed: "2026-11-21"
 next_review: "2026-11-24"
 sources:
   - "https://aws.amazon.com/message/41926/"
@@ -50,4 +51,4 @@ sources:
   - "https://aws.amazon.com/compute/sla/"
   - "https://docs.aws.amazon.com/wellarchitected/latest/framework/rel-availability-and-recovery-objectives.html"
   - "https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/static-stability.html"
-notes: "Industry-application L1 candidate pending a Teach-back that traces provider and customer spending across multi-AZ or multi-region protection, distinguishes SLA, SLO, RTO, RPO and business loss, and evaluates pre-provisioned spare capacity, managed-service scope, service credits and residual risk without inventing private prices, margins or liability terms. Reviewed on 2026-11-19 through DNS, route, load-balancer and operational-access recovery costs; no automatic mastery upgrade."
+notes: "Industry-application L1 candidate pending a Teach-back that traces provider and customer spending across multi-AZ or multi-region protection, distinguishes SLA, SLO, RTO, RPO and business loss, and evaluates pre-provisioned spare capacity, managed-service scope, service credits and residual risk without inventing private prices, margins or liability terms. Reviewed on 2026-11-21 through exercised recovery and shared-responsibility costs; no automatic mastery upgrade."

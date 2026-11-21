@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 2026-11-21
+
+- 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a1fff85fef1c4a3`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签
+- 记录 2026-11-20 没有实际完成日志，并从 2026-11-19 的真实 Cloud Network 进度继续，没有补造课程
+- 新增 `SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY`，把灾难恢复定义为 Detect、Scope、Decide、Prepare State、Prepare Service、Route 与 Validate 的可演练业务状态转换
+- 跟随一笔订单把 Compute、State、Payment、Queue、Identity、Configuration、Network 与 Operations 合成完整恢复路径
+- 分开 RTO 与 RPO，并用 100 orders/min × 5 min = 500 orders、3 + 4 + 6 + 12 + 5 = 30 minutes 的透明模型解释状态暴露与恢复关键路径
+- 比较 Backup & Restore、Pilot Light、Warm Standby 与 Multi-site Active/Active，强调差异是灾难前已完成多少恢复工作
+- 新增 `CASE.GITLAB.DATABASE.OUTAGE.RECOVERY.2017`；按七段叙事记录 Standby 重建、Primary 误删、备份静默失败、六小时旧 Snapshot 与约 18 小时恢复
+- 保留 GitLab 粗估至少 5,000 个 Project、5,000 条 Comment 与约 700 个 User Account 的公司陈述边界，不把它写成独立审计
+- 新增 `BUS.SEMICONDUCTOR.CLOUD_RESILIENCE_TCO_ECONOMICS`，追踪 Idle / Reserved Capacity、Replication、Destination Storage、Transfer、Routing、Automation、On-call 与 Game Day 成本
+- 用 30 个假设 Standby Unit × `$0.10/hour` × 730 小时 = `$2,190/month` 建立透明 Warm Standby 成本数量级，明确不是客户账单
+- 更新 Cloud Placement / Reliability / Storage / Network、行业日志、Question Bank、CURRENT_STATE 与网站数据；旧节点只记录 review / transfer
+- 下一课锁定 Cloud Economics & Shared Responsibility Integration
+
 ## 2026-11-19
 
 - 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a1ffee5359fd4e7`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签

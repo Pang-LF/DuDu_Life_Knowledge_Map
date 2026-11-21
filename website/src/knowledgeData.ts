@@ -1342,6 +1342,22 @@ export const nodes: GraphNode[] = [
     connections: ['SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT', 'SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY', 'SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS', 'BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS', 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', 'BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'META.PROBABILITY.EXPECTED_VALUE', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.META.GLOBAL_OUTAGE.BGP_DNS.2021'],
   },
   {
+    id: 'SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY',
+    label: 'Cloud Architecture Integration & Disaster Recovery（云架构整合与灾难恢复）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Disaster recovery is an exercised state transition that recombines sufficiently fresh state, identity, dependencies, reachable network paths and capacity into a valid business function inside measured RTO and RPO.',
+    connections: ['BUS.SEMICONDUCTOR.CLOUD_RESILIENCE_TCO_ECONOMICS', 'SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT', 'SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY', 'SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS', 'SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING', 'BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS', 'SYSTEM.COMPUTE.FOUNDATION', 'META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'META.PROBABILITY.EXPECTED_VALUE', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.GITLAB.DATABASE.OUTAGE.RECOVERY.2017'],
+  },
+  {
+    id: 'BUS.SEMICONDUCTOR.CLOUD_RESILIENCE_TCO_ECONOMICS',
+    label: 'Cloud Resilience & Recovery TCO（云韧性与恢复总成本）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Recovery TCO combines idle or reserved capacity, replicated and retained state, cross-region transfer, routing, engineering, exercises and operational complexity with the expected cost of downtime and data loss.',
+    connections: ['SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY', 'SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT', 'SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY', 'SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS', 'SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING', 'BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.GITLAB.DATABASE.OUTAGE.RECOVERY.2017'],
+  },
+  {
     id: 'CASE.AWS.S3.STRONG_CONSISTENCY_TRANSITION.2006_2020',
     label: 'Amazon S3 Strong-consistency Transition 2006–20（S3 强一致性转变）',
     domain: 'SYSTEM',
@@ -1364,6 +1380,14 @@ export const nodes: GraphNode[] = [
     mastery: 'Case studied',
     summary: 'A backbone maintenance command disconnected data centers, edge DNS sites withdrew BGP advertisements and operating name servers became unreachable, showing that server health, DNS process health and end-user reachability are different states.',
     connections: ['SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT', 'BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS', 'SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS', 'SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY'],
+  },
+  {
+    id: 'CASE.GITLAB.DATABASE.OUTAGE.RECOVERY.2017',
+    label: 'GitLab Database Recovery 2017（GitLab 数据库恢复）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'A primary deletion occurred while the standby was being rebuilt; logical backups had silently failed and only a six-hour-old staging snapshot remained, showing that replicas and backups become recovery capability only through tested ownership, restore throughput and end-to-end validation.',
+    connections: ['SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY', 'BUS.SEMICONDUCTOR.CLOUD_RESILIENCE_TCO_ECONOMICS', 'SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY', 'SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS', 'SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT', 'META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY'],
   },
   {
     id: 'CASE.GLOBALWAFERS.SHERMAN.300MM_WAFER.2022_2026',
@@ -1608,12 +1632,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-19',
-  title: 'Cloud Network, DNS & Data Movement（云网络、DNS 与数据移动）',
-  question: '服务器、数据库和对象都还健康时，为什么一个服务仍会像从 Internet 消失？',
-  reading: '45-60 min：跟随一个 Name / Request 经过 DNS Cache、BGP / Route、Load Balancer、Target 与 Return Path，用 Meta 2021 全球中断重建 Reachability。',
-  discussion: '20-30 min：画出一个常用 App 的完整路径，并为双 Region、TTL 300 秒和异步复制设计可验证的故障切换。',
-  next: '2026-11-20：Cloud Architecture Integration & Disaster Recovery（云架构整合与灾难恢复）。',
+  date: '2026-11-21',
+  title: 'Cloud Architecture Integration & Disaster Recovery（云架构整合与灾难恢复）',
+  question: '为什么拥有 Replica、Backup 和第二个 Region，仍不等于业务能在灾难后恢复？',
+  reading: '45-60 min：跟随一笔订单穿过 Compute、State、Identity、Network 与 Operations，用 GitLab 2017 事故重建一条可演练的恢复状态转换。',
+  discussion: '20-30 min：为 RTO 15 分钟、RPO 2 分钟的订单系统设计恢复路径，并比较四种 DR 策略的钱流与剩余风险。',
+  next: '2026-11-22：Cloud Economics & Shared Responsibility Integration（云经济学与共同责任整合）。',
 }
 
 export const monthlyTrack = [

@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-19
+Last updated: 2026-11-21
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-19
 
 ## Next Immediate Focus（下一步）
 
-2026-11-20：进入 Cloud Architecture Integration & Disaster Recovery（云架构整合与灾难恢复），把 Compute Placement、Failure Domain、Storage State、Network Reachability、Identity 与 Operations 组合成一套可演练的 Multi-region Recovery System，并追踪 Idle Capacity、Replication、Transfer 与 Game Day 成本。
+2026-11-22：进入 Cloud Economics & Shared Responsibility Integration（云经济学与共同责任整合），从一项完整 Cloud Service 逆向追踪 Provider 与 Customer 各自控制、支付和承担的 Compute、Storage、Network、Identity、Operations、SLA 与 Business-interruption Risk，并判断 Cloud 在什么条件下降低 Total Cost、在什么条件下只是改变账单形状。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-19
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-21：上一堂实际完成课程是 11 月 19 日，11 月 20 日没有完成日志；今天明确记录断点并从 Cloud Network 的真实位置继续，没有补造课程。课程先定义 Cloud Architecture 为 Compute、State、Network、Identity、Configuration 与 Operations 为指定业务功能形成的完整安排，再把 Disaster Recovery 重建为 Detect、Scope、Decide、Prepare State、Prepare Service、Route 与 Validate 的可演练状态转换。跟随一笔订单说明 Database Copy 不等于恢复：Payment Side Effect、Queue、Secret、Certificate、Quota、DNS 与 Return Path 都必须重新成立。透明模型中每分钟 100 个订单、最坏 5 分钟复制延迟形成最多 500 个订单的状态暴露；3 分钟检测、4 分钟决策、6 分钟状态准备、12 分钟扩容与 5 分钟路由串行得到 30 分钟恢复下限，均不是实测系统。GitLab 2017 数据库事故按七段叙事展开：Secondary 重建、Primary 误删约 300 GB、`pg_dump` 静默失败、S3 Bucket 为空、数据库没有 Azure Snapshot，只剩约六小时前 LVM Snapshot；公司报告 Staging 数据复制约 18 小时、服务停机约 18 小时，并粗估至少影响 5,000 个 Project、5,000 条 Comment 与约 700 个 User Account。Industry Apprenticeship 比较 Backup & Restore、Pilot Light、Warm Standby 与 Active/Active 的预先完成程度；30 个假设 Standby Unit × `$0.10/hour` × 730 小时 = `$2,190/month` 只用于显示 Idle Capacity 选择权成本，不是账单。GitLab 复盘不是独立审计；AWS 指南给出策略语义与典型范围，不是工作负载保证。`SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY` 与 `BUS.SEMICONDUCTOR.CLOUD_RESILIENCE_TCO_ECONOMICS` 为 L1 candidate；下一课进入 Cloud Economics & Shared Responsibility Integration。
 
 2026-11-19：从 11 月 18 日 Cloud Storage Durability, Replication & Consistency 直接继续进入 Cloud Network, DNS & Data Movement；最近 7 个实际日志为 11 月 12 日至 18 日，连续且没有补造断点。课程先把 Network System 定义为 Naming、Addressing、Routing / Forwarding、Endpoint Selection 与 Transport 的组合，再跟随 `photo.example.com` 请求经过 Stub / Recursive Resolver、Authoritative DNS、BGP / VPC Route、TCP / TLS、Load Balancer、Backend 与 Return Path。Reachability、Latency、Bandwidth 与 Availability 被分开；十进制 1 GB 在 1 Gbit/s 上的理想序列化下限为 8 秒，1 Gbit/s × 80 ms 的 Bandwidth–Delay Product 为 10 MB，均不含协议、丢包、拥塞、软件或存储。Meta 2021-10-04 全球中断按七段叙事展开：例行 Backbone 容量命令因 Audit Tool Bug 未被阻止，全球 Data Center 连接断开，边缘 DNS 因无法联系 Data Center 而撤回 BGP Advertisement；DNS Server 仍运行却不可达，内部工具与远程恢复路径也受影响。Cloudflare 外部观测到 `facebook.com` DNS 约 15:50–21:20 UTC 不可用，即约 5 小时 30 分钟；这是外部 Resolver 窗口，不是每位用户的精确停机时长。Meta 报告恢复时个别 Data Center 用电回升涉及数十兆瓦，因此必须分阶段恢复流量和 Cache。Industry Apprenticeship 用 AWS 当前公开页面区分 DNS Query、Load Balancer LCU、Cross-AZ、Internet Ingress / Egress 与 CDN / NAT 等计量；10,000 GB × `$0.09 / GB` = `$900` 只是忽略免费额度、分层、税与附加产品的透明模型。公开资料不披露 Meta 完整拓扑与财务损失，也不披露 AWS Provider Cost、私有折扣、Margin 或策略动机。`SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT` 与 `BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS` 为 L1 candidate；下一课进入 Cloud Architecture Integration & Disaster Recovery。
 

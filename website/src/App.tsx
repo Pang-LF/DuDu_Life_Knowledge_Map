@@ -103,6 +103,8 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS', x: 1000, y: 590, labelSide: 'right', mapLabel: 'Storage Economics（存储经济学）', mapId: 'BUS.CLOUD.STORAGE' },
   { id: 'SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT', x: 1065, y: 565, labelSide: 'left', mapLabel: 'Cloud Network（云网络）', mapId: 'SYS.CLOUD.NETWORK' },
   { id: 'BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS', x: 1040, y: 520, labelSide: 'right', mapLabel: 'Network Economics（云网络经济学）', mapId: 'BUS.CLOUD.NETWORK' },
+  { id: 'SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY', x: 1100, y: 605, labelSide: 'left', mapLabel: 'Cloud Recovery（云架构恢复）', mapId: 'SYS.CLOUD.RECOVERY' },
+  { id: 'BUS.SEMICONDUCTOR.CLOUD_RESILIENCE_TCO_ECONOMICS', x: 1070, y: 555, labelSide: 'right', mapLabel: 'Recovery TCO（恢复总成本）', mapId: 'BUS.CLOUD.RECOVERY_TCO' },
   { id: 'FRONTIER.AI.INFRASTRUCTURE', x: 610, y: 700, virtual: true },
 ]
 
@@ -140,7 +142,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(
