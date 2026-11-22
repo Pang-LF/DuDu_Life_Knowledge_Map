@@ -1358,6 +1358,30 @@ export const nodes: GraphNode[] = [
     connections: ['SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY', 'SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT', 'SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY', 'SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS', 'SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING', 'BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.INTEGRATION', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SYSTEMS.COUPLING', 'META.SYSTEMS.DELAY', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.GITLAB.DATABASE.OUTAGE.RECOVERY.2017'],
   },
   {
+    id: 'SYSTEM.COMPUTE.CLOUD_ECONOMICS_SHARED_RESPONSIBILITY_INTEGRATION',
+    label: 'Cloud Economics & Shared Responsibility（云经济学与共同责任）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'Cloud economics compares the same complete business service under common demand, performance, reliability, time and exit boundaries, then asks which asset, utilization, operating and residual risks move to the provider and which remain with the customer.',
+    connections: ['BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS', 'SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY', 'SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT', 'SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY', 'SYSTEM.COMPUTE.CLOUD_RELIABILITY_REGIONS_FAILURE_DOMAINS', 'SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING', 'BUS.SEMICONDUCTOR.CLOUD_RESILIENCE_TCO_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTEGRATION', 'META.PROBABILITY.EXPECTED_VALUE', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.DROPBOX.MAGIC_POCKET.CLOUD_STORAGE_MIGRATION.2012_2018'],
+  },
+  {
+    id: 'BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS',
+    label: 'Cloud TCO & Build-versus-Buy（云总成本与自建购买）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Build-versus-buy value depends on the complete cost per useful service: provider pooling and metering are compared with owned capital, utilization, people, reliability, migration, optionality and exit rather than with hardware price alone.',
+    connections: ['SYSTEM.COMPUTE.CLOUD_ECONOMICS_SHARED_RESPONSIBILITY_INTEGRATION', 'SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY', 'BUS.SEMICONDUCTOR.CLOUD_RESILIENCE_TCO_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_NETWORK_EGRESS_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_STORAGE_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SYSTEMS.INTEGRATION', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.DROPBOX.MAGIC_POCKET.CLOUD_STORAGE_MIGRATION.2012_2018'],
+  },
+  {
+    id: 'CASE.DROPBOX.MAGIC_POCKET.CLOUD_STORAGE_MIGRATION.2012_2018',
+    label: 'Dropbox Magic Pocket 2012–18（Dropbox 自建存储迁移）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'Dropbox moved most user file content from public cloud storage to Magic Pocket at hundreds-of-petabytes scale, replacing part of third-party expense with depreciation, facilities, support and operating responsibility while retaining a hybrid cloud footprint.',
+    connections: ['SYSTEM.COMPUTE.CLOUD_ECONOMICS_SHARED_RESPONSIBILITY_INTEGRATION', 'BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS', 'SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY', 'SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'META.SYSTEMS.INTEGRATION', 'META.PROBABILITY.EXPECTED_VALUE'],
+  },
+  {
     id: 'CASE.AWS.S3.STRONG_CONSISTENCY_TRANSITION.2006_2020',
     label: 'Amazon S3 Strong-consistency Transition 2006–20（S3 强一致性转变）',
     domain: 'SYSTEM',
@@ -1632,12 +1656,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-21',
-  title: 'Cloud Architecture Integration & Disaster Recovery（云架构整合与灾难恢复）',
-  question: '为什么拥有 Replica、Backup 和第二个 Region，仍不等于业务能在灾难后恢复？',
-  reading: '45-60 min：跟随一笔订单穿过 Compute、State、Identity、Network 与 Operations，用 GitLab 2017 事故重建一条可演练的恢复状态转换。',
-  discussion: '20-30 min：为 RTO 15 分钟、RPO 2 分钟的订单系统设计恢复路径，并比较四种 DR 策略的钱流与剩余风险。',
-  next: '2026-11-22：Cloud Economics & Shared Responsibility Integration（云经济学与共同责任整合）。',
+  date: '2026-11-22',
+  title: 'Cloud Economics & Shared Responsibility（云经济学与共同责任）',
+  question: 'Cloud 什么时候真正降低 Total Cost，什么时候只是把采购、闲置与运维换成另一种账单？',
+  reading: '45-60 min：跟随一个 Dropbox 文件 Block 比较 Cloud 与自建的完整服务边界，用 Magic Pocket 重建利用率、弹性、迁移与共同责任。',
+  discussion: '20-30 min：为陌生业务计算一个透明 Break-even，并逐层分配 Provider 与 Customer 的控制、付款和剩余风险。',
+  next: '2026-11-23：Semiconductor-to-Cloud Value-chain Integration（半导体到云服务价值链整合）。',
 }
 
 export const monthlyTrack = [

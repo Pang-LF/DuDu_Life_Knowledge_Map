@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-11-22
+
+- 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a202f1c065c03ad`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签
+- 从 2026-11-21 Cloud Architecture Integration & Disaster Recovery 的真实进度继续进入 Cloud Economics & Shared Responsibility Integration；保留 2026-11-20 历史断点，没有补造课程
+- 新增 `SYSTEM.COMPUTE.CLOUD_ECONOMICS_SHARED_RESPONSIBILITY_INTEGRATION`，把云经济学定义为需求形状、资源利用率、单位成本、责任边界与剩余风险的联合决策，而不是简单比较一台服务器和一张云账单
+- 跟随一个 1 TB 存储需求把 Compute、Storage、Network、Reliability、Operations、Security 与 Recovery 重新合成 TCO，并区分 Provider、Customer 与 Shared Responsibility
+- 用 `$1.2M / year`、1,000 个单位的透明教学模型计算 25%、50% 与 80% 利用率下每个有效单位小时成本，并得到相对 `$0.25 / unit-hour` 云价约 54.8% 的盈亏平衡利用率；明确这些数字不是供应商报价
+- 新增 `CASE.DROPBOX.MAGIC_POCKET.CLOUD_STORAGE_MIGRATION.2012_2018`；按七段叙事记录 Dropbox 从约 40 PB 扩到超过 500 PB、六个月内迁移 500 PB 与峰值超过 0.5 Tbit/s 的 Magic Pocket 迁移
+- 将 4 exabits / 0.5 Tbit/s 换算为约 92.6 天的纯串行传输下限，用于说明吞吐峰值为什么不能替代端到端迁移时间
+- 保留 2016 年第三方数据中心费用减少 `$92.5M`、折旧及设施支持成本增加 `$53.0M`、净减少 `$39.5M` 的公司披露边界；不把 2015–2017 毛利率从 33% 到 67% 全部归因于自建存储
+- 新增 `BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS`，追踪 Cloud Provider、Customer、Colocation / Network、Hardware / Semiconductor 与 End User 之间的钱流、资产、责任与剩余风险
+- 更新 Cloud Placement / Reliability / Storage / Network / Disaster Recovery、Compute Foundation / Value Chain、行业日志、Question Bank、CURRENT_STATE 与网站数据；旧节点只记录 review / transfer，没有自动升级 mastery
+- 下一课锁定 Semiconductor-to-Cloud Value Chain Integration
+
 ## 2026-11-21
 
 - 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a1fff85fef1c4a3`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签

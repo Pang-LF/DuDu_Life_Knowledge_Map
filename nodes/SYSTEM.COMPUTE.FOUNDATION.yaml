@@ -17,6 +17,7 @@ prerequisites:
   - "META.SYSTEMS.SYSTEM"
   - "META.SYSTEMS.INTEGRATION"
 connections:
+  - "SYSTEM.COMPUTE.CLOUD_ECONOMICS_SHARED_RESPONSIBILITY_INTEGRATION"
   - "SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY"
   - "SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
@@ -47,11 +48,11 @@ cases:
   - "Global automotive semiconductor shortage, 2020-2022"
 
 first_seen: "2026-11-02"
-last_reviewed: "2026-11-19"
+last_reviewed: "2026-11-22"
 next_review: "2026-11-10"
 sources:
   - "https://files.gao.gov/reports/GAO-26-107882/index.html"
   - "https://www.commerce.gov/news/blog/2022/01/results-semiconductor-supply-chain-request-information"
   - "https://www.nist.gov/system/files/documents/2022/09/06/CHIPS-for-America-Strategy.pdf"
   - "https://www.sec.gov/Archives/edgar/data/38009/000003800921000038/exhibit99toapril282021fm.htm"
-notes: "L1 candidate pending a teach-back that reconstructs an unfamiliar compute service from user output to software, system, chip, fabrication, equipment and materials without treating layer capacity as interchangeable. Reviewed through server-node data locality on 2026-11-13, multi-node collective delivery on 2026-11-14, sustainable data-center power / cooling alignment on 2026-11-15, cloud request-to-placement conversion on 2026-11-16 and name-to-byte cloud reachability on 2026-11-19; no automatic mastery upgrade."
+notes: "L1 candidate pending a teach-back that reconstructs an unfamiliar compute service from user output to software, system, chip, fabrication, equipment and materials without treating layer capacity as interchangeable. Reviewed through server-node data locality on 2026-11-13, multi-node collective delivery on 2026-11-14, sustainable data-center power / cooling alignment on 2026-11-15, cloud request-to-placement conversion on 2026-11-16, name-to-byte reachability on 2026-11-19 and complete cloud-service TCO / responsibility boundaries on 2026-11-22; no automatic mastery upgrade."

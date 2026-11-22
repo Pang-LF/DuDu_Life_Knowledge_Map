@@ -17,6 +17,8 @@ prerequisites:
   - "SYSTEM.COMPUTE.FOUNDATION"
   - "META.SYSTEMS.INTEGRATION"
 connections:
+  - "SYSTEM.COMPUTE.CLOUD_ECONOMICS_SHARED_RESPONSIBILITY_INTEGRATION"
+  - "BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS"
   - "SYSTEM.COMPUTE.FOUNDATION"
   - "SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER"
   - "BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS"
@@ -59,10 +61,10 @@ cases:
   - "Global automotive semiconductor shortage, 2020-2022"
 
 first_seen: "2026-11-02"
-last_reviewed: "2026-11-16"
+last_reviewed: "2026-11-22"
 next_review: "2026-11-10"
 sources:
   - "https://files.gao.gov/reports/GAO-26-107882/index.html"
   - "https://www.nist.gov/system/files/documents/2022/09/06/CHIPS-for-America-Strategy.pdf"
   - "https://www.commerce.gov/news/blog/2022/01/results-semiconductor-supply-chain-request-information"
-notes: "Industry-application L1 candidate pending a teach-back that follows physical output downstream, money upstream and control rights across a new compute product. Reviewed through server integration on 2026-11-13, cluster networking on 2026-11-14, data-center infrastructure / tenant boundaries on 2026-11-15 and cloud capacity-product / customer-risk boundaries on 2026-11-16; no automatic mastery upgrade."
+notes: "Industry-application L1 candidate pending a teach-back that follows physical output downstream, money upstream and control rights across a new compute product. Reviewed through server integration, networking, data-center capacity and cloud product layers; on 2026-11-22, reviewed as the upstream physical, software and capital inputs a provider packages into a metered service, without automatic mastery upgrade."

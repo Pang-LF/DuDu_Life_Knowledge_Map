@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-22 — 对一项业务服务，什么 Useful Output、Demand Shape、Service Quality、Time Horizon 与 Exit Boundary 才能让 Cloud 与自建真正可比，哪项利用率、运营或迁移事实会翻转选择？
+- 2026-11-22 — 哪些 Compute、Storage、Network、Identity、Operations、Reliability 与 Business-interruption 成本移动给 Provider，哪些仍留给 Customer，哪些只是改变了会计形式？
+
 - 2026-11-21 — 对一项指定业务功能与 Disaster，Compute、State、Identity、Dependency、Routing 与 Operations 能否在实测 RTO / RPO 内重新组成有效服务？
 - 2026-11-21 — 谁为 Idle Recovery Capacity、Replication、Transfer、Game Day 与运维复杂度付款，哪些 Business Interruption 与 Data-loss 风险仍留给 Customer？
 

@@ -21,6 +21,8 @@ prerequisites:
   - "BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS"
   - "BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN"
 connections:
+  - "SYSTEM.COMPUTE.CLOUD_ECONOMICS_SHARED_RESPONSIBILITY_INTEGRATION"
+  - "BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS"
   - "BUS.SEMICONDUCTOR.CLOUD_RESILIENCE_TCO_ECONOMICS"
   - "SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING"
   - "SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY"
@@ -43,7 +45,7 @@ cases:
   - "Google Borg shared-cell scheduling and AWS public capacity-reservation semantics"
 
 first_seen: "2026-11-16"
-last_reviewed: "2026-11-21"
+last_reviewed: "2026-11-22"
 next_review: "2026-11-23"
 sources:
   - "https://research.google/pubs/large-scale-cluster-management-at-google-with-borg/"
@@ -52,4 +54,4 @@ sources:
   - "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html"
   - "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/troubleshooting-launch.html"
   - "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/capacity-reservations-pricing-billing.html"
-notes: "Industry-application L1 candidate pending a Teach-back that traces provider capital and customer payments, separates quota, on-demand availability, discount commitment and physical reservation, and evaluates utilization gains against fragmentation, tail contention, failure headroom and contractual service boundaries without inventing private prices or margins. Reviewed on 2026-11-21 as idle or reserved recovery-site capacity; no automatic mastery upgrade."
+notes: "Industry-application L1 candidate pending a Teach-back that traces provider capital and customer payments, separates quota, on-demand availability, discount commitment and physical reservation, and evaluates utilization gains against fragmentation, tail contention, failure headroom and contractual service boundaries without inventing private prices or margins. Reviewed on 2026-11-22 as provider pooling and owned-infrastructure utilization inputs to build-versus-buy TCO; no automatic mastery upgrade."

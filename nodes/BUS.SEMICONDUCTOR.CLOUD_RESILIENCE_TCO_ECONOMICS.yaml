@@ -20,6 +20,8 @@ prerequisites:
   - "BUS.SEMICONDUCTOR.CLOUD_SERVICE_RELIABILITY_ECONOMICS"
   - "BUS.SEMICONDUCTOR.CLOUD_CAPACITY_ECONOMICS"
 connections:
+  - "SYSTEM.COMPUTE.CLOUD_ECONOMICS_SHARED_RESPONSIBILITY_INTEGRATION"
+  - "BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS"
   - "SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY"
   - "SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT"
   - "SYSTEM.COMPUTE.CLOUD_STORAGE_DURABILITY_REPLICATION_CONSISTENCY"
@@ -43,11 +45,11 @@ cases:
   - "GitLab 2017 database recovery and AWS public disaster-recovery strategy guidance"
 
 first_seen: "2026-11-21"
-last_reviewed: "2026-11-21"
+last_reviewed: "2026-11-22"
 next_review: "2026-11-28"
 sources:
   - "https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/"
   - "https://docs.aws.amazon.com/wellarchitected/latest/framework/rel13.html"
   - "https://docs.aws.amazon.com/wellarchitected/latest/framework/rel_planning_for_recovery_disaster_recovery.html"
   - "https://docs.aws.amazon.com/pdfs/whitepapers/latest/aws-caf-operations-perspective/aws-caf-operations-perspective.pdf"
-notes: "Industry-application L1 candidate pending a Teach-back that costs standby capacity, reservations, replication, retained versions, transfer, testing and operating complexity for a named RTO/RPO, then compares them with business interruption and data-loss exposure without treating list price as provider cost or complete TCO."
+notes: "Industry-application L1 candidate pending a Teach-back that costs standby capacity, reservations, replication, retained versions, transfer, testing and operating complexity for a named RTO/RPO, then compares them with business interruption and data-loss exposure without treating list price as provider cost or complete TCO. Reviewed on 2026-11-22 as one required component of full cloud-versus-owned TCO; no automatic mastery upgrade."

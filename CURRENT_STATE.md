@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-21
+Last updated: 2026-11-22
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-21
 
 ## Next Immediate Focus（下一步）
 
-2026-11-22：进入 Cloud Economics & Shared Responsibility Integration（云经济学与共同责任整合），从一项完整 Cloud Service 逆向追踪 Provider 与 Customer 各自控制、支付和承担的 Compute、Storage、Network、Identity、Operations、SLA 与 Business-interruption Risk，并判断 Cloud 在什么条件下降低 Total Cost、在什么条件下只是改变账单形状。
+2026-11-23：进入 Semiconductor-to-Cloud Value-chain Integration（半导体到云服务价值链整合），从一美元 Useful Cloud Service Revenue 逆向追踪 Wafer、Fabrication、Packaging、HBM / Memory、Accelerator、Server、Network、Data Center 与 Cloud Software 各层交付的合格对象、钱流和控制权，判断瓶颈怎样跨层移动、哪些稀缺能力与客户关系能够保留 Profit Pool。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-21
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-22：从 11 月 21 日 Cloud Architecture Integration & Disaster Recovery 直接继续进入 Cloud Economics & Shared Responsibility Integration；最近 7 个实际日志为 11 月 14、15、16、17、18、19 与 21 日，今天与上一堂之间没有新断点，历史 11 月 20 日空缺继续保留且没有补造。课程先用 NIST 的 On-demand、Resource Pooling、Rapid Elasticity 与 Measured Service 定义 Cloud Service 为一份被产品化的计算能力，再跟随一个 Dropbox 文件 Block 比较 Public Cloud 的存储、请求、传输与责任边界，和自建系统的硬件、机房、折旧、验证、供应链与运维边界。透明 Break-even 模型中，年完整成本 120 万美元、1,000 Unit 的假设自建系统在 25%、50% 与 80% 利用率下分别约为 `$0.548`、`$0.274` 与 `$0.171 / useful unit-hour`；若假设可比 Cloud 为 `$0.25`，Break-even 利用率约 54.8%，所有数字都只是机制模型。Dropbox Magic Pocket 案例按七段叙事展开：用户数据从 2012 年约 40 PB 增到 2016 年超过 500 PB；2013 年开始主要工程、2014 年 Dark Launch、2015 年逐步迁移，最终超过 90% 用户数据由自建系统服务，同时仍保留 AWS 处理部分地域和内部工作负载。500 PB 超过 4 Exabit，在峰值 0.5 Tbit/s 下的理论序列化下限约 92.6 天，实际迁移不到六个月且还包含双份数据、校验和业务流量。SEC 文件显示 2016 年 Third-party Datacenter Expense 减少 9,250 万美元，同时 Depreciation、Facilities 与 Support 增加 5,300 万美元，净基础设施成本减少 3,950 万美元，说明成本被重新组合而不是消失。Gross Margin 从 2015 年 33% 升到 2016 年 54%、2017 年 67%，但公司同时归因于 Infrastructure Optimization 与收入增长，不能把全部变化因果归给 Magic Pocket。Industry Apprenticeship 追踪 Provider 把 Data Center、Server、Chip、Storage、Network、Software 与 Labor 包装为 Metered Service 的钱流，并区分 Provider Cost、Customer Price、Supplier Margin 与 Residual Risk。`SYSTEM.COMPUTE.CLOUD_ECONOMICS_SHARED_RESPONSIBILITY_INTEGRATION` 与 `BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS` 为 L1 candidate；下一课进入 Semiconductor-to-Cloud Value-chain Integration。
 
 2026-11-21：上一堂实际完成课程是 11 月 19 日，11 月 20 日没有完成日志；今天明确记录断点并从 Cloud Network 的真实位置继续，没有补造课程。课程先定义 Cloud Architecture 为 Compute、State、Network、Identity、Configuration 与 Operations 为指定业务功能形成的完整安排，再把 Disaster Recovery 重建为 Detect、Scope、Decide、Prepare State、Prepare Service、Route 与 Validate 的可演练状态转换。跟随一笔订单说明 Database Copy 不等于恢复：Payment Side Effect、Queue、Secret、Certificate、Quota、DNS 与 Return Path 都必须重新成立。透明模型中每分钟 100 个订单、最坏 5 分钟复制延迟形成最多 500 个订单的状态暴露；3 分钟检测、4 分钟决策、6 分钟状态准备、12 分钟扩容与 5 分钟路由串行得到 30 分钟恢复下限，均不是实测系统。GitLab 2017 数据库事故按七段叙事展开：Secondary 重建、Primary 误删约 300 GB、`pg_dump` 静默失败、S3 Bucket 为空、数据库没有 Azure Snapshot，只剩约六小时前 LVM Snapshot；公司报告 Staging 数据复制约 18 小时、服务停机约 18 小时，并粗估至少影响 5,000 个 Project、5,000 条 Comment 与约 700 个 User Account。Industry Apprenticeship 比较 Backup & Restore、Pilot Light、Warm Standby 与 Active/Active 的预先完成程度；30 个假设 Standby Unit × `$0.10/hour` × 730 小时 = `$2,190/month` 只用于显示 Idle Capacity 选择权成本，不是账单。GitLab 复盘不是独立审计；AWS 指南给出策略语义与典型范围，不是工作负载保证。`SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY` 与 `BUS.SEMICONDUCTOR.CLOUD_RESILIENCE_TCO_ECONOMICS` 为 L1 candidate；下一课进入 Cloud Economics & Shared Responsibility Integration。
 

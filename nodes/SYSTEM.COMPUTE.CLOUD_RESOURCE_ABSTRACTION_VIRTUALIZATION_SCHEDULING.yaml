@@ -19,6 +19,8 @@ prerequisites:
   - "SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION"
   - "SYSTEM.COMPUTE.FOUNDATION"
 connections:
+  - "SYSTEM.COMPUTE.CLOUD_ECONOMICS_SHARED_RESPONSIBILITY_INTEGRATION"
+  - "BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS"
   - "SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY"
   - "SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY"
   - "SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT"
@@ -45,7 +47,7 @@ cases:
   - "Google Borg cluster scheduling, resource pooling and reclamation, 2003-2015"
 
 first_seen: "2026-11-16"
-last_reviewed: "2026-11-21"
+last_reviewed: "2026-11-22"
 next_review: "2026-11-23"
 sources:
   - "https://csrc.nist.gov/pubs/sp/800/145/final"
@@ -54,4 +56,4 @@ sources:
   - "https://john.e-wilkes.com/papers/2015-EuroSys-Borg.pdf"
   - "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Instances.html"
   - "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html"
-notes: "L1 candidate pending a Teach-back that reconstructs admission, filtering, scoring, placement and runtime for an unfamiliar pool; diagnoses fragmented multi-resource capacity at host level; and distinguishes quota, reservation, allocation, overcommit and usage without treating aggregate utilization as placeability. Reviewed on 2026-11-21 as recovery-site capacity and quota whose usefulness must be exercised inside a full failover; no automatic mastery upgrade."
+notes: "L1 candidate pending a Teach-back that reconstructs admission, filtering, scoring, placement and runtime for an unfamiliar pool; diagnoses fragmented multi-resource capacity at host level; and distinguishes quota, reservation, allocation, overcommit and usage without treating aggregate utilization as placeability. Reviewed on 2026-11-21 as recovery-site capacity and on 2026-11-22 as pooled utilization and idle-risk inputs to cloud TCO; no automatic mastery upgrade."
