@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 2026-11-23
+
+- 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a208388766fe9c1`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签
+- 从 2026-11-22 Cloud Economics & Shared Responsibility 的真实进度继续进入 Semiconductor-to-Cloud Value-chain Integration；最近 7 个实际日志为 11 月 15、16、17、18、19、21 与 22 日，没有新断点，保留 11 月 20 日历史空缺
+- 新增 `SYSTEM.COMPUTE.SEMICONDUCTOR_TO_CLOUD_VALUE_CHAIN_INTEGRATION`，把价值链定义为 Wafer、Fabrication、Packaging / HBM、Accelerator、Server、Network / Data Center 与 Cloud Software 之间的连续合格转换
+- 跟随一次成功 AI Inference 逆向追踪 Physical、Information、Money 与 Control Flow，明确一美元 Cloud Revenue 不能在缺少采购、利用率、折旧和合同数据时伪造成精确供应商分账
+- 用 128 个八卡节点、960 张合格 Accelerator、116 个验证节点、100 个设施节点与 85% Useful Allocation 的透明模型得到 85 个 Useful-node Equivalent；数字仅解释瓶颈迁移
+- 新增 `CASE.NVIDIA.DATA_CENTER_PLATFORM.PROFIT_POOL.2017_2026`；按七段叙事记录 NVIDIA 从 FY2017 的 8.30 亿美元 Datacenter Revenue 到 FY2026 的 1,937.37 亿美元 Data Center Revenue，以及从 Processor 向 Networking、System 与 Software 扩展的平台边界
+- 记录 2020 年 70 亿美元 Mellanox 收购、FY2026 952 亿美元 Manufacturing / Supply / Capacity Commitment 与 72 亿美元 Inventory / Excess Purchase Obligation Provision，区分平台控制与供应风险
+- 用 AWS Trainium2 的 16 芯片、1.5 TiB HBM、46 TB/s HBM Bandwidth、3.2 Tbps EFA 作为下游向上游进入的对照，并把 30–40% Price-performance 明确标记为供应商指定比较
+- 新增 `BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION`，用 Indispensability、Qualified Scarcity、Interface Control、Switching Delay、Customer Control 与 Risk Absorption 判断价值保留和翻转条件
+- 区分 NVIDIA 71.1% Consolidated Gross Margin 与 AWS 约 35.4% Segment Operating Margin；记录 Amazon 因部分服务器和网络设备寿命从六年缩至五年增加 14 亿美元折旧摊销
+- 更新 Compute Value Chain、各层 review、行业日志、Question Bank、CURRENT_STATE 与网站数据；旧节点不因整合复习自动升级 mastery
+- 下一课锁定 November Integration & AI Infrastructure Bridge
+
 ## 2026-11-22
 
 - 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a202f1c065c03ad`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签

@@ -38,7 +38,7 @@ cases:
   - "AMD and SK hynix Fiji / Radeon R9 Fury X HBM1 commercialization, 2009-2015"
 
 first_seen: "2026-11-10"
-last_reviewed: "2026-11-13"
+last_reviewed: "2026-11-23"
 next_review: "2026-11-17"
 sources:
   - "https://ir.amd.com/news-events/press-releases/detail/619/amd-ushers-in-a-new-era-of-pc-gaming-with-radeontm-r9-and-r7-300-series-graphics-line-up-including-worlds-first-graphics-family-with-revolutionary-hbm-technology"
@@ -47,4 +47,4 @@ sources:
   - "https://news.skhynix.com/en/sk-hynix-starts-mass-production-of-high-speed-dram-hbm2e/"
   - "https://news.skhynix.com/en/creating-new-values-in-dram-using-through-silicon-via-technology-for-continued-scaling-in-memory-system-performance-and-capacity/"
   - "https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory-h100-h200-b200/latest/components.html"
-notes: "L1 candidate pending a Teach-back that reconstructs the complete data path and distinguishes width, per-pin rate, capacity, latency and application-effective bandwidth without treating HBM as a universal performance or latency solution. Reviewed as the local-memory tier within a server-node hierarchy on 2026-11-13; no automatic mastery upgrade."
+notes: "L1 candidate pending a Teach-back that reconstructs the complete data path and distinguishes width, per-pin rate, capacity, latency and application-effective bandwidth without treating HBM as a universal performance or latency solution. Reviewed on 2026-11-23 as a qualified matching layer whose scarcity can constrain accelerator output and migrate the value-chain bottleneck; no automatic mastery upgrade."

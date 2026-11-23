@@ -45,10 +45,10 @@ cases:
   - "OLCF Summit node architecture, deployment and acceptance, 2012-2019"
 
 first_seen: "2026-11-13"
-last_reviewed: "2026-11-16"
+last_reviewed: "2026-11-23"
 next_review: "2026-11-20"
 sources:
   - "https://docs.olcf.ornl.gov/systems/summit_user_guide.html"
   - "https://www.osti.gov/servlets/purl/1561654"
   - "https://www.olcf.ornl.gov/wp-content/uploads/2019/05/Summit_System_Overview_20190520.pdf"
-notes: "L1 candidate pending a Teach-back that reconstructs a tensor path across host memory, accelerators and NIC, calculates ideal transfer lower bounds, distinguishes aggregate local bandwidth from one object's end-to-end path, and names the topology, software, power and cooling evidence still required. Reviewed as the node-level prerequisite for multi-node collective communication on 2026-11-14, rack-level power / heat delivery on 2026-11-15 and host-level virtual resource placement on 2026-11-16; no automatic mastery upgrade."
+notes: "L1 candidate pending a Teach-back that reconstructs a tensor path across host memory, accelerators and NIC, calculates ideal transfer lower bounds, distinguishes aggregate local bandwidth from one object's end-to-end path, and names the topology, software, power and cooling evidence still required. Reviewed on 2026-11-23 as the component-to-qualified-node conversion in the semiconductor-to-cloud chain; no automatic mastery upgrade."

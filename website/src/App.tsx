@@ -69,6 +69,8 @@ const nodePoints: NodePoint[] = [
   { id: 'SYSTEM.ENERGY.COST_VALUE_TIME_LOCATION', x: 735, y: 555, labelSide: 'left', mapLabel: 'Time & Location（时间与地点）', mapId: 'SYSTEM.ENERGY.TIME_LOCATION' },
   { id: 'SYSTEM.COMPUTE.FOUNDATION', x: 995, y: 705, labelSide: 'left', mapLabel: 'Compute Foundation（计算基础）', mapId: 'SYSTEM.COMPUTE.FOUNDATION' },
   { id: 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', x: 260, y: 520, labelSide: 'right', mapLabel: 'Compute Value Chain（计算价值链）', mapId: 'BUS.SEMICONDUCTOR.VALUE_CHAIN' },
+  { id: 'SYSTEM.COMPUTE.SEMICONDUCTOR_TO_CLOUD_VALUE_CHAIN_INTEGRATION', x: 1160, y: 700, labelSide: 'left', mapLabel: 'Value-chain Integration（价值链整合）', mapId: 'SYS.COMPUTE.VALUE_CHAIN.INT' },
+  { id: 'BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION', x: 1145, y: 520, labelSide: 'right', mapLabel: 'Compute Profit Pool（计算利润池）', mapId: 'BUS.COMPUTE.PROFIT_POOL' },
   { id: 'SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER', x: 1000, y: 535, labelSide: 'left', mapLabel: 'Silicon & Wafer（硅与晶圆）', mapId: 'SYSTEM.SEMICONDUCTOR.WAFER' },
   { id: 'BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS', x: 250, y: 650, labelSide: 'right', mapLabel: 'Wafer Economics（晶圆经济学）', mapId: 'BUS.SEMICONDUCTOR.WAFER_ECON' },
   { id: 'SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION', x: 955, y: 485, labelSide: 'left', mapLabel: 'Fabrication（芯片制造）', mapId: 'SYSTEM.SEMICONDUCTOR.FABRICATION' },
@@ -144,7 +146,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.COMPUTE.CLOUD_ECONOMICS_SHARED_RESPONSIBILITY_INTEGRATION')
+  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.COMPUTE.SEMICONDUCTOR_TO_CLOUD_VALUE_CHAIN_INTEGRATION')
   const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
 
   const selectedNode = useMemo(

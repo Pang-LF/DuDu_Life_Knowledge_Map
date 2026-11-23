@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-23 — 从一美元 Useful Cloud Service Revenue 出发，各层实际交付什么合格对象、谁向谁付款、谁控制接口，哪项边际产能才会增加最终 Useful Output？
+- 2026-11-23 — 哪一层因 Indispensability、Qualified Scarcity、Interface Control、Switching Delay、Customer Control 与 Risk Absorption 能保留利润，什么新证据会让 Bottleneck 与 Profit Pool 迁移？
+
 - 2026-11-22 — 对一项业务服务，什么 Useful Output、Demand Shape、Service Quality、Time Horizon 与 Exit Boundary 才能让 Cloud 与自建真正可比，哪项利用率、运营或迁移事实会翻转选择？
 - 2026-11-22 — 哪些 Compute、Storage、Network、Identity、Operations、Reliability 与 Business-interruption 成本移动给 Provider，哪些仍留给 Customer，哪些只是改变了会计形式？
 

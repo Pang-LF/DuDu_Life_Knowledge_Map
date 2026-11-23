@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-22
+Last updated: 2026-11-23
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-22
 
 ## Next Immediate Focus（下一步）
 
-2026-11-23：进入 Semiconductor-to-Cloud Value-chain Integration（半导体到云服务价值链整合），从一美元 Useful Cloud Service Revenue 逆向追踪 Wafer、Fabrication、Packaging、HBM / Memory、Accelerator、Server、Network、Data Center 与 Cloud Software 各层交付的合格对象、钱流和控制权，判断瓶颈怎样跨层移动、哪些稀缺能力与客户关系能够保留 Profit Pool。
+2026-11-24：完成 November Integration & AI Infrastructure Bridge（11月整合与人工智能基础设施桥接），用一个陌生 AI Workload 从 Useful Output 反推 Model / Runtime、Compute、Memory、Network、Server、Power / Cooling、Packaging、Fabrication 与 Wafer 的第一个绑定约束，诊断 11 月骨架能否迁移，并为 12 月 Data → Training → Foundation Model → Inference 主线建立必要接口。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-22
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-23：从 11 月 22 日 Cloud Economics & Shared Responsibility 的真实进度继续进入 Semiconductor-to-Cloud Value-chain Integration；最近 7 个实际日志为 11 月 15、16、17、18、19、21 与 22 日，今天与上一堂之间没有新断点，历史 11 月 20 日空缺继续保留且没有补造。课程先把 Value Chain 定义为连续合格转换：Wafer、Fabricated Die、Package / HBM、Accelerator、Server、Network / Data Center 与 Cloud Software 各自接收和交付不同对象，Physical、Information、Money 与 Control Flow 不能压成一张静态成本饼图。跟随一次成功 AI Inference 逆向重建整条链，并用 128 个八卡节点、960 张合格 Accelerator、116 个通过验证节点、100 个可供电冷却联网节点和 85% Useful Allocation 的透明教学模型得到 85 个 Useful-node Equivalent，说明最终能力由匹配后的最小约束决定；数字不是 NVIDIA 或 AWS 实测。NVIDIA 主案例按七段叙事展开：FY2017 Datacenter Revenue 为 8.30 亿美元、约占总收入 12.0%，FY2026 Data Center Revenue 为 1,937.37 亿美元、约占总收入 89.7%，约为前者 233 倍；同期合并 Gross Margin 从 58.8% 到 71.1%，但端点变化不能识别 CUDA、Mellanox、AI Demand、Pricing 或 Supply 的独立因果贡献。2020 年 70 亿美元 Mellanox 收购与 FY2026 由 GPU、CPU、DPU、Networking、Rack-scale System 和 Software 构成的平台说明接口边界扩展；公司同时依赖 Contract Manufacturing，并披露 952 亿美元 Manufacturing / Supply / Capacity Commitment 与 72 亿美元 Inventory / Excess Purchase Obligation Provision，显示平台权力伴随供应和需求反转风险。AWS Trainium2 作为对照，16 芯片 Instance 配置 1.5 TiB HBM、46 TB/s HBM Bandwidth 与 3.2 Tbps EFA；AWS 的 30–40% Price-performance 是供应商对指定实例的主张。Amazon FY2025 AWS Sales 1,287.25 亿美元、Segment Operating Income 456.06 亿美元，约 35.4%，但该 Operating Margin 不与 NVIDIA 71.1% Gross Margin直接排名；部分服务器与网络设备寿命从六年缩到五年增加 14 亿美元折旧摊销，说明客户关系持有者仍承担技术过时风险。`SYSTEM.COMPUTE.SEMICONDUCTOR_TO_CLOUD_VALUE_CHAIN_INTEGRATION` 与 `BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION` 为 L1 candidate；下一课进入 November Integration & AI Infrastructure Bridge。
 
 2026-11-22：从 11 月 21 日 Cloud Architecture Integration & Disaster Recovery 直接继续进入 Cloud Economics & Shared Responsibility Integration；最近 7 个实际日志为 11 月 14、15、16、17、18、19 与 21 日，今天与上一堂之间没有新断点，历史 11 月 20 日空缺继续保留且没有补造。课程先用 NIST 的 On-demand、Resource Pooling、Rapid Elasticity 与 Measured Service 定义 Cloud Service 为一份被产品化的计算能力，再跟随一个 Dropbox 文件 Block 比较 Public Cloud 的存储、请求、传输与责任边界，和自建系统的硬件、机房、折旧、验证、供应链与运维边界。透明 Break-even 模型中，年完整成本 120 万美元、1,000 Unit 的假设自建系统在 25%、50% 与 80% 利用率下分别约为 `$0.548`、`$0.274` 与 `$0.171 / useful unit-hour`；若假设可比 Cloud 为 `$0.25`，Break-even 利用率约 54.8%，所有数字都只是机制模型。Dropbox Magic Pocket 案例按七段叙事展开：用户数据从 2012 年约 40 PB 增到 2016 年超过 500 PB；2013 年开始主要工程、2014 年 Dark Launch、2015 年逐步迁移，最终超过 90% 用户数据由自建系统服务，同时仍保留 AWS 处理部分地域和内部工作负载。500 PB 超过 4 Exabit，在峰值 0.5 Tbit/s 下的理论序列化下限约 92.6 天，实际迁移不到六个月且还包含双份数据、校验和业务流量。SEC 文件显示 2016 年 Third-party Datacenter Expense 减少 9,250 万美元，同时 Depreciation、Facilities 与 Support 增加 5,300 万美元，净基础设施成本减少 3,950 万美元，说明成本被重新组合而不是消失。Gross Margin 从 2015 年 33% 升到 2016 年 54%、2017 年 67%，但公司同时归因于 Infrastructure Optimization 与收入增长，不能把全部变化因果归给 Magic Pocket。Industry Apprenticeship 追踪 Provider 把 Data Center、Server、Chip、Storage、Network、Software 与 Labor 包装为 Metered Service 的钱流，并区分 Provider Cost、Customer Price、Supplier Margin 与 Residual Risk。`SYSTEM.COMPUTE.CLOUD_ECONOMICS_SHARED_RESPONSIBILITY_INTEGRATION` 与 `BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS` 为 L1 candidate；下一课进入 Semiconductor-to-Cloud Value-chain Integration。
 

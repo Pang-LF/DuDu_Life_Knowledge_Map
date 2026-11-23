@@ -21,6 +21,8 @@ prerequisites:
   - "SYSTEM.COMPUTE.CLOUD_RESOURCE_ABSTRACTION_VIRTUALIZATION_SCHEDULING"
   - "SYSTEM.COMPUTE.FOUNDATION"
 connections:
+  - "SYSTEM.COMPUTE.SEMICONDUCTOR_TO_CLOUD_VALUE_CHAIN_INTEGRATION"
+  - "BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION"
   - "BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS"
   - "SYSTEM.COMPUTE.CLOUD_ARCHITECTURE_INTEGRATION_DISASTER_RECOVERY"
   - "SYSTEM.COMPUTE.CLOUD_NETWORK_DNS_DATA_MOVEMENT"
@@ -46,7 +48,7 @@ cases:
   - "Dropbox Magic Pocket cloud-storage migration and infrastructure optimization, 2012-2018"
 
 first_seen: "2026-11-22"
-last_reviewed: "2026-11-22"
+last_reviewed: "2026-11-23"
 next_review: "2026-11-29"
 sources:
   - "https://csrc.nist.gov/pubs/sp/800/145/final"
@@ -54,4 +56,4 @@ sources:
   - "https://dropbox.tech/infrastructure/magic-pocket-infrastructure"
   - "https://dropbox.tech/infrastructure/inside-the-magic-pocket"
   - "https://www.sec.gov/Archives/edgar/data/1467623/000119312518078140/d451946ds1a.htm"
-notes: "L1 candidate pending a Teach-back that fixes one service's output, demand, performance, reliability, time and exit boundaries; reconstructs cloud and owned TCO; and assigns compute, storage, network, identity, operations, recovery, migration and interruption risk to provider or customer without treating list price as complete cost."
+notes: "L1 candidate pending a Teach-back that fixes one service's output, demand, performance, reliability, time and exit boundaries; reconstructs cloud and owned TCO; and assigns compute, storage, network, identity, operations, recovery, migration and interruption risk to provider or customer without treating list price as complete cost. Reviewed on 2026-11-23 as the customer-revenue boundary of the complete value chain; no automatic mastery upgrade."
