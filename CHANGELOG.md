@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## 2026-11-24
+
+- 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a20d443d5298442`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签
+- 从 2026-11-23 Semiconductor-to-Cloud Value-chain Integration 的真实进度继续进入 November Integration & AI Infrastructure Bridge；最近 7 个实际日志为 11 月 16、17、18、19、21、22 与 23 日，没有新断点，保留 11 月 20 日历史空缺
+- 新增 `SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE`，把 AI 基础设施容量定义为整栈产生被验证并保留的模型进展速率，而不是 Installed GPU Count
+- 区分 Provisioned、Runnable、Active、Useful 与 Preserved Capacity，并把 GPU-hours、MFU、Effective Training Time 与最终模型进展分别置于不同统计边界
+- 用 405B × 2 bytes ≈ 810 GB 建立 BF16 Weights-only 内存下界；用 16,384 张 H100 与八卡 Grand Teton 得到 2,048 台名义服务器与 1.31 PB Aggregate HBM，明确拓扑和切分使其不是平坦共享池
+- 用 16,384 × 700 W ≈ 11.47 MW 说明 GPU-only Nameplate TDP 数量级，明确不含 CPU、Network、Storage、Power Conversion 与 Cooling，也不是平均负荷
+- 新增 `CASE.META.LLAMA3_405B.TRAINING_INFRASTRUCTURE.2024`；按七段叙事记录 15.6T Token、约 `3.8 × 10^25` FLOPs、四维 Parallelism、400 Gbps RoCE、Checkpointing 与 240 PB Storage
+- 记录 54-day Snapshot 的 466 次中断、47 次 Planned 与 419 次 Unexpected；将约每 3.1 小时一次限定为整个 Job 的事件频率，不误写为单部件 MTBF
+- 识别源表中 148 次 Faulty GPU 与打印 30.1% 的内部算术不一致，保留 Count 并显式记录证据边界
+- 区分 38–43% BF16 MFU、超过 90% Effective Training Time 与 Model Card 的 30.84M H100 GPU-hours，拒绝用不同边界拼出训练天数、Goodput 或完整账单
+- 新增 `BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION`，追踪 Model Lab、Cloud / Data Center、System Platform 与上游制造之间的 Idle、Spare、Restart、Checkpoint、Utilization、Obsolescence 与 Qualification Risk
+- 更新 Value Chain、Wafer、Fabrication、Packaging、HBM、GPU、Roofline、Server、Network、Power / Cooling、Bottleneck、行业日志、Question Bank、CURRENT_STATE 与网站数据；旧节点仅记录 review / transfer
+- 网站 TypeScript 构建与 oxlint 通过；下一课锁定 Artificial Intelligence Module Orientation & Data Foundation
+
 ## 2026-11-23
 
 - 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a208388766fe9c1`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签

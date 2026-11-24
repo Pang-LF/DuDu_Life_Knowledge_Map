@@ -47,11 +47,11 @@ cases:
   - "NVIDIA data-center platform and compute profit-pool shift, 2017-2026"
 
 first_seen: "2026-11-23"
-last_reviewed: "2026-11-23"
+last_reviewed: "2026-11-24"
 next_review: "2026-11-30"
 sources:
   - "https://www.sec.gov/Archives/edgar/data/1045810/000104581017000027/nvda-2017x10k.htm"
   - "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm"
   - "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm"
   - "https://aws.amazon.com/blogs/aws/amazon-ec2-trn2-instances-and-trn2-ultraservers-for-aiml-training-and-inference-is-now-available/"
-notes: "L1 candidate pending a Teach-back that starts from a new useful compute service, reconstructs every qualified handoff and four flows, locates the binding marginal capacity, and keeps supplier split, fiscal-period and margin comparisons within evidence boundaries."
+notes: "L1 candidate pending a Teach-back that starts from a new useful compute service, reconstructs every qualified handoff and four flows, locates the binding marginal capacity, and keeps supplier split, fiscal-period and margin comparisons within evidence boundaries. Reviewed on 2026-11-24 by tracing one preserved Llama training step backward through the complete chain; no automatic mastery upgrade."

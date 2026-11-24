@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-23
+Last updated: 2026-11-24
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-23
 
 ## Next Immediate Focus（下一步）
 
-2026-11-24：完成 November Integration & AI Infrastructure Bridge（11月整合与人工智能基础设施桥接），用一个陌生 AI Workload 从 Useful Output 反推 Model / Runtime、Compute、Memory、Network、Server、Power / Cooling、Packaging、Fabrication 与 Wafer 的第一个绑定约束，诊断 11 月骨架能否迁移，并为 12 月 Data → Training → Foundation Model → Inference 主线建立必要接口。
+2026-11-25：进入 Artificial Intelligence Module Orientation & Data Foundation（人工智能模块定位与数据基础），先定义 AI System、Training Workload 与 Qualified Training Data 的父子关系，再跟随一条原始记录经过来源、权利、清洗、去重、过滤、标注、切分与数据管道成为可验收训练输入；不提前把 Foundation Model、Inference 或 Agent 作为平行主课。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-23
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-24：从 11 月 23 日 Semiconductor-to-Cloud Value-chain Integration 的真实进度直接进入 November Integration & AI Infrastructure Bridge；最近 7 个实际日志为 11 月 16、17、18、19、21、22 与 23 日，今天与上一堂之间没有新断点，历史 11 月 20 日空缺继续保留且没有补造。课程先把 AI Workload 定义为在数据、模型、运行时、正确性与时间边界下进行模型状态转换，再把一个被验证并保留下来的训练步定义为基础设施真正应交付的最小单位；Provisioned、Runnable、Active、Useful 与 Preserved Capacity 分开，GPU-hours、MFU 与 Effective Training Time 不互换。Meta Llama 3.1 405B 案例按七段叙事展开：405B 参数、15.6T Training Tokens、约 `3.8 × 10^25` FLOPs，最多 16,384 张 80 GB HBM3 H100；BF16 Weights-only 约 810 GB，迫使模型状态跨设备切分。八卡 Grand Teton 对应最大配置 2,048 台名义服务器与 1.31 PB Aggregate HBM，但内存不是平坦共享池；16,384 × 700 W 约 11.47 MW 只是 GPU-only Nameplate TDP，不是设施总负荷或平均能耗。54-day Reliability Snapshot 报告 466 次中断，其中 47 次 Planned、419 次 Unexpected，约为整个 Job 每 3.1 小时一次意外中断，但不能解释为单部件 MTBF；Source Table 的 148 次 Faulty GPU 与打印 30.1% 存在算术不一致，课程保留 Count 并记录边界。Meta 披露 38–43% BF16 MFU 与超过 90% Effective Training Time，两者描述不同损失边界，不相乘成公开 Goodput；Model Card 的 30.84M H100 GPU-hours 是资源使用量，不是训练总天数、采购价格或完整账单，也不能与 54 天窗口拼接。Industry Apprenticeship 将 Frontier Training Budget 重建为对 Preserved Model Progress 以及 Idle、Spare、Restart、Checkpoint、Utilization、Obsolescence 与 Qualification Risk 的购买和分配，拒绝虚构 Wafer、Foundry、Packaging、HBM、System、Network、Facility 与 Energy 的逐美元占比。`SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE` 与 `BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION` 为 L1 candidate；11 月旧节点仅记录 review / transfer。下一课进入 Artificial Intelligence Module Orientation & Data Foundation。
 
 2026-11-23：从 11 月 22 日 Cloud Economics & Shared Responsibility 的真实进度继续进入 Semiconductor-to-Cloud Value-chain Integration；最近 7 个实际日志为 11 月 15、16、17、18、19、21 与 22 日，今天与上一堂之间没有新断点，历史 11 月 20 日空缺继续保留且没有补造。课程先把 Value Chain 定义为连续合格转换：Wafer、Fabricated Die、Package / HBM、Accelerator、Server、Network / Data Center 与 Cloud Software 各自接收和交付不同对象，Physical、Information、Money 与 Control Flow 不能压成一张静态成本饼图。跟随一次成功 AI Inference 逆向重建整条链，并用 128 个八卡节点、960 张合格 Accelerator、116 个通过验证节点、100 个可供电冷却联网节点和 85% Useful Allocation 的透明教学模型得到 85 个 Useful-node Equivalent，说明最终能力由匹配后的最小约束决定；数字不是 NVIDIA 或 AWS 实测。NVIDIA 主案例按七段叙事展开：FY2017 Datacenter Revenue 为 8.30 亿美元、约占总收入 12.0%，FY2026 Data Center Revenue 为 1,937.37 亿美元、约占总收入 89.7%，约为前者 233 倍；同期合并 Gross Margin 从 58.8% 到 71.1%，但端点变化不能识别 CUDA、Mellanox、AI Demand、Pricing 或 Supply 的独立因果贡献。2020 年 70 亿美元 Mellanox 收购与 FY2026 由 GPU、CPU、DPU、Networking、Rack-scale System 和 Software 构成的平台说明接口边界扩展；公司同时依赖 Contract Manufacturing，并披露 952 亿美元 Manufacturing / Supply / Capacity Commitment 与 72 亿美元 Inventory / Excess Purchase Obligation Provision，显示平台权力伴随供应和需求反转风险。AWS Trainium2 作为对照，16 芯片 Instance 配置 1.5 TiB HBM、46 TB/s HBM Bandwidth 与 3.2 Tbps EFA；AWS 的 30–40% Price-performance 是供应商对指定实例的主张。Amazon FY2025 AWS Sales 1,287.25 亿美元、Segment Operating Income 456.06 亿美元，约 35.4%，但该 Operating Margin 不与 NVIDIA 71.1% Gross Margin直接排名；部分服务器与网络设备寿命从六年缩到五年增加 14 亿美元折旧摊销，说明客户关系持有者仍承担技术过时风险。`SYSTEM.COMPUTE.SEMICONDUCTOR_TO_CLOUD_VALUE_CHAIN_INTEGRATION` 与 `BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION` 为 L1 candidate；下一课进入 November Integration & AI Infrastructure Bridge。
 

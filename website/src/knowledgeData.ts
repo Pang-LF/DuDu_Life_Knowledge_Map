@@ -1086,6 +1086,22 @@ export const nodes: GraphNode[] = [
     connections: ['SYSTEM.COMPUTE.SEMICONDUCTOR_TO_CLOUD_VALUE_CHAIN_INTEGRATION', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'BUS.SEMICONDUCTOR.FAB_ECONOMICS', 'BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS', 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', 'BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS', 'BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.NVIDIA.DATA_CENTER_PLATFORM.PROFIT_POOL.2017_2026'],
   },
   {
+    id: 'SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE',
+    label: 'AI Infrastructure Bridge（人工智能基础设施桥接）',
+    domain: 'SYSTEM',
+    mastery: 'L1 candidate',
+    summary: 'AI infrastructure capacity is the rate of validated and preserved model progress produced by a matched stack, not installed GPU count; the binding constraint is the first layer where marginal effective capacity raises that progress in the current workload state.',
+    connections: ['BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION', 'SYSTEM.COMPUTE.SEMICONDUCTOR_TO_CLOUD_VALUE_CHAIN_INTEGRATION', 'SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER', 'SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION', 'SYSTEM.SEMICONDUCTOR.ADVANCED_PACKAGING_CHIPLETS_COMPOUND_YIELD', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.COMPUTE.ROOFLINE_ARITHMETIC_INTENSITY', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.META.LLAMA3_405B.TRAINING_INFRASTRUCTURE.2024'],
+  },
+  {
+    id: 'BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION',
+    label: 'AI Workload Value-chain（AI 工作负载价值链）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'A frontier-training buyer purchases validated and preserved model progress plus allocation of idle, spare, restart, utilization and qualification risk; GPU-hours are resource usage, not price or total cost.',
+    connections: ['SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', 'BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'BUS.SEMICONDUCTOR.FAB_ECONOMICS', 'BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS', 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', 'BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.META.LLAMA3_405B.TRAINING_INFRASTRUCTURE.2024'],
+  },
+  {
     id: 'SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER',
     label: 'Silicon, Crystal & Qualified Wafer（硅、晶体与合格晶圆）',
     domain: 'SYSTEM',
@@ -1406,6 +1422,14 @@ export const nodes: GraphNode[] = [
     connections: ['SYSTEM.COMPUTE.SEMICONDUCTOR_TO_CLOUD_VALUE_CHAIN_INTEGRATION', 'BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION', 'BUS.SEMICONDUCTOR.COMPUTE_VALUE_CHAIN', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'SYSTEM.COMPUTE.CLOUD_ECONOMICS_SHARED_RESPONSIBILITY_INTEGRATION', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE'],
   },
   {
+    id: 'CASE.META.LLAMA3_405B.TRAINING_INFRASTRUCTURE.2024',
+    label: 'Meta Llama 3.1 405B Training Infrastructure（Llama 3.1 训练基础设施）',
+    domain: 'SYSTEM',
+    mastery: 'Case studied',
+    summary: 'Meta trained Llama 3.1 405B on 15.6 trillion tokens with up to 16,384 H100 GPUs; a 54-day reliability snapshot, 38–43% MFU and more than 90% effective training time reveal how model fit, collectives, failures, checkpoints, power and cooling jointly produce preserved progress.',
+    connections: ['SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', 'BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE'],
+  },
+  {
     id: 'CASE.AWS.S3.STRONG_CONSISTENCY_TRANSITION.2006_2020',
     label: 'Amazon S3 Strong-consistency Transition 2006–20（S3 强一致性转变）',
     domain: 'SYSTEM',
@@ -1680,12 +1704,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-23',
-  title: 'Semiconductor-to-Cloud Value-chain Integration（半导体到云服务价值链整合）',
-  question: '一美元 Useful Cloud Service Revenue 怎样连接 Wafer 到 Cloud，瓶颈与利润池为什么会跨层迁移？',
-  reading: '45-60 min：跟随一次成功 AI Inference 逆向重建合格交付链，用 NVIDIA 平台演进与 AWS Trainium 对照追踪接口、风险和利润保留。',
-  discussion: '20-30 min：不编造供应商百分比，画出一个陌生 AI Service 的四种流，判断当前 Bottleneck 和可翻转 Profit Pool 的证据。',
-  next: '2026-11-24：November Integration & AI Infrastructure Bridge（11月整合与人工智能基础设施桥接）。',
+  date: '2026-11-24',
+  title: 'November Integration & AI Infrastructure Bridge（十一月整合与人工智能基础设施桥接）',
+  question: '为什么 16,384 张在线 GPU 不等于 16,384 份训练能力，当前第一个绑定约束怎样被边际证据识别？',
+  reading: '45-60 min：跟随一个被验证并保留下来的 Llama 3.1 405B 训练步，逆向穿过模型、运行时、HBM、GPU、服务器、网络、存储、电力冷却与上游制造。',
+  discussion: '20-30 min：区分 Provisioned、Runnable、Active、Useful 与 Preserved Capacity，并拆解 GPU-hours 不能代表总训练账单的口径。',
+  next: '2026-11-25：Artificial Intelligence Module Orientation & Data Foundation（人工智能模块定位与数据基础）。',
 }
 
 export const monthlyTrack = [
@@ -1693,4 +1717,5 @@ export const monthlyTrack = [
   'Chip Design & Fabrication（芯片设计与制造）',
   'Packaging, Memory & Accelerators（封装、存储与加速器）',
   'Server, Data Center & Cloud（服务器、数据中心与云）',
+  'AI Infrastructure Integration（人工智能基础设施整合）',
 ]

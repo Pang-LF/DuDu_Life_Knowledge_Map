@@ -1,0 +1,44 @@
+id: "BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION"
+name_en: "AI Workload Value-chain Application"
+name_zh: "人工智能工作负载价值链应用"
+domain: "BUSINESS"
+module: "Industry Atlas — Semiconductor + Compute"
+importance: "Applied"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "AI workload value-chain application asks what a training buyer actually purchases: validated model progress produced by coordinated data, software, compute, memory, network, facilities and manufacturing capacity, including idle, spare, restart and qualification risk."
+why: "GPU-hours, accelerator count and nameplate power can look precise while hiding who bears failed-step, straggler, repair, checkpoint, utilization, obsolescence and supply-assurance costs."
+mechanism: "Fix the workload and useful-output boundary; map payers, beneficiaries, assets, contracts and control rights; distinguish resource usage from a bill; allocate each operating and supply risk to the party that controls or absorbs it; do not invent confidential price or supplier shares."
+example: "Meta disclosed 30.84 million H100 GPU-hours for the Llama 3.1 405B model and a 54-day reliability snapshot with 419 unexpected interruptions, but public evidence does not reveal Meta's purchase price, total training bill or the dollar split among NVIDIA, networking, data-center, energy, packaging, memory, foundry and wafer suppliers."
+my_take: "I should treat a frontier-training budget as payment for preserved learning progress and risk absorption, not multiply public GPU-hours by a list price and call the result total cost."
+
+prerequisites:
+  - "SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE"
+  - "BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION"
+  - "BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS"
+connections:
+  - "SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE"
+  - "BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION"
+  - "BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.FAB_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS"
+  - "BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "FRONTIER.AI.INFRASTRUCTURE"
+  - "CASE.META.LLAMA3_405B.TRAINING_INFRASTRUCTURE.2024"
+questions:
+  - "What does a frontier-training budget buy, who pays for idle, spare, restart and qualification risk, and which public evidence is insufficient to allocate the bill?"
+cases:
+  - "Meta Llama 3.1 405B training infrastructure, 2024"
+
+first_seen: "2026-11-24"
+last_reviewed: "2026-11-24"
+next_review: "2026-12-01"
+sources:
+  - "https://arxiv.org/html/2407.21783"
+  - "https://raw.githubusercontent.com/meta-llama/llama-models/main/models/llama3_1/MODEL_CARD.md"
+notes: "Industry-application L1 candidate pending a Teach-back that defines purchased useful output, maps payer and risk boundaries, distinguishes GPU-hours from price and total cost, and refuses unsupported supplier-dollar allocation."

@@ -34,7 +34,7 @@ cases:
   - "AMD EPYC Rome chiplet architecture and product transition, 2018-2019"
 
 first_seen: "2026-11-09"
-last_reviewed: "2026-11-23"
+last_reviewed: "2026-11-24"
 next_review: "2026-11-16"
 sources:
   - "https://ir.amd.com/news-events/press-releases/detail/860/amd-takes-high-performance-datacenter-computing-to-the-next-horizon"
@@ -42,4 +42,4 @@ sources:
   - "https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/tuning-guides/amd-epyc-7002-tg-hpc-56827.pdf"
   - "https://ieeexplore.ieee.org/document/9499852"
   - "https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/cowos.htm"
-notes: "L1 candidate pending a Teach-back that reconstructs why random chiplet composition does not erase area-related defects, how KGD harvesting changes salvage value, and how assembly and interface yield determine final good-package economics. Reviewed on 2026-11-23 as a matching and qualification gate that can move the end-to-end bottleneck; no automatic mastery upgrade."
+notes: "L1 candidate pending a Teach-back that reconstructs why random chiplet composition does not erase area-related defects, how KGD harvesting changes salvage value, and how assembly and interface yield determine final good-package economics. Reviewed on 2026-11-24 as an upstream qualification gate for future cluster expansion, not an identified operating bottleneck in Meta's public case; no automatic mastery upgrade."

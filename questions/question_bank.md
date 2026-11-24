@@ -2,6 +2,9 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-24 — 从一个被验证并保留下来的模型更新出发，当前工作负载状态中的第一个绑定约束位于哪一层，什么边际缓解证据能证明或推翻它？
+- 2026-11-24 — 一笔 Frontier Training 预算究竟购买什么，谁为 Idle、Spare、Restart 与 Qualification Risk 付款，哪些公开证据不足以分配总账单？
+
 - 2026-11-23 — 从一美元 Useful Cloud Service Revenue 出发，各层实际交付什么合格对象、谁向谁付款、谁控制接口，哪项边际产能才会增加最终 Useful Output？
 - 2026-11-23 — 哪一层因 Indispensability、Qualified Scarcity、Interface Control、Switching Delay、Customer Control 与 Risk Absorption 能保留利润，什么新证据会让 Bottleneck 与 Profit Pool 迁移？
 

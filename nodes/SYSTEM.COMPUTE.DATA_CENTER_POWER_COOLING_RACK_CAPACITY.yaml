@@ -40,7 +40,7 @@ cases:
   - "OLCF Frontier data-center power, cooling and rack-density integration, 2019-2026"
 
 first_seen: "2026-11-15"
-last_reviewed: "2026-11-23"
+last_reviewed: "2026-11-24"
 next_review: "2026-11-22"
 sources:
   - "https://www.olcf.ornl.gov/2020/12/14/building-an-exascale-class-data-center/"
@@ -48,4 +48,4 @@ sources:
   - "https://www.olcf.ornl.gov/2024/09/10/olcf-pioneers-approaches-to-energy-efficient-supercomputing/"
   - "https://www.energy.gov/sites/default/files/2024-07/best-practice-guide-data-center-design.pdf"
   - "https://www.top500.org/system/180047/"
-notes: "L1 candidate pending a Teach-back that distinguishes facility power, firm electrical capacity, IT load, rack density, heat-removal capacity, redundancy and stranded capacity; reconstructs both paths for an unfamiliar rack; and explains why PUE or campus MW alone cannot prove sustainable compute capacity. Reviewed on 2026-11-23 as the facility gate that can bind after accelerator supply expands; no automatic mastery upgrade."
+notes: "L1 candidate pending a Teach-back that distinguishes facility power, firm electrical capacity, IT load, rack density, heat-removal capacity, redundancy and stranded capacity; reconstructs both paths for an unfamiliar rack; and explains why PUE or campus MW alone cannot prove sustainable compute capacity. Reviewed on 2026-11-24 through 700 W H100 operation, tens-of-megawatts job swings and 1–2% diurnal throughput variation; no automatic mastery upgrade."

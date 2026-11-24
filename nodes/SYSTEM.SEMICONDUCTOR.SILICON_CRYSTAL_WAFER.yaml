@@ -35,7 +35,7 @@ cases:
   - "GlobalWafers Sherman 300mm wafer facility, 2022-2026"
 
 first_seen: "2026-11-03"
-last_reviewed: "2026-11-23"
+last_reviewed: "2026-11-24"
 next_review: "2026-11-10"
 sources:
   - "https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir4414.pdf"
@@ -43,4 +43,4 @@ sources:
   - "https://www.gw-semi.com/technology/"
   - "https://www.commerce.gov/news/press-releases/2024/12/biden-harris-administration-announces-chips-incentives-awards"
   - "https://investors.micron.com/news/press-release/2026/Micron-Announces-Up-to-3-Billion-Strategic-Investment-to-Strengthen-U-S--Semiconductor-Ecosystem/default.aspx"
-notes: "L1 candidate pending a teach-back that distinguishes resource abundance from product-specific qualified capacity and explains purity, single crystallinity, orientation, diameter, surface, defectivity and customer validation without collapsing them into one quality score. Reviewed on 2026-11-23 as the first qualified physical handoff in the semiconductor-to-cloud chain; no automatic mastery upgrade."
+notes: "L1 candidate pending a teach-back that distinguishes resource abundance from product-specific qualified capacity and explains purity, single crystallinity, orientation, diameter, surface, defectivity and customer validation without collapsing them into one quality score. Reviewed on 2026-11-24 as the first upstream physical prerequisite for future AI capacity, not the proven live-job constraint; no automatic mastery upgrade."
