@@ -188,6 +188,7 @@ function App() {
             <TimerReset size={17} />
             <span>今日学习</span>
           </div>
+          <p className="eyebrow">{todayBrief.date}</p>
           <p className="today-title">{todayBrief.title}</p>
           <p className="today-question">{todayBrief.question}</p>
           <div className="study-steps">

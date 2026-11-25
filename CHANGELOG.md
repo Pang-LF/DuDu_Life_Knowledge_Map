@@ -11,7 +11,7 @@
 - 记录 Dodge 重建版本的 395M / 198B / 380 GB 与 365M / 156B / 305 GB compressed JSON；只在同口径内计算文档约减少 7.6%、Token 约减少 21.2%，不与 T5 或当前 TFDS 806.87 GiB 混算
 - 记录 100,000 篇排除文档审计、31% 主要性相关集群、代理方言移除率与 Benchmark Exact-match Contamination，并保留代理、选择和因果边界
 - 新增 `BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE` 与 Artificial Intelligence Industry Apprenticeship，追踪创作者、档案、许可方、Dataset Builder、Annotator、Infrastructure、Model Lab 与公众之间的内容、元数据、钱、权利、删除责任与风险
-- 更新 Compute Bridge、Selection Bias、Source Evaluation、Question Bank、CURRENT_STATE 与网站数据；旧节点只记录 review / transfer
+- 更新 Compute Bridge、Selection Bias、Source Evaluation、Question Bank、CURRENT_STATE 与网站数据，并让网站“今日学习”卡片直接显示课程日期；旧节点只记录 review / transfer
 - 下一课锁定 Training Foundation：Prediction、Loss、Gradient 与 Parameter Update
 
 ## 2026-11-24
