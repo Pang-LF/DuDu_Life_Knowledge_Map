@@ -73,6 +73,9 @@ const nodePoints: NodePoint[] = [
   { id: 'BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION', x: 1145, y: 520, labelSide: 'right', mapLabel: 'Compute Profit Pool（计算利润池）', mapId: 'BUS.COMPUTE.PROFIT_POOL' },
   { id: 'SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', x: 1095, y: 675, labelSide: 'left', mapLabel: 'AI Infrastructure Bridge（AI 基础设施桥接）', mapId: 'SYS.AI.INFRA.BRIDGE' },
   { id: 'BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION', x: 1090, y: 555, labelSide: 'right', mapLabel: 'AI Workload Value-chain（AI 工作负载价值链）', mapId: 'BUS.AI.WORKLOAD.VALUE' },
+  { id: 'FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION', x: 585, y: 650, labelSide: 'left', mapLabel: 'Qualified Training Data（合格训练数据）', mapId: 'FRONTIER.AI.DATA' },
+  { id: 'BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE', x: 505, y: 635, labelSide: 'right', mapLabel: 'Data Supply & Governance（数据供应治理）', mapId: 'BUS.AI.DATA.GOV' },
+  { id: 'CASE.GOOGLE.C4.WEB_CORPUS.CURATION.2019_2022', x: 650, y: 645, labelSide: 'right', mapLabel: 'C4 Web Corpus（C4 网页语料）', mapId: 'CASE.C4.CURATION' },
   { id: 'SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER', x: 1000, y: 535, labelSide: 'left', mapLabel: 'Silicon & Wafer（硅与晶圆）', mapId: 'SYSTEM.SEMICONDUCTOR.WAFER' },
   { id: 'BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS', x: 250, y: 650, labelSide: 'right', mapLabel: 'Wafer Economics（晶圆经济学）', mapId: 'BUS.SEMICONDUCTOR.WAFER_ECON' },
   { id: 'SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION', x: 955, y: 485, labelSide: 'left', mapLabel: 'Fabrication（芯片制造）', mapId: 'SYSTEM.SEMICONDUCTOR.FABRICATION' },
@@ -148,8 +151,8 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE')
-  const [selectedDomainId, setSelectedDomainId] = useState('SYSTEM')
+  const [selectedNodeId, setSelectedNodeId] = useState('FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION')
+  const [selectedDomainId, setSelectedDomainId] = useState('FRONTIER')
 
   const selectedNode = useMemo(
     () => atlasNodes.find((node) => node.id === selectedNodeId) ?? atlasNodes[0],
@@ -196,11 +199,11 @@ function App() {
         <div className="dock-section">
           <div className="dock-title">
             <GitBranch size={17} />
-            <span>11 月主线</span>
+            <span>AI 学习主线</span>
           </div>
           <ol className="route-list">
             {monthlyTrack.map((item, index) => (
-              <li className={index === 3 ? 'current' : ''} key={item}>
+              <li className={index === 0 ? 'current' : ''} key={item}>
                 <span>{index + 1}</span>
                 {item}
               </li>

@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-11-25
+
+- 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a2137c350cf512b`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签
+- 从 2026-11-24 AI Infrastructure Bridge 的真实进度进入 Artificial Intelligence Module；最近 7 个实际日志为 11 月 17、18、19、21、22、23 与 24 日，没有新断点，保留 11 月 20 日历史空缺
+- 新增 `FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION`，先定义 AI System、Training Workload 与 Data 的父子关系，再把合格训练数据定义为通过来源、权利、提取、完整性、相关性、去重、安全、代表性、切分、污染与可重建性门槛的版本化记录
+- 跟随一张诊所网页从 Common Crawl capture 经过 Provenance、Rights、Extraction、Filtering、Deduplication、Label Status、Split、Contamination Check 与 Manifest，区分 Crawled、Cleaned、Labeled、Licensed 与 Qualified
+- 新增 `CASE.GOOGLE.C4.WEB_CORPUS.CURATION.2019_2022`；按七段叙事记录 2019 年 4 月 snapshot、句式与长度规则、Blocklist、Language Probability ≥ 0.99、三句片段去重和公开发布
+- 解释 T5 同一实验中的 745 GB filtered C4 与 6.1 TB unfiltered variant；记录 filtered C4 在表列七项指标均更高，同时明确实验不能识别单条过滤规则或证明 universally better
+- 记录 Dodge 重建版本的 395M / 198B / 380 GB 与 365M / 156B / 305 GB compressed JSON；只在同口径内计算文档约减少 7.6%、Token 约减少 21.2%，不与 T5 或当前 TFDS 806.87 GiB 混算
+- 记录 100,000 篇排除文档审计、31% 主要性相关集群、代理方言移除率与 Benchmark Exact-match Contamination，并保留代理、选择和因果边界
+- 新增 `BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE` 与 Artificial Intelligence Industry Apprenticeship，追踪创作者、档案、许可方、Dataset Builder、Annotator、Infrastructure、Model Lab 与公众之间的内容、元数据、钱、权利、删除责任与风险
+- 更新 Compute Bridge、Selection Bias、Source Evaluation、Question Bank、CURRENT_STATE 与网站数据；旧节点只记录 review / transfer
+- 下一课锁定 Training Foundation：Prediction、Loss、Gradient 与 Parameter Update
+
 ## 2026-11-24
 
 - 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a20d443d5298442`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签

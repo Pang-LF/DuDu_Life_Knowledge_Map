@@ -1,0 +1,43 @@
+id: "FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION"
+name_en: "Qualified Training Data Foundation"
+name_zh: "合格训练数据基础"
+domain: "FRONTIER"
+module: "Artificial Intelligence（人工智能）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Qualified training data is a versioned set of records admitted to influence model parameters for a named objective after explicit provenance, rights, extraction, integrity, relevance, deduplication, safety, representation, split, contamination and reproducibility gates."
+why: "A crawled or stored object is not automatically true, lawful, representative, parseable or useful; every curation rule reduces some failure modes while changing which sources and expressions receive training weight."
+mechanism: "Follow one raw record from capture and stable identity through rights review, task-specific extraction, classification, filtering, deduplication or weighting, label-status declaration, train-validation-test separation, contamination checks and a versioned manifest that supports audit, deletion and rebuild."
+example: "Google's C4 pipeline transformed an April 2019 Common Crawl snapshot with sentence, length, blocklist, code, duplicate-span and English-probability rules; filtered C4 was much smaller and performed better than the unfiltered variant on the T5 paper's listed tasks, while later audits found benchmark overlap and disproportionate exclusions."
+my_take: "I should treat every phrase such as high-quality data as an unverified claim until the objective, qualification gates, removed population, version, error audit and evidence boundary are explicit."
+
+prerequisites:
+  - "SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE"
+  - "META.SYSTEMS.SYSTEM"
+  - "META.SOURCE_EVALUATION.FOUNDATION"
+connections:
+  - "BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE"
+  - "SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE"
+  - "SYSTEM.COMPUTE.SEMICONDUCTOR_TO_CLOUD_VALUE_CHAIN_INTEGRATION"
+  - "META.SYSTEMS.BOTTLENECK"
+  - "META.SYSTEMS.INTERDEPENDENCE"
+  - "META.SOURCE_EVALUATION.FOUNDATION"
+  - "META.CAUSAL.SELECTION_BIAS"
+  - "CASE.GOOGLE.C4.WEB_CORPUS.CURATION.2019_2022"
+questions:
+  - "Starting from one raw record, which provenance, rights, extraction, filtering, deduplication, label-status, split and manifest gates make it qualified for a named training objective, and what does each gate remove or distort?"
+cases:
+  - "Google C4 web-corpus curation and audit, 2019-2022"
+
+first_seen: "2026-11-25"
+last_reviewed: "2026-11-25"
+next_review: "2026-12-02"
+sources:
+  - "https://www.jmlr.org/papers/volume21/20-074/20-074.pdf"
+  - "https://aclanthology.org/2021.emnlp-main.98.pdf"
+  - "https://arxiv.org/abs/2107.06499"
+  - "https://www.tensorflow.org/datasets/catalog/c4"
+  - "https://commoncrawl.org/get-started"
+notes: "L1 candidate pending a Teach-back that reconstructs one unfamiliar record from capture to accepted training split, distinguishes access, license and task suitability, names one risk reduced and one blind spot created by a rule, and keeps C4 size, bias and contamination claims within their measurement boundaries."

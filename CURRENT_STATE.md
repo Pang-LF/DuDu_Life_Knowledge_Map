@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-24
+Last updated: 2026-11-25
 
 ## Current Phase（当前阶段）
 
@@ -10,16 +10,16 @@ Last updated: 2026-11-24
 
 ## Current Month（当前月份）
 
-**November 2026 — SEMICONDUCTOR + COMPUTE（半导体 + 计算）**
+**November 2026 — ARTIFICIAL INTELLIGENCE TRANSITION（人工智能过渡）**
 
 主线：
 
-1. Silicon & Wafer（硅与晶圆）
-2. Chip Design & Fabrication（芯片设计与制造）
-3. Packaging, Memory & Accelerators（封装、存储与加速器）
-4. Server, Data Center & Cloud（服务器、数据中心与云）
+1. Data（数据）
+2. Training（训练）
+3. Foundation Model（基础模型）
+4. Inference, Application & Agent（推理、应用与智能体）
 
-9 月 Thinking Toolkit（思维工具箱）与 10 月 Energy（能源）第一轮骨架已经完成。11 月从完整价值链开始建立 Semiconductor + Compute（半导体 + 计算）骨架；旧节点再次出现只记录 review / transfer，不自动升级 mastery。
+9 月 Thinking Toolkit、10 月 Energy 与 11 月 Semiconductor + Compute 第一轮骨架已经完成。11 月 25 日依照真实 Next Immediate Focus 提前打开后续 Artificial Intelligence 学习序列；先从 Data 进入，再依必要前置顺序进入 Training、Foundation Model、Inference、Application、Agent 与 Workflow。旧节点再次出现只记录 review / transfer，不自动升级 mastery。
 
 ## Daily Lesson Model（每日课程模型）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-24
 
 ## Next Immediate Focus（下一步）
 
-2026-11-25：进入 Artificial Intelligence Module Orientation & Data Foundation（人工智能模块定位与数据基础），先定义 AI System、Training Workload 与 Qualified Training Data 的父子关系，再跟随一条原始记录经过来源、权利、清洗、去重、过滤、标注、切分与数据管道成为可验收训练输入；不提前把 Foundation Model、Inference 或 Agent 作为平行主课。
+2026-11-26：进入 Training Foundation（训练基础），跟随一个 Qualified Training Example 经过 Prediction、Loss、Gradient 与 Parameter Update，解释数据中的统计结构怎样改变模型参数；先定义训练机制，再进入 Foundation Model、Inference 或 Agent。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-24
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-25：从 11 月 24 日 AI Infrastructure Bridge 的真实进度直接进入 Artificial Intelligence Module Orientation & Qualified Training Data Foundation；最近 7 个实际日志为 11 月 17、18、19、21、22、23 与 24 日，今天与上一堂之间没有新断点，历史 11 月 20 日空缺继续保留且没有补造。课程先把 AI System 定义为 Data、Training Objective、Algorithm、Compute、Evaluation、Deployment、Human Oversight 与 Feedback 的社会—技术系统，再把 Training Workload 定位为读取训练输入、依据目标计算误差并更新参数的任务；今天只正式点亮 Data，不提前教授训练机制。主课跟随一张诊所网页从 Common Crawl capture 经过稳定身份、Provenance、Rights Review、Extraction、Classification / Filtering、Deduplication、Label Status、Train / Validation / Test Split、Contamination Check 与 Versioned Manifest，重建 Qualified Training Data 为针对明确目标通过验收、可追溯、可审计、可删除并可重建的记录。C4 主案例按七段叙事展开：T5 团队从 2019 年 4 月 Common Crawl snapshot 使用终止标点、最少五句 / 每行三词、Blocklist、Javascript、`lorem ipsum`、左花括号、三句片段去重与 English Probability ≥ 0.99 等规则建立语料。T5 同一实验表中 filtered C4 为 745 GB、unfiltered variant 为 6.1 TB，前者在表列七项指标均更高；这支持特定模型与任务下的策展价值，不识别单条规则的独立因果贡献，也不证明过滤越多越好。Dodge 重建的 C4.EN.NOBLOCKLIST 为 395M documents / 198B SpaCy tokens / 380 GB compressed JSON，C4.EN 为 365M / 156B / 305 GB；两者之间文档减少约 7.6%、Token 减少约 21.2%，但这些口径不能与 T5 论文或当前 TFDS 806.87 GiB 直接合并。100,000 篇排除文档审计中，主要为性相关内容的集群只占约 31%；代理方言模型估计不均匀移除，但不是真实作者身份，也不能单独证明下游模型伤害。行业学徒制把免费 Archive Access 与 License、Suitability、Curation Cost 分开，追踪创作者 / 权利人、Crawler / Archive、Licensor、Dataset Builder、Annotator、Cloud / Infrastructure、Model Lab 与 Public 的钱流、控制权、删除责任和剩余风险。`FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION` 与 `BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE` 为 L1 candidate；Compute Bridge、Source Evaluation 与 Selection Bias 只记录 review / transfer。下一课进入 Training Foundation。
 
 2026-11-24：从 11 月 23 日 Semiconductor-to-Cloud Value-chain Integration 的真实进度直接进入 November Integration & AI Infrastructure Bridge；最近 7 个实际日志为 11 月 16、17、18、19、21、22 与 23 日，今天与上一堂之间没有新断点，历史 11 月 20 日空缺继续保留且没有补造。课程先把 AI Workload 定义为在数据、模型、运行时、正确性与时间边界下进行模型状态转换，再把一个被验证并保留下来的训练步定义为基础设施真正应交付的最小单位；Provisioned、Runnable、Active、Useful 与 Preserved Capacity 分开，GPU-hours、MFU 与 Effective Training Time 不互换。Meta Llama 3.1 405B 案例按七段叙事展开：405B 参数、15.6T Training Tokens、约 `3.8 × 10^25` FLOPs，最多 16,384 张 80 GB HBM3 H100；BF16 Weights-only 约 810 GB，迫使模型状态跨设备切分。八卡 Grand Teton 对应最大配置 2,048 台名义服务器与 1.31 PB Aggregate HBM，但内存不是平坦共享池；16,384 × 700 W 约 11.47 MW 只是 GPU-only Nameplate TDP，不是设施总负荷或平均能耗。54-day Reliability Snapshot 报告 466 次中断，其中 47 次 Planned、419 次 Unexpected，约为整个 Job 每 3.1 小时一次意外中断，但不能解释为单部件 MTBF；Source Table 的 148 次 Faulty GPU 与打印 30.1% 存在算术不一致，课程保留 Count 并记录边界。Meta 披露 38–43% BF16 MFU 与超过 90% Effective Training Time，两者描述不同损失边界，不相乘成公开 Goodput；Model Card 的 30.84M H100 GPU-hours 是资源使用量，不是训练总天数、采购价格或完整账单，也不能与 54 天窗口拼接。Industry Apprenticeship 将 Frontier Training Budget 重建为对 Preserved Model Progress 以及 Idle、Spare、Restart、Checkpoint、Utilization、Obsolescence 与 Qualification Risk 的购买和分配，拒绝虚构 Wafer、Foundry、Packaging、HBM、System、Network、Facility 与 Energy 的逐美元占比。`SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE` 与 `BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION` 为 L1 candidate；11 月旧节点仅记录 review / transfer。下一课进入 Artificial Intelligence Module Orientation & Data Foundation。
 

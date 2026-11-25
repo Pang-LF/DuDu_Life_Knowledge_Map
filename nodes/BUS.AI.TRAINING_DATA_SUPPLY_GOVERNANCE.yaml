@@ -1,0 +1,39 @@
+id: "BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE"
+name_en: "Training Data Supply and Governance"
+name_zh: "训练数据供应与治理"
+domain: "BUSINESS"
+module: "Industry Atlas — Artificial Intelligence"
+importance: "Applied"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Training-data supply and governance maps how creators, platforms, archives, licensors, dataset builders, annotators, infrastructure providers, model labs and the public allocate access, rights, curation cost, control, deletion duties and residual risk."
+why: "Free access to web bytes does not pay for provenance, licensing review, extraction, filtering, deduplication, annotation, contamination testing, auditing, deletion or corpus rebuild, and it does not establish uniform rights or quality."
+mechanism: "Fix the training purpose and accepted record, trace content, metadata, money, rights and risk across every participant, distinguish access from license and suitability, then identify which qualified inputs or governance interfaces remain difficult to substitute."
+example: "Common Crawl makes its archive freely accessible with AWS sponsorship, while a model lab still pays engineering, compute, review and governance costs to transform web records into a versioned corpus such as C4; creators and the public can retain rights or risks that free archive access does not resolve."
+my_take: "I should ask who controls the original record, the usage permission, the curation rule, the model-training decision and the deletion path before treating data volume as an owned asset or a zero-cost input."
+
+prerequisites:
+  - "FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION"
+  - "BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION"
+connections:
+  - "FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION"
+  - "BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION"
+  - "BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION"
+  - "META.CAUSAL.SELECTION_BIAS"
+  - "META.SOURCE_EVALUATION.FOUNDATION"
+  - "CASE.GOOGLE.C4.WEB_CORPUS.CURATION.2019_2022"
+questions:
+  - "Why is free web access not free qualified training data, who pays for curation and governance, and which public evidence is insufficient to establish rights, representativeness or causal model effects?"
+cases:
+  - "Google C4 web-corpus curation and audit, 2019-2022"
+
+first_seen: "2026-11-25"
+last_reviewed: "2026-11-25"
+next_review: "2026-12-02"
+sources:
+  - "https://commoncrawl.org/get-started"
+  - "https://www.jmlr.org/papers/volume21/20-074/20-074.pdf"
+  - "https://aclanthology.org/2021.emnlp-main.98.pdf"
+  - "https://www.tensorflow.org/datasets/catalog/c4"
+notes: "Industry-application L1 candidate pending a Teach-back that maps content, metadata, money, rights and risk among creators, archives, licensors, dataset builders, annotators, infrastructure providers, model labs and the public without treating public access as universal permission or inventing confidential prices."

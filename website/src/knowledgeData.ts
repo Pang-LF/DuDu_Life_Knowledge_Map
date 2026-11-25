@@ -80,7 +80,8 @@ export const domains: Domain[] = [
     id: 'FRONTIER',
     nameEn: 'FRONTIER',
     nameZh: '科技前沿',
-    progress: 0,
+    progress: 10,
+    active: true,
     modules: ['Artificial Intelligence（人工智能）', 'AI Infrastructure（人工智能基础设施）', 'Robotics（机器人）'],
   },
   {
@@ -1102,6 +1103,22 @@ export const nodes: GraphNode[] = [
     connections: ['SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', 'BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION', 'BUS.SEMICONDUCTOR.ACCELERATOR_PLATFORM_ECONOMICS', 'BUS.SEMICONDUCTOR.HBM_SUPPLY_ECONOMICS', 'BUS.SEMICONDUCTOR.ADVANCED_PACKAGING_ECONOMICS', 'BUS.SEMICONDUCTOR.FAB_ECONOMICS', 'BUS.SEMICONDUCTOR.SERVER_SYSTEM_INTEGRATION_ECONOMICS', 'BUS.SEMICONDUCTOR.CLUSTER_NETWORK_ECONOMICS', 'BUS.SEMICONDUCTOR.DATA_CENTER_INFRASTRUCTURE_ECONOMICS', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE', 'CASE.META.LLAMA3_405B.TRAINING_INFRASTRUCTURE.2024'],
   },
   {
+    id: 'FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION',
+    label: 'Qualified Training Data（合格训练数据）',
+    domain: 'FRONTIER',
+    mastery: 'L1 candidate',
+    summary: 'A training record is qualified only for a named objective after explicit provenance, rights, extraction, relevance, deduplication, representation, split, contamination and reproducibility gates; every gate reduces some risks while reshaping what the model sees.',
+    connections: ['BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE', 'SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', 'SYSTEM.COMPUTE.SEMICONDUCTOR_TO_CLOUD_VALUE_CHAIN_INTEGRATION', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SOURCE_EVALUATION.FOUNDATION', 'META.CAUSAL.SELECTION_BIAS', 'CASE.GOOGLE.C4.WEB_CORPUS.CURATION.2019_2022'],
+  },
+  {
+    id: 'BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE',
+    label: 'Training Data Supply & Governance（训练数据供应与治理）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Free archive access does not pay for provenance, rights review, extraction, filtering, deduplication, annotation, contamination testing, auditing, deletion or rebuild; creators, archives, licensors, builders, labs and the public retain different control and risk.',
+    connections: ['FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION', 'BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION', 'BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION', 'META.CAUSAL.SELECTION_BIAS', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.GOOGLE.C4.WEB_CORPUS.CURATION.2019_2022'],
+  },
+  {
     id: 'SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER',
     label: 'Silicon, Crystal & Qualified Wafer（硅、晶体与合格晶圆）',
     domain: 'SYSTEM',
@@ -1430,6 +1447,14 @@ export const nodes: GraphNode[] = [
     connections: ['SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', 'BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION', 'SYSTEM.SEMICONDUCTOR.HBM_TSV_MEMORY_BANDWIDTH', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.COMPUTE.SERVER_NODE_ARCHITECTURE_INTERCONNECT', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'SYSTEM.COMPUTE.DATA_CENTER_POWER_COOLING_RACK_CAPACITY', 'META.SYSTEMS.BOTTLENECK', 'FRONTIER.AI.INFRASTRUCTURE'],
   },
   {
+    id: 'CASE.GOOGLE.C4.WEB_CORPUS.CURATION.2019_2022',
+    label: 'Google C4 Curation 2019–22（C4 网页语料策展）',
+    domain: 'FRONTIER',
+    mastery: 'Case studied',
+    summary: 'C4 transformed an April 2019 Common Crawl snapshot through scalable language, sentence, content and duplicate rules; it improved listed T5 outcomes over an unfiltered variant while later audits exposed representation, contamination and documentation limits.',
+    connections: ['FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION', 'BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE', 'META.CAUSAL.SELECTION_BIAS', 'META.SOURCE_EVALUATION.FOUNDATION', 'SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE'],
+  },
+  {
     id: 'CASE.AWS.S3.STRONG_CONSISTENCY_TRANSITION.2006_2020',
     label: 'Amazon S3 Strong-consistency Transition 2006–20（S3 强一致性转变）',
     domain: 'SYSTEM',
@@ -1704,18 +1729,18 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-24',
-  title: 'November Integration & AI Infrastructure Bridge（十一月整合与人工智能基础设施桥接）',
-  question: '为什么 16,384 张在线 GPU 不等于 16,384 份训练能力，当前第一个绑定约束怎样被边际证据识别？',
-  reading: '45-60 min：跟随一个被验证并保留下来的 Llama 3.1 405B 训练步，逆向穿过模型、运行时、HBM、GPU、服务器、网络、存储、电力冷却与上游制造。',
-  discussion: '20-30 min：区分 Provisioned、Runnable、Active、Useful 与 Preserved Capacity，并拆解 GPU-hours 不能代表总训练账单的口径。',
-  next: '2026-11-25：Artificial Intelligence Module Orientation & Data Foundation（人工智能模块定位与数据基础）。',
+  date: '2026-11-25',
+  title: 'Qualified Training Data（合格训练数据）',
+  question: '一张被抓取的网页什么时候才有资格影响模型参数，每一道清洗规则又重写了什么？',
+  reading: '45-60 min：跟随一张诊所网页穿过来源、权利、提取、过滤、去重、标签状态、切分、污染检查与版本清单，并用 C4 重建规模、质量与代表性的同一条因果线。',
+  discussion: '20-30 min：解释 745 GB / 6.1 TB、305 / 380 GB 与 806.87 GiB 的不同统计边界，并拆开免费访问、许可、适用性与资格化成本。',
+  next: '2026-11-26：Training Foundation（训练基础）— Prediction、Loss、Gradient 与 Parameter Update。',
 }
 
 export const monthlyTrack = [
-  'Silicon & Wafer（硅与晶圆）',
-  'Chip Design & Fabrication（芯片设计与制造）',
-  'Packaging, Memory & Accelerators（封装、存储与加速器）',
-  'Server, Data Center & Cloud（服务器、数据中心与云）',
-  'AI Infrastructure Integration（人工智能基础设施整合）',
+  'Data（数据）',
+  'Training（训练）',
+  'Foundation Model（基础模型）',
+  'Inference & Application（推理与应用）',
+  'Agent, Workflow & Economy（智能体、工作流与经济）',
 ]
