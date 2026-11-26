@@ -18,6 +18,7 @@ prerequisites:
   - "META.SYSTEMS.SYSTEM"
   - "META.SOURCE_EVALUATION.FOUNDATION"
 connections:
+  - "FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE"
   - "BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE"
   - "SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE"
   - "SYSTEM.COMPUTE.SEMICONDUCTOR_TO_CLOUD_VALUE_CHAIN_INTEGRATION"
@@ -32,7 +33,7 @@ cases:
   - "Google C4 web-corpus curation and audit, 2019-2022"
 
 first_seen: "2026-11-25"
-last_reviewed: "2026-11-25"
+last_reviewed: "2026-11-26"
 next_review: "2026-12-02"
 sources:
   - "https://www.jmlr.org/papers/volume21/20-074/20-074.pdf"
@@ -40,4 +41,4 @@ sources:
   - "https://arxiv.org/abs/2107.06499"
   - "https://www.tensorflow.org/datasets/catalog/c4"
   - "https://commoncrawl.org/get-started"
-notes: "L1 candidate pending a Teach-back that reconstructs one unfamiliar record from capture to accepted training split, distinguishes access, license and task suitability, names one risk reduced and one blind spot created by a rule, and keeps C4 size, bias and contamination claims within their measurement boundaries."
+notes: "L1 candidate pending a Teach-back that reconstructs one unfamiliar record from capture to accepted training split, distinguishes access, license and task suitability, names one risk reduced and one blind spot created by a rule, and keeps C4 size, bias and contamination claims within their measurement boundaries. Reviewed on 2026-11-26 by following one accepted example into prediction, loss and parameter update and showing that a wrong label can be optimized faithfully; no automatic mastery upgrade."

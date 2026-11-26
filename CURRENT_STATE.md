@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-25
+Last updated: 2026-11-26
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-25
 
 ## Next Immediate Focus（下一步）
 
-2026-11-26：进入 Training Foundation（训练基础），跟随一个 Qualified Training Example 经过 Prediction、Loss、Gradient 与 Parameter Update，解释数据中的统计结构怎样改变模型参数；先定义训练机制，再进入 Foundation Model、Inference 或 Agent。
+2026-11-27：进入 Foundation Model Foundation（基础模型基础），解释为什么一次大规模预训练形成的共享参数状态能够成为多个任务的共同起点；先区分 Pretraining、Transfer 与 Adaptation，再进入 Inference、Application 或 Agent。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-25
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-26：从 11 月 25 日 Qualified Training Data 真实进度直接进入 Training Foundation；最近 7 个实际日志为 11 月 18、19、21、22、23、24 与 25 日，今天与上一堂之间没有新断点，历史 11 月 20 日空缺继续保留且没有补造。课程先把 Training 定义为固定模型结构、合格数据、目标函数与更新规则后反复调整参数的过程，再把 Training Step 拆成 Prediction、Loss、Gradient、Backpropagation、Optimizer 与 Parameter Update；Foundation Model、Inference 与 Agent 未被提前点亮。透明单参数模型以 `x = 2`、`y = 1`、`w = 0` 展示 Prediction 0、Loss 0.5、Gradient -2、学习率 0.1 更新到 `w = 0.2` 后 Loss 0.18；学习率 1 会把 Loss 推高到 4.5，说明局部方向不保证任意步长成功。AT&T Bell Labs 1989 手写邮编案例按七段叙事展开：网络有 4,635 Units、98,442 Connections 与 2,578 Independent Parameters，Weight Sharing 使连接数约为独立参数 38 倍；训练集 9,840、测试集 2,707，30 Passes 后训练错误率 1.1%、测试错误率 3.4%。拒绝完整测试集 5.7% 后剩余样本错误率为 1%，但阈值使用测试表现选择，不能当作完全独立评价；作者把约一半替换错误归于切分、另四分之一归于错误目标类别，这些是作者诊断，不是独立审计。Industry Apprenticeship 把 Training Run、Checkpoint、Hyperparameter 与 Validated Model Progress 分开，用 10 次 × 8 GPU × 12 小时 = 960 GPU-hours、两个合格 Checkpoint = 每个 480 GPU-hours 的透明假设模型说明资源分母与合格产出分母不同，不是公司账单。`FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE` 与 `BUS.AI.MODEL_TRAINING_ECONOMICS` 为 L1 candidate；Qualified Training Data、AI Infrastructure 与 prior Compute nodes 只记录 review / transfer。下一课进入 Foundation Model Foundation。
 
 2026-11-25：从 11 月 24 日 AI Infrastructure Bridge 的真实进度直接进入 Artificial Intelligence Module Orientation & Qualified Training Data Foundation；最近 7 个实际日志为 11 月 17、18、19、21、22、23 与 24 日，今天与上一堂之间没有新断点，历史 11 月 20 日空缺继续保留且没有补造。课程先把 AI System 定义为 Data、Training Objective、Algorithm、Compute、Evaluation、Deployment、Human Oversight 与 Feedback 的社会—技术系统，再把 Training Workload 定位为读取训练输入、依据目标计算误差并更新参数的任务；今天只正式点亮 Data，不提前教授训练机制。主课跟随一张诊所网页从 Common Crawl capture 经过稳定身份、Provenance、Rights Review、Extraction、Classification / Filtering、Deduplication、Label Status、Train / Validation / Test Split、Contamination Check 与 Versioned Manifest，重建 Qualified Training Data 为针对明确目标通过验收、可追溯、可审计、可删除并可重建的记录。C4 主案例按七段叙事展开：T5 团队从 2019 年 4 月 Common Crawl snapshot 使用终止标点、最少五句 / 每行三词、Blocklist、Javascript、`lorem ipsum`、左花括号、三句片段去重与 English Probability ≥ 0.99 等规则建立语料。T5 同一实验表中 filtered C4 为 745 GB、unfiltered variant 为 6.1 TB，前者在表列七项指标均更高；这支持特定模型与任务下的策展价值，不识别单条规则的独立因果贡献，也不证明过滤越多越好。Dodge 重建的 C4.EN.NOBLOCKLIST 为 395M documents / 198B SpaCy tokens / 380 GB compressed JSON，C4.EN 为 365M / 156B / 305 GB；两者之间文档减少约 7.6%、Token 减少约 21.2%，但这些口径不能与 T5 论文或当前 TFDS 806.87 GiB 直接合并。100,000 篇排除文档审计中，主要为性相关内容的集群只占约 31%；代理方言模型估计不均匀移除，但不是真实作者身份，也不能单独证明下游模型伤害。行业学徒制把免费 Archive Access 与 License、Suitability、Curation Cost 分开，追踪创作者 / 权利人、Crawler / Archive、Licensor、Dataset Builder、Annotator、Cloud / Infrastructure、Model Lab 与 Public 的钱流、控制权、删除责任和剩余风险。`FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION` 与 `BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE` 为 L1 candidate；Compute Bridge、Source Evaluation 与 Selection Bias 只记录 review / transfer。下一课进入 Training Foundation。
 

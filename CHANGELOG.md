@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 2026-11-26
+
+- 已将易读 HTML 课程发送至当前账户 Gmail；会话标识为 `KtbxLxGgKMtSfcpJzDlDFTTtXtffXNbQBq`，并确认邮件同时位于 `SENT` 与 `INBOX`
+- 从 2026-11-25 Qualified Training Data 的真实进度直接进入 Training Foundation；最近 7 个实际日志为 11 月 18、19、21、22、23、24 与 25 日，没有新断点，保留 11 月 20 日历史空缺
+- 新增 `FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE`，把一次 Training Step 拆成 Prediction、Loss、Gradient、Backpropagation、Optimizer 与 Parameter Update
+- 用 `x = 2`、`y = 1`、`w = 0` 的透明模型展示学习率 0.1 把 Loss 从 0.5 降到 0.18，而学习率 1 会 Overshoot 到 4.5
+- 新增 `CASE.ATT_BELL_LABS.ZIPCODE.BACKPROP.1989`；按七段叙事记录真实邮编、Weight Sharing、30 Training Passes、拒识策略与 DSP 部署
+- 记录 4,635 Units、98,442 Connections 与 2,578 Independent Parameters，并用约 38.2× 说明共享连接与可训练参数的区别
+- 区分 9,840 个训练样本 / 2,707 个测试样本、1.1% 训练错误率 / 3.4% 测试错误率，以及拒绝 5.7% 后剩余样本 1% 错误率的不同边界
+- 明确拒识阈值使用测试集表现选择，切分与标签错误占比为作者诊断，三天训练与 DSP 吞吐不能外推现代成本
+- 新增 `BUS.AI.MODEL_TRAINING_ECONOMICS`，把 Training Run、Checkpoint、Hyperparameter、GPU-hours 与 Validated Model Progress 分成不同经济对象
+- 用 10 次 × 8 GPU × 12 小时 = 960 GPU-hours、两个合格 Checkpoint = 每个 480 GPU-hours 的透明模型说明失败实验进入分母；数字不是公司账单
+- 更新 Qualified Training Data、Training Data Governance、AI Infrastructure Bridge、AI Workload Value Chain、行业日志、Question Bank、CURRENT_STATE 与网站数据；旧节点只记录 review / transfer
+- 下一课锁定 Foundation Model Foundation
+
 ## 2026-11-25
 
 - 已将易读 HTML 课程发送至当前账户 Gmail；消息 ID 为 `1a2137c350cf512b`，并确认 `UNREAD`、`SENT` 与 `INBOX` 标签

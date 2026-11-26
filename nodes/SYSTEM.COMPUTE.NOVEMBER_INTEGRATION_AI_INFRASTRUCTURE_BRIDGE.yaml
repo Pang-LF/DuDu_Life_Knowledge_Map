@@ -41,7 +41,7 @@ cases:
   - "Meta Llama 3.1 405B training infrastructure, 2024"
 
 first_seen: "2026-11-24"
-last_reviewed: "2026-11-25"
+last_reviewed: "2026-11-26"
 next_review: "2026-12-01"
 sources:
   - "https://arxiv.org/html/2407.21783"
@@ -49,4 +49,4 @@ sources:
   - "https://engineering.fb.com/2024/03/12/data-center-engineering/building-metas-genai-infrastructure/"
   - "https://engineering.fb.com/2024/06/12/data-infrastructure/training-large-language-models-at-scale-meta/"
   - "https://engineering.fb.com/wp-content/uploads/2024/08/sigcomm24-final246.pdf"
-notes: "L1 candidate pending a Teach-back that begins with one validated training step, distinguishes provisioned, runnable, active, useful and preserved capacity, identifies a state-specific binding constraint, and names a marginal intervention plus evidence that would move the constraint. Reviewed on 2026-11-25 by tracing the first upstream input qualification path and showing how data rejection, duplication or pipeline delay can prevent installed infrastructure from becoming useful progress; no automatic mastery upgrade."
+notes: "L1 candidate pending a Teach-back that begins with one validated training step, distinguishes provisioned, runnable, active, useful and preserved capacity, identifies a state-specific binding constraint, and names a marginal intervention plus evidence that would move the constraint. Reviewed on 2026-11-25 through upstream input qualification and on 2026-11-26 by separating numerical execution, lower training loss and held-out model progress; no automatic mastery upgrade."

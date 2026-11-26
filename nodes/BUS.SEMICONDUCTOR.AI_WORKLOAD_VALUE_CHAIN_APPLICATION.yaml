@@ -36,9 +36,9 @@ cases:
   - "Meta Llama 3.1 405B training infrastructure, 2024"
 
 first_seen: "2026-11-24"
-last_reviewed: "2026-11-24"
+last_reviewed: "2026-11-26"
 next_review: "2026-12-01"
 sources:
   - "https://arxiv.org/html/2407.21783"
   - "https://raw.githubusercontent.com/meta-llama/llama-models/main/models/llama3_1/MODEL_CARD.md"
-notes: "Industry-application L1 candidate pending a Teach-back that defines purchased useful output, maps payer and risk boundaries, distinguishes GPU-hours from price and total cost, and refuses unsupported supplier-dollar allocation."
+notes: "Industry-application L1 candidate pending a Teach-back that defines purchased useful output, maps payer and risk boundaries, distinguishes GPU-hours from price and total cost, and refuses unsupported supplier-dollar allocation. Reviewed on 2026-11-26 by separating billed compute use, completed runs, recoverable checkpoints and validated model progress; no automatic mastery upgrade."

@@ -1,0 +1,41 @@
+id: "FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE"
+name_en: "Training Foundation — Prediction, Loss, Gradient and Parameter Update"
+name_zh: "训练基础——预测、损失、梯度与参数更新"
+domain: "FRONTIER"
+module: "Artificial Intelligence（人工智能）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A training step applies the current parameterized model to a qualified example, measures the output against an explicit objective, computes the loss's local sensitivity to shared parameters, and lets an optimizer update those parameters; the update is a local optimization action rather than a stored example or proof of generalization."
+why: "Without separating prediction, loss, gradient, backpropagation, optimizer and evaluation, phrases such as the model learned hide which signal changed the parameters, what objective was optimized, and whether the change transferred beyond the training examples."
+mechanism: "Follow one example through a forward prediction, scalar loss, chain-rule gradient calculation, batch aggregation, learning-rate and optimizer update, then compare training behavior with a genuinely held-out evaluation while auditing label, data, numerical and objective failures."
+example: "AT&T Bell Labs trained a shared-weight handwritten ZIP-code network with 2,578 independent parameters controlling 98,442 connections; after 30 passes over 9,840 training examples it reported 1.1% training error versus 3.4% on 2,707 test examples, showing both reusable parameter learning and the boundary between fit and generalization."
+my_take: "I should never accept training succeeded from a falling loss alone; I should identify the target, gradient and update rule, then require an independent evaluation that matches the capability and deployment boundary I care about."
+
+prerequisites:
+  - "FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION"
+  - "SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE"
+  - "META.SYSTEMS.SYSTEM"
+connections:
+  - "FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION"
+  - "BUS.AI.MODEL_TRAINING_ECONOMICS"
+  - "SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE"
+  - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
+  - "SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION"
+  - "META.SYSTEMS.FEEDBACK_LOOP"
+  - "META.SYSTEMS.NONLINEARITY"
+  - "META.SOURCE_EVALUATION.FOUNDATION"
+  - "CASE.ATT_BELL_LABS.ZIPCODE.BACKPROP.1989"
+questions:
+  - "Starting from one qualified example, what does prediction, loss, gradient, backpropagation, optimizer and parameter update each contribute, and why does lower training loss not prove generalization?"
+cases:
+  - "AT&T Bell Labs handwritten ZIP-code training, 1989"
+
+first_seen: "2026-11-26"
+last_reviewed: "2026-11-26"
+next_review: "2026-12-03"
+sources:
+  - "https://proceedings.neurips.cc/paper_files/paper/1989/file/53c3bce66e43be4f209556518c2fcb54-Paper.pdf"
+  - "https://www.nature.com/articles/323533a0"
+notes: "L1 candidate pending a Teach-back that reconstructs a training step without saying merely learns from error, distinguishes gradient from update and backpropagation from training, and names why training loss, held-out generalization and deployment value require separate evidence."

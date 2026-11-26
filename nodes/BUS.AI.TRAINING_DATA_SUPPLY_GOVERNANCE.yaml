@@ -17,6 +17,7 @@ prerequisites:
   - "FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION"
   - "BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION"
 connections:
+  - "BUS.AI.MODEL_TRAINING_ECONOMICS"
   - "FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION"
   - "BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION"
   - "BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION"
@@ -29,11 +30,11 @@ cases:
   - "Google C4 web-corpus curation and audit, 2019-2022"
 
 first_seen: "2026-11-25"
-last_reviewed: "2026-11-25"
+last_reviewed: "2026-11-26"
 next_review: "2026-12-02"
 sources:
   - "https://commoncrawl.org/get-started"
   - "https://www.jmlr.org/papers/volume21/20-074/20-074.pdf"
   - "https://aclanthology.org/2021.emnlp-main.98.pdf"
   - "https://www.tensorflow.org/datasets/catalog/c4"
-notes: "Industry-application L1 candidate pending a Teach-back that maps content, metadata, money, rights and risk among creators, archives, licensors, dataset builders, annotators, infrastructure providers, model labs and the public without treating public access as universal permission or inventing confidential prices."
+notes: "Industry-application L1 candidate pending a Teach-back that maps content, metadata, money, rights and risk among creators, archives, licensors, dataset builders, annotators, infrastructure providers, model labs and the public without treating public access as universal permission or inventing confidential prices. Reviewed on 2026-11-26 by tracing how upstream label and segmentation defects become paid but harmful parameter updates; no automatic mastery upgrade."

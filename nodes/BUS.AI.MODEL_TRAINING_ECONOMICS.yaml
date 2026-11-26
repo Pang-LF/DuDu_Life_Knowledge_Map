@@ -1,0 +1,43 @@
+id: "BUS.AI.MODEL_TRAINING_ECONOMICS"
+name_en: "Model Training Economics"
+name_zh: "模型训练经济学"
+domain: "BUSINESS"
+module: "Industry Atlas — Artificial Intelligence"
+importance: "Applied"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Model training economics separates resource consumption such as GPU-hours from training runs, recoverable checkpoints, failed experiments and model states that pass predefined evaluation and service gates."
+why: "Infrastructure providers can correctly bill resource usage even when the data, objective, hyperparameters or resulting checkpoint fail to create accepted model progress, so compute use, scientific success and product value have different units and risk owners."
+mechanism: "Fix the training objective and acceptance gate, map data, labor, compute, storage, network, recovery and evaluation costs, count all attempted runs and checkpoints, then allocate technical, research and deployment failure risk to the parties that control or contractually absorb it."
+example: "Bell Labs spent data-processing, research and roughly three days of workstation training to create a reusable ZIP-code model, while a transparent modern illustration of ten 8-GPU 12-hour experiments produces 960 GPU-hours even if only two checkpoints pass evaluation; the illustration is not a company bill."
+my_take: "I should divide total experiment and qualification cost by accepted model progress rather than treating one GPU-hour, one training step or one falling loss as the purchased product."
+
+prerequisites:
+  - "FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE"
+  - "BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE"
+  - "BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION"
+connections:
+  - "FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE"
+  - "BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE"
+  - "BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION"
+  - "SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE"
+  - "BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.SOURCE_EVALUATION.FOUNDATION"
+  - "CASE.ATT_BELL_LABS.ZIPCODE.BACKPROP.1989"
+  - "CASE.META.LLAMA3_405B.TRAINING_INFRASTRUCTURE.2024"
+questions:
+  - "Why can a training buyer pay for GPU-hours without purchasing validated model progress, and who bears the cost of completed runs whose checkpoints fail evaluation?"
+cases:
+  - "AT&T Bell Labs handwritten ZIP-code training, 1989"
+  - "Meta Llama 3.1 405B training infrastructure, 2024 — review and transfer only"
+
+first_seen: "2026-11-26"
+last_reviewed: "2026-11-26"
+next_review: "2026-12-03"
+sources:
+  - "https://proceedings.neurips.cc/paper_files/paper/1989/file/53c3bce66e43be4f209556518c2fcb54-Paper.pdf"
+  - "https://arxiv.org/html/2407.21783"
+  - "https://raw.githubusercontent.com/meta-llama/llama-models/main/models/llama3_1/MODEL_CARD.md"
+notes: "Industry-application L1 candidate pending a Teach-back that separates GPU-hours, training runs, checkpoints and validated model progress, includes failed experiments in the denominator, and allocates research and product risk without inventing confidential prices."

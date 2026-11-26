@@ -76,6 +76,9 @@ const nodePoints: NodePoint[] = [
   { id: 'FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION', x: 585, y: 650, labelSide: 'left', mapLabel: 'Qualified Training Data（合格训练数据）', mapId: 'FRONTIER.AI.DATA' },
   { id: 'BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE', x: 505, y: 635, labelSide: 'right', mapLabel: 'Data Supply & Governance（数据供应治理）', mapId: 'BUS.AI.DATA.GOV' },
   { id: 'CASE.GOOGLE.C4.WEB_CORPUS.CURATION.2019_2022', x: 650, y: 645, labelSide: 'right', mapLabel: 'C4 Web Corpus（C4 网页语料）', mapId: 'CASE.C4.CURATION' },
+  { id: 'FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE', x: 565, y: 700, labelSide: 'left', mapLabel: 'Training Step（一次训练步）', mapId: 'FRONTIER.AI.TRAINING' },
+  { id: 'BUS.AI.MODEL_TRAINING_ECONOMICS', x: 455, y: 610, labelSide: 'right', mapLabel: 'Training Economics（训练经济学）', mapId: 'BUS.AI.TRAINING.ECON' },
+  { id: 'CASE.ATT_BELL_LABS.ZIPCODE.BACKPROP.1989', x: 650, y: 695, labelSide: 'right', mapLabel: 'ZIP-code Training（邮编训练）', mapId: 'CASE.ZIPCODE.BP' },
   { id: 'SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER', x: 1000, y: 535, labelSide: 'left', mapLabel: 'Silicon & Wafer（硅与晶圆）', mapId: 'SYSTEM.SEMICONDUCTOR.WAFER' },
   { id: 'BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS', x: 250, y: 650, labelSide: 'right', mapLabel: 'Wafer Economics（晶圆经济学）', mapId: 'BUS.SEMICONDUCTOR.WAFER_ECON' },
   { id: 'SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION', x: 955, y: 485, labelSide: 'left', mapLabel: 'Fabrication（芯片制造）', mapId: 'SYSTEM.SEMICONDUCTOR.FABRICATION' },
@@ -151,7 +154,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION')
+  const [selectedNodeId, setSelectedNodeId] = useState('FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE')
   const [selectedDomainId, setSelectedDomainId] = useState('FRONTIER')
 
   const selectedNode = useMemo(
@@ -204,7 +207,7 @@ function App() {
           </div>
           <ol className="route-list">
             {monthlyTrack.map((item, index) => (
-              <li className={index === 0 ? 'current' : ''} key={item}>
+              <li className={index === 1 ? 'current' : ''} key={item}>
                 <span>{index + 1}</span>
                 {item}
               </li>

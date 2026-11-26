@@ -80,7 +80,7 @@ export const domains: Domain[] = [
     id: 'FRONTIER',
     nameEn: 'FRONTIER',
     nameZh: '科技前沿',
-    progress: 10,
+    progress: 20,
     active: true,
     modules: ['Artificial Intelligence（人工智能）', 'AI Infrastructure（人工智能基础设施）', 'Robotics（机器人）'],
   },
@@ -1108,7 +1108,7 @@ export const nodes: GraphNode[] = [
     domain: 'FRONTIER',
     mastery: 'L1 candidate',
     summary: 'A training record is qualified only for a named objective after explicit provenance, rights, extraction, relevance, deduplication, representation, split, contamination and reproducibility gates; every gate reduces some risks while reshaping what the model sees.',
-    connections: ['BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE', 'SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', 'SYSTEM.COMPUTE.SEMICONDUCTOR_TO_CLOUD_VALUE_CHAIN_INTEGRATION', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SOURCE_EVALUATION.FOUNDATION', 'META.CAUSAL.SELECTION_BIAS', 'CASE.GOOGLE.C4.WEB_CORPUS.CURATION.2019_2022'],
+    connections: ['FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE', 'BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE', 'SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', 'SYSTEM.COMPUTE.SEMICONDUCTOR_TO_CLOUD_VALUE_CHAIN_INTEGRATION', 'META.SYSTEMS.BOTTLENECK', 'META.SYSTEMS.INTERDEPENDENCE', 'META.SOURCE_EVALUATION.FOUNDATION', 'META.CAUSAL.SELECTION_BIAS', 'CASE.GOOGLE.C4.WEB_CORPUS.CURATION.2019_2022'],
   },
   {
     id: 'BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE',
@@ -1116,7 +1116,23 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Free archive access does not pay for provenance, rights review, extraction, filtering, deduplication, annotation, contamination testing, auditing, deletion or rebuild; creators, archives, licensors, builders, labs and the public retain different control and risk.',
-    connections: ['FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION', 'BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION', 'BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION', 'META.CAUSAL.SELECTION_BIAS', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.GOOGLE.C4.WEB_CORPUS.CURATION.2019_2022'],
+    connections: ['FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION', 'BUS.AI.MODEL_TRAINING_ECONOMICS', 'BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION', 'BUS.SEMICONDUCTOR.COMPUTE_PROFIT_POOL_INTEGRATION', 'META.CAUSAL.SELECTION_BIAS', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.GOOGLE.C4.WEB_CORPUS.CURATION.2019_2022'],
+  },
+  {
+    id: 'FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE',
+    label: 'Training Step（一次训练步）',
+    domain: 'FRONTIER',
+    mastery: 'L1 candidate',
+    summary: 'A qualified example produces a prediction and scalar loss; backpropagation computes the loss\'s local sensitivity to shared parameters, and an optimizer updates them. Lower training loss is local objective evidence, not proof of truth or held-out generalization.',
+    connections: ['FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION', 'BUS.AI.MODEL_TRAINING_ECONOMICS', 'SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.NONLINEARITY', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.ATT_BELL_LABS.ZIPCODE.BACKPROP.1989'],
+  },
+  {
+    id: 'BUS.AI.MODEL_TRAINING_ECONOMICS',
+    label: 'Model Training Economics（模型训练经济学）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Training economics separates billed resources, attempted runs, recoverable checkpoints and model states that pass predefined evaluation gates; a completed compute run can be correctly billed while producing no accepted model progress.',
+    connections: ['FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE', 'BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE', 'BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION', 'SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', 'BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.ATT_BELL_LABS.ZIPCODE.BACKPROP.1989', 'CASE.META.LLAMA3_405B.TRAINING_INFRASTRUCTURE.2024'],
   },
   {
     id: 'SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER',
@@ -1455,6 +1471,14 @@ export const nodes: GraphNode[] = [
     connections: ['FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION', 'BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE', 'META.CAUSAL.SELECTION_BIAS', 'META.SOURCE_EVALUATION.FOUNDATION', 'SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE'],
   },
   {
+    id: 'CASE.ATT_BELL_LABS.ZIPCODE.BACKPROP.1989',
+    label: 'Bell Labs ZIP-code Training 1989（贝尔实验室邮编训练）',
+    domain: 'FRONTIER',
+    mastery: 'Case studied',
+    summary: 'A shared-weight network used 2,578 independent parameters across 98,442 connections to learn from real ZIP-code digits; 1.1% training error versus 3.4% test error, rejection and upstream segmentation faults expose the boundary between optimization, generalization and service acceptance.',
+    connections: ['FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE', 'BUS.AI.MODEL_TRAINING_ECONOMICS', 'FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION', 'META.SOURCE_EVALUATION.FOUNDATION', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM'],
+  },
+  {
     id: 'CASE.AWS.S3.STRONG_CONSISTENCY_TRANSITION.2006_2020',
     label: 'Amazon S3 Strong-consistency Transition 2006–20（S3 强一致性转变）',
     domain: 'SYSTEM',
@@ -1729,12 +1753,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-25',
-  title: 'Qualified Training Data（合格训练数据）',
-  question: '一张被抓取的网页什么时候才有资格影响模型参数，每一道清洗规则又重写了什么？',
-  reading: '45-60 min：跟随一张诊所网页穿过来源、权利、提取、过滤、去重、标签状态、切分、污染检查与版本清单，并用 C4 重建规模、质量与代表性的同一条因果线。',
-  discussion: '20-30 min：解释 745 GB / 6.1 TB、305 / 380 GB 与 806.87 GiB 的不同统计边界，并拆开免费访问、许可、适用性与资格化成本。',
-  next: '2026-11-26：Training Foundation（训练基础）— Prediction、Loss、Gradient 与 Parameter Update。',
+  date: '2026-11-26',
+  title: 'Training Step（一次训练步）',
+  question: '一个合格样本怎样经 Prediction、Loss 与 Gradient 真正改变共享参数，为什么这仍不证明泛化？',
+  reading: '45-60 min：先用单参数模型观察一次更新，再跟随 Bell Labs 的真实手写邮编穿过前向预测、损失、反向传播、共享权重更新与测试边界。',
+  discussion: '20-30 min：拆开 Gradient、Update、Training Loss、Held-out Generalization 与 Validated Model Progress，并解释 GPU-hours 为什么不是训练完成品。',
+  next: '2026-11-27：Foundation Model Foundation（基础模型基础）— Pretraining、Transfer 与 Adaptation。',
 }
 
 export const monthlyTrack = [
