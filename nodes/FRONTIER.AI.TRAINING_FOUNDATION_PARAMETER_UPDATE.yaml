@@ -19,6 +19,7 @@ prerequisites:
   - "META.SYSTEMS.SYSTEM"
 connections:
   - "FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION"
+  - "FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION"
   - "BUS.AI.MODEL_TRAINING_ECONOMICS"
   - "SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE"
   - "SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM"
@@ -33,9 +34,9 @@ cases:
   - "AT&T Bell Labs handwritten ZIP-code training, 1989"
 
 first_seen: "2026-11-26"
-last_reviewed: "2026-11-26"
+last_reviewed: "2026-11-27"
 next_review: "2026-12-03"
 sources:
   - "https://proceedings.neurips.cc/paper_files/paper/1989/file/53c3bce66e43be4f209556518c2fcb54-Paper.pdf"
   - "https://www.nature.com/articles/323533a0"
-notes: "L1 candidate pending a Teach-back that reconstructs a training step without saying merely learns from error, distinguishes gradient from update and backpropagation from training, and names why training loss, held-out generalization and deployment value require separate evidence."
+notes: "L1 candidate pending a Teach-back that reconstructs a training step without saying merely learns from error, distinguishes gradient from update and backpropagation from training, and names why training loss, held-out generalization and deployment value require separate evidence. Reviewed on 2026-11-27 by following a completed shared parameter state into BERT pretraining transfer and downstream adaptation; no automatic mastery upgrade."

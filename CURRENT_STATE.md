@@ -1,6 +1,6 @@
 # CURRENT_STATE.md
 
-Last updated: 2026-11-26
+Last updated: 2026-11-27
 
 ## Current Phase（当前阶段）
 
@@ -79,7 +79,7 @@ Last updated: 2026-11-26
 
 ## Next Immediate Focus（下一步）
 
-2026-11-27：进入 Foundation Model Foundation（基础模型基础），解释为什么一次大规模预训练形成的共享参数状态能够成为多个任务的共同起点；先区分 Pretraining、Transfer 与 Adaptation，再进入 Inference、Application 或 Agent。
+2026-11-28：进入 Inference Foundation（推理基础），解释一个固定的已适配模型怎样把一次输入经 Tokenization、Forward Computation 与 Decoding 变成输出，并把 Model State、Live Request、Latency、Throughput 与 Cost 分开；不提前把 Application 或 Agent 作为平行主课。
 
 ## Operating Model（运行模型）
 
@@ -90,6 +90,8 @@ Last updated: 2026-11-26
 Gmail test passed（Gmail 测试通过）：2026-09-08，发送到 `me` 可进入用户 Gmail 收件箱。
 
 ## Latest Daily Brief（最新每日简报）
+
+2026-11-27：从 11 月 26 日 Training Step 的真实进度直接进入 Foundation Model Foundation；最近 7 个实际日志为 11 月 19、21、22、23、24、25 与 26 日，今天与上一堂之间没有新断点，历史 11 月 20 日空缺继续保留且没有补造。课程先定义 Trained Model 为架构、输入表示、学得参数与配置共同构成的函数状态，再把 Foundation Model 定义为在广泛数据上预训练、可适配到多项下游任务的共同参数起点；Pretraining、Transfer、Adaptation、Task Model、Evaluation 与尚未正式教授的 Inference 被严格分开。主课跟随同一 BERT Checkpoint 进入情感分类、答案抽取与 Token 标注，说明共同参数提供可复用上下文表示，而任务接口、标签、损失、适配和评价仍各自存在。Google BERT 案例按七段叙事展开：BooksCorpus 约 8 亿词、英语 Wikipedia 约 25 亿词；Base / Large 约 1.10 亿 / 3.40 亿参数，用 Masked LM 与 NSP 训练 100 万步。作者报告 Base / Large 分别使用 16 / 64 个 TPU 芯片、各约四天；论文任务的下游 Fine-tuning 在单 TPU 上最多约一小时，但硬件数量、数据、搜索与工程边界不同，不能作为统一成本比。GLUE 82.1 被标明为排除 WNLI 的混合指标汇总；SQuAD 1.1 93.2 是七模型 Ensemble 加 TriviaQA，单模型为 91.8；Benchmark 不被误写成通用能力百分比。Industry Apprenticeship 把 Model Checkpoint、Fine-tuning、Model API 与 Downstream Task 分开，用 1,000 万元假设预训练成本、100 个尝试任务和 20 个合格任务说明摊销分母应为 Accepted Task；数字不是公司账单。`FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION` 与 `BUS.AI.FOUNDATION_MODEL_PLATFORM_ECONOMICS` 为 L1 candidate；Data、Training、Training Economics 与 AI Infrastructure 只记录 review / transfer。下一课进入 Inference Foundation。
 
 2026-11-26：从 11 月 25 日 Qualified Training Data 真实进度直接进入 Training Foundation；最近 7 个实际日志为 11 月 18、19、21、22、23、24 与 25 日，今天与上一堂之间没有新断点，历史 11 月 20 日空缺继续保留且没有补造。课程先把 Training 定义为固定模型结构、合格数据、目标函数与更新规则后反复调整参数的过程，再把 Training Step 拆成 Prediction、Loss、Gradient、Backpropagation、Optimizer 与 Parameter Update；Foundation Model、Inference 与 Agent 未被提前点亮。透明单参数模型以 `x = 2`、`y = 1`、`w = 0` 展示 Prediction 0、Loss 0.5、Gradient -2、学习率 0.1 更新到 `w = 0.2` 后 Loss 0.18；学习率 1 会把 Loss 推高到 4.5，说明局部方向不保证任意步长成功。AT&T Bell Labs 1989 手写邮编案例按七段叙事展开：网络有 4,635 Units、98,442 Connections 与 2,578 Independent Parameters，Weight Sharing 使连接数约为独立参数 38 倍；训练集 9,840、测试集 2,707，30 Passes 后训练错误率 1.1%、测试错误率 3.4%。拒绝完整测试集 5.7% 后剩余样本错误率为 1%，但阈值使用测试表现选择，不能当作完全独立评价；作者把约一半替换错误归于切分、另四分之一归于错误目标类别，这些是作者诊断，不是独立审计。Industry Apprenticeship 把 Training Run、Checkpoint、Hyperparameter 与 Validated Model Progress 分开，用 10 次 × 8 GPU × 12 小时 = 960 GPU-hours、两个合格 Checkpoint = 每个 480 GPU-hours 的透明假设模型说明资源分母与合格产出分母不同，不是公司账单。`FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE` 与 `BUS.AI.MODEL_TRAINING_ECONOMICS` 为 L1 candidate；Qualified Training Data、AI Infrastructure 与 prior Compute nodes 只记录 review / transfer。下一课进入 Foundation Model Foundation。
 

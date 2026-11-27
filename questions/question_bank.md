@@ -2,6 +2,8 @@
 
 ## Active Questions（活跃问题）
 
+- 2026-11-27 — 从同一 Checkpoint 出发，分类、答案抽取与 Token 标注分别复用了什么、新增或改变了什么，什么证据才证明 Transfer 而不是文件复用？
+- 2026-11-27 — 为什么一次昂贵 Pretraining 可以跨下游任务摊销，而每项任务仍要支付 Adaptation、Evaluation、Inference 与工作流风险？
 - 2026-11-26 — 从一个合格样本出发，Prediction、Loss、Gradient、Backpropagation、Optimizer 与 Parameter Update 各自贡献什么，为什么训练损失下降不能证明泛化？
 - 2026-11-26 — 为什么训练买方可以支付 GPU-hours 却没有买到经验证的模型进步，完成运行但 Checkpoint 未通过评价的成本由谁承担？
 - 2026-11-25 — 从一条原始网页记录出发，哪些来源、权利、提取、过滤、去重、标签状态、切分与清单门槛使它成为特定训练目标的合格输入，每道门减少和扭曲了什么？

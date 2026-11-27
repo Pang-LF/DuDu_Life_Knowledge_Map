@@ -6,6 +6,22 @@ This apprenticeship follows how data, training, foundation models, inference, ap
 
 ## Progress
 
+### 2026-11-27 — One Shared Checkpoint Is Not One Finished Product
+
+- Continuity: continued directly from the completed 2026-11-26 Training Step lesson; no new completion gap was present, and the historical 2026-11-20 gap remains unfilled.
+- Question: why do model developers bear one expensive pretraining cost while downstream customers still pay for adaptation, evaluation, inference and workflow integration?
+- Parent concept: a trained model combines architecture, input representation, learned parameters and configuration; a checkpoint is a versioned snapshot rather than a complete task product.
+- Core object: `FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION` separates broad pretraining, measured transfer, task adaptation and qualified downstream models.
+- Minimum unit: the same BERT checkpoint becomes sentiment classification through a `[CLS]` classifier, answer extraction through token start/end outputs and named-entity recognition through token labels; common parameters are reused while interfaces, labels, losses and evaluations differ.
+- BERT evidence: BooksCorpus and English Wikipedia supplied about 3.3 billion words; Base / Large contained about 110M / 340M parameters and used masked-token plus next-sentence objectives.
+- Compute boundary: the paper reports one million pretraining steps and about four days on 16 / 64 TPU chips; downstream fine-tuning was much shorter, but different hardware counts and omitted data, search and engineering costs prevent a direct price ratio.
+- Outcome boundary: GLUE 82.1 is a mixed-metric aggregate excluding WNLI; SQuAD 1.1 93.2 is a seven-model ensemble with TriviaQA, while the comparable single model was 91.8; neither is a universal-capability percentage.
+- Vocabulary: Model Checkpoint, Fine-tuning, Model API and Downstream Task are defined by the historical problem, payer, beneficiary, example and common misunderstanding.
+- Economics: shared pretraining cost is amortized across downstream tasks that pass evaluation, not downloads or attempted customers; each task retains data, adaptation, evaluation, serving, maintenance and workflow cost.
+- Transparent model: a hypothetical 10-million-unit pretraining asset divided by 100 attempted tasks appears to cost 100,000 each, but if only 20 qualify the shared cost is 500,000 per accepted task before 80,000 of downstream work; these are not company prices.
+- Status: `FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION` and `BUS.AI.FOUNDATION_MODEL_PLATFORM_ECONOMICS` at L1 candidate; prior Data, Training and Infrastructure nodes are review / transfer only.
+- Next: Inference Foundation — how a fixed adapted model turns one live input into output through tokenization, forward computation and decoding under latency and cost constraints.
+
 ### 2026-11-26 — GPU-hours Are Not Validated Model Progress
 
 - Continuity: continued directly from the completed 2026-11-25 Qualified Training Data lesson; no new completion gap was present, and the historical 2026-11-20 gap remains unfilled.

@@ -19,6 +19,8 @@ prerequisites:
   - "BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION"
 connections:
   - "FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE"
+  - "FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION"
+  - "BUS.AI.FOUNDATION_MODEL_PLATFORM_ECONOMICS"
   - "BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE"
   - "BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION"
   - "SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE"
@@ -34,10 +36,10 @@ cases:
   - "Meta Llama 3.1 405B training infrastructure, 2024 — review and transfer only"
 
 first_seen: "2026-11-26"
-last_reviewed: "2026-11-26"
+last_reviewed: "2026-11-27"
 next_review: "2026-12-03"
 sources:
   - "https://proceedings.neurips.cc/paper_files/paper/1989/file/53c3bce66e43be4f209556518c2fcb54-Paper.pdf"
   - "https://arxiv.org/html/2407.21783"
   - "https://raw.githubusercontent.com/meta-llama/llama-models/main/models/llama3_1/MODEL_CARD.md"
-notes: "Industry-application L1 candidate pending a Teach-back that separates GPU-hours, training runs, checkpoints and validated model progress, includes failed experiments in the denominator, and allocates research and product risk without inventing confidential prices."
+notes: "Industry-application L1 candidate pending a Teach-back that separates GPU-hours, training runs, checkpoints and validated model progress, includes failed experiments in the denominator, and allocates research and product risk without inventing confidential prices. Reviewed on 2026-11-27 by separating shared pretraining cost from accepted downstream adaptation; no automatic mastery upgrade."

@@ -79,6 +79,9 @@ const nodePoints: NodePoint[] = [
   { id: 'FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE', x: 565, y: 700, labelSide: 'left', mapLabel: 'Training Step（一次训练步）', mapId: 'FRONTIER.AI.TRAINING' },
   { id: 'BUS.AI.MODEL_TRAINING_ECONOMICS', x: 455, y: 610, labelSide: 'right', mapLabel: 'Training Economics（训练经济学）', mapId: 'BUS.AI.TRAINING.ECON' },
   { id: 'CASE.ATT_BELL_LABS.ZIPCODE.BACKPROP.1989', x: 650, y: 695, labelSide: 'right', mapLabel: 'ZIP-code Training（邮编训练）', mapId: 'CASE.ZIPCODE.BP' },
+  { id: 'FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION', x: 610, y: 740, labelSide: 'left', mapLabel: 'Foundation Model（基础模型）', mapId: 'FRONTIER.AI.FOUNDATION' },
+  { id: 'BUS.AI.FOUNDATION_MODEL_PLATFORM_ECONOMICS', x: 410, y: 570, labelSide: 'right', mapLabel: 'Foundation Economics（基础模型经济学）', mapId: 'BUS.AI.FOUNDATION.ECON' },
+  { id: 'CASE.GOOGLE.BERT.PRETRAINING_TRANSFER.2018_2019', x: 690, y: 735, labelSide: 'right', mapLabel: 'BERT Transfer（BERT 迁移）', mapId: 'CASE.BERT.TRANSFER' },
   { id: 'SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER', x: 1000, y: 535, labelSide: 'left', mapLabel: 'Silicon & Wafer（硅与晶圆）', mapId: 'SYSTEM.SEMICONDUCTOR.WAFER' },
   { id: 'BUS.SEMICONDUCTOR.WAFER_SUPPLY_ECONOMICS', x: 250, y: 650, labelSide: 'right', mapLabel: 'Wafer Economics（晶圆经济学）', mapId: 'BUS.SEMICONDUCTOR.WAFER_ECON' },
   { id: 'SYSTEM.SEMICONDUCTOR.CHIP_FABRICATION_FOUNDATION', x: 955, y: 485, labelSide: 'left', mapLabel: 'Fabrication（芯片制造）', mapId: 'SYSTEM.SEMICONDUCTOR.FABRICATION' },
@@ -154,7 +157,7 @@ const makeIslandPolygon = (point: DomainPoint, scale = 1) =>
     .join(' ')
 
 function App() {
-  const [selectedNodeId, setSelectedNodeId] = useState('FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE')
+  const [selectedNodeId, setSelectedNodeId] = useState('FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION')
   const [selectedDomainId, setSelectedDomainId] = useState('FRONTIER')
 
   const selectedNode = useMemo(

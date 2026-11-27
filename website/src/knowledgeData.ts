@@ -1124,7 +1124,7 @@ export const nodes: GraphNode[] = [
     domain: 'FRONTIER',
     mastery: 'L1 candidate',
     summary: 'A qualified example produces a prediction and scalar loss; backpropagation computes the loss\'s local sensitivity to shared parameters, and an optimizer updates them. Lower training loss is local objective evidence, not proof of truth or held-out generalization.',
-    connections: ['FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION', 'BUS.AI.MODEL_TRAINING_ECONOMICS', 'SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.NONLINEARITY', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.ATT_BELL_LABS.ZIPCODE.BACKPROP.1989'],
+    connections: ['FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION', 'FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION', 'BUS.AI.MODEL_TRAINING_ECONOMICS', 'SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM', 'SYSTEM.COMPUTE.CLUSTER_NETWORK_COLLECTIVE_COMMUNICATION', 'META.SYSTEMS.FEEDBACK_LOOP', 'META.SYSTEMS.NONLINEARITY', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.ATT_BELL_LABS.ZIPCODE.BACKPROP.1989'],
   },
   {
     id: 'BUS.AI.MODEL_TRAINING_ECONOMICS',
@@ -1132,7 +1132,23 @@ export const nodes: GraphNode[] = [
     domain: 'BUSINESS',
     mastery: 'L1 candidate',
     summary: 'Training economics separates billed resources, attempted runs, recoverable checkpoints and model states that pass predefined evaluation gates; a completed compute run can be correctly billed while producing no accepted model progress.',
-    connections: ['FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE', 'BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE', 'BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION', 'SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', 'BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.ATT_BELL_LABS.ZIPCODE.BACKPROP.1989', 'CASE.META.LLAMA3_405B.TRAINING_INFRASTRUCTURE.2024'],
+    connections: ['FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE', 'FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION', 'BUS.AI.FOUNDATION_MODEL_PLATFORM_ECONOMICS', 'BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE', 'BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION', 'SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', 'BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.ATT_BELL_LABS.ZIPCODE.BACKPROP.1989', 'CASE.META.LLAMA3_405B.TRAINING_INFRASTRUCTURE.2024'],
+  },
+  {
+    id: 'FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION',
+    label: 'Foundation Model（基础模型）',
+    domain: 'FRONTIER',
+    mastery: 'L1 candidate',
+    summary: 'A foundation model is a broadly pretrained shared parameter starting point, not a finished universal product; transfer is the measured reuse advantage and adaptation converts the common state into a task-specific candidate.',
+    connections: ['FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE', 'FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION', 'BUS.AI.FOUNDATION_MODEL_PLATFORM_ECONOMICS', 'BUS.AI.MODEL_TRAINING_ECONOMICS', 'SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE', 'META.SOURCE_EVALUATION.FOUNDATION', 'CASE.GOOGLE.BERT.PRETRAINING_TRANSFER.2018_2019'],
+  },
+  {
+    id: 'BUS.AI.FOUNDATION_MODEL_PLATFORM_ECONOMICS',
+    label: 'Foundation Model Economics（基础模型经济学）',
+    domain: 'BUSINESS',
+    mastery: 'L1 candidate',
+    summary: 'Shared pretraining cost is amortized across downstream tasks that pass evaluation, while each task still bears data, adaptation, evaluation, inference, integration, maintenance and common-mode risk.',
+    connections: ['FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION', 'BUS.AI.MODEL_TRAINING_ECONOMICS', 'BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE', 'BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION', 'BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS', 'META.PROBABILITY.EXPECTED_VALUE', 'CASE.GOOGLE.BERT.PRETRAINING_TRANSFER.2018_2019'],
   },
   {
     id: 'SYSTEM.SEMICONDUCTOR.SILICON_CRYSTAL_WAFER',
@@ -1479,6 +1495,14 @@ export const nodes: GraphNode[] = [
     connections: ['FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE', 'BUS.AI.MODEL_TRAINING_ECONOMICS', 'FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION', 'META.SOURCE_EVALUATION.FOUNDATION', 'SYSTEM.COMPUTE.ACCELERATOR_GPU_PARALLELISM'],
   },
   {
+    id: 'CASE.GOOGLE.BERT.PRETRAINING_TRANSFER.2018_2019',
+    label: 'Google BERT Transfer 2018–19（BERT 预训练迁移）',
+    domain: 'FRONTIER',
+    mastery: 'Case studied',
+    summary: 'One BERT checkpoint pretrained on about 3.3 billion words initialized classification, token-labeling and answer-span models; strong downstream results demonstrated reuse while separate adaptation and benchmark boundaries kept the shared state incomplete.',
+    connections: ['FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION', 'BUS.AI.FOUNDATION_MODEL_PLATFORM_ECONOMICS', 'FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE', 'FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION', 'META.SOURCE_EVALUATION.FOUNDATION'],
+  },
+  {
     id: 'CASE.AWS.S3.STRONG_CONSISTENCY_TRANSITION.2006_2020',
     label: 'Amazon S3 Strong-consistency Transition 2006–20（S3 强一致性转变）',
     domain: 'SYSTEM',
@@ -1753,12 +1777,12 @@ export const nodes: GraphNode[] = [
 ]
 
 export const todayBrief = {
-  date: '2026-11-26',
-  title: 'Training Step（一次训练步）',
-  question: '一个合格样本怎样经 Prediction、Loss 与 Gradient 真正改变共享参数，为什么这仍不证明泛化？',
-  reading: '45-60 min：先用单参数模型观察一次更新，再跟随 Bell Labs 的真实手写邮编穿过前向预测、损失、反向传播、共享权重更新与测试边界。',
-  discussion: '20-30 min：拆开 Gradient、Update、Training Loss、Held-out Generalization 与 Validated Model Progress，并解释 GPU-hours 为什么不是训练完成品。',
-  next: '2026-11-27：Foundation Model Foundation（基础模型基础）— Pretraining、Transfer 与 Adaptation。',
+  date: '2026-11-27',
+  title: 'Foundation Model Foundation（基础模型基础）',
+  question: '同一份预训练参数为什么能成为多个任务的共同起点，而每个任务仍需自己的适配与评价？',
+  reading: '45-60 min：跟随同一 BERT Checkpoint 进入分类、答案抽取与 Token 标注，拆开 Pretraining、Transfer、Adaptation 与 Task Model。',
+  discussion: '20-30 min：重建共同参数中什么被复用、什么为任务改变，并用合格任务而非下载次数审计 Pretraining 成本摊销。',
+  next: '2026-11-28：Inference Foundation（推理基础）— 固定参数怎样把一次输入变成输出。',
 }
 
 export const monthlyTrack = [

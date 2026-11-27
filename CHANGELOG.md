@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-11-27
+
+- 已将易读 HTML 课程发送至当前账户 Gmail；会话标识为 `KtbxLxgNLzWldGMTKdnKKqsSGnVhjpZcRL`，并确认邮件同时位于 `SENT` 与 `INBOX`
+- 从 2026-11-26 Training Step 的真实进度直接进入 Foundation Model Foundation；最近 7 个实际日志为 11 月 19、21、22、23、24、25 与 26 日，没有新断点，保留 11 月 20 日历史空缺
+- 新增 `FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION`，严格区分共同参数起点、Pretraining、Transfer、Adaptation、Task Model 与 Evaluation
+- 跟随同一 BERT Checkpoint 进入情感分类、答案抽取与 Token 标注，说明共同表示被复用而任务接口、标签、损失和评价仍需分别建立
+- 新增 `CASE.GOOGLE.BERT.PRETRAINING_TRANSFER.2018_2019`；按七段叙事记录约 33 亿词、1.10 亿 / 3.40 亿参数、Masked LM、NSP、100 万步与多任务 Fine-tuning
+- 记录 Base / Large 使用 16 / 64 个 TPU 芯片、各约四天的作者口径，并明确与单 TPU 下游 Fine-tuning 的硬件和成本边界不同
+- 解释 GLUE 82.1 为排除 WNLI 的混合指标汇总，SQuAD 1.1 93.2 为七模型 Ensemble 加 TriviaQA、单模型为 91.8，不把 Benchmark 误写成通用能力百分比
+- 新增 `BUS.AI.FOUNDATION_MODEL_PLATFORM_ECONOMICS`，把共享 Pretraining 前置成本与数据、适配、评价、推理、工作流和共同故障风险分开
+- 用 1,000 万元假设预训练成本、100 个尝试任务与 20 个合格任务说明摊销分母应为 Accepted Task；数字不是公司账单
+- 更新 Training、Qualified Data、Training Economics、Artificial Intelligence Industry Apprenticeship、Question Bank、CURRENT_STATE 与网站数据；旧节点只记录 review / transfer
+- 下一课锁定 Inference Foundation
+
 ## 2026-11-26
 
 - 已将易读 HTML 课程发送至当前账户 Gmail；会话标识为 `KtbxLxGgKMtSfcpJzDlDFTTtXtffXNbQBq`，并确认邮件同时位于 `SENT` 与 `INBOX`

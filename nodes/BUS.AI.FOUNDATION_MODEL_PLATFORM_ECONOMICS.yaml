@@ -1,0 +1,41 @@
+id: "BUS.AI.FOUNDATION_MODEL_PLATFORM_ECONOMICS"
+name_en: "Foundation Model Platform Economics"
+name_zh: "基础模型平台经济学"
+domain: "BUSINESS"
+module: "Industry Atlas — Artificial Intelligence"
+importance: "Applied"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "Foundation-model economics concentrates broad pretraining cost into a reusable parameter asset, then allocates separate adaptation, evaluation, inference, workflow and residual-risk costs to downstream tasks and customers."
+why: "A large number of downloads, API users or attempted tasks does not prove successful amortization; the relevant denominator is qualified downstream capability, while common models can also propagate correlated defects and platform dependence."
+mechanism: "Map the pretraining asset, checkpoint or API boundary, count downstream tasks that pass predefined evaluation, allocate data, adaptation, search, inference, integration and maintenance costs, and identify who controls weights, customer workflow, distribution, pricing and common-mode risk."
+example: "BERT's authors bore a four-day pretraining run and released checkpoints, while downstream teams could perform shorter task fine-tuning; a transparent 10-million-unit teaching model shows that dividing by 100 attempted tasks understates cost if only 20 pass evaluation."
+my_take: "I should amortize shared pretraining across accepted tasks rather than customers or downloads, then add every task's last-mile adaptation, evaluation, serving and workflow cost before judging platform value."
+
+prerequisites:
+  - "FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION"
+  - "BUS.AI.MODEL_TRAINING_ECONOMICS"
+  - "BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE"
+connections:
+  - "FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION"
+  - "BUS.AI.MODEL_TRAINING_ECONOMICS"
+  - "BUS.AI.TRAINING_DATA_SUPPLY_GOVERNANCE"
+  - "BUS.SEMICONDUCTOR.AI_WORKLOAD_VALUE_CHAIN_APPLICATION"
+  - "BUS.SEMICONDUCTOR.CLOUD_TCO_BUILD_BUY_ECONOMICS"
+  - "META.PROBABILITY.EXPECTED_VALUE"
+  - "META.SOURCE_EVALUATION.FOUNDATION"
+  - "CASE.GOOGLE.BERT.PRETRAINING_TRANSFER.2018_2019"
+questions:
+  - "Why can one expensive pretraining run be amortized across downstream tasks while each task still pays for adaptation, evaluation, inference and workflow risk?"
+cases:
+  - "Google BERT pretraining and downstream fine-tuning, 2018-2019"
+
+first_seen: "2026-11-27"
+last_reviewed: "2026-11-27"
+next_review: "2026-12-04"
+sources:
+  - "https://aclanthology.org/N19-1423/"
+  - "https://github.com/google-research/bert"
+  - "https://arxiv.org/abs/2108.07258"
+notes: "Industry-application L1 candidate pending a Teach-back that uses accepted downstream tasks as the amortization denominator, separates checkpoint ownership from API access, and assigns adaptation, evaluation, inference, maintenance and common-mode risk without inventing private prices."

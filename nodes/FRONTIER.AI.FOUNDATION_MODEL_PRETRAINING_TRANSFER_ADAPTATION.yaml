@@ -1,0 +1,41 @@
+id: "FRONTIER.AI.FOUNDATION_MODEL_PRETRAINING_TRANSFER_ADAPTATION"
+name_en: "Foundation Model Foundation — Pretraining, Transfer and Adaptation"
+name_zh: "基础模型基础——预训练、迁移与适配"
+domain: "FRONTIER"
+module: "Artificial Intelligence（人工智能）"
+importance: "Core"
+mastery_current: "L0"
+mastery_candidate: "L1"
+
+what: "A foundation model is a shared parameter starting point trained on broad data at scale and adaptable to multiple downstream tasks; pretraining forms the common state, transfer is the measured reuse advantage, and adaptation converts that state into a task-specific candidate."
+why: "Without separating these objects, a downloaded checkpoint can be mistaken for a finished product, fine-tuning for all forms of adaptation, and benchmark transfer for universal capability or deployment readiness."
+mechanism: "Start from a trained architecture and checkpoint, identify the broad pretraining data and objectives that shape reusable representations, follow the same checkpoint into distinct task interfaces and adaptation signals, and require downstream comparisons plus independent evaluation to establish transfer."
+example: "Google's BERT used about 3.3 billion words and masked-token plus next-sentence objectives to form one pretrained parameter state; minimal task-specific output changes and fine-tuning then produced strong results across GLUE, SQuAD, SWAG and token-labeling tasks."
+my_take: "I should treat a foundation model as an incomplete common starting point and ask what is reused, what is adapted, which comparison proves transfer, and which task and service gates remain unpaid or unverified."
+
+prerequisites:
+  - "FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE"
+  - "FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION"
+  - "SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE"
+connections:
+  - "FRONTIER.AI.TRAINING_FOUNDATION_PARAMETER_UPDATE"
+  - "FRONTIER.AI.QUALIFIED_TRAINING_DATA_FOUNDATION"
+  - "BUS.AI.FOUNDATION_MODEL_PLATFORM_ECONOMICS"
+  - "BUS.AI.MODEL_TRAINING_ECONOMICS"
+  - "SYSTEM.COMPUTE.NOVEMBER_INTEGRATION_AI_INFRASTRUCTURE_BRIDGE"
+  - "META.SOURCE_EVALUATION.FOUNDATION"
+  - "META.CAUSAL.INTEGRATION"
+  - "CASE.GOOGLE.BERT.PRETRAINING_TRANSFER.2018_2019"
+questions:
+  - "Starting from the same checkpoint, what is reused, added or changed for classification, answer extraction and token labeling, and what evidence establishes transfer rather than mere file reuse?"
+cases:
+  - "Google BERT pretraining, transfer and fine-tuning, 2018-2019"
+
+first_seen: "2026-11-27"
+last_reviewed: "2026-11-27"
+next_review: "2026-12-04"
+sources:
+  - "https://aclanthology.org/N19-1423/"
+  - "https://github.com/google-research/bert"
+  - "https://arxiv.org/abs/2108.07258"
+notes: "L1 candidate pending a Teach-back that follows one checkpoint into at least three downstream tasks, separates pretraining, transfer, adaptation, task model and inference, and keeps benchmark, compute and deployment claims within their evidence boundaries."
